@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "misc authored",
+				"type": "debugpy",
+				"request": "launch",
+				"program": "./main_gen_misc_authored_english_documents.py",
+				"console": "integratedTerminal"
+			},
+			{
+				"name": "Python: Current File",
+				"type": "debugpy",
+				"request": "launch",
+				"program": "${file}",
+				"console": "integratedTerminal"
+			}
+
+		]
+	}
+}
