@@ -8,7 +8,7 @@ RECORDS = [
         "mam": "שָׁ֔מָּה",
         "comment": "",
         "highlight": 2,
-        "lcloc": {'page': '397B', 'line': 1, 'column': 1},
+        "lcloc": {'page': '397B', 'column': 1, 'line': 1},
         "img": "0121.png",
     },
     {
@@ -20,7 +20,7 @@ RECORDS = [
         "mam": "אֱל֣וֹהַּ",
         "comment": "",
         "highlight": 4,
-        "lcloc": {'page': '398A', 'line': -2, 'column': 1},
+        "lcloc": {'page': '398A', 'column': 1, 'line': -2},
         "img": "0409.png",
     },
     {
@@ -32,7 +32,7 @@ RECORDS = [
         "mam": "מֵאֱל֣וֹהַּ",
         "comment": "",
         "highlight": 5,
-        "lcloc": {'page': '398A', 'line': 10, 'column': 2},
+        "lcloc": {'page': '398A', 'column': 2, 'line': 10},
         "img": "0417.png",
     },
     {
@@ -44,7 +44,7 @@ RECORDS = [
         "mam": "וְכִימֵ֖י",
         "comment": "",
         "highlight": 4,
-        "lcloc": {'page': '399A', 'line': 4, 'column': 1},
+        "lcloc": {'page': '399A', 'column': 1, 'line': 4},
         "img": "0701.png",
     },
     {
@@ -56,7 +56,7 @@ RECORDS = [
         "mam": "יַעֲלֶֽה׃",
         "comment": "",
         "highlight": 3,
-        "lcloc": {'page': '399A', 'line': 14, 'column': 1},
+        "lcloc": {'page': '399A', 'column': 1, 'line': 14},
         "img": "0709.png",
     },
     {
@@ -68,7 +68,7 @@ RECORDS = [
         "mam": "וְשִׁ֖חַרְתַּ֣נִי",
         "comment": "",
         "highlight": 3,
-        "lcloc": {'page': '399A', 'line': 3, 'column': 2},
+        "lcloc": {'page': '399A', 'column': 2, 'line': 3},
         "img": "0721.png",
     },
     {
@@ -80,7 +80,7 @@ RECORDS = [
         "mam": "וַיֹּאמַֽר׃",
         "comment": "",
         "highlight": 2,
-        "lcloc": {'page': '399A', 'line': 5, 'column': 1, 'including-blank-lines': 1},
+        "lcloc": {'page': '399A', 'column': 2, 'line': 5, 'including-blank-lines': 1},
         "img": "0801.png",
     },
     {
@@ -92,6 +92,8 @@ RECORDS = [
         "mam": "וְ֝אַחֲרִֽיתְךָ֗",
         "comment": "The געיה difference is not important to us here.",
         "highlight": 1,
+        "lcloc": {'page': '399A', 'column': 2, 'line': 13, 'including-blank-lines': 1},
+        "img": "0807.png",
     },
     {
         "bhla-i": 9,
@@ -102,6 +104,8 @@ RECORDS = [
         "mam": "עִמּֽוֹ׃",
         "comment": "",
         "highlight": 2,
+        "lcloc": {'page': '399B', 'column': 1, 'line': 22, 'including-blank-lines': 1},
+        "img": "0914.png",
     },
     {
         "bhla-i": 10,
@@ -112,6 +116,8 @@ RECORDS = [
         "mam": "כַּפָּֽי׃",
         "comment": "",
         "highlight": 2,
+        "lcloc": {'page': '399B', 'column': 2, 'line': 15},
+        "img": "0930.png",
     },
     {
         "bhla-i": 11,
@@ -122,6 +128,8 @@ RECORDS = [
         "mam": "אֲֽ֭דַבְּרָה",
         "comment": "",
         "highlight": 1,
+        "lcloc": {'page': '399B', 'column': 2, 'line': -8},
+        "img": "0935.png",
     },
     {
         "bhla-i": 12,
