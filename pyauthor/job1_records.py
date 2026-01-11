@@ -73,6 +73,76 @@ _MERGED_WITH_CIRCLE_COMMENT = [
     " Note that the vertical line above the ר is a סילוק from the line above.",
 ]
 
+_BHQ_COMMENT_0914_AND_0930 = [
+    "BHQ silently supplies the סילוק that is the consensus expectation,",
+    " despite little or no manuscript evidence for it.",
+]
+
+_BHQ_COMMENT_1203 = [
+    "BHQ silently supplies the מקף that is the consensus expectation,",
+    " despite no manuscript evidence for it.",
+]
+
+_BHQ_COMMENT_2702 = [
+    "BHQ silently supplies the מקף that is the consensus expectation,",
+    " despite little or no manuscript evidence for it.",
+]
+
+_BHQ_COMMENT_1804 = [
+    "BHQ silently ignores the possible שווא part of the possible חטף פתח.",
+    " It also silently ignores the possible intepretation of that ink as a געיה.",
+    " I.e. other than the prepositive דחי accent,",
+    " BHQ supplies only the (full) פתח that is the consensus expectation here.",
+    " BHQ does so silently, i.e. with no note.",
+]
+
+_BHQ_COMMENT_1806 = [
+    "BHQ positions the mark ambiguously.",
+    " The mark is a little to the right of center.",
+    " So it is not centered, as one would expect a טרחא to be,",
+    " but neither is it as far to the right as דחי normally is in BHQ.",
+]
+
+_BHQ_COMMENT_2125 = [
+    "BHQ silently supplies the שווא that is the consensus expectation,",
+    " despite little or no manuscript evidence for it.",
+]
+
+_BHQ_COMMENT_2221 = [
+    "BHQ transcribes these words as shown above.",
+    " I.e. BHQ transcribes עמו as BHL does, and BHQ transcribes ושלם as I do.",
+    " As is its habit, BHQ does all this silently,",
+    " i.e. without any acknowledgement of uncertainties in transcription or departures from consensus expectations.",
+]
+
+_BHQ_COMMENT_2228 = [
+    "BHQ places the mark a little left of center.",
+    " Though this placement is odd,",
+    " this makes it clear that a טרחא was intended rather than a דחי.",
+]
+
+_BHQ_COMMENT_2421 = [
+    "BHQ silently supplies the consensus expectation: a סגול.",
+    " I.e. based on little or no manuscript evidence,",
+    " BHQ silently infers a third dot centered below the two clearer dots.",
+]
+
+_BHQ_COMMENT_2808_AND_2911 = [
+    "BHQ silently supplies the חיריק that is the consensus expectation,",
+    " despite no manuscript evidence for it.",
+]
+
+_BHQ_COMMENT_3107 = [
+    "BHQ reflects neither the manuscript nor the consensus expectation here.",
+    " It reflects the manuscript except it places the סילוק under the א.",
+    " This not only contradicts the manuscript,",
+    " but also makes no sense given the רפה on the א.",
+    " One might argue that this רפה should have been shown,",
+    " despite the general policy of BHQ to ignore manuscript רפה marks.",
+    " Regardless of whether the רפה should have been shown,",
+    " its presence in the manuscript should have excluded the possibility of a סילוק under its letter (א)!",
+]
+
 _V_THEN_A = "BHQ silently supplies the marks in the vowel-then-accent order that is the consensus expectation, in clear contradiction of the manuscript here. In my opinion BHQ shows itself to be out of date by continuing to aspire, as BHS did, to reflect all such ordering anomalies. I think the modern consensus is that these orderings are as meaningless as the variable length of ascenders on ל. Nonetheless, since BHQ still aspires to get these orderings right, it is fair for me to point out when it fails to do so."
 RECORDS = [
     {
@@ -184,7 +254,7 @@ RECORDS = [
         "highlight": 2,
         "lcloc": {"page": "399B", "column": 1, "line": 22, "including-blank-lines": 1},
         "img": "0914.png",
-        "bhq-comment": "BHQ silently supplies the סילוק that is the consensus expectation, despite little or no manuscript evidence for it.",
+        "bhq-comment": "".join(_BHQ_COMMENT_0914_AND_0930),
     },
     {
         "bhla-i": 10,
@@ -197,7 +267,7 @@ RECORDS = [
         "highlight": 2,
         "lcloc": {"page": "399B", "column": 2, "line": 15},
         "img": "0930.png",
-        "bhq-comment": "BHQ silently supplies the סילוק that is the consensus expectation, despite little or no manuscript evidence for it.",
+        "bhq-comment": "".join(_BHQ_COMMENT_0914_AND_0930),
     },
     {
         "bhla-i": 11,
@@ -283,7 +353,7 @@ RECORDS = [
         "highlight": 3,
         "lcloc": {"page": "400A", "column": 2, "line": -1},
         "img": "1203.png",
-        "bhq-comment": "BHQ silently supplies the מקף that is the consensus expectation, despite no manuscript evidence for it.",
+        "bhq-comment": "".join(_BHQ_COMMENT_1203),
     },
     {
         "bhla-i": 18,
@@ -372,7 +442,7 @@ RECORDS = [
         "highlight": 1,
         "lcloc": {"page": "402A", "column": 1, "line": -4},
         "img": "1804.png",
-        "bhq-comment": "BHQ silently ignores the possible שווא part of the possible חטף פתח. It also silently ignores the possible intepretation of that ink as a געיה. I.e. other than the prepositive דחי accent, BHQ supplies only the (full) פתח that is the consensus expectation here. BHQ does so silently, i.e. with no note.",
+        "bhq-comment": "".join(_BHQ_COMMENT_1804),
     },
     {
         "bhla-i": 25,
@@ -385,7 +455,7 @@ RECORDS = [
         "highlight": 1,
         "lcloc": {"page": "402A", "column": 1, "line": -2},
         "img": "1806.png",
-        "bhq-comment": "BHQ positions the mark ambiguously. The mark is a little to the right of center. So it is not centered, as one would expect a טרחא to be, but neither is it as far to the right as דחי normally is in BHQ.",
+        "bhq-comment": "".join(_BHQ_COMMENT_1806),
     },
     {
         "bhla-i": 26,
@@ -424,7 +494,7 @@ RECORDS = [
         "highlight": 1,
         "lcloc": {"page": "403A", "column": 2, "line": 13},
         "img": "2125.png",
-        "bhq-comment": "BHQ silently supplies the שווא that is the consensus expectation, despite little or no manuscript evidence for it.",
+        "bhq-comment": "".join(_BHQ_COMMENT_2125),
     },
     {
         "bhla-i": 29,
@@ -437,7 +507,7 @@ RECORDS = [
         "highlight": [2, 6],
         "lcloc": {"page": "403B", "column": 1, "line": -6},
         "img": "2221.png",
-        "bhq-comment": "BHQ transcribes these words as shown above. I.e. BHQ transcribes עמו as BHL does, and BHQ transcribes ושלם as I do. As is its habit, BHQ does all this silently, i.e. without any acknowledgement of uncertainties in transcription or departures from consensus expectations.",
+        "bhq-comment": "".join(_BHQ_COMMENT_2221),
     },
     {
         "bhla-i": 30,
@@ -450,7 +520,7 @@ RECORDS = [
         "highlight": 1,
         "lcloc": {"page": "403B", "column": 2, "line": 2},
         "img": "2228.png",
-        "bhq-comment": "BHQ places the mark a little left of center. Though this placement is odd, this makes it clear that a טרחא was intended rather than a דחי.",
+        "bhq-comment": "".join(_BHQ_COMMENT_2228),
     },
     {
         "bhla-i": 31,
@@ -463,7 +533,7 @@ RECORDS = [
         "highlight": 2,
         "lcloc": {"page": "404A", "column": 2, "line": -2},
         "img": "2421.png",
-        "bhq-comment": "BHQ silently supplies the consensus expectation: a סגול. I.e. based on little or no manuscript evidence, BHQ silently infers a third dot centered below the two clearer dots.",
+        "bhq-comment": "".join(_BHQ_COMMENT_2421),
     },
     {
         "bhla-i": 32,
@@ -476,7 +546,7 @@ RECORDS = [
         "highlight": 2,
         "lcloc": {"page": "404A", "column": 2, "line": -2},
         "img": "2702.png",
-        "bhq-comment": "BHQ silently supplies the מקף that is the consensus expectation, despite little or no manuscript evidence for it.",
+        "bhq-comment": "".join(_BHQ_COMMENT_2702),
     },
     {
         "bhla-i": 33,
@@ -489,7 +559,7 @@ RECORDS = [
         "highlight": 3,
         "lcloc": {"page": "404B", "column": 2, "line": 5},
         "img": "2808.png",
-        "bhq-comment": "BHQ silently supplies the חיריק that is the consensus expectation, despite no manuscript evidence for it.",
+        "bhq-comment": "".join(_BHQ_COMMENT_2808_AND_2911),
     },
     {
         "bhla-i": 34,
@@ -502,7 +572,7 @@ RECORDS = [
         "highlight": 3,
         "lcloc": {"page": "405A", "column": 1, "line": -12},
         "img": "2911.png",
-        "bhq-comment": "BHQ silently supplies the חיריק that is the consensus expectation, despite no manuscript evidence for it.",
+        "bhq-comment": "".join(_BHQ_COMMENT_2808_AND_2911),
     },
     {
         "bhla-i": 35,
@@ -540,7 +610,7 @@ RECORDS = [
         "highlight": [1, 3],
         "lcloc": {"page": "405B", "column": 1, "line": -6, "including-blank-lines": 1},
         "img": "3107.png",
-        "bhq-comment": "BHQ reflects neither the manuscript nor the consensus expectation here. It reflects the manuscript except it places the סילוק under the א. This not only contradicts the manuscript, but also makes no sense given the רפה on the א. One might argue that this רפה should have been shown, despite the general policy of BHQ to ignore manuscript רפה marks. Regardless of whether the רפה should have been shown, its presence in the manuscript should have excluded the possibility of a סילוק under its letter (א)!",
+        "bhq-comment": "".join(_BHQ_COMMENT_3107),
         "bhq": "מֻאֽוּם׃",
     },
     {
