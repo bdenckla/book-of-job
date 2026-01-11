@@ -1,3 +1,5 @@
+_QUOTE_FORCED = "“forced”"
+
 def _correctly_ignores(what):
     out_parts = [
         f"BHQ silently ignores the faint possible {what}.",
@@ -7,85 +9,67 @@ def _correctly_ignores(what):
     ]
     return "".join(out_parts)
 
-def _maqaf_with_mahpakh_comment():
-    out_parts = [
-        "Though it is not relevant to the point at hand, which is the presence of a מקף,",
-        " note that in the LC, the shape we take to be מחפך is touching the bottom of the ל (lamed)."
-    ]
-    return "".join(out_parts)
+_MAQAF_WITH_MAHPAKH_COMMENT = "".join([
+    "Though it is not relevant to the point at hand, which is the presence of a מקף,",
+    " note that in the LC, the shape we take to be מחפך is touching the bottom of the ל (lamed)."
+])
 
-def _brown_dot_comment():
-    out_parts = [
-        "The dot is suspiciously brown rather than black,",
-        " making me wonder whether the ו was pointed at all."
-    ]
-    return "".join(out_parts)
+_BROWN_DOT_COMMENT = "".join([
+    "The dot is suspiciously brown rather than black,",
+    " making me wonder whether the ו was pointed at all."
+])
 
-def _reinked_sloppy_comment():
-    out_parts = [
-        "BHL Appendix A fails to note the anomalous non-pointing of the ל in the next word, ושלם.",
-        " Nonethless I have included ושלם above.",
-        " The letters of both words are re-inked, and as usual, the re-inking is sloppy.",
-        " Perhaps some super-faint remains of an אתנח under ל can be seen.",
-        " The top dot of the שווא (under the ש) is super-faint.",
-        " I (charitably) transcribed it based on consensus expectations.",
-        " A dot under the מ of עמו is fairly clear.",
-        " It is (charitably) not transcribed by BHL, presumably based on consensus expectations."
-    ]
-    return "".join(out_parts)
+_REINKED_SLOPPY_COMMENT = "".join([
+    "BHL Appendix A fails to note the anomalous non-pointing of the ל in the next word, ושלם.",
+    " Nonethless I have included ושלם above.",
+    " The letters of both words are re-inked, and as usual, the re-inking is sloppy.",
+    " Perhaps some super-faint remains of an אתנח under ל can be seen.",
+    " The top dot of the שווא (under the ש) is super-faint.",
+    " I (charitably) transcribed it based on consensus expectations.",
+    " A dot under the מ of עמו is fairly clear.",
+    " It is (charitably) not transcribed by BHL, presumably based on consensus expectations."
+])
 
-def _segol_third_dot_comment():
-    out_parts = [
-        "Perhaps there is some super-faint evidence of a third dot that would make a סגול,",
-        " but this could be just wishful thinking.",
-        " Note that there is a third dot above the two clearer dots,",
-        " but I take that to be part of the ע that did not flake off like its neighboring ink did."
-    ]
-    return "".join(out_parts)
+_SEGOL_THIRD_DOT_COMMENT = "".join([
+    "Perhaps there is some super-faint evidence of a third dot that would make a סגול,",
+    " but this could be just wishful thinking.",
+    " Note that there is a third dot above the two clearer dots,",
+    " but I take that to be part of the ע that did not flake off like its neighboring ink did."
+])
 
-def _maqaf_missing_comment():
-    out_parts = [
-        "Perhaps there is some super-faint evidence of a מקף that was ignored during re-inking.",
-        " By the way, the evidence for the דחי on the א of the next word is super-faint."
-    ]
-    return "".join(out_parts)
+_MAQAF_MISSING_COMMENT = "".join([
+    "Perhaps there is some super-faint evidence of a מקף that was ignored during re-inking.",
+    " By the way, the evidence for the דחי on the א of the next word is super-faint."
+])
 
-def _lamed_ascender_comment():
-    out_parts = [
-        "Probably the ascender of the ל on the line below",
-        " “forced” the סילוק to be early."
-    ]
-    return "".join(out_parts)
+_LAMED_ASCENDER_COMMENT = "".join([
+    "Probably the ascender of the ל on the line below",
+    f" {_QUOTE_FORCED} the סילוק to be early."
+])
 
-def _not_ink_geresh_comment():
-    out_parts = [
-        "The color image strongly suggests that the mark in question is not ink.",
-        " A געיה right next to סילוק like that would be extraordinary, BTW,",
-        " though I feel no appeal to expectations is needed to dismiss this possible געיה."
-    ]
-    return "".join(out_parts)
+_NOT_INK_GERESH_COMMENT = "".join([
+    "The color image strongly suggests that the mark in question is not ink.",
+    " A געיה right next to סילוק like that would be extraordinary, BTW,",
+    " though I feel no appeal to expectations is needed to dismiss this possible געיה."
+])
 
-def _heavy_mark_comment():
-    out_parts = [
-        "The mark in question is very heavy,",
-        " having a stroke width more typical of a letter-stroke than of a niqqud-stroke.",
-        " Its clarity suggests it is part of the re-inking.",
-        " Indeed perhaps it is only part of the re-inking,",
-        " i.e. perhaps it reflects no mark (or only a much smaller mark) in the original.",
-        " The mark in question may be two marks,",
-        " a רביע (expected) overlaid with a גרש (unexpected).",
-        " Or, it may be only a single mark whose lower end is, for some reason, a blob."
-    ]
-    return "".join(out_parts)
+_HEAVY_MARK_COMMENT = "".join([
+    "The mark in question is very heavy,",
+    " having a stroke width more typical of a letter-stroke than of a niqqud-stroke.",
+    " Its clarity suggests it is part of the re-inking.",
+    " Indeed perhaps it is only part of the re-inking,",
+    " i.e. perhaps it reflects no mark (or only a much smaller mark) in the original.",
+    " The mark in question may be two marks,",
+    " a רביע (expected) overlaid with a גרש (unexpected).",
+    " Or, it may be only a single mark whose lower end is, for some reason, a blob."
+])
 
-def _merged_with_circle_comment():
-    out_parts = [
-        "A more charitable interpretation of the image is that the רביע is present",
-        " but is merged with the masorah circle.",
-        " (It is fairly clear that a masorah circle is present.)",
-        " Note that the vertical line above the ר is a סילוק from the line above."
-    ]
-    return "".join(out_parts)
+_MERGED_WITH_CIRCLE_COMMENT = "".join([
+    "A more charitable interpretation of the image is that the רביע is present",
+    " but is merged with the masorah circle.",
+    " (It is fairly clear that a masorah circle is present.)",
+    " Note that the vertical line above the ר is a סילוק from the line above."
+])
 
 _V_THEN_A = "BHQ silently supplies the marks in the vowel-then-accent order that is the consensus expectation, in clear contradiction of the manuscript here. In my opinion BHQ shows itself to be out of date by continuing to aspire, as BHS did, to reflect all such ordering anomalies. I think the modern consensus is that these orderings are as meaningless as the variable length of ascenders on ל. Nonetheless, since BHQ still aspires to get these orderings right, it is fair for me to point out when it fails to do so."
 RECORDS = [
@@ -344,7 +328,7 @@ RECORDS = [
         "bhla": "ל֤וּ־",
         "what-is-weird": "מקף is present",
         "mam": "ל֤וּ_",
-        "comment": _maqaf_with_mahpakh_comment(),
+        "comment": _MAQAF_WITH_MAHPAKH_COMMENT,
         "highlight": 2,
         "lcloc": {"page": "401B", "column": 2, "line": 3},
         "img": "1604.png",
@@ -434,7 +418,7 @@ RECORDS = [
         "bhla": "וִלֹֽא־",
         "what-is-weird": "ו has חיריק not שווא",
         "mam": "וְלֹֽא־",
-        "comment": _brown_dot_comment(),
+        "comment": _BROWN_DOT_COMMENT,
         "highlight": 1,
         "lcloc": {"page": "403A", "column": 2, "line": 13},
         "img": "2125.png",
@@ -447,7 +431,7 @@ RECORDS = [
         "bhla": "עִמּ֑וֹ וּשְׁלם",
         "what-is-weird": "אתנח and ∅ not מונח and קמץ־אתנח?",
         "mam": "עִמּ֣וֹ וּשְׁלָ֑ם",
-        "comment": _reinked_sloppy_comment(),
+        "comment": _REINKED_SLOPPY_COMMENT,
         "highlight": [2, 6],
         "lcloc": {"page": "403B", "column": 1, "line": -6},
         "img": "2221.png",
@@ -473,7 +457,7 @@ RECORDS = [
         "bhla": "רֹעֵ֣ה",
         "what-is-weird": "ע may have צירה not סגול",
         "mam": "רֹעֶ֣ה",
-        "comment": _segol_third_dot_comment(),
+        "comment": _SEGOL_THIRD_DOT_COMMENT,
         "highlight": 2,
         "lcloc": {"page": "404A", "column": 2, "line": -2},
         "img": "2421.png",
@@ -486,7 +470,7 @@ RECORDS = [
         "bhla": "חַי_",
         "what-is-weird": "מקף is missing",
         "mam": "חַי־",
-        "comment": _maqaf_missing_comment(),
+        "comment": _MAQAF_MISSING_COMMENT,
         "highlight": 2,
         "lcloc": {"page": "404A", "column": 2, "line": -2},
         "img": "2702.png",
@@ -525,7 +509,7 @@ RECORDS = [
         "bhla": "בִּקְצִירֽ͏ִי׃",
         "what-is-weird": "סילוק precedes חיריק",
         "mam": "בִּקְצִירִֽי׃",
-        "comment": _lamed_ascender_comment(),
+        "comment": _LAMED_ASCENDER_COMMENT,
         "highlight": 5,
         "lcloc": {"page": "405A", "column": 1, "line": -4},
         "img": "2919.png",
@@ -628,7 +612,7 @@ RECORDS = [
         "bhla": "סֻכָּֽתֽוֹ׃",
         "what-is-weird": "כ has געיה",
         "mam": "סֻכָּתֽוֹ׃",
-        "comment": _not_ink_geresh_comment(),
+        "comment": _NOT_INK_GERESH_COMMENT,
         "highlight": 2,
         "lcloc": {"page": "407B", "column": 1, "line": -5},
         "img": "3629.png",
@@ -665,7 +649,7 @@ RECORDS = [
         "bhla": "וְ֝יָדַעְתָּ֜",
         "what-is-weird": "גרש not רביע",
         "mam": "וְ֝יָדַעְתָּ֗",
-        "comment": _heavy_mark_comment(),
+        "comment": _HEAVY_MARK_COMMENT,
         "highlight": 5,
         "lcloc": {"page": "408A", "column": 2, "line": -3},
         "img": "3902.png",
@@ -691,7 +675,7 @@ RECORDS = [
         "bhla": "אֶ֝בְרָה",
         "what-is-weird": "רביע מגרש may lack רביע",
         "mam": "אֶ֝בְרָ֗ה",
-        "comment": _merged_with_circle_comment(),
+        "comment": _MERGED_WITH_CIRCLE_COMMENT,
         "highlight": 3,
         "lcloc": {"page": "408B", "column": 1, "line": 11},
         "img": "3913.png",
