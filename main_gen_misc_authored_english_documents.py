@@ -2,7 +2,7 @@
 
 from py import two_col_css_styles as tcstyles
 from py import my_html
-from pyauthor import job1
+from pyauthor import job1_overview
 from pyauthor import job1_details
 
 
@@ -28,8 +28,8 @@ def main():
     job1_details.gen_html_file(tdm_ch)
     job1_details_anchor = job1_details.anchor(jobn_rel_job1_html)
     #
-    job1.gen_html_file(tdm_ch, job1_details_anchor)
-    job1_anchor = job1.anchor(jobn_rel_index_html)
+    job1_overview.gen_html_file(tdm_ch, job1_details_anchor)
+    job1_anchor = job1_overview.anchor(jobn_rel_index_html)
     #
     write_index_dot_html((css_href,), "docs/index.html", job1_anchor)
 

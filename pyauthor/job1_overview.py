@@ -25,7 +25,7 @@ def gen_html_file(tdm_ch, jda):
 
 
 _TITLE = "Book of Job Document 1"
-_H1_CONTENTS = "Book of Job (ספר איוב) Document 1"
-_FNAME = "job1.html"
+_H1_CONTENTS = "Book of Job (ספר איוב) Document 1 - Overview"
+_FNAME = "job1_overview.html"
 _PER_CASE_DATA = sl_map(make_per_case_data, RECORDS)
 _CONT_TABLE_1A_ROWS = [pcd["row"] for pcd in _PER_CASE_DATA]
