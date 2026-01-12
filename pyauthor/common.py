@@ -6,7 +6,7 @@ from pyauthor.util import author
 
 D2_TITLE = "BHQ: Too Little, Too Late"
 D2_H1_CONTENTS = "BHQ: Too Little, Too Late"
-D2_FNAME = "job2_overview.html"
+D2_FNAME = "job2.html"
 
 
 def d2_anchor(jobn_dir="."):

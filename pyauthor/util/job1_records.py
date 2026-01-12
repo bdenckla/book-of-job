@@ -160,12 +160,12 @@ _V_THEN_A = [
     " I think the modern consensus is that these orderings are as meaningless as",
     " the variable length of ascenders on ל.",
     " Nonetheless, since BHQ still aspires to get these orderings right,",
-    " it is fair for me to point out when it fails to do so."
+    " it is fair for me to point out when it fails to do so.",
 ]
 _BHQ_COMMENT_1604 = [
     "Though it is not relevant to the point at hand,",
     " note that BHQ continues to fail to distinguish",
-    " between גלגל and אתנח הפוך."
+    " between גלגל and אתנח הפוך.",
 ]
 RECORDS = [
     {
