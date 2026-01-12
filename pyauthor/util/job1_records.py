@@ -10,12 +10,14 @@
 _QUOTE_FORCED = "“forced”"
 
 
-def _correctly_ignores(what):
+def _correctly_ignores(what, adjective=""):
+    adj = f" {adjective}" if adjective else ""
     out_parts = [
-        f"BHQ silently ignores the faint possible {what}.",
-        " Or it ignores the manuscript entirely and simply supplies the consensus pointing here,",
+        f"BHQ silently ignores the faint possible{adj} {what}.",
+        " Or it ignores the μL entirely and simply supplies the consensus pointing here,",
         f" which has no {what}.",
-        " It is hard to distinguish whether BHQ has done the right thing here by accident or on purpose.",
+        " It is hard to distinguish whether BHQ has done the right thing here",
+        " by accident or on purpose.",
     ]
     return "".join(out_parts)
 
@@ -110,22 +112,22 @@ _BHQ_COMMENT_0801 = [
 ]
 _BHQ_COMMENT_0914_AND_0930 = [
     "BHQ silently supplies the סילוק that is the consensus expectation,",
-    " despite little or no manuscript evidence for it.",
+    " despite little or no evidence for it in μL.",
 ]
 
 _BHQ_COMMENT_4125 = [
     "BHQ silently supplies the סילוק that is the consensus expectation,",
-    " despite no manuscript evidence for it.",
+    " despite no evidence for it in μL.",
 ]
 
 _BHQ_COMMENT_1203 = [
     "BHQ silently supplies the מקף that is the consensus expectation,",
-    " despite no manuscript evidence for it.",
+    " despite no evidence for it in μL.",
 ]
 
 _BHQ_COMMENT_2702 = [
     "BHQ silently supplies the מקף that is the consensus expectation,",
-    " despite little or no manuscript evidence for it.",
+    " despite little or no evidence for it in μL.",
 ]
 
 _BHQ_COMMENT_1804 = [
@@ -149,7 +151,7 @@ _BHQ_COMMENT_1806 = [
 
 _BHQ_COMMENT_2125 = [
     "BHQ silently supplies the שווא that is the consensus expectation,",
-    " despite little or no manuscript evidence for it.",
+    " despite little or no evidence for it in μL.",
 ]
 
 _BHQ_COMMENT_2221 = [
@@ -177,30 +179,31 @@ _BHQ_COMMENT_2228 = [
 
 _BHQ_COMMENT_2421 = [
     "BHQ silently supplies the סגול that is the consensus expectation.",
-    " I.e. based on little or no manuscript evidence,",
+    " I.e. despite little or no evidence for it in μL,",
     " BHQ silently infers a third dot centered below the two clearer dots.",
 ]
 
 _BHQ_COMMENT_2808_AND_2911 = [
     "BHQ silently supplies the חיריק that is the consensus expectation,",
-    " despite no manuscript evidence for it.",
+    " despite no evidence for it in μL.",
 ]
 
 _BHQ_COMMENT_3107 = [
-    "BHQ reflects neither the manuscript nor the consensus expectation here.",
-    " It reflects the manuscript except it places the סילוק under the א.",
-    " This not only contradicts the manuscript,",
+    "BHQ reflects neither μL nor the consensus expectation here.",
+    " It reflects μL except it places the סילוק under the א.",
+    " This not only contradicts μL,",
     " but also makes no sense given the רפה on the א.",
     " One might argue that this רפה should have been shown,",
-    " despite the general policy of BHQ to ignore manuscript רפה marks.",
+    " despite the general policy of BHQ to ignore רפה marks in μL.",
     " Regardless of whether the רפה should have been shown,",
-    " its presence in the manuscript should have excluded the possibility of",
+    " its presence in μL should have excluded the possibility of",
     " a סילוק under its letter (א)!",
+    " BHQ notes that here μL disagrees with μA and μY, which have the consensus pointing.",
 ]
 
 _BHQ_COMMENT_CMN_3105_3206 = [
     "BHQ silently supplies the marks in the vowel-then-accent order that is",
-    " the consensus expectation, in clear contradiction of the manuscript here.",
+    " the consensus expectation, in clear contradiction of μL here.",
 ]
 
 _BHQ_COMMENT_3105 = [
@@ -559,7 +562,7 @@ RECORDS = [
         "highlight": 4,
         "lc-loc": {"page": "402A", "column": 2, "line": -5},
         "lc-img": "1905.png",
-        "bhq-comment": "BHQ silently lets the faint possible דגש “win” over the clear רפה in the manuscript.",
+        "bhq-comment": "BHQ silently lets the faint possible דגש “win” over the clear רפה in μL.",
     },
     {
         "bhla-i": 27,
@@ -760,6 +763,7 @@ RECORDS = [
         "highlight-mam": 3,
         "lc-loc": {"page": "406B", "column": 1, "line": -1},
         "lc-img": "3330.png",
+        "bhq-comment": "BHQ notes that here μL disagrees with μA and μY, which have the consensus pointing.",
     },
     {
         "bhla-i": 42,
@@ -785,7 +789,7 @@ RECORDS = [
         "highlight": 2,
         "lc-loc": {"page": "407B", "column": 1, "line": -5},
         "lc-img": "3629.png",
-        "bhq-comment": _correctly_ignores("געיה"),
+        "bhq-comment": _correctly_ignores("געיה", "large"),
     },
     {
         "bhla-i": 44,
