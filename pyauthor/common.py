@@ -4,8 +4,8 @@ from py import my_html
 from pyauthor_util import author
 
 
-D2_TITLE = "BHQ: Too Little, Too Late"
-D2_H1_CONTENTS = "BHQ: Too Little, Too Late"
+D2_TITLE = "BHQ Job: Not quite modern"
+D2_H1_CONTENTS = D2_TITLE
 D2_FNAME = "job2.html"
 
 

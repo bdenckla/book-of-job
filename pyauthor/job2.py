@@ -14,52 +14,70 @@ def gen_html_file(tdm_ch):
 
 _CPARA1 = [
     "Like many students of the Hebrew Bible,",
-    " I was initially in the cult of BHS:",
-    " I thought its was",
+    " I started out in the cult of $BHS.",
+    " I thought $BHS was",
     " ",
     my_html.bold("the"),
     " definitive edition of the Hebrew Bible.",
     #
     " Unlike many students of the Hebrew Bible,",
-    " I eventually discovered many shortcomings of BHS,",
+    " I eventually soured on $BHS,",
     " and began to look for better editions.",
     #
     " Such is the power of the cult that",
-    " the first alternative I looked into was BHQ (Biblia Hebraica Quinta).",
+    " the first alternative I looked into was $BHQ (Biblia Hebraica Quinta).",
     #
-    " I was only bold enough to look outside of the cult of BHS,",
-    " not outside of the cult of DBG (Deutsche Bibelgesellschaft).",
+    " I was only bold enough to look outside of the cult of $BHS,",
+    " not outside of the cult of $DBG (Deutsche Bibelgesellschaft).",
     #
 ]
 _CPARA2 = [
-    "What I found was that, for my purposes at least, BHQ was too little, too late."
+    "I found $BHQ disappointing, for my purposes."
     #
-    " It was too little in two senses: many books of the Bible were not done,",
-    " and those that were done did not substantially improve on BHS.",
+    " First of all, $BHQ is not only incomplete",
+    " but also will not be complete for many years.",
     #
-    " It was too late in the sense that",
-    " even when the first volume of BHQ came out (Megillot, 2004),",
-    " better, complete editions were already available from other publishers.",
+    " More importantly, $BHQ, though it improves upon $BHS in many ways,",
+    " is still not quite",
+    " ",
+    my_html.bold("modern"),
+    "."
+    #
+    " What I mean by “not quite modern” is that it fails to incorporate",
+    " the work of other editions."
+    " These other editions include the following:",
+]
+def num_range(start, stop):
+    return f"{start}\N{THIN SPACE}\N{EN DASH}\N{THIN SPACE}{stop}"
+
+_C_LIST_ITEMS_AFTER_PARA2 = [
+    "$BHL (Dotan, 2001)",
+    f"דעת מקרא (Breuer et al., {num_range(1970, 2003)})",
+]
+_CPARA_2B = [
+    "Even the first volume of $BHQ (Megilloth) came out late enough (2004)",
+    " to incorporate Dotan’s work in $BHL.",
+    " The חמש מגילות volume of דעת מקרא came long before, in 1990.",
 ]
 _CPARA3 = [
-    "I have said that for my purposes BHQ was too little, too late.",
-    " But I have not yet said what my purposes are.",
-    " My purposes are narrowly focused on the Masoretic Text.",
+    "Since I have said that I found $BHQ disappointing, for my purposes,",
+    " I should state what my purposes are.",
+    " My purposes are narrowly focused on the Masoretic text.",
     " I am not concerned with",
-    " the many parts of BHQ that deal with the following:",
+    " the many parts of $BHQ that deal with the following:",
 ]
 _C_LIST_ITEMS_AFTER_PARA3 = [
-    "sources in languages other than Hebrew,",
-    "non-Masoretic (e.g. unpointed) Hebrew sources,",
-    "Masorah magna and parva,",
-    "the meaning of the text, in any language",
+    "sources in languages other than Hebrew",
+    "non-Masoretic (e.g. unpointed) Hebrew sources",
+    "Masorah magna and parva",
+    "the meaning of the text",
 ]
 _CPARA4 = [
-    "For all I know, these parts of BHQ are of the highest quality, and improve greatly on BHS.",
+    "For all I know, these parts of $BHQ are of the highest quality, and improve greatly on $BHS.",
     " But these parts are not my concern.",
 ]
 _CPARA17 = [
-    "This document discusses the BHQ edition of the Book of Job,",
+    "This document discusses the $BHQ edition of the Book of Job,",
     " focusing on its treatment of certain textual variants.",
     " Right now it consists merely of this",
     " ",
@@ -69,6 +87,8 @@ _CBODY = [
     author.heading_level_1(D2_H1_CONTENTS),
     author.para(_CPARA1),
     author.para(_CPARA2),
+    author.unordered_list(_C_LIST_ITEMS_AFTER_PARA2),
+    author.para(_CPARA_2B),
     author.para(_CPARA3),
     author.unordered_list(_C_LIST_ITEMS_AFTER_PARA3),
     author.para(_CPARA4),

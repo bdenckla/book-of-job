@@ -361,6 +361,9 @@ _UNICODE_NAME_SC = {
 _ABBR_SC = {
     "$CD_ROM": "CD-ROM",
     "$BHS": "BHS",
+    "$BHQ": "BHQ",
+    "$BHL": "BHL",
+    "$DBG": "DBG",
     "$CTR": "CTR",
     "$CTR_A": "CTR-A",
     "$CTR_B": "CTR-B",
@@ -478,7 +481,7 @@ _DOLLAR_SUB_DISPATCH = {
 #         XE      O 3 C   JF
 # X: ח
 # E: ט
-# O: ס
+# O: ס (the letter O not the digit 0)
 # 3: ע (Arabizi)
 # C: צ (Michigan-Claremont)
 # J: ש (vs O for ס, leaving S unused)
