@@ -3,12 +3,12 @@
 from pyauthor.common import D1D_TITLE
 from pyauthor.common import D1D_H1_CONTENTS
 from pyauthor.common import D1D_FNAME
-from pyauthor.util.job1_common import intro
+from pyauthor_util.job1_common import intro
 from pycmn.my_utils import sl_map
 from py import my_html
-from pyauthor.util import author
-from pyauthor.util.job1_records import RECORDS
-from pyauthor.util.job1_make_per_case_data import make_per_case_data
+from pyauthor_util import author
+from pyauthor_util.job1_records import RECORDS
+from pyauthor_util.job1_make_per_case_data import make_per_case_data
 
 
 def gen_html_file(tdm_ch):

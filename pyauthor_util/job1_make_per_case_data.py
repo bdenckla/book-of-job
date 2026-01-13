@@ -1,9 +1,9 @@
 """ Exports make_per_case_data, make_example_row """
 
 from py import my_html
-from pyauthor.util import author
-from pyauthor.util.job1_highlight import highlight, color
-from pyauthor.util.job1_lcloc import lcloc
+from pyauthor_util import author
+from pyauthor_util.job1_highlight import highlight, color
+from pyauthor_util.job1_lcloc import lcloc
 
 
 def make_per_case_data(record):

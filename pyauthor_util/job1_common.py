@@ -1,5 +1,5 @@
-from pyauthor.util import author
-from pyauthor.util.job1_make_per_case_data import make_example_row
+from pyauthor_util import author
+from pyauthor_util.job1_make_per_case_data import make_example_row
 
 
 def intro(expanding, each, jda=None):

@@ -1,6 +1,6 @@
 """ Exports gen_html_file and anchor """
 
-from pyauthor.util import author
+from pyauthor_util import author
 from pyauthor.common import D2_TITLE, d1v_anchor
 from pyauthor.common import D2_H1_CONTENTS
 from pyauthor.common import D2_FNAME

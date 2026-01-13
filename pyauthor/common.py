@@ -1,7 +1,7 @@
 """ Common utilities for job documents """
 
 from py import my_html
-from pyauthor.util import author
+from pyauthor_util import author
 
 
 D2_TITLE = "BHQ: Too Little, Too Late"

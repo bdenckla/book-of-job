@@ -8,7 +8,7 @@ from pyauthor import job2
 from pyauthor.common import d2_anchor
 
 
-def write_index_dot_html(css_hrefs, out_path, d2_anchor):
+def write_index_dot_html(css_hrefs, out_path):
     write_ctx = my_html.WriteCtx("Job Documents", out_path, css_hrefs=css_hrefs)
     my_html.write_html_to_file(_CBODY, write_ctx)
 
@@ -27,7 +27,7 @@ def main():
     job1_details.gen_html_file(tdm_ch)
     job2.gen_html_file(tdm_ch)
     #
-    write_index_dot_html((css_href,), "docs/index.html", d2_anchor)
+    write_index_dot_html((css_href,), "docs/index.html")
 
 
 _CBODY = [

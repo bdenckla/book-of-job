@@ -6,7 +6,7 @@ from pycmn import str_defs as sd
 from pycmn.my_utils import sl_map
 from pycmn.my_utils import sum_of_map
 from pycmn.my_utils import dv_map
-from pyauthor.util import dollar_sub_g
+from pyauthor_util import dollar_sub_g
 
 
 def help_gen_html_file(tdm_ch, fname, title, cbody):
