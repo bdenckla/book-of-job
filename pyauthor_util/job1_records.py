@@ -1,21 +1,49 @@
-# https://tanach.us/Tanach.xml?Job17:6
-# μL has וְתֹ֖פֶתּ, whose דגש in ת is contrary to consensus.
-# UXLC does not reflect this, i.e. it has וְתֹ֖פֶת.
-# Dotan does not note this in BHL Appendix A.
-# BHQ does reflect this, and notes it.
+# Below "All good" means:
+#    As expected, BHL body matches ML above and BHLA has no entry for this.
+#    As expected, UXLC matches ML above.
+#    As expected, MAM matches MA above.
+
+# 01:21 יָצָ֜תִי MA MY | יצתי ML(ket) | יָצָ֜אתִי ML(qere) (differ-orth)
+# All good.
+
+# 02:07 ְעַ֥ד MA MY | עד Mket | וְעַד Mqere
+# I am not sure what BHQ is getting at here: perhaps the k/q is notated one way in MA & MY and another way in ML?
+
+# 02:08 לְהִתְגָּרֵ֖ר ML (err) | לְהִתְגָּרֵ֖ד MA MY (resh/dalet)
+# Come on, the letter in question (the last) has a רפה and even has a little serif that might make it ד.
+# BHL body ends in ד, and BHLA has no entry for this.
+# UXLC ends in ד.
+# MAM ends in ד.
+#
+# docs\jobn\img\0208-col-1-line-neg-6-incl-1-blank.png
+
+
+# 05:12 תּוּשִׁיָּֽה׃ ML (differ-orth) | תֻּשִׁיָּֽה׃ MA MY
+# All good except MAM has a געיה under the תּ.
+
+# 06:21 לֹ֑א MA MY (T) | לא ML(ket) | ל֑וֹ ML(qere) (err-lex)
+# All good.
+
+# 10:22 עֵיפָ֨תָה ML (differ-orth) | עֵפָ֨תָה MA MY
+# All good.
+
+# 14:05 חֻקָּ֥ו MA | חקו ML(ket) MY(ket) | חֻקָּיו ML(qere) MY(qere) (differ-orth)
+# All good.
+
+# 15:31 בַּשָּׁ֣ו MA MY | בשו ML(ket) | בַּשָּׁ֣יו ML(qere) (differ-orth)
+# All good.
+
+# 16:13 יַחְמ֑וֹל ML (err) | יַחְמֹ֑ל MA MY (xaser/malei)
+# All good.
+
+# 17:06 וְתֹ֖פֶתּ ML (err) | וְתֹ֖פֶת MA MY ○ וְתֹ֖פֶתּ (dagesh) (see above)
+# As expected, BHL body matches MA/MY above but unexpectedly, BHLA has no entry for this.
+# Unexpectedly, UXLC matches MA/MY above. https://tanach.us/Tanach.xml?Job17:6
+# As expected, MAM matches MA above.
+#
 # https://manuscripts.sefaria.org/leningrad-color/BIB_LENCDX_F402A.jpg
 # column 1 line 7
-#
-# 01:21 יָצָ֜תִי MA MY | יצתי ML(ket) | יָצָ֜אתִי ML(qere) (differ-orth)
-# 02:07 ְעַ֥ד MA MY | עד Mket | וְעַד Mqere
-# 02:08 לְהִתְגָּרֵ֖ר ML (err) | לְהִתְגָּרֵ֖ד MA MY (resh/dalet)
-# 05:12 תּוּשִׁיָּֽה׃ ML (differ-orth) | תֻּשִׁיָּֽה׃ MA MY
-# 06:21 לֹ֑א MA MY (T) | לא ML(ket) | ל֑וֹ ML(qere) (err-lex)
-# 10:22 עֵיפָ֨תָה ML (differ-orth) | עֵפָ֨תָה MA MY
-# 14:05 חֻקָּ֥ו MA | חקו ML(ket) MY(ket) | חֻקָּיו ML(qere) MY(qere) (differ-orth)
-# 15:31 בַּשָּׁ֣ו MA MY | בשו ML(ket) | בַּשָּׁ֣יו ML(qere) (differ-orth)
-# 16:13 יַחְמ֑וֹל ML (err) | יַחְמֹ֑ל MA MY (xaser/malei)
-# 17:06 וְתֹ֖פֶתּ ML (err) | וְתֹ֖פֶת MA MY ○ וְתֹ֖פֶתּ (dagesh) (see above)
+
 # 17:11 לְבָבִּֽי׃ ML (err) | לְבָבִֽי׃ MA MY (dagesh)
 # 18:09 בְּעָקֵ֣ב ML (err) | בְּעָקֵ֣ב MA MY (?)
 # 18:15 מִבְּלִיל֑וֹ ML MY | מִבְּלִי־ל֑וֹ MA (differ-orth)
