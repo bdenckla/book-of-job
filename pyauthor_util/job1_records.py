@@ -34,19 +34,19 @@
 # Da-at Miqra 12:6 varika
 # Da-at Miqra 12:9 Aleppo has full revia mugrash. Leningrad lacks the revia.
 # Da-at Miqra 12:25 varika
-# Da-at Miqra 14:5 xaser/malei
+# Da-at Miqra 14:5 xaser/malei: יעבר vs יעבור
 # Da-at Miqra 14:16 xaser/malei
 # Da-at Miqra 15:8 אלוה mapiq; noted by BHQ, but only in 4:9 note
 # Da-at Miqra 15:31 footnote 24; xaser/malei k/q; noted by BHQ
 # Da-at Miqra 15:35 munax-געיה in Aleppo, unclear in Leningrad
 # Da-at Miqra 16:6 dagesh
 # Da-at Miqra 16:9 xaser/malei
-# Da-at Miqra 16:13 xaser/malei; noted by BHQ
+# Da-at Miqra 16:13 xaser/malei: יחמל vs יחמול; noted by BHQ
 # Da-at Miqra 16:13 סילוק location; noted by Dotan
 # Da-at Miqra 16:19 xaser/malei
 # Da-at Miqra 16:20 אלוה mapiq; noted by BHQ, but only in 4:9 note
 # Da-at Miqra 17:3 Aleppo קמץ Leningrad פתח (opposite of 3:4)
-# Da-at Miqra 17:6 xaser/malei
+# Da-at Miqra 17:6 xaser/malei: והציגני A malei vs והצגני L xaser
 # Da-at Miqra 18:4 patax vs xataf patax; noted by Dotan
 # Da-at Miqra 19:16 geresh muqdam location
 # Da-at Miqra 20:1 געיה location (ה vs נ)
@@ -93,7 +93,7 @@
 # Da-at Miqra 35:7 dagesh
 # Da-at Miqra 36:10 xaser/malei
 # Da-at Miqra 36:10 oleh location
-# Da-at Miqra 36:12 bet/kaf & מרכא vs מקף; noted by BHQ but, surprisingly, not by Dotan
+# Da-at Miqra 36:12 bet/kaf & מרכא vs מקף; noted by BHQ but, unexpectedly, not by Dotan
 # Da-at Miqra 36:21 there's some question about what L has so maybe it doesn't agree with A
 # Da-at Miqra 36:24 varika
 # Da-at Miqra 37:8 xaser/malei
@@ -123,12 +123,14 @@
 ###################################################################
 
 # Below "All good" means:
-#    As expected, BHL body matches ML above and BHLA has no entry for this.
+#    As expected, BHL body (both ketiv and qere, if relevant) matches ML above.
+#    As expected, BHLA has no entry for this.
 #    As expected, UXLC matches ML above.
 #    As expected, MAM matches MA above.
 
 # 1:21 יָצָ֜תִי MA MY | יצתי ML(ket) | יָצָ֜אתִי ML(qere) (differ-orth)
 # All good.
+# We might call this a "trivial qere" in ML that MA & MY found so trivial as to not merit a qere.
 # Surprisingly, not noted in Da-at Miqra.
 
 # 2:7 ְעַ֥ד MA MY | עד Mket | וְעַד Mqere
@@ -149,11 +151,13 @@
 # docs\jobn\img\0208.png
 
 # 5:12 תּוּשִׁיָּֽה׃ ML (differ-orth) | תֻּשִׁיָּֽה׃ MA MY
-# All good except MAM has a געיה under the תּ, which is not supported by the image of Aleppo, and which I have suggested that Avi remove.
+# All good.
 # As expected, noted in Da-at Miqra.
 
 # 6:21 לֹ֑א MA MY (T) | לא ML(ket) | ל֑וֹ ML(qere) (err-lex)
 # All good.
+# We might call this a "trivial qere" in ML that MA & MY found so trivial as to not merit a qere.
+# Note that it is only trivial in that it makes no phonetic difference; it seems like it would make a pretty big semantic difference.
 # As expected, noted in Da-at Miqra.
 
 # 10:22 עֵיפָ֨תָה ML (differ-orth) | עֵפָ֨תָה MA MY
@@ -173,25 +177,31 @@
 # As expected, noted in Da-at Miqra.
 
 # 17:6 וְתֹ֖פֶתּ ML (err) | וְתֹ֖פֶת MA MY ○ וְתֹ֖פֶתּ (dagesh) (see above)
-# As expected, BHL body matches MA/MY above but unexpectedly, BHLA has no entry for this.
+# As expected, BHL body matches MA/MY above.
+# Unexpectedly, BHLA has no entry for this.
 # Unexpectedly, UXLC matches MA/MY above.
 # As expected, MAM matches MA above.
+# Unexpectedly, Da-at Miqra has no entry for this.
 # https://manuscripts.sefaria.org/leningrad-color/BIB_LENCDX_F402A.jpg
 # column 1 line 7
 # docs\jobn\img\1706.png
 
 # 17:11 לְבָבִּֽי׃ ML (err) | לְבָבִֽי׃ MA MY (dagesh)
-# As expected, BHL body matches MA/MY above but unexpectedly, BHLA has no entry for this.
+# As expected, BHL body matches MA/MY above.
+# Unexpectedly, BHLA has no entry for this.
 # Unexpectedly, UXLC matches MA/MY above.
 # As expected, MAM matches MA above.
+# Unexpectedly, Da-at Miqra has no entry for this.
 # https://manuscripts.sefaria.org/leningrad-color/BIB_LENCDX_F402A.jpg
 # column 1 line 13
 # docs\jobn\img\1711.png
 
 # 18:9 בְּעָּקֵ֣ב ML (err) | בְּעָקֵ֣ב MA MY (dagesh in ע in ML (not present in Accordance))
-# As expected, BHL body matches MA/MY above but unexpectedly, BHLA has no entry for this.
+# As expected, BHL body matches MA/MY above.
+# Unexpectedly, BHLA has no entry for this.
 # Unexpectedly, UXLC matches MA/MY above.
 # As expected, MAM matches MA above.
+# Unexpectedly, Da-at Miqra has no entry for this.
 # https://manuscripts.sefaria.org/leningrad-color/BIB_LENCDX_F402A.jpg
 # column 2 line 2
 # docs\jobn\img\1809.png
@@ -205,14 +215,18 @@
 # Da-at Miqra says both MA and ML have a simple word here.
 
 # 22:30 וְ֝נִּמְלַ֗ט ML (err) | וְ֝נִמְלַ֗ט MA MY (dagesh)
-# As expected, BHL body matches MA/MY above but unexpectedly, BHLA has no entry for this.
+# As expected, BHL body matches MA/MY above.
+# Unexpectedly, BHLA has no entry for this.
 # Unexpectedly, UXLC matches MA/MY above.
 # As expected, MAM matches MA above.
+# Unexpectedly, Da-at Miqra has no entry for this.
 
 # 24:16 יָ֥דְּעוּ ML (err) | יָ֥דְעוּ MA MY (dagesh)
-# As expected, BHL body matches MA/MY above but unexpectedly, BHLA has no entry for this.
+# As expected, BHL body matches MA/MY above.
+# Unexpectedly, BHLA has no entry for this.
 # Unexpectedly, UXLC matches MA/MY above.
 # As expected, MAM matches MA above.
+# Unexpectedly, Da-at Miqra has no entry for this.
 
 # 26:3 וְ֝תוּשִׁיָּ֗ה ML (differ-orth) | וְ֝תֻשִׁיָּ֗ה MA MY(qere)
 # All good.
@@ -223,17 +237,21 @@
 # BHL body has bet and BHLA has no entry.
 # UXLC has kaf.
 # MAM has bet.
-# As expected, the bet/kaf issue is noted in Da-at Miqra.
+# As expected, the bet/kaf issue is noted in Da-at Miqra but I'm not sure if Da-at Miqra differs from BHQ in other ways.
 
 # 38:17 צַלְמָּ֣וֶת ML (err) | צַלְמָ֣וֶת MA MY (dagesh)
-# BHL body has no dagesh and BHLA has no entry.
-# UXLC has no dagesh.
-# MAM has no dagesh.
+# As expected, BHL body has no dagesh.
+# Unexpectedly, BHLA has no entry.
+# Unexpectedly, UXLC has no dagesh.
+# As expected, MAM has no dagesh.
+# Unexpectedly, Da-at Miqra has no entry for this.
 
 # 42:13 בָנֽוֹת׃ ML (err) | בָּנֽוֹת׃ MA MY (dagesh)
-# BHL body has dagesh and BHLA has no entry.
-# UXLC has dagesh.
-# MAM has dagesh.
+# As expected, BHL body has dagesh.
+# Unexpectedly, BHLA has no entry.
+# Unexpectedly, UXLC has dagesh.
+# As expected, MAM has dagesh.
+# Unexpectedly, Da-at Miqra has no entry for this.
 
 
 def _correctly_ignores(what, adjective=""):
