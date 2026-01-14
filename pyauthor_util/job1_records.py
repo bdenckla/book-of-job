@@ -1,12 +1,14 @@
 # Da-at Miqra 1:19 Aleppo dagesh in yod
 # Da-at Miqra 3:4 Aleppo פתח Leningrad קמץ
-# Da-at Miqra 3:7 xaser/plene
+# Da-at Miqra 3:7 xaser/malei
 # Da-at Miqra 3:8 varika
 # Da-at Miqra 3:15 varika
 # Da-at Miqra 3:16 varika
 # Da-at Miqra 3:21 varika
+# Da-at Miqra 4:9 אלוה mapiq; noted by BHQ
+# Da-at Miqra 4:17 מאלוה mapiq; noted by Dotan but not by BHQ, not even in 4:9 note
 # Da-at Miqra 5:8 Aleppo dagesh in tsadi
-# Da-at Miqra 5:12 xaser/plene (noted by BHQ)
+# Da-at Miqra 5:12 xaser/malei; noted by BHQ
 # Da-at Miqra 5:14 varika
 # Da-at Miqra 5:20 Aleppo has געיה under bet.
 # Da-at Miqra 5:23 Aleppo has dagesh in lamed. Leningrad maybe does not.
@@ -14,19 +16,46 @@
 # Da-at Miqra 6:10 Aleppo has maqaf.
 # Da-at Miqra 6:17 Aleppo has munax. Leningrad has dexi.
 # Da-at Miqra 6:21 k/q difference; noted by BHQ
-# Da-at Miqra 6:27 געיה location difference
-# Da-at Miqra 6:29 xaser/plene
-# Da-at Miqra 7:20 oleh location difference
+# Da-at Miqra 6:27 געיה location 
+# Da-at Miqra 6:29 xaser/malei
+# Da-at Miqra 7:20 oleh location
 # Da-at Miqra 7:21 varika
 # Da-at Miqra 8:2 Aleppo has full revia mugrash. Leningrad lacks the revia.
 # Da-at Miqra 8:14 Aleppo has full revia mugrash. Leningrad lacks the revia.
-# Da-at Miqra 8:18 xaser/plene
-# Da-at Miqra 9:32 xaser/plene
+# Da-at Miqra 8:18 xaser/malei
+# Da-at Miqra 9:32 xaser/malei
 # Da-at Miqra 9:35 xataf patax vs patax; noted by Dotan
+# Da-at Miqra 10:11 shin/samekh, varika
+# Da-at Miqra 10:22 xaser/malei; noted by BHQ
+# Da-at Miqra 11:6 אלוה mapiq; noted by BHQ
+# Da-at Miqra 11:7 אלוה mapiq; noted by BHQ, but only in 4:9 note
+# Da-at Miqra 11:13 xaser/malei
+# Da-at Miqra 12:3 maqaf; noted by Dotan
+# Da-at Miqra 12:6 varika
+# Da-at Miqra 12:9 Aleppo has full revia mugrash. Leningrad lacks the revia.
+# Da-at Miqra 12:25 varika
+# Da-at Miqra 14:5 xaser/malei
+# Da-at Miqra 14:16 xaser/malei
+# Da-at Miqra 15:8 אלוה mapiq; noted by BHQ, but only in 4:9 note
+# Da-at Miqra 15:31 footnote 24; xaser/malei k/q; noted by BHQ
+# Da-at Miqra 15:35 munax-געיה in Aleppo, unclear in Leningrad
+# Da-at Miqra 16:6 dagesh
+# Da-at Miqra 16:9 xaser/malei
+# Da-at Miqra 16:13 xaser/malei; noted by BHQ
+# Da-at Miqra 16:13 סילוק location; noted by Dotan
+# Da-at Miqra 16:19 xaser/malei
+# Da-at Miqra 16:20 אלוה mapiq; noted by BHQ, but only in 4:9 note
+# Da-at Miqra 17:3 Aleppo קמץ Leningrad פתח (opposite of 3:4)
+# Da-at Miqra 17:6 xaser/malei
+# Da-at Miqra 18:4 patax vs xataf patax; noted by Dotan
+# Da-at Miqra 19:16 geresh muqdam location
 # Da-at Miqra
 # Da-at Miqra
 # Da-at Miqra
 # Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra 26:3 xaser/malei; noted by BHQ
 # Da-at Miqra
 # Da-at Miqra
 # Da-at Miqra
