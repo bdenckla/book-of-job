@@ -1,21 +1,51 @@
-# Da-at Miqra 1:19 ויפל Aleppo dagesh in י, Leningrad not so much.
-# Da-at Miqra 3:4 ממעל Aleppo פתח Leningrad קמץ.
-# Da-at Miqra 3:7 תבוא Aleppo, תבא Leningrad.
-# Da-at Miqra 3:8 אררי Aleppo חטף פתח Leningrad simple שווא.
-# Da-at Miqra 3:15 Aleppo חטף פתח Leningrad simple שווא.
-# Da-at Miqra 3:16 Aleppo חטף פתח Leningrad simple שווא.
-# Da-at Miqra 3:21 Aleppo חטף פתח Leningrad simple שווא.
-# Da-at Miqra 5:8 Aleppo has dagesh in tsadi. Leningrad does not.
-# Da-at Miqra 5:12 xaser/plene yod spelling split (noted by BHQ)
+# Da-at Miqra 1:19 Aleppo dagesh in yod
+# Da-at Miqra 3:4 Aleppo פתח Leningrad קמץ
+# Da-at Miqra 3:7 xaser/plene
+# Da-at Miqra 3:8 varika
+# Da-at Miqra 3:15 varika
+# Da-at Miqra 3:16 varika
+# Da-at Miqra 3:21 varika
+# Da-at Miqra 5:8 Aleppo dagesh in tsadi
+# Da-at Miqra 5:12 xaser/plene (noted by BHQ)
 # Da-at Miqra 5:14 varika
-# Da-at Miqra 5:20 ברעב Aleppo has געיה under bet. Leningrad does not.
+# Da-at Miqra 5:20 Aleppo has געיה under bet.
 # Da-at Miqra 5:23 Aleppo has dagesh in lamed. Leningrad maybe does not.
 # Da-at Miqra 5:24 Aleppo has full revia mugrash. Leningrad lacks the revia.
-# Da-at Miqra 6:10 Aleppo has maqaf. Leningrad does not.
-# Da-at Miqra 6:17 Aleppo has munuax. Leningrad has dexi.
-# Da-at Miqra 6:20 k/q difference (noted by BHQ)
+# Da-at Miqra 6:10 Aleppo has maqaf.
+# Da-at Miqra 6:17 Aleppo has munax. Leningrad has dexi.
+# Da-at Miqra 6:21 k/q difference; noted by BHQ
 # Da-at Miqra 6:27 געיה location difference
-# Da-at Miqra 6:29 xaser/plene vav spelling split
+# Da-at Miqra 6:29 xaser/plene
+# Da-at Miqra 7:20 oleh location difference
+# Da-at Miqra 7:21 varika
+# Da-at Miqra 8:2 Aleppo has full revia mugrash. Leningrad lacks the revia.
+# Da-at Miqra 8:14 Aleppo has full revia mugrash. Leningrad lacks the revia.
+# Da-at Miqra 8:18 xaser/plene
+# Da-at Miqra 9:32 xaser/plene
+# Da-at Miqra 9:35 xataf patax vs patax; noted by Dotan
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
+# Da-at Miqra
 # Da-at Miqra
 # Da-at Miqra
 # Da-at Miqra
@@ -32,11 +62,11 @@
 #    As expected, UXLC matches ML above.
 #    As expected, MAM matches MA above.
 
-# 01:21 יָצָ֜תִי MA MY | יצתי ML(ket) | יָצָ֜אתִי ML(qere) (differ-orth)
+# 1:21 יָצָ֜תִי MA MY | יצתי ML(ket) | יָצָ֜אתִי ML(qere) (differ-orth)
 # All good.
 # Surprisingly, not noted in Da-at Miqra.
 
-# 02:07 ְעַ֥ד MA MY | עד Mket | וְעַד Mqere
+# 2:7 ְעַ֥ד MA MY | עד Mket | וְעַד Mqere
 # I am not sure what BHQ is getting at here. Is BHQ just trying to explicitly say that MA & MY agree with ML?
 # https://manuscripts.sefaria.org/leningrad-color/BIB_LENCDX_F397B.jpg
 # LC column 1 line -9 including 1 blank line
@@ -44,7 +74,7 @@
 # docs\jobn\img\0207.png
 # docs\jobn\img\Aleppo-0207.png
 
-# 02:08 לְהִתְגָּרֵ֖ר ML (err) | לְהִתְגָּרֵ֖ד MA MY (resh/dalet)
+# 2:8 לְהִתְגָּרֵ֖ר ML (err) | לְהִתְגָּרֵ֖ד MA MY (resh/dalet)
 # Come on, the letter in question (the last) has a רפה and even has a little serif that might make it ד.
 # BHL body ends in ד, and BHLA has no entry for this.
 # UXLC ends in ד.
@@ -53,11 +83,11 @@
 # column 1 line -8 including 1 blank line
 # docs\jobn\img\0208.png
 
-# 05:12 תּוּשִׁיָּֽה׃ ML (differ-orth) | תֻּשִׁיָּֽה׃ MA MY
+# 5:12 תּוּשִׁיָּֽה׃ ML (differ-orth) | תֻּשִׁיָּֽה׃ MA MY
 # All good except MAM has a געיה under the תּ, which is not supported by the image of Aleppo, and which I have suggested that Avi remove.
 # As expected, noted in Da-at Miqra.
 
-# 06:21 לֹ֑א MA MY (T) | לא ML(ket) | ל֑וֹ ML(qere) (err-lex)
+# 6:21 לֹ֑א MA MY (T) | לא ML(ket) | ל֑וֹ ML(qere) (err-lex)
 # All good.
 # As expected, noted in Da-at Miqra.
 
@@ -65,7 +95,7 @@
 # All good.
 # As expected, noted in Da-at Miqra.
 
-# 14:05 חֻקָּ֥ו MA | חקו ML(ket) MY(ket) | חֻקָּיו ML(qere) MY(qere) (differ-orth)
+# 14:5 חֻקָּ֥ו MA | חקו ML(ket) MY(ket) | חֻקָּיו ML(qere) MY(qere) (differ-orth)
 # All good.
 # Surprisingly, not noted in Da-at Miqra.
 
@@ -77,7 +107,7 @@
 # All good.
 # As expected, noted in Da-at Miqra.
 
-# 17:06 וְתֹ֖פֶתּ ML (err) | וְתֹ֖פֶת MA MY ○ וְתֹ֖פֶתּ (dagesh) (see above)
+# 17:6 וְתֹ֖פֶתּ ML (err) | וְתֹ֖פֶת MA MY ○ וְתֹ֖פֶתּ (dagesh) (see above)
 # As expected, BHL body matches MA/MY above but unexpectedly, BHLA has no entry for this.
 # Unexpectedly, UXLC matches MA/MY above.
 # As expected, MAM matches MA above.
@@ -93,7 +123,7 @@
 # column 1 line 13
 # docs\jobn\img\1711.png
 
-# 18:09 בְּעָּקֵ֣ב ML (err) | בְּעָקֵ֣ב MA MY (dagesh in ע in ML (not present in Accordance))
+# 18:9 בְּעָּקֵ֣ב ML (err) | בְּעָקֵ֣ב MA MY (dagesh in ע in ML (not present in Accordance))
 # As expected, BHL body matches MA/MY above but unexpectedly, BHLA has no entry for this.
 # Unexpectedly, UXLC matches MA/MY above.
 # As expected, MAM matches MA above.
@@ -119,7 +149,7 @@
 # Unexpectedly, UXLC matches MA/MY above.
 # As expected, MAM matches MA above.
 
-# 26:03 וְ֝תוּשִׁיָּ֗ה ML (differ-orth) | וְ֝תֻשִׁיָּ֗ה MA MY(qere)
+# 26:3 וְ֝תוּשִׁיָּ֗ה ML (differ-orth) | וְ֝תֻשִׁיָּ֗ה MA MY(qere)
 # All good.
 # As expected, noted in Da-at Miqra.
 
