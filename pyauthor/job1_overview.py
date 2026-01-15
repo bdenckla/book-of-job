@@ -3,7 +3,7 @@
 from pyauthor.common import D1V_FNAME, d1d_anchor
 from pyauthor.common import D1V_H1_CONTENTS
 from pyauthor.common import D1V_TITLE
-from pyauthor_util.job1_common import intro
+from pyauthor_util.job1_common import intro, here_is
 from py import my_html
 from pyauthor_util import author
 
@@ -17,7 +17,8 @@ def _make_cbody(ov_and_de):
     overview = [od["od-overview"] for od in ov_and_de]
     cbody = [
         author.heading_level_1(D1V_H1_CONTENTS),
-        intro("intro-overview", d1d_anchor()),
+        author.para(here_is("Below is a table summarizing", d1d_anchor())),
+        *intro("intro-overview"),
         my_html.horizontal_rule(),
         author.table_c(overview),
     ]

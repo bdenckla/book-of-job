@@ -2,10 +2,9 @@ from pyauthor_util import author
 from pyauthor_util.job1_ov_and_de import make_example_row
 
 
-def intro(ov_or_de, jda=None):
-    start, each = _VARIANTS[ov_or_de]
+def intro(ov_or_de):
+    each = _VARIANTS[ov_or_de]
     return [
-        author.para(_here_is(start, jda)),
         author.para(_each(each)),
         author.table_c(make_example_row()),
         author.para(_where()),
@@ -13,12 +12,13 @@ def intro(ov_or_de, jda=None):
 
 
 _VARIANTS = {
-    "intro-overview": ("Below is a table summarizing", "Each"),
-    "intro-details": ("This document presents", "The header of each"),
+    "intro-overview": "Each entry below",
+    "intro-details": "The header of each entry below",
+    "intro-job2": "Each entry above",
 }
 
 
-def _here_is(start, jda=None):
+def here_is(start, jda=None):
     out = [
         f"{start} some quirks in μL in the book of Job.",
     ]
@@ -29,7 +29,7 @@ def _here_is(start, jda=None):
 
 
 def _each(each):
-    return [f"{each} entry below takes the following form:"]
+    return [f"{each} takes the following form:"]
 
 
 def _where():

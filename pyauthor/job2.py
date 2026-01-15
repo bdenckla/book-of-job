@@ -1,7 +1,7 @@
 """ Exports gen_html_file and anchor """
 
 from pyauthor_util import author
-from pyauthor.common import D2_TITLE, d1v_anchor
+from pyauthor.common import D2_TITLE
 from pyauthor.common import D2_H1_CONTENTS
 from pyauthor.common import D2_FNAME
 from py import my_html
@@ -9,6 +9,7 @@ from pyauthor_util.job1_records import RECORD_1076
 from pyauthor_util.job1_records import RECORD_1711
 from pyauthor_util.job1_records import RECORD_1809
 from pyauthor_util.job1_ov_and_de import make_overview_row
+from pyauthor_util.job1_common import intro
 
 def gen_html_file(tdm_ch):
     author.assert_stem_eq(__file__, D2_FNAME)
@@ -135,4 +136,5 @@ _CBODY = [
     author.para(_CPARA16),
     author.para(_CPARA17),
     make_mini_table(_RECORDS_AFTER_PARA17),
+    *intro("intro-job2")
 ]

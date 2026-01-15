@@ -3,7 +3,7 @@
 from pyauthor.common import D1D_TITLE
 from pyauthor.common import D1D_H1_CONTENTS
 from pyauthor.common import D1D_FNAME
-from pyauthor_util.job1_common import intro
+from pyauthor_util.job1_common import intro, here_is
 from py import my_html
 from pyauthor_util import author
 
@@ -17,6 +17,7 @@ def _make_cbody(ov_and_de):
     details = [od["od-details"] for od in ov_and_de]
     cbody = [
         author.heading_level_1(D1D_H1_CONTENTS),
+        author.para(here_is("This document presents")),
         *intro("intro-details"),
         my_html.horizontal_rule(),
         *details,
