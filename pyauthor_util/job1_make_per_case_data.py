@@ -84,23 +84,41 @@ def _maybe_bhq(bhq):
 
 
 _DEFAULT_BHQ_COMMENT = "BHQ agrees with μL here, but BHQ makes no note of μL’s divergence from consensus."
+_SEP = " \N{EM DASH} "
+
+
+def _maybe_sep_lc_is_from_bhla(record):
+    if record.get("bhla-i"):
+        return [_SEP, "μL is from BHL-A"]
+    return []
+
+
+def _maybe_sep_comment(record):
+    if comment := record.get("comment"):
+        return [_SEP, comment]
+    return []
+
+
+def _sep_bhq_comment(record):
+    bhq_comment = record.get("bhq-comment") or _DEFAULT_BHQ_COMMENT
+    return [_SEP, bhq_comment]
 
 
 def _make_details(record):
-    sep = " \N{EM DASH} "
     cv = record["cv"]
     uxlc_href = f"https://tanach.us/Tanach.xml?Job{cv}"
     uxlc_anc = my_html.anchor_h("UXLC", uxlc_href)
     cnvm = "c" + cv.replace(":", "v")
     mwd_href = f"https://bdenckla.github.io/MAM-with-doc/D3-Job.html#{cnvm}"
     mwd_anc = my_html.anchor_h("MwD", mwd_href)
-    dpe = [uxlc_anc, sep, mwd_anc, sep, *lcloc(record.get("lc-loc"))]
-    if comment := record["comment"]:
-        dpe.append(sep)
-        dpe.append(comment)
-    bhq_comment = record.get("bhq-comment") or _DEFAULT_BHQ_COMMENT
-    dpe.append(sep)
-    dpe.append(bhq_comment)
+    dpe = [
+        uxlc_anc,
+        _SEP, mwd_anc,
+        _SEP, *lcloc(record.get("lc-loc")),
+        *_maybe_sep_comment(record),
+        *_sep_bhq_comment(record),
+        *_maybe_sep_lc_is_from_bhla(record),
+    ]
     return [
         author.table_c(_make_row(record)),
         *_maybe_bhq(record.get("bhq")),
