@@ -5,9 +5,7 @@ from pyauthor.common import D2_TITLE
 from pyauthor.common import D2_H1_CONTENTS
 from pyauthor.common import D2_FNAME
 from py import my_html
-from pyauthor_util.job1_records import RECORD_1076
-from pyauthor_util.job1_records import RECORD_1711
-from pyauthor_util.job1_records import RECORD_1809
+from pyauthor_util.job1_records import RECORDS_MISSED_BY_BOTH
 from pyauthor_util.job1_ov_and_de import make_overview_row
 from pyauthor_util.job1_common import intro
 
@@ -111,11 +109,6 @@ _CPARA17 = [
     " some quirks in μL that were missed by both $BHL Appendix A and דעת מקרא.",
     " They are as follows:",
 ]
-_RECORDS_AFTER_PARA17 = [
-    RECORD_1076,
-    RECORD_1711,
-    RECORD_1809,
-]
 
 
 def make_mini_table(records):
@@ -136,6 +129,6 @@ _CBODY = [
     author.unordered_list(_C_LIST_ITEMS_AFTER_PARA15),
     author.para(_CPARA16),
     author.para(_CPARA17),
-    make_mini_table(_RECORDS_AFTER_PARA17),
+    make_mini_table(RECORDS_MISSED_BY_BOTH),
     *intro("intro-job2"),
 ]

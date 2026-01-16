@@ -419,7 +419,7 @@ _BHQ_COMMENT_MISSED_BY_DO_AND_BR_POSSIBLE = [
     " or it could be that they caught it",
     " but considered to be too slight a possibility to note it.",
 ]
-RECORD_1076 = {
+_RECORD_MBB_1076 = {
     "cv": "17:6",
     "lc": "וְתֹ֖פֶתּ",
     "what-is-weird": "final ת has דגש",
@@ -434,7 +434,7 @@ RECORD_1076 = {
     "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR,
     "uxlc-needs-fix": True,
 }
-RECORD_1711 = {
+_RECORD_MBB_1711 = {
     "cv": "17:11",
     "lc": "לְבָבִּֽי׃",
     "what-is-weird": "second ב has דגש",
@@ -446,7 +446,7 @@ RECORD_1711 = {
     "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR,
     "uxlc-needs-fix": True,
 }
-RECORD_1809 = {
+_RECORD_MBB_1809 = {
     "cv": "18:9",
     "lc": "בְּעָּקֵ֣ב",
     "lc-q": "(?)",
@@ -463,7 +463,7 @@ RECORD_1809 = {
     "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR_POSSIBLE,
     "uxlc-needs-fix": True,
 }
-RECORD_2230 = {
+_RECORD_MBB_2230 = {
     "cv": "22:30",
     "lc": "וְ֝נִּמְלַ֗ט",
     "lc-q": "(?)",
@@ -476,7 +476,7 @@ RECORD_2230 = {
     "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR_POSSIBLE,
     "uxlc-needs-fix": True,
 }
-RECORD_2416 = {
+_RECORD_MBB_2416 = {
     "cv": "24:16",
     "lc": "יָ֥דְּֿעוּ",
     "lc-q": "(?)",
@@ -493,7 +493,7 @@ RECORD_2416 = {
     "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR_POSSIBLE,
     "uxlc-needs-fix": True,
 }
-RECORD_3612 = {
+_RECORD_MBDO_3612 = {
     "cv": "36:12",
     "lc": "כִּבְלִי־",
     "what-is-weird": "כ not ב",
@@ -514,11 +514,13 @@ RECORD_3612 = {
         " It is noted in Da-at Miqra.",
         " Here $BHQ has a typo:",
         [" it has ",author.hbo("בִּבְלִ־")," rather than ", author.hbo("בִּבְלִי־")],
-        " in the word it reports for μA and μL.",
+        " in the word it reports for μA and μY.",
         " I.e. it is missing a final $yod (י) before the מקף."
         " The same typo appears in the $BHQ section “Commentary on the Critical Apparatus.”",
-        " In addition to the typo, for some reason $BHQ reports this word as being the $qere",
-        [" of μA, i.e. M", my_html.sup("Y(qere)"), " rather than just M",my_html.sup("Y"),"."]
+        " In addition to the typo, for some reason $BHQ reports this word as being the קרי",
+        [" of μY, i.e. M", my_html.sup("Y(qere)"), " rather than just M",my_html.sup("Y"),"."],
+        " I see no “Masora dot pair” (μY’s equivalent of a masorah circle) on this word in μY.",
+        " Nor do I see any קרי note in the margin."
     ],
     "aleppo-page-url": "https://www.mgketer.org/mikra/29/36/1/mg/106",
     "aleppo-img": "Aleppo-3612.png",
@@ -526,7 +528,7 @@ RECORD_3612 = {
     "cam1753-img": "Cam1753-3612.png",
     "uxlc-needs-fix": "UXLC has kaf (as it should) but should note the divergence from consensus",
 }
-RECORD_3817 = {
+_RECORD_MBB_3817 = {
     "cv": "38:17",
     "lc": "צַלְמָּ֣וֶת",
     "what-is-weird": "מ has דגש",
@@ -538,7 +540,7 @@ RECORD_3817 = {
     "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR,
     "uxlc-needs-fix": True,
 }
-RECORD_4213 = {
+_RECORD_MBB_4213 = {
     "cv": "42:13",
     "lc": "בָנֽוֹת׃",
     "what-is-weird": "ב lacks דגש",
@@ -1249,16 +1251,21 @@ _RECORD_4125 = {
     "lc-img": "4125.png",
     "bhq-comment": _BHQ_COMMENT_4125,
 }
-
+RECORDS_MISSED_BY_BOTH = [
+    _RECORD_MBB_1076,
+    _RECORD_MBB_1711,
+    _RECORD_MBB_1809,
+    _RECORD_MBB_2230,
+    _RECORD_MBB_2416,
+    _RECORD_MBB_3817,
+    _RECORD_MBB_4213,
+]
+RECORDS_MISSED_BY_DO = [
+    _RECORD_MBDO_3612,
+]
 RECORDS = [
-    RECORD_1076,
-    RECORD_1711,
-    RECORD_1809,
-    RECORD_2230,
-    RECORD_2416,
-    RECORD_3612,
-    RECORD_3817,
-    RECORD_4213,
+    *RECORDS_MISSED_BY_BOTH,
+    *RECORDS_MISSED_BY_DO,
     _RECORD_0121,
     _RECORD_0409,
     _RECORD_0417,
