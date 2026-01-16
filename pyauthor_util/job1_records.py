@@ -411,10 +411,10 @@ _BHQ_COMMENT_1604 = [
     " between גלגל and אתנח הפוך.",
 ]
 _BHQ_COMMENT_MISSED_BY_DO_AND_BR = [
-    "$BHQ catches this, whereas this is not noted in $BHL_A or Da-at Miqra."
+    "$BHQ catches this, whereas this is not noted in either $BHL_A or Da-at Miqra."
 ]
 _BHQ_COMMENT_MISSED_BY_DO_AND_BR_POSSIBLE = [
-    "$BHQ catches this possibility, whereas this is not noted in $BHL_A or Da-at Miqra.",
+    "$BHQ catches this possibility, whereas this is not noted in either $BHL_A or Da-at Miqra.",
     " It could be that Dotan and Breuer did not catch this,",
     " or it could be that they caught it",
     " but considered to be too slight a possibility to note it.",

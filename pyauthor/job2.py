@@ -5,7 +5,7 @@ from pyauthor.common import D2_TITLE
 from pyauthor.common import D2_H1_CONTENTS
 from pyauthor.common import D2_FNAME
 from py import my_html
-from pyauthor_util.job1_records import RECORDS_MISSED_BY_BOTH
+from pyauthor_util.job1_records import RECORDS_MISSED_BY_BOTH, RECORDS_MISSED_BY_DO
 from pyauthor_util.job1_ov_and_de import make_overview_row
 from pyauthor_util.job1_common import intro
 
@@ -61,7 +61,7 @@ _CPARA13 = [
     #
     " But I can’t see why $BHQ would neglect the work already done in other editions.",
     #
-    " These other editions include the following:",
+    " The editions most relevant to $BHQ are the following two:",
 ]
 _C_LIST_ITEMS_AFTER_PARA13 = [
     f"דעת מקרא (Breuer et al., {num_range(1970, 2003)})",
@@ -106,9 +106,17 @@ _CPARA17 = [
     " As of now, it is the latest volume of $BHQ to be published.",
     #
     " First, the good news: the Job volume of $BHQ catches",
-    " some quirks in μL that were missed by both $BHL Appendix A and דעת מקרא.",
+    [" ", str(len(RECORDS_MISSED_BY_BOTH))],
+    " quirks in μL that were not noted in either $BHL Appendix A or דעת מקרא.",
     " They are as follows:",
 ]
+_CPARA18 = [
+    "The Job volume of $BHQ also catches",
+    " one quirk in μL that, while noted in דעת מקרא,",
+    " was not noted in $BHL Appendix A:",
+]
+
+assert len(RECORDS_MISSED_BY_DO) == 1
 
 
 def make_mini_table(records):
@@ -131,4 +139,6 @@ _CBODY = [
     author.para(_CPARA17),
     make_mini_table(RECORDS_MISSED_BY_BOTH),
     *intro("intro-job2"),
+    author.para(_CPARA18),
+    make_mini_table(RECORDS_MISSED_BY_DO),
 ]
