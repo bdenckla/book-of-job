@@ -64,8 +64,13 @@ _CPARA13 = [
     " The editions most relevant to $BHQ are the following two:",
 ]
 _C_LIST13 = [
-    f"The דעת מקרא series, particularly the volumes with sections called “הנוסח ומקורותיו” (Breuer et al., {num_range(1970, 2003)})",
-    "Biblia Hebraica Leningradensia ($BHL) (Dotan, 2001)",
+    [
+        "The דעת מקרא series,",
+        " particularly the volumes with sections called",
+        f" “הנוסח ומקורותיו”",
+        f" (Breuer et al., {num_range(1970, 2003)})"
+    ],
+    ["Biblia Hebraica Leningradensia ($BHL) (Dotan, 2001)"],
 ]
 _CPARA14 = [
     "The first volume of $BHQ (Megilloth) came out in 2004.",

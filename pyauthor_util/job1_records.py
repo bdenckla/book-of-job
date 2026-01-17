@@ -21,12 +21,10 @@
 # Da-at Miqra 6:27 געיה location
 # Da-at Miqra 6:29 xaser/malei
 # Da-at Miqra 7:20 oleh location
-# Da-at Miqra 7:21 varika
 # Da-at Miqra 8:2 Aleppo has full revia mugrash. Leningrad lacks the revia.
 # Da-at Miqra 8:14 Aleppo has full revia mugrash. Leningrad lacks the revia.
 # Da-at Miqra 8:18 xaser/malei
 # Da-at Miqra 9:32 xaser/malei
-# Da-at Miqra 9:35 xataf patax vs patax; noted by Dotan
 # Da-at Miqra 10:11 shin/samekh, varika
 # Da-at Miqra 10:22 xaser/malei; noted by BHQ
 # Da-at Miqra 11:6 אלוה mapiq; noted by BHQ
@@ -211,17 +209,17 @@ def _correctly_ignores(what, adjective=""):
     return "".join(out_parts)
 
 
-_BHQ_COMMENT_MISSED_BY_DO_AND_BR = [
+_BHQ_COMMENT_XBHL_XDM = [
     "$BHQ notes this, whereas this is not noted in either $BHL_A or Da-at Miqra."
 ]
-_BHQ_COMMENT_MISSED_BY_DO_AND_BR_POSSIBLE = [
+_BHQ_COMMENT_XBHL_XDM_DUBIOUS = [
     "$BHQ notes this possibility,",
     " whereas this is not noted in either $BHL_A or Da-at Miqra.",
     " It could be that Dotan and Breuer did not catch this,",
     " or it could be that they caught it",
     " but considered to be too slight a possibility to note it.",
 ]
-_RECORD_MBB_1076 = {
+_RECORD_MBB_1706 = {
     "cv": "17:6",
     "lc": "וְתֹ֖פֶתּ",
     "what-is-weird": "final ת has דגש",
@@ -233,7 +231,7 @@ _RECORD_MBB_1076 = {
     "highlight": 4,
     "lc-loc": {"page": "402A", "column": 1, "line": 7},
     "lc-img": "1706.png",
-    "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR,
+    "bhq-comment": _BHQ_COMMENT_XBHL_XDM,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -246,7 +244,7 @@ _RECORD_MBB_1711 = {
     "highlight": 3,
     "lc-loc": {"page": "402A", "column": 1, "line": 13},
     "lc-img": "1711.png",
-    "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR,
+    "bhq-comment": _BHQ_COMMENT_XBHL_XDM,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -264,7 +262,7 @@ _RECORD_MBB_1809 = {
     "highlight": 2,
     "lc-loc": {"page": "402A", "column": 2, "line": 2},
     "lc-img": "1809.png",
-    "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR_POSSIBLE,
+    "bhq-comment": _BHQ_COMMENT_XBHL_XDM_DUBIOUS,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -278,7 +276,7 @@ _RECORD_MBB_2230 = {
     "highlight": 2,
     "lc-loc": {"page": "403B", "column": 2, "line": 4},
     "lc-img": "2230.png",
-    "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR_POSSIBLE,
+    "bhq-comment": _BHQ_COMMENT_XBHL_XDM_DUBIOUS,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -296,7 +294,7 @@ _RECORD_MBB_2416 = {
     "highlight": 2,
     "lc-loc": {"page": "404A", "column": 1, "line": -12},
     "lc-img": "2416.png",
-    "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR_POSSIBLE,
+    "bhq-comment": _BHQ_COMMENT_XBHL_XDM_DUBIOUS,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -349,7 +347,7 @@ _RECORD_MBB_3817 = {
     "highlight": 3,
     "lc-loc": {"page": "408A", "column": 1, "line": -5},
     "lc-img": "3817.png",
-    "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR,
+    "bhq-comment": _BHQ_COMMENT_XBHL_XDM,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -362,7 +360,7 @@ _RECORD_MBB_4213 = {
     "highlight": 1,
     "lc-loc": {"page": "409B", "column": 1, "line": -9, "including-blank-lines": 1},
     "lc-img": "4213.png",
-    "bhq-comment": _BHQ_COMMENT_MISSED_BY_DO_AND_BR,
+    "bhq-comment": _BHQ_COMMENT_XBHL_XDM,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -384,6 +382,8 @@ _RECORD_0121 = {
 }
 _BHQ_COMMENT_CMN_0409_AND_SIMILAR = [
     "This is one of seven similar cases in Job in μL.",
+    " All are correctly transcribed in $BHQ, i.e. transcribed without a מפיק.",
+    " Although all are correctly transcribed in $BHQ, they are noted to different extents in $BHQ."
 ]
 _BHQ_COMMENT_LIKE_0409 = [
     *_BHQ_COMMENT_CMN_0409_AND_SIMILAR,
@@ -395,6 +395,7 @@ _BHQ_COMMENT_0409 = [
     " section “Commentary on the Critical Apparatus.”",
     " Only this one and 11:6",
     " are noted in the bottom-of-page critical apparatus as well.",
+    " The one in 4:17 is not noted at all in $BHQ.",
 ]
 _RECORD_0409 = {
     "bhla-i": 2,
@@ -410,8 +411,8 @@ _RECORD_0409 = {
     "noted-by": "BHQ-BHL-DM",
 }
 _BHQ_COMMENT_0417 = [
-    "This is one of seven similar cases in Job in μL.",
-    " This is the only one of these seven not noted by $BHQ.",
+    *_BHQ_COMMENT_CMN_0409_AND_SIMILAR,
+    " This is the only one of these seven not noted in any way by $BHQ.",
     " For more details, see my entry on 4:9.",
 ]
 _RECORD_0417 = {
@@ -425,7 +426,8 @@ _RECORD_0417 = {
     "lc-loc": {"page": "398A", "column": 2, "line": 10},
     "lc-img": "0417.png",
     "bhq-comment": _BHQ_COMMENT_0417,
-    "noted-by": "xBHQ-BHL-DM",
+    "noted-by": "tBHQ-BHL-DM",
+    # tBHQ means "transcribed in the BHQ body, but without note anywhere"
 }
 _RECORD_0701 = {
     "bhla-i": 4,
@@ -450,6 +452,7 @@ _RECORD_0709 = {
     "highlight": 3,
     "lc-loc": {"page": "399A", "column": 1, "line": 14},
     "lc-img": "0709.png",
+    "noted-by": "tBHQ-BHL-xDM",
 }
 _RECORD_0721 = {
     "bhla-i": 6,
@@ -457,10 +460,11 @@ _RECORD_0721 = {
     "lc": "וְשִׁ֖חֲרְתַּ֣נִי",
     "what-is-weird": "פתח on ח is חטף",
     "mam": "וְשִׁ֖חַרְתַּ֣נִי",
-    "comment": "",
+    "comment": "It doesn’t make sense to have a חטף vowel (aka a חטף שווא) followed by a simple שווא.",
     "highlight": 3,
     "lc-loc": {"page": "399A", "column": 2, "line": 3},
     "lc-img": "0721.png",
+    "noted-by": "tBHQ-BHL-DM",
 }
 _BHQ_COMMENT_0801 = [
     "This is noted in the bottom-of-page critical apparatus of $BHQ.",
@@ -476,6 +480,7 @@ _RECORD_0801 = {
     "lc-loc": {"page": "399A", "column": 2, "line": 5, "including-blank-lines": 1},
     "lc-img": "0801.png",
     "bhq-comment": _BHQ_COMMENT_0801,
+    "noted-by": "BHQ-BHL-xDM",
 }
 _RECORD_0807 = {
     "bhla-i": 8,
@@ -488,6 +493,7 @@ _RECORD_0807 = {
     "lc-loc": {"page": "399A", "column": 2, "line": 13, "including-blank-lines": 1},
     "lc-img": "0807.png",
     "bhq-comment": "$BHQ silently ignores the possible שורוק dot.",
+    "noted-by": "xBHQ-BHL-xDM",
 }
 _BHQ_COMMENT_0914_AND_0930 = [
     "$BHQ silently supplies the סילוק that is the consensus expectation,",
@@ -505,6 +511,7 @@ _RECORD_0914 = {
     "lc-loc": {"page": "399B", "column": 1, "line": 22, "including-blank-lines": 1},
     "lc-img": "0914.png",
     "bhq-comment": _BHQ_COMMENT_0914_AND_0930,
+    "noted-by": "xBHQ-BHL-xDM",
 }
 _RECORD_0930 = {
     "bhla-i": 10,
@@ -518,6 +525,7 @@ _RECORD_0930 = {
     "lc-loc": {"page": "399B", "column": 2, "line": 15},
     "lc-img": "0930.png",
     "bhq-comment": _BHQ_COMMENT_0914_AND_0930,
+    "noted-by": "xBHQ-BHL-xDM",
 }
 _RECORD_0935 = {
     "bhla-i": 11,
@@ -529,6 +537,7 @@ _RECORD_0935 = {
     "highlight": 1,
     "lc-loc": {"page": "399B", "column": 2, "line": -8},
     "lc-img": "0935.png",
+    "noted-by": "tBHQ-BHL-DM",
 }
 _RECORD_1001 = {
     "bhla-i": 12,
@@ -1203,7 +1212,7 @@ _RECORD_4125 = {
     "bhq-comment": _BHQ_COMMENT_4125,
 }
 RECORDS = [
-    _RECORD_MBB_1076,
+    _RECORD_MBB_1706,
     _RECORD_MBB_1711,
     _RECORD_MBB_1809,
     _RECORD_MBB_2230,
