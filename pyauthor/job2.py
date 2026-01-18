@@ -31,6 +31,12 @@ def _make_cbody(ov_and_de, quirkrecs):
         *(qr_by_perf.get("xBHQ-BHL-DM") or []),
     ]
     q_not_transcribed_in_bhq.sort(key=sort_key)
+    q_tbnn_in_bhq = [  # transcribed but not noted
+        *(qr_by_perf.get("tBHQ-xBHL-DM") or []),
+        *(qr_by_perf.get("tBHQ-BHL-xDM") or []),
+        *(qr_by_perf.get("tBHQ-BHL-DM") or []),
+    ]
+    q_tbnn_in_bhq.sort(key=sort_key)
     cbody = [
         author.heading_level_1(D2_H1_CONTENTS),
         author.para_ol(_CPARA10, _C_LIST10),
@@ -40,15 +46,19 @@ def _make_cbody(ov_and_de, quirkrecs):
         author.para(_CPARA14),
         author.para_ul(_CPARA15, _C_LIST15),
         author.para(_CPARA16),
-        author.para(cpara17(len(q_only_noted_in_bhq))),
-        _table_of_quirks(ov_and_de, q_only_noted_in_bhq),
+        _para_and_table(cpara17, ov_and_de, q_only_noted_in_bhq),
         *intro("intro-job2"),
-        author.para(cpara18(len(q_noted_in_bhq_and_elsewhere))),
-        _table_of_quirks(ov_and_de, q_noted_in_bhq_and_elsewhere),
-        author.para(cpara19(len(q_not_transcribed_in_bhq))),
-        _table_of_quirks(ov_and_de, q_not_transcribed_in_bhq),
+        _para_and_table(cpara18, ov_and_de, q_noted_in_bhq_and_elsewhere),
+        _para_and_table(cpara19, ov_and_de, q_not_transcribed_in_bhq),
     ]
     return cbody
+
+
+def _para_and_table(para_func, ov_and_de, quirkrecs):
+    return [
+        author.para(para_func(len(quirkrecs))),
+        _table_of_quirks(ov_and_de, quirkrecs),
+    ]
 
 
 def _noted_by(quirkrec):
@@ -163,12 +173,17 @@ def cpara17(the_len):
         #
         f" First, the good news: the Job volume of $BHQ notes {str(the_len)}",
         " quirks in μL that were not noted in either $BHL Appendix A or דעת מקרא.",
-        " They are as follows:",
+        " I.e. these are places where $BHQ contributes something not available",
+        " in either of those two other editions.",
+        " Those contributions are as follows:",
     ]
 def cpara18(the_len):
     return [
         f"It is also good news that the Job volume of $BHQ notes {str(the_len)}",
         " quirks in μL that are noted in $BHL Appendix A and/or דעת מקרא.",
+        " I.e. these are places where $BHQ reiterates something available",
+        " in one or both of those two other editions.",
+        " Those reiterations are as follows:",
     ]
 def cpara19(the_len):
     return [
