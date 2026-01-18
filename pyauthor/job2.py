@@ -192,6 +192,8 @@ def cpara17(the_len):
         " quirks in μL that were not noted in either $BHL Appendix A or דעת מקרא.",
         " I.e. these are places where $BHQ contributes something not available",
         " in either of those two other editions.",
+        " It is perhaps not coincidental that none of these contributions",
+        " were already present in $BHS."
         " Those contributions are as follows:",
     ]
 
@@ -206,7 +208,10 @@ def cpara18(the_len):
         " it is still valuable.",
         " Indeed my main criticism of $BHQ Job is that it",
         " should have reiterated most or all of what can be found in those editions.",
-        " Those reiterations $BHQ did make are as follows:",
+        " It is perhaps not coincidental that all but one of the $BHQ reiterations",
+        " were already present in $BHS."
+        " (The one new to $BHQ is the one in 18:4.)",
+        " The reiterations made by $BHQ are as follows:",
     ]
 
 
