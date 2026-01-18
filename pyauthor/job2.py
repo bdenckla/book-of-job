@@ -16,7 +16,6 @@ def gen_html_file(tdm_ch, ov_and_de):
 
 
 def _make_cbody(ov_and_de):
-    details = [od["od-details"] for od in ov_and_de.values()]
     cbody = [
         author.heading_level_1(D2_H1_CONTENTS),
         author.para_ol(_CPARA10, _C_LIST10),
@@ -35,6 +34,16 @@ def _make_cbody(ov_and_de):
         _table_of_quirks(ov_and_de, _QUIRKS_NOT_TRANSCRIBED_IN_BHQ),
     ]
     return cbody
+
+
+def _table_of_quirks(ov_and_de, quirkrecs):
+    rows = [_overview(ov_and_de, rec) for rec in quirkrecs]
+    return author.table_c(rows)
+
+
+def _overview(ov_and_de, quirkrec):
+    the_row_id = row_id(quirkrec)
+    return ov_and_de[the_row_id]["od-overview"]
 
 
 def _num_range(start, stop):
@@ -160,13 +169,3 @@ _CPARA19 = [
     " And, either by coincidence or editorial policy,",
     " $BHQ never notes a quirk it does not transcribe."
 ]
-
-
-def _overview(ov_and_de, quirkrec):
-    the_row_id = row_id(quirkrec)
-    return ov_and_de[the_row_id]["od-overview"]
-
-
-def _table_of_quirks(ov_and_de, quirkrecs):
-    rows = [_overview(ov_and_de, rec) for rec in quirkrecs]
-    return author.table_c(rows)
