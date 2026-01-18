@@ -10,6 +10,7 @@ from pyauthor_util.job1_ov_and_de import row_id, sort_key
 from pyauthor_util.job1_common import intro
 from pycmn.my_utils import sl_map
 
+
 def gen_html_file(tdm_ch, ov_and_de, quirkrecs):
     author.assert_stem_eq(__file__, D2_FNAME)
     cbody = _make_cbody(ov_and_de, quirkrecs)
@@ -33,8 +34,10 @@ def _make_cbody(ov_and_de, quirkrecs):
         _para_and_table(cpara19, ov_and_de, groups[2]),
         _para_and_table(cpara20, ov_and_de, groups[3]),
         author.para_ul(_CPARA21, clist21(sl_map(len, groups))),
+        author.para(_CPARA22),
     ]
     return cbody
+
 
 def _get_groups(quirkrecs):
     qr_by_perf = my_groupby(quirkrecs, _noted_by)
@@ -179,6 +182,15 @@ _CPARA16 = [
 _CPARA21 = [
     "In conclusion, compared to the μL quirks noted in $BHL and דעת מקרא:",
 ]
+_CPARA22 = [
+    "To be fair, regarding the last two groups above,",
+    " not all quirks are worth transcribing,",
+    " and perhaps some are worth transcribing but not worth noting.",
+    " Nonetheless, the quantity and quality",
+    " of the quirks in the last two groups above",
+    " strongly suggest that $BHQ’s editors",
+    " were either unaware of or uninterested in $BHL and דעת מקרא.",
+]
 
 
 def cpara17(the_len):
@@ -193,7 +205,7 @@ def cpara17(the_len):
         " I.e. these are places where $BHQ contributes something not available",
         " in either of those two other editions.",
         " It is perhaps not coincidental that none of these contributions",
-        " were already present in $BHS."
+        " were already present in $BHS.",
         " Those contributions are as follows:",
     ]
 
@@ -209,33 +221,34 @@ def cpara18(the_len):
         " Indeed my main criticism of $BHQ Job is that it",
         " should have reiterated most or all of what can be found in those editions.",
         " It is perhaps not coincidental that all but one of the $BHQ reiterations",
-        " were already present in $BHS."
-        " (The one new to $BHQ is the one in 18:4.)",
+        " were already present in $BHS." " (The one new to $BHQ is the one in 18:4.)",
         " The reiterations made by $BHQ are as follows:",
     ]
 
 
 def cpara19(the_len):
     return [
-        f"Now for some bad news: the Job volume of $BHQ fails to transcribe {str(the_len)}",
-        " quirks in μL that are noted in $BHL Appendix A and/or דעת מקרא.",
-        " And, either by coincidence or editorial policy,",
-        " $BHQ never notes a quirk it does not transcribe.",
+        f"Now for some bad news:",
+        f" the Job volume of $BHQ fails to transcribe {str(the_len)}",
+        f" quirks in μL that are noted in $BHL Appendix A and/or דעת מקרא.",
+        f" And, either by coincidence or editorial policy,",
+        f" $BHQ never notes a quirk it does not transcribe.",
     ]
 
 
 def cpara20(the_len):
     return [
-        f"Now for some mixed news: the Job volume of $BHQ transcribes but does not note {str(the_len)}",
-        " quirks in μL that are noted in $BHL Appendix A and/or דעת מקרא.",
-        " Those transcriptions without notes are as follows:",
+        f"Now for some mixed news:",
+        f" the Job volume of $BHQ transcribes but does not note {str(the_len)}",
+        f" quirks in μL that are noted in $BHL Appendix A and/or דעת מקרא.",
+        f" Those transcriptions without notes are as follows:",
     ]
 
 
 def clist21(the_lens):
     return [
         f"$BHQ contributes notes on {str(the_lens[0])} quirks not found in those sources.",
-        f"$BHQ reiterates notes on {str(the_lens[1])} quirks are found those sources.",
-        f"$BHQ fails to transcribe (or note) {str(the_lens[2])} quirks noted in those sources.",
-        f"$BHQ transcribes but does not note {str(the_lens[3])} quirks noted in those sources.",
-    ]       
+        f"$BHQ reiterates notes on {str(the_lens[1])} quirks found in those sources.",
+        f"$BHQ fails to transcribe (or note) {str(the_lens[2])} quirks found in those sources.",
+        f"$BHQ transcribes but does not note {str(the_lens[3])} quirks found in those sources.",
+    ]
