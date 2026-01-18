@@ -68,7 +68,7 @@ _C_LIST13 = [
         "The דעת מקרא series,",
         " particularly the volumes with sections called",
         f" “הנוסח ומקורותיו”",
-        f" (Breuer et al., {num_range(1970, 2003)})"
+        f" (Breuer et al., {num_range(1970, 2003)})",
     ],
     ["Biblia Hebraica Leningradensia ($BHL) (Dotan, 2001)"],
 ]
