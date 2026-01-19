@@ -537,11 +537,10 @@ _RECORD_1905 = {
         " As usual, we don’t know whether $BHQ dropped this note on purpose or by accident.",
         " $BHQ silently lets the faint possible דגש “win” over the clear רפה in μL.",
         " In my opinion, $BHQ should have transcribed either both marks (דגש and רפה) or neither.",
+        " Thus I consider $BHQ to have not (fully) transcribed μL here."
         " Also, $BHQ should have had a note.",
     ],
-    "noted-by": "tBHQ-BHL-xDM",
-    # Above, I use xBHQ rather than tBHQ because BHQ only partially transcribed μL here,
-    # having the דגש without the רפה that contradicts the דגש.
+    "noted-by": "xBHQ-BHL-xDM",
     "wlc-422-note": "]1",
 }
 _RECORD_1916 = {
@@ -586,16 +585,17 @@ _COMMENT_2221_A = [
 _COMMENT_2221_B = [
     "Perhaps some super-faint remains of an אתנח under ל can be seen.",
     " The top dot of the שווא (under the ש) is super-faint.",
-    " $BHQ (charitably) transcribed it based on consensus expectations.",
+    " See my entry for 22:21 עמי for μA and μY images."
 ]
 _BHQ_COMMENT_2221_A = [
     "$BHQ fails to note that the אתנח it transcribed on עמו",
     " disagrees with μA and μY.",
 ]
 _BHQ_COMMENT_2221_B = [
-    "$BHQ noted that whereas the ל of ושלם is unpointed in μL,",
+    "$BHQ (charitably) transcribed the top dot of the שווא",
+    " using, as one often has to, faint evidence bolstered by consensus expectations.",
+    " $BHQ noted that whereas the ל of ושלם is unpointed in μL,",
     " that ל has קמץ and אתנח in μA and μY.",
-    " See my entry for 22:21 עמי for μA and μY images."
 ]
 _CAM1753_IMG_INTRO_2221 = [
     "note that instead of a masorah circle, μY uses a pair of above-dots",
@@ -824,7 +824,9 @@ _BHQ_COMMENT_3107 = [
     " Regardless of whether the רפה should have been shown,",
     " its presence in μL should have excluded the possibility of",
     " a סילוק under its letter (א)!",
-    " $BHQ noted that here μL disagrees with μA and μY, which have the consensus pointing.",
+    " $BHQ noted that here μL disagrees with μA and μY.",
+    " But $BHQ gives the מ in μA and μY a מרכא rather than a סילוק,",
+    " which seems more likely a typo than a deliberate choice.",
 ]
 _RECORD_3107 = {
     "bhla-i": 37,
@@ -838,7 +840,7 @@ _RECORD_3107 = {
     "lc-img": "3107.png",
     "bhq-comment": _BHQ_COMMENT_3107,
     "bhq": "מֻאֽוּם׃",
-    "noted-by": "xBHQ-BHL-DM",
+    "noted-by": "BHQ-BHL-DM",
     "wlc-422-note": "]1",
 }
 _RECORD_3133 = {
