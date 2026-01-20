@@ -200,18 +200,19 @@ def _cpara17a(the_len):
         " The contributions of $BHQ are as follows:",
     ]
 
+
 _CPARA17B = [
     #
     "Unsurprisingly, all but one of these contributions",
-    " are new to $BHQ, i.e. not present in $BHS.",
+    " are new, i.e. not present in $BHS.",
     #
-    " (The one not new to $BHQ is the one regarding 22:21 ושלם.)"
+    " (The one that is not new is the one regarding 22:21 ושלם.)"
     #
     " I find some of these contributions far-fetched, i.e. unlikely to have been",
     " the scribe’s intention.",
     #
     " Nonetheless, I consider even those ones to be valuable contributions",
-    " to the discussion."
+    " to the discussion.",
 ]
 
 
@@ -224,10 +225,10 @@ def _cpara18(the_len):
         " While a reiteration is not as valuable as a new contribution,",
         " it is still valuable.",
         " Indeed my main criticism of $BHQ Job is that it",
-        " should have reiterated most or all of what can be found in those editions.",
+        " should have reiterated most of what can be found in those editions.",
         " Unsurprisingly, all but one of the $BHQ reiterations",
-        " were already present in $BHS.",
-        " (The one new to $BHQ is the one regarding 18:4 הלמענך.)",
+        " are not new, i.e. they were already present in $BHS.",
+        " (The one that is new is the one regarding 18:4 הלמענך.)",
         " The reiterations made by $BHQ are as follows:",
     ]
 

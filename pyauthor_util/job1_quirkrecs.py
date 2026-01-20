@@ -187,6 +187,18 @@ _RECORD_0807 = {
     "bhq-comment": "$BHQ silently ignores the possible שורוק dot.",
     "noted-by": "xBHQ-BHL-xDM",
 }
+_RECORD_0906 = {
+    "cv": "9:6",
+    "lc": "יִתְפַלָּצֽוּן׃",
+    "what-is-weird": "פ lacks דגש",
+    "mam": "יִתְפַּלָּצֽוּן׃",
+    "comment": "There is a bump on the פ that might be a misplaced דגש.",
+    "highlight": 3,
+    "lc-loc": {"page": "399B", "column": 1, "line": 12, "including-blank-lines": 1},
+    "lc-img": "0906.png",
+    "noted-by": "tBHQ-xBHL-xDM",
+    "wlc-422-note": "]1",
+}
 _BHQ_COMMENT_0914_AND_0930 = [
     "$BHQ silently supplies the סילוק that is the consensus expectation,",
     " despite little or no evidence for it in μL.",
@@ -297,6 +309,43 @@ _RECORD_1107 = {
     "lc-img": "1107.png",
     "bhq-comment": _BHQ_COMMENT_LIKE_0409,
     "noted-by": "tBHQ-BHL-DM",
+}
+_RECORD_1113 = {
+    "cv": "11:13",
+    "lc": "אַ֭תָּ֗ה",
+    "what-is-weird": "רביע on ת fights דחי",
+    "mam": "אַ֭תָּה",
+    "comment": "",
+    "highlight": 2,
+    "lc-loc": {"page": "400A", "column": 2, "line": 13},
+    "lc-img": "1113.png",
+    "noted-by": "tBHQ-xBHL-xDM",
+    "wlc-422-note": "]1",
+    "noted-by-mam": True,
+    "noted-by-uxlc": True,
+}
+_RECORD_1216 = {
+    "cv": "12:16",
+    "lc": "וְתֽוּשִׁיָּ֑ה",
+    "lc-q": "(?)",
+    "what-is-weird": "ת may have געיה",
+    "mam": "וְתוּשִׁיָּ֑ה",
+    "comment": [
+        "There is a blob of ink below the ת.",
+        " Most likely, this mark is a malformed masorah circle",
+        " on the word מוליך on the line below.",
+    ],
+    "bhq-comment": [
+        "$BHQ seems to transcribe the blob of ink as both",
+        " a געיה on ת and a masorah circle on מוליך.",
+        " $BHS did not have this געיה;",
+        " I wish $BHQ had left well enough alone."
+    ],
+    "highlight": 2,
+    "lc-loc": {"page": "400B", "column": 1, "line": 11},
+    "lc-img": "1216.png",
+    "noted-by": "tBHQ-xBHL-xDM",
+    "wlc-422-note": "]1",
 }
 _BHQ_COMMENT_1203 = [
     "$BHQ silently supplies the מקף that is the consensus expectation,",
@@ -472,7 +521,7 @@ _RECORD_1804_B = {
     "what-is-weird": "מ has דגש.",
     "mam": "הַֽ֭לְמַעַנְךָ",
     "comment": [
-        "The quirk that פתח on ה is חטף is discussed in a separate entry of mine.",
+        "The quirk that the פתח on ה is חטף is discussed in a separate entry of mine.",
         " The געיה difference is not important to us here.",
     ],
     "highlight": 3,
@@ -585,7 +634,7 @@ _COMMENT_2221_A = [
 _COMMENT_2221_B = [
     "Perhaps some super-faint remains of an אתנח under ל can be seen.",
     " The top dot of the שווא (under the ש) is super-faint.",
-    " See my entry for 22:21 עמי for μA and μY images."
+    " See my entry for 22:21 עמי for μA and μY images.",
 ]
 _BHQ_COMMENT_2221_A = [
     "$BHQ fails to note that the אתנח it transcribed on עמו",
@@ -594,7 +643,7 @@ _BHQ_COMMENT_2221_A = [
 _BHQ_COMMENT_2221_B = [
     "$BHQ (charitably) transcribed the top dot of the שווא",
     " using, as one often has to, faint evidence bolstered by consensus expectations.",
-    " $BHQ noted that whereas the ל of ושלם is unpointed in μL,",
+    " $BHQ noted (as did $BHS) that whereas the ל of ושלם is unpointed in μL,",
     " that ל has קמץ and אתנח in μA and μY.",
 ]
 _CAM1753_IMG_INTRO_2221 = [
@@ -1164,6 +1213,7 @@ QUIRKRECS = [
     _RECORD_0721,
     _RECORD_0801,
     _RECORD_0807,
+    _RECORD_0906,
     _RECORD_0914,
     _RECORD_0930,
     _RECORD_0935,
@@ -1172,7 +1222,9 @@ QUIRKRECS = [
     _RECORD_1103,
     _RECORD_1106,
     _RECORD_1107,
+    _RECORD_1113,
     _RECORD_1203,
+    _RECORD_1216,
     _RECORD_1409,
     _RECORD_1508,
     _RECORD_1534,

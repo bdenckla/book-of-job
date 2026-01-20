@@ -46,6 +46,7 @@ def sort_key(record):
     ftv0 = ftv[0] if ftv else 1
     return *cv_as_toi, ftv0
 
+
 def _unique(seq):
     return len(set(seq)) == len(seq)
 
