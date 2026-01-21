@@ -1,0 +1,16 @@
+Reviewing all the WLC bracket-c notes ...
+
+I find that the first one actually with any relevant BHQ change is
+jb22:12	רֹ֖אשׁ (has טרחא in WLC)
+It is now definitely a דחי in BHQ.
+It is ambiguous in 1997 BHS because of the conventions regarding mark
+placment under ר.
+It looks more like a דחי in 1984 BHS than in 1997 BHS.
+My guess is that the WLC editors read it as a דחי
+in whatever version of BHS they were looking at,
+but felt that טרחא was a better transcription of μL,
+and hence coded it as טרחא with a bracket-c note.
+So, the BHQ change (to unambiguous דחי) disagrees with WLC.
+So, the change in BHQ isn't really a change at all,
+if we take BHS to have what I think the WLC editors thought BHS
+had, namely, a דחי.
