@@ -80,7 +80,8 @@ def _para_and_table(para_func, ov_and_de, group_of_quirkrecs):
 
 
 def _noted_by(quirkrec):
-    return quirkrec.get("noted-by")
+    full = quirkrec["noted-by"]
+    return full.removesuffix("-WLC")
 
 
 def _table_of_quirks(ov_and_de, group_of_quirkrecs):
