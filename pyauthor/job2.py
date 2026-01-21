@@ -41,15 +41,40 @@ def _make_cbody(ov_and_de, quirkrecs):
     return cbody
 
 
+def _startswith_x(part):
+    return part.startswith("x")
+
+
+def _not_startswith_x(part):
+    return not part.startswith("x")
+
+
+def _bhq_and_nbhq(quirkrec):
+    parts = quirkrec["noted-by"].split("-")
+    bhq, bhl, dm = parts[0], parts[1], parts[2]
+    wlc = "xWLC" if len(parts) == 3 else parts[3]
+    assert bhq in ("BHQ", "xBHQ", "tBHQ")
+    assert bhl in ("BHL", "xBHL")
+    assert dm in ("DM", "xDM")
+    assert wlc in ("WLC", "xWLC")
+    nbhq = bhl, dm, wlc
+    return bhq, nbhq
+
+
+def _only_niq(quirkrec):
+    bhq, nbhq = _bhq_and_nbhq(quirkrec)
+    return bhq == "BHQ" and all(_startswith_x(part) for part in nbhq)
+
+
+def _niq_and_elsewhere(quirkrec):
+    bhq, nbhq = _bhq_and_nbhq(quirkrec)
+    return bhq == "BHQ" and any(_not_startswith_x(part) for part in nbhq)
+
+
 def _get_groups(quirkrecs):
     qr_by_perf = my_groupby(quirkrecs, _noted_by)
-    q_only_noted_in_bhq = qr_by_perf.get("BHQ-xBHL-xDM") or []
-    q_noted_in_bhq_and_elsewhere = [
-        *(qr_by_perf.get("BHQ-xBHL-DM") or []),
-        *(qr_by_perf.get("BHQ-BHL-xDM") or []),
-        *(qr_by_perf.get("BHQ-BHL-DM") or []),
-    ]
-    q_noted_in_bhq_and_elsewhere.sort(key=sort_key)
+    q_only_noted_in_bhq = list(filter(_only_niq, quirkrecs))
+    q_noted_in_bhq_and_elsewhere = list(filter(_niq_and_elsewhere, quirkrecs))
     q_not_transcribed_in_bhq = [
         *(qr_by_perf.get("xBHQ-xBHL-DM") or []),
         *(qr_by_perf.get("xBHQ-BHL-xDM") or []),
@@ -216,10 +241,8 @@ def _cpara17a(the_len):
 
 _CPARA17B = [
     #
-    "Unsurprisingly, all but one of these contributions",
+    "Unsurprisingly, all of these contributions",
     " are new, i.e. not present in $BHS.",
-    #
-    " (The one that is not new is the one regarding 22:21 ושלם.)"
     #
     " I find some of these proposed transcriptions far-fetched, i.e. unlikely to have been",
     " the scribe’s intention.",
