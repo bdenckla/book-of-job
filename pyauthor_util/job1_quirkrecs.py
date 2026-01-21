@@ -46,13 +46,13 @@ def _correctly_ignores(what, cv, adjective=""):
     return "".join(out_parts)
 
 
-_BHQ_COMMENT_XBHL_XDM = [
-    "$BHQ noted this, whereas this is not noted in either $BHL_A or דעת מקרא."
+_BHQ_COMMENT_XELSEWHERE = [
+    "$BHQ noted this, whereas this is not noted in the other editions under consideration."
 ]
-_BHQ_COMMENT_XBHL_XDM_DUBIOUS = [
+_BHQ_COMMENT_XELSEWHERE = [
     "$BHQ noted this possibility,",
-    " whereas this is not noted in either $BHL_A or דעת מקרא.",
-    " It could be that Dotan and Breuer did not catch this,",
+    " whereas this is not noted in the other editions under consideration.",
+    " It could be the editors of those other editions did not catch this,",
     " or it could be that they caught it",
     " but considered to be too slight a possibility to note it.",
 ]
@@ -479,7 +479,7 @@ _RECORD_1706 = {
     "highlight": 4,
     "lc-loc": {"page": "402A", "column": 1, "line": 7},
     "lc-img": "1706.png",
-    "bhq-comment": _BHQ_COMMENT_XBHL_XDM,
+    "bhq-comment": _BHQ_COMMENT_XELSEWHERE,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -492,7 +492,7 @@ _RECORD_1711 = {
     "highlight": 3,
     "lc-loc": {"page": "402A", "column": 1, "line": 13},
     "lc-img": "1711.png",
-    "bhq-comment": _BHQ_COMMENT_XBHL_XDM,
+    "bhq-comment": _BHQ_COMMENT_XELSEWHERE,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -578,7 +578,7 @@ _RECORD_1809 = {
     "highlight": 2,
     "lc-loc": {"page": "402A", "column": 2, "line": 2},
     "lc-img": "1809.png",
-    "bhq-comment": _BHQ_COMMENT_XBHL_XDM_DUBIOUS,
+    "bhq-comment": _BHQ_COMMENT_XELSEWHERE,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -767,7 +767,7 @@ _RECORD_2230_B = {
     "highlight": 2,
     "lc-loc": {"page": "403B", "column": 2, "line": 4},
     "lc-img": "2230.png",
-    "bhq-comment": _BHQ_COMMENT_XBHL_XDM_DUBIOUS,
+    "bhq-comment": _BHQ_COMMENT_XELSEWHERE,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -785,7 +785,7 @@ _RECORD_2416 = {
     "highlight": 2,
     "lc-loc": {"page": "404A", "column": 1, "line": -12},
     "lc-img": "2416.png",
-    "bhq-comment": _BHQ_COMMENT_XBHL_XDM_DUBIOUS,
+    "bhq-comment": _BHQ_COMMENT_XELSEWHERE,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -1015,12 +1015,7 @@ _RECORD_3419 = {
     "noted-by": "xBHQ-BHL-DM",
 }
 _BHQ_COMMENT_3612 = [
-    "$BHQ noted this, whereas this is not noted in $BHL_A.",
-    " It could be that Dotan did not catch this,",
-    " or it could be that he caught it",
-    " but considered to be too slight a possibility to note it.",
-    " It is noted in דעת מקרא.",
-    " Here $BHQ has a typo:",
+    "Here $BHQ has a typo:",
     [" it has ", author.hbo("בִּבְלִ־"), " rather than ", author.hbo("בִּבְלִי־")],
     " in the word it reports for μA and μY.",
     " I.e. it is missing a final $yod (י) before the מקף."
@@ -1112,7 +1107,7 @@ _RECORD_3817 = {
     "highlight": 3,
     "lc-loc": {"page": "408A", "column": 1, "line": -5},
     "lc-img": "3817.png",
-    "bhq-comment": _BHQ_COMMENT_XBHL_XDM,
+    "bhq-comment": _BHQ_COMMENT_XELSEWHERE,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
@@ -1247,7 +1242,7 @@ _RECORD_4213 = {
     "highlight": 1,
     "lc-loc": {"page": "409B", "column": 1, "line": -9, "including-blank-lines": 1},
     "lc-img": "4213.png",
-    "bhq-comment": _BHQ_COMMENT_XBHL_XDM,
+    "bhq-comment": _BHQ_COMMENT_XELSEWHERE,
     "noted-by": "BHQ-xBHL-xDM",
     "uxlc-needs-fix": True,
 }
