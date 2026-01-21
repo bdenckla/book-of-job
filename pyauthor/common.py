@@ -4,7 +4,7 @@ from py import my_html
 from pyauthor_util import author
 
 
-D2_TITLE = "BHQ Job is in a Bubble"
+D2_TITLE = "BHQ Job was made in a Bubble"
 D2_H1_CONTENTS = D2_TITLE
 D2_FNAME = "job2.html"
 

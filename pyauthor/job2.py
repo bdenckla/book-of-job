@@ -162,8 +162,8 @@ _CPARA13 = [
     #
     " This made me even more disappointed with $BHQ.",
     #
-    " It seems to exist in a bubble:",
-    " its editors seem to be",
+    " It seems to have been made in a bubble:",
+    " its editors seem to have been",
     " unaware of or uninterested in",
     " relevant work done in other editions.",
     #
