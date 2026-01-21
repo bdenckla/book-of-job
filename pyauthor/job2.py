@@ -267,7 +267,7 @@ def _cpara18(the_len):
         " it is still valuable.",
         #
         " Indeed my main criticism of $BHQ Job is that it",
-        " should have reiterated most of what can be found in those editions.",
+        " should have reiterated most of what can be found in those other three editions.",
         #
         " Unsurprisingly, all but one of the $BHQ reiterations",
         " are not new, i.e. they were already present in $BHS.",
