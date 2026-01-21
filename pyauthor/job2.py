@@ -85,10 +85,15 @@ def _tbhq_and_ne(quirkrec):
 def _get_groups(quirkrecs):
     # nbhq, xbhq: noted in BHQ, not noted in BHQ
     # ne, xe: noted elsewhere, not noted elsewhere
+    # zw: flagged as a change in WLC relative to BHS
+    #     comparison with MAM revealed that
+    #     is a change back towards consensus,
+    #     i.e. this is BHS/BHQ proposing a quirk that is not in μL
     q_nbhq_and_xe = list(filter(_nbhq_and_xe, quirkrecs))
     q_nbhq_and_ne = list(filter(_nbhq_and_ne, quirkrecs))
     q_xbhq_and_ne = list(filter(_xbhq_and_ne, quirkrecs))
     q_tbhq_and_ne = list(filter(_tbhq_and_ne, quirkrecs))
+    q_tbhq_and_zw = list(filter(_tbhq_and_ne, quirkrecs))
     groups = [
         q_nbhq_and_xe,
         q_nbhq_and_ne,

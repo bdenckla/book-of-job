@@ -9,7 +9,7 @@ from py import my_html
 _CAM1753_PAGE_URL_BASE = (
     "https://archive.org/details/ketuvim-cambridge-ms-add-1753-images/page"
 )
-
+_SEE_3419 = [" See my entry on 34:19 for further discusion."]
 _CORR_IG_VARIANT = {
     "34:19": [
         " Since $BHQ does not note any uncertainty in its transcription here,"
@@ -25,7 +25,8 @@ _CORR_IG_VARIANT = {
         " $BHQ should, in my opinion, indicate to the reader the specific places",
         " where its transcription is particularly uncertain.",
     ],
-    "36:29": [" See my entry on 34:19 for further discusion."],
+    "36:29": _SEE_3419,
+    "17:4": _SEE_3419,
 }
 
 
@@ -458,7 +459,7 @@ _RECORD_1704 = {
     "highlight": 1,
     "lc-loc": {"page": "402A", "column": 1, "line": 5},
     "lc-img": "1704.png",
-    "bhq-comment": "",
+    "bhq-comment": _correctly_ignores("דגש", "17:4"),
     "noted-by": "xBHQ-xBHL-xDM-WLC",
     "uxlc-needs-fix": [
         "UXLC should do one of the following.",
@@ -852,7 +853,10 @@ _RECORD_2826 = {
     "lc": "בַּעֲשׂת֣וֹ",
     "what-is-weird": "ש lacks חולם dot",
     "mam": "בַּעֲשֹׂת֣וֹ",
-    "comment": "The proposed transcription is mistaken. Here μL clearly has both a $sin dot and חולם dot.",
+    "comment": [
+        "The proposed transcription is mistaken.",
+        " Here μL clearly has both a $sin dot and a חולם dot."
+    ],
     "highlight": 3,
     "lc-loc": {"page": "404B", "column": 2, "line": -1},
     "lc-img": "2826.png",
@@ -860,7 +864,7 @@ _RECORD_2826 = {
         "I don’t think $BHQ is really proposing that μL lacks this חולם dot.",
         " This is more likely a typo (inherited from $BHS) than a deliberate choice.",
     ],
-    "noted-by": "tBHQ-xBHL-xDM-xWLC",
+    "noted-by": "tBHQ-xBHL-xDM-zWLC",
 }
 _RECORD_2911 = {
     "bhla-i": 34,
@@ -1020,7 +1024,7 @@ _RECORD_3419 = {
     "highlight": 1,
     "lc-loc": {"page": "406B", "column": 2, "line": -2},
     "lc-img": "3419.png",
-    "bhq-comment": _correctly_ignores("דגש", "34:19", "full"),
+    "bhq-comment": _correctly_ignores("דגש", "34:19"),
     "noted-by": "xBHQ-BHL-DM",
 }
 _BHQ_COMMENT_3612 = [
@@ -1061,7 +1065,7 @@ _RECORD_3612 = {
 _COMMENT_3629 = [
     "The color image strongly suggests that the mark in question is not ink.",
     " A געיה right next to סילוק like that would be extraordinary, by the way,",
-    " though I feel no appeal to expectations is needed to dismiss this possible געיה.",
+    " though no appeal to expectations is needed to dismiss this possible געיה.",
 ]
 _RECORD_3629 = {
     "bhla-i": 43,
