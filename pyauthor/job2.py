@@ -313,8 +313,10 @@ def _cpara20a(the_len):
 
 def _cpara20b(the_len):
     return [
-        f"Finally, there are {str(the_len)}",
-        f" words of zW type in $BHQ Job:",
+        f"Finally, $WLC helps us identify {str(the_len)}",
+        f" cases in which $BHQ Job transcribes but does not note a quirk in μL.",
+        f" All of these are unlikely to be the scribe’s intention,",
+        f" i.e. more likely quirks in $BHQ than quirks in μL."
     ]
 
 
@@ -329,6 +331,7 @@ def _clist21(the_lens):
         f"$BHQ reiterates notes on {str(the_lens[1])} quirks found in those editions.",
         f"$BHQ does not transcribe {str(the_lens[2])} quirks found in those editions.",
         f"$BHQ transcribes but does not note {str(the_lens[3])} quirks found in those editions.",
+        f"$BHQ transcribes but does not note at least {str(the_lens[4])} likely-false quirks.",
     ]
 
 
