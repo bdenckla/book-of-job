@@ -316,7 +316,7 @@ def _cpara20b(the_len):
         f" the Job volume of $BHQ transcribes but does not note at least {str(the_len)}",
         f" quirks in μL that,",
         [" ", my_html.bold("for good reason"), ","],
-        " are not noted in any of the three editions listed above.",
+        " are not noted in any of the other three editions.",
         #
         f" The good reason is that all of these are unlikely to be the scribe’s intention,",
         f" i.e. are more likely quirks in $BHQ than quirks in μL.",
