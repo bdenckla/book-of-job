@@ -5,11 +5,19 @@
 
 from pyauthor_util import author
 from py import my_html
+from pyauthor_util.qr_1203 import RECORD_1203
+from pyauthor_util.qr_1804_A import RECORD_1804_A
+from pyauthor_util.qr_1804_B import RECORD_1804_B
+from pyauthor_util.qr_1806 import RECORD_1806
+from pyauthor_util.qr_1604 import RECORD_1604
+from pyauthor_util.qr_2125 import RECORD_2125
+from pyauthor_util.qr_0417 import RECORD_0417
+from pyauthor_util.qr_0914 import RECORD_0914
+from pyauthor_util.qr_0930 import RECORD_0930
 from pyauthor_util.job1_common import (
     CAM1753_PAGE_URL_BASE,
     correctly_ignores,
     BHQ_COMMENT_TBHQ_NELSEWHERE,
-    BHQ_COMMENT_CMN_0409_AND_SIMILAR,
 )
 from pyauthor_util.qr_0709 import RECORD_0709
 from pyauthor_util.qr_0721 import RECORD_0721
@@ -56,186 +64,6 @@ from pyauthor_util.qr_2826 import RECORD_2826
 from pyauthor_util.qr_3330 import RECORD_3330
 from pyauthor_util.qr_3812_A import RECORD_3812_A
 from pyauthor_util.qr_0409 import RECORD_0409
-_BHQ_COMMENT_0417 = [
-    *BHQ_COMMENT_CMN_0409_AND_SIMILAR,
-    " This is the only one of these seven not noted in any way in $BHQ.",
-    " For more details, see my entry on 4:9.",
-]
-_RECORD_0417 = {
-    "bhla-i": 3,
-    "cv": "4:17",
-    "lc": "מֵאֱל֣וֹהַ",
-    "what-is-weird": "ה has no מפיק",
-    "mam": "מֵאֱל֣וֹהַּ",
-    "comment": "",
-    "highlight": 5,
-    "lc-loc": {"page": "398A", "column": 2, "line": 10},
-    "lc-img": "0417.png",
-    "bhq-comment": _BHQ_COMMENT_0417,
-    "noted-by": "tBHQ-nBHL-nDM",
-}
-_BHQ_COMMENT_0914_AND_0930 = [
-    "$BHQ silently supplies the סילוק that is the consensus expectation,",
-    " despite little or no evidence for it in μL.",
-]
-_RECORD_0914 = {
-    "bhla-i": 9,
-    "cv": "9:14",
-    "lc-q": "(?)",
-    "lc": "עִמּוֹ׃",
-    "what-is-weird": "סילוק may be missing",
-    "mam": "עִמּֽוֹ׃",
-    "comment": "",
-    "highlight": 2,
-    "lc-loc": {"page": "399B", "column": 1, "line": 22, "including-blank-lines": 1},
-    "lc-img": "0914.png",
-    "bhq-comment": _BHQ_COMMENT_0914_AND_0930,
-    "noted-by": "xBHQ-nBHL-xDM",
-}
-_RECORD_0930 = {
-    "bhla-i": 10,
-    "cv": "9:30",
-    "lc-q": "(?)",
-    "lc": "כַּפָּי׃",
-    "what-is-weird": "סילוק may be missing",
-    "mam": "כַּפָּֽי׃",
-    "comment": "",
-    "highlight": 2,
-    "lc-loc": {"page": "399B", "column": 2, "line": 15},
-    "lc-img": "0930.png",
-    "bhq-comment": _BHQ_COMMENT_0914_AND_0930,
-    "noted-by": "xBHQ-nBHL-xDM",
-}
-_BHQ_COMMENT_1203 = [
-    "$BHQ silently supplies the מקף that is the consensus expectation,",
-    " despite no evidence for it in μL.",
-]
-_RECORD_1203 = {
-    "bhla-i": 17,
-    "cv": "12:3",
-    "lc": "וְאֶת",
-    "what-is-weird": "מקף is missing",
-    "mam": "וְאֶת־",
-    "comment": "",
-    "highlight-mam": 4,
-    "lc-loc": {"page": "400A", "column": 2, "line": -1},
-    "lc-img": "1203.png",
-    "bhq-comment": _BHQ_COMMENT_1203,
-    "noted-by": "xBHQ-nBHL-nDM",
-}
-_COMMENT_1604 = [
-    "Though it is not relevant to the point at hand, which is the presence of a מקף,",
-    " note that in μL, the shape we take to be מחפך is touching the bottom of the ל (lamed).",
-]
-_BHQ_COMMENT_1604 = [
-    "Though it is not relevant to the point at hand,",
-    " note that $BHQ continues to fail to distinguish",
-    " between גלגל and אתנח הפוך.",
-]
-_RECORD_1604 = {
-    "bhla-i": 21,
-    "cv": "16:4",
-    "lc": "ל֤וּ־",
-    "what-is-weird": "מקף is present",
-    "mam": "ל֤וּ",
-    "comment": _COMMENT_1604,
-    "highlight-lc": 3,
-    "lc-loc": {"page": "401B", "column": 2, "line": 3},
-    "lc-img": "1604.png",
-    "bhq-comment": _BHQ_COMMENT_1604,
-    "noted-by": "tBHQ-nBHL-xDM",
-}
-_BHQ_COMMENT_1804_A = [
-    "$BHQ silently ignores the possible שווא part of the possible חטף פתח.",
-    " It also silently ignores the possible intepretation of that ink as a געיה.",
-    " I.e. other than the prepositive דחי accent,",
-    " $BHQ supplies only the (full) פתח that is the consensus expectation here.",
-    " $BHQ does so silently, i.e. with no note about the pointing of ה.",
-]
-_RECORD_1804_CMN_AB = {
-    "bhla-i": 24,
-    "cv": "18:4",
-    "lc": "הֲ֭לְמַּעַנְךָ",
-    "mam": "הַֽ֭לְמַעַנְךָ",
-    "bhq": "הַ֭לְמַּעַנְךָ",
-    "lc-loc": {"page": "402A", "column": 1, "line": -4},
-    "lc-img": "1804.png",
-}
-_RECORD_1804_A = {
-    **_RECORD_1804_CMN_AB,
-    "n_of_m_for_this_verse": (1, 2),  # this is record 1 of 2 for this verse
-    "n_of_m_for_this_word": (1, 2),  # this is record 1 of 2 for this word
-    "what-is-weird": "פתח on ה is חטף.",
-    "comment": [
-        "The quirk that מ has דגש is discussed in a separate entry of mine.",
-        " The געיה difference is not important to us here.",
-    ],
-    "highlight": 1,
-    "bhq-comment": _BHQ_COMMENT_1804_A,
-    "noted-by": "xBHQ-nBHL-nDM",
-}
-_BHQ_COMMENT_1804_B = [
-    "$BHQ notes that the דגש on the מ in μL disagrees with μA and μY.",
-    " $BHQ misses the געיה in μA.",
-    " This געיה is irrelevant to $BHQ’s point here, which is about the דגש.",
-    " Still, it would have been nice if $BHQ had transcribed the געיה.",
-]
-_RECORD_1804_B = {
-    **_RECORD_1804_A,
-    "n_of_m_for_this_verse": (2, 2),  # this is record 2 of 2 for this verse
-    "n_of_m_for_this_word": (2, 2),  # this is record 2 of 2 for this word
-    "what-is-weird": "מ has דגש.",
-    "comment": [
-        "The quirk that the פתח on ה is חטף is discussed in a separate entry of mine.",
-        " The געיה difference is not important to us here.",
-    ],
-    "highlight": 3,
-    "bhq-comment": _BHQ_COMMENT_1804_B,
-    "aleppo-page-url": "https://www.mgketer.org/mikra/29/18/1/mg/106",
-    "aleppo-img": "Aleppo-1804.png",
-    "noted-by": "nBHQ-nBHL-nDM",
-}
-_BHQ_COMMENT_1806 = [
-    "$BHQ positions the mark ambiguously.",
-    " The mark is a little to the right of center.",
-    " So it is not centered, as one would expect a טרחא to be,",
-    " but neither is it as far to the right as דחי normally is in $BHQ.",
-    # XXX add BHQ image
-]
-_RECORD_1806 = {
-    "bhla-i": 25,
-    "cv": "18:6",
-    "lc": "א֖וֹר",
-    "what-is-weird": "דחי is placed like a טרחא",
-    "mam": "א֭וֹר",
-    "comment": "",
-    "highlight": 1,
-    "lc-loc": {"page": "402A", "column": 1, "line": -2},
-    "lc-img": "1806.png",
-    "bhq-comment": _BHQ_COMMENT_1806,
-    "noted-by": "tBHQ-nBHL-xDM",
-}
-_COMMENT_2125 = [
-    "The dot is suspiciously brown rather than black,",
-    " making me wonder whether the ו was pointed at all.",
-]
-_BHQ_COMMENT_2125 = [
-    "$BHQ silently supplies the שווא that is the consensus expectation,",
-    " despite little or no evidence for it in μL.",
-]
-_RECORD_2125 = {
-    "bhla-i": 28,
-    "cv": "21:25",
-    "lc": "וִלֹֽא־",
-    "what-is-weird": "חיריק not שווא",
-    "mam": "וְלֹֽא־",
-    "comment": _COMMENT_2125,
-    "highlight": 1,
-    "lc-loc": {"page": "403A", "column": 2, "line": 13},
-    "lc-img": "2125.png",
-    "bhq-comment": _BHQ_COMMENT_2125,
-    "noted-by": "xBHQ-nBHL-xDM",
-}
 _COMMENT_2221_A = [
     "A dot under the מ of עמו is fairly clear.",
     " It is (charitably) not transcribed by $BHL_A,",
@@ -626,7 +454,7 @@ _RECORD_4125 = {
 QUIRKRECS = [
     RECORD_0121,
     RECORD_0409,
-    _RECORD_0417,
+    RECORD_0417,
     RECORD_0629,
     RECORD_0701,
     RECORD_0709,
@@ -634,8 +462,8 @@ QUIRKRECS = [
     RECORD_0801,
     RECORD_0807,
     RECORD_0906,
-    _RECORD_0914,
-    _RECORD_0930,
+    RECORD_0914,
+    RECORD_0930,
     RECORD_0935,
     RECORD_1001,
     RECORD_1015,
@@ -643,24 +471,24 @@ QUIRKRECS = [
     RECORD_1106,
     RECORD_1107,
     RECORD_1113,
-    _RECORD_1203,
+    RECORD_1203,
     RECORD_1216,
     RECORD_1409,
     RECORD_1508,
     RECORD_1534,
-    _RECORD_1604,
+    RECORD_1604,
     RECORD_1613,
     RECORD_1620,
     RECORD_1704,
     RECORD_1706,
     RECORD_1711,
-    _RECORD_1804_A,
-    _RECORD_1804_B,
-    _RECORD_1806,
+    RECORD_1804_A,
+    RECORD_1804_B,
+    RECORD_1806,
     RECORD_1809,
     RECORD_1905,
     RECORD_1916,
-    _RECORD_2125,
+    RECORD_2125,
     _RECORD_2221_A,
     _RECORD_2221_B,
     _RECORD_2228,

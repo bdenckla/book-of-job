@@ -113,3 +113,18 @@ def _where():
             ]
         ),
     ]
+
+
+BHQ_COMMENT_0914_AND_0930 = [
+    "$BHQ silently supplies the סילוק that is the consensus expectation,",
+    " despite little or no evidence for it in μL.",
+]
+RECORD_1804_CMN_AB = {
+    "bhla-i": 24,
+    "cv": "18:4",
+    "lc": "הֲ֭לְמַּעַנְךָ",
+    "mam": "הַֽ֭לְמַעַנְךָ",
+    "bhq": "הַ֭לְמַּעַנְךָ",
+    "lc-loc": {"page": "402A", "column": 1, "line": -4},
+    "lc-img": "1804.png",
+}
