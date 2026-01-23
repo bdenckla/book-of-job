@@ -216,7 +216,7 @@ _CPARA15 = [
 _CLIST15 = [
     "sources in languages other than Hebrew",
     "non-Masoretic (e.g. unpointed) Hebrew sources",
-    "Masorah magna and parva",
+    "Masorah magna and parva (other than קרי Mp)",
     "the meaning of the text",
 ]
 _CPARA16 = [
@@ -346,6 +346,7 @@ def _cpara22():
         #
         " It would also be reasonable for the $BHQ editors",
         " to find some of them likely to have been the scribe’s intention,",
+        " and therefore worthy of transcription,",
         " but differing from μA and/or μY in ways too minor to note.",
     ]
 

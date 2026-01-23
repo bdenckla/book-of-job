@@ -84,6 +84,7 @@ from pyauthor_util.qr_2826 import RECORD_2826
 from pyauthor_util.qr_3330 import RECORD_3330
 from pyauthor_util.qr_3812_A import RECORD_3812_A
 from pyauthor_util.qr_0409 import RECORD_0409
+
 QUIRKRECS = [
     RECORD_0121,
     RECORD_0316,

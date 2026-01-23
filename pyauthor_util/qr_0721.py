@@ -10,7 +10,7 @@ RECORD_0721 = {
     "comment": [
         "It doesn’t make sense to have a חטף vowel (aka a חטף שווא)",
         " followed by a simple שווא.",
-        " Yet, the manuscript image clearly shows this."
+        " Yet, the manuscript image clearly shows this.",
     ],
     "highlight": 3,
     "lc-loc": {"page": "399A", "column": 2, "line": 3},

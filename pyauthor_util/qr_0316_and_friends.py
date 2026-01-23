@@ -27,7 +27,15 @@ RECORD_0816 = {
     "what-is-weird": "דחי not געיה",
     "mam": "יֹֽנַקְתּ֥וֹ",
     "comment": [
-        "foo",
+        "Above I have asserted that the consensus has געיה here,",
+        " but this געיה, like most cases of געיה, is optional.",
+        " Therefore, one could just as easily assert the consensus has no געיה.",
+        " I have chosen the consensus to be as close as possible",
+        " to the proposed transcription of μL.",
+        " I did this in order to make the proposed transcription",
+        " seem no weirder than it really is.",
+        " In other words, it is better to frame this as a question of דחי vs געיה",
+        " than as a question of דחי vs no mark at all.",
     ],
     "highlight": 1,
     "lc-loc": {"page": "40XY", "column": 0, "line": 0},
@@ -37,21 +45,46 @@ RECORD_0816 = {
     ],
     "noted-by": "tBHQ-xBHL-xDM-zWLC",
 }
+_COMMENT_1413 = [
+    "$WLC is the source of this (flawed) transcription.",
+    #
+    " Note that the word in question has a rare and hard-to-understand",
+    " phenomenon called “secondary מהפך” by Breuer."
+    #
+    " It may seem rather extraordinary that this געיה",
+    " immediately follows the מהפך,",
+    " but this is actually expected (or at least “allowed”)",
+    " if the מהפך is secondary, as it is here.",
+    #
+    " The word in question may be easier to understand",
+    " if one considers it to be the first part of a two-part compound",
+    " where the מקף is, somewhat inexplicably, left implicit:",
+    [" ", author.hbo("תָּ֤שִֽׁית־לִ֖י"), "."],
+    #
+    " See Breuer CoS sections 11.66.rn1 and 11.79.",
+    " (CoS = The Cantillation of Scripture; rn = Roman numeral.)",
+    " (Note that an English translation of CoS is now available,",
+    " a great boon to students of cantillation who cannot easily read",
+    " the original in its modern Hebrew.)",
+]
 RECORD_1413 = {
     "cv": "14:13",
-    "lc": "תָּ֤שִֽׁית",
-    "what-is-weird": "געיה not מרכא",
-    "mam": "תָּ֤שִׁ֥ית",
-    "comment": [
-        "foo",
-    ],
+    "lc": "תָּ֤שִׁ֥ית",
+    "lc-q": "(?)",
+    "what-is-weird": "maybe מרכא not געיה",
+    "mam": "תָּ֤שִֽׁית",
+    "comment": _COMMENT_1413,
     "highlight": 2,
     "lc-loc": {"page": "40XY", "column": 0, "line": 0},
     "lc-img": ".png",
+    "bhq-comment-long": True,
     "bhq-comment": [
-        "$BHQ is the source of this (flawed) transcription.",
+        "$BHQ benefits from ignoring $WLC here,",
+        " though $BHQ likely ignored $WLC as a whole",
+        " rather than considering and rejecting",
+        " this particular change in $WLC relative to $BHS.",
     ],
-    "noted-by": "tBHQ-xBHL-xDM-zWLC",
+    "noted-by": "xBHQ-xBHL-xDM-nWLC",
 }
 RECORD_1535 = {
     "cv": "15:35",

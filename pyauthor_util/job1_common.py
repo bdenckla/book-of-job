@@ -50,7 +50,7 @@ def correctly_ignores(what, cv, adjective=""):
 
 BHQ_COMMENT_TBHQ_NELSEWHERE = [
     "$BHQ transcribes μL as shown above,",
-    " but $BHQ does not note that this transcription diverges from consensus."
+    " but $BHQ does not note that this transcription diverges from consensus.",
 ]
 BHQ_COMMENT_XELSEWHERE = [
     "$BHQ notes this, whereas this is not noted in the other editions under consideration."
@@ -71,6 +71,8 @@ BHQ_COMMENT_LIKE_0409 = [
     *BHQ_COMMENT_CMN_0409_AND_SIMILAR,
     " 4:9 discusses the matter at greater length.",
 ]
+
+
 def intro(ov_or_de):
     each = _VARIANTS[ov_or_de]
     return [
