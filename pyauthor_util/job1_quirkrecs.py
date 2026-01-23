@@ -2,6 +2,8 @@
 # XXX study UXLC changes in Job
 # XXX review quirks-Daat-Miqra.txt
 # XXX review quirks-BHQ.txt
+#
+# XXX use location estimator to sanity check lc-loc entries
 
 from pyauthor_util.qr_0316_and_friends import (
     RECORD_0316,

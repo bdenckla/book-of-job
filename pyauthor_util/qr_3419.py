@@ -7,7 +7,11 @@ RECORD_3419 = {
     "lc": "נִּכַּר־",
     "what-is-weird": "נ has דגש",
     "mam": "נִכַּר־",
-    "comment": "The possible דגש is faint, especially compared with the adjacent דגש on כ.",
+    "comment": [
+        "The possible דגש is faint.",
+        " The adjacent דגש (on כ) and other nearby marks are quite clear,",
+        " casting suspicion on the legitimacy of this דגש.",
+    ],
     "highlight": 1,
     "lc-loc": {"page": "406B", "column": 2, "line": -2},
     "lc-img": "3419.png",

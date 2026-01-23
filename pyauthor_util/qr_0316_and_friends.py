@@ -17,7 +17,7 @@ RECORD_0316 = {
 }
 RECORD_0816 = {
     "cv": "8:16",
-    "lc": "אבגדהוז",
+    "lc": "יֹ֭נַקְתּ֥וֹ",
     "what-is-weird": "דחי not געיה",
     "mam": "יֹֽנַקְתּ֥וֹ",
     "comment": [
@@ -33,7 +33,7 @@ RECORD_0816 = {
 }
 RECORD_1413 = {
     "cv": "14:13",
-    "lc": "אבגדהוז",
+    "lc": "תָּ֤שִֽׁית",
     "what-is-weird": "געיה not מרכא",
     "mam": "תָּ֤שִׁ֥ית",
     "comment": [
@@ -49,13 +49,14 @@ RECORD_1413 = {
 }
 RECORD_1535 = {
     "cv": "15:35",
-    "lc": "אבגדהוז",
+    "lc": "וְיָלֹ֣ד",
     "what-is-weird": "מונח on ל not yod (י)",
     "mam": "וְיָ֣לֹד",
     "comment": [
         "foo",
     ],
-    "highlight": 2,
+    "highlight-lc": 3,
+    "highlight-mam": 2,
     "lc-loc": {"page": "40XY", "column": 0, "line": 0},
     "lc-img": ".png",
     "bhq-comment": [
@@ -65,7 +66,7 @@ RECORD_1535 = {
 }
 RECORD_2212 = {
     "cv": "22:12",
-    "lc": "אבגדהוז",
+    "lc": "רֹ֭אשׁ",
     "what-is-weird": "דחי not טרחא",
     "mam": "רֹ֖אשׁ",
     "comment": [
@@ -81,8 +82,8 @@ RECORD_2212 = {
 }
 RECORD_3410 = {
     "cv": "34:10",
-    "lc": "אבגדהוז",
-    "what-is-weird": "געיה on א not מרכא",
+    "lc": "אַֽנֲשֵׁ֥י",
+    "what-is-weird": "געיה not מרכא (on א)",
     "mam": "אַ֥נֲשֵׁ֥י",
     "comment": [
         "foo",

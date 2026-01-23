@@ -132,13 +132,18 @@ def _maybe_comment(record):
     return []
 
 
-def _make_details_row(record):
+def _ancs(record):
     cv = record["cv"]
     uxlc_href = f"https://tanach.us/Tanach.xml?Job{cv}"
     uxlc_anc = my_html.anchor_h("U", uxlc_href)
     cn_v_vn = "c" + cv.replace(":", "v")
     mwd_href = f"https://bdenckla.github.io/MAM-with-doc/D3-Job.html#{cn_v_vn}"
     mwd_anc = my_html.anchor_h("M", mwd_href)
+    return uxlc_anc, mwd_anc
+
+
+def _dpe(record):
+    uxlc_anc, mwd_anc = _ancs(record)
     dpe1 = [
         *_maybe_comment(record),
         record["bhq-comment"],
@@ -147,10 +152,14 @@ def _make_details_row(record):
         lcloc(record.get("lc-loc")),
     ]
     dpe2 = my_utils.intersperse(_SEP, dpe1)
+    return [author.para(dpe2)]
+
+
+def _make_details_row(record):
     return [
         author.table_c(_make_overview_row(record)),
         *_maybe_bhq(record.get("bhq")),
-        author.para(dpe2),
+        *_dpe(record),
         _img(record["lc-img"]),
         *_maybe_img(record, "mi-args-aleppo"),
         *_maybe_img(record, "mi-args-cam1753"),
