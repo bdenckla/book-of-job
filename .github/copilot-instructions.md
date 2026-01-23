@@ -26,3 +26,11 @@ This project uses typographically correct Unicode characters. **Never convert th
 When working with Hebrew text, maintain proper Unicode normalization order:
 - Shin/sin dots (U+05C1, U+05C2) should come immediately after the shin letter
 - Dagesh (U+05BC) should come before vowel points
+
+## Verification After Refactoring
+
+After making changes to Python source files, verify the HTML output is unchanged:
+
+1. Run: `python ./main_gen_misc_authored_english_documents.py`
+2. Check: `git status --porcelain docs/`
+3. If any files in `docs/` are modified, investigate and fix the differences before considering the task complete
