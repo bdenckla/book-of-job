@@ -56,7 +56,7 @@ RECORD_1413 = {
 RECORD_1535 = {
     "cv": "15:35",
     "lc": "וְיָלֹ֣ד",
-    "what-is-weird": "מונח on ל not yod (י)",
+    "what-is-weird": "מונח on ל not $yod (י)",
     "mam": "וְיָ֣לֹד",
     "comment": [
         "foo",

@@ -3,7 +3,7 @@ from pyauthor_util.job1_common import RECORD_1804_CMN_AB
 
 _BHQ_COMMENT_1804_A = [
     "$BHQ silently ignores the possible שווא part of the possible חטף פתח.",
-    " It also silently ignores the possible intepretation of that ink as a געיה.",
+    " It also silently ignores the possible interpretation of that ink as a געיה.",
     " I.e. other than the prepositive דחי accent,",
     " $BHQ supplies only the (full) פתח that is the consensus expectation here.",
     " $BHQ does so silently, i.e. with no note about the pointing of ה.",
