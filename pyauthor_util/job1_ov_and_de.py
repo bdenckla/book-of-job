@@ -65,10 +65,29 @@ def _unique(seq):
 def _make_one_ov_and_de(uxlc, pbi, record):
     std_bcvp_quad = _std_bcvp_quad(record["cv"])
     pg_dict = my_uxlc_location.page_and_guesses(uxlc, pbi, std_bcvp_quad)
+    pg_diff = _pg_diff(pg_dict, record["lc-loc"])
+    if pg_diff is not None:
+        print(pg_diff)
     return {
         "od-overview": _make_overview_row(record),
         "od-details": _make_details_html(record),
     }
+
+
+def _pg_diff(pg_dict, lc_loc):
+    if pg_dict["page"] != lc_loc["page"]:
+        return f"Page mismatch: pg_dict page {pg_dict['page']} vs lc_loc page {lc_loc['page']}"
+    lcl = lc_loc["line"]
+    if lcl < 1:
+        assert lcl != 0
+        pline = 27 + (lcl + 1)
+    else:
+        pline = lcl
+    fline = pline + 27 * (lc_loc["column"] - 1)
+    flg = float(pg_dict["fline-guess"])
+    if abs(flg - fline) > 4:
+        return f"fline mismatch: pg_dict fline-guess {pg_dict['fline-guess']} vs lc_loc fline {fline}"
+    return None
 
 
 def _std_bcvp_quad(cn_colon_vn):
