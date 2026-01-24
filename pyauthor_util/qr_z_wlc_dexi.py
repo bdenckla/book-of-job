@@ -44,23 +44,25 @@ _EXTRAS = {
 }
 
 
-def _one_basic_to_record(cvlc):
-    cv, lc = cvlc
+def _one_basic_to_record(cv_and_wlc):
+    cv_str, wlc = cv_and_wlc
+    chnu, vrnu = tuple(int(part) for part in cv_str.split(":"))
+    img_basename = f"{chnu:02d}{vrnu:02d}"
     cvlc_rec = {
-        "cv": cv,
-        "lc": lc,
+        "cv": cv_str,
+        "lc": wlc.replace(ha.DEX, ha.TIP),
         "what-is-weird": "דחי not טרחא",
-        "mam": lc.replace(ha.DEX, ha.TIP),
+        "mam": wlc,
         "comment": "",
         "highlight": 1,
         "lc-loc": {"page": "40XY", "column": 0, "line": 0},
-        "lc-img": f"{cv.replace(':', '')}.png",
+        "lc-img": f"{img_basename}.png",
         "bhq-comment": [
             "$BHQ is the source of this (flawed) transcription.",
         ],
         "noted-by": "tBHQ-xBHL-xDM-zWLCdexi",
     }
-    extras = _EXTRAS.get(cv)
+    extras = _EXTRAS.get(cv_str)
     if extras:
         return {**cvlc_rec, **extras}
     return cvlc_rec

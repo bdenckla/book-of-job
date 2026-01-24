@@ -332,8 +332,9 @@ def _cpara20(the_len):
     ]
 
 
-
-_BHQ_HAS_DEXI = "$BHQ has דחי but should probably have טרחא"
+_BHQ_HAS_TAR = "$BHQ has טרחא but should probably have דחי"
+_BHQ_HAS_DEX = "$BHQ has דחי but should probably have טרחא"
+_A_TAR_IN_BHQ = "a טרחא in $BHQ"
 
 
 def _cpara24a(len_dexi, len_misc):
@@ -349,24 +350,27 @@ def _cpara24a(len_dexi, len_misc):
         f" i.e. are more likely quirks in $BHQ than quirks in μL.",
         #
         f" These {str(len_total)} likely-false quirks can be divided into two groups:",
-        f" a group of {str(len_dexi)} cases where {_BHQ_HAS_DEXI} and",
-        f" a group of {str(len_misc)} cases not concerning דחי.",
+        f" a group of {str(len_dexi)} cases where {_BHQ_HAS_TAR} and",
+        f" a group of {str(len_misc)} cases not concerning {_A_TAR_IN_BHQ}.",
     ]
 
 
 def _cpara24b_dexi(len_dexi):
     return [
         f"Here are the",
-        f" {str(len_dexi)} cases noted in $WLC where {_BHQ_HAS_DEXI}",
+        f" {str(len_dexi)} cases noted in $WLC where {_BHQ_HAS_TAR}",
         f" (note that 18:6 and 22:28 could also be considered to be in this group):",
     ]
 
 
 def _cpara24c_misc(len_misc):
     return [
-        f"Here are the",
+        f"Then there are the",
         f" {str(len_misc)} cases noted in $WLC where $BHQ is probably in error",
-        f" but that error does not concern דחי:",
+        f" but that error does not concern {_A_TAR_IN_BHQ}.",
+        f" (One of those {str(len_misc)},",
+        f" the one in 22:12, goes in the opposite direction: {_BHQ_HAS_DEX}.)",
+        f" Here are those {str(len_misc)} cases:",
     ]
 
 
