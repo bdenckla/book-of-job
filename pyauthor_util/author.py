@@ -150,18 +150,8 @@ def he_en_table_wct(ti_he_en_triples):
     return table_c(args_to_table)
 
 
-def _he_en_table_wci_row_pair(ti_he_en_triple):
-    title, hebrew, english = ti_he_en_triple
-    return [
-        _std_row_of_data(
-            [{"colspan": "2"}],
-            [para_cc(title)],
-        ),
-        _std_row_of_data(
-            [{"dir": "rtl"}, {"dir": "ltr"}],
-            [hebrew, english],
-        ),
-    ]
+def dollar_sub(contents):
+    return dollar_sub_g.dollar_sub_g(_DOLLAR_SUB_DISPATCH, contents)
 
 
 def std_table(
@@ -180,6 +170,10 @@ def std_table(
     return table_c(args_to_table)
 
 
+def anc_h(contents, href_val):
+    return my_html.anchor_h(dollar_sub(contents), href_val)
+
+
 # def pasoleg_pas(string: str):
 #     return _pasoleg_xxx(string, "$sub_pe")
 
@@ -190,10 +184,6 @@ def std_table(
 
 # def pasoleg_qm(string: str):
 #     return _pasoleg_xxx(string, "$sub_qm")
-
-
-def dollar_sub(contents):
-    return dollar_sub_g.dollar_sub_g(_DOLLAR_SUB_DISPATCH, contents)
 
 
 # def note_on_arabizi_3():
@@ -208,6 +198,20 @@ def dollar_sub(contents):
 
 #############################################################################
 #############################################################################
+
+
+def _he_en_table_wci_row_pair(ti_he_en_triple):
+    title, hebrew, english = ti_he_en_triple
+    return [
+        _std_row_of_data(
+            [{"colspan": "2"}],
+            [para_cc(title)],
+        ),
+        _std_row_of_data(
+            [{"dir": "rtl"}, {"dir": "ltr"}],
+            [hebrew, english],
+        ),
+    ]
 
 
 def _de_dict(table_data):
@@ -309,17 +313,6 @@ def _stem(path):
     return os.path.splitext(basename)[0]
 
 
-def anc_h(contents, href_val):
-    return my_html.anchor_h(contents, href_val)
-
-
-_G = "https://docs.google.com/document/u/0"
-_URL_PROPOSAL_ALT_YBY = f"{_G}/d/1M7-sVTuKEJLdFRDXLpOeKEjtynSTvY2EM6Lj1uK4ylA/edit"
-_URL_PROPOSAL_ZARQA = f"{_G}/d/1qJby64wXq9ueTUHXFlIlYdgohRFlnUqT4SkyNEFWMKU/edit"
-_ANCHORS = {
-    "$anc_proposal_alt_yby": anc_h("proposal", _URL_PROPOSAL_ALT_YBY),
-    "$anc_proposal_zarqa": anc_h("proposal", _URL_PROPOSAL_ZARQA),
-}
 _UNICODE_NAME_SC = {
     "$AH": "ATNAH HAFUKH",
     "$GERESH": "GERESH",
@@ -454,7 +447,6 @@ _DOLLAR_SUB_DISPATCH = {
     **_rom_with_cap("$yetiv", "yetiv"),
     **_rom_with_cap("$mahapakh", "mahapakh"),
     #
-    **_ANCHORS,
     **_UNICODE_NAME_SC,
     **_ABBR_SC,
     **_ROMANIZED,
