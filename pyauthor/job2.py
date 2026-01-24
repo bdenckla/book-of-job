@@ -37,7 +37,9 @@ def _make_cbody(ov_and_de, quirkrecs):
         _para_and_table(_cpara20, ov_and_de, groups[3]),
         author.para(_cpara22()),
         author.para(_cpara23(len(groups[1]))),
-        _para_and_table(_cpara24, ov_and_de, groups[4]),
+        author.para(_cpara24a(len(groups[4]), len(groups[5]))),
+        _para_and_table(_cpara24b_dexi, ov_and_de, groups[4]),
+        _para_and_table(_cpara24c_misc, ov_and_de, groups[5]),
         author.para_ul(_CPARA25, _clist25(sl_map(len, groups))),
     ]
     return cbody
@@ -85,7 +87,12 @@ def _tbhq_and_ne(quirkrec):
     return _foobhq_and_ne("tBHQ", quirkrec)
 
 
-def _tbhq_and_zw(quirkrec):
+def _tbhq_and_zwd(quirkrec):
+    bhq, others = _bhq_and_others(quirkrec)
+    return bhq == "tBHQ" and others == ("xBHL", "xDM", "zWLCdexi")
+
+
+def _tbhq_and_zwm(quirkrec):
     bhq, others = _bhq_and_others(quirkrec)
     return bhq == "tBHQ" and others == ("xBHL", "xDM", "zWLCmisc")
 
@@ -101,13 +108,15 @@ def _get_groups(quirkrecs):
     q_nbhq_and_ne = list(filter(_nbhq_and_ne, quirkrecs))
     q_xbhq_and_ne = list(filter(_xbhq_and_ne, quirkrecs))
     q_tbhq_and_ne = list(filter(_tbhq_and_ne, quirkrecs))
-    q_tbhq_and_zw = list(filter(_tbhq_and_zw, quirkrecs))
+    q_tbhq_and_zwm = list(filter(_tbhq_and_zwm, quirkrecs))
+    q_tbhq_and_zwd = list(filter(_tbhq_and_zwd, quirkrecs))
     groups = [
         q_nbhq_and_xe,
         q_nbhq_and_ne,
         q_xbhq_and_ne,
         q_tbhq_and_ne,
-        q_tbhq_and_zw,
+        q_tbhq_and_zwd,
+        q_tbhq_and_zwm,
     ]
     return groups
 
@@ -323,16 +332,41 @@ def _cpara20(the_len):
     ]
 
 
-def _cpara24(the_len):
+
+_BHQ_HAS_DEXI = "$BHQ has דחי but should probably have טרחא"
+
+
+def _cpara24a(len_dexi, len_misc):
+    len_total = len_dexi + len_misc
     return [
-        f"Finally, $WLC helps us identify that",
-        f" the Job volume of $BHQ transcribes but does not note at least {str(the_len)}",
+        f"Finally, some $WLC notes help us identify that",
+        f" the Job volume of $BHQ transcribes but does not note at least {str(len_total)}",
         f" quirks in μL that,",
         [" ", my_html.bold("for good reason"), ","],
         " are not noted in any of the other three editions.",
         #
         f" The good reason is that all of these are unlikely to be the scribe’s intention,",
         f" i.e. are more likely quirks in $BHQ than quirks in μL.",
+        #
+        f" These {str(len_total)} likely-false quirks can be divided into two groups:",
+        f" a group of {str(len_dexi)} cases where {_BHQ_HAS_DEXI} and",
+        f" a group of {str(len_misc)} cases not concerning דחי.",
+    ]
+
+
+def _cpara24b_dexi(len_dexi):
+    return [
+        f"Here are the",
+        f" {str(len_dexi)} cases noted in $WLC where {_BHQ_HAS_DEXI}",
+        f" (note that 18:6 and 22:28 could also be considered to be in this group):",
+    ]
+
+
+def _cpara24c_misc(len_misc):
+    return [
+        f"Here are the",
+        f" {str(len_misc)} cases noted in $WLC where $BHQ is probably in error",
+        f" but that error does not concern דחי:",
     ]
 
 
@@ -342,12 +376,15 @@ _CPARA25 = [
 
 
 def _clist25(the_lens):
+    len_dexi = the_lens[4]
+    len_misc = the_lens[5]
+    len_total = len_dexi + len_misc
     return [
         f"$BHQ contributes notes on {str(the_lens[0])} quirks not found in those editions.",
         f"$BHQ reiterates notes on {str(the_lens[1])} quirks found in those editions.",
         f"$BHQ does not transcribe {str(the_lens[2])} quirks found in those editions.",
         f"$BHQ transcribes but does not note {str(the_lens[3])} quirks found in those editions.",
-        f"$BHQ transcribes but does not note at least {str(the_lens[4])} likely-false quirks.",
+        f"$BHQ transcribes but does not note at least {str(len_total)} likely-false quirks.",
     ]
 
 
