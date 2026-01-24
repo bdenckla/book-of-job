@@ -5,7 +5,7 @@ from py import my_html
 CAM1753_PAGE_URL_BASE = (
     "https://archive.org/details/ketuvim-cambridge-ms-add-1753-images/page"
 )
-_SEE_3419 = [" See my entry on 34:19 for further discusion."]
+_SEE_3419 = [" See my entry on נכר in 34:19 for further discusion."]
 _CORR_IG_VARIANT_3419 = [
     " Since $BHQ does not note any uncertainty in its transcription here,",
     " it is hard to distinguish whether $BHQ has ignored the mark in question",

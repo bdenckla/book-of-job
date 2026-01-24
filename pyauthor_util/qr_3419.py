@@ -4,6 +4,7 @@ from pyauthor_util.job1_common import correctly_ignores
 RECORD_3419 = {
     "bhla-i": 42,
     "cv": "34:19",
+    "n_of_m_for_this_verse": (1, 2),  # this is record 1 of 2 for this verse
     "lc": "נִּכַּר־",
     "what-is-weird": "נ has דגש",
     "mam": "נִכַּר־",

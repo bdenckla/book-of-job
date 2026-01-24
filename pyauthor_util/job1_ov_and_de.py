@@ -20,7 +20,8 @@ _CSNBPR = "comment-should-not-be-para-wrapped"
 
 def make_ov_and_de(quirkrecs):
     ids = sl_map(row_id, quirkrecs)
-    assert _unique(ids)
+    dups = _duplicates(ids)
+    assert not dups, f"Duplicate row IDs found: {dups}"
     paths_dict = {
         "path_to_uxlc": "py_uxlc_loc/UXLC",
         "path_to_lci_recs": "py_uxlc_loc/UXLC-misc/lci_recs.json",
@@ -57,8 +58,15 @@ def sort_key(record):
     return *cv_as_toi, ftv0
 
 
-def _unique(seq):
-    return len(set(seq)) == len(seq)
+def _duplicates(seq):
+    seen = set()
+    dups = set()
+    for item in seq:
+        if item in seen:
+            dups.add(item)
+        else:
+            seen.add(item)
+    return dups
 
 
 def _make_one_ov_and_de(uxlc, pbi, record):

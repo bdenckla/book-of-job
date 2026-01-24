@@ -5,6 +5,7 @@
 #
 # XXX use location estimator to sanity check lc-loc entries
 
+from pyauthor_util.qr_z_wlc_dexi import RECORDS_Z_WLC_DEXI
 from pyauthor_util.qr_0316_and_friends import (
     RECORD_0316,
     RECORD_0816,
@@ -86,6 +87,7 @@ from pyauthor_util.qr_3812_A import RECORD_3812_A
 from pyauthor_util.qr_0409 import RECORD_0409
 
 QUIRKRECS = [
+    *RECORDS_Z_WLC_DEXI,
     RECORD_0121,
     RECORD_0316,
     RECORD_0409,

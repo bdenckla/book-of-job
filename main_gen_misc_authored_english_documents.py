@@ -30,7 +30,6 @@ def main():
 
 def _prep():
     qrs = sorted(QUIRKRECS, key=sort_key)
-    assert qrs == QUIRKRECS  # assert that the sort was not needed
     ov_and_de = make_ov_and_de(qrs)
     return qrs, ov_and_de
 

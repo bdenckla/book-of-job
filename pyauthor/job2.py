@@ -58,7 +58,7 @@ def _bhq_and_others(quirkrec):
     assert bhq in ("nBHQ", "xBHQ", "tBHQ")
     assert bhl in ("nBHL", "xBHL")
     assert dm in ("nDM", "xDM")
-    assert wlc in ("nWLC", "xWLC", "zWLCmisc")
+    assert wlc in ("nWLC", "xWLC", "zWLCmisc", "zWLCdexi")
     others = bhl, dm, wlc
     return bhq, others
 
