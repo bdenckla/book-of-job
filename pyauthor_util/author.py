@@ -309,30 +309,16 @@ def _stem(path):
     return os.path.splitext(basename)[0]
 
 
-def _anc_h(contents, href_val):
+def anc_h(contents, href_val):
     return my_html.anchor_h(contents, href_val)
 
 
-_AID = "https://www.chabad.org/library/bible_cdo/aid"
 _G = "https://docs.google.com/document/u/0"
 _URL_PROPOSAL_ALT_YBY = f"{_G}/d/1M7-sVTuKEJLdFRDXLpOeKEjtynSTvY2EM6Lj1uK4ylA/edit"
 _URL_PROPOSAL_ZARQA = f"{_G}/d/1qJby64wXq9ueTUHXFlIlYdgohRFlnUqT4SkyNEFWMKU/edit"
-_URL_CTR_CDROM_NLI = "https://www.nli.org.il/en/items/NNL_ALEPH990019164710205171/NLI"
-_URL_CHABAD = "https://www.chabad.org/"
-_URL_CHABAD_TANAKH = f"{_AID}/63255/jewish/The-Bible-with-Rashi.htm"
-_URL_CHABAD_PSALM_32 = f"{_AID}/16253/#lt=he"
-_URL_JUD_PRESS_NAKH = (
-    "https://judaicapress.com/collections/torah-study/products"
-    "/judaica-press-prophets-and-writings-24-vol-set"
-)
 _ANCHORS = {
-    "$anc_proposal_alt_yby": _anc_h("proposal", _URL_PROPOSAL_ALT_YBY),
-    "$anc_proposal_zarqa": _anc_h("proposal", _URL_PROPOSAL_ZARQA),
-    "$anc_record_ctr_cdrom_nli": _anc_h("record", _URL_CTR_CDROM_NLI),
-    "$anc_Chabad_website": _anc_h("Chabad website", _URL_CHABAD),
-    "$anc_Chabad_CTR": _anc_h("The Complete Tanach with Rashi", _URL_CHABAD_TANAKH),
-    "$anc_Chabad_Psalm_32": _anc_h("Psalm 32", _URL_CHABAD_PSALM_32),
-    "$anc_Jud_Press_Nakh": _anc_h("Prophets and Writings", _URL_JUD_PRESS_NAKH),
+    "$anc_proposal_alt_yby": anc_h("proposal", _URL_PROPOSAL_ALT_YBY),
+    "$anc_proposal_zarqa": anc_h("proposal", _URL_PROPOSAL_ZARQA),
 }
 _UNICODE_NAME_SC = {
     "$AH": "ATNAH HAFUKH",

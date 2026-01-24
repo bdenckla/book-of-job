@@ -47,13 +47,12 @@ RECORD_0816 = {
 }
 _COS_CMN = "https://www.chorev.co.il/%D7%98%D7%A2%D7%9E%D7%99-%D7%94%D7%9E%D7%A7%D7%A8%D7%90"
 _COS_ENG_REST = "%D7%91%D7%90%D7%A0%D7%92%D7%9C%D7%99%D7%AA-THE-CANTILLATION-OF-SCRIPTURE"
-_COS_ENG = author._anc_h("English translation of CoS", f"{_COS_CMN}-{_COS_ENG_REST}.htm")
-_COS_HEB = author._anc_h("the original", f"{_COS_CMN}.htm")
+_COS_ENG = author.anc_h("translation", f"{_COS_CMN}-{_COS_ENG_REST}.htm")
+_COS_HEB = author.anc_h("original", f"{_COS_CMN}.htm")
 _FOI_H2 = "foi-sec-star-breuer-cos.html#intro-11.66.rn1"
 _FOI_H1 = "https://bdenckla.github.io/MAM-with-doc/foi/"
-_FOI_H = f"{_FOI_H1}{_FOI_H2}"
-_FOI_ANC = author._anc_h("here", _FOI_H)
-_COMMENT_1413 = [
+_FOI_ANC = author.anc_h("here", f"{_FOI_H1}{_FOI_H2}")
+_COMMENT_1413_PARA1 = [
     "$WLC is the source of this (flawed) transcription.",
     #
     " Note that the word in question has a rare and hard-to-understand",
@@ -63,26 +62,33 @@ _COMMENT_1413 = [
     " immediately follows the מהפך,",
     " but this is actually expected (or at least “allowed”)",
     " if the מהפך is secondary, as it is here.",
-    #
-    " The word in question may be easier to understand",
-    " if one considers it to be the first part of a two-part compound",
-    [" with ", author.hbo("לִ֖י")],
-    " where the מקף is, somewhat inexplicably, left implicit.",
-    " If it were made explicit, the compound would be written as",
+]
+_COMMENT_1413_PARA2 = [
+    ["The word ",author.hbo("תָּ֤שִֽׁית")," may be easier to understand"],
+    " if one considers it",
+    [" and ", author.hbo("לִ֖י"), " (the next word)"],
+    " to form a compound word"
+    " whose the מקף is, somewhat inexplicably, left implicit.",
+    " If the מקף were made explicit, the compound would be written as",
     [" ", author.hbo("תָּ֤שִֽׁית־לִ֖י")],
     " and indeed that is the way that word is written (albeit with the מקף colored gray)"
     " in some editions of $MAM (מקרא על פי המסורה).",
     #
-    "This and a handful of analogous cases are listed",
+    " This and a handful of analogous cases are listed",
     [" ",_FOI_ANC, ", with the implicit מקף represented as a tilde (~)."],
-    #
-    " See Breuer CoS sections 11.66.rn1 and 11.79.",
-    " (CoS = The Cantillation of Scripture; rn = Roman numeral.)",
-    [" (Note that an ", _COS_ENG, " of CoS is now available,"],
-    " a great boon to students of cantillation who cannot easily read",
-    [" ", _COS_HEB, " in its modern Hebrew.)"],
 ]
-_COMMENT_1413 = author.para(_COMMENT_1413)
+_COMMENT_1413_PARA3 = [
+    "See Breuer CoS sections 11.66.rn1 and 11.79.",
+    " (CoS = The Cantillation of Scripture; rn = Roman numeral.)",
+    [" (Note that an English ", _COS_ENG, " of CoS is now available,"],
+    " a great boon to students of cantillation who cannot easily read",
+    [" the ", _COS_HEB, " in its modern Hebrew.)"],
+]
+_COMMENT_1413 = [
+    author.para(_COMMENT_1413_PARA1),
+    author.para(_COMMENT_1413_PARA2),
+    author.para(_COMMENT_1413_PARA3),
+]
 RECORD_1413 = {
     "cv": "14:13",
     "lc": "תָּ֤שִׁ֥ית",
