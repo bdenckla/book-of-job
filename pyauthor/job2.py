@@ -215,7 +215,7 @@ _CLIST14_ITEM2 = [
     " was not used (or was not thoroughly used) in $BHQ.",
 ]
 _CLIST14_ITEM3 = [
-    "WLC has had various releases over its decades, many predating $BHQ Megilloth."
+    "$WLC has had various releases over its decades, many predating $BHQ Megilloth."
 ]
 _CLIST14 = [
     _CLIST14_ITEM1,

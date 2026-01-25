@@ -2,36 +2,36 @@ from pycmn import hebrew_accents as ha
 from pycmn.my_utils import sl_map
 
 _BASICS = [
-    ("3:3", "י֭וֹם"),
-    ("4:4", "כּ֭וֹשֵׁל"),
-    ("8:16", "ה֭וּא"),
-    # ("18:6", "א֭וֹר"),
+    ("3:3", "י֭וֹם", ("397B", 2, 12)),
+    ("4:4", "כּ֭וֹשֵׁל", ("398A", 1, 20)),
+    ("8:16", "ה֭וּא", ("399A", 2, 24)),
+    # ("18:6", "א֭וֹר", None),
     # above is commented out since it already exists as a normal record
-    ("19:28", "תֹ֭אמְרוּ"),
-    ("20:23", "בּ֭וֹ"),
-    ("22:14", "ל֭וֹ"),
-    # ("22:28", "א֭וֹמֶר"),
+    ("19:28", "תֹ֭אמְרוּ", ("402B", 1, 24)),
+    ("20:23", "בּ֭וֹ", None),
+    ("22:14", "ל֭וֹ", None),
+    # ("22:28", "א֭וֹמֶר", None),
     # above is commented out since it already exists as a normal record
-    ("23:6", "כֹּ֭חַ"),
-    ("28:24", "ה֭וּא"),
-    ("30:18", "כֹּ֭חַ"),
-    ("30:22", "ר֭וּחַ"),
-    ("30:30", "ע֭וֹרִי"),
-    ("31:4", "ה֭וּא"),
-    ("31:19", "א֭וֹבֵד"),
-    ("31:28", "ה֭וּא"),
-    ("31:39", "כֹּ֭חָהּ"),
-    ("34:19", "שׁ֭וֹעַ"),
-    ("34:22", "חֹ֭שֶׁךְ"),
-    ("35:14", "תֹ֭אמַר"),
-    ("36:19", "שׁ֭וּעֲךָ"),
-    ("37:19", "ה֭וֹדִיעֵנוּ"),
-    ("37:20", "ל֭וֹ"),
-    ("38:27", "שֹׁ֭אָה"),
-    ("39:11", "בּ֭וֹ"),
-    ("39:12", "בּ֭וֹ"),
-    ("40:19", "ה֭וּא"),
-    ("40:29", "בּ֭וֹ"),
+    ("23:6", "כֹּ֭חַ", None),
+    ("28:24", "ה֭וּא", None),
+    ("30:18", "כֹּ֭חַ", None),
+    ("30:22", "ר֭וּחַ", None),
+    ("30:30", "ע֭וֹרִי", None),
+    ("31:4", "ה֭וּא", None),
+    ("31:19", "א֭וֹבֵד", None),
+    ("31:28", "ה֭וּא", None),
+    ("31:39", "כֹּ֭חָהּ", None),
+    ("34:19", "שׁ֭וֹעַ", None),
+    ("34:22", "חֹ֭שֶׁךְ", None),
+    ("35:14", "תֹ֭אמַר", None),
+    ("36:19", "שׁ֭וּעֲךָ", None),
+    ("37:19", "ה֭וֹדִיעֵנוּ", None),
+    ("37:20", "ל֭וֹ", None),
+    ("38:27", "שֹׁ֭אָה", None),
+    ("39:11", "בּ֭וֹ", None),
+    ("39:12", "בּ֭וֹ", None),
+    ("40:19", "ה֭וּא", None),
+    ("40:29", "בּ֭וֹ", None),
 ]
 
 _EXTRAS = {
@@ -45,17 +45,18 @@ _EXTRAS = {
 
 
 def _one_basic_to_record(cv_and_wlc):
-    cv_str, wlc = cv_and_wlc
+    cv_str, wlc, lcloc = cv_and_wlc
+    page, column, line = lcloc or ("40XY", 0, 0)
     chnu, vrnu = tuple(int(part) for part in cv_str.split(":"))
     img_basename = f"{chnu:02d}{vrnu:02d}"
     cvlc_rec = {
         "cv": cv_str,
         "lc": wlc.replace(ha.DEX, ha.TIP),
-        "what-is-weird": "דחי not טרחא",
+        "what-is-weird": "טרחא not דחי",
         "mam": wlc,
         "comment": "",
         "highlight": 1,
-        "lc-loc": {"page": "40XY", "column": 0, "line": 0},
+        "lc-loc": {"page": page, "column": column, "line": line},
         "lc-img": f"{img_basename}.png",
         "bhq-comment": [
             "$BHQ is the source of this (flawed) transcription.",
