@@ -48,7 +48,6 @@ _EXTRAS = {
 def _one_basic_to_record(cv_and_wlc):
     cv_str, wlc, lcloc = cv_and_wlc
     page, column, line = lcloc or ("40XY", 0, 0)
-    chnu, vrnu = tuple(int(part) for part in cv_str.split(":"))
     cvlc_rec = {
         "cv": cv_str,
         "lc": wlc.replace(ha.DEX, ha.TIP),

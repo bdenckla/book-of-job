@@ -45,10 +45,7 @@ def make_example_row():
 
 
 def row_id(record):
-    cn_v_vn = record["cv"].replace(":", "v")  # E.g. 1:2 becomes 1v2
-    ftv = record.get("n_of_m_for_this_verse")
-    ftv_str = f"-{ftv[0]}of{ftv[1]}ftv" if ftv else ""  # E.g. -1of2ftv
-    return f"row-{cn_v_vn}{ftv_str}"
+    return f"row-{short_id(record)}"
 
 
 def short_id(record):
@@ -61,10 +58,7 @@ def short_id(record):
 
 
 def sort_key(record):
-    cv_as_toi = tuple(int(part) for part in record["cv"].split(":"))
-    ftv = record.get("n_of_m_for_this_verse")
-    ftv0 = ftv[0] if ftv else 1
-    return *cv_as_toi, ftv0
+    return short_id(record)
 
 
 def _duplicates(seq):
