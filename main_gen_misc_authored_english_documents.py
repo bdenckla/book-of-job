@@ -1,11 +1,13 @@
 """ Exports main """
 
+import os.path
 from py import two_col_css_styles as tcstyles
 from py import my_html
 from pyauthor import job1_overview
 from pyauthor import job1_details
 from pyauthor import job2
 from pyauthor.common import d2_anchor
+from pyauthor_util.short_id_etc import lc_img
 from pyauthor_util.job1_quirkrecs import QUIRKRECS
 from pyauthor_util.job1_ov_and_de import make_ov_and_de, sort_key
 
@@ -20,7 +22,7 @@ def main():
     #
     tdm_ch = jobn_rel_top, css_href
     #
-    qrs, ov_and_de = _prep()
+    qrs, ov_and_de = _prep(jobn_rel_top)
     job1_overview.gen_html_file(tdm_ch, ov_and_de)
     job1_details.gen_html_file(tdm_ch, ov_and_de)
     job2.gen_html_file(tdm_ch, ov_and_de, qrs)
@@ -28,8 +30,11 @@ def main():
     _write_index_dot_html((css_href,), "docs/index.html")
 
 
-def _prep():
+def _prep(jobn_rel_top):
     qrs = sorted(QUIRKRECS, key=sort_key)
+    for qr in qrs:
+        lc_img_path = f"{jobn_rel_top}/img/{lc_img(qr)}"
+        assert os.path.exists(lc_img_path), f"Missing LC image: {lc_img_path}"
     ov_and_de = make_ov_and_de(qrs)
     return qrs, ov_and_de
 

@@ -1,6 +1,5 @@
 from pycmn import hebrew_accents as ha
 from pycmn.my_utils import sl_map
-from pyauthor_util.job1_ov_and_de import short_id
 from py import my_html
 
 _BASICS = [
@@ -39,15 +38,15 @@ _BASICS = [
 _COMMENT_3619 = [
     "All but the southeast end of the דחי seems to have flaked off,",
     " but luckily left some faint trace behind."
-    " To charitably transcribe this word, we must not only transcribe this faint trace"
-    " but also ", my_html.bold("decline") , " to transcribe the similarly faint blob"
+    " To charitably transcribe this word, we must not only transcribe this faint trace",
+    [" but also ", my_html.bold("decline"), " to transcribe the similarly faint blob"],
     " (an erasure?) right next to it under the ש.",
 ]
 _COMMENT_3719 = [
     "The pointing of this word must, by necessity, be transcribed with much charity.",
     " Nonetheless, the mark in question here is fairly clearly positioned",
     " as a דחי not a טרחא, though it is, unfortunately, attached to the right leg of the ה.",
-    " (At least, it is attached to the right leg of the re-inked ה.)"
+    " (At least, it is attached to the right leg of the re-inked ה.)",
 ]
 _EXTRAS = {
     "8:16": {
@@ -83,8 +82,7 @@ def _one_basic_to_record(cv_and_wlc):
     }
     extras = _EXTRAS.get(cv_str)
     record = {**cvlc_rec, **extras} if extras else cvlc_rec
-    img_basename = short_id(record)
-    return {**record, "lc-img": f"{img_basename}.png"}
+    return record
 
 
 RECORDS_Z_WLC_DEXI = sl_map(_one_basic_to_record, _BASICS)

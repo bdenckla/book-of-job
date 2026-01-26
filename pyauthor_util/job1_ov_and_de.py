@@ -7,6 +7,8 @@
 from py import my_html
 from pyauthor.common import D1D_FNAME
 from pyauthor_util import author
+from pyauthor_util.short_id_etc import lc_img
+from pyauthor_util.short_id_etc import short_id
 from pyauthor_util.job1_highlight import highlight, color
 from pyauthor_util.job1_lcloc import lcloc
 from pycmn import my_utils
@@ -46,15 +48,6 @@ def make_example_row():
 
 def row_id(record):
     return f"row-{short_id(record)}"
-
-
-def short_id(record):
-    cv_str = record["cv"]
-    chnu, vrnu = tuple(int(part) for part in cv_str.split(":"))
-    cn02vn02 = f"{chnu:02d}{vrnu:02d}"
-    ftv = record.get("n_of_m_for_this_verse")
-    ftv_str = f"-{ftv[0]}of{ftv[1]}ftv" if ftv else ""  # E.g. -1of2ftv
-    return cn02vn02 + ftv_str
 
 
 def sort_key(record):
@@ -250,7 +243,7 @@ def _make_details_html(record):
         author.table_c(_make_overview_row(record)),
         *_maybe_bhq(record.get("bhq")),
         _dpe(record),
-        _img(record["lc-img"]),
+        _img(lc_img(record)),
         *_maybe_img(record, "mi-args-aleppo"),
         *_maybe_img(record, "mi-args-cam1753"),
         my_html.horizontal_rule(),

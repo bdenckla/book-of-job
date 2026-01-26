@@ -130,7 +130,6 @@ RECORD_1804_CMN_AB = {
     "mam": "הַֽ֭לְמַעַנְךָ",
     "bhq": "הַ֭לְמַּעַנְךָ",
     "lc-loc": {"page": "402A", "column": 1, "line": -4},
-    "lc-img": "1804.png",
 }
 RECORD_2221_CMN_AB = {
     "cv": "22:21",

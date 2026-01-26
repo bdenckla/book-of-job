@@ -6,8 +6,8 @@ from pyauthor.common import D2_TITLE
 from pyauthor.common import D2_H1_CONTENTS
 from pyauthor.common import D2_FNAME
 from pyauthor_util.job1_common import num_range
-from pyauthor_util.job1_ov_and_de import row_id
 from pyauthor_util.job1_common import intro
+from pyauthor_util.job1_ov_and_de import row_id
 from pycmn.my_utils import sl_map
 
 
