@@ -6,7 +6,7 @@ from pyauthor_util import author
 
 D3_TITLE = "BHQ Job: Places where UXLC could have helped"
 D3_H1_CONTENTS = D3_TITLE
-D3_FNAME = "job3.html"
+D3_FNAME = "job3_uxlc.html"
 
 
 def d3_anchor(jobn_dir="."):
