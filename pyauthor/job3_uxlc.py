@@ -5,9 +5,38 @@ from pyauthor_util import author
 from pyauthor.common import D3_TITLE
 from pyauthor.common import D3_H1_CONTENTS
 from pyauthor.common import D3_FNAME
+from pyauthor.uxlc_changes_of_interest import COI_LIST
+from pycmn.my_utils import sl_map
+
+
+def _coi_to_quirkrec(coi):
+    # Convert a change of interest to a quirk record
+    # Implementation depends on the structure of COI_LIST items
+    cn_colon_vn, _wn = coi["citation"].removeprefix("Job ").split(".")
+    out = {
+        "cv": cn_colon_vn,
+        "lc": "א֚וֹ",
+        "what-is-weird": "יתיב not מהפך",
+        "mam": "א֤וֹ",
+        "comment": [
+            "יתיב doesn’t make sense here because"
+            " this is in the poetic rather than prose section of Job",
+            [" ", author.paren(num_range("3:2", "42:6")), "."],
+        ],
+        "highlight": 1,
+        "lc-loc": {"page": "398A", "column": 1, "line": 3},
+        "bhq-comment": [
+            "$BHQ is the source of this (flawed) transcription.",
+            " I don’t think $BHQ is really proposing that μL has יתיב here.",
+            " This is more likely a typo (inherited from $BHS) than a deliberate choice.",
+        ],
+        "noted-by": "tBHQ-xBHL-xDM-zWLCmisc",
+    }
+    return out
 
 
 def gen_html_file(tdm_ch, ov_and_de, quirkrecs):
+    quirkrecs = sl_map(_coi_to_quirkrec, COI_LIST)
     author.assert_stem_eq(__file__, D3_FNAME)
     cbody = _make_cbody(ov_and_de, quirkrecs)
     author.help_gen_html_file(tdm_ch, D3_FNAME, D3_TITLE, cbody)
@@ -50,5 +79,3 @@ _CPARA18_PART2 = [
 
 def _cpara18(the_len):
     return _cpara18_part1(the_len) + _CPARA18_PART2
-
-

@@ -1,5 +1,7 @@
 """ Exports main """
 
+import glob
+import os
 import os.path
 from py import two_col_css_styles as tcstyles
 from py import my_html
@@ -13,9 +15,11 @@ from pyauthor_util.job1_ov_and_de import make_ov_and_de, sort_key
 
 
 def main():
-    # XXX TODO: rm *.html (to avoid stale files when output names change)
-    #
+
     jobn_rel_top = "docs/jobn"
+    # Delete all HTML and CSS files to avoid stale files when output names change
+    _delete_files(jobn_rel_top, ["*.html", "*.css"])
+    #
     css_href = "style.css"
     tcstyles.make_css_file_for_authored(f"docs/{css_href}")
     tcstyles.make_css_file_for_authored(f"{jobn_rel_top}/{css_href}")
@@ -42,6 +46,12 @@ def _prep(jobn_rel_top):
 def _write_index_dot_html(css_hrefs, out_path):
     write_ctx = my_html.WriteCtx("Job Documents", out_path, css_hrefs=css_hrefs)
     my_html.write_html_to_file(_CBODY, write_ctx)
+
+
+def _delete_files(directory, patterns):
+    for pattern in patterns:
+        for file_path in glob.glob(f"{directory}/{pattern}"):
+            os.remove(file_path)
 
 
 _CBODY = [

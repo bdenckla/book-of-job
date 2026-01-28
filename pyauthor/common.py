@@ -16,7 +16,7 @@ def d3_anchor(jobn_dir="."):
 
 D2_TITLE = "BHQ Job was made in a bubble"
 D2_H1_CONTENTS = D2_TITLE
-D2_FNAME = "job2.html"
+D2_FNAME = "job2_main_article.html"
 
 
 def d2_anchor(jobn_dir="."):
@@ -26,7 +26,7 @@ def d2_anchor(jobn_dir="."):
 
 D1D_TITLE = "Quirks in μL in Job"
 D1D_H1_CONTENTS = D1D_TITLE
-D1D_FNAME = "job1_details.html"
+D1D_FNAME = "job1_full_list_details.html"
 
 
 def d1d_anchor(jobn_dir="."):
@@ -36,7 +36,7 @@ def d1d_anchor(jobn_dir="."):
 
 D1V_TITLE = "Quirks in μL in Job - Overview"
 D1V_H1_CONTENTS = D1V_TITLE
-D1V_FNAME = "job1_overview.html"
+D1V_FNAME = "job1_full_list_overview.html"
 
 
 def d1v_anchor(jobn_dir="."):
