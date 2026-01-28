@@ -1,9 +1,7 @@
 """ Exports gen_html_file and anchor """
 
-from pyauthor.common import D1D_TITLE
-from pyauthor.common import D1D_H1_CONTENTS
-from pyauthor.common import D1D_FNAME
-from pyauthor_util.job_common import intro, here_is
+from pyauthor_util.common_titles_etc import D1D_TITLE, D1D_H1_CONTENTS, D1D_FNAME
+from pyauthor_util.intro import intro, here_is
 from py import my_html
 from pyauthor_util import author
 

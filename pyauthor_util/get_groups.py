@@ -1,5 +1,3 @@
-
-
 def _bhq_and_others(quirkrec):
     parts = quirkrec["noted-by"].split("-")
     bhq, bhl, dm = parts[0], parts[1], parts[2]

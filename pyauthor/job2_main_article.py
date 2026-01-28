@@ -1,13 +1,11 @@
 """ Exports gen_html_file and anchor """
 
 from py import my_html
+from pyauthor_util.para_and_table import para_and_table
 from pyauthor_util import author
-from pyauthor.common import D2_TITLE
-from pyauthor.common import D2_H1_CONTENTS
-from pyauthor.common import D2_FNAME
-from pyauthor_util.job_common import num_range
-from pyauthor_util.job_common import intro
-from pyauthor_util.job_ov_and_de import row_id
+from pyauthor_util.common_titles_etc import D2_TITLE, D2_H1_CONTENTS, D2_FNAME
+from pyauthor_util.num_range import num_range
+from pyauthor_util.intro import intro
 from pycmn.my_utils import sl_map
 
 
@@ -28,37 +26,20 @@ def _make_cbody(ov_and_de, qr_groups):
         author.para_ul(_CPARA15, _CLIST15),
         author.para(_CPARA16),
         author.para(_CPARA17A),
-        _para_and_table(_cpara17b, ov_and_de, qr_groups[0]),
+        para_and_table(_cpara17b, ov_and_de, qr_groups[0]),
         *intro("intro-job2"),
         author.para(_CPARA17C),
-        _para_and_table(_cpara18, ov_and_de, qr_groups[1]),
-        _para_and_table(_cpara19, ov_and_de, qr_groups[2]),
-        _para_and_table(_cpara20, ov_and_de, qr_groups[3]),
+        para_and_table(_cpara18, ov_and_de, qr_groups[1]),
+        para_and_table(_cpara19, ov_and_de, qr_groups[2]),
+        para_and_table(_cpara20, ov_and_de, qr_groups[3]),
         author.para(_cpara22()),
         author.para(_cpara23(len(qr_groups[1]))),
         author.para(_cpara24a(len(qr_groups[4]), len(qr_groups[5]))),
-        _para_and_table(_cpara24b_dexi, ov_and_de, qr_groups[4]),
-        _para_and_table(_cpara24c_misc, ov_and_de, qr_groups[5]),
+        para_and_table(_cpara24b_dexi, ov_and_de, qr_groups[4]),
+        para_and_table(_cpara24c_misc, ov_and_de, qr_groups[5]),
         author.para_ul(_CPARA25, _clist25(sl_map(len, qr_groups))),
     ]
     return cbody
-
-
-def _para_and_table(para_func, ov_and_de, group_of_quirkrecs):
-    return [
-        author.para(para_func(len(group_of_quirkrecs))),
-        _table_of_quirks(ov_and_de, group_of_quirkrecs),
-    ]
-
-
-def _table_of_quirks(ov_and_de, group_of_quirkrecs):
-    rows = [_overview(ov_and_de, rec) for rec in group_of_quirkrecs]
-    return author.table_c(rows)
-
-
-def _overview(ov_and_de, quirkrec):
-    the_row_id = row_id(quirkrec)
-    return ov_and_de[the_row_id]["od-overview"]
 
 
 _CPARA10 = [

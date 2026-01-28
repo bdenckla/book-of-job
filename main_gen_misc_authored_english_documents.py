@@ -11,8 +11,8 @@ from pyauthor import (
     job1_full_list_details,
     job2_main_article,
 )
-from pyauthor.common import d2_anchor
-from .pyauthor_util.get_groups import get_groups
+from pyauthor_util.common_titles_etc import d2_anchor
+from pyauthor_util.get_groups import get_groups
 from pyauthor_util.short_id_etc import lc_img
 from pyauthor_util.job_quirkrecs import QUIRKRECS
 from pyauthor_util.job_ov_and_de import make_ov_and_de, sort_key

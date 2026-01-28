@@ -5,7 +5,7 @@
 """
 
 from py import my_html
-from pyauthor.common import D1D_FNAME
+from pyauthor_util.common_titles_etc import D1D_FNAME
 from pyauthor_util import author
 from pyauthor_util.short_id_etc import lc_img
 from pyauthor_util.short_id_etc import short_id

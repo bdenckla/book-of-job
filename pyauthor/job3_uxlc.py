@@ -1,23 +1,20 @@
 """ Exports gen_html_file and anchor """
 
 from py import my_html
-from pyauthor_util import author
-from pyauthor.common import D3_TITLE
-from pyauthor.common import D3_H1_CONTENTS
-from pyauthor.common import D3_FNAME
+from pyauthor_util import author, para_and_table
+from pyauthor_util.common_titles_etc import D3_TITLE, D3_H1_CONTENTS, D3_FNAME
 
 
-def gen_html_file(tdm_ch, ov_and_de, quirkrecs):
+def gen_html_file(tdm_ch, ov_and_de, qr_groups):
     author.assert_stem_eq(__file__, D3_FNAME)
-    cbody = _make_cbody(ov_and_de, quirkrecs)
+    cbody = _make_cbody(ov_and_de, qr_groups)
     author.help_gen_html_file(tdm_ch, D3_FNAME, D3_TITLE, cbody)
 
 
-def _make_cbody(ov_and_de, quirkrecs):
-    groups = _get_groups(quirkrecs)
+def _make_cbody(ov_and_de, qr_groups):
     cbody = [
         author.heading_level_1(D3_H1_CONTENTS),
-        _para_and_table(_cpara18, ov_and_de, groups[1]),
+        para_and_table(_cpara18, ov_and_de, qr_groups[1]),
     ]
     return cbody
 

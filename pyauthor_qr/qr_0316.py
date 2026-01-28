@@ -1,5 +1,5 @@
 from pyauthor_util import author
-from pyauthor_util.job_common import num_range
+from pyauthor_util.num_range import num_range
 
 
 RECORD_0316 = {
