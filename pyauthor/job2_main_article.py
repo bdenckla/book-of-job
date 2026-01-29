@@ -26,14 +26,14 @@ def _make_cbody(ov_and_de, qr_groups):
         author.para_ul(_CPARA15, _CLIST15),
         author.para(_CPARA16),
         author.para(_CPARA17A),
-        para_and_table(_cpara17b, ov_and_de, qr_groups["nbhq_and_xe"]),
+        para_and_table(_cpara17b, ov_and_de, qr_groups["nbhq_and_x3"]),
         *intro("intro-job2"),
         author.para(_CPARA17C),
-        para_and_table(_cpara18, ov_and_de, qr_groups["nbhq_and_ne"]),
-        para_and_table(_cpara19, ov_and_de, qr_groups["xbhq_and_ne"]),
-        para_and_table(_cpara20, ov_and_de, qr_groups["tbhq_and_ne"]),
+        para_and_table(_cpara18, ov_and_de, qr_groups["nbhq_and_n3"]),
+        para_and_table(_cpara19, ov_and_de, qr_groups["xbhq_and_n3"]),
+        para_and_table(_cpara20, ov_and_de, qr_groups["tbhq_and_n3"]),
         author.para(_cpara22()),
-        author.para(_cpara23(len(qr_groups["nbhq_and_ne"]))),
+        author.para(_cpara23(len(qr_groups["nbhq_and_n3"]))),
         author.para(_cpara24a(len(qr_groups["tbhq_and_zwd"]), len(qr_groups["tbhq_and_zwm"]))),
         para_and_table(_cpara24b_dexi, ov_and_de, qr_groups["tbhq_and_zwd"]),
         para_and_table(_cpara24c_misc, ov_and_de, qr_groups["tbhq_and_zwm"]),
@@ -287,10 +287,10 @@ def _clist25(the_lens):
     len_dexi = the_lens["tbhq_and_zwd"]
     len_misc = the_lens["tbhq_and_zwm"]
     len_total = len_dexi + len_misc
-    a = str(the_lens['nbhq_and_xe'])
-    b = str(the_lens['nbhq_and_ne'])
-    c = str(the_lens['xbhq_and_ne'])
-    d = str(the_lens['tbhq_and_ne'])
+    a = str(the_lens['nbhq_and_x3'])
+    b = str(the_lens['nbhq_and_n3'])
+    c = str(the_lens['xbhq_and_n3'])
+    d = str(the_lens['tbhq_and_n3'])
     e = str(len_total)
     return [
         f"$BHQ contributes notes on {a} quirks not found in those editions.",

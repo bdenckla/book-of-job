@@ -27,21 +27,30 @@ def _startswith_n(part):
     return part.startswith("n")
 
 
-def _foobhq_and_ne(foobhq, quirkrec):
+def _startswith_x(part):
+    return part.startswith("x")
+
+
+def _foobhq_and_n3(foobhq, quirkrec):
     bhq, t3o = _bhq_and_t3o(quirkrec)
     return bhq == foobhq and any(_startswith_n(part) for part in t3o)
 
 
-def _nbhq_and_ne(quirkrec):
-    return _foobhq_and_ne("nBHQ", quirkrec)
+def _nbhq_and_x3(quirkrec):
+    bhq, t3o = _bhq_and_t3o(quirkrec)
+    return bhq == "nBHQ" and all(_startswith_x(part) for part in t3o)
 
 
-def _xbhq_and_ne(quirkrec):
-    return _foobhq_and_ne("xBHQ", quirkrec)
+def _nbhq_and_n3(quirkrec):
+    return _foobhq_and_n3("nBHQ", quirkrec)
 
 
-def _tbhq_and_ne(quirkrec):
-    return _foobhq_and_ne("tBHQ", quirkrec)
+def _xbhq_and_n3(quirkrec):
+    return _foobhq_and_n3("xBHQ", quirkrec)
+
+
+def _tbhq_and_n3(quirkrec):
+    return _foobhq_and_n3("tBHQ", quirkrec)
 
 
 def _tbhq_and_zwd(quirkrec):
@@ -54,13 +63,14 @@ def _tbhq_and_zwm(quirkrec):
     return t3o[2] == "zWLCmisc"
 
 
-def _startswith_x(part):
-    return part.startswith("x")
+def _tbhq_and_nu(quirkrec):
+    _bhq, t4o = _bhq_and_t4o(quirkrec)
+    return t4o[3] == "nUXLC"
 
 
-def _nbhq_and_xe(quirkrec):
-    bhq, t3o = _bhq_and_t3o(quirkrec)
-    return bhq == "nBHQ" and all(_startswith_x(part) for part in t3o)
+def _tbhq_and_zu(quirkrec):
+    _bhq, t4o = _bhq_and_t4o(quirkrec)
+    return t4o[3] == "zUXLC"
 
 
 def get_qr_groups(quirkrecs):
@@ -70,17 +80,17 @@ def get_qr_groups(quirkrecs):
     #     flagged as a change in WLC relative to BHS, e.g. a bracket-c or bracket-v note.
     #     comparison with MAM revealed that it is a change back towards consensus,
     #     i.e. this is BHS/BHQ proposing a quirk that is not in μL
-    q_nbhq_and_xe = list(filter(_nbhq_and_xe, quirkrecs))
-    q_nbhq_and_ne = list(filter(_nbhq_and_ne, quirkrecs))
-    q_xbhq_and_ne = list(filter(_xbhq_and_ne, quirkrecs))
-    q_tbhq_and_ne = list(filter(_tbhq_and_ne, quirkrecs))
+    q_nbhq_and_x3 = list(filter(_nbhq_and_x3, quirkrecs))
+    q_nbhq_and_n3 = list(filter(_nbhq_and_n3, quirkrecs))
+    q_xbhq_and_n3 = list(filter(_xbhq_and_n3, quirkrecs))
+    q_tbhq_and_n3 = list(filter(_tbhq_and_n3, quirkrecs))
     q_tbhq_and_zwm = list(filter(_tbhq_and_zwm, quirkrecs))
     q_tbhq_and_zwd = list(filter(_tbhq_and_zwd, quirkrecs))
     groups = {
-        "nbhq_and_xe": q_nbhq_and_xe,
-        "nbhq_and_ne": q_nbhq_and_ne,
-        "xbhq_and_ne": q_xbhq_and_ne,
-        "tbhq_and_ne": q_tbhq_and_ne,
+        "nbhq_and_x3": q_nbhq_and_x3,
+        "nbhq_and_n3": q_nbhq_and_n3,
+        "xbhq_and_n3": q_xbhq_and_n3,
+        "tbhq_and_n3": q_tbhq_and_n3,
         "tbhq_and_zwd": q_tbhq_and_zwd,
         "tbhq_and_zwm": q_tbhq_and_zwm,
     }

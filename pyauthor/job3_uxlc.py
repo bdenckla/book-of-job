@@ -15,7 +15,7 @@ def gen_html_file(tdm_ch, ov_and_de, qr_groups):
 def _make_cbody(ov_and_de, qr_groups):
     cbody = [
         author.heading_level_1(D3_H1_CONTENTS),
-        para_and_table(_cpara18, ov_and_de, qr_groups["nbhq_and_ne"]),
+        para_and_table(_cpara18, ov_and_de, qr_groups["nbhq_and_n3"]),
     ]
     return cbody
 
