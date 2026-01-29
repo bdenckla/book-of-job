@@ -122,7 +122,7 @@ def _lcp_and_con(record):
 
 
 def _make_overview_row(record):
-    hbo_attrs = {"lang": "hbo", "dir": "rtl"}
+    hbo_attrs = {"lang": "hbo", "dir": "rtl", **_els(record)}
     the_row_id = row_id(record)
     anc = my_html.anchor_h("#", f"{D1D_FNAME}#{the_row_id}")  # self-anchor
     tr_contents = [
@@ -132,6 +132,12 @@ def _make_overview_row(record):
     ]
     tr_attrs = {"id": the_row_id}
     return my_html.table_row(tr_contents, tr_attrs)
+
+
+def _els(record):
+    if record.get("qr-extra-letter-spacing"):
+        return {"class": "extra-letter-spacing"}
+    return {}
 
 
 def _img(img):
