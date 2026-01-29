@@ -34,12 +34,12 @@ def make_ov_and_de(quirkrecs):
 
 
 def make_example_row():
-    hlc = color("μL-proposed", "qr-lc-proposed")
-    hmam = color("consensus", "qr-consensus")
-    lc_and_mam = [hlc, my_html.line_break(), hmam]
+    hlcp = color("μL-proposed", "qr-lc-proposed")
+    hcon = color("consensus", "qr-consensus")
+    lcp_and_con = [hlcp, my_html.line_break(), hcon]
     return my_html.table_row(
         [
-            my_html.table_datum(lc_and_mam),
+            my_html.table_datum(lcp_and_con),
             my_html.table_datum("# c:v"),
             my_html.table_datum("how μL-proposed differs from consensus"),
         ]
@@ -109,16 +109,16 @@ def _std_bcvp_quad(record):
     return bkid, chnu, vrnu, atnu
 
 
-def _lc_and_mam(record):
-    hlc = highlight(record, "qr-lc-proposed")
-    hmam = highlight(record, "qr-consensus")
+def _lcp_and_con(record):
+    hlcp = highlight(record, "qr-lc-proposed")
+    hcon = highlight(record, "qr-consensus")
     if lc_q := record.get("qr-lc-q"):
         assert lc_q == "(?)"
-        lc_and_q = [hlc, " (?)"]
+        lc_and_q = [hlcp, " (?)"]
     else:
-        lc_and_q = [hlc]
-    lc_and_mam = [*lc_and_q, my_html.line_break(), hmam]
-    return lc_and_mam
+        lc_and_q = [hlcp]
+    lcp_and_con = [*lc_and_q, my_html.line_break(), hcon]
+    return lcp_and_con
 
 
 def _make_overview_row(record):
@@ -126,7 +126,7 @@ def _make_overview_row(record):
     the_row_id = row_id(record)
     anc = my_html.anchor_h("#", f"{D1D_FNAME}#{the_row_id}")  # self-anchor
     tr_contents = [
-        my_html.table_datum(_lc_and_mam(record), hbo_attrs),
+        my_html.table_datum(_lcp_and_con(record), hbo_attrs),
         my_html.table_datum([anc, " ", record["qr-cv"]]),
         author.table_datum(record["qr-what-is-weird"]),
     ]
