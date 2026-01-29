@@ -6,7 +6,6 @@ RECORD_1711 = {
     "lc": "לְבָבִּֽי׃",
     "what-is-weird": "second ב has דגש",
     "mam": "לְבָבִֽי׃",
-    "comment": "",
     "highlight": 3,
     "lc-loc": {"page": "402A", "column": 1, "line": 13},
     "bhq-comment": BHQ_COMMENT_XELSEWHERE,

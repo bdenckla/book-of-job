@@ -15,7 +15,6 @@ RECORD_0409 = {
     "lc": "אֱל֣וֹהַ",
     "what-is-weird": "ה lacks מפיק",
     "mam": "אֱל֣וֹהַּ",
-    "comment": "",
     "highlight": 4,
     "lc-loc": {"page": "398A", "column": 1, "line": -2},
     "bhq-comment": BHQ_COMMENT_0409,

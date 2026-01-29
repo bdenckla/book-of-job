@@ -6,7 +6,6 @@ RECORD_4213 = {
     "lc": "בָנֽוֹת׃",
     "what-is-weird": "ב lacks דגש",
     "mam": "בָּנֽוֹת׃",
-    "comment": "",
     "highlight": 1,
     "lc-loc": {"page": "409B", "column": 1, "line": -9, "including-blank-lines": 1},
     "bhq-comment": BHQ_COMMENT_XELSEWHERE,

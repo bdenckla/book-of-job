@@ -4,7 +4,6 @@ RECORD_0801 = {
     "lc": "וַיֹאמַֽר׃",
     "what-is-weird": "$yod (י) lacks דגש",
     "mam": "וַיֹּאמַֽר׃",
-    "comment": "",
     "highlight": 2,
     "lc-loc": {"page": "399A", "column": 2, "line": 5, "including-blank-lines": 1},
     "bhq-comment": "This quirk is noted in $BHQ.",

@@ -18,7 +18,6 @@ RECORD_3105 = {
     "lc": "רַגְלֽ͏ִי׃",
     "what-is-weird": "סילוק precedes חיריק",
     "mam": "רַגְלִֽי׃",
-    "comment": "",
     "highlight": 3,
     "lc-loc": {"page": "405B", "column": 1, "line": -9, "including-blank-lines": 1},
     "uxlc-position-within-verse": 8,

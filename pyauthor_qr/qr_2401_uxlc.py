@@ -3,7 +3,6 @@ RECORD_2401_UXLC = {
     "lc": "מִ֭שַׁדַּי",
     "what-is-weird": "ש lacks דגש.",
     "mam": "מִ֭שַּׁדַּי",
-    "comment": "",
     "highlight": 2,
     "lc-loc": {"page": "403B", "column": 2, "line": 25},
     "noted-by": "tBHQ-xBHL-xDM-xWLC-nUXLC",

@@ -4,7 +4,6 @@ RECORD_3330 = {
     "lc": "הַֽחַיִּים׃",
     "what-is-weird": "סילוק is on syl. 1 not 3",
     "mam": "הַחַיִּֽים׃",
-    "comment": "",
     "highlight-lc": 1,
     "highlight-mam": 3,
     "lc-loc": {"page": "406B", "column": 1, "line": -1},

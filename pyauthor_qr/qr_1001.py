@@ -7,7 +7,6 @@ RECORD_1001 = {
     "lc": "אֲ֝דַבְּרָה֗",
     "what-is-weird": "רביע is on ה not ר",
     "mam": "אֲ֝דַבְּרָ֗ה",
-    "comment": "",
     "highlight-lc": 5,
     "highlight-mam": 4,
     "lc-loc": {"page": "399B", "column": 2, "line": -6},

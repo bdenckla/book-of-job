@@ -6,7 +6,6 @@ RECORD_1113 = {
     "lc": "אַ֭תָּ֗ה",
     "what-is-weird": "רביע on ת fights דחי",
     "mam": "אַ֭תָּה",
-    "comment": "",
     "highlight": 2,
     "lc-loc": {"page": "400A", "column": 2, "line": 13},
     "bhq-comment": BHQ_COMMENT_TBHQ_NELSEWHERE,

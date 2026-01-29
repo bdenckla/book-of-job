@@ -7,7 +7,6 @@ RECORD_1508 = {
     "lc": "אֱל֣וֹהַ",
     "what-is-weird": "ה lacks מפיק",
     "mam": "אֱל֣וֹהַּ",
-    "comment": "",
     "highlight": 4,
     "lc-loc": {"page": "401A", "column": 2, "line": -7},
     "bhq-comment": BHQ_COMMENT_LIKE_0409,

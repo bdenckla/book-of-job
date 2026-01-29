@@ -8,7 +8,6 @@ RECORD_4125 = {
     "lc": "לִבְלִי־חָת׃",
     "what-is-weird": "סילוק missing",
     "mam": "לִבְלִי־חָֽת׃",
-    "comment": "",
     "highlight": 6,
     "lc-loc": {"page": "409A", "column": 2, "line": 14},
     "bhq-comment": _BHQ_COMMENT_4125,

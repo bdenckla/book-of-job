@@ -6,7 +6,6 @@ RECORD_3817 = {
     "lc": "צַלְמָּ֣וֶת",
     "what-is-weird": "מ has דגש",
     "mam": "צַלְמָ֣וֶת",
-    "comment": "",
     "highlight": 3,
     "lc-loc": {"page": "408A", "column": 1, "line": -5},
     "bhq-comment": BHQ_COMMENT_XELSEWHERE,

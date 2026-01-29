@@ -18,7 +18,6 @@ RECORD_3107 = {
     "lc": "מֻאֿוּֽם׃",
     "what-is-weird": "קבוץ and סילוק not סילוק and ∅",
     "mam": "מֽאֿוּם׃",
-    "comment": "",
     "highlight": [1, 3],
     "lc-loc": {"page": "405B", "column": 1, "line": -6, "including-blank-lines": 1},
     "use-stretched-format": True,

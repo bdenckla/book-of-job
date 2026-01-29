@@ -7,7 +7,6 @@ RECORD_1106 = {
     "lc": "אֱ֝ל֗וֹהַ",
     "what-is-weird": "ה lacks מפיק",
     "mam": "אֱ֝ל֗וֹהַּ",
-    "comment": "",
     "highlight": 4,
     "lc-loc": {"page": "400A", "column": 2, "line": 5},
     "uxlc-position-within-verse": 11,

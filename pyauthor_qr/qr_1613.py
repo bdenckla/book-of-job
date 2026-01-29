@@ -7,7 +7,6 @@ RECORD_1613 = {
     "lc": "מְרֵרָֽתִי׃",
     "what-is-weird": "סילוק is on 2nd ר not ת",
     "mam": "מְרֵרָתִֽי׃",
-    "comment": "",
     "highlight-lc": 3,
     "highlight-mam": 4,
     "lc-loc": {"page": "401B", "column": 2, "line": -10},

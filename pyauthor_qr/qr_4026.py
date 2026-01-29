@@ -7,7 +7,6 @@ RECORD_4026 = {
     "lc": "לֶֽחֱיוֹ׃",
     "what-is-weird": "סילוק on ל not $yod (י)",
     "mam": "לֶחֱיֽוֹ׃",
-    "comment": "",
     "highlight-lc": 1,
     "highlight-mam": 3,
     "lc-loc": {"page": "409A", "column": 1, "line": 8},

@@ -73,7 +73,6 @@ def _one_basic_to_record(cv_and_wlc):
         "lc": wlc.replace(ha.DEX, ha.TIP),
         "what-is-weird": "טרחא not דחי",
         "mam": wlc,
-        "comment": "",
         "highlight": 1,
         "lc-loc": {"page": page, "column": column, "line": line},
         "bhq-comment": [

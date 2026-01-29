@@ -8,7 +8,6 @@ RECORD_1203 = {
     "lc": "וְאֶת",
     "what-is-weird": "מקף is missing",
     "mam": "וְאֶת־",
-    "comment": "",
     "highlight-mam": 4,
     "lc-loc": {"page": "400A", "column": 2, "line": -1},
     "bhq-comment": _BHQ_COMMENT_1203,

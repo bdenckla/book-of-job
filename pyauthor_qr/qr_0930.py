@@ -8,7 +8,6 @@ RECORD_0930 = {
     "lc": "כַּפָּי׃",
     "what-is-weird": "סילוק may be missing",
     "mam": "כַּפָּֽי׃",
-    "comment": "",
     "highlight": 2,
     "lc-loc": {"page": "399B", "column": 2, "line": 15},
     "bhq-comment": BHQ_COMMENT_0914_AND_0930,

@@ -4,7 +4,6 @@ RECORD_0701 = {
     "lc": "וְכִימֵ֖֗י",
     "what-is-weird": "רביע fights טרחא",
     "mam": "וְכִימֵ֖י",
-    "comment": "",
     "highlight": 4,
     "lc-loc": {"page": "399A", "column": 1, "line": 4},
     "bhq-comment": "$BHQ silently ignores the possible רביע.",

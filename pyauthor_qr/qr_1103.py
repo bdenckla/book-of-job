@@ -7,7 +7,6 @@ RECORD_1103 = {
     "lc": "יַחֲרִ֑ישׁו",
     "what-is-weird": "שורוק dot is missing",
     "mam": "יַחֲרִ֑ישׁוּ",
-    "comment": "",
     "highlight": 6,
     "lc-loc": {"page": "400A", "column": 1, "line": -1},
     "bhq-comment": BHQ_COMMENT_TBHQ_NELSEWHERE,

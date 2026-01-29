@@ -12,7 +12,6 @@ RECORD_0121 = {
     "lc": "שָׁ֔מָה",
     "what-is-weird": "מ lacks דגש",
     "mam": "שָׁ֔מָּה",
-    "comment": "",
     "highlight": 2,
     "lc-loc": {"page": "397B", "column": 1, "line": 1},
     "uxlc-position-within-verse": 8,
