@@ -74,24 +74,26 @@ def _tbhq_and_zu(quirkrec):
 
 
 def get_qr_groups(quirkrecs):
-    # nbhq, xbhq: noted (as a quirk) in BHQ, not noted (as a quirk) in BHQ
-    # ne, xe: noted (as a quirk) elsewhere, not noted (as a quirk) elsewhere
+    # nbhq: noted (as a quirk) in BHQ
+    # xbhq: not noted (as a quirk) in BHQ
+    # n3, noted (as a quirk) in one of "the three"
+    # x3: not noted (as a quirk) in one of "the three"
     # zw (zWLCmisc): noted (as consensus) by WLC (combined with MAM):
     #     flagged as a change in WLC relative to BHS, e.g. a bracket-c or bracket-v note.
     #     comparison with MAM revealed that it is a change back towards consensus,
-    #     i.e. this is BHS/BHQ proposing a quirk that is not in μL
-    q_nbhq_and_x3 = list(filter(_nbhq_and_x3, quirkrecs))
-    q_nbhq_and_n3 = list(filter(_nbhq_and_n3, quirkrecs))
-    q_xbhq_and_n3 = list(filter(_xbhq_and_n3, quirkrecs))
-    q_tbhq_and_n3 = list(filter(_tbhq_and_n3, quirkrecs))
-    q_tbhq_and_zwm = list(filter(_tbhq_and_zwm, quirkrecs))
-    q_tbhq_and_zwd = list(filter(_tbhq_and_zwd, quirkrecs))
+    #     i.e. this is BHS/BHQ proposing a quirk that is not in μL (according to WLC at least)
+    nbhq_and_x3 = list(filter(_nbhq_and_x3, quirkrecs))
+    nbhq_and_n3 = list(filter(_nbhq_and_n3, quirkrecs))
+    xbhq_and_n3 = list(filter(_xbhq_and_n3, quirkrecs))
+    tbhq_and_n3 = list(filter(_tbhq_and_n3, quirkrecs))
+    tbhq_and_zwm = list(filter(_tbhq_and_zwm, quirkrecs))
+    tbhq_and_zwd = list(filter(_tbhq_and_zwd, quirkrecs))
     groups = {
-        "nbhq_and_x3": q_nbhq_and_x3,
-        "nbhq_and_n3": q_nbhq_and_n3,
-        "xbhq_and_n3": q_xbhq_and_n3,
-        "tbhq_and_n3": q_tbhq_and_n3,
-        "tbhq_and_zwd": q_tbhq_and_zwd,
-        "tbhq_and_zwm": q_tbhq_and_zwm,
+        "nbhq_and_x3": nbhq_and_x3,
+        "nbhq_and_n3": nbhq_and_n3,
+        "xbhq_and_n3": xbhq_and_n3,
+        "tbhq_and_n3": tbhq_and_n3,
+        "tbhq_and_zwd": tbhq_and_zwd,
+        "tbhq_and_zwm": tbhq_and_zwm,
     }
     return groups
