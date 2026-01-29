@@ -1,102 +1,96 @@
-# XXX study UXLC changes in Job
-# XXX review quirks-Daat-Miqra.txt
-# XXX review quirks-BHQ.txt
-# XXX auto-generate Aleppo image basenames
-# XXX add other parts of compounds, in gray
-
-from pyauthor_qr.qr_z_wlc_dexi import RECORDS_Z_WLC_DEXI
+from pyauthor_qr.qr_0121 import RECORD_0121
 from pyauthor_qr.qr_0316 import RECORD_0316
-from pyauthor_qr.qr_0816 import RECORD_0816
-from pyauthor_qr.qr_1535 import RECORD_1535
-from pyauthor_qr.qr_2212 import RECORD_2212
-from pyauthor_qr.qr_1413 import RECORD_1413
-from pyauthor_qr.qr_3410 import RECORD_3410
-from pyauthor_qr.qr_2228 import RECORD_2228
-from pyauthor_qr.qr_3105 import RECORD_3105
-from pyauthor_qr.qr_3107 import RECORD_3107
-from pyauthor_qr.qr_3206 import RECORD_3206
-from pyauthor_qr.qr_3612 import RECORD_3612
-from pyauthor_qr.qr_4125 import RECORD_4125
-from pyauthor_qr.qr_2221_A import RECORD_2221_A
-from pyauthor_qr.qr_2221_B import RECORD_2221_B
-from pyauthor_qr.qr_2421 import RECORD_2421
-from pyauthor_qr.qr_2702 import RECORD_2702
-from pyauthor_qr.qr_2919 import RECORD_2919
-from pyauthor_qr.qr_3629 import RECORD_3629
-from pyauthor_qr.qr_3902 import RECORD_3902
-from pyauthor_qr.qr_3913 import RECORD_3913
-from pyauthor_qr.qr_2808 import RECORD_2808
-from pyauthor_qr.qr_2911 import RECORD_2911
-from pyauthor_qr.qr_3920 import RECORD_3920
-from pyauthor_qr.qr_1203 import RECORD_1203
-from pyauthor_qr.qr_1804_A import RECORD_1804_A
-from pyauthor_qr.qr_1804_B import RECORD_1804_B
-from pyauthor_qr.qr_1806 import RECORD_1806
-from pyauthor_qr.qr_1604 import RECORD_1604
-from pyauthor_qr.qr_2125 import RECORD_2125
+from pyauthor_qr.qr_0409 import RECORD_0409
 from pyauthor_qr.qr_0417 import RECORD_0417
-from pyauthor_qr.qr_0914 import RECORD_0914
-from pyauthor_qr.qr_0930 import RECORD_0930
+from pyauthor_qr.qr_0505 import RECORD_0505
+from pyauthor_qr.qr_0629 import RECORD_0629
+from pyauthor_qr.qr_0701 import RECORD_0701
 from pyauthor_qr.qr_0709 import RECORD_0709
 from pyauthor_qr.qr_0721 import RECORD_0721
+from pyauthor_qr.qr_0801 import RECORD_0801
+from pyauthor_qr.qr_0807 import RECORD_0807
+from pyauthor_qr.qr_0814 import RECORD_0814
+from pyauthor_qr.qr_0816 import RECORD_0816
 from pyauthor_qr.qr_0906 import RECORD_0906
+from pyauthor_qr.qr_0910 import RECORD_0910
+from pyauthor_qr.qr_0914 import RECORD_0914
+from pyauthor_qr.qr_0930 import RECORD_0930
 from pyauthor_qr.qr_0935 import RECORD_0935
 from pyauthor_qr.qr_1001 import RECORD_1001
+from pyauthor_qr.qr_1006 import RECORD_1006
 from pyauthor_qr.qr_1015 import RECORD_1015
 from pyauthor_qr.qr_1103 import RECORD_1103
 from pyauthor_qr.qr_1106 import RECORD_1106
 from pyauthor_qr.qr_1107 import RECORD_1107
 from pyauthor_qr.qr_1113 import RECORD_1113
+from pyauthor_qr.qr_1203 import RECORD_1203
+from pyauthor_qr.qr_1216 import RECORD_1216
+from pyauthor_qr.qr_1219 import RECORD_1219
+from pyauthor_qr.qr_1409 import RECORD_1409
+from pyauthor_qr.qr_1413 import RECORD_1413
 from pyauthor_qr.qr_1508 import RECORD_1508
+from pyauthor_qr.qr_1534 import RECORD_1534
+from pyauthor_qr.qr_1535 import RECORD_1535
+from pyauthor_qr.qr_1604 import RECORD_1604
 from pyauthor_qr.qr_1613 import RECORD_1613
 from pyauthor_qr.qr_1620 import RECORD_1620
 from pyauthor_qr.qr_1704 import RECORD_1704
 from pyauthor_qr.qr_1706 import RECORD_1706
 from pyauthor_qr.qr_1711 import RECORD_1711
+from pyauthor_qr.qr_1804_A import RECORD_1804_A
+from pyauthor_qr.qr_1804_B import RECORD_1804_B
+from pyauthor_qr.qr_1806 import RECORD_1806
 from pyauthor_qr.qr_1809 import RECORD_1809
-from pyauthor_qr.qr_2230_B import RECORD_2230_B
-from pyauthor_qr.qr_2416 import RECORD_2416
-from pyauthor_qr.qr_2614 import RECORD_2614
-from pyauthor_qr.qr_3133 import RECORD_3133
-from pyauthor_qr.qr_3312 import RECORD_3312
-from pyauthor_qr.qr_3419 import RECORD_3419
-from pyauthor_qr.qr_3706 import RECORD_3706
-from pyauthor_qr.qr_3812_B import RECORD_3812_B
-from pyauthor_qr.qr_3817 import RECORD_3817
-from pyauthor_qr.qr_3906 import RECORD_3906
-from pyauthor_qr.qr_4010 import RECORD_4010
-from pyauthor_qr.qr_4026 import RECORD_4026
-from pyauthor_qr.qr_4213 import RECORD_4213
-from pyauthor_qr.qr_0121 import RECORD_0121
-from pyauthor_qr.qr_0629 import RECORD_0629
-from pyauthor_qr.qr_0701 import RECORD_0701
-from pyauthor_qr.qr_0801 import RECORD_0801
-from pyauthor_qr.qr_0807 import RECORD_0807
-from pyauthor_qr.qr_1216 import RECORD_1216
-from pyauthor_qr.qr_1409 import RECORD_1409
-from pyauthor_qr.qr_1534 import RECORD_1534
+from pyauthor_qr.qr_1902 import RECORD_1902
 from pyauthor_qr.qr_1905 import RECORD_1905
 from pyauthor_qr.qr_1916 import RECORD_1916
+from pyauthor_qr.qr_2125 import RECORD_2125
+from pyauthor_qr.qr_2134 import RECORD_2134
+from pyauthor_qr.qr_2212 import RECORD_2212
+from pyauthor_qr.qr_2221_A import RECORD_2221_A
+from pyauthor_qr.qr_2221_B import RECORD_2221_B
+from pyauthor_qr.qr_2228 import RECORD_2228
 from pyauthor_qr.qr_2230_A import RECORD_2230_A
+from pyauthor_qr.qr_2230_B import RECORD_2230_B
+from pyauthor_qr.qr_2401 import RECORD_2401
+from pyauthor_qr.qr_2405 import RECORD_2405
+from pyauthor_qr.qr_2416 import RECORD_2416
+from pyauthor_qr.qr_2421 import RECORD_2421
+from pyauthor_qr.qr_2614 import RECORD_2614
+from pyauthor_qr.qr_2702 import RECORD_2702
+from pyauthor_qr.qr_2713 import RECORD_2713
+from pyauthor_qr.qr_2808 import RECORD_2808
 from pyauthor_qr.qr_2826 import RECORD_2826
+from pyauthor_qr.qr_2911 import RECORD_2911
+from pyauthor_qr.qr_2919 import RECORD_2919
+from pyauthor_qr.qr_3105 import RECORD_3105
+from pyauthor_qr.qr_3107 import RECORD_3107
+from pyauthor_qr.qr_3133 import RECORD_3133
+from pyauthor_qr.qr_3206 import RECORD_3206
+from pyauthor_qr.qr_3210 import RECORD_3210
+from pyauthor_qr.qr_3312 import RECORD_3312
 from pyauthor_qr.qr_3330 import RECORD_3330
+from pyauthor_qr.qr_3410 import RECORD_3410
+from pyauthor_qr.qr_3419 import RECORD_3419
+from pyauthor_qr.qr_3611 import RECORD_3611
+from pyauthor_qr.qr_3612 import RECORD_3612
+from pyauthor_qr.qr_3629 import RECORD_3629
+from pyauthor_qr.qr_3706 import RECORD_3706
+from pyauthor_qr.qr_3719 import RECORD_3719
 from pyauthor_qr.qr_3812_A import RECORD_3812_A
-from pyauthor_qr.qr_0409 import RECORD_0409
-from pyauthor_qr.qr_0505_uxlc import RECORD_0505_UXLC
-from pyauthor_qr.qr_0814_uxlc import RECORD_0814_UXLC
-from pyauthor_qr.qr_0910_uxlc import RECORD_0910_UXLC
-from pyauthor_qr.qr_1006_uxlc import RECORD_1006_UXLC
-from pyauthor_qr.qr_1219_uxlc import RECORD_1219_UXLC
-from pyauthor_qr.qr_1902_uxlc import RECORD_1902_UXLC
-from pyauthor_qr.qr_2134_uxlc import RECORD_2134_UXLC
-from pyauthor_qr.qr_2401_uxlc import RECORD_2401_UXLC
-from pyauthor_qr.qr_2405_uxlc import RECORD_2405_UXLC
-from pyauthor_qr.qr_2713_uxlc import RECORD_2713_UXLC
-from pyauthor_qr.qr_3210_uxlc import RECORD_3210_UXLC
-from pyauthor_qr.qr_3611_uxlc import RECORD_3611_UXLC
-from pyauthor_qr.qr_3719_uxlc import RECORD_3719_UXLC
-from pyauthor_qr.qr_3820_uxlc import RECORD_3820_UXLC
-from pyauthor_qr.qr_4210_uxlc import RECORD_4210_UXLC
+from pyauthor_qr.qr_3812_B import RECORD_3812_B
+from pyauthor_qr.qr_3817 import RECORD_3817
+from pyauthor_qr.qr_3820 import RECORD_3820
+from pyauthor_qr.qr_3902 import RECORD_3902
+from pyauthor_qr.qr_3906 import RECORD_3906
+from pyauthor_qr.qr_3913 import RECORD_3913
+from pyauthor_qr.qr_3920 import RECORD_3920
+from pyauthor_qr.qr_4010 import RECORD_4010
+from pyauthor_qr.qr_4026 import RECORD_4026
+from pyauthor_qr.qr_4125 import RECORD_4125
+from pyauthor_qr.qr_4210 import RECORD_4210
+from pyauthor_qr.qr_4213 import RECORD_4213
+from pyauthor_qr.qr_z_wlc_dexi import RECORDS_Z_WLC_DEXI
 
 QUIRKRECS = [
     *RECORDS_Z_WLC_DEXI,
@@ -104,22 +98,22 @@ QUIRKRECS = [
     RECORD_0316,
     RECORD_0409,
     RECORD_0417,
-    RECORD_0505_UXLC,
+    RECORD_0505,
     RECORD_0629,
     RECORD_0701,
     RECORD_0709,
     RECORD_0721,
     RECORD_0801,
     RECORD_0807,
-    RECORD_0814_UXLC,
+    RECORD_0814,
     RECORD_0816,
     RECORD_0906,
-    RECORD_0910_UXLC,
+    RECORD_0910,
     RECORD_0914,
     RECORD_0930,
     RECORD_0935,
     RECORD_1001,
-    RECORD_1006_UXLC,
+    RECORD_1006,
     RECORD_1015,
     RECORD_1103,
     RECORD_1106,
@@ -127,7 +121,7 @@ QUIRKRECS = [
     RECORD_1113,
     RECORD_1203,
     RECORD_1216,
-    RECORD_1219_UXLC,
+    RECORD_1219,
     RECORD_1409,
     RECORD_1413,
     RECORD_1508,
@@ -143,24 +137,24 @@ QUIRKRECS = [
     RECORD_1804_B,
     RECORD_1806,
     RECORD_1809,
-    RECORD_1902_UXLC,
+    RECORD_1902,
     RECORD_1905,
     RECORD_1916,
     RECORD_2125,
-    RECORD_2134_UXLC,
+    RECORD_2134,
     RECORD_2212,
     RECORD_2221_A,
     RECORD_2221_B,
     RECORD_2228,
     RECORD_2230_A,
     RECORD_2230_B,
-    RECORD_2401_UXLC,
-    RECORD_2405_UXLC,
+    RECORD_2401,
+    RECORD_2405,
     RECORD_2416,
     RECORD_2421,
     RECORD_2614,
     RECORD_2702,
-    RECORD_2713_UXLC,
+    RECORD_2713,
     RECORD_2808,
     RECORD_2826,
     RECORD_2911,
@@ -169,20 +163,20 @@ QUIRKRECS = [
     RECORD_3107,
     RECORD_3133,
     RECORD_3206,
-    RECORD_3210_UXLC,
+    RECORD_3210,
     RECORD_3312,
     RECORD_3330,
     RECORD_3410,
     RECORD_3419,
-    RECORD_3611_UXLC,
+    RECORD_3611,
     RECORD_3612,
     RECORD_3629,
     RECORD_3706,
-    RECORD_3719_UXLC,
+    RECORD_3719,
     RECORD_3812_A,
     RECORD_3812_B,
     RECORD_3817,
-    RECORD_3820_UXLC,
+    RECORD_3820,
     RECORD_3902,
     RECORD_3906,
     RECORD_3913,
@@ -190,6 +184,6 @@ QUIRKRECS = [
     RECORD_4010,
     RECORD_4026,
     RECORD_4125,
-    RECORD_4210_UXLC,
+    RECORD_4210,
     RECORD_4213,
 ]

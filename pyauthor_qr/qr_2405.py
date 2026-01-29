@@ -1,4 +1,4 @@
-RECORD_2405_UXLC = {
+RECORD_2405 = {
     "qr-cv": "24:5",
     "qr-lc-proposed": "בַּֽמִּדְבָּ֗ר",
     "qr-what-is-weird": "געיה not מרכא",

@@ -1,4 +1,4 @@
-RECORD_3719_UXLC = {
+RECORD_3719 = {
     "qr-cv": "37:19",
     "qr-n_of_m_for_this_verse": (2, 2),  # this is record 2 of 2 for this verse
     "qr-lc-proposed": "לֹ֥א־",

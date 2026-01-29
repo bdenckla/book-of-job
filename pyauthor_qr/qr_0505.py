@@ -1,4 +1,4 @@
-RECORD_0505_UXLC = {
+RECORD_0505 = {
     "qr-cv": "5:5",
     "qr-lc-proposed": "מִצִּנִּ֥ים",
     "qr-what-is-weird": "צ has דגש",

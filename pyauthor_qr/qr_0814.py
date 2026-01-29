@@ -1,4 +1,4 @@
-RECORD_0814_UXLC = {
+RECORD_0814 = {
     "qr-cv": "8:14",
     "qr-lc-proposed": "עַ֝כָּבִישׁ",
     "qr-lc-q": "(?)",

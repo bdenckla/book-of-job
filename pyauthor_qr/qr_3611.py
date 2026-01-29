@@ -3,7 +3,7 @@ from pyauthor_util import author
 _URL = "https://bdenckla.github.io/MAM-with-doc/misc/tsinnorit_and_oleh_on_ivs.html"
 doc = author.anc_h("document", _URL)
 
-RECORD_3611_UXLC = {
+RECORD_3611 = {
     "qr-cv": "36:11",
     "qr-lc-proposed": "וְֽיַעֲ֫בֹ֥דוּ",
     "qr-what-is-weird": "עולה is over ע",
