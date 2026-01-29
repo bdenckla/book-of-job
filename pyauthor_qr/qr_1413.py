@@ -55,7 +55,7 @@ RECORD_1413 = {
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "maybe מרכא not געיה",
     "qr-consensus": "תָּ֤שִֽׁית",
-    "comment-should-not-be-para-wrapped": True,
+    "qr-comment-should-not-be-para-wrapped": True,
     "qr-comment": _COMMENT_1413,
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "401A", "column": 1, "line": -3},

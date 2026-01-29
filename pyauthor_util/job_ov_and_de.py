@@ -17,7 +17,7 @@ from py_uxlc_loc import my_uxlc_location
 from py_uxlc_loc import my_tanakh_book_names as py_uxlc_loc_tbn
 
 
-_CSNBPR = "comment-should-not-be-para-wrapped"
+_CSNBPR = "qr-comment-should-not-be-para-wrapped"
 
 
 def make_ov_and_de(quirkrecs):
