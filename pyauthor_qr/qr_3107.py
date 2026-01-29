@@ -20,9 +20,9 @@ RECORD_3107 = {
     "qr-consensus": "מֽאֿוּם׃",
     "qr-highlight": [1, 3],
     "qr-lc-loc": {"page": "405B", "column": 1, "line": -6, "including-blank-lines": 1},
-    "use-stretched-format": True,
+    "qr-use-stretched-format": True,
     "qr-bhq-comment": _BHQ_COMMENT_3107,
-    "bhq": "מֻאֽוּם׃",
+    "qr-bhq": "מֻאֽוּם׃",
     "qr-noted-by": "xBHQ-nBHL-nDM-nWLC",
     # Above we consider this xBHQ because:
     #    Though it attempts to transcribe the quirk, it does so inaccurately.

@@ -16,6 +16,6 @@ RECORD_3419 = {
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "406B", "column": 2, "line": -2},
     "qr-bhq-comment": correctly_ignores("דגש", "34:19"),
-    "use-stretched-format": True,
+    "qr-use-stretched-format": True,
     "qr-noted-by": "xBHQ-nBHL-nDM",
 }

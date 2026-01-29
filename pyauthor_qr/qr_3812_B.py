@@ -33,7 +33,7 @@ RECORD_3812_B = {
     "qr-lc-loc": {"page": "408A", "column": 1, "line": -11},
     "aleppo-img": "Aleppo-3812_B.png",
     "aleppo-page-url": "https://www.mgketer.org/mikra/29/38/1/mg/106",
-    "use-stretched-format": True,
+    "qr-use-stretched-format": True,
     "qr-bhq-comment": _BHQ_COMMENT_3812_B,
     "qr-noted-by": "xBHQ-xBHL-xDM-nWLC",
 }

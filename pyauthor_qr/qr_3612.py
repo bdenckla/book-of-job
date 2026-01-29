@@ -29,7 +29,7 @@ RECORD_3612 = {
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "407B", "column": 1, "line": 4},
-    "use-stretched-format": True,
+    "qr-use-stretched-format": True,
     "qr-bhq-comment": _BHQ_COMMENT_3612,
     "qr-noted-by": "nBHQ-xBHL-nDM-nWLC",
     "aleppo-page-url": "https://www.mgketer.org/mikra/29/36/1/mg/106",

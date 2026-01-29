@@ -81,7 +81,7 @@ RECORD_1804_CMN_AB = {
     "qr-cv": "18:4",
     "qr-lc-proposed": "הֲ֭לְמַּעַנְךָ",
     "qr-consensus": "הַֽ֭לְמַעַנְךָ",
-    "bhq": "הַ֭לְמַּעַנְךָ",
+    "qr-bhq": "הַ֭לְמַּעַנְךָ",
     "qr-lc-loc": {"page": "402A", "column": 1, "line": -4},
 }
 RECORD_2221_CMN_AB = {

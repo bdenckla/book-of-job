@@ -11,4 +11,4 @@ def lc_img(record):
     nb = record["qr-noted-by"]
     zuxlc = "-zUXLC" in nb or "-nUXLC" in nb
     ext = ".jpg" if zuxlc else ".png"
-    return record.get("lc-img") or f"{short_id(record)}{ext}"
+    return record.get("qr-lc-img") or f"{short_id(record)}{ext}"

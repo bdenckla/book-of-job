@@ -205,12 +205,8 @@ def _ancs(record):
     return uxlc_anc, mwd_anc
 
 
-def _use_stretched(record):
-    return record.get("use-stretched-format") or record.get(_CSNBPR)
-
-
 def _dpe(record):
-    fn = _dpe_stretched if record.get("use-stretched-format") else _dpe_inline
+    fn = _dpe_stretched if record.get("qr-use-stretched-format") else _dpe_inline
     return fn(record)
 
 
@@ -247,7 +243,7 @@ def _ancs_and_loc(record):
 def _make_details_html(record):
     return [
         author.table_c(_make_overview_row(record)),
-        *_maybe_bhq(record.get("bhq")),
+        *_maybe_bhq(record.get("qr-bhq")),
         _dpe(record),
         _img(lc_img(record)),
         *_maybe_img(record, "mi-args-aleppo"),
