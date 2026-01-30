@@ -3,7 +3,7 @@ RECORD_2212 = {
     "qr-lc-proposed": "רֹ֭אשׁ",
     "qr-what-is-weird": "דחי not טרחא",
     "qr-consensus": "רֹ֖אשׁ",
-    "qr-comment": [
+    "qr-generic-comment": [
         "foo",
     ],
     "qr-highlight": 1,

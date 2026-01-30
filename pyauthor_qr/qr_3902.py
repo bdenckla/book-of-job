@@ -28,7 +28,7 @@ RECORD_3902 = {
     "qr-lc-proposed": "וְ֝יָדַעְתָּ֜",
     "qr-what-is-weird": "גרש not רביע",
     "qr-consensus": "וְ֝יָדַעְתָּ֗",
-    "qr-comment": [author.para(_COMMENT_3902)],
+    "qr-generic-comment": [author.para(_COMMENT_3902)],
     "qr-highlight": 5,
     "qr-lc-loc": {"page": "408A", "column": 2, "line": -3},
     "qr-bhq-comment": [author.para(_BHQ_COMMENT_3902)],

@@ -14,7 +14,7 @@ RECORD_2826 = {
     "qr-lc-proposed": "בַּעֲשׂת֣וֹ",
     "qr-what-is-weird": "ש lacks חולם dot",
     "qr-consensus": "בַּעֲשֹׂת֣וֹ",
-    "qr-comment": _COMMENT_2826,
+    "qr-generic-comment": _COMMENT_2826,
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "404B", "column": 2, "line": -1},
     "qr-bhq-comment": _BHQ_COMMENT_2826,

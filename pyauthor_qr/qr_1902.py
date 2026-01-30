@@ -6,7 +6,7 @@ RECORD_1902 = {
     "qr-lc-proposed": "וּֽתְדַכְּאוּנַ֥נִי",
     "qr-what-is-weird": "כ has שווא",
     "qr-consensus": "וּֽתְדַכּאוּנַ֥נִי",
-    "qr-comment": [
+    "qr-generic-comment": [
         "As $UXLC notes, an erasure under the kaf is apparent.",
     ],
     "qr-highlight": 4,

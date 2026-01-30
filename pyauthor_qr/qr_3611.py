@@ -9,7 +9,7 @@ RECORD_3611 = {
     "qr-lc-proposed": "וְֽיַעֲ֫בֹ֥דוּ",
     "qr-what-is-weird": "עולה is over ע",
     "qr-consensus": "וְֽיַ֫עֲבֹ֥דוּ",
-    "qr-comment": [
+    "qr-generic-comment": [
         "In the middle of a word,",
         " the “half-accent” עולה (half of עולה ויורד)",
         " should never appear on a letter with a vocal שווא,",

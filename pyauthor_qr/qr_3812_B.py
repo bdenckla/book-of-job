@@ -29,7 +29,7 @@ RECORD_3812_B = {
     "qr-lc-proposed": "יִדַּ֖עְתָּה הַשַּׁ֣חַר",
     "qr-what-is-weird": "ה copied not moved in קרי",
     "qr-consensus": "יִדַּ֖עְתָּ הַשַּׁ֣חַר",
-    "qr-comment": [author.para(_COMMENT_3812_B)],
+    "qr-generic-comment": [author.para(_COMMENT_3812_B)],
     "qr-highlight-lc-proposed": 5,
     "qr-lc-loc": {"page": "408A", "column": 1, "line": -11},
     "qr-aleppo-img": "Aleppo-3812_B.png",

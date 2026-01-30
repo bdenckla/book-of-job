@@ -11,7 +11,7 @@ RECORD_3913 = {
     "qr-lc-proposed": "אֶ֝בְרָה",
     "qr-what-is-weird": "רביע מגרש may lack רביע",
     "qr-consensus": "אֶ֝בְרָ֗ה",
-    "qr-comment": _COMMENT_3913,
+    "qr-generic-comment": _COMMENT_3913,
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "408B", "column": 1, "line": 11},
     "qr-bhq-comment": [

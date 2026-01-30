@@ -6,7 +6,7 @@ RECORD_3210 = {
     "qr-lc-proposed": "דֵּעִ֣י",
     "qr-what-is-weird": "ד has דגש",
     "qr-consensus": "דֵעִ֣י",
-    "qr-comment": [
+    "qr-generic-comment": [
         "There is little or no evidence of a דגש in the ד,",
         " and the consensus has no such דגש.",
     ],

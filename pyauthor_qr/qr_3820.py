@@ -6,7 +6,7 @@ RECORD_3820 = {
     "qr-lc-proposed": "תָ֝בִין",
     "qr-what-is-weird": "ב lacks רביע",
     "qr-consensus": "תָ֝בִ֗ין",
-    "qr-comment": [
+    "qr-generic-comment": [
         "The only mark above the ב is a רפה.",
     ],
     "qr-lc-img": "3820-custom.png",

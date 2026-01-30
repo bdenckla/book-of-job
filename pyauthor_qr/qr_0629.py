@@ -3,7 +3,7 @@ RECORD_0629 = {
     "qr-lc-proposed": "וְשֽׁוּבוּ",
     "qr-what-is-weird": "געיה not מרכא",
     "qr-consensus": "וְשׁ֥וּבוּ",
-    "qr-comment": [
+    "qr-generic-comment": [
         "Contrary to the transcription shown above,",
         " the most likely scribal intent was מרכא.",
     ],

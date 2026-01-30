@@ -6,7 +6,7 @@ RECORD_1706 = {
     "qr-lc-proposed": "וְתֹ֖פֶתּ",
     "qr-what-is-weird": "final ת has דגש",
     "qr-consensus": "וְתֹ֖פֶת",
-    "qr-comment": [
+    "qr-generic-comment": [
         "A דגש in a final ת doesn’t make sense",
         " without a קמץ or a שווא נח below.",
         " But the dot is convincing.",

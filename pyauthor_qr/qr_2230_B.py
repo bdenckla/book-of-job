@@ -8,7 +8,7 @@ RECORD_2230_B = {
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "נ may have דגש",
     "qr-consensus": "וְ֝נִמְלַ֗ט",
-    "qr-comment": "The dot in question is suspiciously smaller than nearby ones.",
+    "qr-generic-comment": "The dot in question is suspiciously smaller than nearby ones.",
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "403B", "column": 2, "line": 4},
     "qr-bhq-comment": BHQ_COMMENT_XELSEWHERE_DUBIOUS,

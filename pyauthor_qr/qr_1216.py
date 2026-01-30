@@ -4,7 +4,7 @@ RECORD_1216 = {
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "ת may have געיה",
     "qr-consensus": "וְתוּשִׁיָּ֑ה",
-    "qr-comment": [
+    "qr-generic-comment": [
         "There is a blob of ink below the ת.",
         " Most likely, this mark is a malformed masorah circle",
         " on the word מוליך on the line below.",

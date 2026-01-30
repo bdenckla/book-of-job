@@ -17,7 +17,7 @@ RECORD_1905 = {
     "qr-lc-proposed": "חֶרְפָּתִּֽֿי",
     "qr-what-is-weird": "דגש may fight with רפה",
     "qr-consensus": "חֶרְפָּתִֽי׃",
-    "qr-comment": [
+    "qr-generic-comment": [
         "A דגש on a letter with רפה doesn’t make sense.",
         " The color image of μL reveals this דגש to be unlikely.",
         [" Judged to be just a speck, not a דגש, in ", golinets_citation("251")],

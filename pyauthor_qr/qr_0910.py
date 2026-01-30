@@ -6,7 +6,7 @@ RECORD_0910 = {
     "qr-lc-proposed": "וְנִפְלָא֗וֹת",
     "qr-what-is-weird": "ו may have גרש מוקדם",
     "qr-consensus": "וְ֝נִפְלָא֗וֹת",
-    "qr-comment": [
+    "qr-generic-comment": [
         "As $UXLC notes, the possible גרש מוקדם appears to be doubled,",
         " possibly as the result of a single stroke whose only remains are its edges.",
     ],

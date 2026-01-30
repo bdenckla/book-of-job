@@ -11,7 +11,7 @@ RECORD_1806 = {
     "qr-lc-proposed": "א֖וֹר",
     "qr-what-is-weird": "טרחא not דחי",
     "qr-consensus": "א֭וֹר",
-    "qr-comment": "The scribe of uL probably intended a דחי but placed it like a טרחא.",
+    "qr-generic-comment": "The scribe of uL probably intended a דחי but placed it like a טרחא.",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "402A", "column": 1, "line": -2},
     "qr-bhq-comment": _BHQ_COMMENT_1806,

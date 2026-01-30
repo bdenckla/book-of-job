@@ -56,11 +56,11 @@ _EXTRAS = {
         "qr-n_of_m_for_this_verse": (2, 2),  # this is record 2 of 2 for this verse
     },
     "36:19": {
-        "qr-comment": _COMMENT_3619,
+        "qr-generic-comment": _COMMENT_3619,
     },
     "37:19": {
         "qr-n_of_m_for_this_verse": (1, 2),  # this is record 1 of 2 for this verse
-        "qr-comment": _COMMENT_3719,
+        "qr-generic-comment": _COMMENT_3719,
     },
 }
 

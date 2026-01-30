@@ -23,7 +23,7 @@ RECORD_2221_A = {
     "qr-lc-proposed": "עִמּ֑וֹ",
     "qr-what-is-weird": "אתנח not מונח",
     "qr-consensus": "עִמּ֣וֹ",
-    "qr-comment": _COMMENT_2221_A,
+    "qr-generic-comment": _COMMENT_2221_A,
     "qr-highlight": 2,
     "qr-bhq-comment": _BHQ_COMMENT_2221_A,
     "qr-noted-by": "tBHQ-nBHL-xDM-nWLC",

@@ -6,7 +6,7 @@ RECORD_4210 = {
     "qr-lc-proposed": "וַ֧יֹּסֶף",
     "qr-what-is-weird": "דרגא belongs to ו not $yod",
     "qr-consensus": "וַיֹּ֧סֶף",
-    "qr-comment": [
+    "qr-generic-comment": [
         "In situations like this,",
         " it is hard to determine which letter an under-accent belongs to."
         " By “situations like this” I mean two narrow letters",

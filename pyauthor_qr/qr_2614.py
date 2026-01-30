@@ -26,7 +26,7 @@ RECORD_2614 = {
     "qr-lc-proposed": "גְּ֝בוּרוֹתָ֗יו",
     "qr-what-is-weird": "חולם becomes מלא in קרי",
     "qr-consensus": "גְּ֝בוּרֹתָ֗יו",
-    "qr-comment": [author.para(_COMMENT_2614)],
+    "qr-generic-comment": [author.para(_COMMENT_2614)],
     "qr-highlight-lc-proposed": 5,
     "qr-lc-loc": {"page": "404A", "column": 2, "line": -5},
     "qr-aleppo-img": "Aleppo-2614.png",

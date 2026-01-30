@@ -7,7 +7,7 @@ RECORD_3920 = {
     "qr-lc-proposed": "הְֽ֭תַרְעִישֶׁנּוּ",
     "qr-what-is-weird": "simple שווא not חטף פתח",
     "qr-consensus": "הֲֽ֭תַרְעִישֶׁנּוּ",
-    "qr-comment": "The situation with המימיך in 38:12 is similar.",
+    "qr-generic-comment": "The situation with המימיך in 38:12 is similar.",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "408B", "column": 1, "line": -10},
     "qr-bhq-comment": BHQ_COMMENT_TBHQ_NELSEWHERE,

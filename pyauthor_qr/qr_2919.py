@@ -11,7 +11,7 @@ RECORD_2919 = {
     "qr-lc-proposed": "בִּקְצִירֽ͏ִי׃",
     "qr-what-is-weird": "סילוק precedes חיריק",
     "qr-consensus": "בִּקְצִירִֽי׃",
-    "qr-comment": _COMMENT_2919,
+    "qr-generic-comment": _COMMENT_2919,
     "qr-highlight": 5,
     "qr-lc-loc": {"page": "405A", "column": 1, "line": -4},
     "qr-bhq-comment": BHQ_COMMENT_TBHQ_NELSEWHERE,

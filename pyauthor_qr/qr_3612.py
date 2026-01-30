@@ -22,7 +22,7 @@ RECORD_3612 = {
     "qr-lc-proposed": "כִּבְלִי־",
     "qr-what-is-weird": "כ not ב",
     "qr-consensus": "בִּבְלִי־",
-    "qr-comment": [
+    "qr-generic-comment": [
         "Although my focus is pointing rather than spelling,",
         " I am interested in a spelling difference like this,",
         " since it is not just a חסר vs מלא difference.",

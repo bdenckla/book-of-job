@@ -6,7 +6,7 @@ RECORD_2713 = {
     "qr-lc-proposed": "מִשַׁדַּ֥י",
     "qr-what-is-weird": "ש lacks דגש",
     "qr-consensus": "מִשַּׁדַּ֥י",
-    "qr-comment": [
+    "qr-generic-comment": [
         "24:1 is analogous.",
     ],
     "qr-highlight": 2,

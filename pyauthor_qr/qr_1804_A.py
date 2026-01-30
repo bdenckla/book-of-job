@@ -13,7 +13,7 @@ RECORD_1804_A = {
     "qr-n_of_m_for_this_verse": (1, 2),  # this is record 1 of 2 for this verse
     "qr-n_of_m_for_this_word": (1, 2),  # this is record 1 of 2 for this word
     "qr-what-is-weird": "פתח on ה is חטף",
-    "qr-comment": [
+    "qr-generic-comment": [
         "The quirk that מ has דגש is discussed in a separate entry of mine.",
         " The געיה difference is not important to us here.",
     ],

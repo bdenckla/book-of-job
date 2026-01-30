@@ -178,17 +178,17 @@ def _maybe_bhq(bhq):
 _SEP = " \N{EM DASH} "
 
 
-def _maybe_inline(comment):
-    return [] if comment is None else [comment]
+def _maybe_inline(yyycom):
+    return [] if yyycom is None else [yyycom]
 
 
-def _maybe_para(comment):
-    return [] if comment is None else [_ensure_lop(comment)]
+def _maybe_para(yyycom):
+    return [] if yyycom is None else [_ensure_lop(yyycom)]
 
 
-def _ensure_lop(comment):
+def _ensure_lop(yyycom):
     """lop: list of paras"""
-    return comment if _is_lop(comment) else [author.para(comment)]
+    return yyycom if _is_lop(yyycom) else [author.para(yyycom)]
 
 
 
@@ -208,23 +208,23 @@ def _dpe(record):
 
 
 def _use_stretched_format(record):
-    comment = record.get("qr-comment")
+    gencom = record.get("qr-generic-comment")
     bhqcom = record.get("qr-bhq-comment")
-    return _is_lop(comment) or _is_lop(bhqcom)
+    return _is_lop(gencom) or _is_lop(bhqcom)
 
 
-def _is_lop(comment):
+def _is_lop(yyycom):
     """lop: list of paras"""
-    if comment is None or isinstance(comment, str):
+    if yyycom is None or isinstance(yyycom, str):
         return False
-    assert isinstance(comment, list)
-    el0 = comment[0]
+    assert isinstance(yyycom, list)
+    el0 = yyycom[0]
     return my_html.is_htel(el0) and my_html.htel_get_tag(el0) == "p"
 
 
 def _dpe_inline(record):
     dpe1 = [
-        *_maybe_inline(record.get("qr-comment")),
+        *_maybe_inline(record.get("qr-generic-comment")),
         *_maybe_inline(record.get("qr-bhq-comment")),
         *_ancs_and_loc(record),
     ]
@@ -233,7 +233,7 @@ def _dpe_inline(record):
 
 def _dpe_stretched(record):
     return [
-        *_maybe_para(record.get("qr-comment")),
+        *_maybe_para(record.get("qr-generic-comment")),
         *_maybe_para(record.get("qr-bhq-comment")),
         _parasperse(_ancs_and_loc(record)),
     ]

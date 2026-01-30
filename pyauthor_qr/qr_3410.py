@@ -3,7 +3,7 @@ RECORD_3410 = {
     "qr-lc-proposed": "אַֽנֲשֵׁ֥י",
     "qr-what-is-weird": "געיה not מרכא (on א)",
     "qr-consensus": "אַ֥נֲשֵׁ֥י",
-    "qr-comment": [
+    "qr-generic-comment": [
         "foo",
     ],
     "qr-highlight": 1,

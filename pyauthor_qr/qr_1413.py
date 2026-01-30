@@ -50,7 +50,7 @@ RECORD_1413 = {
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "maybe מרכא not געיה",
     "qr-consensus": "תָּ֤שִֽׁית",
-    "qr-comment": [
+    "qr-generic-comment": [
         author.para(_COMMENT_1413_PARA1),
         author.para(_COMMENT_1413_PARA2),
         author.para(_COMMENT_1413_PARA3),

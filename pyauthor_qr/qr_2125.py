@@ -12,7 +12,7 @@ RECORD_2125 = {
     "qr-lc-proposed": "וִלֹֽא־",
     "qr-what-is-weird": "חיריק not שווא",
     "qr-consensus": "וְלֹֽא־",
-    "qr-comment": _COMMENT_2125,
+    "qr-generic-comment": _COMMENT_2125,
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "403A", "column": 2, "line": 13},
     "qr-bhq-comment": _BHQ_COMMENT_2125,

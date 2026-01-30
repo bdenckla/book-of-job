@@ -29,7 +29,7 @@ RECORD_2401 = {
     "qr-lc-proposed": "מִ֭שַׁדַּי",
     "qr-what-is-weird": "ש lacks דגש",
     "qr-consensus": "מִ֭שַּׁדַּי",
-    "qr-comment": [
+    "qr-generic-comment": [
         author.para(_COMMENT_PARA_1),
         author.para(_COMMENT_PARA_2),
         author.para(_COMMENT_PARA_3),

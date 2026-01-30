@@ -18,7 +18,7 @@ RECORD_2221_B = {
     "qr-lc-proposed": "וּשְׁלם",
     "qr-what-is-weird": "ל lacks קמץ־אתנח",
     "qr-consensus": "וּשְׁלָ֑ם",
-    "qr-comment": _COMMENT_2221_B,
+    "qr-generic-comment": _COMMENT_2221_B,
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "403B", "column": 1, "line": -6},
     "qr-bhq-comment": _BHQ_COMMENT_2221_B,

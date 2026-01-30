@@ -4,7 +4,7 @@ RECORD_1535 = {
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "מונח may be on ל not $yod",
     "qr-consensus": "וְיָ֣לֹד",
-    "qr-comment": [
+    "qr-generic-comment": [
         "There is little evidence of a מונח in any location on this word.",
         " There is a mark that looks like a פתח between the $yod and the ל,",
         " but that is grammatically implausible.",

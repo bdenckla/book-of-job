@@ -7,7 +7,7 @@ RECORD_0814 = {
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "ב may lack רביע",
     "qr-consensus": "עַ֝כָּבִ֗ישׁ",
-    "qr-comment": [
+    "qr-generic-comment": [
         "Perhaps a רביע is is merged into the left end of the (untranscribed) רפה.",
     ],
     "qr-highlight": 3,

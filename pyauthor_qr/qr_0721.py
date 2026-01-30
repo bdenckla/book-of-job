@@ -7,7 +7,7 @@ RECORD_0721 = {
     "qr-lc-proposed": "וְשִׁ֖חֲרְתַּ֣נִי",
     "qr-what-is-weird": "פתח on ח is חטף",
     "qr-consensus": "וְשִׁ֖חַרְתַּ֣נִי",
-    "qr-comment": [
+    "qr-generic-comment": [
         "It doesn’t make sense to have a חטף vowel (aka a חטף שווא)",
         " followed by a simple שווא.",
         " Yet, the manuscript image clearly shows this.",

@@ -4,7 +4,7 @@ RECORD_0816 = {
     "qr-lc-proposed": "יֹ֭נַקְתּ֥וֹ",
     "qr-what-is-weird": "דחי not געיה",
     "qr-consensus": "יֹֽנַקְתּ֥וֹ",
-    "qr-comment": [
+    "qr-generic-comment": [
         "Above I have asserted that the consensus has געיה here,",
         " but this געיה, like most cases of געיה, is optional.",
         " Therefore, one could just as easily assert the consensus has no געיה.",

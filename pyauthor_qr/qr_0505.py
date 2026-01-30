@@ -29,7 +29,7 @@ RECORD_0505 = {
     "qr-what-is-weird": "צ has דגש",
     "qr-consensus": "מִצִנִּ֥ים",
     "qr-highlight": 2,
-    "qr-comment": [
+    "qr-generic-comment": [
         author.para(_COMPAR1),
         author.para(_COMPAR2),
         author.para(_COMPAR3),

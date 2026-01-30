@@ -9,7 +9,7 @@ RECORD_3419 = {
     "qr-lc-proposed": "נִּכַּר־",
     "qr-what-is-weird": "נ has דגש",
     "qr-consensus": "נִכַּר־",
-    "qr-comment": [
+    "qr-generic-comment": [
         "The possible דגש is faint.",
         " The adjacent דגש (on כ) and other nearby marks are quite clear,",
         " casting suspicion on the legitimacy of this דגש.",

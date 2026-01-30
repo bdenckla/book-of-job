@@ -7,7 +7,7 @@ RECORD_3719 = {
     "qr-lc-proposed": "לֹ֥א־",
     "qr-what-is-weird": "מרכא not געיה",
     "qr-consensus": "לֹֽא־",
-    "qr-comment": [
+    "qr-generic-comment": [
         "The distinction between",
         " the מרכא accent, the געיה mark, and the טרחא accent",
         " is a vexing problem.",

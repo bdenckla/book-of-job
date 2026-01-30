@@ -14,7 +14,7 @@ RECORD_1704 = {
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "מ may have דגש",
     "qr-consensus": "מִשָּׂ֑כֶל",
-    "qr-comment": [
+    "qr-generic-comment": [
         "The color image of μL reveals this דגש to be unlikely.",
         " Surprisingly, $BHL includes this דגש in its body text",
         " rather than noting it in $BHL_A.",
