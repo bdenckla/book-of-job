@@ -1,21 +1,8 @@
 from py import my_html
+from pyauthor_util import author
 
 
-_BHQ_COMMENT_3812_B = [
-    "$BHS does not catch this quirk in μL: it reflects the consensus rather than μL.",
-    " $BHQ half-fixes the error in $BHS:",
-    " it updates its marginal קרי note to reflect μL rather than the consensus,",
-    " but it does not correspondingly update its bottom-of-page critical apparatus note.",
-    " This is similar to what happened with 26:14.",
-]
-
-RECORD_3812_B = {
-    "qr-cv": "38:12",
-    "qr-n_of_m_for_this_verse": (2, 2),  # this is record 2 of 2 for this verse
-    "qr-lc-proposed": "יִדַּ֖עְתָּה הַשַּׁ֣חַר",
-    "qr-what-is-weird": "ה copied not moved in קרי",
-    "qr-consensus": "יִדַּ֖עְתָּ הַשַּׁ֣חַר",
-    "qr-comment": [
+_COMMENT_3812_B = [
         "The consensus is that this is one of those כתיב/קרי cases",
         " where the word boundary shifts",
         " from being after a ה to before that ה.",
@@ -28,12 +15,25 @@ RECORD_3812_B = {
         " In contrast to the consensus, in going from כתיב to קרי,",
         [" μL can be though of as having ", my_html.bold("copied")],
         " the ה to the second word rather than moving it.",
-    ],
+    ]
+_BHQ_COMMENT_3812_B = [
+    "$BHS does not catch this quirk in μL: it reflects the consensus rather than μL.",
+    " $BHQ half-fixes the error in $BHS:",
+    " it updates its marginal קרי note to reflect μL rather than the consensus,",
+    " but it does not correspondingly update its bottom-of-page critical apparatus note.",
+    " This is similar to what happened with 26:14.",
+]
+RECORD_3812_B = {
+    "qr-cv": "38:12",
+    "qr-n_of_m_for_this_verse": (2, 2),  # this is record 2 of 2 for this verse
+    "qr-lc-proposed": "יִדַּ֖עְתָּה הַשַּׁ֣חַר",
+    "qr-what-is-weird": "ה copied not moved in קרי",
+    "qr-consensus": "יִדַּ֖עְתָּ הַשַּׁ֣חַר",
+    "qr-comment": [author.para(_COMMENT_3812_B)],
     "qr-highlight-lc-proposed": 5,
     "qr-lc-loc": {"page": "408A", "column": 1, "line": -11},
     "qr-aleppo-img": "Aleppo-3812_B.png",
     "qr-aleppo-page-url": "https://www.mgketer.org/mikra/29/38/1/mg/106",
-    "qr-use-stretched-format": True,
-    "qr-bhq-comment": _BHQ_COMMENT_3812_B,
+    "qr-bhq-comment": [author.para(_BHQ_COMMENT_3812_B)],
     "qr-noted-by": "xBHQ-xBHL-xDM-nWLC",
 }

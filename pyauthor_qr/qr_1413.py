@@ -44,22 +44,20 @@ _COMMENT_1413_PARA3 = [
     " a great boon to students of cantillation who cannot easily read",
     [" the ", _COS_HEB_ANC, " in its modern Hebrew.)"],
 ]
-_COMMENT_1413 = [
-    author.para(_COMMENT_1413_PARA1),
-    author.para(_COMMENT_1413_PARA2),
-    author.para(_COMMENT_1413_PARA3),
-]
 RECORD_1413 = {
     "qr-cv": "14:13",
     "qr-lc-proposed": "תָּ֤שִׁ֥ית",
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "maybe מרכא not געיה",
     "qr-consensus": "תָּ֤שִֽׁית",
-    "qr-comment-should-not-be-para-wrapped": True,
-    "qr-comment": _COMMENT_1413,
+    "qr-comment-has-paras": True,
+    "qr-comment": [
+        author.para(_COMMENT_1413_PARA1),
+        author.para(_COMMENT_1413_PARA2),
+        author.para(_COMMENT_1413_PARA3),
+    ],
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "401A", "column": 1, "line": -3},
-    "qr-use-stretched-format": True,
     "qr-bhq-comment": [
         "$BHQ benefits from ignoring $WLC here,",
         " though $BHQ likely ignored $WLC as a whole",

@@ -1,3 +1,4 @@
+from pyauthor_util import author
 from pyauthor_util.job_common import suffix
 
 
@@ -25,12 +26,11 @@ RECORD_2614 = {
     "qr-lc-proposed": "גְּ֝בוּרוֹתָ֗יו",
     "qr-what-is-weird": "חולם becomes מלא in קרי",
     "qr-consensus": "גְּ֝בוּרֹתָ֗יו",
-    "qr-comment": _COMMENT_2614,
+    "qr-comment": [author.para(_COMMENT_2614)],
     "qr-highlight-lc-proposed": 5,
     "qr-lc-loc": {"page": "404A", "column": 2, "line": -5},
     "qr-aleppo-img": "Aleppo-2614.png",
     "qr-aleppo-page-url": "https://www.mgketer.org/mikra/29/26/14/mg/106",
-    "qr-use-stretched-format": True,
     "qr-bhq-comment": _BHQ_COMMENT_2614,
     "qr-noted-by": "xBHQ-xBHL-xDM-nWLC",
 }

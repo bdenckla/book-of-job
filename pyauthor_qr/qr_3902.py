@@ -1,3 +1,6 @@
+from pyauthor_util import author
+
+
 _COMMENT_3902 = [
     "The mark in question is very heavy,",
     " having a stroke width more typical of a letter-stroke than of a niqqud-stroke.",
@@ -25,11 +28,10 @@ RECORD_3902 = {
     "qr-lc-proposed": "וְ֝יָדַעְתָּ֜",
     "qr-what-is-weird": "גרש not רביע",
     "qr-consensus": "וְ֝יָדַעְתָּ֗",
-    "qr-comment": _COMMENT_3902,
+    "qr-comment": [author.para(_COMMENT_3902)],
     "qr-highlight": 5,
     "qr-lc-loc": {"page": "408A", "column": 2, "line": -3},
-    "qr-use-stretched-format": True,
-    "qr-bhq-comment": _BHQ_COMMENT_3902,
+    "qr-bhq-comment": [author.para(_BHQ_COMMENT_3902)],
     "qr-noted-by": "xBHQ-nBHL-xDM",
     # Perhaps I should have been charitable to BHQ and said tBHQ instead of xBHQ,
     # since BHQ’s transcription of רביע is somewhat reasonable if it were accompanied by a note.

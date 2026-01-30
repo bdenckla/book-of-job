@@ -1,3 +1,4 @@
+from pyauthor_util import author
 from pyauthor_util.job_common import correctly_ignores
 
 
@@ -15,7 +16,6 @@ RECORD_3419 = {
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "406B", "column": 2, "line": -2},
-    "qr-bhq-comment": correctly_ignores("דגש", "34:19"),
-    "qr-use-stretched-format": True,
+    "qr-bhq-comment": [author.para(correctly_ignores("דגש", "34:19"))],
     "qr-noted-by": "xBHQ-nBHL-nDM",
 }

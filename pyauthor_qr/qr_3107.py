@@ -1,3 +1,6 @@
+from pyauthor_util import author
+
+
 _BHQ_COMMENT_3107 = [
     "$BHQ reflects neither μL nor the consensus expectation here.",
     " It reflects μL except it places the סילוק under the א.",
@@ -20,8 +23,7 @@ RECORD_3107 = {
     "qr-consensus": "מֽאֿוּם׃",
     "qr-highlight": [1, 3],
     "qr-lc-loc": {"page": "405B", "column": 1, "line": -6, "including-blank-lines": 1},
-    "qr-use-stretched-format": True,
-    "qr-bhq-comment": _BHQ_COMMENT_3107,
+    "qr-bhq-comment": [author.para(_BHQ_COMMENT_3107)],
     "qr-bhq": "מֻאֽוּם׃",
     "qr-noted-by": "xBHQ-nBHL-nDM-nWLC",
     # Above we consider this xBHQ because:

@@ -17,9 +17,6 @@ from py_uxlc_loc import my_uxlc_location
 from py_uxlc_loc import my_tanakh_book_names as py_uxlc_loc_tbn
 
 
-_CSNBPR = "qr-comment-should-not-be-para-wrapped"
-
-
 def make_ov_and_de(quirkrecs):
     ids = sl_map(row_id, quirkrecs)
     dups = _duplicates(ids)
@@ -181,13 +178,13 @@ def _maybe_bhq(bhq):
 _SEP = " \N{EM DASH} "
 
 
-def _maybe_comment(record):
+def _maybe_inline_comment(record):
     if comment := record.get("qr-comment"):
         return [comment]
     return []
 
 
-def _maybe_bhqcom(record):
+def _maybe_inline_bhqcom(record):
     if bhqcom := record.get("qr-bhq-comment"):
         return [bhqcom]
     return []
@@ -195,9 +192,17 @@ def _maybe_bhqcom(record):
 
 def _maybe_para_comment(record):
     if comment := record.get("qr-comment"):
-        if record.get(_CSNBPR):
+        if _has_paras(comment):
             return [comment]
         return [author.para(comment)]
+    return []
+
+
+def _maybe_para_bhqcom(record):
+    if bhqcom := record.get("qr-bhq-comment"):
+        if _has_paras(bhqcom):
+            return [bhqcom]
+        return [author.para(bhqcom)]
     return []
 
 
@@ -212,14 +217,28 @@ def _ancs(record):
 
 
 def _dpe(record):
-    fn = _dpe_stretched if record.get("qr-use-stretched-format") else _dpe_inline
+    fn = _dpe_stretched if _use_stretched_format(record) else _dpe_inline
     return fn(record)
+
+
+def _use_stretched_format(record):
+    return _has_paras(record.get("qr-comment")) or _has_paras(record.get("qr-bhq-comment"))
+
+
+def _has_paras(comment):
+    if comment is None:
+        return False
+    if isinstance(comment, str):
+        return False
+    assert isinstance(comment, list)
+    el0 = comment[0]
+    return my_html.is_htel(el0) and my_html.htel_get_tag(el0) == "p"
 
 
 def _dpe_inline(record):
     dpe1 = [
-        *_maybe_comment(record),
-        *_maybe_bhqcom(record),
+        *_maybe_inline_comment(record),
+        *_maybe_inline_bhqcom(record),
         *_ancs_and_loc(record),
     ]
     return _parasperse(dpe1)
@@ -228,7 +247,7 @@ def _dpe_inline(record):
 def _dpe_stretched(record):
     return [
         *_maybe_para_comment(record),
-        author.para(record["qr-bhq-comment"]),
+        *_maybe_para_bhqcom(record),
         _parasperse(_ancs_and_loc(record)),
     ]
 
