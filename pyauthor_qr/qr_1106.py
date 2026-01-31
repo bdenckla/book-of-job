@@ -12,7 +12,7 @@ RECORD_1106 = {
     "qr-uxlc-position-within-verse": 11,
     "qr-bhq-comment": BHQ_COMMENT_LIKE_0409,
     "qr-noted-by": "nBHQ-nBHL-nDM",
-    # Above, note BHQ-... not tBHQ-...
+    # Above, note nBHQ-... not tBHQ-...
     # I.e. note that BHQ not only transcribed this right,
     # but also noted it in the (bottom-of-page) critical apparatus.
 }

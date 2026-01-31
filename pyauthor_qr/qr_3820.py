@@ -10,8 +10,8 @@ RECORD_3820 = {
         "The only mark above the ב is a רפה.",
     ],
     "qr-lc-img": "3820-custom.png",
-    # Above, we use our own screen ship rather than one taken
-    # from the UXLC change record, which is what we do in all other cases.
+    # Above, we use our own screen snip (a .png) rather than one taken
+    # from the UXLC change record (a .jpg), which is what we do in all other cases.
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "408A", "column": 1, "line": 24},
     "qr-noted-by": "tBHQ-xBHL-xDM-xWLC-nUXLC",

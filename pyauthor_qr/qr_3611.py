@@ -18,9 +18,14 @@ RECORD_3611 = {
         " (Rarely, עולה appears on a letter with a vocal שווא at the beginning of a word.",
         [" See my ", doc, ", “Tsinnorit & Oleh on Initial Vocal Shewa” for details.)"],
     ],
+    "qr-lc-img": "3611-custom.jpg",
+    # Above, we use the UXLC change record screen snip (a .jpg) rather than one we took
+    # ourselves (a .png). We use the UXLC screen snip just for convenience, to avoid
+    # having to make our own. Except for this screen snip, we don’t care about the note
+    # in UXLC on this issue, because we don’t care about notes in UXLC if there is a note
+    # in one of the three earlier-published editions: BHL, DM, & WLC.
     "qr-highlight-lc-proposed": 3,
     "qr-highlight-consensus": 2,
     "qr-lc-loc": {"page": "407B", "column": 1, "line": 1},
-    "qr-noted-by": "tBHQ-xBHL-xDM-xWLC-nUXLC",
-    "qr-uxlc-change-url": uxlc_change("2023.10.19", "2023.06.10-42"),
+    "qr-noted-by": "tBHQ-xBHL-nDM",
 }

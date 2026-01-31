@@ -7,17 +7,27 @@ def _bhq_and_t4o(quirkrec):
     bhq, bhl, dm = parts[0], parts[1], parts[2]
     wlc = "xWLC" if len(parts) <= 3 else parts[3]
     uxlc = "xUXLC" if len(parts) <= 4 else parts[4]
+    _do_solo_asserts(bhq, bhl, dm, wlc, uxlc)
+    _do_combo_asserts(bhq, bhl, dm, wlc, uxlc)
+    the_4_others = bhl, dm, wlc, uxlc
+    return bhq, the_4_others
+
+
+def _do_solo_asserts(bhq, bhl, dm, wlc, uxlc):
     assert bhq in ("nBHQ", "xBHQ", "tBHQ")
     assert bhl in ("nBHL", "xBHL")
     assert dm in ("nDM", "xDM")
     assert wlc in ("nWLC", "xWLC", "zWLCmisc", "zWLCdexi")
     assert uxlc in ("nUXLC", "xUXLC", "zUXLC")
-    #
+
+
+def _do_combo_asserts(bhq, bhl, dm, wlc, uxlc):
     if wlc in ("zWLCmisc", "zWLCdexi"):
         assert (bhq, bhl, dm, uxlc) == ("tBHQ", "xBHL", "xDM", "xUXLC")
-    #
-    the_4_others = bhl, dm, wlc, uxlc
-    return bhq, the_4_others
+    if uxlc == "zUXLC":
+        assert (bhq, bhl, dm, wlc) == ("tBHQ", "xBHL", "xDM", "xWLC")
+    if uxlc == "nUXLC":
+        assert (bhq, bhl, dm, wlc) == ("tBHQ", "xBHL", "xDM", "xWLC")
 
 
 def _bhq_and_t3o(quirkrec):
