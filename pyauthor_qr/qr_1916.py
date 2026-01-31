@@ -1,6 +1,7 @@
 RECORD_1916 = {
     "qr-bhla-i": 27,
     "qr-cv": "19:16",
+    "qr-n_of_m_for_this_verse": (1, 2),
     "qr-lc-q": "(?)",
     "qr-lc-proposed": "קָּ֭רָאתִי",
     "qr-what-is-weird": "ק may have דגש",
