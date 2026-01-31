@@ -9,7 +9,7 @@ RECORD_1535 = {
     "qr-cv": "15:35",
     "qr-lc-proposed": "וְיָלֹ֣ד",
     "qr-lc-q": "(?)",
-    "qr-what-is-weird": [_span_rtl("∅-מונח")," not מונח-געיה"],
+    "qr-what-is-weird": [_span_rtl("∅-מונח"), " not מונח-געיה"],
     "qr-consensus": "וְיָ֣לֹֽד",
     "qr-extra-letter-spacing": True,
     "qr-generic-comment": [

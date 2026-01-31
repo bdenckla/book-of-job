@@ -3,5 +3,6 @@ RECORD_0627 = {
     "qr-cv": "6:27",
     "qr-consensus": "עַֽל־רֵיעֲכֶֽם׃",
     "qr-what-is-weird": "געיה on רי not על",
+    "qr-lc-loc": {"page": "398B", "column": 2, "line": 27},
     "qr-under-construction": True,
 }
