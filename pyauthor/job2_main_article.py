@@ -310,17 +310,17 @@ def _clist36(the_lens):
     len_dexi = the_lens["tbhq_and_zwd"]
     len_misc = the_lens["tbhq_and_zwm"]
     len_total = len_dexi + len_misc
-    a = str(the_lens["nbhq_and_x3"])
-    b = str(the_lens["nbhq_and_n3"])
-    c = str(the_lens["xbhq_and_n3"])
+    b = str(the_lens["nbhq_and_x3"])
+    c = str(the_lens["nbhq_and_n3"])
     d = str(the_lens["tbhq_and_n3"])
-    e = str(len_total)
+    e = str(the_lens["xbhq_and_n3"])
+    f = str(len_total)
     return [
-        f"$BHQ contributes notes on {a} quirks not found in those editions.",
-        f"$BHQ reiterates notes on {b} quirks found in those editions.",
-        f"$BHQ does not transcribe {c} quirks found in those editions.",
+        f"$BHQ contributes notes on {b} quirks not found in those editions.",
+        f"$BHQ reiterates notes on {c} quirks found in those editions.",
         f"$BHQ transcribes but does not note {d} quirks found in those editions.",
-        f"$BHQ transcribes but does not note at least {e} likely-false quirks.",
+        f"$BHQ does not transcribe {e} quirks found in those editions.",
+        f"$BHQ transcribes but does not note at least {f} likely-false quirks.",
     ]
 
 
