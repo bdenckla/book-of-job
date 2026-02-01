@@ -9,7 +9,7 @@ from pycmn import my_utils
 from pycmn.my_utils import intersperse, sl_map
 from pyauthor_util.common_titles_etc import D1D_FNAME
 from pyauthor_util import author
-from pyauthor_util.get_qr_groups import nbhq_and_x3
+from pyauthor_util.get_qr_groups import nbhq_and_n3, nbhq_and_x3
 from pyauthor_util.short_id_etc import (lc_img, short_id)
 from pyauthor_util.job1_highlight import highlight, color
 from pyauthor_util.job1_lcloc import lcloc
@@ -141,6 +141,8 @@ def _what_is_weird(quirkrec):
 def _says(quirkrec):
     if nbhq_and_x3(quirkrec):
         return ["in μL, as contributed by $BHQ"]
+    if nbhq_and_n3(quirkrec):
+        return ["in μL, as reiterated by $BHQ"]
     return []
 
 

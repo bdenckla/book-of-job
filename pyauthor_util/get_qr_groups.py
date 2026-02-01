@@ -14,7 +14,7 @@ def _foobhq_and_x3(foobhq, nbd):
     )
 
 
-def _nbhq_and_n3(quirkrec):
+def nbhq_and_n3(quirkrec):
     return _foobhq_and_n3("nBHQ", quirkrec["nbd"])
 
 
@@ -52,7 +52,7 @@ def _filter(quirkrecs, filter_fn):
 
 _FILTER_FNS = {
     "nbhq_and_x3": nbhq_and_x3,
-    "nbhq_and_n3": _nbhq_and_n3,
+    "nbhq_and_n3": nbhq_and_n3,
     "xbhq_and_n3": _xbhq_and_n3,
     "tbhq_and_n3": _tbhq_and_n3,
     "tbhq_and_zwd": _tbhq_and_zwd,
