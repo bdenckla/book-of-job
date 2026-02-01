@@ -15,5 +15,5 @@ RECORD_0814 = {
     # in one of the three earlier-published editions: BHL, DM, & WLC.
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "399A", "column": 2, "line": 20},
-    "qr-noted-by": "tBHQ-xBHL-nDM",
+    "qr-noted-by": "xBHQ-xBHL-nDM",
 }
