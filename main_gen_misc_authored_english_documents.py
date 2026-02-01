@@ -44,7 +44,7 @@ def main():
 def _prep(jobn_rel_top):
     qrs = sorted(QUIRKRECS, key=sort_key)
     _assert_all_img_paths_exist(jobn_rel_top, qrs)
-    qrs = [qr for qr in qrs if qr.get("qr-lc-proposed")]  # temporary
+    qrs = [qr for qr in qrs if qr.get("qr-lc-proposed")]  # XXX temporary
     qrs_with_nbd = sl_map(_add_nbd, qrs)
     ov_and_de = make_ov_and_de(qrs_with_nbd)
     return qrs_with_nbd, ov_and_de
