@@ -9,6 +9,20 @@ _DEFAULT = {
     "e:WLC": "xWLC",
     "e:UXLC": "xUXLC",
 }
+_STARTSWITH_N = {
+    "e:BHQ": "nBHQ",
+    "e:BHL": "nBHL",
+    "e:DM": "nDM",
+    "e:WLC": "nWLC",
+    "e:UXLC": "nUXLC",
+}
+_STARTSWITH_X = {
+    "e:BHQ": "xBHQ",
+    "e:BHL": "xBHL",
+    "e:DM": "xDM",
+    "e:WLC": "xWLC",
+    "e:UXLC": "xUXLC",
+}
 EDITIONS = tuple(k for k in _DEFAULT.keys())
 
 
@@ -22,11 +36,12 @@ def nb_dict(quirkrec):
 
 
 def startswith_n(nbd, edition_key):
-    return nbd[edition_key].startswith("n")
+    return nbd[edition_key] == _STARTSWITH_N[edition_key]
 
 
 def startswith_x(nbd, edition_key):
-    return nbd[edition_key].startswith("x")
+    return nbd[edition_key] == _STARTSWITH_X[edition_key]
+
 
 def x_uclc(quirkrec):
     nbd = nb_dict(quirkrec)

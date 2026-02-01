@@ -2,19 +2,16 @@ from pyauthor_util.noted_by import nb_dict, startswith_n, startswith_x
 from pycmn.my_utils import dv_map
 
 
-def _bhq_and_t3o(quirkrec):
-    """t3o: the three others (BHL, DM, & WLC)"""
-    nbd = nb_dict(quirkrec)
-    t30 = nbd["e:BHL"], nbd["e:DM"], nbd["e:WLC"]
-    return nbd["e:BHQ"], t30
-
-
 def _foobhq_and_n3(foobhq, nbd):
-    return nbd["e:BHQ"] == foobhq and any(startswith_n(nbd, e) for e in ("e:BHL", "e:DM", "e:WLC"))
+    return nbd["e:BHQ"] == foobhq and any(
+        startswith_n(nbd, e) for e in ("e:BHL", "e:DM", "e:WLC")
+    )
 
 
 def _foobhq_and_x3(foobhq, nbd):
-    return nbd["e:BHQ"] == foobhq and all(startswith_x(nbd, e) for e in ("e:BHL", "e:DM", "e:WLC"))
+    return nbd["e:BHQ"] == foobhq and all(
+        startswith_x(nbd, e) for e in ("e:BHL", "e:DM", "e:WLC")
+    )
 
 
 def _nbhq_and_n3(quirkrec):
@@ -41,10 +38,11 @@ def _tbhq_and_zwd(quirkrec):
     nbd = nb_dict(quirkrec)
     return nbd["e:WLC"] == "zdexiWLC"
 
-    
+
 def _tbhq_and_zwm(quirkrec):
     nbd = nb_dict(quirkrec)
     return nbd["e:WLC"] == "zmiscWLC"
+
 
 def _xbhq_and_nuxlc(quirkrec):
     nbd = nb_dict(quirkrec)
