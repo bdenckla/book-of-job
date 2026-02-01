@@ -2,7 +2,8 @@ import re
 from pycmn.my_utils import sl_map
 
 
-EDITIONS = ("BHQ", "BHL", "DM", "WLC", "UXLC")
+EDITION_UXLC = "e:UXLC"
+EDITIONS = ("e:BHQ", "e:BHL", "e:DM", "e:WLC", EDITION_UXLC)
 
 
 def _fill_in(nb_dict):
@@ -11,12 +12,12 @@ def _fill_in(nb_dict):
 
 
 def nb_pair(part):
-    """Splits e.g. "xBHL" into ("BHL", "x")"""
+    """Turns e.g. "xBHL" into ("e:BHL", "x")"""
     match = re.match(r"^([a-z]+)([A-Z].*)$", part)
     assert match is not None, f"part={part}"
     assert len(match.groups()) == 2
     lower, upper = match.groups()
-    return upper, lower
+    return f"e:{upper}", lower
 
 
 def nb_dict(quirkrec):
