@@ -16,5 +16,5 @@ RECORD_3629 = {
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "407B", "column": 1, "line": -5},
     "qr-bhq-comment": correctly_ignores("געיה", "36:29", "large"),
-    "qr-noted-by": "tBHQ-nBHL-xDM",
+    "qr-noted-by": "xBHQ-nBHL-xDM",
 }

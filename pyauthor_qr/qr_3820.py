@@ -8,5 +8,5 @@ RECORD_3820 = {
     ],
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "408A", "column": 1, "line": 24},
-    "qr-noted-by": "tBHQ-xBHL-nDM",
+    "qr-noted-by": "xBHQ-xBHL-nDM",
 }
