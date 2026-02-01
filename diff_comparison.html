@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>qr-consensus vs qr-lc-proposed comparison</title>
+<style>
+body { font-family: sans-serif; margin: 20px; }
+h1 { color: #333; }
+h2 { color: #555; margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+.hebrew { font-size: 24px; font-family: "SBL Hebrew", "Ezra SIL", serif; direction: rtl; }
+table { border-collapse: collapse; margin: 10px 0; }
+th, td { border: 1px solid #ccc; padding: 4px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.diff-delete { background-color: #ffcccc; }
+.diff-insert { background-color: #ccffcc; }
+.diff-replace-old { background-color: #ffddaa; }
+.diff-replace-new { background-color: #aaddff; }
+.diff-equal { background-color: #f9f9f9; color: #999; }
+.codepoint { font-family: monospace; }
+.char { font-size: 18px; font-family: "SBL Hebrew", "Ezra SIL", serif; }
+.summary { margin: 10px 0; padding: 10px; background: #f5f5f5; border-radius: 4px; }
+.op-tag { font-weight: bold; font-size: 11px; }
+</style>
+</head>
+<body>
+<h1>qr-consensus vs qr-lc-proposed: Character-by-character comparison</h1>
+<p>Legend: 
+<span style="background:#ffcccc;padding:2px 6px;">Delete (in consensus only)</span> 
+<span style="background:#ccffcc;padding:2px 6px;">Insert (in proposed only)</span>
+<span style="background:#ffddaa;padding:2px 6px;">Replace from</span> →
+<span style="background:#aaddff;padding:2px 6px;">Replace to</span>
+</p>
+<h2>qr_0617</h2>
+<div class="summary"><strong>What is weird:</strong> dexi not munax<br><strong>Proposed:</strong> <span class="hebrew">בְּ֭עֵת</span><br><strong>Consensus:</strong> <span class="hebrew">בְּעֵ֣ת</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ב</td><td class="codepoint">U+05D1</td><td>HEBREW LETTER BET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-insert"><td class="op-tag">+</td><td class="char">֭</td><td class="codepoint">U+05AD</td><td>HEBREW ACCENT DEHI</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ע</td><td class="codepoint">U+05E2</td><td>HEBREW LETTER AYIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֵ</td><td class="codepoint">U+05B5</td><td>HEBREW POINT TSERE</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֣</td><td class="codepoint">U+05A3</td><td>HEBREW ACCENT MUNAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ת</td><td class="codepoint">U+05EA</td><td>HEBREW LETTER TAV</td></tr>
+</table>
+<h2>qr_0627</h2>
+<div class="summary"><strong>What is weird:</strong> געיה on רי not על<br><strong>Proposed:</strong> <span class="hebrew">עַל־רֵֽיעֲכֶֽם׃</span><br><strong>Consensus:</strong> <span class="hebrew">עַֽל־רֵיעֲכֶֽם׃</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ע</td><td class="codepoint">U+05E2</td><td>HEBREW LETTER AYIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ל</td><td class="codepoint">U+05DC</td><td>HEBREW LETTER LAMED</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">־</td><td class="codepoint">U+05BE</td><td>HEBREW PUNCTUATION MAQAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ר</td><td class="codepoint">U+05E8</td><td>HEBREW LETTER RESH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֵ</td><td class="codepoint">U+05B5</td><td>HEBREW POINT TSERE</td></tr>
+<tr class="diff-insert"><td class="op-tag">+</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ע</td><td class="codepoint">U+05E2</td><td>HEBREW LETTER AYIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֲ</td><td class="codepoint">U+05B2</td><td>HEBREW POINT HATAF PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">כ</td><td class="codepoint">U+05DB</td><td>HEBREW LETTER KAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֶ</td><td class="codepoint">U+05B6</td><td>HEBREW POINT SEGOL</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ם</td><td class="codepoint">U+05DD</td><td>HEBREW LETTER FINAL MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">׃</td><td class="codepoint">U+05C3</td><td>HEBREW PUNCTUATION SOF PASUQ</td></tr>
+</table>
+<h2>qr_0720</h2>
+<div class="summary"><strong>What is weird:</strong> oleh on א not ה (noted by MAM but perhaps the note should mention LC)<br><strong>Proposed:</strong> <span class="hebrew">הָאָ֫דָ֥ם</span><br><strong>Consensus:</strong> <span class="hebrew">הָ֫אָדָ֥ם</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֫</td><td class="codepoint">U+05AB</td><td>HEBREW ACCENT OLE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">א</td><td class="codepoint">U+05D0</td><td>HEBREW LETTER ALEF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-insert"><td class="op-tag">+</td><td class="char">֫</td><td class="codepoint">U+05AB</td><td>HEBREW ACCENT OLE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ד</td><td class="codepoint">U+05D3</td><td>HEBREW LETTER DALET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֥</td><td class="codepoint">U+05A5</td><td>HEBREW ACCENT MERKHA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ם</td><td class="codepoint">U+05DD</td><td>HEBREW LETTER FINAL MEM</td></tr>
+</table>
+<h2>qr_0802</h2>
+<div class="summary"><strong>What is weird:</strong> revia of g. m. is left implicit<br><strong>Proposed:</strong> <span class="hebrew">כַּ֝בִּיר</span><br><strong>Consensus:</strong> <span class="hebrew">כַּ֝בִּ֗יר</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">כ</td><td class="codepoint">U+05DB</td><td>HEBREW LETTER KAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֝</td><td class="codepoint">U+059D</td><td>HEBREW ACCENT GERESH MUQDAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ב</td><td class="codepoint">U+05D1</td><td>HEBREW LETTER BET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ר</td><td class="codepoint">U+05E8</td><td>HEBREW LETTER RESH</td></tr>
+</table>
+<h2>qr_1209</h2>
+<div class="summary"><strong>What is weird:</strong> revia of g. m. is left implicit<br><strong>Proposed:</strong> <span class="hebrew">יַד־יְ֝הֹוָה</span><br><strong>Consensus:</strong> <span class="hebrew">יַד־יְ֝הֹוָ֗ה</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ד</td><td class="codepoint">U+05D3</td><td>HEBREW LETTER DALET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">־</td><td class="codepoint">U+05BE</td><td>HEBREW PUNCTUATION MAQAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֝</td><td class="codepoint">U+059D</td><td>HEBREW ACCENT GERESH MUQDAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+</table>
+<h2>qr_1606</h2>
+<div class="summary"><strong>What is weird:</strong> מ lacks dagesh (DM footnote 25)<br><strong>Proposed:</strong> <span class="hebrew">מַה־מִנִּ֥י</span><br><strong>Consensus:</strong> <span class="hebrew">מַה־מִּנִּ֥י</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">־</td><td class="codepoint">U+05BE</td><td>HEBREW PUNCTUATION MAQAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">נ</td><td class="codepoint">U+05E0</td><td>HEBREW LETTER NUN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֥</td><td class="codepoint">U+05A5</td><td>HEBREW ACCENT MERKHA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+</table>
+<h2>qr_1703</h2>
+<div class="summary"><strong>What is weird:</strong> פתח not קמץ (קטן) (opposite of 3:4)<br><strong>Proposed:</strong> <span class="hebrew">עַרְבֵ֣נִי</span><br><strong>Consensus:</strong> <span class="hebrew">עׇרְבֵ֣נִי</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ע</td><td class="codepoint">U+05E2</td><td>HEBREW LETTER AYIN</td></tr>
+<tr class="diff-replace-old"><td class="op-tag">−</td><td class="char">ׇ</td><td class="codepoint">U+05C7</td><td>HEBREW POINT QAMATS QATAN</td></tr>
+<tr class="diff-replace-new"><td class="op-tag">+</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ר</td><td class="codepoint">U+05E8</td><td>HEBREW LETTER RESH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ב</td><td class="codepoint">U+05D1</td><td>HEBREW LETTER BET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֵ</td><td class="codepoint">U+05B5</td><td>HEBREW POINT TSERE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֣</td><td class="codepoint">U+05A3</td><td>HEBREW ACCENT MUNAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">נ</td><td class="codepoint">U+05E0</td><td>HEBREW LETTER NUN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+</table>
+<h2>qr_2001</h2>
+<div class="summary"><strong>What is weird:</strong> געיה on נ not ה<br><strong>Proposed:</strong> <span class="hebrew">הַנַּֽעֲמָתִ֗י</span><br><strong>Consensus:</strong> <span class="hebrew">הַֽנַּעֲמָתִ֗י</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">נ</td><td class="codepoint">U+05E0</td><td>HEBREW LETTER NUN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-insert"><td class="op-tag">+</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ע</td><td class="codepoint">U+05E2</td><td>HEBREW LETTER AYIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֲ</td><td class="codepoint">U+05B2</td><td>HEBREW POINT HATAF PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ת</td><td class="codepoint">U+05EA</td><td>HEBREW LETTER TAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+</table>
+<h2>qr_2107</h2>
+<div class="summary"><strong>What is weird:</strong> munax not dexi<br><strong>Proposed:</strong> <span class="hebrew">מַ֣דּוּעַ</span><br><strong>Consensus:</strong> <span class="hebrew">מַ֭דּוּעַ</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-replace-old"><td class="op-tag">−</td><td class="char">֭</td><td class="codepoint">U+05AD</td><td>HEBREW ACCENT DEHI</td></tr>
+<tr class="diff-replace-new"><td class="op-tag">+</td><td class="char">֣</td><td class="codepoint">U+05A3</td><td>HEBREW ACCENT MUNAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ד</td><td class="codepoint">U+05D3</td><td>HEBREW LETTER DALET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ע</td><td class="codepoint">U+05E2</td><td>HEBREW LETTER AYIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+</table>
+<h2>qr_2115</h2>
+<div class="summary"><strong>What is weird:</strong> ש lacks dagesh (DM footnote 25)<br><strong>Proposed:</strong> <span class="hebrew">מַה־שַׁדַּ֥י</span><br><strong>Consensus:</strong> <span class="hebrew">מַה־שַּׁדַּ֥י</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">־</td><td class="codepoint">U+05BE</td><td>HEBREW PUNCTUATION MAQAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ש</td><td class="codepoint">U+05E9</td><td>HEBREW LETTER SHIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ׁ</td><td class="codepoint">U+05C1</td><td>HEBREW POINT SHIN DOT</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ד</td><td class="codepoint">U+05D3</td><td>HEBREW LETTER DALET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֥</td><td class="codepoint">U+05A5</td><td>HEBREW ACCENT MERKHA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+</table>
+<h2>qr_2210</h2>
+<div class="summary"><strong>What is weird:</strong> revia of g. m. is left implicit<br><strong>Proposed:</strong> <span class="hebrew">וִ֝יבַהֶלְךָ</span><br><strong>Consensus:</strong> <span class="hebrew">וִ֝יבַהֶלְךָ֗</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֝</td><td class="codepoint">U+059D</td><td>HEBREW ACCENT GERESH MUQDAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ב</td><td class="codepoint">U+05D1</td><td>HEBREW LETTER BET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֶ</td><td class="codepoint">U+05B6</td><td>HEBREW POINT SEGOL</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ל</td><td class="codepoint">U+05DC</td><td>HEBREW LETTER LAMED</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ך</td><td class="codepoint">U+05DA</td><td>HEBREW LETTER FINAL KAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+</table>
+<h2>qr_2224</h2>
+<div class="summary"><strong>What is weird:</strong> bet not kaf<br><strong>Proposed:</strong> <span class="hebrew">וּבְצ֖וּר</span><br><strong>Consensus:</strong> <span class="hebrew">וּכְצ֖וּר</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-replace-old"><td class="op-tag">−</td><td class="char">כ</td><td class="codepoint">U+05DB</td><td>HEBREW LETTER KAF</td></tr>
+<tr class="diff-replace-new"><td class="op-tag">+</td><td class="char">ב</td><td class="codepoint">U+05D1</td><td>HEBREW LETTER BET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">צ</td><td class="codepoint">U+05E6</td><td>HEBREW LETTER TSADI</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֖</td><td class="codepoint">U+0596</td><td>HEBREW ACCENT TIPEHA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ר</td><td class="codepoint">U+05E8</td><td>HEBREW LETTER RESH</td></tr>
+</table>
+<h2>qr_2413</h2>
+<div class="summary"><strong>What is weird:</strong> maqaf is present. Gray maqaf in MAM. Perhaps MAM should note maqaf in L.<br><strong>Proposed:</strong> <span class="hebrew">בְּֽמֹרְדֵ֫י־א֥וֹר</span><br><strong>Consensus:</strong> <span class="hebrew">בְּֽמֹרְדֵ֫י א֥וֹר</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ב</td><td class="codepoint">U+05D1</td><td>HEBREW LETTER BET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ר</td><td class="codepoint">U+05E8</td><td>HEBREW LETTER RESH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ד</td><td class="codepoint">U+05D3</td><td>HEBREW LETTER DALET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֵ</td><td class="codepoint">U+05B5</td><td>HEBREW POINT TSERE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֫</td><td class="codepoint">U+05AB</td><td>HEBREW ACCENT OLE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-replace-old"><td class="op-tag">−</td><td class="char">(U+0020)</td><td class="codepoint">U+0020</td><td>SPACE</td></tr>
+<tr class="diff-replace-new"><td class="op-tag">+</td><td class="char">־</td><td class="codepoint">U+05BE</td><td>HEBREW PUNCTUATION MAQAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">א</td><td class="codepoint">U+05D0</td><td>HEBREW LETTER ALEF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֥</td><td class="codepoint">U+05A5</td><td>HEBREW ACCENT MERKHA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ר</td><td class="codepoint">U+05E8</td><td>HEBREW LETTER RESH</td></tr>
+</table>
+<h2>qr_2418</h2>
+<div class="summary"><strong>What is weird:</strong> revia of g. m. is left implicit<br><strong>Proposed:</strong> <span class="hebrew">לֹא־יִ֝פְנֶה</span><br><strong>Consensus:</strong> <span class="hebrew">לֹא־יִ֝פְנֶ֗ה</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ל</td><td class="codepoint">U+05DC</td><td>HEBREW LETTER LAMED</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">א</td><td class="codepoint">U+05D0</td><td>HEBREW LETTER ALEF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">־</td><td class="codepoint">U+05BE</td><td>HEBREW PUNCTUATION MAQAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֝</td><td class="codepoint">U+059D</td><td>HEBREW ACCENT GERESH MUQDAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">פ</td><td class="codepoint">U+05E4</td><td>HEBREW LETTER PE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">נ</td><td class="codepoint">U+05E0</td><td>HEBREW LETTER NUN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֶ</td><td class="codepoint">U+05B6</td><td>HEBREW POINT SEGOL</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+</table>
+<h2>qr_2709</h2>
+<div class="summary"><strong>What is weird:</strong> patax is full not חטף (DM footnotes 19 & 20)<br><strong>Proposed:</strong> <span class="hebrew">הַֽ֭צַעֲקָתוֹ</span><br><strong>Consensus:</strong> <span class="hebrew">הֲֽ֭צַעֲקָתוֹ</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-replace-old"><td class="op-tag">−</td><td class="char">ֲ</td><td class="codepoint">U+05B2</td><td>HEBREW POINT HATAF PATAH</td></tr>
+<tr class="diff-replace-new"><td class="op-tag">+</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֭</td><td class="codepoint">U+05AD</td><td>HEBREW ACCENT DEHI</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">צ</td><td class="codepoint">U+05E6</td><td>HEBREW LETTER TSADI</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ע</td><td class="codepoint">U+05E2</td><td>HEBREW LETTER AYIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֲ</td><td class="codepoint">U+05B2</td><td>HEBREW POINT HATAF PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ק</td><td class="codepoint">U+05E7</td><td>HEBREW LETTER QOF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ת</td><td class="codepoint">U+05EA</td><td>HEBREW LETTER TAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+</table>
+<h2>qr_2903</h2>
+<div class="summary"><strong>What is weird:</strong> revia of g. m. is left implicit<br><strong>Proposed:</strong> <span class="hebrew">לְ֝אוֹרוֹ</span><br><strong>Consensus:</strong> <span class="hebrew">לְ֝אוֹר֗וֹ</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ל</td><td class="codepoint">U+05DC</td><td>HEBREW LETTER LAMED</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֝</td><td class="codepoint">U+059D</td><td>HEBREW ACCENT GERESH MUQDAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">א</td><td class="codepoint">U+05D0</td><td>HEBREW LETTER ALEF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ר</td><td class="codepoint">U+05E8</td><td>HEBREW LETTER RESH</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+</table>
+<h2>qr_3102</h2>
+<div class="summary"><strong>What is weird:</strong> has legarmeh. Noted by MAM.<br><strong>Proposed:</strong> <span class="hebrew">וּמֶ֤ה׀</span><br><strong>Consensus:</strong> <span class="hebrew">וּמֶ֤ה</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֶ</td><td class="codepoint">U+05B6</td><td>HEBREW POINT SEGOL</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֤</td><td class="codepoint">U+05A4</td><td>HEBREW ACCENT MAHAPAKH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-insert"><td class="op-tag">+</td><td class="char">׀</td><td class="codepoint">U+05C0</td><td>HEBREW PUNCTUATION PASEQ</td></tr>
+</table>
+<h2>qr_3120</h2>
+<div class="summary"><strong>What is weird:</strong> revia of g. m. is left implicit<br><strong>Proposed:</strong> <span class="hebrew">כְּ֝בָשַׂי</span><br><strong>Consensus:</strong> <span class="hebrew">כְּ֝בָשַׂ֗י</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">כ</td><td class="codepoint">U+05DB</td><td>HEBREW LETTER KAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֝</td><td class="codepoint">U+059D</td><td>HEBREW ACCENT GERESH MUQDAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ב</td><td class="codepoint">U+05D1</td><td>HEBREW LETTER BET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ש</td><td class="codepoint">U+05E9</td><td>HEBREW LETTER SHIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ׂ</td><td class="codepoint">U+05C2</td><td>HEBREW POINT SIN DOT</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+</table>
+<h2>qr_3211</h2>
+<div class="summary"><strong>What is weird:</strong> lacks legarmeh. (DM footnotes 19 & 32)<br><strong>Proposed:</strong> <span class="hebrew">הוֹחַ֨לְתִּי</span><br><strong>Consensus:</strong> <span class="hebrew">הוֹחַ֨לְתִּי׀</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ח</td><td class="codepoint">U+05D7</td><td>HEBREW LETTER HET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֨</td><td class="codepoint">U+05A8</td><td>HEBREW ACCENT QADMA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ל</td><td class="codepoint">U+05DC</td><td>HEBREW LETTER LAMED</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ת</td><td class="codepoint">U+05EA</td><td>HEBREW LETTER TAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">׀</td><td class="codepoint">U+05C0</td><td>HEBREW PUNCTUATION PASEQ</td></tr>
+</table>
+<h2>qr_3328</h2>
+<div class="summary"><strong>What is weird:</strong> revia of g. m. is left implicit (qere shown)<br><strong>Proposed:</strong> <span class="hebrew">וְ֝חַיָּתוֹ</span><br><strong>Consensus:</strong> <span class="hebrew">וְ֝חַיָּת֗וֹ</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֝</td><td class="codepoint">U+059D</td><td>HEBREW ACCENT GERESH MUQDAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ח</td><td class="codepoint">U+05D7</td><td>HEBREW LETTER HET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ת</td><td class="codepoint">U+05EA</td><td>HEBREW LETTER TAV</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+</table>
+<h2>qr_3405</h2>
+<div class="summary"><strong>What is weird:</strong> dexi not munax<br><strong>Proposed:</strong> <span class="hebrew">כִּֽי־אָ֭מַר</span><br><strong>Consensus:</strong> <span class="hebrew">כִּֽי־אָמַ֣ר</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">כ</td><td class="codepoint">U+05DB</td><td>HEBREW LETTER KAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">־</td><td class="codepoint">U+05BE</td><td>HEBREW PUNCTUATION MAQAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">א</td><td class="codepoint">U+05D0</td><td>HEBREW LETTER ALEF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-insert"><td class="op-tag">+</td><td class="char">֭</td><td class="codepoint">U+05AD</td><td>HEBREW ACCENT DEHI</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֣</td><td class="codepoint">U+05A3</td><td>HEBREW ACCENT MUNAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ר</td><td class="codepoint">U+05E8</td><td>HEBREW LETTER RESH</td></tr>
+</table>
+<h2>qr_3433_A</h2>
+<div class="summary"><strong>What is weird:</strong> patax is full not חטף (DM footnotes 19 & 20)<br><strong>Proposed:</strong> <span class="hebrew">הַֽמֵעִמְּךָ֬</span><br><strong>Consensus:</strong> <span class="hebrew">הֲֽמֵעִמְּךָ֬</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-replace-old"><td class="op-tag">−</td><td class="char">ֲ</td><td class="codepoint">U+05B2</td><td>HEBREW POINT HATAF PATAH</td></tr>
+<tr class="diff-replace-new"><td class="op-tag">+</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֵ</td><td class="codepoint">U+05B5</td><td>HEBREW POINT TSERE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ע</td><td class="codepoint">U+05E2</td><td>HEBREW LETTER AYIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ך</td><td class="codepoint">U+05DA</td><td>HEBREW LETTER FINAL KAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֬</td><td class="codepoint">U+05AC</td><td>HEBREW ACCENT ILUY</td></tr>
+</table>
+<h2>qr_3433_B</h2>
+<div class="summary"><strong>What is weird:</strong> lamed lacks dagesh<br><strong>Proposed:</strong> <span class="hebrew">יְשַׁלְמֶ֨נָּה׀</span><br><strong>Consensus:</strong> <span class="hebrew">יְשַׁלְּמֶ֨נָּה׀</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ש</td><td class="codepoint">U+05E9</td><td>HEBREW LETTER SHIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ׁ</td><td class="codepoint">U+05C1</td><td>HEBREW POINT SHIN DOT</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ל</td><td class="codepoint">U+05DC</td><td>HEBREW LETTER LAMED</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֶ</td><td class="codepoint">U+05B6</td><td>HEBREW POINT SEGOL</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֨</td><td class="codepoint">U+05A8</td><td>HEBREW ACCENT QADMA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">נ</td><td class="codepoint">U+05E0</td><td>HEBREW LETTER NUN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">׀</td><td class="codepoint">U+05C0</td><td>HEBREW PUNCTUATION PASEQ</td></tr>
+</table>
+<h2>qr_3433_C</h2>
+<div class="summary"><strong>What is weird:</strong> lacks legarmeh. (DM footnote 32)<br><strong>Proposed:</strong> <span class="hebrew">יְשַׁלְּמֶ֨נָּה</span><br><strong>Consensus:</strong> <span class="hebrew">יְשַׁלְּמֶ֨נָּה׀</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ש</td><td class="codepoint">U+05E9</td><td>HEBREW LETTER SHIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ׁ</td><td class="codepoint">U+05C1</td><td>HEBREW POINT SHIN DOT</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ל</td><td class="codepoint">U+05DC</td><td>HEBREW LETTER LAMED</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֶ</td><td class="codepoint">U+05B6</td><td>HEBREW POINT SEGOL</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֨</td><td class="codepoint">U+05A8</td><td>HEBREW ACCENT QADMA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">נ</td><td class="codepoint">U+05E0</td><td>HEBREW LETTER NUN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">׀</td><td class="codepoint">U+05C0</td><td>HEBREW PUNCTUATION PASEQ</td></tr>
+</table>
+<h2>qr_3433_D</h2>
+<div class="summary"><strong>What is weird:</strong> lacks dagesh in yod (DM footnote 25)<br><strong>Proposed:</strong> <span class="hebrew">וּֽמַה־יָדַ֥עְתָּ</span><br><strong>Consensus:</strong> <span class="hebrew">וּֽמַה־יָּדַ֥עְתָּ</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">־</td><td class="codepoint">U+05BE</td><td>HEBREW PUNCTUATION MAQAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ד</td><td class="codepoint">U+05D3</td><td>HEBREW LETTER DALET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֥</td><td class="codepoint">U+05A5</td><td>HEBREW ACCENT MERKHA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ע</td><td class="codepoint">U+05E2</td><td>HEBREW LETTER AYIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ת</td><td class="codepoint">U+05EA</td><td>HEBREW LETTER TAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+</table>
+<h2>qr_3437</h2>
+<div class="summary"><strong>What is weird:</strong> has samekh not shin. Perhaps this is more likely a quirk in Aleppo, not a quirk in Leningrad?<br><strong>Proposed:</strong> <span class="hebrew">יִסְפּ֑וֹק</span><br><strong>Consensus:</strong> <span class="hebrew">יִשְׂפּ֑וֹק</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-replace-old"><td class="op-tag">−</td><td class="char">ש</td><td class="codepoint">U+05E9</td><td>HEBREW LETTER SHIN</td></tr>
+<tr class="diff-replace-old"><td class="op-tag">−</td><td class="char">ׂ</td><td class="codepoint">U+05C2</td><td>HEBREW POINT SIN DOT</td></tr>
+<tr class="diff-replace-new"><td class="op-tag">+</td><td class="char">ס</td><td class="codepoint">U+05E1</td><td>HEBREW LETTER SAMEKH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">פ</td><td class="codepoint">U+05E4</td><td>HEBREW LETTER PE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֑</td><td class="codepoint">U+0591</td><td>HEBREW ACCENT ETNAHTA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ק</td><td class="codepoint">U+05E7</td><td>HEBREW LETTER QOF</td></tr>
+</table>
+<h2>qr_3507</h2>
+<div class="summary"><strong>What is weird:</strong> lacks dagesh in מ (DM footnote 25)<br><strong>Proposed:</strong> <span class="hebrew">מַה־מִיָּדְךָ֥</span><br><strong>Consensus:</strong> <span class="hebrew">מַה־מִּיָּדְךָ֥</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">־</td><td class="codepoint">U+05BE</td><td>HEBREW PUNCTUATION MAQAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ד</td><td class="codepoint">U+05D3</td><td>HEBREW LETTER DALET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ך</td><td class="codepoint">U+05DA</td><td>HEBREW LETTER FINAL KAF</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֥</td><td class="codepoint">U+05A5</td><td>HEBREW ACCENT MERKHA</td></tr>
+</table>
+<h2>qr_3829</h2>
+<div class="summary"><strong>What is weird:</strong> revia of g. m. is left implicit<br><strong>Proposed:</strong> <span class="hebrew">שָׁ֝מַיִם</span><br><strong>Consensus:</strong> <span class="hebrew">שָׁ֝מַ֗יִם</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ש</td><td class="codepoint">U+05E9</td><td>HEBREW LETTER SHIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ׁ</td><td class="codepoint">U+05C1</td><td>HEBREW POINT SHIN DOT</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֝</td><td class="codepoint">U+059D</td><td>HEBREW ACCENT GERESH MUQDAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">מ</td><td class="codepoint">U+05DE</td><td>HEBREW LETTER MEM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ַ</td><td class="codepoint">U+05B7</td><td>HEBREW POINT PATAH</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ם</td><td class="codepoint">U+05DD</td><td>HEBREW LETTER FINAL MEM</td></tr>
+</table>
+<h2>qr_3915</h2>
+<div class="summary"><strong>What is weird:</strong> tav has dagesh<br><strong>Proposed:</strong> <span class="hebrew">תְּדוּשֶֽׁהָ׃</span><br><strong>Consensus:</strong> <span class="hebrew">תְדוּשֶֽׁהָ׃</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ת</td><td class="codepoint">U+05EA</td><td>HEBREW LETTER TAV</td></tr>
+<tr class="diff-insert"><td class="op-tag">+</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ְ</td><td class="codepoint">U+05B0</td><td>HEBREW POINT SHEVA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ד</td><td class="codepoint">U+05D3</td><td>HEBREW LETTER DALET</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ּ</td><td class="codepoint">U+05BC</td><td>HEBREW POINT DAGESH OR MAPIQ</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ש</td><td class="codepoint">U+05E9</td><td>HEBREW LETTER SHIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ׁ</td><td class="codepoint">U+05C1</td><td>HEBREW POINT SHIN DOT</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֶ</td><td class="codepoint">U+05B6</td><td>HEBREW POINT SEGOL</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֽ</td><td class="codepoint">U+05BD</td><td>HEBREW POINT METEG</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">׃</td><td class="codepoint">U+05C3</td><td>HEBREW PUNCTUATION SOF PASUQ</td></tr>
+</table>
+<h2>qr_3925</h2>
+<div class="summary"><strong>What is weird:</strong> revia of g. m. is left implicit<br><strong>Proposed:</strong> <span class="hebrew">שָׂ֝רִים</span><br><strong>Consensus:</strong> <span class="hebrew">שָׂ֝רִ֗ים</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ש</td><td class="codepoint">U+05E9</td><td>HEBREW LETTER SHIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ׂ</td><td class="codepoint">U+05C2</td><td>HEBREW POINT SIN DOT</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֝</td><td class="codepoint">U+059D</td><td>HEBREW ACCENT GERESH MUQDAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ר</td><td class="codepoint">U+05E8</td><td>HEBREW LETTER RESH</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ִ</td><td class="codepoint">U+05B4</td><td>HEBREW POINT HIRIQ</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">י</td><td class="codepoint">U+05D9</td><td>HEBREW LETTER YOD</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ם</td><td class="codepoint">U+05DD</td><td>HEBREW LETTER FINAL MEM</td></tr>
+</table>
+<h2>qr_4019_B</h2>
+<div class="summary"><strong>What is weird:</strong> revia of g. m. is left implicit<br><strong>Proposed:</strong> <span class="hebrew">הָ֝עֹשׂוֹ</span><br><strong>Consensus:</strong> <span class="hebrew">הָ֝עֹשׂ֗וֹ</span></div>
+<table>
+<tr><th>Op</th><th>Char</th><th class="codepoint">Code</th><th>Name</th></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ה</td><td class="codepoint">U+05D4</td><td>HEBREW LETTER HE</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ָ</td><td class="codepoint">U+05B8</td><td>HEBREW POINT QAMATS</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">֝</td><td class="codepoint">U+059D</td><td>HEBREW ACCENT GERESH MUQDAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ע</td><td class="codepoint">U+05E2</td><td>HEBREW LETTER AYIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ש</td><td class="codepoint">U+05E9</td><td>HEBREW LETTER SHIN</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ׂ</td><td class="codepoint">U+05C2</td><td>HEBREW POINT SIN DOT</td></tr>
+<tr class="diff-delete"><td class="op-tag">−</td><td class="char">֗</td><td class="codepoint">U+0597</td><td>HEBREW ACCENT REVIA</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ו</td><td class="codepoint">U+05D5</td><td>HEBREW LETTER VAV</td></tr>
+<tr class="diff-equal"><td class="op-tag">=</td><td class="char">ֹ</td><td class="codepoint">U+05B9</td><td>HEBREW POINT HOLAM</td></tr>
+</table>
+
+</body>
+</html>
