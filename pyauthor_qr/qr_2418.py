@@ -3,7 +3,7 @@ RECORD_2418 = {
     "qr-cv": "24:18",
     "qr-consensus": "לֹא־יִ֝פְנֶ֗ה",
     "qr-lc-proposed": "לֹא־יִ֝פְנֶה",
-    "qr-what-is-weird": "revia of g. m. is left implicit",
+    "qr-what-is-weird": "רביע of רביע מוגרש is left implicit",
     "qr-lc-loc": {"page": "404A", "column": 1, "line": 19},
     "qr-under-construction": True,
 }

@@ -3,7 +3,7 @@ RECORD_3915 = {
     "qr-cv": "39:15",
     "qr-consensus": "תְדוּשֶֽׁהָ׃",
     "qr-lc-proposed": "תְּדוּשֶֽׁהָ׃",
-    "qr-what-is-weird": "tav has dagesh",
+    "qr-what-is-weird": "ת has דגש",
     "qr-lc-loc": {"page": "408B", "column": 1, "line": 15},
     "qr-under-construction": True,
 }
