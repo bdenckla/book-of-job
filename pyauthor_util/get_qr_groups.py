@@ -36,6 +36,14 @@ def tbhq_and_zmw(quirkrec):
     return quirkrec["nbd"]["e:WLC"] == "zmiscWLC"
 
 
+def xbhq_and_nuxlc(quirkrec):
+    return quirkrec["nbd"]["e:UXLC"] == "nUXLC"
+
+
+def tbhq_and_zuxlc(quirkrec):
+    return quirkrec["nbd"]["e:UXLC"] == "zUXLC"
+
+
 #####################################################################
 
 
@@ -47,14 +55,6 @@ def _foobhq_and_x3(foobhq, nbd):
     return nbd["e:BHQ"] == foobhq and all(
         startswith_x(nbd, e) for e in ("e:BHL", "e:DM", "e:WLC")
     )
-
-
-def _xbhq_and_nuxlc(quirkrec):
-    return quirkrec["nbd"]["e:UXLC"] == "nUXLC"
-
-
-def _tbhq_and_zuxlc(quirkrec):
-    return quirkrec["nbd"]["e:UXLC"] == "zUXLC"
 
 
 def _filter(quirkrecs, filter_fn):
@@ -69,8 +69,8 @@ _FILTER_FNS = {
     "xbhq_and_n3": xbhq_and_n3,
     "tbhq_and_zdw": tbhq_and_zdw,
     "tbhq_and_zmw": tbhq_and_zmw,
-    "xbhq_and_nuxlc": _xbhq_and_nuxlc,
-    "tbhq_and_zuxlc": _tbhq_and_zuxlc,
+    "xbhq_and_nuxlc": xbhq_and_nuxlc,
+    "tbhq_and_zuxlc": tbhq_and_zuxlc,
 }
 # nbhq: noted (as a quirk) in BHQ
 # xbhq: not noted (as a quirk) in BHQ

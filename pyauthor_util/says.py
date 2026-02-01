@@ -6,6 +6,8 @@ from pyauthor_util.get_qr_groups import (
     tbhq_and_n3,
     tbhq_and_zdw,
     tbhq_and_zmw,
+    xbhq_and_nuxlc,
+    tbhq_and_zuxlc,
 )
 from pycmn.my_utils import sl_map
 
@@ -22,6 +24,10 @@ def says(quirkrec):
         return [["in μL, says ", _english_says_who(quirkrec), " but not $BHQ"]]
     if tbhq_and_zdw(quirkrec) or tbhq_and_zmw(quirkrec):
         return ["in μL, says $BHQ but not $WLC"]
+    if xbhq_and_nuxlc(quirkrec):
+        return ["in μL, says $UXLC but not $BHQ"]
+    if tbhq_and_zuxlc(quirkrec):
+        return ["in μL, says $BHQ but not $UXLC"]
     return []
 
 
