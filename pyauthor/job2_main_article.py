@@ -250,7 +250,12 @@ def _cpara20(the_len):
         f" the Job volume of $BHQ transcribes but does not note {str(the_len)}",
         f" quirks in μL that are noted in one or more of the other three editions.",
         #
-        f" Those transcriptions without notes are as follows:",
+        " We might say that in these cases $BHQ merely implies the quirk,",
+        " because it is not explicit about it."
+        #
+        " (A note would be required to be explicit about it.)",
+        #
+        " Those quirks implied by $BHQ are as follows:",
     ]
 
 
