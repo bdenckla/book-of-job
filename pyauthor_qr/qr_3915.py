@@ -1,5 +1,5 @@
 RECORD_3915 = {
-    "qr-noted-by": "xBHQ-nBHL-nDM",
+    "qr-noted-by": "xBHQ-xBHL-nDM",
     "qr-cv": "39:15",
     "qr-consensus": "תְדוּשֶֽׁהָ׃",
     "qr-what-is-weird": "tav has dagesh",

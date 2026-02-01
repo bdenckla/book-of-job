@@ -1,5 +1,5 @@
 RECORD_0720 = {
-    "qr-noted-by": "xBHQ-nBHL-nDM",
+    "qr-noted-by": "xBHQ-xBHL-nDM",
     "qr-cv": "7:20",
     "qr-consensus": "הָ֫אָדָ֥ם",
     "qr-what-is-weird": "oleh on א not ה (noted by MAM but perhaps the note should mention LC)",

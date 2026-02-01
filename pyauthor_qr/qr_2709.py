@@ -1,5 +1,5 @@
 RECORD_2709 = {
-    "qr-noted-by": "xBHQ-nBHL-nDM",
+    "qr-noted-by": "xBHQ-xBHL-nDM",
     "qr-cv": "27:9",
     "qr-consensus": "הֲֽ֭צַעֲקָתוֹ",
     "qr-what-is-weird": "patax is full not חטף (DM footnotes 19 & 20)",

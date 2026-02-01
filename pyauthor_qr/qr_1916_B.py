@@ -1,5 +1,5 @@
 RECORD_1916_B = {
-    "qr-noted-by": "xBHQ-nBHL-nDM",
+    "qr-noted-by": "xBHQ-xBHL-nDM",
     "qr-cv": "19:16",
     "qr-n_of_m_for_this_verse": (2, 2),
     "qr-consensus": "בְּ֝מוֹ־פִ֗י",

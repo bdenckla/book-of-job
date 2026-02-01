@@ -1,5 +1,5 @@
 RECORD_2903 = {
-    "qr-noted-by": "xBHQ-nBHL-nDM",
+    "qr-noted-by": "xBHQ-xBHL-nDM",
     "qr-cv": "29:3",
     "qr-consensus": "לְ֝אוֹר֗וֹ",
     "qr-what-is-weird": "revia of g. m. is left implicit",

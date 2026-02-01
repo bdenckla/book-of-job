@@ -1,5 +1,5 @@
 RECORD_0119 = {
-    "qr-noted-by": "xBHQ-nBHL-nDM",
+    "qr-noted-by": "xBHQ-xBHL-nDM",
     "qr-cv": "1:19",
     "qr-consensus": "וַיִּפֹּ֥ל",
     "qr-lc-proposed": "וַיִפֹּ֥ל",

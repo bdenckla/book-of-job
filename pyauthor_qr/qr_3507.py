@@ -1,5 +1,5 @@
 RECORD_3507 = {
-    "qr-noted-by": "xBHQ-nBHL-nDM",
+    "qr-noted-by": "xBHQ-xBHL-nDM",
     "qr-cv": "35:7",
     "qr-consensus": "מַה־מִּיָּדְךָ֥",
     "qr-what-is-weird": "lacks dagesh in מ (DM footnote 25)",

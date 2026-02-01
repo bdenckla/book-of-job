@@ -1,5 +1,5 @@
 RECORD_0627 = {
-    "qr-noted-by": "xBHQ-nBHL-nDM",
+    "qr-noted-by": "xBHQ-xBHL-nDM",
     "qr-cv": "6:27",
     "qr-consensus": "עַֽל־רֵיעֲכֶֽם׃",
     "qr-what-is-weird": "געיה on רי not על",
