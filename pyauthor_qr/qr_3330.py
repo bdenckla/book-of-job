@@ -2,7 +2,7 @@ RECORD_3330 = {
     "qr-bhla-i": 41,
     "qr-cv": "33:30",
     "qr-lc-proposed": "הַֽחַיִּים׃",
-    "qr-what-is-weird": "סילוק is on syl. 1 not 3",
+    "qr-what-is-weird": "סילוק on syl. 1 not 3",
     "qr-consensus": "הַחַיִּֽים׃",
     "qr-highlight-lc-proposed": 1,
     "qr-highlight-consensus": 3,

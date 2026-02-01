@@ -5,7 +5,7 @@ RECORD_1613 = {
     "qr-bhla-i": 22,
     "qr-cv": "16:13",
     "qr-lc-proposed": "מְרֵרָֽתִי׃",
-    "qr-what-is-weird": "סילוק is on 2nd ר not ת",
+    "qr-what-is-weird": "סילוק on 2nd ר not ת",
     "qr-consensus": "מְרֵרָתִֽי׃",
     "qr-highlight-lc-proposed": 3,
     "qr-highlight-consensus": 4,

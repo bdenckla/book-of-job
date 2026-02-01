@@ -5,7 +5,7 @@ RECORD_3133 = {
     "qr-bhla-i": 38,
     "qr-cv": "31:33",
     "qr-lc-proposed": "עֲוֺֽנִי׃",
-    "qr-what-is-weird": "סילוק is on ו not נ",
+    "qr-what-is-weird": "סילוק on ו not נ",
     "qr-consensus": "עֲוֺנִֽי׃",
     "qr-highlight-lc-proposed": 2,
     "qr-highlight-consensus": 3,

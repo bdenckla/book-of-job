@@ -5,7 +5,7 @@ RECORD_3906 = {
     "qr-bhla-i": 47,
     "qr-cv": "39:6",
     "qr-lc-proposed": "מְלֵֽחָה׃",
-    "qr-what-is-weird": "סילוק is on ל not ח",
+    "qr-what-is-weird": "סילוק on ל not ח",
     "qr-consensus": "מְלֵחָֽה׃",
     "qr-highlight-lc-proposed": 2,
     "qr-highlight-consensus": 3,
