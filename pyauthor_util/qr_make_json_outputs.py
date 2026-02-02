@@ -33,3 +33,14 @@ def write_qr_field_stats_json(quirkrecs, out_path):
     }
 
     json_dump_to_file_path(output, out_path)
+
+
+def write_quirkrecs_json(quirkrecs, out_path):
+    """
+    Write a JSON file containing all quirkrecs data.
+
+    Args:
+        quirkrecs: List of quirkrec dicts (after processing, including nbd)
+        out_path: Path to write the JSON file
+    """
+    json_dump_to_file_path(quirkrecs, out_path)
