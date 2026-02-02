@@ -1,0 +1,122 @@
+{
+  "description": "Count of fields used in quirkrecs",
+  "total_quirkrecs": 156,
+  "fields": [
+    {
+      "field": "nbd",
+      "count": 156
+    },
+    {
+      "field": "qr-consensus",
+      "count": 156
+    },
+    {
+      "field": "qr-cv",
+      "count": 156
+    },
+    {
+      "field": "qr-lc-loc",
+      "count": 156
+    },
+    {
+      "field": "qr-lc-proposed",
+      "count": 156
+    },
+    {
+      "field": "qr-noted-by",
+      "count": 156
+    },
+    {
+      "field": "qr-what-is-weird",
+      "count": 156
+    },
+    {
+      "field": "qr-highlight",
+      "count": 105
+    },
+    {
+      "field": "qr-bhq-comment",
+      "count": 94
+    },
+    {
+      "field": "qr-generic-comment",
+      "count": 60
+    },
+    {
+      "field": "qr-under-construction",
+      "count": 38
+    },
+    {
+      "field": "qr-n_of_m_for_this_verse",
+      "count": 21
+    },
+    {
+      "field": "qr-lc-q",
+      "count": 18
+    },
+    {
+      "field": "qr-highlight-lc-proposed",
+      "count": 11
+    },
+    {
+      "field": "qr-uxlc-change-url",
+      "count": 11
+    },
+    {
+      "field": "qr-highlight-consensus",
+      "count": 10
+    },
+    {
+      "field": "qr-uxlc-needs-fix",
+      "count": 10
+    },
+    {
+      "field": "qr-aleppo-img",
+      "count": 6
+    },
+    {
+      "field": "qr-aleppo-page-url",
+      "count": 6
+    },
+    {
+      "field": "qr-uxlc-position-within-verse",
+      "count": 5
+    },
+    {
+      "field": "qr-bhq",
+      "count": 3
+    },
+    {
+      "field": "qr-lc-img",
+      "count": 3
+    },
+    {
+      "field": "qr-cam1753-img",
+      "count": 2
+    },
+    {
+      "field": "qr-cam1753-page-url",
+      "count": 2
+    },
+    {
+      "field": "qr-extra-letter-spacing",
+      "count": 2
+    },
+    {
+      "field": "qr-n_of_m_for_this_word",
+      "count": 2
+    },
+    {
+      "field": "qr-cam1753-img-intro",
+      "count": 1
+    },
+    {
+      "field": "qr-noted-by-mam",
+      "count": 1
+    },
+    {
+      "field": "qr-noted-by-uxlc",
+      "count": 1
+    }
+  ]
+}

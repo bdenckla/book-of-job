@@ -13,6 +13,7 @@ from pyauthor import (
     job2_main_article,
 )
 from pyauthor_util.common_titles_etc import d2_anchor
+from pyauthor_util.qr_field_stats import write_qr_field_stats_json
 from pyauthor_util.get_qr_groups import get_qr_groups
 from pyauthor_util.noted_by import nb_dict
 from pyauthor_util.short_id_etc import lc_img
@@ -47,6 +48,7 @@ def _prep(jobn_rel_top):
     _assert_all_img_paths_exist(jobn_rel_top, qrs)
     qrs = [qr for qr in qrs if qr.get("qr-lc-proposed")]  # XXX temporary
     qrs_with_nbd = sl_map(_add_nbd, qrs)
+    write_qr_field_stats_json(qrs_with_nbd, "out/qr-field-stats.json")
     ov_and_de = make_ov_and_de(qrs_with_nbd)
     return qrs_with_nbd, ov_and_de
 
