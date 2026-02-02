@@ -1,4 +1,3 @@
-from pyauthor_util.job_common import BHQ_COMMENT_XELSEWHERE
 
 
 RECORD_4213 = {
@@ -8,7 +7,6 @@ RECORD_4213 = {
     "qr-consensus": "בָּנֽוֹת׃",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "409B", "column": 1, "line": -9, "including-blank-lines": 1},
-    "qr-bhq-comment": BHQ_COMMENT_XELSEWHERE,
     "qr-noted-by": "nBHQ-xBHL-xDM",
     "qr-uxlc-needs-fix": True,
 }

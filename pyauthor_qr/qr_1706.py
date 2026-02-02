@@ -1,4 +1,3 @@
-from pyauthor_util.job_common import BHQ_COMMENT_XELSEWHERE
 
 
 RECORD_1706 = {
@@ -13,7 +12,6 @@ RECORD_1706 = {
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "402A", "column": 1, "line": 7},
-    "qr-bhq-comment": BHQ_COMMENT_XELSEWHERE,
     "qr-noted-by": "nBHQ-xBHL-xDM",
     "qr-uxlc-needs-fix": True,
 }

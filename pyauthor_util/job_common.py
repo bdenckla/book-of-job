@@ -52,13 +52,6 @@ def correctly_ignores(what, cv, adjective=""):
     ]
 
 
-BHQ_COMMENT_TBHQ_NELSEWHERE = [
-    "$BHQ transcribes μL as shown above,",
-    " but $BHQ does not note that this transcription diverges from consensus.",
-]
-BHQ_COMMENT_XELSEWHERE = [
-    "$BHQ notes this, whereas this is not noted in the other editions under consideration."
-]
 BHQ_COMMENT_XELSEWHERE_DUBIOUS = [
     "$BHQ notes this possibility,",
     " whereas this is not noted in the other editions under consideration.",
@@ -81,6 +74,7 @@ BHQ_COMMENT_0914_AND_0930 = [
     "$BHQ silently supplies the סילוק that is the consensus expectation,",
     " despite little or no evidence for it in μL.",
 ]
+# XXX better to assert that these match than to factor them commonly like this.
 RECORD_1804_CMN_AB = {
     "qr-bhla-i": 24,
     "qr-cv": "18:4",
