@@ -13,7 +13,7 @@ RECORD_2702 = {
     "qr-bhla-i": 32,
     "qr-cv": "27:2",
     "qr-lc-proposed": "חַי",
-    "qr-what-is-weird": "מקף is missing",
+    "qr-what-is-weird": "מקף is absent",
     "qr-consensus": "חַי־",
     "qr-generic-comment": _COMMENT_2702,
     "qr-highlight-consensus": 3,

@@ -1,14 +1,12 @@
-from pyauthor_util.job_common import BHQ_COMMENT_TBHQ_NELSEWHERE
 
 
 RECORD_1015 = {
     "qr-bhla-i": 13,
     "qr-cv": "10:15",
-    "qr-lc-proposed": "עָנְיֽ͏ִי׃",
+    "qr-lc-proposed": "עׇנְיֽ͏ִי׃",
     "qr-what-is-weird": "סילוק precedes חיריק",
     "qr-consensus": "עׇנְיִֽי׃",
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "400A", "column": 1, "line": 14},
-    "qr-bhq-comment": BHQ_COMMENT_TBHQ_NELSEWHERE,
     "qr-noted-by": "tBHQ-nBHL-xDM",
 }

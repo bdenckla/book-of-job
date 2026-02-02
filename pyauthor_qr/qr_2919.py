@@ -1,4 +1,3 @@
-from pyauthor_util.job_common import BHQ_COMMENT_TBHQ_NELSEWHERE
 
 
 _COMMENT_2919 = [
@@ -14,6 +13,5 @@ RECORD_2919 = {
     "qr-generic-comment": _COMMENT_2919,
     "qr-highlight": 5,
     "qr-lc-loc": {"page": "405A", "column": 1, "line": -4},
-    "qr-bhq-comment": BHQ_COMMENT_TBHQ_NELSEWHERE,
     "qr-noted-by": "tBHQ-nBHL-xDM",
 }

@@ -1,4 +1,3 @@
-from pyauthor_util.job_common import BHQ_COMMENT_TBHQ_NELSEWHERE
 
 
 RECORD_1113 = {
@@ -8,7 +7,6 @@ RECORD_1113 = {
     "qr-consensus": "אַ֭תָּה",
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "400A", "column": 2, "line": 13},
-    "qr-bhq-comment": BHQ_COMMENT_TBHQ_NELSEWHERE,
     "qr-noted-by": "tBHQ-xBHL-xDM-nWLC",
     "qr-noted-by-mam": True,
     "qr-noted-by-uxlc": True,

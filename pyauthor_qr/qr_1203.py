@@ -6,7 +6,7 @@ RECORD_1203 = {
     "qr-bhla-i": 17,
     "qr-cv": "12:3",
     "qr-lc-proposed": "וְאֶת",
-    "qr-what-is-weird": "מקף is missing",
+    "qr-what-is-weird": "מקף is absent",
     "qr-consensus": "וְאֶת־",
     "qr-highlight-consensus": 4,
     "qr-lc-loc": {"page": "400A", "column": 2, "line": -1},

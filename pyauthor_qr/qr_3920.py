@@ -1,4 +1,3 @@
-from pyauthor_util.job_common import BHQ_COMMENT_TBHQ_NELSEWHERE
 
 
 RECORD_3920 = {
@@ -10,6 +9,5 @@ RECORD_3920 = {
     "qr-generic-comment": "The situation with המימיך in 38:12 is similar.",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "408B", "column": 1, "line": -10},
-    "qr-bhq-comment": BHQ_COMMENT_TBHQ_NELSEWHERE,
     "qr-noted-by": "tBHQ-nBHL-nDM",
 }

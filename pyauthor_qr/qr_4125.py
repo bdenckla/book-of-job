@@ -6,7 +6,7 @@ RECORD_4125 = {
     "qr-bhla-i": 52,
     "qr-cv": "41:25",
     "qr-lc-proposed": "לִבְלִי־חָת׃",
-    "qr-what-is-weird": "סילוק is missing",
+    "qr-what-is-weird": "סילוק is absent",
     "qr-consensus": "לִבְלִי־חָֽת׃",
     "qr-highlight": 6,
     "qr-lc-loc": {"page": "409A", "column": 2, "line": 14},
