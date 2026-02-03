@@ -1,5 +1,5 @@
 RECORD_0720 = {
-    "qr-noted-by": "nDM",
+    "qr-noted-by": "tBHQ-nDM",
     "qr-noted-by-mam": True,
     # XXX perhaps MAM's note should mention LC
     "qr-cv": "7:20",

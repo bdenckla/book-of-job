@@ -1,5 +1,5 @@
 RECORD_1209 = {
-    "qr-noted-by": "nDM",
+    "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "12:9",
     "qr-consensus": "יַד־יְ֝הֹוָ֗ה",
     "qr-lc-proposed": "יַד־יְ֝הֹוָה",

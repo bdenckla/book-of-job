@@ -1,5 +1,5 @@
 RECORD_0627 = {
-    "qr-noted-by": "nDM",
+    "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "6:27",
     "qr-consensus": "עַֽל־רֵיעֲכֶֽם׃",
     "qr-lc-proposed": "עַל־רֵֽיעֲכֶֽם׃",
