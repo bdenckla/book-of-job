@@ -47,10 +47,6 @@ def row_id(quirkrec):
     return f"row-{short_id(quirkrec)}"
 
 
-def sort_key(quirkrec):
-    return short_id(quirkrec)
-
-
 def _duplicates(seq):
     seen = set()
     dups = set()
