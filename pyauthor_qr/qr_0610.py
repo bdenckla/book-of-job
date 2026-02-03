@@ -3,7 +3,7 @@ from pyauthor_util import author
 
 _COMMENT_PARA1 = [
     "Note that consensus has a rare and hard-to-understand",
-    " phenomenon called “secondary מרכא” by Breuer."
+    " phenomenon called “secondary מרכא” by Breuer.",
 ]
 _FOI_H2 = "foi-sec-merk.html#intro-poetic/(%C3%BCazll)/(mer)-(%C3%BCazll)"
 _FOI_H1 = "https://bdenckla.github.io/MAM-with-doc/foi/"

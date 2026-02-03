@@ -4,8 +4,9 @@ import glob
 import os
 import os.path
 from py import two_col_css_styles as tcstyles
-from py import my_html
+from pycmn.shrink import shrink
 from pycmn.my_utils import sl_map
+from py import my_html
 from pyauthor import (
     job1_full_list_overview,
     job3_uxlc,
@@ -13,7 +14,10 @@ from pyauthor import (
     job2_main_article,
 )
 from pyauthor_util.common_titles_etc import d2_anchor
-from pyauthor_util.qr_make_json_outputs import write_qr_field_stats_json, write_quirkrecs_json
+from pyauthor_util.qr_make_json_outputs import (
+    write_qr_field_stats_json,
+    write_quirkrecs_json,
+)
 from pyauthor_util.get_qr_groups import get_qr_groups
 from pyauthor_util.noted_by import nb_dict
 from pyauthor_util.short_id_etc import lc_img
@@ -44,14 +48,39 @@ def main():
 
 
 def _prep(jobn_rel_top):
-    qrs = sorted(QUIRKRECS, key=sort_key)
-    _assert_all_img_paths_exist(jobn_rel_top, qrs)
-    qrs = [qr for qr in qrs if qr.get("qr-lc-proposed")]  # XXX temporary
-    qrs_with_nbd = sl_map(_add_nbd, qrs)
-    write_qr_field_stats_json(qrs_with_nbd, "out/qr-field-stats.json")
-    write_quirkrecs_json(qrs_with_nbd, "out/quirkrecs.json")
-    ov_and_de = make_ov_and_de(qrs_with_nbd)
-    return qrs_with_nbd, ov_and_de
+    qrs_1 = sorted(QUIRKRECS, key=sort_key)
+    _assert_all_img_paths_exist(jobn_rel_top, qrs_1)
+    qrs_1 = [qr for qr in qrs_1 if qr.get("qr-lc-proposed")]  # XXX temporary
+    qrs_2 = sl_map(_add_nbd, qrs_1)
+    qrs_3 = _flatten_qrs(qrs_2)
+    write_qr_field_stats_json(qrs_3, "out/qr-field-stats.json")
+    write_quirkrecs_json(qrs_3, "out/quirkrecs.json")
+    ov_and_de = make_ov_and_de(qrs_3)
+    return qrs_3, ov_and_de
+
+
+def _flatten_qrs(qrs):
+    return sl_map(_flatten_one_qr, qrs)
+
+
+def _flatten_one_qr(quirkrec):
+    gencom = quirkrec.get("qr-generic-comment")
+    bhqcom = quirkrec.get("qr-bhq-comment")
+    flat_gencom = gencom and _flatten_yyycom(gencom)
+    flat_bhqcom = bhqcom and _flatten_yyycom(bhqcom)
+    new_gencom = {"qr-generic-comment": flat_gencom} if flat_gencom else {}
+    new_bhqcom = {"qr-bhq-comment": flat_bhqcom} if flat_bhqcom else {}
+    return {**quirkrec, **new_gencom, **new_bhqcom}
+
+
+def _flatten_yyycom(yyycom):
+    if isinstance(yyycom, str):
+        return yyycom
+    assert isinstance(yyycom, list)
+    if all(isinstance(item, str) for item in yyycom):
+        flat = my_html.flatten(yyycom)
+        return shrink(flat)
+    return yyycom
 
 
 def _add_nbd(quirkrec):

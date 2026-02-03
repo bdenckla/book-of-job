@@ -9,7 +9,7 @@ RECORD_0523 = {
         "There is some kind of a dot way over next to the",
         " final $khaf (\N{THIN SPACE}ך\N{THIN SPACE})",
         " but it could easily be either not ink, or not intentional ink.",
-        " Aside: the קמץ under ה is קטן."
+        " Aside: the קמץ under ה is קטן.",
     ],
     "qr-lc-loc": {"page": "398B", "column": 1, "line": 17},
     "qr-under-construction": True,

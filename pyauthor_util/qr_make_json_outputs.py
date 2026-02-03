@@ -18,18 +18,12 @@ def write_qr_field_stats_json(quirkrecs, out_path):
             field_counter[key] += 1
 
     # Sort by count descending, then by field name
-    sorted_fields = sorted(
-        field_counter.items(),
-        key=lambda x: (-x[1], x[0])
-    )
+    sorted_fields = sorted(field_counter.items(), key=lambda x: (-x[1], x[0]))
 
     output = {
         "description": "Count of fields used in quirkrecs",
         "total_quirkrecs": len(quirkrecs),
-        "fields": [
-            {"field": field, "count": count}
-            for field, count in sorted_fields
-        ]
+        "fields": [{"field": field, "count": count} for field, count in sorted_fields],
     }
 
     json_dump_to_file_path(output, out_path)
