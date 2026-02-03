@@ -45,14 +45,34 @@ from pyauthor_qr.qr_0119 import RECORD_0119
 from pyauthor_util.job_quirkrecs import QUIRKRECS
 ```
 
-**Writing/modifying Python:** Use the AST approach to guarantee syntactically valid output:
+**Writing/modifying Python (preserving comments):** Use **LibCST** when comments must be preserved:
+
+```python
+import libcst as cst
+
+tree = cst.parse_module(source)
+
+class MyTransformer(cst.CSTTransformer):
+    def leave_Dict(self, original_node, updated_node):
+        # Modify dict while preserving comments
+        ...
+
+modified = tree.visit(MyTransformer())
+Path(file).write_text(modified.code)
+```
+
+LibCST preserves comments, whitespace, and formatting. Install with `pip install libcst`.
+
+**Writing/modifying Python (simple cases):** For files without comments or where comment loss is acceptable, use the standard AST approach:
 
 1. Parse with `ast.parse(source)`
 2. Modify the AST (e.g., insert keys into `ast.Dict` nodes)
 3. Generate code with `ast.unparse(tree)` (Python 3.9+)
 4. Reformat with Black: `python -m black <file>`
 
-This approach may produce semantically incorrect code if values are wrong, but it **cannot** produce syntactically invalid Python. Avoid fragile regex-based or string-based text replacements.
+⚠️ **Warning:** `ast.unparse()` discards all comments. Use LibCST if comments must be preserved.
+
+Both approaches guarantee syntactically valid output. Avoid fragile regex-based or string-based text replacements.
 
 **Output JSON:** `out/quirkrecs.json` contains all quirkrecs as JSON. Regenerate with:
 ```
