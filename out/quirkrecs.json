@@ -3960,6 +3960,29 @@
     }
   },
   {
+    "qr-noted-by": "nDM",
+    "qr-cv": "36:21",
+    "qr-lc-proposed": "כִּֽי־עַל־זֶ֝֗ה",
+    "qr-consensus": "כִּֽי־עַל־זֶ֝֗ה",
+    "qr-what-is-weird": "mark may be מרכא not געיה",
+    "qr-generic-comment": [
+      "Aleppo lacks רביע; this is expected, since it is its habit to omit רביע in cases like this, where רביע would sit on the same letter as גרש מוקדם."
+    ],
+    "qr-lc-loc": {
+      "page": "407B",
+      "column": 1,
+      "line": 14
+    },
+    "qr-under-construction": true,
+    "nbd": {
+      "e:BHQ": "xBHQ",
+      "e:BHL": "xBHL",
+      "e:DM": "nDM",
+      "e:WLC": "xWLC",
+      "e:UXLC": "xUXLC"
+    }
+  },
+  {
     "qr-cv": "36:29",
     "qr-lc-proposed": "סֻכָּֽתֽוֹ׃",
     "qr-what-is-weird": "כ has געיה",

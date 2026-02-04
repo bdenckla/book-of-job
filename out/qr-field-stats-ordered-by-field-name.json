@@ -1,30 +1,30 @@
 {
   "description": "Count of fields used in quirkrecs (ordered by field name)",
-  "total_quirkrecs": 156,
+  "total_quirkrecs": 157,
   "fields": [
     {
       "field": "nbd",
-      "count": 156
+      "count": 157
     },
     {
       "field": "nbd.e:BHL",
-      "count": 156
+      "count": 157
     },
     {
       "field": "nbd.e:BHQ",
-      "count": 156
+      "count": 157
     },
     {
       "field": "nbd.e:DM",
-      "count": 156
+      "count": 157
     },
     {
       "field": "nbd.e:UXLC",
-      "count": 156
+      "count": 157
     },
     {
       "field": "nbd.e:WLC",
-      "count": 156
+      "count": 157
     },
     {
       "field": "qr-aleppo-img",
@@ -56,11 +56,11 @@
     },
     {
       "field": "qr-consensus",
-      "count": 156
+      "count": 157
     },
     {
       "field": "qr-cv",
-      "count": 156
+      "count": 157
     },
     {
       "field": "qr-extra-letter-spacing",
@@ -68,7 +68,7 @@
     },
     {
       "field": "qr-generic-comment",
-      "count": 65
+      "count": 66
     },
     {
       "field": "qr-highlight",
@@ -88,11 +88,11 @@
     },
     {
       "field": "qr-lc-loc",
-      "count": 156
+      "count": 157
     },
     {
       "field": "qr-lc-loc.column",
-      "count": 156
+      "count": 157
     },
     {
       "field": "qr-lc-loc.including-blank-lines",
@@ -100,15 +100,15 @@
     },
     {
       "field": "qr-lc-loc.line",
-      "count": 156
+      "count": 157
     },
     {
       "field": "qr-lc-loc.page",
-      "count": 156
+      "count": 157
     },
     {
       "field": "qr-lc-proposed",
-      "count": 156
+      "count": 157
     },
     {
       "field": "qr-lc-q",
@@ -124,7 +124,7 @@
     },
     {
       "field": "qr-noted-by",
-      "count": 156
+      "count": 157
     },
     {
       "field": "qr-noted-by-mam",
@@ -136,7 +136,7 @@
     },
     {
       "field": "qr-under-construction",
-      "count": 38
+      "count": 39
     },
     {
       "field": "qr-uxlc-change-url",
@@ -152,7 +152,7 @@
     },
     {
       "field": "qr-what-is-weird",
-      "count": 156
+      "count": 157
     }
   ]
 }
