@@ -36,7 +36,7 @@ RECORD_3612 = {
     "qr-cam1753-page-url": f"{CAM1753_PAGE_URL_BASE}/n87/mode/1up",
     "qr-cam1753-img": "Cam1753-3612.png",
     "qr-uxlc-needs-fix": [
-        "UXLC has kaf (as it should)",
+        "UXLC has כ (as it should)",
         " but should note the divergence from consensus",
     ],
 }

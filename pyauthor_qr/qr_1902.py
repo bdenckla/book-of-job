@@ -7,7 +7,7 @@ RECORD_1902 = {
     "qr-what-is-weird": "כ has שווא",
     "qr-consensus": "וּֽתְדַכּאוּנַ֥נִי",
     "qr-generic-comment": [
-        "As $UXLC notes, an erasure under the kaf is apparent.",
+        "As $UXLC notes, an erasure under the כ is apparent.",
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "402A", "column": 2, "line": 19},

@@ -10,25 +10,15 @@
 μY
 
 # Hebrew terms used in prose
-Dageš
-Mappiq
 cantillation
-kaf
-lamed
 masorah
-oleh
-qere
-shewa
-tsinnorit
 unpointed
 
-# Proper names / references
-Viktor
-Golinets
-Leningradensis
+# Document/paper titles (multi-word phrases)
+Tsinnorit & Oleh on Initial Vocal Shewa
+Viktor Golinets, "Dageš, Mappiq, Specks on Vellum, and Editing of the Codex Leningradensis"
 
 # Technical terms
 ascenders
 untranscribed
-syl
 vs

@@ -1,6 +1,6 @@
 _COMMENT_1604 = [
     "Though it is not relevant to the point at hand, which is the presence of a מקף,",
-    " note that in μL, the shape we take to be מחפך is touching the bottom of the ל (lamed).",
+    " note that in μL, the shape we take to be מחפך is touching the bottom of the ל.",
 ]
 _BHQ_COMMENT_1604 = [
     "Though it is not relevant to the point at hand,",

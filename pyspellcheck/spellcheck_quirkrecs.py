@@ -13,15 +13,22 @@ from pathlib import Path
 from spellchecker import SpellChecker
 
 
-def load_custom_dictionary(dict_path: Path) -> set[str]:
-    """Load custom words from dictionary file (one word per line, # comments)."""
+def load_custom_dictionary(dict_path: Path) -> tuple[set[str], list[str]]:
+    """Load custom words and phrases from dictionary file.
+    
+    Returns (words, phrases) where phrases are multi-word entries.
+    """
     words = set()
+    phrases = []
     if dict_path.exists():
         for line in dict_path.read_text(encoding='utf-8').splitlines():
             line = line.strip()
             if line and not line.startswith('#'):
-                words.add(line.lower())
-    return words
+                if ' ' in line:
+                    phrases.append(line)
+                else:
+                    words.add(line.lower())
+    return words, phrases
 
 
 def extract_english_words(text: str) -> list[str]:
@@ -48,7 +55,7 @@ PROSE_FIELDS = {
 def check_spelling(quirkrecs_path: Path, custom_dict_path: Path):
     """Check spelling of English words in quirkrecs.json."""
     spell = SpellChecker()
-    custom_words = load_custom_dictionary(custom_dict_path)
+    custom_words, custom_phrases = load_custom_dictionary(custom_dict_path)
     
     with open(quirkrecs_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -63,7 +70,11 @@ def check_spelling(quirkrecs_path: Path, custom_dict_path: Path):
             if key not in PROSE_FIELDS:
                 continue
             if isinstance(value, str):
-                words = extract_english_words(value)
+                text = value
+                # Remove accepted phrases before word extraction
+                for phrase in custom_phrases:
+                    text = re.sub(re.escape(phrase), ' ', text, flags=re.IGNORECASE)
+                words = extract_english_words(text)
                 for word in words:
                     word_lower = word.lower()
                     if word_lower not in custom_words and word_lower not in spell:

@@ -1538,7 +1538,7 @@
     "qr-what-is-weird": "מקף is present",
     "qr-consensus": "ל֤וּ",
     "qr-generic-comment": [
-      "Though it is not relevant to the point at hand, which is the presence of a מקף, note that in μL, the shape we take to be מחפך is touching the bottom of the ל (lamed)."
+      "Though it is not relevant to the point at hand, which is the presence of a מקף, note that in μL, the shape we take to be מחפך is touching the bottom of the ל."
     ],
     "qr-highlight-lc-proposed": 3,
     "qr-lc-loc": {
@@ -1855,7 +1855,7 @@
     "qr-what-is-weird": "כ has שווא",
     "qr-consensus": "וּֽתְדַכּאוּנַ֥נִי",
     "qr-generic-comment": [
-      "As $UXLC notes, an erasure under the kaf is apparent."
+      "As $UXLC notes, an erasure under the כ is apparent."
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {
@@ -3323,7 +3323,7 @@
     "qr-cv": "33:28",
     "qr-consensus": "וְ֝חַיָּת֗וֹ",
     "qr-lc-proposed": "וְ֝חַיָּתוֹ",
-    "qr-what-is-weird": "רביע of רביע מוגרש is absent (qere shown)",
+    "qr-what-is-weird": "רביע of רביע מוגרש is absent (קרי shown)",
     "qr-highlight": 4,
     "qr-lc-loc": {
       "page": "406B",
@@ -3342,7 +3342,7 @@
   {
     "qr-cv": "33:30",
     "qr-lc-proposed": "הַֽחַיִּים׃",
-    "qr-what-is-weird": "סילוק on syl. 1 not 3",
+    "qr-what-is-weird": "סילוק on syllable 1 not 3",
     "qr-consensus": "הַחַיִּֽים׃",
     "qr-highlight-lc-proposed": 1,
     "qr-highlight-consensus": 3,
@@ -3915,7 +3915,7 @@
     "qr-cam1753-page-url": "https://archive.org/details/ketuvim-cambridge-ms-add-1753-images/page/n87/mode/1up",
     "qr-cam1753-img": "Cam1753-3612.png",
     "qr-uxlc-needs-fix": [
-      "UXLC has kaf (as it should)",
+      "UXLC has כ (as it should)",
       " but should note the divergence from consensus"
     ],
     "nbd": {
