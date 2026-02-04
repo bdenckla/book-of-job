@@ -3,7 +3,7 @@ RECORD_3621 = {
     "qr-cv": "36:21",
     "qr-lc-proposed": "כִּֽי־עַל־זֶ֝֗ה",
     "qr-consensus": "כִּֽי־עַל־זֶ֝֗ה",
-    "qr-what-is-weird": "mark may be מרכא not געיה",
+    "qr-what-is-weird": "μL may have explicit, “cramped” רביע מוגרש",
     "qr-generic-comment": [
         "Aleppo lacks רביע;",
         " this is expected, since it is its habit to omit רביע in cases like this,",
