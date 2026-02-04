@@ -15,9 +15,13 @@ def _add_nbd(quirkrec):
 
 
 def _add_auto_imgs(jobn_rel_top, quirkrec):
-    """Auto-detect Aleppo and Cam1753 images if files exist on disk."""
+    """Auto-detect LC, Aleppo, and Cam1753 images if files exist on disk."""
     result = quirkrec.copy()
     sid = short_id(quirkrec)
+    # Auto-detect LC image (using lc_img function which handles extension)
+    if not result.get("qr-lc-img"):
+        result["qr-lc-img"] = lc_img(quirkrec)
+    # Auto-detect Aleppo and Cam1753 images
     for field, prefix in [("qr-aleppo-img", "Aleppo-"), ("qr-cam1753-img", "Cam1753-")]:
         if result.get(field):
             continue  # Already explicitly set

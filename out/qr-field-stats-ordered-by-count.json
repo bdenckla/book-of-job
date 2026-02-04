@@ -35,6 +35,10 @@
       "count": 157
     },
     {
+      "field": "qr-lc-img",
+      "count": 157
+    },
+    {
       "field": "qr-lc-loc",
       "count": 157
     },
@@ -124,10 +128,6 @@
     },
     {
       "field": "qr-bhq",
-      "count": 3
-    },
-    {
-      "field": "qr-lc-img",
       "count": 3
     },
     {
