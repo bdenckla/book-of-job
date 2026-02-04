@@ -3405,28 +3405,6 @@
     }
   },
   {
-    "qr-noted-by": "nDM",
-    "qr-cv": "32:12",
-    "qr-lc-proposed": "וְעָֽדֵיכֶ֗ם",
-    "qr-consensus": "וְעָ֥דֵיכֶ֗ם",
-    "qr-what-is-weird": "געיה not מרכא",
-    "qr-lc-loc": {
-      "page": "406A",
-      "column": 2,
-      "line": 3
-    },
-    "qr-under-construction": true,
-    "qr-lc-img": "3212.png",
-    "qr-aleppo-img": "Aleppo-3212.png",
-    "nbd": {
-      "e:BHQ": "xBHQ",
-      "e:BHL": "xBHL",
-      "e:DM": "nDM",
-      "e:WLC": "xWLC",
-      "e:UXLC": "xUXLC"
-    }
-  },
-  {
     "qr-cv": "33:12",
     "qr-lc-proposed": "אֱ֝ל֗וֹהַ",
     "qr-what-is-weird": "ה lacks מפיק",
