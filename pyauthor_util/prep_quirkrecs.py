@@ -21,6 +21,8 @@ def _add_auto_imgs(jobn_rel_top, quirkrec):
     # Auto-detect LC image (using lc_img function which handles extension)
     if not result.get("qr-lc-img"):
         result["qr-lc-img"] = lc_img(quirkrec)
+    lc_img_path = f"{jobn_rel_top}/img/{result['qr-lc-img']}"
+    assert os.path.exists(lc_img_path), f"Missing LC image: {lc_img_path}"
     # Auto-detect Aleppo and Cam1753 images
     for field, prefix in [("qr-aleppo-img", "Aleppo-"), ("qr-cam1753-img", "Cam1753-")]:
         if result.get(field):
