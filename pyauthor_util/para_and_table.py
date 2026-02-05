@@ -4,7 +4,7 @@ from pyauthor_util import author
 from pyauthor_util.job_ov_and_de import row_id
 
 
-def para_and_table(para_func, tdm_ch, group_key, ov_and_de, qr_groups):
+def para_and_table(para_func, tdm_ch, ov_and_de, qr_groups, group_key):
     group_of_quirkrecs = qr_groups[group_key]
     record_count = len(group_of_quirkrecs)
     link = _table_of_quirks(tdm_ch, group_key, ov_and_de, group_of_quirkrecs)
