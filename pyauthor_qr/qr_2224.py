@@ -13,5 +13,4 @@ RECORD_2224 = {
         " re-inked, not the pointing.",
     ],
     "qr-lc-loc": {"page": "403B", "column": 1, "line": 25},
-    "qr-under-construction": True,
 }

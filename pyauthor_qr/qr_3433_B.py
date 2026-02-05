@@ -7,5 +7,4 @@ RECORD_3433_B = {
     "qr-what-is-weird": "ל lacks דגש",
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "407A", "column": 1, "line": 16},
-    "qr-under-construction": True,
 }

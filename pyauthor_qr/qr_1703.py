@@ -9,5 +9,4 @@ RECORD_1703 = {
         "This case is the opposite of 3:4, except there the קמץ is not קטן."
     ],
     "qr-lc-loc": {"page": "402A", "column": 1, "line": 4},
-    "qr-under-construction": True,
 }

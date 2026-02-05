@@ -9,5 +9,4 @@ RECORD_1916_B = {
     "qr-highlight-consensus": 5,
     "qr-what-is-weird": "רביע מוגרש spans מקף",
     "qr-lc-loc": {"page": "402B", "column": 1, "line": 8},
-    "qr-under-construction": True,
 }

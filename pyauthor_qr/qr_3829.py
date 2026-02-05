@@ -11,5 +11,4 @@ RECORD_3829 = {
         " the גרש מוקדם overlaps the $shin dot almost completely.",
     ],
     "qr-lc-loc": {"page": "408A", "column": 2, "line": 9},
-    "qr-under-construction": True,
 }

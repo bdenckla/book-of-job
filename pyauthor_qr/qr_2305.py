@@ -11,5 +11,4 @@ RECORD_2305 = {
         " there is also some question of מרכא vs געיה.",
     ],
     "qr-lc-loc": {"page": "403B", "column": 2, "line": 11},
-    "qr-under-construction": True,
 }

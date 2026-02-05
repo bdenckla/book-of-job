@@ -7,5 +7,4 @@ RECORD_4019_B = {
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "408B", "column": 2, "line": 27},
-    "qr-under-construction": True,
 }

@@ -6,5 +6,4 @@ RECORD_3120 = {
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "405B", "column": 2, "line": 10},
-    "qr-under-construction": True,
 }

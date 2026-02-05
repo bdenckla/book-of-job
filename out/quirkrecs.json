@@ -12,7 +12,6 @@
       "column": 3,
       "line": 21
     },
-    "qr-under-construction": true,
     "qr-lc-img": "0119.png",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -83,7 +82,6 @@
       "column": 2,
       "line": 14
     },
-    "qr-under-construction": true,
     "qr-lc-img": "0304.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -264,7 +262,6 @@
       "column": 1,
       "line": 13
     },
-    "qr-under-construction": true,
     "qr-lc-img": "0520.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -290,7 +287,6 @@
       "column": 1,
       "line": 17
     },
-    "qr-under-construction": true,
     "qr-lc-img": "0523.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -315,7 +311,6 @@
       "column": 1,
       "line": 19
     },
-    "qr-under-construction": true,
     "qr-lc-img": "0524.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -341,7 +336,6 @@
       "column": 2,
       "line": 7
     },
-    "qr-under-construction": true,
     "qr-bhq-comment": [
       {
         "_htel_tag": "p",
@@ -440,7 +434,6 @@
       "column": 2,
       "line": 15
     },
-    "qr-under-construction": true,
     "qr-lc-img": "0617.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -489,7 +482,6 @@
       "column": 2,
       "line": 20
     },
-    "qr-under-construction": true,
     "qr-lc-img": "0621.png",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -512,7 +504,6 @@
       "column": 2,
       "line": 27
     },
-    "qr-under-construction": true,
     "qr-lc-img": "0627.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -604,7 +595,6 @@
       "column": 1,
       "line": 27
     },
-    "qr-under-construction": true,
     "qr-lc-img": "0720.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -673,7 +663,6 @@
       "column": 2,
       "line": 6
     },
-    "qr-under-construction": true,
     "qr-lc-img": "0802.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1266,7 +1255,6 @@
       "column": 1,
       "line": 9
     },
-    "qr-under-construction": true,
     "qr-lc-img": "1209.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1617,7 +1605,6 @@
       "column": 2,
       "line": 7
     },
-    "qr-under-construction": true,
     "qr-lc-img": "1606.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1688,7 +1675,6 @@
       "column": 1,
       "line": 4
     },
-    "qr-under-construction": true,
     "qr-lc-img": "1703.png",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2012,7 +1998,6 @@
       "column": 1,
       "line": 8
     },
-    "qr-under-construction": true,
     "qr-lc-img": "1916-2of2ftv.png",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2059,7 +2044,6 @@
       "column": 1,
       "line": 28
     },
-    "qr-under-construction": true,
     "qr-lc-img": "2001.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2106,7 +2090,6 @@
       "line": 16,
       "including-blank-lines": 1
     },
-    "qr-under-construction": true,
     "qr-lc-img": "2107.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2131,7 +2114,6 @@
       "column": 1,
       "line": 26
     },
-    "qr-under-construction": true,
     "qr-lc-img": "2115.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2208,7 +2190,6 @@
       "column": 1,
       "line": 10
     },
-    "qr-under-construction": true,
     "qr-lc-img": "2210.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2353,7 +2334,6 @@
       "column": 1,
       "line": 25
     },
-    "qr-under-construction": true,
     "qr-lc-img": "2224.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2524,7 +2504,6 @@
       "column": 2,
       "line": 11
     },
-    "qr-under-construction": true,
     "qr-lc-img": "2305.png",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2669,7 +2648,6 @@
       "column": 1,
       "line": 11
     },
-    "qr-under-construction": true,
     "qr-lc-img": "2413.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2720,7 +2698,6 @@
       "column": 1,
       "line": 19
     },
-    "qr-under-construction": true,
     "qr-lc-img": "2418.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2871,7 +2848,6 @@
       "column": 1,
       "line": 7
     },
-    "qr-under-construction": true,
     "qr-lc-img": "2709.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2994,7 +2970,6 @@
       "column": 1,
       "line": 7
     },
-    "qr-under-construction": true,
     "qr-lc-img": "2903.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3137,7 +3112,6 @@
       "column": 1,
       "line": 15
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3102.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3306,7 +3280,6 @@
       "column": 2,
       "line": 10
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3120.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3451,7 +3424,6 @@
       "column": 2,
       "line": 1
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3211.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3497,7 +3469,6 @@
       "column": 1,
       "line": 24
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3328.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3546,7 +3517,6 @@
       "column": 2,
       "line": 8
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3405.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3803,7 +3773,6 @@
       "column": 1,
       "line": 16
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3433-1of4ftv.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3829,7 +3798,6 @@
       "column": 1,
       "line": 16
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3433-2of4ftv.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3855,7 +3823,6 @@
       "column": 1,
       "line": 18
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3433-3of4ftv.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3881,7 +3848,6 @@
       "column": 1,
       "line": 18
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3433-4of4ftv.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3903,7 +3869,6 @@
       "column": 1,
       "line": 22
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3437.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3925,7 +3890,6 @@
       "column": 2,
       "line": 4
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3507.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4470,7 +4434,6 @@
       "column": 2,
       "line": 9
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3829.png",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -4696,7 +4659,6 @@
       "column": 1,
       "line": 14
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3915.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4743,7 +4705,6 @@
       "column": 1,
       "line": 26
     },
-    "qr-under-construction": true,
     "qr-lc-img": "3925.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4820,7 +4781,6 @@
       "column": 2,
       "line": 27
     },
-    "qr-under-construction": true,
     "qr-lc-img": "4019-2of2ftv.png",
     "nbd": {
       "e:BHQ": "xBHQ",

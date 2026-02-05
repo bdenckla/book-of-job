@@ -10,5 +10,4 @@ RECORD_3925 = {
         " as if it were “normal” (prose-system) גרש.",
     ],
     "qr-lc-loc": {"page": "408B", "column": 1, "line": 26},
-    "qr-under-construction": True,
 }

@@ -47,7 +47,6 @@ RECORD_0610 = {
     "qr-highlight-lc-proposed": 1,
     "qr-highlight-consensus": [1, 5],
     "qr-lc-loc": {"page": "398B", "column": 2, "line": 7},
-    "qr-under-construction": True,
     "qr-bhq-comment": [
         author.para(_COMMENT_PARA1),
         author.para(_COMMENT_PARA2),

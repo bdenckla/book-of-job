@@ -9,5 +9,4 @@ RECORD_2115 = {
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "403A", "column": 1, "line": 26},
-    "qr-under-construction": True,
 }

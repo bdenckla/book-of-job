@@ -23,5 +23,4 @@ RECORD_0621 = {
     "qr-highlight": [1, 2],
     "qr-generic-comment": [author.para(_GENCOM_PARA1), author.para(_GENCOM_PARA2)],
     "qr-lc-loc": {"page": "398B", "column": 2, "line": 20},
-    "qr-under-construction": True,
 }

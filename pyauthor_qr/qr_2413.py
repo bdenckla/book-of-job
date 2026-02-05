@@ -9,5 +9,4 @@ RECORD_2413 = {
     ],
     # XXX perhaps should note מקף in L.
     "qr-lc-loc": {"page": "404A", "column": 1, "line": 11},
-    "qr-under-construction": True,
 }

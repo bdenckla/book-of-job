@@ -6,5 +6,4 @@ RECORD_3507 = {
     "qr-what-is-weird": "מ after מח lacks דגש (DM footnote 25)",
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "407A", "column": 2, "line": 4},
-    "qr-under-construction": True,
 }

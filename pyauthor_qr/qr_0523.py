@@ -15,5 +15,4 @@ RECORD_0523 = {
         " Aside: the קמץ under ה is קטן.",
     ],
     "qr-lc-loc": {"page": "398B", "column": 1, "line": 17},
-    "qr-under-construction": True,
 }

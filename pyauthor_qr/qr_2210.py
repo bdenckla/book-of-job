@@ -14,5 +14,4 @@ RECORD_2210 = {
         " or been added during re-inking (most likely).",
     ],
     "qr-lc-loc": {"page": "403B", "column": 1, "line": 10},
-    "qr-under-construction": True,
 }

@@ -9,5 +9,4 @@ RECORD_0720 = {
     "qr-highlight-lc-proposed": 2,
     "qr-highlight-consensus": 1,
     "qr-lc-loc": {"page": "399A", "column": 1, "line": 27},
-    "qr-under-construction": True,
 }

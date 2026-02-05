@@ -7,5 +7,4 @@ RECORD_0627 = {
     "qr-highlight-lc-proposed": 4,
     "qr-highlight-consensus": 1,
     "qr-lc-loc": {"page": "398B", "column": 2, "line": 27},
-    "qr-under-construction": True,
 }
