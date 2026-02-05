@@ -15,7 +15,7 @@ def gen_html_file(aq: AllQuirks):
 def _make_cbody(aq: AllQuirks):
     cbody = [
         author.heading_level_1(D4_H1_CONTENTS),
-        para_and_table(_cpara_adm, aq, "tbhq_and_adm"),
+        para_and_table(aq, _cpara_adm, "tbhq_and_adm"),
     ]
     return cbody
 
