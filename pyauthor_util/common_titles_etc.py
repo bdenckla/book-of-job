@@ -6,7 +6,7 @@ from pyauthor_util import author
 
 D4_TITLE = "BHQ Job: quirks in μA"
 D4_H1_CONTENTS = D4_TITLE
-D4_FNAME = "job4_quirks_in_mua.html"
+D4_FNAME = "job4_quirks_in_mu_a.html"
 
 
 def d4_anchor(jobn_dir="."):

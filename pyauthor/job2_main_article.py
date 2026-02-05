@@ -50,7 +50,7 @@ def _make_cbody(ov_and_de, qr_groups):
         author.heading_level_2("Postscript 1: $UXLC"),
         author.para(_CPARA_UXLC),
         author.heading_level_2("Postscript 2: quirks in μA"),
-        author.para(_CPARA_QUIRKS_IN_MUA),
+        author.para(_CPARA_QUIRKS_IN_MU_A),
     ]
     return cbody
 
@@ -374,7 +374,7 @@ _CPARA_UXLC = [
     " might contribute to $BHQ Job if it were being compiled today.",
     [" I do so in the ", d3_anchor()],
 ]
-_CPARA_QUIRKS_IN_MUA = [
+_CPARA_QUIRKS_IN_MU_A = [
     "Usually, μA agrees with the consensus.",
     #
     " Indeed, where extant, it more or less ",my_html.bold("defines")," the consensus.",
