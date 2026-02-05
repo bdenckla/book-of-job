@@ -76,7 +76,7 @@
     },
     {
       "field": "qr-generic-comment",
-      "count": 67
+      "count": 69
     },
     {
       "field": "qr-n_of_m_for_this_verse",
@@ -152,6 +152,10 @@
     },
     {
       "field": "qr-cam1753-img-intro",
+      "count": 1
+    },
+    {
+      "field": "qr-jc-img",
       "count": 1
     },
     {

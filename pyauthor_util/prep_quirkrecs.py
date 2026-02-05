@@ -14,6 +14,13 @@ def _add_nbd(quirkrec):
     return {**quirkrec, "nbd": nb_dict(quirkrec)}
 
 
+_INFO_ABOUT_OPTIONAL_IMAGES = [
+    ("qr-aleppo-img", "Aleppo-CCVV.png"),
+    ("qr-cam1753-img", "Cam1753-CCVV.png"),
+    ("qr-jc-img", "Jerusalem-Crown-CCVV.png"),
+]
+
+
 def _add_auto_imgs(jobn_rel_top, quirkrec):
     """Auto-detect LC, Aleppo, and Cam1753 images if files exist on disk."""
     result = quirkrec.copy()
@@ -23,11 +30,11 @@ def _add_auto_imgs(jobn_rel_top, quirkrec):
         result["qr-lc-img"] = lc_img(quirkrec)
     lc_img_path = f"{jobn_rel_top}/img/{result['qr-lc-img']}"
     assert os.path.exists(lc_img_path), f"Missing LC image: {lc_img_path}"
-    # Auto-detect Aleppo and Cam1753 images
-    for field, prefix in [("qr-aleppo-img", "Aleppo-"), ("qr-cam1753-img", "Cam1753-")]:
+    # Auto-detect Aleppo, Cam1753, and other optional images
+    for field, example_filename in _INFO_ABOUT_OPTIONAL_IMAGES:
         if result.get(field):
             continue  # Already explicitly set
-        auto_img = f"{prefix}{sid}.png"
+        auto_img = example_filename.replace("-CCVV.png", f"-{sid}.png")
         auto_path = f"{jobn_rel_top}/img/{auto_img}"
         if os.path.exists(auto_path):
             result[field] = auto_img

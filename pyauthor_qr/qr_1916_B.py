@@ -13,7 +13,7 @@ _GENCOM_PARA_1 = [
 _GENCOM_PARA_2 = [
     "In μL, there is some extra ink on the right side of the גרש מוקדם,",
     " which could, perhaps, be a misplaced רביע,",
-    " but I find this unlikely."
+    " but I find this unlikely.",
 ]
 RECORD_1916_B = {
     "qr-noted-by-mam": True,

@@ -191,11 +191,16 @@ _MI_ARGS = {
         "qr-cam1753-img-intro",
         "qr-cam1753-img",
     ],
+    "mi-args-jc": [
+        "Jerusalem Crown",
+        "qr-jc-img-intro",
+        "qr-jc-img",
+    ],
 }
 
 
-def _maybe_img(quirkrec, mi_args):
-    ms_name, iikey, ipkey = _MI_ARGS[mi_args]
+def _maybe_one_img(quirkrec, mi_args_key):
+    ms_name, iikey, ipkey = _MI_ARGS[mi_args_key]
     maybe_img_path = quirkrec.get(ipkey)
     if maybe_img_path is None:
         return []
@@ -205,6 +210,13 @@ def _maybe_img(quirkrec, mi_args):
         intro = []
     cpara = [ms_name, *intro, ":"]
     return [author.para(cpara), _img(maybe_img_path)]
+
+
+def _maybe_imgs(quirkrec):
+    result = []
+    for mi_args_key in _MI_ARGS.keys():
+        result.extend(_maybe_one_img(quirkrec, mi_args_key))
+    return result
 
 
 def _maybe_bhq(bhq):
@@ -296,7 +308,6 @@ def _make_details_html(quirkrec):
         *_maybe_bhq(quirkrec.get("qr-bhq")),
         _dpe(quirkrec),
         _img(quirkrec["qr-lc-img"]),
-        *_maybe_img(quirkrec, "mi-args-aleppo"),
-        *_maybe_img(quirkrec, "mi-args-cam1753"),
+        *_maybe_imgs(quirkrec),
         my_html.horizontal_rule(),
     ]

@@ -104,13 +104,18 @@ _CPARA13 = [
 ]
 _CLIST13 = [
     [
-        "The דעת מקרא (Da-at Miqra) series,",
-        " particularly the volumes with sections called",
+        f"The דעת מקרא (Da-at Miqra) series,",
+        f" particularly the volumes with sections called",
         f" “הנוסח ומקורותיו”",
         f" (Breuer et al., {num_range(1970, 2003)})",
     ],
-    ["Biblia Hebraica Leningradensia ($BHL) (Dotan, 2001)"],
-    ["The Westminster Leningrad Codex ($WLC) (electronic) (editions dating back to the 1980s)"],
+    [
+        "Biblia Hebraica Leningradensia ($BHL) (Dotan, 2001)",
+    ],
+    [
+        "The Westminster Leningrad Codex ($WLC) (electronic)",
+        " (editions dating back to the 1980s)",
+    ],
 ]
 _CPARA14 = [
     "The first fascicle of $BHQ (Megilloth) came out in 2004.",
@@ -185,7 +190,7 @@ _CPARA25 = [
     #
     " I assume that $BHQ Job is at least broadly representative of the $BHQ series so far,",
     " although each fascicle has a different primary editor",
-    " and may have different editorial teams working with that editor."
+    " and may have different editorial teams working with that editor.",
 ]
 
 

@@ -2,7 +2,7 @@ from py import my_html
 from pyauthor_util import author
 
 
-_COMMENT_3812_B = [
+_GENCOM_1 = [
     "The consensus is that this is one of those כתיב/קרי cases",
     " where the word boundary shifts",
     " from being after a ה to before that ה.",
@@ -15,6 +15,24 @@ _COMMENT_3812_B = [
     " In contrast to the consensus, in going from כתיב to קרי,",
     [" μL can be though of as having ", my_html.bold("copied")],
     " the ה to the second word rather than moving it.",
+]
+_GENCOM_2 = [
+    "Aside: the Jerusalem Crown edition, despite normally staying quite close to μA,",
+    " found μA’s pointing of the כתיב to be too confusing for its body text,",
+    " relegating it to an appendix.",
+    #
+    " The question is where on the כתיב letters",
+    " should we put the פתח that implicitly belongs to the ה of השחר.",
+    #
+    " Both μA and μL put this פתח on the ה of ידעתה.",
+    #
+    " In its body text, the Jerusalem Crown edition puts the פתח on no letter:",
+    " instead, it floats before the ש of שחר.",
+    #
+    " A vowel mark floating like this before a כתיב word has manuscript precedent.",
+    # XXX Give some examples of this precedent.
+    " I.e. although the Jerusalem Crown edition is diverging from the manuscript here,",
+    " it is not divering from manuscript tradition in general by using this notation."
 ]
 _BHQ_COMMENT_3812_B = [
     "$BHS does not catch this quirk in μL: it reflects the consensus rather than μL.",
@@ -29,7 +47,10 @@ RECORD_3812_B = {
     "qr-lc-proposed": "יִדַּ֖עְתָּה הַשַּׁ֣חַר",
     "qr-what-is-weird": "ה copied not moved in קרי",
     "qr-consensus": "יִדַּ֖עְתָּ הַשַּׁ֣חַר",
-    "qr-generic-comment": [author.para(_COMMENT_3812_B)],
+    "qr-generic-comment": [
+        author.para(_GENCOM_1),
+        author.para(_GENCOM_2),
+    ],
     "qr-highlight-lc-proposed": 5,
     "qr-lc-loc": {"page": "408A", "column": 1, "line": -11},
     "qr-aleppo-page-url": "https://www.mgketer.org/mikra/29/38/1/mg/106",

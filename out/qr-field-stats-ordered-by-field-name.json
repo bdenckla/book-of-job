@@ -72,7 +72,7 @@
     },
     {
       "field": "qr-generic-comment",
-      "count": 67
+      "count": 69
     },
     {
       "field": "qr-highlight",
@@ -89,6 +89,10 @@
     {
       "field": "qr-highlight-lc-proposed",
       "count": 17
+    },
+    {
+      "field": "qr-jc-img",
+      "count": 1
     },
     {
       "field": "qr-lc-img",

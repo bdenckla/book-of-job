@@ -595,6 +595,9 @@
       "column": 1,
       "line": 27
     },
+    "qr-generic-comment": [
+      "An argument could be made that it is μL not μA that represents the consensus here. For example, the Jerusalem Crown edition, despite normally staying quite close to μA, has עולה on א in its body text and only notes in an appendix that μA has עולה on ה."
+    ],
     "qr-lc-img": "0720.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3128,6 +3131,9 @@
       "column": 1,
       "line": 15
     },
+    "qr-generic-comment": [
+      "An argument could be made that it is μL not μA that represents the consensus here. For example, the Jerusalem Crown edition, despite normally staying quite close to μA, has לגרמיה in its body text and only notes in an appendix that μA has no לגרמיה.See the MAM documentation for this word for a list of where various manuscripts fall on this issue."
+    ],
     "qr-lc-img": "3102.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4308,6 +4314,12 @@
           },
           " the ה to the second word rather than moving it."
         ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "Aside: the Jerusalem Crown edition, despite normally staying quite close to μA, found μA’s pointing of the כתיב to be too confusing for its body text, relegating it to an appendix. The question is where on the כתיב letters should we put the פתח that implicitly belongs to the ה of השחר. Both μA and μL put this פתח on the ה of ידעתה. In its body text, the Jerusalem Crown edition puts the פתח on no letter: instead, it floats before the ש of שחר. A vowel mark floating like this before a כתיב word has manuscript precedent. I.e. although the Jerusalem Crown edition is diverging from the manuscript here, it is not divering from manuscript tradition in general by using this notation."
+        ]
       }
     ],
     "qr-highlight-lc-proposed": 5,
@@ -4357,6 +4369,7 @@
     "qr-noted-by": "nWLC",
     "qr-lc-img": "3812-2of2ftv.png",
     "qr-aleppo-img": "Aleppo-3812-2of2ftv.png",
+    "qr-jc-img": "Jerusalem-Crown-3812-2of2ftv.png",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
