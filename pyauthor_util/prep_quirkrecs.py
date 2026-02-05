@@ -45,7 +45,6 @@ def _sort_key(quirkrec):
 
 def prep_quirkrecs(jobn_rel_top, json_outdir):
     qrs_1 = sorted(QUIRKRECS, key=_sort_key)
-    qrs_1 = [qr for qr in qrs_1 if qr.get("qr-lc-proposed")]  # XXX temporary
     qrs_2 = sl_map((_add_auto_imgs, jobn_rel_top), qrs_1)
     qrs_3 = sl_map(_add_nbd, qrs_2)
     qrs_4 = flatten_qrs(qrs_3)

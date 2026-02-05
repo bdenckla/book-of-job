@@ -8,6 +8,7 @@ from pyauthor_util.common_titles_etc import (
     D2_H1_CONTENTS,
     D2_FNAME,
     d3_anchor,
+    d4_anchor,
 )
 from pyauthor_util.num_range import num_range
 from pyauthor_util.intro import intro

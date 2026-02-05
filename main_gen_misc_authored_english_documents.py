@@ -10,6 +10,7 @@ from pyauthor import (
     job1_full_list_details,
     job2_main_article,
     job3_uxlc,
+    job4_quirks_in_mua,
 )
 from pyauthor_util.common_titles_etc import d2_anchor
 from pyauthor_util.job_ov_and_de import make_ov_and_de
@@ -35,7 +36,7 @@ def main():
     job1_full_list_details.gen_html_file(tdm_ch, ov_and_de)
     job2_main_article.gen_html_file(tdm_ch, ov_and_de, qr_groups)
     job3_uxlc.gen_html_file(tdm_ch, ov_and_de, qr_groups)
-    #
+    job4_quirks_in_mua.gen_html_file(tdm_ch, ov_and_de, qr_groups)
     _write_index_dot_html((css_href,), "docs/index.html")
 
 

@@ -1992,6 +1992,32 @@
     }
   },
   {
+    "qr-noted-by-mam": true,
+    "qr-noted-by": "aDM",
+    "qr-cv": "19:16",
+    "qr-n_of_m_for_this_verse": [
+      2,
+      2
+    ],
+    "qr-ac-proposed": "בְּ֝מוֹ־פִ֗י",
+    "qr-consensus": "בְּמוֹ־פִ֝֗י",
+    "qr-what-is-weird": "רביע מוגרש spans מקף!",
+    "qr-lc-loc": {
+      "page": "402B",
+      "column": 1,
+      "line": 8
+    },
+    "qr-under-construction": true,
+    "qr-lc-img": "1916-2of2ftv.png",
+    "nbd": {
+      "e:BHQ": "xBHQ",
+      "e:BHL": "xBHL",
+      "e:DM": "aDM",
+      "e:WLC": "xWLC",
+      "e:UXLC": "xUXLC"
+    }
+  },
+  {
     "qr-cv": "19:28",
     "qr-lc-proposed": "תֹ֖אמְרוּ",
     "qr-what-is-weird": "טרחא not דחי",
@@ -2473,6 +2499,31 @@
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
       "e:DM": "xDM",
+      "e:WLC": "xWLC",
+      "e:UXLC": "xUXLC"
+    }
+  },
+  {
+    "qr-noted-by-mam": true,
+    "qr-noted-by": "aDM",
+    "qr-cv": "23:5",
+    "qr-ac-proposed": "מַה־יֹּֽאמַר־לִֽי",
+    "qr-consensus": "מַה־יֹּ֥אמַר לִֽי",
+    "qr-what-is-weird": "μA has מקף after יאמר.",
+    "qr-generic-comment": [
+      "In addition to the מקף question, there is also some question of מרכא vs געיה."
+    ],
+    "qr-lc-loc": {
+      "page": "403B",
+      "column": 2,
+      "line": 11
+    },
+    "qr-under-construction": true,
+    "qr-lc-img": "2305.png",
+    "nbd": {
+      "e:BHQ": "xBHQ",
+      "e:BHL": "xBHL",
+      "e:DM": "aDM",
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     }

@@ -1,69 +1,69 @@
 {
   "description": "Count of fields used in quirkrecs (ordered by count descending)",
-  "total_quirkrecs": 156,
+  "total_quirkrecs": 158,
   "fields": [
     {
       "field": "nbd",
-      "count": 156
+      "count": 158
     },
     {
       "field": "nbd.e:BHL",
-      "count": 156
+      "count": 158
     },
     {
       "field": "nbd.e:BHQ",
-      "count": 156
+      "count": 158
     },
     {
       "field": "nbd.e:DM",
-      "count": 156
+      "count": 158
     },
     {
       "field": "nbd.e:UXLC",
-      "count": 156
+      "count": 158
     },
     {
       "field": "nbd.e:WLC",
-      "count": 156
+      "count": 158
     },
     {
       "field": "qr-consensus",
-      "count": 156
+      "count": 158
     },
     {
       "field": "qr-cv",
-      "count": 156
+      "count": 158
     },
     {
       "field": "qr-lc-img",
-      "count": 156
+      "count": 158
     },
     {
       "field": "qr-lc-loc",
-      "count": 156
+      "count": 158
     },
     {
       "field": "qr-lc-loc.column",
-      "count": 156
+      "count": 158
     },
     {
       "field": "qr-lc-loc.line",
-      "count": 156
+      "count": 158
     },
     {
       "field": "qr-lc-loc.page",
-      "count": 156
-    },
-    {
-      "field": "qr-lc-proposed",
-      "count": 156
+      "count": 158
     },
     {
       "field": "qr-noted-by",
-      "count": 156
+      "count": 158
     },
     {
       "field": "qr-what-is-weird",
+      "count": 158
+    },
+    {
+      "field": "qr-lc-proposed",
       "count": 156
     },
     {
@@ -76,15 +76,15 @@
     },
     {
       "field": "qr-generic-comment",
-      "count": 65
+      "count": 66
     },
     {
       "field": "qr-under-construction",
-      "count": 38
+      "count": 40
     },
     {
       "field": "qr-n_of_m_for_this_verse",
-      "count": 21
+      "count": 22
     },
     {
       "field": "qr-lc-q",
@@ -119,16 +119,20 @@
       "count": 6
     },
     {
+      "field": "qr-noted-by-mam",
+      "count": 6
+    },
+    {
       "field": "qr-uxlc-position-within-verse",
       "count": 5
     },
     {
-      "field": "qr-noted-by-mam",
-      "count": 4
-    },
-    {
       "field": "qr-bhq",
       "count": 3
+    },
+    {
+      "field": "qr-ac-proposed",
+      "count": 2
     },
     {
       "field": "qr-cam1753-img",

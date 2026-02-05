@@ -105,8 +105,19 @@ def _std_bcvp_quad(quirkrec):
     return bkid, chnu, vrnu, atnu
 
 
+def _key_for_proposed(quirkrec):
+    lcp = quirkrec.get("qr-lc-proposed")
+    acp = quirkrec.get("qr-ac-proposed")
+    assert not (lcp and acp), "Both qr-lc-proposed and qr-ac-proposed are set!"
+    if lcp:
+        return "qr-lc-proposed"
+    if acp:
+        return "qr-ac-proposed"
+    assert False, f"Neither qr-lc-proposed nor qr-ac-proposed is set! {quirkrec}"
+
+
 def _lcp_and_con(quirkrec):
-    hlcp = highlight(quirkrec, "qr-lc-proposed")
+    hlcp = highlight(quirkrec, _key_for_proposed(quirkrec))
     hcon = highlight(quirkrec, "qr-consensus")
     if lc_q := quirkrec.get("qr-lc-q"):
         assert lc_q == "(?)"
