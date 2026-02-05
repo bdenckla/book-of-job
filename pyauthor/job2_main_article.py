@@ -244,7 +244,7 @@ _CPARA18_PART3 = [
     f" of the $BHQ reiterations",
     f" are not new, i.e. they were already present in $BHS.",
     #
-    " Indeed it may be the other editions that are reiterating $BHS in these cases.",
+    " Indeed the other editions’ source may be $BHS in these cases.",
     #
     " Nonetheless we refer to all of them as reiterations by $BHQ.",
     #

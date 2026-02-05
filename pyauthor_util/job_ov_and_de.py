@@ -31,14 +31,14 @@ def make_ov_and_de(quirkrecs):
 
 
 def make_example_row():
-    hlcp = color("μL-proposed", "qr-lc-proposed")
+    hlcp = color("proposed", "qr-lc-proposed")
     hcon = color("consensus", "qr-consensus")
     lcp_and_con = [hlcp, my_html.line_break(), hcon]
     return my_html.table_row(
         [
             my_html.table_datum(lcp_and_con),
             my_html.table_datum("# c:v"),
-            my_html.table_datum("how μL-proposed differs from consensus"),
+            my_html.table_datum("how proposed differs from consensus"),
         ]
     )
 
