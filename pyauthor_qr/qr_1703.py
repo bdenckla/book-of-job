@@ -7,6 +7,8 @@ RECORD_1703 = {
     "qr-highlight": 1,
     "qr-generic-comment": [
         "This case is the opposite of 3:4, except there the קמץ is not קטן."
+        " Some very faint remains of what might have been a “קמץ dot” can perhaps be seen",
+        " under the horizontal line that is transcribed as a פתח.",
     ],
     "qr-lc-loc": {"page": "402A", "column": 1, "line": 4},
 }

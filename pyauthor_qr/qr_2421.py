@@ -1,5 +1,5 @@
 _COMMENT_2421 = [
-    "Perhaps there is some super-faint evidence of a third dot that would make a סגול,",
+    "Perhaps there is some very faint evidence of a third dot that would make a סגול,",
     " but this could be just wishful thinking.",
     " Note that there is a third dot above the two clearer dots,",
     " but I take that to be part of the ע that did not flake off like its neighboring ink did.",

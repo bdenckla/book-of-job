@@ -1367,13 +1367,13 @@
               "WLC"
             ]
           },
-          " has the proposed transcription of μL above. Note that the word in question has a rare and hard-to-understand phenomenon called “secondary מהפך” by Breuer. It may seem rather extraordinary that this געיה immediately follows the מהפך, but this is actually expected (or at least “allowed”) if the מהפך is secondary, as it is here."
+          " has the proposed transcription of μL above. I find this transcription far-fetched. Note that the consensus has a rare and hard-to-understand phenomenon called “secondary מהפך” by Breuer. It may seem rather extraordinary that in the consensus, געיה immediately follows the מהפך, but this is actually expected (or at least “allowed”) if the מהפך is secondary, as it is here, according to Breuer."
         ]
       },
       {
         "_htel_tag": "p",
         "contents": [
-          "The word ",
+          "The consensus word ",
           {
             "_htel_tag": "bdi",
             "attr": {
@@ -1468,7 +1468,7 @@
       "line": -3
     },
     "qr-bhq-comment": [
-      "$BHQ benefits from ignoring $WLC here, though $BHQ likely ignored $WLC as a whole rather than considering and rejecting this particular change in $WLC relative to $BHS."
+      "In my opinion, $BHQ benefits from ignoring $WLC here, though $BHQ likely ignored $WLC as a whole rather than considering and rejecting this particular change in $WLC relative to $BHS."
     ],
     "qr-noted-by": "nWLC",
     "qr-lc-img": "1413.png",
@@ -1671,7 +1671,7 @@
     "qr-what-is-weird": "פתח not קמץ (קטן)",
     "qr-highlight": 1,
     "qr-generic-comment": [
-      "This case is the opposite of 3:4, except there the קמץ is not קטן."
+      "This case is the opposite of 3:4, except there the קמץ is not קטן. Some very faint remains of what might have been a “קמץ dot” can perhaps be seen under the horizontal line that is transcribed as a פתח."
     ],
     "qr-lc-loc": {
       "page": "402A",
@@ -1931,7 +1931,7 @@
     "qr-what-is-weird": "דגש may fight רפה",
     "qr-consensus": "חֶרְפָּתִֽי׃",
     "qr-generic-comment": [
-      "A דגש on a letter with רפה doesn’t make sense. The color image of μL reveals this דגש to be unlikely. Judged to be just a speck, not a דגש, in Viktor Golinets, “Dageš, Mappiq, Specks on Vellum, and Editing of the Codex Leningradensis”, $KUSATU 15/2013, p. 251 (2013)."
+      "A דגש on a letter with רפה doesn’t make sense. The color image of μL reveals this דגש to be unlikely. It is judged to be just a speck, not a דגש, in Viktor Golinets, “Dageš, Mappiq, Specks on Vellum, and Editing of the Codex Leningradensis”, $KUSATU 15/2013, p. 251 (2013)."
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {
@@ -2321,7 +2321,7 @@
     "qr-what-is-weird": "ל lacks קמץ־אתנח",
     "qr-consensus": "וּשְׁלָ֑ם",
     "qr-generic-comment": [
-      "Perhaps some super-faint remains of an אתנח under ל can be seen. The top dot of the שווא (under the ש) is super-faint. See my entry for 22:21 עמי for μA and μY images."
+      "Perhaps some very faint remains of an אתנח under ל can be seen. The top dot of the שווא (under the ש) is very faint. See my entry for 22:21 עמי for μA and μY images."
     ],
     "qr-highlight": 3,
     "qr-bhq-comment": [
@@ -2733,7 +2733,7 @@
     "qr-what-is-weird": "maybe צירה not סגול",
     "qr-consensus": "רֹעֶ֣ה",
     "qr-generic-comment": [
-      "Perhaps there is some super-faint evidence of a third dot that would make a סגול, but this could be just wishful thinking. Note that there is a third dot above the two clearer dots, but I take that to be part of the ע that did not flake off like its neighboring ink did."
+      "Perhaps there is some very faint evidence of a third dot that would make a סגול, but this could be just wishful thinking. Note that there is a third dot above the two clearer dots, but I take that to be part of the ע that did not flake off like its neighboring ink did."
     ],
     "qr-highlight": 2,
     "qr-lc-loc": {
@@ -2834,7 +2834,7 @@
     "qr-what-is-weird": "מקף is absent",
     "qr-consensus": "חַי־",
     "qr-generic-comment": [
-      "Perhaps there was a מקף that was ignored during re-inking, leaving only is some super-faint evidence of this מקף. By the way, the evidence for the דחי on the א of the next word is super-faint."
+      "Perhaps there was a מקף that was ignored during re-inking, leaving only is some very faint evidence of this מקף. By the way, the evidence for the דחי on the א of the next word is very faint."
     ],
     "qr-highlight-consensus": 3,
     "qr-lc-loc": {

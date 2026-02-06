@@ -3,20 +3,22 @@ from pyauthor_util import author
 _COMMENT_1413_PARA1 = [
     "$WLC has the proposed transcription of μL above.",
     #
-    " Note that the word in question has a rare and hard-to-understand",
+    " I find this transcription far-fetched.",
+    #
+    " Note that the consensus has a rare and hard-to-understand",
     " phenomenon called “secondary מהפך” by Breuer."
     #
-    " It may seem rather extraordinary that this געיה",
+    " It may seem rather extraordinary that in the consensus, געיה",
     " immediately follows the מהפך,",
     " but this is actually expected (or at least “allowed”)",
-    " if the מהפך is secondary, as it is here.",
+    " if the מהפך is secondary, as it is here, according to Breuer.",
 ]
 _FOI_H2 = "foi-sec-star-breuer-cos.html#intro-11.66.rn1"
 _FOI_H1 = "https://bdenckla.github.io/MAM-with-doc/foi/"
 _FOI_ANC = author.anc_h("here", f"{_FOI_H1}{_FOI_H2}")
 _MAM_ANC = author.anc_h("$MAM", "https://purl.org/mam/hebrew-wikisource")
 _COMMENT_1413_PARA2 = [
-    ["The word ", author.hbo("תָּ֤שִֽׁית"), " may be easier to understand"],
+    ["The consensus word ", author.hbo("תָּ֤שִֽׁית"), " may be easier to understand"],
     " if one considers it",
     [" and ", author.hbo("לִ֖י"), " (the next word)"],
     " to form a compound word"
@@ -58,7 +60,7 @@ RECORD_1413 = {
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "401A", "column": 1, "line": -3},
     "qr-bhq-comment": [
-        "$BHQ benefits from ignoring $WLC here,",
+        "In my opinion, $BHQ benefits from ignoring $WLC here,",
         " though $BHQ likely ignored $WLC as a whole",
         " rather than considering and rejecting",
         " this particular change in $WLC relative to $BHS.",

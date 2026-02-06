@@ -1,9 +1,9 @@
 _COMMENT_2702 = [
     "Perhaps there was a מקף",
     " that was ignored during re-inking,",
-    " leaving only is some super-faint evidence of this מקף.",
+    " leaving only is some very faint evidence of this מקף.",
     " By the way, the evidence for the דחי",
-    " on the א of the next word is super-faint.",
+    " on the א of the next word is very faint.",
 ]
 _BHQ_COMMENT_2702 = [
     "$BHQ silently supplies the מקף that is the consensus expectation,",
