@@ -10,7 +10,24 @@ def dollar_sub_g(dispatch, contents):
     arguments and return an HTML element (usually a span)."""
     flat_1 = my_html.flatten(contents)
     assert flat_1 is not None
+    _check_no_undollared(dispatch, flat_1)
     return sl_map((_dollar_sub_flat_el, dispatch), flat_1)
+
+
+def _check_no_undollared(dispatch, flat_list):
+    """Check that un-dollared identifiers don't appear in the input."""
+    strings = [el for el in flat_list if isinstance(el, str)]
+    full_text = "".join(strings)
+    for key in dispatch:
+        if key.startswith("$"):
+            undollared = key[1:]
+            if re.search(rf"(?<!\$)\b{re.escape(undollared)}\b", full_text):
+                snippet = full_text[:200] if len(full_text) > 200 else full_text
+                raise ValueError(
+                    f"Found '{undollared}' without '$' prefix. "
+                    f"Did you mean '{key}'?\n"
+                    f"Context: {snippet!r}"
+                )
 
 
 def _dollar_sub_flat_el(dispatch, flat_el):
