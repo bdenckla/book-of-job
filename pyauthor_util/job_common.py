@@ -14,22 +14,21 @@ CAM1753_PAGE_URL_BASE = (
     "https://archive.org/details/ketuvim-cambridge-ms-add-1753-images/page"
 )
 _SEE_3419 = [" See my entry on נכר in 34:19 for further discussion."]
+_MORE_BROADLY = [
+    "More broadly, $BHQ Job never notes",
+    " any uncertainty in its transcription of μL.",
+    " This may mislead many readers.",
+    " Despite the fact that",
+    " high-resolution, color images of μL are now widely available,",
+    " many readers will not engage with those images enough to understand how often",
+    " there is great uncertainty in transcribing μL.",
+    " And, even if the reader understands that such uncertainty exists in general,",
+    " $BHQ should, in my opinion, indicate to the reader the specific cases",
+    " where its transcription is particularly uncertain.",
+]
 _CORRECTLY_IGNORES_3419 = [
     author.para(core_ignores("")),
-    author.para(
-        [
-            "More broadly, $BHQ Job never notes",
-            " any uncertainty in its transcription of μL.",
-            " This may mislead many readers.",
-            " Despite the fact that",
-            " high-resolution, color images of μL are now widely available,",
-            " many readers will not engage with those images enough to understand how often",
-            " there is great uncertainty in transcribing μL.",
-            " And, even if the reader understands that such uncertainty exists in general,",
-            " $BHQ should, in my opinion, indicate to the reader the specific cases",
-            " where its transcription is particularly uncertain.",
-        ]
-    ),
+    author.para(_MORE_BROADLY),
 ]
 _CORRECTLY_IGNORES = {
     "34:19": _CORRECTLY_IGNORES_3419,
