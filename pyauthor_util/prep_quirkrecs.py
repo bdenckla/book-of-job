@@ -10,15 +10,30 @@ from pyauthor_util.qr_make_json_outputs import (
 from pycmn.my_utils import sl_map
 
 
-def _add_nbd(quirkrec):
-    return {**quirkrec, "nbd": nb_dict(quirkrec)}
-
-
 _INFO_ABOUT_OPTIONAL_IMAGES = [
     ("qr-aleppo-img", "Aleppo-CCVV.png"),
     ("qr-cam1753-img", "Cam1753-CCVV.png"),
     ("qr-jc-img", "Jerusalem-Crown-CCVV.png"),
 ]
+
+
+def prep_quirkrecs(jobn_rel_top, json_outdir):
+    qrs_1 = sorted(QUIRKRECS, key=_sort_key)
+    qrs_2 = sl_map((_add_auto_imgs, jobn_rel_top), qrs_1)
+    qrs_3 = sl_map(_add_nbd, qrs_2)
+    qrs_4 = flatten_qrs(qrs_3)
+    _assert_lc_img_fields_filled(qrs_4)
+    write_qr_field_stats_json(
+        qrs_4,
+        f"{json_outdir}/qr-field-stats-ordered-by-count.json",
+        f"{json_outdir}/qr-field-stats-ordered-by-field-name.json",
+    )
+    write_quirkrecs_json(qrs_4, f"{json_outdir}/quirkrecs.json")
+    return qrs_4
+
+
+def _add_nbd(quirkrec):
+    return {**quirkrec, "nbd": nb_dict(quirkrec)}
 
 
 def _add_auto_imgs(jobn_rel_top, quirkrec):
@@ -48,18 +63,3 @@ def _assert_lc_img_fields_filled(qrs):
 
 def _sort_key(quirkrec):
     return short_id(quirkrec)
-
-
-def prep_quirkrecs(jobn_rel_top, json_outdir):
-    qrs_1 = sorted(QUIRKRECS, key=_sort_key)
-    qrs_2 = sl_map((_add_auto_imgs, jobn_rel_top), qrs_1)
-    qrs_3 = sl_map(_add_nbd, qrs_2)
-    qrs_4 = flatten_qrs(qrs_3)
-    _assert_lc_img_fields_filled(qrs_4)
-    write_qr_field_stats_json(
-        qrs_4,
-        f"{json_outdir}/qr-field-stats-ordered-by-count.json",
-        f"{json_outdir}/qr-field-stats-ordered-by-field-name.json",
-    )
-    write_quirkrecs_json(qrs_4, f"{json_outdir}/quirkrecs.json")
-    return qrs_4

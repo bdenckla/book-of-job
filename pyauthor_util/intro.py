@@ -7,23 +7,12 @@ _VARIANTS = {
 }
 
 
-def _each(each):
-    return [f"{each} takes the following form:"]
-
-
 _WHERE_LIST = [
     "proposed is a proposed transcription of μL or, rarely, μA",
     "consensus is the Masoretic consensus reading (or a good guess of it)",
     "# (hash sign) (number sign) is a link to more details on this quirk",
     "c:v is the chapter and verse of the book of Job",
 ]
-
-
-def _where():
-    return [
-        author.para("Where:"),
-        author.unordered_list(_WHERE_LIST),
-    ]
 
 
 def intro(ov_or_de):
@@ -43,3 +32,14 @@ def here_is(start, jda=None):
         jdae = [" For more details, see the ", jda]
         return out + jdae
     return out
+
+
+def _each(each):
+    return [f"{each} takes the following form:"]
+
+
+def _where():
+    return [
+        author.para("Where:"),
+        author.unordered_list(_WHERE_LIST),
+    ]

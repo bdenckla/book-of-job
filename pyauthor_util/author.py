@@ -179,6 +179,10 @@ def anc_h(contents, href_val):
     return my_html.anchor_h(dollar_sub(contents), href_val)
 
 
+def span_color(text, color):
+    return my_html.span(text, {"style": f"color: {color}"})
+
+
 # def pasoleg_pas(string: str):
 #     return _pasoleg_xxx(string, "$sub_pe")
 
@@ -460,10 +464,6 @@ _DOLLAR_SUB_DISPATCH = {
     **_ABBR_SC,
     **_ROMANIZED,
 }
-
-
-def span_color(text, color):
-    return my_html.span(text, {"style": f"color: {color}"})
 
 
 # אבגדה וזחטי כלמנס עפצקר שת
