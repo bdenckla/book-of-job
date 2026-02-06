@@ -1,7 +1,9 @@
-""" Exports highlight and color"""
+"""Highlight Hebrew text clusters based on quirkrec settings."""
 
 import re
 from pyauthor_util.author import span_color
+
+__all__ = ["highlight", "color"]
 
 
 def highlight(quirkrec, key):

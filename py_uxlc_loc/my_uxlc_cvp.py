@@ -1,4 +1,6 @@
-"""Exports make, chapnver, get_povr, decrement_povr, set_povr"""
+"""Chapter, verse, and part-of-verse (cvp) handling."""
+
+__all__ = ["make", "chapnver", "get_povr", "decrement_povr", "set_povr"]
 
 
 def make(chnu, vrnu, povr):

@@ -1,7 +1,9 @@
-"""Exports give_std_mark_order, has_std_mark_order, give_aht_mark_order"""
+"""Unicode denormalization for Hebrew mark ordering."""
 
 import re
 from pycmn import hebrew_points as hpo
+
+__all__ = ["give_std_mark_order", "has_std_mark_order", "give_aht_mark_order"]
 
 
 def give_std_mark_order(string):

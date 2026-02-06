@@ -1,7 +1,9 @@
-"""Exports flatten_one"""
+"""Flatten LCI records for JSON export."""
 
 import py_uxlc_loc.my_uxlc_lci_rec as lci_rec
 import py_uxlc_loc.my_uxlc_cvp as cvp
+
+__all__ = ["flatten"]
 
 
 def flatten(lcir):

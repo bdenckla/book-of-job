@@ -1,8 +1,10 @@
-"""Exports read_all_books, read."""
+"""Read UXLC XML files."""
 
 import xml.etree.ElementTree
 
 import py_uxlc_loc.my_tanakh_book_names as tbn
+
+__all__ = ["read_all_books", "read"]
 
 
 def read_all_books(path_to_uxlc, handlers=None):

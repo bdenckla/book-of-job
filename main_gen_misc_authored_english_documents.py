@@ -1,4 +1,4 @@
-""" Exports main """
+"""Generate HTML documentation for this project."""
 
 import glob
 import os
@@ -17,6 +17,7 @@ from pyauthor_util.common_titles_etc import d2_anchor
 from pyauthor_util.job_ov_and_de import make_ov_and_de
 from pyauthor_util.get_qr_groups import get_qr_groups
 
+__all__ = ["main"]
 
 def main():
 

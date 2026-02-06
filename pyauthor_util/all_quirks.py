@@ -1,6 +1,8 @@
-""" Exports AllQuirks """
+"""Data class for all quirks and related data."""
 
 from dataclasses import dataclass
+
+__all__ = ["AllQuirks"]
 
 
 @dataclass

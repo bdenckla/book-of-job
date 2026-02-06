@@ -1,6 +1,8 @@
-""" Exports lcloc """
+"""Format Leningrad Codex location references."""
 
 from py import my_html
+
+__all__ = ["lcloc"]
 
 
 def lcloc(lcloc):

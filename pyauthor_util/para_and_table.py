@@ -1,9 +1,11 @@
-""" Exports para_and_table """
+"""Generate paragraph and table of quirks for a group."""
 
 from pyauthor_util import author
 from pyauthor_util.all_quirks import AllQuirks
 from pyauthor_util.intro import intro
 from pyauthor_util.job_ov_and_de import row_id
+
+__all__ = ["para_and_table"]
 
 
 def para_and_table(aq: AllQuirks, para_func, group_key, extra_paras=None):

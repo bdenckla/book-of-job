@@ -1,4 +1,4 @@
-"""Exports prep, estimate, page_and_guesses."""
+"""Estimate locations in the Leningrad Codex."""
 
 import py_uxlc_loc.my_uxlc_cvp as cvp
 import py_uxlc_loc.my_uxlc_lci_augrec as lci_augrec
@@ -7,6 +7,8 @@ import py_uxlc_loc.my_uxlc_bibdist as bibdist
 import py_uxlc_loc.my_uxlc_page_break_info as page_break_info
 import py_uxlc_loc.my_tanakh_book_names as tbn
 import py_uxlc_loc.my_uxlc as my_uxlc
+
+__all__ = ["prep", "estimate", "page_and_guesses"]
 
 
 def prep(paths_dict):
