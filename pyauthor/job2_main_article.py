@@ -31,7 +31,10 @@ def _make_cbody(aq: AllQuirks):
         author.para(_CPARA11),
         author.para(_CPARA12),
         author.para_ul(_CPARA13, _CLIST13),
-        author.para_ul(_CPARA14, _CLIST14),
+        author.para(_CPARA14A),
+        author.para(_CPARA14B1),
+        author.para(_CPARA14B2),
+        author.para(_CPARA14C),
         author.para_ul(_CPARA15, _CLIST15),
         author.para(_CPARA24),
         author.para(_CPARA25),
@@ -123,14 +126,14 @@ _CPARA14 = [
     " That means that all three of the above editions were available to the $BHQ editors",
     " for all fascicles of $BHQ.",
 ]
-_CLIST14_ITEM1 = [
+_CPARA14A = [
     "All volumes of דעת מקרא predate $BHQ Megilloth."
     " Other works by Breuer are cited as sources in some fascicles of $BHQ,",
     " but the $BHQ editors",
     " seem to have been unaware of or uninterested in",
     " Breuer’s relevant work in דעת מקרא.",
 ]
-_CLIST14_ITEM2 = [
+_CPARA14B1 = [
     "Dotan’s $BHL predates $BHQ Megilloth.",
     #
     " Before he died, Dotan was even a consultant to the $BHQ project.",
@@ -139,9 +142,11 @@ _CLIST14_ITEM2 = [
     #
     " So it is particularly puzzling that most of the $BHQ editors",
     " seem to have been unaware of or uninterested in",
-    " Dotan’s relevant work in $BHL’s Appendix A.",
+    " his relevant work in $BHL’s Appendix A.",
+]
+_CPARA14B2 = [
     #
-    " Exceptions include Prof. Abraham Tal, editor of $BHQ Genesis."
+    "Exceptions include Prof. Abraham Tal, editor of $BHQ Genesis."
     #
     " Prof. Tal declines to reiterate all of Dotan’s relevant work,",
     " a reasonable albeit disappointing editorial decision.",
@@ -153,7 +158,7 @@ _CLIST14_ITEM2 = [
     " Similarly, Prof. Jan de Waard, in the Introduction to $BHQ Proverbs, says,",
     " “An exhaustive list of these variations can be found in [$BHL Appendix A].”",
 ]
-_CLIST14_ITEM3 = [
+_CPARA14C = [
     "$WLC has had various releases over its decades, many predating $BHQ Megilloth.",
     #
     " It is by far the most popular digital Hebrew Bible.",
@@ -167,11 +172,6 @@ _CLIST14_ITEM3 = [
     " the reverse seems to be false since the $BHQ editors",
     " seem to have been unaware of or uninterested in",
     " $WLC, whose notes are particularly relevant to $BHQ.",
-]
-_CLIST14 = [
-    _CLIST14_ITEM1,
-    _CLIST14_ITEM2,
-    _CLIST14_ITEM3,
 ]
 _CPARA15 = [
     "Although it may already be clear, I should explicitly state that",
