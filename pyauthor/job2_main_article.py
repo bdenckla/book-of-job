@@ -110,16 +110,17 @@ _BETTER_EDITIONS = [
 _THE_THREE_EDITIONS = [
     [
         "The דעת מקרא (Da-at Miqra) series,",
-        " particularly the volumes with sections called",
-        " “הנוסח ומקורותיו”",
+        " particularly its",
+        " “הנוסח ומקורותיו” sections",
         f" (Breuer et al., {num_range(1970, 2003)}).",
     ],
     [
-        "Biblia Hebraica Leningradensia ($BHL) (Dotan, 2001),",
-        " particularly its Appendix A ($BHL_A).",
+        "Biblia Hebraica Leningradensia ($BHL),",
+        " particularly its Appendix A ($BHL_A) (Dotan, 2001).",
     ],
     [
-        "The Westminster Leningrad Codex ($WLC) (electronic)",
+        "The Westminster Leningrad Codex ($WLC), particularly its notes",
+        " (e.g. its ]1 and ]c notes),",
         " (editions dating back to the 1980s).",
     ],
 ]
