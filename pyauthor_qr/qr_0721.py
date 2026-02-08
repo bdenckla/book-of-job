@@ -5,8 +5,9 @@ RECORD_0721 = {
     "qr-consensus": "וְשִׁ֖חַרְתַּ֣נִי",
     "qr-generic-comment": [
         "It doesn’t make sense to have a חטף vowel (aka a חטף שווא)",
-        " followed by a simple שווא.",
-        " Yet, the manuscript image clearly shows this.",
+        " immediately followed by a simple שווא.",
+        " Yet, the manuscript image clearly shows this:",
+        " a חטף פתח (under ח) is immediately followed by a simple שווא (under ר).",
     ],
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "399A", "column": 2, "line": 3},

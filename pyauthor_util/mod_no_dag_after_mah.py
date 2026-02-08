@@ -13,7 +13,7 @@ _SHADDAI_VERSES = [
     "27:13",
 ]
 # Job verses where L omits dagesh after מה
-NO_DAG_AFTER_MAH_VERSES = [
+_NO_DAG_AFTER_MAH_VERSES = [
     "16:6",
     *_SHADDAI_VERSES,
     "34:33",
@@ -28,7 +28,7 @@ def _all_verses_but_this(verses: list[str], cv: str) -> str:
 
 
 def _all_ndam_but_this(cv: str) -> str:
-    return _all_verses_but_this(NO_DAG_AFTER_MAH_VERSES, cv)
+    return _all_verses_but_this(_NO_DAG_AFTER_MAH_VERSES, cv)
 
 
 def _all_shaddai_but_this(cv: str) -> str:

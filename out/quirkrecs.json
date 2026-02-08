@@ -613,7 +613,7 @@
     "qr-what-is-weird": "פתח on ח is חטף",
     "qr-consensus": "וְשִׁ֖חַרְתַּ֣נִי",
     "qr-generic-comment": [
-      "It doesn’t make sense to have a חטף vowel (aka a חטף שווא) followed by a simple שווא. Yet, the manuscript image clearly shows this."
+      "It doesn’t make sense to have a חטף vowel (aka a חטף שווא) immediately followed by a simple שווא. Yet, the manuscript image clearly shows this: A חטף פתח (under ח) is immediately followed by a simple שווא (under ר)."
     ],
     "qr-highlight": 3,
     "qr-lc-loc": {
@@ -2863,7 +2863,7 @@
     "qr-cv": "27:9",
     "qr-consensus": "הֲֽ֭צַעֲקָתוֹ",
     "qr-lc-proposed": "הַֽ֭צַעֲקָתוֹ",
-    "qr-what-is-weird": "פתח is full not חטף ($DM footnotes 19 & 20)",
+    "qr-what-is-weird": "פתח on ה is not חטף",
     "qr-highlight": 1,
     "qr-lc-loc": {
       "page": "404B",
@@ -3803,7 +3803,7 @@
     ],
     "qr-consensus": "הֲֽמֵעִמְּךָ֬",
     "qr-lc-proposed": "הַֽמֵעִמְּךָ֬",
-    "qr-what-is-weird": "פתח is full not חטף ($DM footnotes 19 & 20)",
+    "qr-what-is-weird": "פתח on ה is not חטף",
     "qr-highlight": 1,
     "qr-lc-loc": {
       "page": "407A",
