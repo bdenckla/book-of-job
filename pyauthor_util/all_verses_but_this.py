@@ -12,12 +12,10 @@ _PTX_IS_NOT_XTF_VERSES = [
     "27:9",
     "34:33",
 ]
-
-
-def _all_verses_but_this(verses: list[str], cv: str) -> str:
-    """Return an English-formatted list of verses, excluding cv."""
-    others = [v for v in verses if v != cv]
-    return english_list(others)
+_LEG_MISSING_BEFORE_G3YH_RBY3_VERSES = [
+    "32:11",
+    "34:33",
+]
 
 
 def ptx_is_not_xtf(cv: str) -> list[str]:
@@ -31,21 +29,11 @@ def ptx_is_not_xtf(cv: str) -> list[str]:
     ]
 
 
-def _all_ndam_but_this(cv: str) -> str:
-    return _all_verses_but_this(_NO_DAG_AFTER_MAH_VERSES, cv)
-
-
 def no_dag_after_mah(cv: str) -> list[str]:
     return [
         "As $DM footnote 25 mentions, the omission of דגש after מה־",
         *[" is common in μL. See ", _all_ndam_but_this(cv), "."],
     ]
-
-
-_LEG_MISSING_BEFORE_G3YH_RBY3_VERSES = [
-    "32:11",
-    "34:33",
-]
 
 
 def leg_missing_before_g3yh_rby3(cv: str) -> list[str]:
@@ -57,3 +45,13 @@ def leg_missing_before_g3yh_rby3(cv: str) -> list[str]:
         " In both cases, it looks like there may have been an erasure in between the words,",
         " where one would expect a לגרמיה to have been, if one was originally present in μL.",
     ]
+
+
+def _all_verses_but_this(verses: list[str], cv: str) -> str:
+    """Return an English-formatted list of verses, excluding cv."""
+    others = [v for v in verses if v != cv]
+    return english_list(others)
+
+
+def _all_ndam_but_this(cv: str) -> str:
+    return _all_verses_but_this(_NO_DAG_AFTER_MAH_VERSES, cv)

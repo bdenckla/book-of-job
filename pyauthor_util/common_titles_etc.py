@@ -4,12 +4,12 @@ from py import my_html
 from pyauthor_util import author
 
 
-def _d4_title(bhq="BHQ"):
+def d4_title(bhq="BHQ"):
     return f"{bhq} Job: quirks in μA"
 
 
-D4_TITLE = _d4_title()
-D4_H1_CONTENTS = _d4_title(bhq="$BHQ")
+D4_TITLE = d4_title()
+D4_H1_CONTENTS = d4_title(bhq="$BHQ")
 D4_FNAME = "job4_quirks_in_mu_a.html"
 
 
@@ -18,12 +18,12 @@ def d4_anchor(jobn_dir="."):
     return author.std_anchor(anc, D4_H1_CONTENTS)
 
 
-def _d3_title(bhq="BHQ", uxlc="UXLC"):
+def d3_title(bhq="BHQ", uxlc="UXLC"):
     return f"{bhq} Job: cases where {uxlc} could have helped"
 
 
-D3_TITLE = _d3_title()
-D3_H1_CONTENTS = _d3_title(bhq="$BHQ", uxlc="$UXLC")
+D3_TITLE = d3_title()
+D3_H1_CONTENTS = d3_title(bhq="$BHQ", uxlc="$UXLC")
 D3_FNAME = "job3_uxlc.html"
 
 
@@ -32,12 +32,12 @@ def d3_anchor(jobn_dir="."):
     return author.std_anchor(anc, D3_H1_CONTENTS)
 
 
-def _d2_title(bhq="BHQ"):
+def d2_title(bhq="BHQ"):
     return f"{bhq} Job was made in a bubble"
 
 
-D2_TITLE = _d2_title()
-D2_H1_CONTENTS = _d2_title(bhq="$BHQ")
+D2_TITLE = d2_title()
+D2_H1_CONTENTS = d2_title(bhq="$BHQ")
 D2_FNAME = "job2_main_article.html"
 
 

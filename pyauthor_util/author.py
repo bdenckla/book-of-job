@@ -183,6 +183,10 @@ def span_color(text, color):
     return my_html.span(text, {"style": f"color: {color}"})
 
 
+def span_rtl(contents):
+    return my_html.span(contents, {"dir": "rtl"})
+
+
 # def pasoleg_pas(string: str):
 #     return _pasoleg_xxx(string, "$sub_pe")
 
@@ -464,10 +468,6 @@ _DOLLAR_SUB_DISPATCH = {
     **_ABBR_SC,
     **_ROMANIZED,
 }
-
-
-def span_rtl(contents):
-    return my_html.span(contents, {"dir": "rtl"})
 
 
 # אבגדה וזחטי כלמנס עפצקר שת
