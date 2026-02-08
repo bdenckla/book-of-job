@@ -167,7 +167,7 @@ _BHL_PREDATES = [
     " his relevant work in $BHL_A.",
 ]
 _AWARE_OF_BHL = [
-    "The editors of the some fascicles",
+    "The editors of some fascicles",
     " cite $BHL_A in their Introductions",
     " (Genesis, Leviticus, and Proverbs)."
     #
