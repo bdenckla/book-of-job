@@ -198,15 +198,16 @@ _WE_ARE_NOW_LEFT = [
     " and these are just the few that happen to document it."
 ]
 _JUDGES = [
-    "The Introduction to $BHQ Judges makes a rather clear (and to me striking) statement",
-    " of its editorial threshold",
-    " for noting quirks in μL relative to its chosen reference manuscripts:",
+    "Though it does not cite $BHL_A,",
+    " $BHQ Judges is similarly explicit",
+    " about its Masoretic limitations:",
     #
-    " “Only those divergencies that are meaningful for translation or exegesis",
+    " “Only those divergencies [of μL from consensus]",
+    " that are meaningful for translation or exegesis",
     " have been noted in the apparatus.”",
     #
     " This is disappointing, but good to know, so that one can", 
-    " avoid wasting any time with $BHQ Judges if,",
+    " avoid $BHQ Judges if,",
     " for example, one’s interests include cantillation.",
     #
     " (Although cantillation quirks are common in μL,",
