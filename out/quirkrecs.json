@@ -75,7 +75,7 @@
     "qr-cv": "3:4",
     "qr-consensus": "מִמַּ֑עַל",
     "qr-lc-proposed": "מִמָּ֑עַל",
-    "qr-what-is-weird": "מ has קמץ not פתח ($DM footnote 4)",
+    "qr-what-is-weird": "מ has קמץ not פתח",
     "qr-highlight": 2,
     "qr-lc-loc": {
       "page": "397B",
@@ -301,7 +301,7 @@
     "qr-cv": "5:24",
     "qr-consensus": "נָ֝וְךָ֗",
     "qr-lc-proposed": "נָ֝וְךָ",
-    "qr-what-is-weird": "רביע of רביע מוגרש is absent ($DM footnote 9)",
+    "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 3,
     "qr-generic-comment": [
       "The dot above the final $khaf ( ך ) might at first glance appear to be a candidate for the possibly-expected רביע, but it is almost certainly the קמץ dot belonging to the word-part השלמה־ above, which, coincidentally, is part of our entry for 5:23."
@@ -448,7 +448,7 @@
     "qr-cv": "6:21",
     "qr-consensus": "לֹ֑א",
     "qr-lc-proposed": "ל֑וֹ",
-    "qr-what-is-weird": "קרי of לו not לא ($DM footnotes 10 & 11)",
+    "qr-what-is-weird": "קרי of לו not לא",
     "qr-highlight": [
       1,
       2
@@ -1608,6 +1608,9 @@
       "column": 2,
       "line": 7
     },
+    "qr-generic-comment": [
+      "As $DM footnote 25 mentions, the omission of דגש after the word 'מה' is common in μL. See 21:15."
+    ],
     "qr-lc-img": "1606.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2122,9 +2125,9 @@
     "qr-cv": "21:15",
     "qr-consensus": "מַה־שַּׁדַּ֥י",
     "qr-lc-proposed": "מַה־שַׁדַּ֥י",
-    "qr-what-is-weird": "ש lacks דגש ($DM footnote 25)",
+    "qr-what-is-weird": "ש lacks דגש",
     "qr-generic-comment": [
-      "24:1 and 27:13 are analogous."
+      "As $DM footnote 25 mentions, the omission of דגש after the word 'מה' is common in μL. See 16:6. 24:1 and 27:13 are analogous."
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {
@@ -2882,7 +2885,7 @@
     "qr-what-is-weird": "ש lacks דגש",
     "qr-consensus": "מִשַּׁדַּ֥י",
     "qr-generic-comment": [
-      "21:15 and 24:1 are analogous."
+      "As $DM footnote 25 mentions, the omission of דגש after the word 'מה' is common in μL. See 16:6 and 21:15. 21:15 and 24:1 are analogous."
     ],
     "qr-highlight": 2,
     "qr-lc-loc": {

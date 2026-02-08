@@ -60,6 +60,7 @@ def _make_cbody(aq: AllQuirks):
     ]
     return cbody
 
+
 _NOT_A_SCHOLARLY = [
     "It may come as a surprise to some that $BHQ Job",
     " does not include, at its core,",
@@ -195,7 +196,7 @@ _WE_ARE_NOW_LEFT = [
     " for more information about the quirks in μL.",
     #
     " Perhaps all fascicles are uneven by design, i.e. uneven by editorial policy,",
-    " and these are just the few that happen to document it."
+    " and these are just the few that happen to document it.",
 ]
 _JUDGES = [
     "Though it does not cite $BHL_A,",
@@ -206,7 +207,7 @@ _JUDGES = [
     " that are meaningful for translation or exegesis",
     " have been noted in the apparatus.”",
     #
-    " This is disappointing, but good to know, so that one can", 
+    " This is disappointing, but good to know, so that one can",
     " avoid $BHQ Judges if,",
     " for example, one’s interests include cantillation.",
     #
@@ -230,7 +231,7 @@ _WLC_PREDATES = [
     " $WLC, whose notes are particularly relevant to $BHQ.",
     #
     " This is puzzling since Alan Groves was intimately involved",
-    " in both the $WLC and $BHQ projects."
+    " in both the $WLC and $BHQ projects.",
 ]
 _MY_PURPOSES = [
     "Although it may already be clear, I should explicitly state that",

@@ -2,7 +2,7 @@
 
 from pyauthor_util import author
 from pyauthor_util.all_quirks import AllQuirks
-from pyauthor_util.intro import intro
+from pyauthor_util.introduce_quirkrec_table import intro
 from pyauthor_util.job_ov_and_de import row_id
 
 __all__ = ["para_and_table"]

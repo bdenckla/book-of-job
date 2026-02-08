@@ -5,7 +5,7 @@ RECORD_0524 = {
     "qr-cv": "5:24",
     "qr-consensus": "נָ֝וְךָ֗",
     "qr-lc-proposed": "נָ֝וְךָ",
-    "qr-what-is-weird": "רביע of רביע מוגרש is absent ($DM footnote 9)",
+    "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 3,
     "qr-generic-comment": [
         "The dot above the",

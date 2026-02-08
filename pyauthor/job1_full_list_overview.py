@@ -6,7 +6,7 @@ from pyauthor_util.common_titles_etc import (
     D1V_H1_CONTENTS,
     D1V_TITLE,
 )
-from pyauthor_util.intro import intro, here_is
+from pyauthor_util.introduce_quirkrec_table import intro, here_is
 from py import my_html
 from pyauthor_util import author
 
