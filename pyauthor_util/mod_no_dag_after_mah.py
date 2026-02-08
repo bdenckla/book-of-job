@@ -19,12 +19,28 @@ _NO_DAG_AFTER_MAH_VERSES = [
     "34:33",
     "35:7",
 ]
+_PTX_IS_NOT_XTF_VERSES = [
+    "9:35",
+    "27:9",
+    "34:33",
+]
 
 
 def _all_verses_but_this(verses: list[str], cv: str) -> str:
     """Return an English-formatted list of verses, excluding cv."""
     others = [v for v in verses if v != cv]
     return english_list(others)
+
+
+def ptx_is_not_xtf(cv: str) -> list[str]:
+    return [
+        "As $DM footnote 20 mentions, this is one of three such cases, the other two being",
+        *[" ", _all_verses_but_this(_PTX_IS_NOT_XTF_VERSES, cv), "."],
+        " In all three cases,",
+        " the consensus has געיה on an initial vocal שווא notated as a חטף פתח.",
+        " In μL, the געיה is on an initial פתח,",
+        " a full (albeit short) syllable rather than a שווא.",
+    ]
 
 
 def _all_ndam_but_this(cv: str) -> str:

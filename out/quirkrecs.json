@@ -613,7 +613,7 @@
     "qr-what-is-weird": "פתח on ח is חטף",
     "qr-consensus": "וְשִׁ֖חַרְתַּ֣נִי",
     "qr-generic-comment": [
-      "It doesn’t make sense to have a חטף vowel (aka a חטף שווא) immediately followed by a simple שווא. Yet, the manuscript image clearly shows this: A חטף פתח (under ח) is immediately followed by a simple שווא (under ר)."
+      "It doesn’t make sense to have a חטף vowel (aka a חטף שווא) immediately followed by a simple שווא. Yet, the manuscript image clearly shows this: a חטף פתח (under ח) is immediately followed by a simple שווא (under ר)."
     ],
     "qr-highlight": 3,
     "qr-lc-loc": {
@@ -897,6 +897,9 @@
       "line": -8
     },
     "qr-noted-by": "tBHQ-nBHL-nDM",
+    "qr-generic-comment": [
+      "As $DM footnote 20 mentions, this is one of three such cases, the other two being 27:9 and 34:33. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
+    ],
     "qr-lc-img": "0935.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2870,6 +2873,9 @@
       "column": 1,
       "line": 7
     },
+    "qr-generic-comment": [
+      "As $DM footnote 20 mentions, this is one of three such cases, the other two being 9:35 and 34:33. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
+    ],
     "qr-lc-img": "2709.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3810,6 +3816,9 @@
       "column": 1,
       "line": 16
     },
+    "qr-generic-comment": [
+      "As $DM footnote 20 mentions, this is one of three such cases, the other two being 9:35 and 27:9. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
+    ],
     "qr-lc-img": "3433-1of4ftv.png",
     "nbd": {
       "e:BHQ": "tBHQ",
