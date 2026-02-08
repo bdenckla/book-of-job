@@ -3448,13 +3448,16 @@
     "qr-cv": "32:11",
     "qr-consensus": "הוֹחַ֨לְתִּי׀",
     "qr-lc-proposed": "הוֹחַ֨לְתִּי",
-    "qr-what-is-weird": "לגרמיה is absent ($DM footnotes 19 & 32)",
+    "qr-what-is-weird": "לגרמיה is absent",
     "qr-highlight": 7,
     "qr-lc-loc": {
       "page": "406A",
       "column": 2,
       "line": 1
     },
+    "qr-generic-comment": [
+      "As $DM footnote 32 mentions, in two cases in Job, μL omits the לגרמיה stroke before a word with געיה and רביע. The other such case is 34:33. In both cases, it looks like there may have been an erasure in between the words, where one would expect a לגרמיה to have been, if one was originally present in μL."
+    ],
     "qr-lc-img": "3211.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3862,13 +3865,16 @@
     ],
     "qr-consensus": "יְשַׁלְּמֶ֨נָּה׀",
     "qr-lc-proposed": "יְשַׁלְּמֶ֨נָּה",
-    "qr-what-is-weird": "לגרמיה is absent ($DM footnote 32)",
+    "qr-what-is-weird": "לגרמיה is absent",
     "qr-highlight": 7,
     "qr-lc-loc": {
       "page": "407A",
       "column": 1,
       "line": 18
     },
+    "qr-generic-comment": [
+      "As $DM footnote 32 mentions, in two cases in Job, μL omits the לגרמיה stroke before a word with געיה and רביע. The other such case is 32:11. In both cases, it looks like there may have been an erasure in between the words, where one would expect a לגרמיה to have been, if one was originally present in μL. In this case here in 34:33, there is an additional mark after the possible erasure. This mark is hard to interpret."
+    ],
     "qr-lc-img": "3433-3of4ftv.png",
     "nbd": {
       "e:BHQ": "tBHQ",

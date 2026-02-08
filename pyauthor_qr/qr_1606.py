@@ -11,5 +11,5 @@ RECORD_1606 = {
     "qr-lc-loc": {"page": "401B", "column": 2, "line": 7},
     "qr-generic-comment": [
         no_dag_after_mah("16:6"),
-    ]
+    ],
 }

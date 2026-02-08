@@ -1,10 +1,17 @@
+from pyauthor_util.all_verses_but_this import leg_missing_before_g3yh_rby3
+
 RECORD_3433_3of4ftv = {
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "34:33",
     "qr-n_of_m_for_this_verse": (3, 4),
     "qr-consensus": "יְשַׁלְּמֶ֨נָּה׀",
     "qr-lc-proposed": "יְשַׁלְּמֶ֨נָּה",
-    "qr-what-is-weird": "לגרמיה is absent ($DM footnote 32)",
+    "qr-what-is-weird": "לגרמיה is absent",
     "qr-highlight": 7,
     "qr-lc-loc": {"page": "407A", "column": 1, "line": 18},
+    "qr-generic-comment": [
+        *leg_missing_before_g3yh_rby3("34:33"),
+        " In this case here in 34:33, there is an additional mark after the possible erasure.",
+        " This mark is hard to interpret.",
+    ],
 }

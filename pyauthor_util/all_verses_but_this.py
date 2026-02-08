@@ -47,7 +47,7 @@ def _all_shaddai_but_this(cv: str) -> str:
 def no_dag_after_mah(cv: str) -> list[str]:
     return [
         "As $DM footnote 25 mentions, the omission of דגש after מה־",
-        " is common in μL. See ", _all_ndam_but_this(cv), ".",
+        *[" is common in μL. See ", _all_ndam_but_this(cv), "."],
     ]
 
 
@@ -55,5 +55,22 @@ def no_dag_after_mah_shaddai(cv: str) -> list[str]:
     return [
         *no_dag_after_mah(cv),
         " Of those, the following are שדי cases like this one:",
-        *[" ",_all_shaddai_but_this(cv), "."],
+        *[" ", _all_shaddai_but_this(cv), "."],
+    ]
+
+
+_LEG_MISSING_BEFORE_G3YH_RBY3_VERSES = [
+    "32:11",
+    "34:33",
+]
+
+
+def leg_missing_before_g3yh_rby3(cv: str) -> list[str]:
+    others = _all_verses_but_this(_LEG_MISSING_BEFORE_G3YH_RBY3_VERSES, cv)
+    return [
+        "As $DM footnote 32 mentions, in two cases in Job,",
+        " μL omits the לגרמיה stroke before a word with געיה and רביע.",
+        *[" The other such case is ", others, "."],
+        " In both cases, it looks like there may have been an erasure in between the words,",
+        " where one would expect a לגרמיה to have been, if one was originally present in μL.",
     ]
