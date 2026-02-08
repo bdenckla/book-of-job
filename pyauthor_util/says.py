@@ -21,7 +21,7 @@ def says(quirkrec):
     if tbhq_and_n3(quirkrec):
         return ["says $BHQ’s implication"]
     if xbhq_and_n3(quirkrec):
-        # yes, the double list is intentional below
+        # yes, the double list, i.e. [[x, y, z]], is intentional below
         return [["says ", _english_says_who(quirkrec), " but not $BHQ"]]
     if tbhq_and_zdw(quirkrec) or tbhq_and_zmw(quirkrec):
         return ["says $BHQ but not $WLC"]
