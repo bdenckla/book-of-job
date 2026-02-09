@@ -76,11 +76,11 @@
     },
     {
       "field": "qr-generic-comment",
-      "count": 83
+      "count": 84
     },
     {
       "field": "qr-bhq-comment",
-      "count": 59
+      "count": 60
     },
     {
       "field": "qr-n_of_m_for_this_verse",
@@ -88,7 +88,7 @@
     },
     {
       "field": "qr-lc-q",
-      "count": 18
+      "count": 19
     },
     {
       "field": "qr-highlight-consensus",

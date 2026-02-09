@@ -6,5 +6,10 @@ RECORD_2908 = {
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 5,
     "qr-lc-loc": {"page": "405A", "column": 1, "line": 12},
-    "qr-generic-comment": "The געיה difference is not important to us here.",
+    "qr-generic-comment": [
+        "As far as I know, this is the only such case that $DM fails to note.",
+        " (It is the policy of $BHL and $WLC",
+        " to merely transcribe such cases, not note them.)",
+        " The געיה difference is not important to us here."
+    ],
 }

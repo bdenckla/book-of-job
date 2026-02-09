@@ -3076,7 +3076,9 @@
       "column": 1,
       "line": 12
     },
-    "qr-generic-comment": "The געיה difference is not important to us here.",
+    "qr-generic-comment": [
+      "As far as I know, this is the only such case that $DM fails to note. (It is the policy of $BHL and $WLC to merely transcribe such cases, not note them.) The געיה difference is not important to us here."
+    ],
     "qr-lc-img": "2908.png",
     "qr-aleppo-img": "Aleppo-2908.png",
     "nbd": {
@@ -3356,8 +3358,9 @@
   {
     "qr-noted-by": "tWLC",
     "qr-cv": "31:15",
-    "qr-consensus": "הֲֽלֹא־בַ֭בֶּטֶן",
+    "qr-consensus": "הֲ‍ֽלֹא־בַ֭בֶּטֶן",
     "qr-lc-proposed": "הֲ‍ֽ֝לֹא־בַ֭בֶּטֶן",
+    "qr-lc-q": "(?)",
     "qr-what-is-weird": "גרש מוקדם may precede דחי",
     "qr-highlight": 1,
     "qr-lc-loc": {
@@ -3366,6 +3369,12 @@
       "line": 4
     },
     "qr-lc-img": "3115.png",
+    "qr-generic-comment": [
+      "A גרש מוקדם accent doesn’t make sense here, and the color image suggests that the mark is not ink."
+    ],
+    "qr-bhq-comment": [
+      "$BHQ has wisely removed the גרש מוקדם that $BHS had here. Unfortunately, as always, $BHQ has not documented this change, leaving it as a painful “exercise left to the reader” to discover such changes."
+    ],
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
