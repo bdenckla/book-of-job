@@ -3,7 +3,10 @@ RECORD_3328 = {
     "qr-cv": "33:28",
     "qr-consensus": "וְ֝חַיָּת֗וֹ",
     "qr-lc-proposed": "וְ֝חַיָּתוֹ",
-    "qr-what-is-weird": "רביע of רביע מוגרש is absent (קרי shown)",
+    "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "406B", "column": 1, "line": 24},
+    "qr-generic-comment": [
+        "Note that above we only show (and are only concerned with) the קרי form."
+    ],
 }

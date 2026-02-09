@@ -1,7 +1,7 @@
 RECORD_3820 = {
     "qr-cv": "38:20",
     "qr-lc-proposed": "תָ֝בִין",
-    "qr-what-is-weird": "ב lacks רביע",
+    "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-consensus": "תָ֝בִ֗ין",
     "qr-generic-comment": [
         "The only mark above the ב is a רפה.",

@@ -2,8 +2,11 @@ RECORD_1209 = {
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "12:9",
     "qr-consensus": "יַד־יְ֝הֹוָ֗ה",
-    "qr-lc-proposed": "יַד־יְ֝הֹוָה",
+    "qr-lc-proposed": "יַד־יְ֝הוָה",
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 6,
     "qr-lc-loc": {"page": "400B", "column": 1, "line": 9},
+    "qr-generic-comment": [
+        "The חולם חסר dot’s absence from μL is not important to us here."
+    ],
 }

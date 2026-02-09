@@ -703,7 +703,7 @@
     "qr-cv": "8:14",
     "qr-lc-proposed": "עַ֝כָּבִישׁ",
     "qr-lc-q": "(?)",
-    "qr-what-is-weird": "ב may lack רביע",
+    "qr-what-is-weird": "רביע of רביע מוגרש may be absent",
     "qr-consensus": "עַ֝כָּבִ֗ישׁ",
     "qr-generic-comment": [
       "Perhaps a רביע is merged into the left end of the (untranscribed) רפה."
@@ -715,12 +715,12 @@
       "column": 2,
       "line": 20
     },
-    "qr-noted-by": "nDM",
+    "qr-noted-by": "nDM-nWLC",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
       "e:DM": "nDM",
-      "e:WLC": "xWLC",
+      "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     }
   },
@@ -1253,7 +1253,7 @@
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "12:9",
     "qr-consensus": "יַד־יְ֝הֹוָ֗ה",
-    "qr-lc-proposed": "יַד־יְ֝הֹוָה",
+    "qr-lc-proposed": "יַד־יְ֝הוָה",
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 6,
     "qr-lc-loc": {
@@ -1261,6 +1261,9 @@
       "column": 1,
       "line": 9
     },
+    "qr-generic-comment": [
+      "The חולם חסר dot’s absence from μL is not important to us here."
+    ],
     "qr-lc-img": "1209.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3499,13 +3502,16 @@
     "qr-cv": "33:28",
     "qr-consensus": "וְ֝חַיָּת֗וֹ",
     "qr-lc-proposed": "וְ֝חַיָּתוֹ",
-    "qr-what-is-weird": "רביע of רביע מוגרש is absent (קרי shown)",
+    "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 4,
     "qr-lc-loc": {
       "page": "406B",
       "column": 1,
       "line": 24
     },
+    "qr-generic-comment": [
+      "Note that above we only show (and are only concerned with) the קרי form."
+    ],
     "qr-lc-img": "3328.png",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4445,7 +4451,7 @@
   {
     "qr-cv": "38:20",
     "qr-lc-proposed": "תָ֝בִין",
-    "qr-what-is-weird": "ב lacks רביע",
+    "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-consensus": "תָ֝בִ֗ין",
     "qr-generic-comment": [
       "The only mark above the ב is a רפה."
@@ -4694,7 +4700,7 @@
     "qr-cv": "39:13",
     "qr-lc-q": "(?)",
     "qr-lc-proposed": "אֶ֝בְרָה",
-    "qr-what-is-weird": "רביע מוגרש may lack רביע",
+    "qr-what-is-weird": "רביע of רביע מוגרש may be absent",
     "qr-consensus": "אֶ֝בְרָ֗ה",
     "qr-generic-comment": [
       "A more charitable interpretation of the image is that the רביע is present but is merged with the masorah circle. (It is fairly clear that a masorah circle is present.) Note that the vertical line above the ר is a סילוק from the line above."

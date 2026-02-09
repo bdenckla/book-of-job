@@ -8,7 +8,7 @@ RECORD_3913 = {
     "qr-cv": "39:13",
     "qr-lc-q": "(?)",
     "qr-lc-proposed": "אֶ֝בְרָה",
-    "qr-what-is-weird": "רביע מוגרש may lack רביע",
+    "qr-what-is-weird": "רביע of רביע מוגרש may be absent",
     "qr-consensus": "אֶ֝בְרָ֗ה",
     "qr-generic-comment": _COMMENT_3913,
     "qr-highlight": 3,
