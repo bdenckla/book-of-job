@@ -46,9 +46,9 @@ def _make_cbody(aq: AllQuirks):
         author.para(_CONTRIBUTIONS),
         para_and_table(aq, _reiterations, "nbhq_and_n3", extra_paras=[_CPARA_RNTQ]),
         para_and_table(aq, _mixed, "tbhq_and_n3"),
-        para_and_table(aq, _bad_news_1, "xbhq_and_n3"),
-        author.para(_cpara31()),
-        author.para(_cpara32(len(aq.qr_groups["nbhq_and_n3"]))),
+        para_and_table(aq, _bad_news_1_part_1, "xbhq_and_n3"),
+        author.para(_BAD_NEWS_1_PART_2),
+        author.para(_bad_news_1_part_3(len(aq.qr_groups["nbhq_and_n3"]))),
         author.para(_bad_news_2(len_dexi, len_misc)),
         para_and_table(aq, _cpara34_dexi, "tbhq_and_zdw"),
         para_and_table(aq, _cpara35_misc, "tbhq_and_zmw"),
@@ -254,8 +254,6 @@ _CPARA_NOT_MY_CONCERN = [
     #
     " But those parts are not my concern.",
 ]
-
-
 _SPECIFICS_OF_BHQ_JOB = [
     "Having criticized $BHQ in general terms,",
     " I will now review the specifics of the $BHQ Book of Job (2024).",
@@ -338,7 +336,7 @@ def _reiterations(the_len):
     return _cpara18_part1(the_len) + _CPARA_REITERATES
 
 
-def _bad_news_1(the_len):
+def _bad_news_1_part_1(the_len):
     return [
         "Now for some bad news:",
         f" the Job fascicle of $BHQ does not transcribe {str(the_len)}",
@@ -353,6 +351,41 @@ def _bad_news_1(the_len):
         " In all but one case, a note is also lacking.",
         " (The one with a note is the one regarding מאום in 31:7,",
         " although the note, too, is inaccurate.)",
+    ]
+
+
+_BAD_NEWS_1_PART_2 = [
+        "I would not expect $BHQ to transcribe and/or note all the above quirks.",
+        #
+        " For example it would be reasonable for the $BHQ editors",
+        " to find some of them unlikely to have been the scribe’s intention,",
+        " for example finding some of them more likely to have been",
+        " an ink-mark made accidentally, or a mark not made by ink at all.",
+        #
+        " It would also be reasonable for the $BHQ editors",
+        " to find some of them likely to have been the scribe’s intention,",
+        " and therefore worthy of transcription,",
+        " but differing from μA and/or μY in ways too minor to note.",
+    ]
+
+
+def _bad_news_1_part_3(len_of_nbhq_and_n3):
+    foo = len_of_nbhq_and_n3 - _COUNT_OF_RNTQ
+    bar = len_of_nbhq_and_n3
+    return [
+        "Nonetheless, the quirks not transcribed and/or noted by $BHQ",
+        " are of high quantity and high average quality.",
+        " This strongly suggest that $BHQ’s editors were either",
+        " unaware of or uninterested in",
+        " the other three editions.",
+        #
+        " I.e. it is unlikely that all these quirks were considered but rejected:",
+        " it is more likely that they were simply not considered at all.",
+        #
+        f" This conclusion is strengthened by the fact that {foo} of the {bar}",
+        " reiterations were already present in $BHS.",
+        f" The source of these {foo} reiterations is almost certainly $BHS,",
+        " not one of the other three editions.",
     ]
 
 
@@ -433,42 +466,6 @@ def _clist36(the_lens):
         f"$BHQ transcribes but does not note {d} quirks found in those editions.",
         f"$BHQ does not transcribe {e} quirks found in those editions.",
         f"$BHQ transcribes but does not note at least {f} likely-false quirks.",
-    ]
-
-
-def _cpara31():
-    return [
-        "I would not expect $BHQ to transcribe and/or note all the above quirks.",
-        #
-        " For example it would be reasonable for the $BHQ editors",
-        " to find some of them unlikely to have been the scribe’s intention,",
-        " for example finding some of them more likely to have been",
-        " an ink-mark made accidentally, or a mark not made by ink at all.",
-        #
-        " It would also be reasonable for the $BHQ editors",
-        " to find some of them likely to have been the scribe’s intention,",
-        " and therefore worthy of transcription,",
-        " but differing from μA and/or μY in ways too minor to note.",
-    ]
-
-
-def _cpara32(len_of_nbhq_and_n3):
-    foo = len_of_nbhq_and_n3 - _COUNT_OF_RNTQ
-    bar = len_of_nbhq_and_n3
-    return [
-        "Nonetheless, the quirks not transcribed and/or noted by $BHQ",
-        " are of high quantity and high average quality.",
-        " This strongly suggest that $BHQ’s editors were either",
-        " unaware of or uninterested in",
-        " the other three editions.",
-        #
-        " I.e. it is unlikely that all these quirks were considered but rejected:",
-        " it is more likely that they were simply not considered at all.",
-        #
-        f" This conclusion is strengthened by the fact that {foo} of the {bar}",
-        " reiterations were already present in $BHS.",
-        f" The source of these {foo} reiterations is almost certainly $BHS,",
-        " not one of the other three editions.",
     ]
 
 
