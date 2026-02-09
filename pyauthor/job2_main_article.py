@@ -49,6 +49,7 @@ def _make_cbody(aq: AllQuirks):
         para_and_table(aq, _bad_news_1_part_1, "xbhq_and_n3"),
         author.para(_BAD_NEWS_1_PART_2),
         author.para(_bad_news_1_part_3(len(aq.qr_groups["nbhq_and_n3"]))),
+        author.para(_BAD_NEWS_1_PART_4),
         author.para(_bad_news_2(len_dexi, len_misc)),
         para_and_table(aq, _cpara34_dexi, "tbhq_and_zdw"),
         para_and_table(aq, _cpara35_misc, "tbhq_and_zmw"),
@@ -355,17 +356,12 @@ def _bad_news_1_part_1(the_len):
 
 
 _BAD_NEWS_1_PART_2 = [
-    "I would not expect $BHQ to transcribe and/or note all the above quirks.",
+    "I would not expect $BHQ to transcribe all the above quirks.",
     #
     " For example it would be reasonable for the $BHQ editors",
     " to find some of them unlikely to have been the scribe’s intention,",
     " for example finding some of them more likely to have been",
     " an ink-mark made accidentally, or a mark not made by ink at all.",
-    #
-    " It would also be reasonable for the $BHQ editors",
-    " to find some of them likely to have been the scribe’s intention,",
-    " and therefore worthy of transcription,",
-    " but differing from μA and/or μY in ways too minor to note.",
 ]
 
 
@@ -373,20 +369,32 @@ def _bad_news_1_part_3(len_of_nbhq_and_n3):
     foo = len_of_nbhq_and_n3 - _COUNT_OF_RNTQ
     bar = len_of_nbhq_and_n3
     return [
-        "Nonetheless, the quirks not transcribed and/or noted by $BHQ",
+        "Nonetheless, the quirks not transcribed by $BHQ",
         " are of high quantity and high average quality.",
-        " This strongly suggest that $BHQ’s editors were either",
-        " unaware of or uninterested in",
-        " the other three editions.",
+        #
+        " This strongly suggests that $BHQ’s editors were either",
+        " unaware of or uninterested in the other three editions.",
         #
         " I.e. it is unlikely that all these quirks were considered but rejected:",
         " it is more likely that they were simply not considered at all.",
         #
         f" This conclusion is strengthened by the fact that {foo} of the {bar}",
         " reiterations were already present in $BHS.",
+        #
         f" The source of these {foo} reiterations is almost certainly $BHS,",
         " not one of the other three editions.",
     ]
+
+
+_BAD_NEWS_1_PART_4 = [
+    "The failure to transcribe these quirks contrasts starkly"
+    " with the $BHQ’s decision to continue and expand upon $BHS’s tradition of interest",
+    " in Masorah notes, both parva and magna.",
+    #
+    " It is puzzling that an edition that is willing to devote so much effort (and space)",
+    " to an area as obscure as Masorah notes is unwilling to devote similar or greater effort",
+    " to improving the transcription accuracy of the pointing of its core text.",
+]
 
 
 def _mixed(the_len):
