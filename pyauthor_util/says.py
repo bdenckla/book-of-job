@@ -11,7 +11,7 @@ def says(quirkrec):
 
 
 def _says_fn_for_xbhq_and_n3(quirkrec):
-        # yes, the double list, i.e. [[x, y, z]], is intentional below
+    # yes, the double list, i.e. [[x, y, z]], is intentional below
     return [["says ", _english_says_who(quirkrec), " but not $BHQ"]]
 
 

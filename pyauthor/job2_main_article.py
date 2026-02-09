@@ -355,18 +355,18 @@ def _bad_news_1_part_1(the_len):
 
 
 _BAD_NEWS_1_PART_2 = [
-        "I would not expect $BHQ to transcribe and/or note all the above quirks.",
-        #
-        " For example it would be reasonable for the $BHQ editors",
-        " to find some of them unlikely to have been the scribe’s intention,",
-        " for example finding some of them more likely to have been",
-        " an ink-mark made accidentally, or a mark not made by ink at all.",
-        #
-        " It would also be reasonable for the $BHQ editors",
-        " to find some of them likely to have been the scribe’s intention,",
-        " and therefore worthy of transcription,",
-        " but differing from μA and/or μY in ways too minor to note.",
-    ]
+    "I would not expect $BHQ to transcribe and/or note all the above quirks.",
+    #
+    " For example it would be reasonable for the $BHQ editors",
+    " to find some of them unlikely to have been the scribe’s intention,",
+    " for example finding some of them more likely to have been",
+    " an ink-mark made accidentally, or a mark not made by ink at all.",
+    #
+    " It would also be reasonable for the $BHQ editors",
+    " to find some of them likely to have been the scribe’s intention,",
+    " and therefore worthy of transcription,",
+    " but differing from μA and/or μY in ways too minor to note.",
+]
 
 
 def _bad_news_1_part_3(len_of_nbhq_and_n3):
