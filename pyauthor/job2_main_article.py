@@ -182,7 +182,7 @@ _AWARE_OF_BHL = [
     " (Genesis, Leviticus, and Proverbs)."
     #
     " Though aware of it, they were not interested in it, at least not enough",
-    " to have it deeply influence the apparatus.",
+    " to have it deeply influence either the apparatus or the body text.",
     #
     " This represents a departure from the strictly diplomatic editorial policy of $BHS.",
     #
@@ -206,7 +206,7 @@ _WE_ARE_NOW_LEFT = [
     " for more information about the quirks in μL.",
     #
     " Perhaps all fascicles are uneven by design, i.e. uneven by editorial policy,",
-    " and these are just the few that happen to document it.",
+    " and these are just the few that happen to document this policy.",
 ]
 _JUDGES = [
     "Though it does not cite $BHL_A,",
@@ -222,8 +222,8 @@ _JUDGES = [
     " for example, one’s interests include cantillation.",
     #
     " (Although cantillation quirks are common in μL,",
-    " I imagine that it is rare to find one",
-    " that causes (or resolves) some problem of translation or exegesis.)",
+    " it is unlikely that any of them",
+    " cause (or resolve) some problem of translation or exegesis.)",
 ]
 _WLC_PREDATES = [
     "$WLC has had various releases over its decades, many predating $BHQ Megilloth.",
@@ -252,7 +252,7 @@ _MY_PURPOSES = [
 ]
 _CLIST_NOT_MY_CONCERN = [
     "witnesses in languages other than Hebrew",
-    "non-Masoretic (e.g. unpointed) Hebrew witnesses",
+    "non-Tiberian Hebrew witnesses (e.g. unpointed ones)",
     "Masorah magna and parva (other than קרי Mp)",
     "the meaning of the text",
 ]
@@ -292,7 +292,7 @@ _AFTER_CONTRIBUTIONS = [
     " are new, i.e. not present in $BHS.",
     #
     " I find some of these proposed transcriptions",
-    " far-fetched, i.e. unlikely to have been the scribe’s intention.",
+    " far-fetched, e.g. unlikely to have been the scribe’s intention.",
     #
     " Nonetheless, I consider even those ones to be valuable contributions",
     " to the documentation of μL.",
@@ -355,7 +355,7 @@ def _bad_news_1(the_len):
         #
         " Not all such missing transcriptions are a bad thing,",
         " as the other editions may occasionally propose transcriptions that are",
-        " far-fetched, i.e. unlikely to have been the scribe’s intention.",
+        " far-fetched, e.g. unlikely to have been the scribe’s intention.",
         #
         " But overall these missing transcriptions reflect poorly on $BHQ Job.",
         #
