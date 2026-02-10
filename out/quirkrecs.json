@@ -20,7 +20,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from yod",
+      "remove"
+    ]
   },
   {
     "qr-cv": "1:21",
@@ -46,7 +50,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from mem",
+      "remove"
+    ]
   },
   {
     "qr-cv": "3:3",
@@ -68,7 +76,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on yod, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -90,7 +102,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "on the second mem, replace patax with qamats",
+      "replace"
+    ]
   },
   {
     "qr-cv": "3:16",
@@ -118,7 +134,11 @@
       "e:WLC": "zmiscWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zmw"
+    "pgroup": "g:tbhq_and_zmw",
+    "qr-auto-diff": [
+      "on alef, replace mahapakh with yetiv",
+      "replace"
+    ]
   },
   {
     "qr-cv": "4:4",
@@ -140,7 +160,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on kaf, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "4:9",
@@ -165,7 +189,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from he",
+      "remove"
+    ]
   },
   {
     "qr-cv": "4:17",
@@ -190,7 +218,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from he",
+      "remove"
+    ]
   },
   {
     "qr-cv": "5:5",
@@ -251,7 +283,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to tsadi",
+      "add non-varika"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -273,7 +309,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove meteg/silluq from the first bet",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -299,7 +339,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from the second lamed",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -324,7 +368,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from final-kaf",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -426,7 +474,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('merkha/yored', 'vav', (1, 2)),), (('meteg/silluq', 'vav', (1, 2)),)), ((('maqaf', 'yod', (1, 1)),), (('space', 'yod', (1, 1)),)))",
+      "deep diff"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -449,7 +501,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('dexi', 'bet', (1, 1)),)), ((('munax', 'ayin', (1, 1)),), None))",
+      null
+    ]
   },
   {
     "qr-noted-by": "nBHQ-nDM",
@@ -498,7 +554,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('xolam', 'lamed', (1, 1)),), None), ((('alef', 'alef', (1, 1)),), (('vav', 'vav', (1, 1)), ('xolam', 'vav', (1, 1)))))",
+      "deep diff"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -521,7 +581,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "move meteg/silluq forward from the first ayin to resh",
+      "move"
+    ]
   },
   {
     "qr-cv": "6:29",
@@ -546,7 +610,11 @@
       "e:WLC": "zmiscWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zmw"
+    "pgroup": "g:tbhq_and_zmw",
+    "qr-auto-diff": [
+      "on shin, replace merkha/yored with meteg/silluq",
+      "replace"
+    ]
   },
   {
     "qr-cv": "7:1",
@@ -569,7 +637,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "add revia to mem",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "7:9",
@@ -591,7 +663,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('meteg/silluq', 'lamed', (1, 1)), ('combining-grapheme-joiner', 'lamed', (1, 1)))), ((('meteg/silluq', 'lamed', (1, 1)),), None))",
+      null
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -618,7 +694,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "move ole forward from he to alef",
+      "move"
+    ]
   },
   {
     "qr-cv": "7:21",
@@ -643,7 +723,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "on xet, replace patax with xataf-patax",
+      "replace"
+    ]
   },
   {
     "qr-cv": "8:1",
@@ -667,7 +751,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from yod",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -689,7 +777,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from bet",
+      "remove"
+    ]
   },
   {
     "qr-cv": "8:7",
@@ -714,7 +806,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('dagesh/mapiq/shuruq-dot', 'vav', (1, 1)),)), ((('meteg/silluq', 'resh', (1, 1)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "8:14",
@@ -740,7 +836,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from bet",
+      "remove"
+    ]
   },
   {
     "qr-cv": "8:16",
@@ -766,7 +866,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on he, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "8:16",
@@ -795,7 +899,11 @@
       "e:WLC": "zmiscWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zmw"
+    "pgroup": "g:tbhq_and_zmw",
+    "qr-auto-diff": [
+      "on yod, replace meteg/silluq with dexi",
+      "replace"
+    ]
   },
   {
     "qr-cv": "9:6",
@@ -819,7 +927,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from pe",
+      "remove"
+    ]
   },
   {
     "qr-cv": "9:10",
@@ -848,7 +960,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "zUXLC"
     },
-    "pgroup": "g:tbhq_and_zuxlc"
+    "pgroup": "g:tbhq_and_zuxlc",
+    "qr-auto-diff": [
+      "remove geresh-muqdam from the first vav",
+      "remove"
+    ]
   },
   {
     "qr-cv": "9:14",
@@ -875,7 +991,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "remove meteg/silluq from mem",
+      "remove"
+    ]
   },
   {
     "qr-cv": "9:30",
@@ -901,7 +1021,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "remove meteg/silluq from pe",
+      "remove"
+    ]
   },
   {
     "qr-cv": "9:35",
@@ -926,7 +1050,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "on alef, replace xataf-patax with patax",
+      "replace"
+    ]
   },
   {
     "qr-cv": "10:1",
@@ -949,7 +1077,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "move revia forward from resh to he",
+      "move"
+    ]
   },
   {
     "qr-cv": "10:6",
@@ -1124,7 +1256,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "zUXLC"
     },
-    "pgroup": "g:tbhq_and_zuxlc"
+    "pgroup": "g:tbhq_and_zuxlc",
+    "qr-auto-diff": [
+      "on vav, replace meteg/silluq with dexi",
+      "replace"
+    ]
   },
   {
     "qr-cv": "10:15",
@@ -1149,7 +1285,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('meteg/silluq', 'yod', (1, 2)), ('combining-grapheme-joiner', 'yod', (1, 2)))), ((('meteg/silluq', 'yod', (1, 2)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "11:3",
@@ -1171,7 +1311,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from vav",
+      "remove"
+    ]
   },
   {
     "qr-cv": "11:6",
@@ -1197,7 +1341,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from he",
+      "remove"
+    ]
   },
   {
     "qr-cv": "11:7",
@@ -1222,7 +1370,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from he",
+      "remove"
+    ]
   },
   {
     "qr-cv": "11:13",
@@ -1246,7 +1398,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "add revia to tav",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "12:3",
@@ -1271,7 +1427,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('maqaf', 'tav', (1, 1)),), None),)",
+      "deep diff"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -1296,7 +1456,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('xolam', 'he', (1, 2)),), None), ((('revia', 'vav', (1, 1)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "12:16",
@@ -1325,7 +1489,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "add meteg/silluq to tav",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "12:19",
@@ -1349,7 +1517,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "zUXLC"
     },
-    "pgroup": "g:tbhq_and_zuxlc"
+    "pgroup": "g:tbhq_and_zuxlc",
+    "qr-auto-diff": [
+      "on alef, replace tipexa/tarxa with meteg/silluq",
+      "replace"
+    ]
   },
   {
     "qr-cv": "14:9",
@@ -1377,7 +1549,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('dagesh/mapiq/shuruq-dot', 'yod', (1, 1)), ('patax', 'yod', (1, 1)))), ((('patax', 'xet', (1, 1)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "14:13",
@@ -1511,7 +1687,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "on shin, replace meteg/silluq with merkha/yored",
+      "replace"
+    ]
   },
   {
     "qr-cv": "15:8",
@@ -1536,7 +1716,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from he",
+      "remove"
+    ]
   },
   {
     "qr-cv": "15:34",
@@ -1559,7 +1743,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "add merkha/yored to shin",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "15:35",
@@ -1600,7 +1788,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('munax', 'yod', (1, 1)),), None), ((('meteg/silluq', 'lamed', (1, 1)),), (('munax', 'lamed', (1, 1)),)))",
+      null
+    ]
   },
   {
     "qr-cv": "16:4",
@@ -1628,7 +1820,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('maqaf', 'vav', (1, 1)),)),)",
+      "deep diff"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -1653,7 +1849,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from the second mem",
+      "remove"
+    ]
   },
   {
     "qr-cv": "16:13",
@@ -1676,7 +1876,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "move meteg/silluq back from tav to the second resh",
+      "move"
+    ]
   },
   {
     "qr-cv": "16:20",
@@ -1701,7 +1905,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from he",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "nDM",
@@ -1726,7 +1934,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "on ayin, replace qamats-qatan with patax",
+      "replace"
+    ]
   },
   {
     "qr-cv": "17:4",
@@ -1796,7 +2008,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to mem",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "17:6",
@@ -1822,7 +2038,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_x3"
+    "pgroup": "g:nbhq_and_x3",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to the second tav",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "17:11",
@@ -1845,7 +2065,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_x3"
+    "pgroup": "g:nbhq_and_x3",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to the second bet",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "18:4",
@@ -1882,7 +2106,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('patax', 'he', (1, 1)), ('meteg/silluq', 'he', (1, 1))), (('xataf-patax', 'he', (1, 1)),)), (None, (('dagesh/mapiq/shuruq-dot', 'mem', (1, 1)),)))",
+      null
+    ]
   },
   {
     "qr-cv": "18:4",
@@ -1921,7 +2149,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('patax', 'he', (1, 1)), ('meteg/silluq', 'he', (1, 1))), (('xataf-patax', 'he', (1, 1)),)), (None, (('dagesh/mapiq/shuruq-dot', 'mem', (1, 1)),)))",
+      null
+    ]
   },
   {
     "qr-cv": "18:6",
@@ -1947,7 +2179,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "on alef, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "18:9",
@@ -1977,7 +2213,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_x3"
+    "pgroup": "g:nbhq_and_x3",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to ayin",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "19:2",
@@ -2003,7 +2243,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "zUXLC"
     },
-    "pgroup": "g:tbhq_and_zuxlc"
+    "pgroup": "g:tbhq_and_zuxlc",
+    "qr-auto-diff": [
+      "add sheva to kaf",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "19:5",
@@ -2032,7 +2276,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('dagesh/mapiq/shuruq-dot', 'tav', (1, 1)), ('rafeh', 'tav', (1, 1)))), ((('sof-pasuq', 'yod', (1, 1)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "19:16",
@@ -2061,7 +2309,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to qof",
+      "add non-varika"
+    ]
   },
   {
     "qr-noted-by-mam": true,
@@ -2107,7 +2359,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:adm"
+    "pgroup": "g:adm",
+    "qr-auto-diff": [
+      "move geresh-muqdam back from pe to bet",
+      "move"
+    ]
   },
   {
     "qr-cv": "19:28",
@@ -2129,7 +2385,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on tav, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -2152,7 +2412,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "move meteg/silluq forward from he to nun",
+      "move"
+    ]
   },
   {
     "qr-cv": "20:23",
@@ -2174,7 +2438,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on bet, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -2197,7 +2465,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "on mem, replace dexi with munax",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -2222,7 +2494,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from shin",
+      "remove"
+    ]
   },
   {
     "qr-cv": "21:25",
@@ -2250,7 +2526,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "on vav, replace sheva with xiriq",
+      "replace"
+    ]
   },
   {
     "qr-cv": "21:34",
@@ -2273,7 +2553,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "zUXLC"
     },
-    "pgroup": "g:tbhq_and_zuxlc"
+    "pgroup": "g:tbhq_and_zuxlc",
+    "qr-auto-diff": [
+      "on shin, replace merkha/yored with meteg/silluq",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -2298,7 +2582,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('meteg/silluq', 'vav', (1, 1)),)), ((('revia', 'final-kaf', (1, 1)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "22:12",
@@ -2323,7 +2611,11 @@
       "e:WLC": "zmiscWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zmw"
+    "pgroup": "g:tbhq_and_zmw",
+    "qr-auto-diff": [
+      "on resh, replace tipexa/tarxa with dexi",
+      "replace"
+    ]
   },
   {
     "qr-cv": "22:14",
@@ -2345,7 +2637,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on lamed, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "22:21",
@@ -2387,7 +2683,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "on mem, replace munax with atnax",
+      "replace"
+    ]
   },
   {
     "qr-cv": "22:21",
@@ -2419,7 +2719,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('qamats', 'lamed', (1, 1)), ('atnax', 'lamed', (1, 1))), None),)",
+      null
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -2447,7 +2751,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('kaf', 'kaf', (1, 1)), ('sheva', 'kaf', (1, 1))), (('bet', 'bet', (1, 1)), ('sheva', 'bet', (1, 1)))),)",
+      "deep diff"
+    ]
   },
   {
     "qr-cv": "22:28",
@@ -2529,7 +2837,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('xolam', 'alef', (1, 1)), ('dexi', 'alef', (1, 1))), (('tipexa/tarxa', 'alef', (1, 1)), ('vav', 'vav', (1, 1)), ('xolam', 'vav', (1, 1)))),)",
+      "deep diff"
+    ]
   },
   {
     "qr-cv": "22:30",
@@ -2563,7 +2875,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('meteg/silluq', 'yod', (1, 1)), ('combining-grapheme-joiner', 'yod', (1, 1)))),)",
+      null
+    ]
   },
   {
     "qr-cv": "22:30",
@@ -2595,7 +2911,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_x3"
+    "pgroup": "g:nbhq_and_x3",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to nun",
+      "add non-varika"
+    ]
   },
   {
     "qr-noted-by-mam": true,
@@ -2622,7 +2942,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:adm"
+    "pgroup": "g:adm",
+    "qr-auto-diff": [
+      "(((('merkha/yored', 'yod', (1, 2)),), (('meteg/silluq', 'yod', (1, 2)),)), ((('space', 'resh', (1, 1)),), (('maqaf', 'resh', (1, 1)),)))",
+      "deep diff"
+    ]
   },
   {
     "qr-cv": "23:6",
@@ -2644,7 +2968,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on kaf, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "24:1",
@@ -2717,7 +3045,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "nUXLC"
     },
-    "pgroup": "g:xbhq_and_nuxlc"
+    "pgroup": "g:xbhq_and_nuxlc",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from shin",
+      "remove"
+    ]
   },
   {
     "qr-cv": "24:5",
@@ -2740,7 +3072,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "zUXLC"
     },
-    "pgroup": "g:tbhq_and_zuxlc"
+    "pgroup": "g:tbhq_and_zuxlc",
+    "qr-auto-diff": [
+      "on the first bet, replace merkha/yored with meteg/silluq",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -2764,7 +3100,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('space', 'yod', (1, 1)),), (('maqaf', 'yod', (1, 1)),)),)",
+      "deep diff"
+    ]
   },
   {
     "qr-cv": "24:16",
@@ -2794,7 +3134,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_x3"
+    "pgroup": "g:nbhq_and_x3",
+    "qr-auto-diff": [
+      "((None, (('dagesh/mapiq/shuruq-dot', 'dalet', (1, 1)), ('rafeh', 'dalet', (1, 1)))),)",
+      null
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -2816,7 +3160,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from nun",
+      "remove"
+    ]
   },
   {
     "qr-cv": "24:21",
@@ -2845,7 +3193,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "on ayin, replace segol-vowel with tsere",
+      "replace"
+    ]
   },
   {
     "qr-cv": "26:14",
@@ -2920,7 +3272,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('vav', 'vav', (1, 2)), ('dagesh/mapiq/shuruq-dot', 'vav', (1, 2))), (('vav', 'vav', (1, 3)), ('dagesh/mapiq/shuruq-dot', 'vav', (1, 3)))), ((('xolam', 'resh', (1, 1)),), (('vav', 'vav', (2, 3)), ('xolam', 'vav', (2, 3)))), ((('vav', 'vav', (2, 2)),), (('vav', 'vav', (3, 3)),)))",
+      "deep diff"
+    ]
   },
   {
     "qr-cv": "27:2",
@@ -2948,7 +3304,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('maqaf', 'yod', (1, 1)),), None),)",
+      "deep diff"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -2973,7 +3333,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "on he, replace xataf-patax with patax",
+      "replace"
+    ]
   },
   {
     "qr-cv": "27:13",
@@ -2999,7 +3363,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "nUXLC"
     },
-    "pgroup": "g:xbhq_and_nuxlc"
+    "pgroup": "g:xbhq_and_nuxlc",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from shin",
+      "remove"
+    ]
   },
   {
     "qr-cv": "28:8",
@@ -3025,7 +3393,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('xiriq', 'resh', (1, 1)),), None), (None, (('qubuts', 'kaf', (1, 1)),)), ((('vav', 'vav', (1, 2)), ('dagesh/mapiq/shuruq-dot', 'vav', (1, 2))), None), ((('vav', 'vav', (2, 2)), ('dagesh/mapiq/shuruq-dot', 'vav', (2, 2))), (('vav', 'vav', (1, 1)), ('dagesh/mapiq/shuruq-dot', 'vav', (1, 1)))))",
+      "deep diff"
+    ]
   },
   {
     "qr-cv": "28:24",
@@ -3047,7 +3419,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on he, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "28:26",
@@ -3075,7 +3451,11 @@
       "e:WLC": "zmiscWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zmw"
+    "pgroup": "g:tbhq_and_zmw",
+    "qr-auto-diff": [
+      "remove xolam from shin",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -3097,7 +3477,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from resh",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-tWLC",
@@ -3123,7 +3507,11 @@
       "e:WLC": "tWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_twlc"
+    "pgroup": "g:tbhq_and_twlc",
+    "qr-auto-diff": [
+      "((None, (('meteg/silluq', 'vav', (1, 1)),)), ((('revia', 'shin', (2, 2)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "29:11",
@@ -3148,7 +3536,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "remove xiriq from yod",
+      "remove"
+    ]
   },
   {
     "qr-cv": "29:19",
@@ -3173,7 +3565,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('meteg/silluq', 'resh', (1, 1)), ('combining-grapheme-joiner', 'resh', (1, 1)))), ((('meteg/silluq', 'resh', (1, 1)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "30:18",
@@ -3195,7 +3591,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on kaf, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "30:22",
@@ -3217,7 +3617,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on resh, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "30:30",
@@ -3239,7 +3643,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on ayin, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -3265,7 +3673,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "add paseq/legarmeih to he",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "31:4",
@@ -3287,7 +3699,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on he, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "31:5",
@@ -3314,7 +3730,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('meteg/silluq', 'lamed', (1, 1)), ('combining-grapheme-joiner', 'lamed', (1, 1)))), ((('meteg/silluq', 'lamed', (1, 1)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "31:7",
@@ -3388,7 +3808,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('meteg/silluq', 'mem', (1, 1)),), (('qubuts', 'mem', (1, 1)),)), (None, (('meteg/silluq', 'vav', (1, 1)),)))",
+      null
+    ]
   },
   {
     "qr-noted-by": "tWLC",
@@ -3417,7 +3841,11 @@
       "e:WLC": "tWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_twlc"
+    "pgroup": "g:xbhq_and_twlc",
+    "qr-auto-diff": [
+      "add geresh-muqdam to he",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "31:19",
@@ -3439,7 +3867,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on alef, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -3461,7 +3893,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from shin",
+      "remove"
+    ]
   },
   {
     "qr-cv": "31:28",
@@ -3483,7 +3919,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on he, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "31:33",
@@ -3506,7 +3946,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "move meteg/silluq back from nun to vav",
+      "move"
+    ]
   },
   {
     "qr-cv": "31:39",
@@ -3528,7 +3972,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on kaf, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "32:6",
@@ -3554,7 +4002,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('atnax', 'shin', (2, 2)), ('combining-grapheme-joiner', 'shin', (2, 2)))), ((('atnax', 'shin', (2, 2)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "32:10",
@@ -3580,7 +4032,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "zUXLC"
     },
-    "pgroup": "g:tbhq_and_zuxlc"
+    "pgroup": "g:tbhq_and_zuxlc",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to dalet",
+      "add non-varika"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -3605,7 +4061,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove paseq/legarmeih from yod",
+      "remove"
+    ]
   },
   {
     "qr-cv": "33:12",
@@ -3630,7 +4090,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from he",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -3655,7 +4119,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from tav",
+      "remove"
+    ]
   },
   {
     "qr-cv": "33:30",
@@ -3682,7 +4150,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "move meteg/silluq back from the first yod to he",
+      "move"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -3705,7 +4177,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "((None, (('dexi', 'alef', (1, 1)),)), ((('munax', 'mem', (1, 1)),), None))",
+      null
+    ]
   },
   {
     "qr-cv": "34:10",
@@ -3777,7 +4253,11 @@
       "e:WLC": "zmiscWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zmw"
+    "pgroup": "g:tbhq_and_zmw",
+    "qr-auto-diff": [
+      "on alef, replace merkha/yored with meteg/silluq",
+      "replace"
+    ]
   },
   {
     "qr-cv": "34:19",
@@ -3895,7 +4375,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to nun",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "34:19",
@@ -3921,7 +4405,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on shin, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "34:22",
@@ -3943,7 +4431,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on xet, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -3972,7 +4464,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "on he, replace xataf-patax with patax",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -3998,7 +4494,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from lamed",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -4027,7 +4527,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove paseq/legarmeih from he",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -4056,7 +4560,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from yod",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -4081,7 +4589,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('shin', 'shin', (1, 1)), ('sin-dot', 'shin', (1, 1)), ('sheva', 'shin', (1, 1))), (('samekh', 'samekh', (1, 1)), ('sheva', 'samekh', (1, 1)))),)",
+      "deep diff"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -4106,7 +4618,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from the second mem",
+      "remove"
+    ]
   },
   {
     "qr-cv": "35:14",
@@ -4128,7 +4644,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on tav, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "36:11",
@@ -4164,7 +4684,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "move ole forward from yod to ayin",
+      "move"
+    ]
   },
   {
     "qr-cv": "36:12",
@@ -4279,7 +4803,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('bet', 'bet', (1, 2)), ('dagesh/mapiq/shuruq-dot', 'bet', (1, 2)), ('xiriq', 'bet', (1, 2)), ('bet', 'bet', (2, 2)), ('sheva', 'bet', (2, 2))), (('kaf', 'kaf', (1, 1)), ('dagesh/mapiq/shuruq-dot', 'kaf', (1, 1)), ('xiriq', 'kaf', (1, 1)), ('bet', 'bet', (1, 1)), ('sheva', 'bet', (1, 1)))),)",
+      "deep diff"
+    ]
   },
   {
     "qr-cv": "36:19",
@@ -4311,7 +4839,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on shin, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "36:29",
@@ -4374,7 +4906,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "add meteg/silluq to kaf",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "37:6",
@@ -4396,7 +4932,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "on the second lamed, replace segol-vowel with patax",
+      "replace"
+    ]
   },
   {
     "qr-cv": "37:19",
@@ -4425,7 +4965,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on he, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "37:19",
@@ -4455,7 +4999,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "zUXLC"
     },
-    "pgroup": "g:tbhq_and_zuxlc"
+    "pgroup": "g:tbhq_and_zuxlc",
+    "qr-auto-diff": [
+      "on lamed, replace meteg/silluq with merkha/yored",
+      "replace"
+    ]
   },
   {
     "qr-cv": "37:20",
@@ -4477,7 +5025,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on lamed, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "38:12",
@@ -4507,7 +5059,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_n3"
+    "pgroup": "g:nbhq_and_n3",
+    "qr-auto-diff": [
+      "on he, replace xataf-patax with sheva",
+      "replace"
+    ]
   },
   {
     "qr-cv": "38:12",
@@ -4594,7 +5150,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "(((('space', 'tav', (1, 1)), ('he', 'he', (1, 1)), ('patax', 'he', (1, 1))), (('he', 'he', (1, 2)), ('space', 'he', (1, 2)), ('he', 'he', (2, 2)), ('patax', 'he', (2, 2)))),)",
+      "deep diff"
+    ]
   },
   {
     "qr-cv": "38:17",
@@ -4617,7 +5177,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_x3"
+    "pgroup": "g:nbhq_and_x3",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to mem",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "38:20",
@@ -4642,7 +5206,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from bet",
+      "remove"
+    ]
   },
   {
     "qr-cv": "38:27",
@@ -4664,7 +5232,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on shin, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "nDM",
@@ -4689,7 +5261,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from mem",
+      "remove"
+    ]
   },
   {
     "qr-cv": "39:2",
@@ -4796,7 +5372,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "on tav, replace revia with geresh",
+      "replace"
+    ]
   },
   {
     "qr-cv": "39:6",
@@ -4819,7 +5399,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "move meteg/silluq back from xet to lamed",
+      "move"
+    ]
   },
   {
     "qr-cv": "39:11",
@@ -4841,7 +5425,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on bet, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "39:12",
@@ -4863,7 +5451,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on bet, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "39:13",
@@ -4892,7 +5484,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from resh",
+      "remove"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -4914,7 +5510,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "add dagesh/mapiq/shuruq-dot to tav",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "39:20",
@@ -4937,7 +5537,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "on he, replace xataf-patax with sheva",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "tBHQ-nDM",
@@ -4962,7 +5566,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from resh",
+      "remove"
+    ]
   },
   {
     "qr-cv": "40:10",
@@ -4986,7 +5594,11 @@
       "e:WLC": "nWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "add meteg/silluq to gimel",
+      "add non-varika"
+    ]
   },
   {
     "qr-cv": "40:19",
@@ -5012,7 +5624,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on he, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-noted-by": "nDM",
@@ -5041,7 +5657,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "remove revia from shin",
+      "remove"
+    ]
   },
   {
     "qr-cv": "40:26",
@@ -5064,7 +5684,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3"
+    "pgroup": "g:tbhq_and_n3",
+    "qr-auto-diff": [
+      "move meteg/silluq back from yod to lamed",
+      "move"
+    ]
   },
   {
     "qr-cv": "40:29",
@@ -5086,7 +5710,11 @@
       "e:WLC": "zdexiWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_zdw"
+    "pgroup": "g:tbhq_and_zdw",
+    "qr-auto-diff": [
+      "on bet, replace dexi with tipexa/tarxa",
+      "replace"
+    ]
   },
   {
     "qr-cv": "41:25",
@@ -5111,7 +5739,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:xbhq_and_n3"
+    "pgroup": "g:xbhq_and_n3",
+    "qr-auto-diff": [
+      "remove meteg/silluq from xet",
+      "remove"
+    ]
   },
   {
     "qr-cv": "42:10",
@@ -5141,7 +5773,11 @@
       "e:WLC": "xWLC",
       "e:UXLC": "zUXLC"
     },
-    "pgroup": "g:tbhq_and_zuxlc"
+    "pgroup": "g:tbhq_and_zuxlc",
+    "qr-auto-diff": [
+      "move darga back from yod to vav",
+      "move"
+    ]
   },
   {
     "qr-cv": "42:13",
@@ -5165,6 +5801,10 @@
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:nbhq_and_x3"
+    "pgroup": "g:nbhq_and_x3",
+    "qr-auto-diff": [
+      "remove dagesh/mapiq/shuruq-dot from bet",
+      "remove"
+    ]
   }
 ]

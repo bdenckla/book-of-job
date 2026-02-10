@@ -4,7 +4,7 @@ from pyauthor_util.uxlc_change import uxlc_change
 RECORD_0910 = {
     "qr-cv": "9:10",
     "qr-lc-proposed": "וְנִפְלָא֗וֹת",
-    "qr-what-is-weird": "ו may have גרש מוקדם",
+    "qr-what-is-weird": "ו lacks גרש מוקדם",
     "qr-consensus": "וְ֝נִפְלָא֗וֹת",
     "qr-generic-comment": [
         "As $UXLC notes, the possible גרש מוקדם appears to be doubled,",

@@ -9,6 +9,8 @@ from pyauthor_util.qr_make_json_outputs import (
     write_qr_field_stats_json,
     write_quirkrecs_json,
 )
+from pydiff_mm.diff_mm_diffs_description import get1 as get_diff_description
+from pyauthor_util.proposed import proposed
 from pycmn.my_utils import sl_map
 
 
@@ -17,7 +19,8 @@ def prep_quirkrecs(jobn_rel_top, json_outdir):
     qrs_6 = sl_map((_add_auto_imgs, jobn_rel_top), qrs_5)
     qrs_7 = sl_map(_add_nbd, qrs_6)
     qrs_8 = sl_map(_add_pgroup, qrs_7)
-    qrs_9 = sl_map(flatten_strings_in_one_qr, qrs_8)
+    qrs_8b = sl_map(_add_auto_diff, qrs_8)
+    qrs_9 = sl_map(flatten_strings_in_one_qr, qrs_8b)
     _assert_lc_img_fields_filled(qrs_9)
     write_qr_field_stats_json(
         qrs_9,
@@ -34,6 +37,13 @@ def _add_nbd(quirkrec):
 
 def _add_pgroup(quirkrec):
     return {**quirkrec, "pgroup": get_pgroup(quirkrec)}
+
+
+def _add_auto_diff(quirkrec):
+    pro = proposed(quirkrec)
+    consensus = quirkrec["qr-consensus"]
+    auto_diff = get_diff_description(consensus, pro)
+    return {**quirkrec, "qr-auto-diff": auto_diff}
 
 
 def _add_auto_imgs(jobn_rel_top, quirkrec):

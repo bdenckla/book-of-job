@@ -6,6 +6,7 @@ from pycmn import my_utils
 from pycmn.my_utils import intersperse, sl_map
 from pyauthor_util.common_titles_etc import D1D_FNAME
 from pyauthor_util import author
+from pyauthor_util.proposed import key_for_proposed
 from pyauthor_util.says import says
 from pyauthor_util.short_id_etc import short_id
 from pyauthor_util.job1_highlight import highlight, color
@@ -104,28 +105,18 @@ def _std_bcvp_quad(quirkrec):
     return bkid, chnu, vrnu, atnu
 
 
-_KEY_FOR_PROPOSED = {
-    ("qr-lc-proposed", False): "qr-lc-proposed",
-    (False, "qr-ac-proposed"): "qr-ac-proposed",
-}
 _KEY_FOR_QUESTION_MARK = {
     "qr-lc-proposed": "qr-lc-q",
     "qr-ac-proposed": "qr-ac-q",
 }
 
 
-def _key_for_proposed(quirkrec):
-    lcp = "qr-lc-proposed" in quirkrec and "qr-lc-proposed"
-    acp = "qr-ac-proposed" in quirkrec and "qr-ac-proposed"
-    return _KEY_FOR_PROPOSED[(lcp, acp)]
-
-
 def _key_for_question_mark(quirkrec):
-    return _KEY_FOR_QUESTION_MARK[_key_for_proposed(quirkrec)]
+    return _KEY_FOR_QUESTION_MARK[key_for_proposed(quirkrec)]
 
 
 def _lcp_and_con(quirkrec):
-    hl_pro = highlight(quirkrec, _key_for_proposed(quirkrec))
+    hl_pro = highlight(quirkrec, key_for_proposed(quirkrec))
     hl_con = highlight(quirkrec, "qr-consensus")
     if qm := quirkrec.get(_key_for_question_mark(quirkrec)):
         assert qm == "(?)"
@@ -158,7 +149,7 @@ _IN_MY_YYY = {
 
 
 def _in_mu_yyy(quirkrec):
-    return _IN_MY_YYY[_key_for_proposed(quirkrec)]
+    return _IN_MY_YYY[key_for_proposed(quirkrec)]
 
 
 def _what_is_weird(quirkrec):
