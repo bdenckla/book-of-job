@@ -1,7 +1,7 @@
 """ Exports gen_html_file and anchor """
 
 from py import my_html
-from pyauthor.job2_bad_news_2 import bad_news_2, wlc_dexi, wlc_dexi_group_info, wlc_misc
+from pyauthor_util.job2_bad_news_2 import bad_news_2, wlc_dexi, wlc_dexi_group_info, wlc_misc
 from pyauthor_util.para_and_table import para_and_table
 from pyauthor_util import author
 from pyauthor_util.all_quirks import AllQuirks
