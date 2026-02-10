@@ -13,6 +13,20 @@ def core_ignores(option):
 CAM1753_PAGE_URL_BASE = (
     "https://archive.org/details/ketuvim-cambridge-ms-add-1753-images/page"
 )
+def _corr_ig_cmn(what, adjective):
+    adj = f" {adjective}" if adjective else ""
+    contents = [
+        f"$BHQ has no {what} here.",
+        " I happen to think that this is the best transcription of μL here,",
+        " but I don’t know whether $BHQ arrived at this transcription",
+        " on purpose or by accident.",
+        " Did the editors of $BHQ consider, but ultimately decide against,",
+        f" the faint possible{adj} {what}?",
+        " Or did they simply ignore μL entirely, supplying the consensus pointing,",
+        f" which has no {what}?",
+    ]
+    return author.para(contents)
+
 _SEE_3419 = [" See my entry on נכר in 34:19 for further discussion."]
 _MORE_BROADLY = [
     "More broadly, $BHQ Job never notes",
@@ -43,16 +57,8 @@ def suffix(contents):
 
 
 def correctly_ignores(what, cv, adjective=""):
-    adj = f" {adjective}" if adjective else ""
     return [
-        f"$BHQ has no {what} here.",
-        " I happen to think that this is the best transcription of μL here,",
-        " but I don’t know whether $BHQ arrived at this transcription",
-        " on purpose or by accident.",
-        " Did the editors of $BHQ consider, but ultimately decide against,",
-        f" the faint possible{adj} {what}?",
-        " Or did they simply ignore μL entirely, supplying the consensus pointing,",
-        f" which has no {what}?",
+        _corr_ig_cmn(what, adjective),
         *_CORRECTLY_IGNORES[cv],
     ]
 

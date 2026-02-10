@@ -15,6 +15,6 @@ RECORD_3419_1of2ftv = {
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "406B", "column": 2, "line": -2},
-    "qr-bhq-comment": [author.para(correctly_ignores("דגש", "34:19"))],
+    "qr-bhq-comment": correctly_ignores("דגש", "34:19"),
     "qr-noted-by": "nBHL-nDM",
 }

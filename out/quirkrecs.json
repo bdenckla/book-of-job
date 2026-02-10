@@ -1744,7 +1744,42 @@
       "line": 5
     },
     "qr-bhq-comment": [
-      "$BHQ has no דגש here. I happen to think that this is the best transcription of μL here, but I don’t know whether $BHQ arrived at this transcription on purpose or by accident. Did the editors of $BHQ consider, but ultimately decide against, the faint possible דגש? Or did they simply ignore μL entirely, supplying the consensus pointing, which has no דגש? See my entry on נכר in 34:19 for further discussion."
+      {
+        "_htel_tag": "p",
+        "contents": [
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHQ"
+            ]
+          },
+          " has no דגש here. I happen to think that this is the best transcription of μL here, but I don’t know whether ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHQ"
+            ]
+          },
+          " arrived at this transcription on purpose or by accident. Did the editors of ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHQ"
+            ]
+          },
+          " consider, but ultimately decide against, the faint possible דגש? Or did they simply ignore μL entirely, supplying the consensus pointing, which has no דגש?"
+        ]
+      },
+      " See my entry on נכר in 34:19 for further discussion."
     ],
     "qr-noted-by": "nWLC",
     "qr-uxlc-needs-fix": [
@@ -3795,59 +3830,59 @@
               "BHQ"
             ]
           },
-          " consider, but ultimately decide against, the faint possible דגש? Or did they simply ignore μL entirely, supplying the consensus pointing, which has no דגש?",
+          " consider, but ultimately decide against, the faint possible דגש? Or did they simply ignore μL entirely, supplying the consensus pointing, which has no דגש?"
+        ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "Since ",
           {
-            "_htel_tag": "p",
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
             "contents": [
-              "Since ",
-              {
-                "_htel_tag": "abbr",
-                "attr": {
-                  "class": "small-caps"
-                },
-                "contents": [
-                  "BHQ"
-                ]
-              },
-              " does not note any uncertainty in its transcription here, it is hard to distinguish whether ",
-              {
-                "_htel_tag": "abbr",
-                "attr": {
-                  "class": "small-caps"
-                },
-                "contents": [
-                  "BHQ"
-                ]
-              },
-              " has ignored the mark in question on purpose or by accident."
+              "BHQ"
             ]
           },
+          " does not note any uncertainty in its transcription here, it is hard to distinguish whether ",
           {
-            "_htel_tag": "p",
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
             "contents": [
-              "More broadly, ",
-              {
-                "_htel_tag": "abbr",
-                "attr": {
-                  "class": "small-caps"
-                },
-                "contents": [
-                  "BHQ"
-                ]
-              },
-              " Job never notes any uncertainty in its transcription of μL. This may mislead many readers. Despite the fact that high-resolution, color images of μL are now widely available, many readers will not engage with those images enough to understand how often there is great uncertainty in transcribing μL. And, even if the reader understands that such uncertainty exists in general, ",
-              {
-                "_htel_tag": "abbr",
-                "attr": {
-                  "class": "small-caps"
-                },
-                "contents": [
-                  "BHQ"
-                ]
-              },
-              " should, in my opinion, indicate to the reader the specific cases where its transcription is particularly uncertain."
+              "BHQ"
             ]
-          }
+          },
+          " has ignored the mark in question on purpose or by accident."
+        ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "More broadly, ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHQ"
+            ]
+          },
+          " Job never notes any uncertainty in its transcription of μL. This may mislead many readers. Despite the fact that high-resolution, color images of μL are now widely available, many readers will not engage with those images enough to understand how often there is great uncertainty in transcribing μL. And, even if the reader understands that such uncertainty exists in general, ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHQ"
+            ]
+          },
+          " should, in my opinion, indicate to the reader the specific cases where its transcription is particularly uncertain."
         ]
       }
     ],
@@ -4293,7 +4328,42 @@
       "line": -5
     },
     "qr-bhq-comment": [
-      "$BHQ has no געיה here. I happen to think that this is the best transcription of μL here, but I don’t know whether $BHQ arrived at this transcription on purpose or by accident. Did the editors of $BHQ consider, but ultimately decide against, the faint possible large געיה? Or did they simply ignore μL entirely, supplying the consensus pointing, which has no געיה? See my entry on נכר in 34:19 for further discussion."
+      {
+        "_htel_tag": "p",
+        "contents": [
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHQ"
+            ]
+          },
+          " has no געיה here. I happen to think that this is the best transcription of μL here, but I don’t know whether ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHQ"
+            ]
+          },
+          " arrived at this transcription on purpose or by accident. Did the editors of ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHQ"
+            ]
+          },
+          " consider, but ultimately decide against, the faint possible large געיה? Or did they simply ignore μL entirely, supplying the consensus pointing, which has no געיה?"
+        ]
+      },
+      " See my entry on נכר in 34:19 for further discussion."
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "3629.png",

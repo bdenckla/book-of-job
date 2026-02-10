@@ -13,19 +13,27 @@ Checks performed:
   8. Stale files: unexpected files (e.g., extensionless, 0-byte)
   9. Duplicate IDs: no duplicate id attributes within a single file
  10. Orphan HTML: HTML files not linked from any other HTML file
+ 11. W3C Nu HTML conformance (optional, via --w3c flag)
 
 Exit codes:
   0 - No issues found
   1 - Issues found
 
 Usage:
-  python check_html_output.py [docs_dir]
+  python check_html_output.py [docs_dir] [--w3c]
 
 If no docs_dir given, defaults to "docs".
+The --w3c flag sends each HTML file to the W3C Nu HTML Checker API
+for full conformance validation (requires internet access).
 """
 
+import argparse
+import json
 import re
 import sys
+import time
+import urllib.error
+import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -308,14 +316,94 @@ def _check_orphan_html(
     return issues
 
 
+# ── W3C Nu HTML Checker ───────────────────────────────────────────────
+
+_W3C_NU_URL = "https://validator.w3.org/nu/?out=json"
+_W3C_DELAY_SECS = 1.0  # be polite to the public service
+
+# Messages matching any of these substrings are suppressed by default.
+# Use --w3c-strict to show them.
+_W3C_SUPPRESS = [
+    "element must have an",  # missing alt attribute (curly quotes vary)
+    "Text run is not in Unicode Normalization Form C",
+]
+
+
+def _is_suppressed(text: str) -> bool:
+    return any(pat in text for pat in _W3C_SUPPRESS)
+
+
+def _check_w3c(
+    html_files: list[Path], docs_dir: Path, *, strict: bool = False
+) -> list[str]:
+    """Validate each HTML file via the W3C Nu HTML Checker API."""
+    issues = []
+    suppressed_count = 0
+    total = len(html_files)
+    for i, hf in enumerate(html_files):
+        rel = str(hf.relative_to(docs_dir))
+        html_bytes = hf.read_bytes()
+        print(f"  W3C checking [{i + 1}/{total}]: {rel} ...", flush=True)
+        try:
+            req = urllib.request.Request(
+                _W3C_NU_URL,
+                data=html_bytes,
+                headers={
+                    "Content-Type": "text/html; charset=utf-8",
+                    "User-Agent": "check_html_output.py/1.0",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                result = json.loads(resp.read())
+        except (urllib.error.URLError, OSError) as exc:
+            issues.append(f"{rel}: W3C check failed: {exc}")
+            continue
+        for msg in result.get("messages", []):
+            msg_type = msg.get("type", "")
+            if msg_type == "info" and msg.get("subType") != "warning":
+                continue  # skip pure informational messages
+            text = msg.get("message", "")
+            if not strict and _is_suppressed(text):
+                suppressed_count += 1
+                continue
+            line = msg.get("lastLine", "?")
+            label = "error" if msg_type == "error" else "warning"
+            issues.append(f"{rel}:{line}: W3C {label}: {text}")
+        if i < total - 1:
+            time.sleep(_W3C_DELAY_SECS)
+    if suppressed_count:
+        print(
+            f"  ({suppressed_count} suppressed W3C messages;"
+            " use --w3c-strict to show all)"
+        )
+    return issues
+
+
 # ── Main ─────────────────────────────────────────────────────────────
 
 
 def main():
-    if len(sys.argv) > 1:
-        docs_dir = Path(sys.argv[1])
-    else:
-        docs_dir = Path("docs")
+    parser = argparse.ArgumentParser(
+        description="Lint the generated HTML files in docs/.",
+    )
+    parser.add_argument(
+        "docs_dir",
+        nargs="?",
+        default="docs",
+        help="path to the docs directory (default: docs)",
+    )
+    parser.add_argument(
+        "--w3c",
+        action="store_true",
+        help="also validate each file via the W3C Nu HTML Checker API",
+    )
+    parser.add_argument(
+        "--w3c-strict",
+        action="store_true",
+        help="with --w3c, show all messages (don't suppress known issues)",
+    )
+    args = parser.parse_args()
+    docs_dir = Path(args.docs_dir)
 
     if not docs_dir.is_dir():
         print(f"Error: {docs_dir} is not a directory", file=sys.stderr)
@@ -371,6 +459,13 @@ def main():
     all_issues.extend(_check_orphan_images(docs_dir, referenced_images))
     all_issues.extend(_check_stale_files(docs_dir))
     all_issues.extend(_check_orphan_html(docs_dir, html_files, all_internal_hrefs))
+
+    # Optional W3C conformance check
+    if args.w3c:
+        print("Running W3C Nu HTML Checker ...")
+        all_issues.extend(
+            _check_w3c(html_files, docs_dir, strict=args.w3c_strict)
+        )
 
     # Report
     if all_issues:
