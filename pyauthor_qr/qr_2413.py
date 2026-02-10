@@ -3,7 +3,7 @@ RECORD_2413 = {
     "qr-cv": "24:13",
     "qr-consensus": "בְּֽמֹרְדֵ֫י א֥וֹר",
     "qr-lc-proposed": "בְּֽמֹרְדֵ֫י־א֥וֹר",
-    "qr-what-is-weird": "מקף is present.",
+    "qr-what-is-weird": "מקף is present",
     "qr-generic-comment": [
         "Gray מקף in $MAM.",
     ],
