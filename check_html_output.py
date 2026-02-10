@@ -382,7 +382,7 @@ def _check_w3c(
 # ── Main ─────────────────────────────────────────────────────────────
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(
         description="Lint the generated HTML files in docs/.",
     )
@@ -402,7 +402,7 @@ def main():
         action="store_true",
         help="with --w3c, show all messages (don't suppress known issues)",
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     docs_dir = Path(args.docs_dir)
 
     if not docs_dir.is_dir():
