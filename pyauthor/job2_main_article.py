@@ -44,7 +44,7 @@ def _make_cbody(aq: AllQuirks):
         author.para(_SPECIFICS_OF_BHQ_JOB),
         para_and_table(aq, _cpara26, "g:nbhq_and_x3"),
         author.para(_CONTRIBUTIONS),
-        para_and_table(aq, _reiterations, "g:nbhq_and_n3", extra_paras=[_CPARA_RNTQ]),
+        para_and_table(aq, _reiterations, "g:nbhq_and_n3"),
         para_and_table(aq, _mixed, "g:tbhq_and_n3"),
         para_and_table(aq, _bad_news_1_part_1, "g:xbhq_and_n3"),
         author.para(_BAD_NEWS_1_PART_2),
@@ -334,7 +334,10 @@ _CPARA_RNTQ = [
 
 
 def _reiterations(the_len):
-    return _cpara18_part1(the_len) + _CPARA_REITERATES
+    return [
+        author.para(_cpara18_part1(the_len) + _CPARA_REITERATES),
+        author.para(_CPARA_RNTQ),
+    ]
 
 
 def _bad_news_1_part_1(the_len):

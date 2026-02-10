@@ -1,6 +1,7 @@
 """Overview and details generation for quirkrecs."""
 
 from py import my_html
+from pyauthor_util.is_lop import is_lop
 from pycmn import my_utils
 from pycmn.my_utils import intersperse, sl_map
 from pyauthor_util.common_titles_etc import D1D_FNAME
@@ -237,7 +238,7 @@ def _maybe_para(yyycom):
 
 def _ensure_lop(yyycom):
     """lop: list of paras"""
-    return yyycom if _is_lop(yyycom) else [author.para(yyycom)]
+    return yyycom if is_lop(yyycom) else [author.para(yyycom)]
 
 
 def _ancs(quirkrec):
@@ -258,16 +259,7 @@ def _dpe(quirkrec):
 def _use_stretched_format(quirkrec):
     gencom = quirkrec.get("qr-generic-comment")
     bhqcom = quirkrec.get("qr-bhq-comment")
-    return _is_lop(gencom) or _is_lop(bhqcom)
-
-
-def _is_lop(yyycom):
-    """lop: list of paras"""
-    if yyycom is None or isinstance(yyycom, str):
-        return False
-    assert isinstance(yyycom, list)
-    el0 = yyycom[0]
-    return my_html.is_htel(el0) and my_html.htel_get_tag(el0) == "p"
+    return is_lop(gencom) or is_lop(bhqcom)
 
 
 def _dpe_inline(quirkrec):

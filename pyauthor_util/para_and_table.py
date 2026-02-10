@@ -4,20 +4,18 @@ from pyauthor_util import author
 from pyauthor_util.all_quirks import AllQuirks
 from pyauthor_util.introduce_quirkrec_table import intro
 from pyauthor_util.job_ov_and_de import row_id
+from pyauthor_util.is_lop import is_lop
 
 __all__ = ["para_and_table"]
 
 
-def para_and_table(aq: AllQuirks, para_func, group_key, extra_paras=None):
+def para_and_table(aq: AllQuirks, para_func, group_key):
     group_of_quirkrecs = aq.qr_groups[group_key]
     record_count = len(group_of_quirkrecs)
     link = _table_of_quirks(aq.tdm_ch, group_key, aq.ov_and_de, group_of_quirkrecs)
-    result = [author.para(para_func(record_count))]
-    if extra_paras:
-        for para in extra_paras:
-            result.append(author.para(para))
-    result.append(author.para(link))
-    return result
+    pf_out = para_func(record_count)
+    lop = pf_out if is_lop(pf_out) else [author.para(pf_out)]
+    return [*lop, author.para(link)]
 
 
 def _overview(ov_and_de, quirkrec):
