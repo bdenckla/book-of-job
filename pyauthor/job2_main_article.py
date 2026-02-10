@@ -1,7 +1,13 @@
 """ Exports gen_html_file and anchor """
 
 from py import my_html
-from pyauthor_util.job2_bad_news_2 import bad_news_2, wlc_dexi, wlc_dexi_group_info, wlc_misc
+from pyauthor_util.job2_bad_news_2 import (
+    bad_news_2,
+    wlc_dexi,
+    wlc_dexi_group_info,
+    wlc_misc,
+    wlc_misc_group_info,
+)
 from pyauthor_util.para_and_table import para_and_table
 from pyauthor_util import author
 from pyauthor_util.all_quirks import AllQuirks
@@ -53,7 +59,7 @@ def _make_cbody(aq: AllQuirks):
         author.para(_AFTER_BAD_NEWS_1_PART_3),
         author.para(bad_news_2(len_wlc_dexi, len_wlc_misc)),
         para_and_table(aq, wlc_dexi, wlc_dexi_group_info(len_wlc_dexi)),
-        para_and_table(aq, wlc_misc, "g:tbhq_and_zmw"),
+        para_and_table(aq, wlc_misc, wlc_misc_group_info(len_wlc_misc)),
         author.para_ul(_CONCLUSION, _conclusion_list(the_lens)),
         author.heading_level_2("Postscript 1: $UXLC"),
         author.para(_POSTSCRIPT_UXLC),
