@@ -2754,8 +2754,8 @@
     },
     "pgroup": "g:tbhq_and_n3",
     "qr-auto-diff": [
-      "(((('kaf', 'kaf', (1, 1)), ('sheva', 'kaf', (1, 1))), (('bet', 'bet', (1, 1)), ('sheva', 'bet', (1, 1)))),)",
-      "deep diff"
+      "replace letter: kaf → bet",
+      "letter swap"
     ]
   },
   {
@@ -4630,8 +4630,8 @@
     },
     "pgroup": "g:tbhq_and_n3",
     "qr-auto-diff": [
-      "(((('shin', 'shin', (1, 1)), ('sin-dot', 'shin', (1, 1)), ('sheva', 'shin', (1, 1))), (('samekh', 'samekh', (1, 1)), ('sheva', 'samekh', (1, 1)))),)",
-      "deep diff"
+      "replace letter: shin (with sin-dot) → samekh",
+      "letter swap"
     ]
   },
   {
@@ -4844,8 +4844,8 @@
     },
     "pgroup": "g:nbhq_and_n3",
     "qr-auto-diff": [
-      "(((('bet', 'bet', (1, 2)), ('dagesh/mapiq/shuruq-dot', 'bet', (1, 2)), ('xiriq', 'bet', (1, 2)), ('bet', 'bet', (2, 2)), ('sheva', 'bet', (2, 2))), (('kaf', 'kaf', (1, 1)), ('dagesh/mapiq/shuruq-dot', 'kaf', (1, 1)), ('xiriq', 'kaf', (1, 1)), ('bet', 'bet', (1, 1)), ('sheva', 'bet', (1, 1)))),)",
-      "deep diff"
+      "replace letter: bet → kaf",
+      "letter swap"
     ]
   },
   {

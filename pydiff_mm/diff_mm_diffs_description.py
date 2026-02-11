@@ -2,8 +2,9 @@
 
 from pydiff_mm import diff_mm_uni_name
 from pydiff_mm import diff_mm_simplify_simple_diffs as ssd
+from pydiff_mm.diff_mm_letter_only_diff import letter_only_diff
+from pydiff_mm.diff_mm_maqaf_space_diff import maqaf_space_diff
 from pycmn import my_diffs
-from pycmn.hebrew_punctuation import MAQ as _MAQAF
 from py import hebrew_letter_words as hlw
 from py import uni_heb_char_classes as uhc
 
@@ -46,28 +47,10 @@ def _letters_differ(str1, str2):
 def _special_case_description(str1, str2):
     """If the diffs between str1 and str2 fall into a known special case,
     describe them."""
-    if desc := _maqaf_space_diff(str1, str2):
+    if desc := maqaf_space_diff(str1, str2):
         return desc
-    return None
-
-
-def _maqaf_space_diff(str1, str2):
-    """If the only diffs between str1 and str2 are maqaf/space related, describe them."""
-    # Case 1: same length, maqaf↔space swaps at matching positions
-    if str1.replace(_MAQAF, " ") == str2.replace(_MAQAF, " "):
-        m2s = sum(1 for a, b in zip(str1, str2) if a == _MAQAF and b == " ")
-        s2m = sum(1 for a, b in zip(str1, str2) if a == " " and b == _MAQAF)
-        if m2s > 0 and s2m > 0:
-            return None  # mixed directions, too complex
-        if m2s > 0:
-            return f"replace {m2s} maqaf mark(s) with space", "maqaf/space"
-        if s2m > 0:
-            return f"replace {s2m} space(s) with maqaf", "maqaf/space"
-    # Case 2: one string is the other plus a trailing maqaf
-    if str1 == str2 + _MAQAF:
-        return "remove trailing maqaf", "maqaf/space"
-    if str1 + _MAQAF == str2:
-        return "add trailing maqaf", "maqaf/space"
+    if desc := letter_only_diff(str1, str2):
+        return desc
     return None
 
 
