@@ -3,6 +3,10 @@
 from pyauthor_util import author
 from pyauthor_util.all_quirks import AllQuirks
 from pyauthor_util.para_and_table import para_and_table
+from pyauthor_util.group_infos import (
+    xbhq_and_nuxlc_group_info,
+    tbhq_and_zuxlc_group_info,
+)
 from pyauthor_util.common_titles_etc import D3_TITLE, D3_H1_CONTENTS, D3_FNAME
 
 
@@ -15,8 +19,8 @@ def gen_html_file(aq: AllQuirks):
 def _make_cbody(aq: AllQuirks):
     cbody = [
         author.heading_level_1(D3_H1_CONTENTS),
-        para_and_table(aq, _cpara_xn, "g:xbhq_and_nuxlc"),
-        para_and_table(aq, _cpara_tz, "g:tbhq_and_zuxlc"),
+        para_and_table(aq, _cpara_xn, xbhq_and_nuxlc_group_info(len(aq.qr_groups["g:xbhq_and_nuxlc"]))),
+        para_and_table(aq, _cpara_tz, tbhq_and_zuxlc_group_info(len(aq.qr_groups["g:tbhq_and_zuxlc"]))),
     ]
     return cbody
 

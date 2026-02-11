@@ -3,6 +3,7 @@
 from pyauthor_util import author
 from pyauthor_util.all_quirks import AllQuirks
 from pyauthor_util.para_and_table import para_and_table
+from pyauthor_util.group_infos import adm_group_info
 from pyauthor_util.common_titles_etc import D4_TITLE, D4_H1_CONTENTS, D4_FNAME
 
 
@@ -15,7 +16,7 @@ def gen_html_file(aq: AllQuirks):
 def _make_cbody(aq: AllQuirks):
     cbody = [
         author.heading_level_1(D4_H1_CONTENTS),
-        para_and_table(aq, _cpara_adm, "g:adm"),
+        para_and_table(aq, _cpara_adm, adm_group_info(len(aq.qr_groups["g:adm"]))),
     ]
     return cbody
 

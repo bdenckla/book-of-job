@@ -9,6 +9,12 @@ from pyauthor_util.job2_bad_news_2 import (
     wlc_misc_group_info,
 )
 from pyauthor_util.para_and_table import para_and_table
+from pyauthor_util.group_infos import (
+    contributions_group_info,
+    reiterations_group_info,
+    implied_group_info,
+    xbhq_and_n3_group_info,
+)
 from pyauthor_util import author
 from pyauthor_util.all_quirks import AllQuirks
 from pyauthor_util.common_titles_etc import (
@@ -49,11 +55,11 @@ def _make_cbody(aq: AllQuirks):
         author.para_ul(_MY_PURPOSES, _CLIST_NOT_MY_CONCERN),
         author.para(_CPARA_NOT_MY_CONCERN),
         author.para(_SPECIFICS_OF_BHQ_JOB),
-        para_and_table(aq, _contributions, "g:nbhq_and_x3"),
+        para_and_table(aq, _contributions, contributions_group_info(the_lens["g:nbhq_and_x3"])),
         author.para(_AFTER_CONTRIBUTIONS),
-        para_and_table(aq, _reiterations, "g:nbhq_and_n3"),
-        para_and_table(aq, _mixed, "g:tbhq_and_n3"),
-        para_and_table(aq, _bad_news_1, "g:xbhq_and_n3"),
+        para_and_table(aq, _reiterations, reiterations_group_info(the_lens["g:nbhq_and_n3"])),
+        para_and_table(aq, _mixed, implied_group_info(the_lens["g:tbhq_and_n3"])),
+        para_and_table(aq, _bad_news_1, xbhq_and_n3_group_info(the_lens["g:xbhq_and_n3"])),
         author.para(_AFTER_BAD_NEWS_1_PART_1),
         author.para(_after_bad_news_1_part_2(len(aq.qr_groups["g:nbhq_and_n3"]))),
         author.para(_AFTER_BAD_NEWS_1_PART_3),
