@@ -26,10 +26,8 @@ def qualify_code_points(string):
             _init_to_1_or_add_1(letter_counts, letter)
             out.append(_qcp_make_tmp(code_point, letter, letter_counts))
         else:
-            # Here we used to
-            # assert letter is not None
-            # But
-            # letter can be None for a string of a lone vowel point or accent
+            # Here we used to assert "letter is not None".
+            # But letter can be None for a string of a lone vowel point or accent.
             out.append(_qcp_make_tmp(code_point, letter, letter_counts))
     out2 = tuple(_add_total(out_el, letter_counts) for out_el in out)
     return out2

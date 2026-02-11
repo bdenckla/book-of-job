@@ -21,9 +21,8 @@ def get1(str1, str2):
     diffs = my_diffs.get(qc1, qc2)
     named_diffs = tuple(map(_get_unicode_names_for_diff, diffs))
     if _letters_differ(str1, str2):
-        maqaf_desc = _maqaf_space_diff(str1, str2)
-        if maqaf_desc:
-            return maqaf_desc
+        if desc := _special_case_description(str1, str2):
+            return desc
         return _get_dide_incl_letter_changes(str1, str2, named_diffs)
     return ssd.simplify_simple_diffs(named_diffs)
 
@@ -42,6 +41,14 @@ def _letters_differ(str1, str2):
     lm1 = hlw.letters_and_maqafs(str1)
     lm2 = hlw.letters_and_maqafs(str2)
     return lm1 != lm2
+
+
+def _special_case_description(str1, str2):
+    """If the diffs between str1 and str2 fall into a known special case,
+    describe them."""
+    if desc := _maqaf_space_diff(str1, str2):
+        return desc
+    return None
 
 
 def _maqaf_space_diff(str1, str2):
