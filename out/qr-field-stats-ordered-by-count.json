@@ -127,15 +127,15 @@
       "count": 6
     },
     {
+      "field": "qr-intermediate",
+      "count": 5
+    },
+    {
       "field": "qr-uxlc-position-within-verse",
       "count": 5
     },
     {
       "field": "qr-ignore-g3yh-diff",
-      "count": 4
-    },
-    {
-      "field": "qr-intermediate",
       "count": 4
     },
     {

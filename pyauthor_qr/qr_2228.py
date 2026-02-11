@@ -20,6 +20,7 @@ RECORD_2228 = {
     "qr-lc-proposed": "א֖וֹמֶר",
     "qr-what-is-weird": "טרחא not דחי",
     "qr-consensus": "אֹ֭מֶר",
+    "qr-intermediate": "א֭וֹמֶר",
     "qr-generic-comment": [
         "The scribe of μL probably intended a דחי but placed it like a טרחא.",
         " The מלא/חסר spelling difference is not important to us here.",
