@@ -46,7 +46,7 @@ _METEG = hpo.MTGOSLQ
 
 def _add_auto_diff(quirkrec):
     pro = proposed(quirkrec).replace(_CGJ, "")
-    consensus = quirkrec["qr-consensus"].replace(_CGJ, "")
+    consensus = quirkrec.get("qr-intermediate", quirkrec["qr-consensus"]).replace(_CGJ, "")
     if quirkrec.get("qr-ignore-g3yh-diff"):
         pro, consensus = _strip_g3yh_meteg(pro, consensus)
     auto_diff = get_diff_description(consensus, pro)

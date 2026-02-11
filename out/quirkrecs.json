@@ -1438,6 +1438,7 @@
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "12:9",
     "qr-consensus": "יַד־יְ֝הֹוָ֗ה",
+    "qr-intermediate": "יַד־יְ֝הוָ֗ה",
     "qr-lc-proposed": "יַד־יְ֝הוָה",
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 6,
@@ -1459,8 +1460,8 @@
     },
     "pgroup": "g:tbhq_and_n3",
     "qr-auto-diff": [
-      "(((('xolam', 'he', (1, 2)),), None), ((('revia', 'vav', (1, 1)),), None))",
-      null
+      "remove revia from vav",
+      "remove"
     ]
   },
   {
