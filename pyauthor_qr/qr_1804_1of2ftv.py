@@ -15,8 +15,8 @@ RECORD_1804_1of2ftv = {
     "qr-what-is-weird": "פתח on ה is חטף",
     "qr-generic-comment": [
         "The quirk that מ has דגש is discussed in a separate entry of mine.",
-        " The געיה difference is not important to us here.",
     ],
+    "qr-ignore-g3yh-diff": True,
     "qr-highlight": 1,
     "qr-bhq-comment": _BHQ_COMMENT_1804_A,
     "qr-noted-by": "nBHL-nDM",

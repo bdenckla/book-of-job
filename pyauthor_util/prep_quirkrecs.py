@@ -12,6 +12,7 @@ from pyauthor_util.qr_make_json_outputs import (
 from pydiff_mm.diff_mm_diffs_description import get1 as get_diff_description
 from pyauthor_util.proposed import proposed
 from pycmn.my_utils import sl_map
+from pycmn import hebrew_points as hpo
 
 
 def prep_quirkrecs(jobn_rel_top, json_outdir):
@@ -40,13 +41,26 @@ def _add_pgroup(quirkrec):
 
 
 _CGJ = "\u034F"  # combining grapheme joiner
+_METEG = hpo.MTGOSLQ
 
 
 def _add_auto_diff(quirkrec):
     pro = proposed(quirkrec).replace(_CGJ, "")
     consensus = quirkrec["qr-consensus"].replace(_CGJ, "")
+    if quirkrec.get("qr-ignore-g3yh-diff"):
+        pro, consensus = _strip_g3yh_meteg(pro, consensus)
     auto_diff = get_diff_description(consensus, pro)
     return {**quirkrec, "qr-auto-diff": auto_diff}
+
+
+def _strip_g3yh_meteg(pro, consensus):
+    pro_count = pro.count(_METEG)
+    con_count = consensus.count(_METEG)
+    assert (pro_count, con_count) in ((1, 0), (0, 1)), (
+        f"Expected exactly one meteg in exactly one of proposed/consensus, "
+        f"got pro={pro_count}, con={con_count}"
+    )
+    return pro.replace(_METEG, ""), consensus.replace(_METEG, "")
 
 
 def _add_auto_imgs(jobn_rel_top, quirkrec):

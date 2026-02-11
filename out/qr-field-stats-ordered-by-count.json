@@ -80,7 +80,7 @@
     },
     {
       "field": "qr-generic-comment",
-      "count": 86
+      "count": 85
     },
     {
       "field": "qr-bhq-comment",
@@ -125,6 +125,10 @@
     {
       "field": "qr-noted-by-mam",
       "count": 6
+    },
+    {
+      "field": "qr-ignore-g3yh-diff",
+      "count": 5
     },
     {
       "field": "qr-uxlc-position-within-verse",

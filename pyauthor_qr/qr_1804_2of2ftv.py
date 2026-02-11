@@ -15,8 +15,8 @@ RECORD_1804_2of2ftv = {
     "qr-generic-comment": [
         "The quirk that the פתח on ה",
         " is חטף is discussed in a separate entry of mine.",
-        " The געיה difference is not important to us here.",
     ],
+    "qr-ignore-g3yh-diff": True,
     "qr-highlight": 3,
     "qr-bhq-comment": _BHQ_COMMENT_1804_B,
     "qr-aleppo-page-url": "https://www.mgketer.org/mikra/29/18/1/mg/106",

@@ -789,7 +789,7 @@
     "qr-lc-proposed": "וְּ֝אַחֲרִיתְךָ֗",
     "qr-what-is-weird": "שורוק dot fights שווא",
     "qr-consensus": "וְ֝אַחֲרִֽיתְךָ֗",
-    "qr-generic-comment": "The געיה difference is not important to us here.",
+    "qr-ignore-g3yh-diff": true,
     "qr-highlight": 1,
     "qr-lc-loc": {
       "page": "399A",
@@ -809,8 +809,8 @@
     },
     "pgroup": "g:xbhq_and_n3",
     "qr-auto-diff": [
-      "((None, (('dagesh/mapiq/shuruq-dot', 'vav', (1, 1)),)), ((('meteg/silluq', 'resh', (1, 1)),), None))",
-      null
+      "add dagesh/mapiq/shuruq-dot to vav",
+      "add non-varika"
     ]
   },
   {
@@ -2092,8 +2092,9 @@
     ],
     "qr-what-is-weird": "פתח on ה is חטף",
     "qr-generic-comment": [
-      "The quirk that מ has דגש is discussed in a separate entry of mine. The געיה difference is not important to us here."
+      "The quirk that מ has דגש is discussed in a separate entry of mine."
     ],
+    "qr-ignore-g3yh-diff": true,
     "qr-highlight": 1,
     "qr-bhq-comment": [
       "$BHQ silently ignores the possible שווא part of the possible חטף פתח. It also silently ignores the possible interpretation of that ink as a געיה. I.e. other than the prepositive דחי accent, $BHQ supplies only the (full) פתח that is the consensus expectation here. $BHQ does so silently, i.e. with no note about the pointing of ה."
@@ -2109,7 +2110,7 @@
     },
     "pgroup": "g:xbhq_and_n3",
     "qr-auto-diff": [
-      "(((('patax', 'he', (1, 1)), ('meteg/silluq', 'he', (1, 1))), (('xataf-patax', 'he', (1, 1)),)), (None, (('dagesh/mapiq/shuruq-dot', 'mem', (1, 1)),)))",
+      "(((('patax', 'he', (1, 1)),), (('xataf-patax', 'he', (1, 1)),)), (None, (('dagesh/mapiq/shuruq-dot', 'mem', (1, 1)),)))",
       null
     ]
   },
@@ -2133,8 +2134,9 @@
     ],
     "qr-what-is-weird": "מ has דגש",
     "qr-generic-comment": [
-      "The quirk that the פתח on ה is חטף is discussed in a separate entry of mine. The געיה difference is not important to us here."
+      "The quirk that the פתח on ה is חטף is discussed in a separate entry of mine."
     ],
+    "qr-ignore-g3yh-diff": true,
     "qr-highlight": 3,
     "qr-bhq-comment": [
       "$BHQ notes that the דגש on the מ in μL disagrees with μA and μY. $BHQ misses the געיה in μA. This געיה is irrelevant to $BHQ’s point here, which is about the דגש. Still, it would have been nice if $BHQ had transcribed the געיה."
@@ -2152,7 +2154,7 @@
     },
     "pgroup": "g:nbhq_and_n3",
     "qr-auto-diff": [
-      "(((('patax', 'he', (1, 1)), ('meteg/silluq', 'he', (1, 1))), (('xataf-patax', 'he', (1, 1)),)), (None, (('dagesh/mapiq/shuruq-dot', 'mem', (1, 1)),)))",
+      "(((('patax', 'he', (1, 1)),), (('xataf-patax', 'he', (1, 1)),)), (None, (('dagesh/mapiq/shuruq-dot', 'mem', (1, 1)),)))",
       null
     ]
   },
@@ -2568,8 +2570,9 @@
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 6,
     "qr-generic-comment": [
-      "The געיה difference is not important to us here. Aside: in μL, the געיה (under ו) has either survived much better than the other pointing of this word, been carefully re-inked (unlikely: the re-inking is rarely careful), or been added during re-inking (most likely)."
+      "Aside: in μL, the געיה (under ו) has either survived much better than the other pointing of this word, been carefully re-inked (unlikely: the re-inking is rarely careful), or been added during re-inking (most likely)."
     ],
+    "qr-ignore-g3yh-diff": true,
     "qr-lc-loc": {
       "page": "403B",
       "column": 1,
@@ -2585,8 +2588,8 @@
     },
     "pgroup": "g:tbhq_and_n3",
     "qr-auto-diff": [
-      "((None, (('meteg/silluq', 'vav', (1, 1)),)), ((('revia', 'final-kaf', (1, 1)),), None))",
-      null
+      "remove revia from final-kaf",
+      "remove"
     ]
   },
   {
@@ -3534,8 +3537,9 @@
       "line": 12
     },
     "qr-generic-comment": [
-      "As far as I know, this is the only such case that $DM fails to note. (It is the policy of $BHL and $WLC to merely transcribe such cases, not note them.) The געיה difference is not important to us here."
+      "As far as I know, this is the only such case that $DM fails to note. (It is the policy of $BHL and $WLC to merely transcribe such cases, not note them.)"
     ],
+    "qr-ignore-g3yh-diff": true,
     "qr-lc-img": "2908.png",
     "qr-aleppo-img": "Aleppo-2908.png",
     "nbd": {
@@ -3547,8 +3551,8 @@
     },
     "pgroup": "g:tbhq_and_twlc",
     "qr-auto-diff": [
-      "((None, (('meteg/silluq', 'vav', (1, 1)),)), ((('revia', 'shin', (2, 2)),), None))",
-      null
+      "remove revia from the second shin",
+      "remove"
     ]
   },
   {

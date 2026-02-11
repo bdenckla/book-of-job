@@ -257,7 +257,7 @@ def _dpe_inline(quirkrec):
     dpe1 = [
         *_maybe_inline(quirkrec.get("qr-generic-comment")),
         *_maybe_inline(quirkrec.get("qr-bhq-comment")),
-        *_ancs_and_loc(quirkrec),
+        *_non_comment_dpe_parts(quirkrec),
     ]
     return _parasperse(dpe1)
 
@@ -266,7 +266,7 @@ def _dpe_stretched(quirkrec):
     return [
         *_maybe_para(quirkrec.get("qr-generic-comment")),
         *_maybe_para(quirkrec.get("qr-bhq-comment")),
-        _parasperse(_ancs_and_loc(quirkrec)),
+        _parasperse(_non_comment_dpe_parts(quirkrec)),
     ]
 
 
@@ -274,13 +274,20 @@ def _parasperse(items):
     return author.para(my_utils.intersperse(_SEP, items))
 
 
-def _ancs_and_loc(quirkrec):
+def _non_comment_dpe_parts(quirkrec):
     uxlc_anc, mwd_anc = _ancs(quirkrec)
     return [
+        *_maybe_g3yh_dontcare_message(quirkrec),
         uxlc_anc,
         mwd_anc,
         lcloc(quirkrec.get("qr-lc-loc")),
     ]
+
+
+def _maybe_g3yh_dontcare_message(quirkrec):
+    if quirkrec.get("qr-ignore-g3yh-diff"):
+        return ["The געיה difference is not important to us here."]
+    return []
 
 
 def _make_details_html(quirkrec):
