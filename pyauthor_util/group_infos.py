@@ -1,6 +1,8 @@
 """Human-friendly group info dicts for groups that previously used bare string keys."""
-from pyauthor.mcontributions_base import contributions_base
-from pyauthor.mreiterates_base import reiterates_base
+from pyauthor.m_contributions_base import contributions_base
+from pyauthor.m_reiterations_base import reiterations_base
+from pyauthor.m_implications_base import implications_base
+from pyauthor.m_bad_news_1_base import bad_news_1_base
 from pyauthor_util import author
 
 
@@ -18,16 +20,16 @@ def reiterations_group_info(the_len):
         "gi:group_key": "g:nbhq_and_n3",
         "gi:group_heading": "$BHQ reiterations",
         "gi:group_title": "BHQ reiterations",
-        "gi:group_intro": [author.para(reiterates_base("The", the_len))],
+        "gi:group_intro": [author.para(reiterations_base("The", the_len))],
     }
 
 
-def implied_group_info(the_len):
+def implications_group_info(the_len):
     return {
         "gi:group_key": "g:tbhq_and_n3",
         "gi:group_heading": "$BHQ implications",
         "gi:group_title": "BHQ implications",
-        "gi:group_intro": [],
+        "gi:group_intro": [author.para(implications_base("The", the_len))],
     }
 
 
@@ -36,7 +38,7 @@ def xbhq_and_n3_group_info(the_len):
         "gi:group_key": "g:xbhq_and_n3",
         "gi:group_heading": "Quirks not transcribed by $BHQ",
         "gi:group_title": "Quirks not transcribed by BHQ",
-        "gi:group_intro": [],
+        "gi:group_intro": [author.para(bad_news_1_base("The", the_len))],
     }
 
 

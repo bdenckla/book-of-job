@@ -1,4 +1,4 @@
-def reiterates_base(intro, the_len):
+def reiterations_base(intro, the_len):
     return [
         f"{intro} Job fascicle of $BHQ notes " + str(the_len),
         " quirks in μL that are noted",

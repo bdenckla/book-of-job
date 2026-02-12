@@ -1,8 +1,10 @@
 """Exports gen_html_file and anchor"""
 
 from py import my_html
-from pyauthor.mcontributions_base import contributions_base
-from pyauthor.mreiterates_base import reiterates_base
+from pyauthor.m_contributions_base import contributions_base
+from pyauthor.m_reiterations_base import reiterations_base
+from pyauthor.m_implications_base import implications_base
+from pyauthor.m_bad_news_1_base import bad_news_1_base
 from pyauthor_util.job2_bad_news_2 import (
     bad_news_2,
     wlc_dexi,
@@ -14,7 +16,7 @@ from pyauthor_util.para_and_table import para_and_table
 from pyauthor_util.group_infos import (
     contributions_group_info,
     reiterations_group_info,
-    implied_group_info,
+    implications_group_info,
     xbhq_and_n3_group_info,
 )
 from pyauthor_util import author
@@ -64,7 +66,7 @@ def _make_cbody(aq: AllQuirks):
         para_and_table(
             aq, _reiterations, reiterations_group_info(the_lens["g:nbhq_and_n3"])
         ),
-        para_and_table(aq, _mixed, implied_group_info(the_lens["g:tbhq_and_n3"])),
+        para_and_table(aq, _implications, implications_group_info(the_lens["g:tbhq_and_n3"])),
         para_and_table(
             aq, _bad_news_1, xbhq_and_n3_group_info(the_lens["g:xbhq_and_n3"])
         ),
@@ -306,7 +308,7 @@ _AFTER_CONTRIBUTIONS = [
 
 
 def _reiterates_part1(the_len):
-    return reiterates_base("It is also good news that the", the_len)
+    return reiterations_base("It is also good news that the", the_len)
 
 
 _COUNT_OF_RNTQ = 3  # RNTQ: reiterations new to BHQ
@@ -348,9 +350,7 @@ def _reiterations(the_len):
 
 def _bad_news_1(the_len):
     return [
-        "Now for some bad news:",
-        f" the Job fascicle of $BHQ does not transcribe {str(the_len)}",
-        " quirks in μL that are noted in one or more of the other three editions.",
+        *bad_news_1_base("Now for some bad news: the", the_len),
         #
         " Not all such missing transcriptions are a bad thing,",
         " as the other editions may occasionally propose transcriptions that are",
@@ -406,11 +406,9 @@ _AFTER_BAD_NEWS_1_PART_3 = [
 ]
 
 
-def _mixed(the_len):
+def _implications(the_len):
     return [
-        "Now for some mixed news:",
-        f" the Job fascicle of $BHQ transcribes but does not note {str(the_len)}",
-        " quirks in μL that are noted in one or more of the other three editions.",
+        *implications_base("Now for some mixed news: the", the_len),
         #
         " We might say that in these cases $BHQ merely implies the quirk,",
         " because it is not explicit about it."
