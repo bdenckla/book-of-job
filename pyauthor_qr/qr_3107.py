@@ -26,7 +26,7 @@ _BHQCOM_PART_3 = [
 RECORD_3107 = {
     "qr-cv": "31:7",
     "qr-lc-proposed": "מֻאֿוּֽם׃",
-    "qr-what-is-weird": ["קבוץ-סילוק not ", yyy_dash_nothing("סילוק")],
+    "qr-what-is-weird": ["קובוץ-סילוק not ", yyy_dash_nothing("סילוק")],
     "qr-consensus": "מֽאֿוּם׃",
     "qr-highlight": [1, 3],
     "qr-lc-loc": {"page": "405B", "column": 1, "line": -6, "including-blank-lines": 1},
