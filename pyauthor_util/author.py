@@ -482,22 +482,26 @@ _DOLLAR_SUB_DISPATCH = {
 }
 
 
-def _my_maketrans(frm, to):
-    frm, to = frm.replace(" ", ""), to.replace(" ", "")
-    return str.maketrans(frm, to)
-
-
-_HEBREW_TO_OUR_CODE = _my_maketrans(
-    "אבגדה וזחטי כלמנס עפצקר שת ךםןףץ ־",
-    "ABGDH VZXEY KLMNO 3PCQR JF 56789 0",
+_HEBREW_TO_OUR_CODE_FROM = (
+    "אבגדה" + "וזחטי" + "כלמנס" + "עפצקר" + "שת" + "ךםןףץ" + "־ "
+)
+_HEBREW_TO_OUR_CODE_TO = (
+    "ABGDH" + "VZXEY" + "KLMNO" + "3PCQR" + "JF" + "56789" + "0_"
+)
+_HEBREW_TO_OUR_CODE = str.maketrans(
+    _HEBREW_TO_OUR_CODE_FROM,
+    _HEBREW_TO_OUR_CODE_TO,
 )
 # ־ is maqaf (U+05BE). 0 (zero) is maqaf because - is invalid in identifiers.
+# Space maps to underscore (for multi-word consensus strings).
+
+_KEEP_RE = re.compile(f"[{re.escape(_HEBREW_TO_OUR_CODE_FROM)}]+")
 
 
 def consensus_to_ascii(consensus):
     """Convert a Hebrew consensus string to an ASCII word-id."""
-    kept = re.sub(r"[^\u05D0-\u05EA\u05BE ]", "", consensus)
-    return kept.replace(" ", "_").translate(_HEBREW_TO_OUR_CODE)
+    kept = "".join(_KEEP_RE.findall(consensus))
+    return kept.translate(_HEBREW_TO_OUR_CODE)
 
 
 # אבגדה וזחטי כלמנס עפצקר שת
