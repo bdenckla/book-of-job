@@ -45,5 +45,5 @@ def _dollar_sub_str_part(dispatch, part):
     if part.startswith("$"):
         return dispatch[part]
     if part.startswith("%"):
-        return my_html.span_c(part[1:], "unpointed-tanakh-word")
+        return my_html.span_c(part[1:], "unpointed-tanakh")
     return part
