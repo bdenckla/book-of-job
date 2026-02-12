@@ -26,6 +26,34 @@
 				"request": "launch",
 				"program": "${file}",
 				"console": "integratedTerminal"
+			},
+			{
+				"name": "check: all",
+				"type": "debugpy",
+				"request": "launch",
+				"program": "./check_all.py",
+				"console": "integratedTerminal"
+			},
+			{
+				"name": "check: spelling",
+				"type": "debugpy",
+				"request": "launch",
+				"program": "./check_spelling_in_html.py",
+				"console": "integratedTerminal"
+			},
+			{
+				"name": "check: HTML syntax",
+				"type": "debugpy",
+				"request": "launch",
+				"program": "./check_html_syntax_and_sanity.py",
+				"console": "integratedTerminal"
+			},
+			{
+				"name": "check: function ordering",
+				"type": "debugpy",
+				"request": "launch",
+				"program": "./check_function_ordering.py",
+				"console": "integratedTerminal"
 			}
 
 		]
