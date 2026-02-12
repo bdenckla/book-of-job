@@ -54,8 +54,8 @@ from pyauthor_qr.qr_1703 import RECORD_1703
 from pyauthor_qr.qr_1704 import RECORD_1704
 from pyauthor_qr.qr_1706 import RECORD_1706
 from pyauthor_qr.qr_1711 import RECORD_1711
-from pyauthor_qr.qr_1804_HLM3N5_1 import RECORD_1804_HLM3N5_1
-from pyauthor_qr.qr_1804_HLM3N5_2 import RECORD_1804_HLM3N5_2
+from pyauthor_qr.qr_1804_HLM3N5_1_of_2_FTW import RECORD_1804_HLM3N5_1_of_2_FTW
+from pyauthor_qr.qr_1804_HLM3N5_2_of_2_FTW import RECORD_1804_HLM3N5_2_of_2_FTW
 from pyauthor_qr.qr_1806 import RECORD_1806
 from pyauthor_qr.qr_1809 import RECORD_1809
 from pyauthor_qr.qr_1902 import RECORD_1902
@@ -122,8 +122,8 @@ from pyauthor_qr.qr_3419_NKR0 import RECORD_3419_NKR0
 from pyauthor_qr.qr_3419_JV3 import RECORD_3419_JV3
 from pyauthor_qr.qr_3422 import RECORD_3422
 from pyauthor_qr.qr_3433_HM3M5 import RECORD_3433_HM3M5
-from pyauthor_qr.qr_3433_YJLMNH_1 import RECORD_3433_YJLMNH_1
-from pyauthor_qr.qr_3433_YJLMNH_2 import RECORD_3433_YJLMNH_2
+from pyauthor_qr.qr_3433_YJLMNH_1_of_2_FTW import RECORD_3433_YJLMNH_1_of_2_FTW
+from pyauthor_qr.qr_3433_YJLMNH_2_of_2_FTW import RECORD_3433_YJLMNH_2_of_2_FTW
 from pyauthor_qr.qr_3433_VMH0YD3F import RECORD_3433_VMH0YD3F
 from pyauthor_qr.qr_3437 import RECORD_3437
 from pyauthor_qr.qr_3507 import RECORD_3507
@@ -216,8 +216,8 @@ QUIRKRECS = [
     RECORD_1704,
     RECORD_1706,
     RECORD_1711,
-    RECORD_1804_HLM3N5_1,
-    RECORD_1804_HLM3N5_2,
+    RECORD_1804_HLM3N5_1_of_2_FTW,
+    RECORD_1804_HLM3N5_2_of_2_FTW,
     RECORD_1806,
     RECORD_1809,
     RECORD_1902,
@@ -284,8 +284,8 @@ QUIRKRECS = [
     RECORD_3419_JV3,
     RECORD_3422,
     RECORD_3433_HM3M5,
-    RECORD_3433_YJLMNH_1,
-    RECORD_3433_YJLMNH_2,
+    RECORD_3433_YJLMNH_1_of_2_FTW,
+    RECORD_3433_YJLMNH_2_of_2_FTW,
     RECORD_3433_VMH0YD3F,
     RECORD_3437,
     RECORD_3507,

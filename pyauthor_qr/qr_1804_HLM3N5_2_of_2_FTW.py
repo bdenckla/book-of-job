@@ -6,7 +6,7 @@ _BHQ_COMMENT_1804_B = [
     " This געיה is irrelevant to $BHQ’s point here, which is about the דגש.",
     " Still, it would have been nice if $BHQ had transcribed μA’s געיה.",
 ]
-RECORD_1804_HLM3N5_2 = {
+RECORD_1804_HLM3N5_2_of_2_FTW = {
     **RECORD_1804_CMN_AB,
     "qr-intermediate": "הֲ֭לְמַעַנְךָ",
     "qr-n_of_m_for_this_word": (2, 2),  # this is record 2 of 2 for this word

@@ -78,8 +78,8 @@ def _add_word_ids(quirkrecs):
         wid_counts = Counter(base_wids)
         for qr, base_wid in zip(group, base_wids):
             if wid_counts[base_wid] > 1:
-                n, _m = qr["qr-n_of_m_for_this_word"]
-                wid = f"{base_wid}_{n}"
+                n, m = qr["qr-n_of_m_for_this_word"]
+                wid = f"{base_wid}_{n}_of_{m}_FTW"
             else:
                 wid = base_wid
             result.append({**qr, "qr-word-id": wid})

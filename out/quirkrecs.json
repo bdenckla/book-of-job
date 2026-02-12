@@ -2255,8 +2255,8 @@
       "$BHQ silently ignores the possible שווא part of the possible חטף פתח. It also silently ignores the possible interpretation of that ink as a געיה. I.e. other than the prepositive דחי accent, $BHQ supplies only the (full) פתח that is the consensus expectation here. $BHQ does so silently, i.e. with no note about the pointing of ה."
     ],
     "qr-noted-by": "nBHL-nDM",
-    "qr-word-id": "HLM3N5_1",
-    "qr-lc-img": "1804-HLM3N5_1.png",
+    "qr-word-id": "HLM3N5_1_of_2_FTW",
+    "qr-lc-img": "1804-HLM3N5_1_of_2_FTW.png",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -2296,9 +2296,9 @@
     ],
     "qr-aleppo-page-url": "https://www.mgketer.org/mikra/29/18/1/mg/106",
     "qr-noted-by": "nBHQ-nBHL-nDM",
-    "qr-word-id": "HLM3N5_2",
-    "qr-lc-img": "1804-HLM3N5_2.png",
-    "qr-aleppo-img": "Aleppo-1804-HLM3N5_2.png",
+    "qr-word-id": "HLM3N5_2_of_2_FTW",
+    "qr-lc-img": "1804-HLM3N5_2_of_2_FTW.png",
+    "qr-aleppo-img": "Aleppo-1804-HLM3N5_2_of_2_FTW.png",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "nBHL",
@@ -4887,8 +4887,8 @@
       "column": 1,
       "line": 16
     },
-    "qr-word-id": "YJLMNH_1",
-    "qr-lc-img": "3433-YJLMNH_1.png",
+    "qr-word-id": "YJLMNH_1_of_2_FTW",
+    "qr-lc-img": "3433-YJLMNH_1_of_2_FTW.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4921,8 +4921,8 @@
     "qr-generic-comment": [
       "As $DM footnote 32 mentions, in two cases in Job, μL omits the לגרמיה stroke before a word with געיה and רביע. The other such case is 32:11. In both cases, it looks like there may have been an erasure in between the words, where one would expect a לגרמיה to have been, if one was originally present in μL. In this case here in 34:33, there is an additional mark after the possible erasure. This mark is hard to interpret."
     ],
-    "qr-word-id": "YJLMNH_2",
-    "qr-lc-img": "3433-YJLMNH_2.png",
+    "qr-word-id": "YJLMNH_2_of_2_FTW",
+    "qr-lc-img": "3433-YJLMNH_2_of_2_FTW.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
