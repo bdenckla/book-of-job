@@ -266,7 +266,6 @@
         ]
       }
     ],
-    "qr-lc-img": "0505-custom.jpg",
     "qr-lc-loc": {
       "page": "398A",
       "column": 2,
@@ -276,6 +275,7 @@
       "The proposed transcription must either be a simple typo or must spring from some source other than the color image of μL or the consensus. Sometimes the black and white images of μL can be misleading, particularly when they are presented with high contrast, i.e. showing little or no “middle ground” of gray tones."
     ],
     "qr-noted-by": "tBHQ-nDM",
+    "qr-lc-img": "0505.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -892,7 +892,6 @@
     "qr-generic-comment": [
       "Perhaps a רביע is merged into the left end of the (untranscribed) רפה."
     ],
-    "qr-lc-img": "0814-custom.jpg",
     "qr-highlight": 3,
     "qr-lc-loc": {
       "page": "399A",
@@ -900,6 +899,7 @@
       "line": 20
     },
     "qr-noted-by": "nDM-nWLC",
+    "qr-lc-img": "0814.png",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -5038,7 +5038,6 @@
       },
       ", “$Tsinnorit & $Oleh on Initial Vocal $Shewa” for details.)"
     ],
-    "qr-lc-img": "3611-custom.jpg",
     "qr-highlight-lc-proposed": 3,
     "qr-highlight-consensus": 2,
     "qr-lc-loc": {
@@ -5047,6 +5046,7 @@
       "line": 1
     },
     "qr-noted-by": "nDM",
+    "qr-lc-img": "3611.png",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",

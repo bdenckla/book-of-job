@@ -33,12 +33,6 @@ RECORD_0505 = {
         author.para(_COMPAR3),
         author.para(_COMPAR4),
     ],
-    "qr-lc-img": "0505-custom.jpg",
-    # Above, we use the UXLC change record screen snip (a .jpg) rather than one we took
-    # ourselves (a .png). We use the UXLC screen snip just for convenience, to avoid
-    # having to make our own. Except for this screen snip, we don’t care about the note
-    # in UXLC on this issue, because we don’t care about notes in UXLC if there is a note
-    # in one of the three earlier-published editions: BHL, DM, & WLC.
     "qr-lc-loc": {"page": "398A", "column": 2, "line": 22},
     "qr-bhq-comment": [
         "The proposed transcription",
