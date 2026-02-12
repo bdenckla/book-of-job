@@ -5,12 +5,12 @@ _GENCOM_1 = [
     "The consensus is that this is one of those כתיב/קרי cases",
     " where the word boundary shifts",
     " from being after a ה to before that ה.",
-    " I.e. ידעתה שחר becomes ידעת השחר.",
+    " I.e. %ידעתה %שחר becomes %ידעת %השחר.",
     " I.e. the ה that is at the end of the first word in the כתיב",
     " moves to the start of the second word in the קרי.",
     " Similar cases include",
-    " 2 Samuel 5:2 (the כתיב is הייתה מוציא) and",
-    " Ezekiel 42:9 (the כתיב is ומתחתה לשכות).",
+    " 2 Samuel 5:2 (the כתיב is %הייתה %מוציא) and",
+    " Ezekiel 42:9 (the כתיב is %ומתחתה %לשכות).",
     " In contrast to the consensus, in going from כתיב to קרי,",
     [" μL can be thought of as having ", my_html.bold("copied")],
     " the ה to the second word rather than moving it.",
@@ -21,12 +21,12 @@ _GENCOM_2 = [
     " relegating it to an appendix.",
     #
     " The question is where on the כתיב letters",
-    " should we put the פתח that implicitly belongs to the ה of השחר.",
+    " should we put the פתח that implicitly belongs to the ה of %השחר.",
     #
-    " Both μA and μL put this פתח on the ה of ידעתה.",
+    " Both μA and μL put this פתח on the ה of %ידעתה.",
     #
     " In its body text, the Jerusalem Crown edition puts the פתח on no letter:",
-    " instead, it floats before the ש of שחר.",
+    " instead, it floats before the ש of %שחר.",
     #
     " A vowel mark floating like this before a כתיב word has manuscript precedent.",
     #

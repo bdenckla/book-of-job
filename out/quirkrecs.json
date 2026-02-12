@@ -353,7 +353,7 @@
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 3,
     "qr-generic-comment": [
-      "The dot above the final $khaf ( ך ) might at first glance appear to be a candidate for the possibly-expected רביע, but it is almost certainly the קמץ dot belonging to the word-part השלמה־ above, which, coincidentally, is part of our entry for 5:23."
+      "The dot above the final $khaf ( ך ) might at first glance appear to be a candidate for the possibly-expected רביע, but it is almost certainly the קמץ dot belonging to the word-part %השלמה־ above, which, coincidentally, is part of our entry for 5:23."
     ],
     "qr-lc-loc": {
       "page": "398B",
@@ -1622,7 +1622,17 @@
               "yod"
             ]
           },
-          ", this is actually a common position for a furtive פתח. See, for example, the image we provide of אלוה in 4:9 and 11:6. So, the position of the פתח is actually more consistent with the פתח belonging to the ח. (Or, if you prefer to think of furtive פתח in a different way, it belongs to the ר (being the second of two vowels belonging to the ר.)"
+          ", this is actually a common position for a furtive פתח. See, for example, the image we provide of ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "אלוה"
+            ]
+          },
+          " in 4:9 and 11:6. So, the position of the פתח is actually more consistent with the פתח belonging to the ח. (Or, if you prefer to think of furtive פתח in a different way, it belongs to the ר (being the second of two vowels belonging to the ר.)"
         ]
       }
     ],
@@ -2888,7 +2898,7 @@
     "qr-what-is-weird": "ל lacks קמץ־אתנח",
     "qr-consensus": "וּשְׁלָ֑ם",
     "qr-generic-comment": [
-      "Perhaps some very faint remains of an אתנח under ל can be seen. The top dot of the שווא (under the ש) is very faint. See my entry for 22:21 עמי for μA and μY images."
+      "Perhaps some very faint remains of an אתנח under ל can be seen. The top dot of the שווא (under the ש) is very faint. See my entry for 22:21 %עמי for μA and μY images."
     ],
     "qr-highlight": 3,
     "qr-bhq-comment": [
@@ -3145,7 +3155,7 @@
       }
     ],
     "qr-bhq-comment": [
-      "$BHQ transcribes μL as in the consensus shown above, i.e. with יאמר having a מרכא and no מקף. Note that a מרכא only exists in μL if we charitably assume that it is attached to the bottom of the $yod. A less charitable transcription would not have this מרכא. Instead, it would interpret those ink (remains) as a long $yod or perhaps even a $vav."
+      "$BHQ transcribes μL as in the consensus shown above, i.e. with %יאמר having a מרכא and no מקף. Note that a מרכא only exists in μL if we charitably assume that it is attached to the bottom of the $yod. A less charitable transcription would not have this מרכא. Instead, it would interpret those ink (remains) as a long $yod or perhaps even a $vav."
     ],
     "qr-lc-loc": {
       "page": "403B",
@@ -3532,7 +3542,7 @@
     },
     "qr-aleppo-page-url": "https://www.mgketer.org/mikra/29/26/14/mg/106",
     "qr-bhq-comment": [
-      "$BHS does not catch this quirk in μL: it reflects the consensus rather than μL. $BHQ half-fixes the error in $BHS: it updates its marginal קרי note to reflect μL rather than the consensus, but it does not correspondingly update its bottom-of-page critical apparatus note. This is similar to what happened with the μL קרי of ידעתה השחר in 38:12."
+      "$BHS does not catch this quirk in μL: it reflects the consensus rather than μL. $BHQ half-fixes the error in $BHS: it updates its marginal קרי note to reflect μL rather than the consensus, but it does not correspondingly update its bottom-of-page critical apparatus note. This is similar to what happened with the μL קרי of %ידעתה %השחר in 38:12."
     ],
     "qr-noted-by": "nWLC",
     "qr-lc-img": "2614.png",
@@ -3617,7 +3627,7 @@
     "qr-what-is-weird": "ש lacks דגש",
     "qr-consensus": "מִשַּׁדַּ֥י",
     "qr-generic-comment": [
-      "See 24:1 for discussion of the דגש in ש in שדי."
+      "See 24:1 for discussion of the דגש in ש in %שדי."
     ],
     "qr-highlight": 2,
     "qr-lc-loc": {
@@ -5389,7 +5399,87 @@
       {
         "_htel_tag": "p",
         "contents": [
-          "The consensus is that this is one of those כתיב/קרי cases where the word boundary shifts from being after a ה to before that ה. I.e. ידעתה שחר becomes ידעת השחר. I.e. the ה that is at the end of the first word in the כתיב moves to the start of the second word in the קרי. Similar cases include 2 Samuel 5:2 (the כתיב is הייתה מוציא) and Ezekiel 42:9 (the כתיב is ומתחתה לשכות). In contrast to the consensus, in going from כתיב to קרי, μL can be thought of as having ",
+          "The consensus is that this is one of those כתיב/קרי cases where the word boundary shifts from being after a ה to before that ה. I.e. ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "ידעתה"
+            ]
+          },
+          " ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "שחר"
+            ]
+          },
+          " becomes ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "ידעת"
+            ]
+          },
+          " ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "השחר"
+            ]
+          },
+          ". I.e. the ה that is at the end of the first word in the כתיב moves to the start of the second word in the קרי. Similar cases include 2 Samuel 5:2 (the כתיב is ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "הייתה"
+            ]
+          },
+          " ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "מוציא"
+            ]
+          },
+          ") and Ezekiel 42:9 (the כתיב is ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "ומתחתה"
+            ]
+          },
+          " ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "לשכות"
+            ]
+          },
+          "). In contrast to the consensus, in going from כתיב to קרי, μL can be thought of as having ",
           {
             "_htel_tag": "b",
             "contents": [
@@ -5402,7 +5492,37 @@
       {
         "_htel_tag": "p",
         "contents": [
-          "Aside: the Jerusalem Crown edition, despite normally staying quite close to μA, found μA’s pointing of the כתיב to be too confusing for its body text, relegating it to an appendix. The question is where on the כתיב letters should we put the פתח that implicitly belongs to the ה of השחר. Both μA and μL put this פתח on the ה of ידעתה. In its body text, the Jerusalem Crown edition puts the פתח on no letter: instead, it floats before the ש of שחר. A vowel mark floating like this before a כתיב word has manuscript precedent. I.e. although the Jerusalem Crown edition is diverging from the manuscript here, it is not diverging from manuscript tradition in general by using this notation."
+          "Aside: the Jerusalem Crown edition, despite normally staying quite close to μA, found μA’s pointing of the כתיב to be too confusing for its body text, relegating it to an appendix. The question is where on the כתיב letters should we put the פתח that implicitly belongs to the ה of ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "השחר"
+            ]
+          },
+          ". Both μA and μL put this פתח on the ה of ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "ידעתה"
+            ]
+          },
+          ". In its body text, the Jerusalem Crown edition puts the פתח on no letter: instead, it floats before the ש of ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh-word"
+            },
+            "contents": [
+              "שחר"
+            ]
+          },
+          ". A vowel mark floating like this before a כתיב word has manuscript precedent. I.e. although the Jerusalem Crown edition is diverging from the manuscript here, it is not diverging from manuscript tradition in general by using this notation."
         ]
       }
     ],
@@ -5832,7 +5952,7 @@
     "qr-lc-proposed": "הְֽ֭תַרְעִישֶׁנּוּ",
     "qr-what-is-weird": "simple שווא not חטף פתח",
     "qr-consensus": "הֲֽ֭תַרְעִישֶׁנּוּ",
-    "qr-generic-comment": "The situation with המימיך in 38:12 is similar.",
+    "qr-generic-comment": "The situation with %המימיך in 38:12 is similar.",
     "qr-highlight": 1,
     "qr-lc-loc": {
       "page": "408B",
@@ -5958,7 +6078,7 @@
       "line": 27
     },
     "qr-generic-comment": [
-      "There is a confusing constellation of three dots surrounding the ש in μL, but only one of those dots, a $sin dot, belongs to the ש. Working backwards (to the right) from that $sin dot, the next dot is a “קמץ dot” belonging to the מ of גרמיו on the line above. The next dot is a חולם חסר dot belonging to the ע. (Or, if you prefer an alternative interpretation of חולם חסר dots in general, the חולם חסר dot belongs to an implicit $vav between the ע and ש.) The issue at hand is there is no fourth dot that could be interpreted as a רביע above the ש."
+      "There is a confusing constellation of three dots surrounding the ש in μL, but only one of those dots, a $sin dot, belongs to the ש. Working backwards (to the right) from that $sin dot, the next dot is a “קמץ dot” belonging to the מ of %גרמיו on the line above. The next dot is a חולם חסר dot belonging to the ע. (Or, if you prefer an alternative interpretation of חולם חסר dots in general, the חולם חסר dot belongs to an implicit $vav between the ע and ש.) The issue at hand is there is no fourth dot that could be interpreted as a רביע above the ש."
     ],
     "qr-lc-img": "4019-2of2ftv.png",
     "nbd": {

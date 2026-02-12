@@ -11,7 +11,7 @@ RECORD_4019_2of2ftv = {
         "There is a confusing constellation of three dots surrounding the ש in μL,",
         " but only one of those dots, a $sin dot, belongs to the ש.",
         " Working backwards (to the right) from that $sin dot,",
-        " the next dot is a “קמץ dot” belonging to the מ of גרמיו on the line above.",
+        " the next dot is a “קמץ dot” belonging to the מ of %גרמיו on the line above.",
         " The next dot is a חולם חסר dot belonging to the ע.",
         " (Or, if you prefer an alternative interpretation of חולם חסר dots in general,",
         " the חולם חסר dot belongs to an implicit $vav between the ע and ש.)",

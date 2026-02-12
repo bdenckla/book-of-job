@@ -30,7 +30,7 @@ RECORD_2305 = {
     ],
     "qr-bhq-comment": [
         "$BHQ transcribes μL as in the consensus shown above,",
-        " i.e. with יאמר having a מרכא and no מקף.",
+        " i.e. with %יאמר having a מרכא and no מקף.",
         #
         " Note that a מרכא only exists in μL if we charitably assume",
         " that it is attached to the bottom of the $yod.",

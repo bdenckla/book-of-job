@@ -37,9 +37,13 @@ def _dollar_sub_flat_el(dispatch, flat_el):
 
 
 def _dollar_sub_str(dispatch, str):
-    parts = re.split("([$][a-zA-Z0-9_]+)", str)
+    parts = re.split("([$][a-zA-Z0-9_]+|%[\u05d0-\u05ea\u05be]+)", str)
     return sl_map((_dollar_sub_str_part, dispatch), parts)
 
 
 def _dollar_sub_str_part(dispatch, part):
-    return dispatch[part] if part.startswith("$") else part
+    if part.startswith("$"):
+        return dispatch[part]
+    if part.startswith("%"):
+        return my_html.span_c(part[1:], "unpointed-tanakh-word")
+    return part

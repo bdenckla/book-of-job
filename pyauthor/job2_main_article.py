@@ -366,7 +366,7 @@ def _bad_news_1(the_len):
         " But overall these missing transcriptions reflect poorly on $BHQ Job.",
         #
         " In all but one case, a note is also lacking.",
-        " (The one with a note is the one regarding מאום in 31:7,",
+        " (The one with a note is the one regarding %מאום in 31:7,",
         " although the note, too, is inaccurate.)",
     ]
 
