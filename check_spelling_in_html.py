@@ -17,19 +17,22 @@ def load_custom_dictionary(
 ) -> tuple[set[str], set[str], list[str], set[str]]:
     """Load custom words and phrases from JSON dictionary file.
 
-    Returns (words_ci, words_exact, phrases, phrases_hebrew, words_hebrew) where:
+    Returns (words_ci, words_exact, phrases, phrases_hebrew,
+    words_hebrew, names_of_hebrew_letters) where:
     - words_ci: case-insensitive words (stored lowercased)
     - words_exact: case-sensitive words (stored in original case,
       with curly apostrophes normalized to straight)
     - phrases: multi-word English entries
     - phrases_hebrew: multi-word Hebrew entries
     - words_hebrew: Hebrew words (exact match)
+    - names_of_hebrew_letters: single-letter Hebrew words (letter names)
     """
     words_ci = set()
     words_exact = set()
     phrases = []
     phrases_hebrew = []
     words_hebrew = set()
+    names_of_hebrew_letters = set()
     if dict_path.exists():
         data = json.loads(dict_path.read_text(encoding="utf-8"))
         for word in data.get("words", []):
@@ -42,7 +45,9 @@ def load_custom_dictionary(
         phrases_hebrew = data.get("phrases_hebrew", [])
         for word in data.get("words_hebrew", []):
             words_hebrew.add(word)
-    return words_ci, words_exact, phrases, phrases_hebrew, words_hebrew
+        for word in data.get("names_of_hebrew_letters", []):
+            names_of_hebrew_letters.add(word)
+    return words_ci, words_exact, phrases, phrases_hebrew, words_hebrew, names_of_hebrew_letters
 
 
 def extract_english_words(text: str) -> list[str]:
@@ -169,7 +174,7 @@ def check_spelling(html_files: list[Path], custom_dict_path: Path):
     and upt_freq maps unpointed-tanakh words to their frequencies.
     """
     spell = SpellChecker()
-    words_ci, words_exact, custom_phrases, custom_phrases_heb, words_hebrew = (
+    words_ci, words_exact, custom_phrases, custom_phrases_heb, words_hebrew, names_of_heb_letters = (
         load_custom_dictionary(custom_dict_path)
     )
 
@@ -179,6 +184,7 @@ def check_spelling(html_files: list[Path], custom_dict_path: Path):
     phrase_freq: dict[str, int] = {p: 0 for p in custom_phrases}
     phrase_heb_freq: dict[str, int] = {p: 0 for p in custom_phrases_heb}
     word_heb_freq: dict[str, int] = {w: 0 for w in words_hebrew}
+    letter_name_freq: dict[str, int] = {w: 0 for w in names_of_heb_letters}
     upt_freq: dict[str, int] = {}
 
     issues = []
@@ -229,7 +235,9 @@ def check_spelling(html_files: list[Path], custom_dict_path: Path):
         # Check Hebrew words
         heb_words = extract_hebrew_words(cleaned)
         for heb_word in heb_words:
-            if heb_word in words_hebrew:
+            if heb_word in names_of_heb_letters:
+                letter_name_freq[heb_word] += 1
+            elif heb_word in words_hebrew:
                 word_heb_freq[heb_word] += 1
             else:
                 rel = html_path.as_posix()
@@ -248,6 +256,7 @@ def check_spelling(html_files: list[Path], custom_dict_path: Path):
         phrase_freq,
         phrase_heb_freq,
         word_heb_freq,
+        letter_name_freq,
         upt_freq,
     )
 
@@ -293,6 +302,7 @@ def main():
         phrase_freq,
         phrase_heb_freq,
         word_heb_freq,
+        letter_name_freq,
         upt_freq,
     ) = check_spelling(html_files, custom_dict_path)
 
@@ -307,6 +317,7 @@ def main():
             "phrases": {k: v for k, v in sorter(phrase_freq.items())},
             "phrases_hebrew": {k: v for k, v in sorter(phrase_heb_freq.items())},
             "words_hebrew": {k: v for k, v in sorter(word_heb_freq.items())},
+            "names_of_hebrew_letters": {k: v for k, v in sorter(letter_name_freq.items())},
             "words_unpointed_tanakh": {k: v for k, v in sorter(upt_freq.items())},
         }
 
@@ -332,6 +343,7 @@ def main():
     unused_words = sorted(w for w, c in word_ci_freq.items() if c == 0)
     unused_words += sorted(w for w, c in word_exact_freq.items() if c == 0)
     unused_words += sorted(w for w, c in word_heb_freq.items() if c == 0)
+    unused_words += sorted(w for w, c in letter_name_freq.items() if c == 0)
     unused_phrases = sorted(p for p, c in phrase_freq.items() if c == 0)
     unused_phrases += sorted(p for p, c in phrase_heb_freq.items() if c == 0)
     if unused_words or unused_phrases:
