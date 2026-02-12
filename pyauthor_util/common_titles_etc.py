@@ -13,7 +13,7 @@ D4_H1_CONTENTS = d4_toh("$BHQ")
 D4_FNAME = "job4_quirks_in_mu_a.html"
 
 
-D5_TITLE = "Orphan pointing: manuscript precedent"
+D5_TITLE = "Orphan pointing"
 D5_H1_CONTENTS = D5_TITLE
 D5_FNAME = "job5_orphan_qere_points.html"
 

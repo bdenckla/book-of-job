@@ -44,7 +44,7 @@ _GENCOM_2 = [
     " I.e. although the Jerusalem Crown edition is diverging from the manuscript here,",
     " it is not diverging from manuscript tradition in general by using this notation.",
     #
-    [" For more on orphan pointing, see my ", d5_anchor(), "."],
+    [" For more on orphan pointing, see my ", d5_anchor()],
 ]
 _BHQ_COMMENT_3812_B = [
     "$BHS does not catch this quirk in μL: it reflects the consensus rather than μL.",
