@@ -1,7 +1,21 @@
 """Exports gen_html_file"""
 
+from py import my_html
+from py_uxlc_loc import my_tanakh_book_names as tbn
 from pyauthor_util import author
 from pyauthor_util.common_titles_etc import D5_TITLE, D5_H1_CONTENTS, D5_FNAME
+
+_MWD = "https://bdenckla.github.io/MAM-with-doc"
+_UXLC = "https://tanach.us/Tanach.xml"
+
+
+def _links_to_u_and_m(bkid, ch, vr):
+    cv = f"{ch}:{vr}"
+    cn_v_vn = f"c{ch}v{vr}"
+    osdf = tbn.ordered_short_dash_full(bkid)
+    u = my_html.anchor_h("U", f"{_UXLC}?{bkid}{cv}")
+    m = my_html.anchor_h("M", f"{_MWD}/{osdf}.html#{cn_v_vn}")
+    return u, ", ", m
 
 
 def gen_html_file(tdm_ch):
@@ -47,40 +61,47 @@ _INTRO = [
 ]
 
 _KINGS_INTRO = [
-    ["In 2 Kings 4:7, there is a קרי of ", author.hbo("וּבָנַ֔יִךְ")],
+    ["In 2 Kings 4:7 (", *_links_to_u_and_m(tbn.BK_SND_KGS, 4, 7), "),"],
+    [" there is a קרי of ", author.hbo("וּבָנַ֔יִךְ")],
     [" corresponding to a כתיב of ", author.hbo("בניכי"), "."],
 ]
 _KINGS_DISCUSSION = [
     "This is hard to show in the “pointed כתיב”",
     " style of קרי/כתיב presentation favored by the manuscripts.",
-    " In such a style, the three diagonal קבוץ dots must float before the ב.",
-    " The dots are “orhpans”: they belong to no letter of the כתיב word.",
+    " In such a style, the three diagonal קובוץ dots must float before the ב.",
+    " The dots are “orphans”: they belong to no letter of the כתיב word.",
     " The first image below is from μA; the second is from μL.",
-    " The קבוץ dots are faint in μL, almost invisible.",
+    " The קובוץ dots are faint in μL, almost invisible.",
     " (They are under the ת of the previous word.)",
 ]
 
 _LAMENTATIONS_INTRO = [
-    ["In Lamentations 4:16, there is a קרי of ", author.hbo("וּזְקֵנִ֖ים")],
-    [" corresponding to a כתיב of ", author.hbo("זְקֵנִ֖ים"), "."],
+    ["In Lamentations 4:16 (", *_links_to_u_and_m(tbn.BK_LAMENT, 4, 16), "),"],
+    [" there is a קרי of ", author.hbo("וּזְקֵנִ֖ים")],
+    [" corresponding to a כתיב of ", author.hbo("זקנים"), "."],
 ]
 _LAMENTATIONS_DISCUSSION = [
-    "I.e. the three dots of the $shuruq are missing before the letter זין.",
-    " However, another manuscript (Sassoon 1053) has ",
-    author.hbo("ֻזְקֵנִ֖ים"),
-    " — with a קבוץ floating in the space before the word.",
-    " This is another example of a vowel mark floating before a כתיב word.",
+    "As in 2 Kings 4:7,",
+    " the קובוץ dots must float before the first letter of the word,",
+    " which in this case is ז.",
+    " Here is the way this word looks in Sassoon 1053:",
 ]
 
 _SAMUEL_INTRO = [
-    ["2 Samuel 18:20 is a קרי ולא כתיב: the word ", author.hbo("כֵּ֥ן")],
+    ["2 Samuel 18:20 (", *_links_to_u_and_m(tbn.BK_SND_SAM, 18, 20), ")"],
+    [" is a קרי ולא כתיב: the word ", author.hbo("כֵּ֥ן")],
     " is read but not written.",
 ]
 _SAMUEL_DISCUSSION = [
-    "I.e. there is no space for the word ",
-    author.hbo("כֵּ֥ן"),
-    " which is read but not written,",
-    " but the pointing ($tsere) and accent ($merkha) were written between the words below.",
-    " In other words, the vowel and accent marks of a קרי word",
+    "So there are no letters %כן in the body text on which to put the קרי pointing.",
+    #
+    " This represents a more extreme case of orphan קרי points than the previous two examples,"
+    " since there is no word to which the orphan points can “snuggle up” to.",
+    #
+    " In other words, the vowel and accent marks of the קרי word, כן,",
     " float in the space between the surrounding כתיב words.",
+    #
+    " Or rather, the marks would float in that space if enough space had been left for them.",
+    #
+    " As it is, they somewhat awkwardly and confusingly reside beneath the ל.",
 ]

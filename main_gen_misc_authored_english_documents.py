@@ -17,6 +17,7 @@ from pyauthor_util.all_quirks import AllQuirks
 from pyauthor_util.common_titles_etc import d2_anchor
 from pyauthor_util.job_ov_and_de import make_ov_and_de
 from pyauthor_util.get_qr_groups import get_qr_groups
+import check_spelling_in_html
 
 __all__ = ["main"]
 
@@ -43,6 +44,7 @@ def main():
     job4_quirks_in_mu_a.gen_html_file(aq)
     job5_orphan_qere_points.gen_html_file(tdm_ch)
     _write_index_dot_html((css_href,), "docs/index.html")
+    check_spelling_in_html.main()
 
 
 def _write_index_dot_html(css_hrefs, out_path):

@@ -335,8 +335,7 @@ def main():
         encoding="utf-8",
     )
 
-    print(f"\nCustom dictionary frequencies written to {alpha_path}")
-    print(f"Custom dictionary frequencies written to {count_path}")
+
 
     # Suggest removals for zero-count entries
     unused_words = sorted(w for w, c in word_ci_freq.items() if c == 0)
