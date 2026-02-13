@@ -18,57 +18,36 @@ Align ground truth text (extracted from mam-xml) to the physical manuscript line
 
 ### 1. Prepare the ground truth
 
-Extract verses from MAM-XML into a text file. See `.github/copilot-instructions-mam-xml.md` for general MAM-XML documentation.
-
-#### How to extract verse text for this task
-
-The ground truth source is the MAM-XML repo at `C:\Users\BenDe\GitRepos\MAM-XML\out\xml-vtrad-mam\Job.xml`.
-
-**Extraction script pattern** (save to `.novc/` and run):
+Use the reusable extraction module `pycmn/mam_xml_verses.py`:
 
 ```python
-import xml.etree.ElementTree as ET
-from pathlib import Path
+from pycmn.mam_xml_verses import get_verses_in_range
 
-XML_PATH = r'C:\Users\BenDe\GitRepos\MAM-XML\out\xml-vtrad-mam\Job.xml'
-OUT_PATH = Path(__file__).parent / 'job{startCh}_{startVs}-{endCh}_{endVs}.txt'
-
-def get_verse_text(verse_el):
-    """Extract plain text from a <verse> element."""
-    if 'text' in verse_el.attrib:
-        return verse_el.attrib['text']
-    # Complex verse: concatenate <text> children
-    return ''.join(
-        c.attrib['text'] for c in verse_el if c.tag == 'text'
-    )
-
-tree = ET.parse(XML_PATH)
-book39 = tree.getroot()[0]  # <book39 osisID="Job">
-
-verses = []
-for child in book39:
-    if child.tag != 'chapter':
-        continue
-    osis = child.attrib.get('osisID', '')  # e.g. "Job.34"
-    ch = int(osis.split('.')[-1])
-    for v in child:
-        if v.tag != 'verse':
-            continue
-        vs = int(v.attrib['osisID'].split('.')[-1])
-        if (ch, vs) >= (START_CH, START_VS) and (ch, vs) <= (END_CH, END_VS):
-            text = get_verse_text(v)
-            verses.append(f'{ch}:{vs}: {text}')
-
-OUT_PATH.write_text('\n'.join(verses) + '\n', encoding='utf-8')
-print(f'Wrote {len(verses)} verses to {OUT_PATH}')
+verses = get_verses_in_range(
+    r'C:\Users\BenDe\GitRepos\MAM-XML\out\xml-vtrad-mam\Job.xml',
+    'Job', (37, 9), (38, 20),
+)
 ```
 
+This handles all special MAM-XML elements:
+- `<text>`: plain text spans
+- `<lp-legarmeih>`, `<lp-paseq>`: appends paseq (U+05C0) to preceding word
+- `<kq>`: ketiv/qere — uses ketiv (`kq-k` child, unpointed) for manuscript alignment
+- `<kq-trivial>`: uses `text` attribute (pointed)
+- `<slh-word>`: suspended-letter word — uses `slhw-desc-0` (full pointed word)
+- `<implicit-maqaf>`: no visible text, skipped
+- `<spi-pe2>`, `<spi-samekh2>`: parashah breaks — returned as `parashah_after` field
+
+Each verse dict contains:
+- `cv`: chapter:verse string (e.g., `'37:9'`)
+- `words`: list of maqaf-joined words
+- `ketiv_indices`: indices of words that are ketiv (unpointed)
+- `parashah_after`: `None`, `'{פ}'`, or `'{ס}'`
+
 **Key points:**
-- Read from `xml-vtrad-mam/` (MAM's native versification) — not BHS or Sefaria variants.
-- For simple verses, the text is in the `text` attribute of the `<verse>` element directly.
-- For complex verses (containing legarmeih, paseq, ketiv/qere, etc.), concatenate the `text` attributes of all `<text>` child elements.
-- The output is plain Hebrew text with vowels and accents — no HTML markup, no parashah markers, no thin-spaces.
-- **Do NOT use the mam-for-sefaria CSV** (`mam-for-sefaria/out/csv/Job.csv`) — it contains HTML entities (`&thinsp;`, `&nbsp;`) and parashah markers (`{פ}`) that would need stripping. Read the XML directly instead.
+- Read from `xml-vtrad-mam/` (MAM's native versification).
+- For Aleppo alignment, only **ketiv** matters — it's the unpointed text visible in the manuscript's main column.
+- **Do NOT use the mam-for-sefaria CSV** — it contains HTML entities and parashah markers that would need stripping.
 
 ### 2. Get the page image
 
@@ -81,28 +60,45 @@ Copy-Item "$env:USERPROFILE\OneDrive\Pictures\Screenshots\<latest>.png" ".novc/a
 
 ### 3. Generate the interactive alignment HTML
 
-Create `.novc/aleppo_align_job{CC}_col{N}.html` with:
-- **Left panel (RTL):** All ground truth words as clickable elements, split at maqaf (U+05BE) boundaries so line breaks can occur at maqaf positions.
-- **Right panel:** The page image loaded from `.novc/`.
-- **Pre-locked lines:** Any previously confirmed line endings (shown in blue, not editable).
-- **Click a word** to toggle it as the last word on a manuscript line (turns green with line number).
-- **Export Python / Copy to Clipboard** buttons to generate the `COLUMN_{N}_LINES` list.
-- **Truncated export:** The export only includes lines up to the last clicked line-end; remaining unassigned words are discarded.
+Use the reusable module `pycmn/aleppo_align_html.py`. Create a thin column-specific script in `.novc/`:
 
-Key design details:
-- Words containing maqaf are split into separate clickable segments (the maqaf stays attached to the preceding segment).
-- When exporting, segments separated by maqaf rejoin without spaces.
-- Verse numbers appear as small gold superscripts for orientation.
+```python
+"""Generate alignment HTML for Job NN Column M."""
+import sys
+sys.path.insert(0, r'C:\Users\BenDe\GitRepos\book-of-job')
+
+from pycmn.aleppo_align_html import generate_alignment_html
+
+MAM_XML = r'C:\Users\BenDe\GitRepos\MAM-XML\out\xml-vtrad-mam\Job.xml'
+
+generate_alignment_html(
+    out_path=r'.novc\aleppo_align_jobNN_colM.html',
+    image_path='aleppo_jobNN_colM_page.png',
+    title='Job X:Y–A:B, Column M (right/left column)',
+    column_var='COLUMN_M_LINES',
+    xml_path=MAM_XML,
+    book='Job',
+    verse_range=((X, Y), (A, B)),
+    lead_in_words=['...'],  # words from prev column, or omit if starts at verse boundary
+    lead_in_skip=1,         # how many words to skip from first verse
+)
+```
+
+The generated HTML includes:
+- **Left panel (RTL):** All ground truth words as clickable elements, split at maqaf (U+05BE) boundaries.
+- **Right panel:** The page image.
+- **Ketiv words** styled in gold.
+- **Parashah markers** (`{פ}`, `{ס}`) shown inline as clickable orange pseudo-words.
+- **Click a word** to toggle it as the last word on a manuscript line (turns green with line number).
+- **Copy to Clipboard** exports the `COLUMN_{N}_LINES` Python list.
+
+#### Parashah markers
+
+Petuxah (`{פ}`) and setumah (`{ס}`) breaks from the MAM-XML appear inline as clickable words. When a parashah break causes a blank line in the manuscript, click the last real word of the line before it, then click the `{פ}`/`{ס}` marker itself. The exported line will contain `"{פ}"` (not an empty string).
 
 #### Mid-verse continuation across pages
 
-When a column starts mid-verse (i.e., the previous page/column ended partway through a verse):
-- Include the **full verse** in the `verses` array but mark the lead-in words with a `leadIn` property:
-  ```js
-  { cv: "35:10", leadIn: ["וְֽלֹא־אָמַ֗ר", "אַ֭יֵּה", "אֱל֣וֹהַּ"], words: ["עֹשָׂ֑י", "נֹתֵ֖ן", "זְמִר֣וֹת", "בַּלָּֽיְלָה׃"] },
-  ```
-- The `leadIn` words render grayed out on their own line with a "(prev page)" label. They are not clickable and not included in the export.
-- Only the `words` array contains the clickable text expected in the current image.
+When a column starts mid-verse, pass `lead_in_words` (the words already on the previous column) and `lead_in_skip` (how many words to skip from the first verse). The lead-in words render grayed out with a "(prev col)" label and are not clickable.
 
 ### 4. User aligns text to image
 
@@ -131,3 +127,6 @@ Replace the `COLUMN_1_LINES` list in `py_uxlc_loc/aleppo_col_lines_job{CC}.py` w
 
 - **Job 34:1–23, Column 1:** 28 lines. File: `py_uxlc_loc/aleppo_col_lines_job34.py`, `COLUMN_1_LINES`
 - **Job 34:24–35:9, Column 2:** 28 lines. File: `py_uxlc_loc/aleppo_col_lines_job34.py`, `COLUMN_2_LINES`
+- **Job 35:10–36:18 (partial), Column 1:** 28 lines. File: `py_uxlc_loc/aleppo_col_lines_job35.py`, `COLUMN_1_LINES`
+- **Job 36:18 (cont.)–37:8, Column 2:** 28 lines. File: `py_uxlc_loc/aleppo_col_lines_job35.py`, `COLUMN_2_LINES`
+- **Job 37:9 (cont.)–38:6, Column 1:** 28 lines (line 21 = `"{פ}"` pe break). File: `py_uxlc_loc/aleppo_col_lines_job37.py`, `COLUMN_1_LINES`

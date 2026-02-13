@@ -35,6 +35,10 @@ Full order: **base letter → shin/sin dot → dagesh → rafeh → vowels → m
 
 Place any temporary generated files (scripts, HTML reports, debugging output, etc.) into the `.novc/` folder. This folder is excluded from version control.
 
+## Running Python Code
+
+**Never run Python one-liners via `python -c "..."` in the terminal.** These invariably fail due to character encoding and/or shell escaping issues, especially with Hebrew text. Instead, always create an actual `.py` file in `.novc/` and run it with `python .novc/<filename>.py`.
+
 ## Reading and Writing Python Files
 
 When reading or modifying Python source files in this project:
@@ -88,6 +92,14 @@ https://www.mgketer.org/mikra/{bknu}/{chnu}/1/mg/106
 ```
 
 where `bknu` is the 1-based book number and `chnu` is the chapter number. The book number can be looked up via `pycmn.bib_locales.get_bknu(bk39id)`. For reference, Job = 29.
+
+## Screenshots
+
+When the user refers to "the most recent screenshot" or similar, this means the most recent file (by last-write time) in:
+
+```
+C:\Users\BenDe\OneDrive\Pictures\Screenshots
+```
 
 ## Verification After Refactoring
 
