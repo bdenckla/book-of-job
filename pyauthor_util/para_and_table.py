@@ -65,6 +65,7 @@ _FILE_BASENAMES = {
     "g:tbhq_and_zuxlc": "grp_tbhq_and_zuxlc",
     "g:adm": "grp_adm",
 }
+assert all(v == k.replace("g:", "grp_") for k, v in _FILE_BASENAMES.items())
 
 
 def _table_of_quirks(tdm_ch, group_info, ov_and_de, group_of_quirkrecs):
