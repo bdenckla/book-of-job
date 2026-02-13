@@ -1,0 +1,114 @@
+# OCR of Aleppo Codex (μA) Images with Kraken
+
+## Overview
+
+Kraken is used to OCR Aleppo Codex manuscript page images (downloaded from mgketer.org). It runs in WSL because kraken does not work on Windows.
+
+## Environment
+
+- **WSL Python venv:** `~/.local/share/kraken-env/` (Python 3.12)
+- **Kraken version:** 6.0.3
+- **Activate:** `wsl -- ~/.local/share/kraken-env/bin/python <script>`
+- **Model location:** `~/.local/share/htrmopo/` (inside WSL)
+
+### Setting up the environment (if `~/.local/share/kraken-env/` doesn't exist)
+
+```bash
+wsl -- bash -c "python3 -m venv ~/.local/share/kraken-env && ~/.local/share/kraken-env/bin/pip install kraken"
+```
+
+If apt packages are needed (e.g. for Pillow dependencies), run `sudo apt-get update` first to avoid 404 errors on stale package lists.
+
+## Hebrew Recognition Model
+
+- **Model:** BiblIA_01.mlmodel (DOI: `10.5281/zenodo.5468285`)
+- **Name:** "Medieval Hebrew manuscripts version 1.0"
+- **Author:** Daniel Stökl Ben Ezra
+- **Script:** Hebrew (Ashkenazi, Italian, and Sephardi bookhand)
+- **Accuracy:** 97.0%
+
+### Download the model
+
+```bash
+wsl -- ~/.local/share/kraken-env/bin/kraken get 10.5281/zenodo.5468285
+```
+
+The model downloads to `~/.local/share/htrmopo/<uuid>/BiblIA_01.mlmodel`.
+
+### Other available Hebrew models (same BiblIA family)
+
+| DOI | Name | Hand | Accuracy |
+|-----|------|------|----------|
+| `zenodo.5468285` | BiblIA_01 (general) | All three | 97.0% |
+| `zenodo.5468664` | Sephardi_01 | Sephardi | 98.5% |
+| `zenodo.5468477` | Ashkenazi_01 | Ashkenazi | 96.35% |
+| `zenodo.5468572` | Italian_01 | Italian | 96.2% |
+
+None of these are specifically trained on the Aleppo Codex's 10th-century Tiberian hand, so results will be approximate.
+
+## Running OCR
+
+### Using the CLI (recommended)
+
+```bash
+wsl -- ~/.local/share/kraken-env/bin/kraken -i <image_path> <output_path> segment -bl ocr -m ~/.local/share/htrmopo/<uuid>/BiblIA_01.mlmodel
+```
+
+### Using the Python API
+
+The API in kraken 6.x changed from older docs:
+
+- Use `vgsl.TorchVGSLModel.load_model(path)` — NOT `.load()`
+- `rpred.rpred(model, img, baseline_seg)` may fail with `'MultiParamSequential' object has no attribute 'input'` due to model/version mismatch
+- The CLI approach is more reliable
+
+### Example script (`.novc/ocr_aleppo.py`)
+
+```python
+from kraken import blla, rpred
+from kraken.lib import vgsl
+from PIL import Image
+import glob, os
+
+img = Image.open("/mnt/c/Users/BenDe/OneDrive/Pictures/Aleppo-from-mgketer/<image>.jpg")
+
+# Segment
+baseline_seg = blla.segment(img)
+
+# Find model
+model_dir = os.path.expanduser("~/.local/share/htrmopo")
+models = glob.glob(f"{model_dir}/**/*.mlmodel", recursive=True)
+model = vgsl.TorchVGSLModel.load_model(models[0])
+
+# Recognize
+pred = rpred.rpred(model, img, baseline_seg)
+for i, record in enumerate(pred):
+    print(f"Line {i}: {record.prediction}")
+```
+
+## Aleppo Codex Images from mgketer.org
+
+### URL pattern
+
+```
+https://www.mgketer.org/mikra/{bknu}/{chnu}/1/mg/106
+```
+
+- `bknu` = 1-based book number (Job = 29, from `pycmn.bib_locales`)
+- `chnu` = chapter number
+- The `1` is a fixed verse segment parameter
+
+### Image extraction
+
+mgketer.org uses a JavaScript image viewer (iv-viewer) that loads tiles dynamically. Images cannot be scraped directly — use the browser to save the page image manually.
+
+### Image naming convention
+
+Save downloaded images to `C:\Users\BenDe\OneDrive\Pictures\Aleppo-from-mgketer\` with pattern `{bknu}_{chnu}.jpg` (e.g., `28_34.jpg` for Job chapter 34).
+
+## Output Quality Notes
+
+- The BiblIA model was trained on medieval manuscripts, not the 10th-century Aleppo Codex, so OCR output is fragmentary
+- Main column text is partially recognizable; marginal masorah produces mostly noise
+- For confirming specific letter differences (e.g., ס vs ש), manual inspection of the image is more reliable than OCR
+- The Polygonizer warning about `TopologyException` on some lines is harmless — segmentation still completes
