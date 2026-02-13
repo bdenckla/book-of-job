@@ -1,0 +1,161 @@
+# How to Read MAM-XML
+
+> **Canonical documentation:** The MAM-XML repo itself has a human-readable version of this guide at `C:\Users\BenDe\GitRepos\MAM-XML\doc\reading-mam-xml.md`. This file is a Copilot-oriented copy with local path references.
+
+## What is MAM-XML?
+
+MAM-XML is an XML format containing **MAM (Miqra According to the Masorah)** — the Hebrew Bible text. The source of truth is the [MAM Google Sheet](https://docs.google.com/spreadsheets/d/1mkQyj6by1AtBUabpbaxaZq9Z2X3pX8ZpwG91ZCSOEYs/edit#gid=920165745). MAM-XML is one of several derived formats; others include [MAM-parsed](https://github.com/bdenckla/MAM-parsed) and [MAM for Sefaria](https://github.com/bdenckla/MAM-for-Sefaria).
+
+**Repository:** `C:\Users\BenDe\GitRepos\MAM-XML` (or [github.com/bdenckla/MAM-XML](https://github.com/bdenckla/MAM-XML))
+
+## File Layout
+
+```
+MAM-XML/
+  out/
+    xml-vtrad-bhs/    # BHS versification
+    xml-vtrad-sef/    # Sefaria versification
+    xml-vtrad-mam/    # MAM's native versification
+  py-example/         # Example code that reads XML and produces MAM-for-Sefaria CSV/HTML
+```
+
+Each folder contains one XML file per book group (e.g., `Job.xml`, `Gen.xml`, `1Sam2Sam.xml`).
+
+## XML Element Hierarchy
+
+```
+<book24 versification-tradition="vtmam">     ← root
+  <book39 osisID="Job">                      ← one per biblical book
+    <chapter osisID="Job.1">                 ← one per chapter
+      <verse osisID="Job.1.1" yeivinID="Job 1:1" text="..."/>
+      <verse osisID="Job.1.2" yeivinID="Job 1:2" text="..."/>
+      ...
+    </chapter>
+    <spi-pe2/>                               ← parashah marker between chapters
+    <chapter osisID="Job.2">
+      ...
+    </chapter>
+  </book39>
+</book24>
+```
+
+**Note:** `spi-pe2`, `spi-pe3`, `spi-samekh2`, `spi-samekh3` elements can appear both *between* chapters (as children of `book39`) and *within* verses.
+
+## How Verse Text is Stored
+
+### Simple case: `text` attribute
+
+Most verses store their full text in a `text` attribute:
+
+```xml
+<verse osisID="Job.34.2" yeivinID="Job 34:2"
+       text="שִׁמְע֣וּ חֲכָמִ֣ים מִלָּ֑י וְ֝יֹדְעִ֗ים הַאֲזִ֥ינוּ לִֽי׃"/>
+```
+
+### Complex case: child elements
+
+Verses with special features (legarmeih, paseq, ketiv/qere, etc.) have no `text` attribute. Instead, the text is distributed across `<text>` child elements interspersed with marker elements:
+
+```xml
+<verse osisID="Job.1.1" yeivinID="Job 1:1">
+  <text text="אִ֛ישׁ הָיָ֥ה בְאֶֽרֶץ־ע֖וּץ אִיּ֣וֹב שְׁמ֑וֹ וְהָיָ֣ה"/>
+  <lp-legarmeih/>
+  <text text=" הָאִ֣ישׁ הַה֗וּא תָּ֧ם וְיָשָׁ֛ר וִירֵ֥א אֱלֹהִ֖ים וְסָ֥ר מֵרָֽע׃"/>
+</verse>
+```
+
+### Rule for extracting plain text from a verse
+
+1. If the verse has a `text` attribute → use it directly.
+2. Otherwise → concatenate the `text` attributes of all `<text>` child elements (in order).
+
+This gives you the consonantal text with vowels and accents, minus any special markup.
+
+## Child Element Types
+
+| Element | Meaning | How to handle for plain text |
+|---------|---------|------------------------------|
+| `<text text="..."/>` | A run of Hebrew text | Include the `text` attribute |
+| `<lp-legarmeih/>` | Legarmeih punctuation (legacy paseq) | Ignore (or render as thin-space + paseq) |
+| `<lp-paseq/>` | Paseq punctuation | Ignore (or render as thin-space + paseq + thin-space) |
+| `<implicit-maqaf/>` | Maqaf that is implicit in the manuscript | Ignore (or render as maqaf) |
+| `<letter-small>` | Small letter | Include child text |
+| `<letter-large>` | Large letter | Include child text |
+| `<letter-hung>` | Hung/suspended letter | Include child text |
+| `<kq>`, `<kq-k>`, `<kq-q>` | Ketiv/Qere | Complex; see handlers |
+| `<kq-trivial>` | Trivial Ketiv/Qere | Include child text |
+| `<cant-combined>` | Combined cantillation | Pass through children |
+| `<cant-all-three>` | All three cantillation systems | Pass through children |
+| `<shirah-space/>` | Shirah (song) spacing | Ignore or render as spaces |
+| `<good-ending>` | Alternative ending | Ignore |
+| `<scrdfftar>` | Scroll-difference-from-target | Use `<sdt-target>` child |
+
+## Verse Attributes
+
+| Attribute | Meaning |
+|-----------|---------|
+| `osisID` | OSIS-format reference, e.g., `Job.34.24` |
+| `yeivinID` | Yeivin-format reference, e.g., `Job 34:24` |
+| `text` | Full verse text (only for simple verses) |
+| `starts-with-sampe` | Verse starts after a parashah marker (`pe2`, `samekh2`, etc.) |
+| `ends-with-sampe` | Verse ends with a parashah marker |
+| `contents-corresponds-to` | Versification note (for non-MAM versifications) |
+| `osisID-of-MAM-src` | Which MAM verse this corresponds to (for non-MAM versifications) |
+
+## Reading MAM-XML in Python
+
+### Minimal example: extract plain text for a verse range
+
+```python
+import xml.etree.ElementTree as ET
+
+tree = ET.parse('path/to/MAM-XML/out/xml-vtrad-mam/Job.xml')
+root = tree.getroot()
+book39 = root[0]  # The <book39> element
+
+for child in book39:
+    if child.tag == 'chapter' and child.attrib.get('osisID') == 'Job.34':
+        for verse in child:
+            if verse.tag != 'verse':
+                continue
+            text = _get_verse_text(verse)
+            print(f"{verse.attrib['osisID']}: {text}")
+
+def _get_verse_text(verse_el):
+    """Extract plain text from a verse element."""
+    if 'text' in verse_el.attrib:
+        return verse_el.attrib['text']
+    # Concatenate text from <text> children
+    parts = []
+    for child in verse_el:
+        if child.tag == 'text':
+            parts.append(child.attrib['text'])
+    return ''.join(parts)
+```
+
+### Handler-based approach (used by MAM-XML py-example)
+
+The `py-example/` in the MAM-XML repo demonstrates a more sophisticated recursive handler pattern:
+
+1. **`_handle(handlers, etel)`** recursively processes an element tree
+2. Each element type has a registered handler function in a `HANDLERS` dict
+3. Handlers are keyed by `(tag, class_attr)` tuple
+4. Handlers receive `(etel, ofc1, ofc2)`:
+   - `etel`: the element itself
+   - `ofc1`: output from all children concatenated
+   - `ofc2`: output from each child individually (dict keyed by child element)
+5. If the element has a `text` attribute and no children, `ofc1` is `[text_attr]`
+
+See `MAM-XML/py-example/pysefaria/mam4sef_handlers.py` for the complete handler implementations — this is the canonical example of how to process every element type.
+
+## Versification Traditions
+
+- **vtmam** (`xml-vtrad-mam/`): MAM's native versification
+- **vtbhs** (`xml-vtrad-bhs/`): BHS versification
+- **vtsef** (`xml-vtrad-sef/`): Sefaria versification
+
+For Job, these are largely the same. Differences matter more for Torah and some Prophets passages.
+
+## Downstream Products
+
+- **MAM-for-Sefaria** (`C:\Users\BenDe\GitRepos\mam-for-sefaria`): CSV/HTML format generated from MAM-XML by `py-example/main_mam4sef.py`. Each row is `"Book Ch:Vs","<html_text>"`. This is a *derived* product — the XML is the source.
