@@ -79,6 +79,16 @@ Both approaches guarantee syntactically valid output. Avoid fragile regex-based 
 python main_gen_misc_authored_english_documents.py
 ```
 
+## mgketer.org Aleppo Codex Images
+
+To view an Aleppo Codex (μA) image for a given chapter on mgketer.org, use:
+
+```
+https://www.mgketer.org/mikra/{bknu}/{chnu}/1/mg/106
+```
+
+where `bknu` is the 1-based book number and `chnu` is the chapter number. The book number can be looked up via `pycmn.bib_locales.get_bknu(bk39id)`. For reference, Job = 29.
+
 ## Verification After Refactoring
 
 After making changes to Python source files, verify the HTML output is unchanged:
