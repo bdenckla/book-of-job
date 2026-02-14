@@ -300,6 +300,12 @@ Replace the `COLUMN_{N}_LINES` list in `py_uxlc_loc/aleppo_col_lines_{leaf}.py` 
 
 ## Completed Alignments
 
+- **Leaf 270r** (Ps 149:1 – Job 1:16): `py_uxlc_loc/aleppo_col_lines_270r.py`
+  - Column 1: Ps 149:1–150:6 + Job 1:1–1:4 (partial), 28 lines (lines 19–20 blank = Ps→Job book boundary; line 11 = `"{פ}"` after Ps 149:9)
+  - Column 2: Job 1:4 (cont.)–1:16 (partial), 28 lines (line 6 = `"{פ}"` after Job 1:5; 1:10 ketiv את)
+- **Leaf 278v** (Job 32:8–33:33): `py_uxlc_loc/aleppo_col_lines_278v.py`
+  - Column 1: Job 32:8–33:11, 28 lines
+  - Column 2: Job 33:12–33:33, 28 lines (33:19 ketiv וריב, 33:21 ketiv נפשי+וחיתי, 33:28 ketiv נפשי+וחיתי; 33:33 parashah {פ})
 - **Leaf 279r** (Job 34:1–35:9): `py_uxlc_loc/aleppo_col_lines_279r.py`
   - Column 1: Job 34:1–23, 28 lines
   - Column 2: Job 34:24–35:9, 28 lines

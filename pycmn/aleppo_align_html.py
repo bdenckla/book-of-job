@@ -264,14 +264,8 @@ h1 {{ text-align: center; padding: 12px; font-size: 18px; }}
     direction: ltr;
     margin-left: 4px;
 }}
-.verse-marker {{
-    display: inline-block;
-    color: #e0a040;
-    font-size: 12px;
-    font-family: monospace;
-    direction: ltr;
-    margin: 0 4px;
-    vertical-align: super;
+.word.verse-start {{
+    border-bottom: 2px solid #5a5a8a;
 }}
 br.linebreak {{ }}
 .lead-in {{
@@ -394,10 +388,6 @@ function render() {{
 
     allWords.forEach((entry, idx) => {{
         if (entry.isFirstInVerse && entry.leadInWords) {{
-            const vm = document.createElement('span');
-            vm.className = 'verse-marker';
-            vm.textContent = entry.cv;
-            panel.appendChild(vm);
             entry.leadInWords.forEach(w => {{
                 const li = document.createElement('span');
                 li.className = 'lead-in';
@@ -410,12 +400,6 @@ function render() {{
             panel.appendChild(lbl);
             panel.appendChild(document.createElement('br'));
         }}
-        if (entry.isFirstInVerse && !entry.leadInWords) {{
-            const vm = document.createElement('span');
-            vm.className = 'verse-marker';
-            vm.textContent = entry.cv;
-            panel.appendChild(vm);
-        }}
 
         const span = document.createElement('span');
         span.className = 'word';
@@ -423,6 +407,10 @@ function render() {{
         if (entry.afterMaqaf) span.classList.add('after-maqaf');
         if (entry.isKetiv) span.classList.add('ketiv');
         if (entry.isParashah) span.classList.add('parashah');
+        if (entry.isFirstInVerse) {{
+            span.classList.add('verse-start');
+            span.title = entry.cv;
+        }}
         span.textContent = entry.word;
         span.dataset.idx = idx;
 
