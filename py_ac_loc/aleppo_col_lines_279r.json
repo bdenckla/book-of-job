@@ -6,7 +6,7 @@
   ],
   "overall range (all columns)": {
     "start": "Job 34:1-first",
-    "end": "Job 35:9-first"
+    "end": "Job 35:10-mid"
   },
   "MAM-XML source file(s)": [
     "MAM-XML/out/xml-vtrad-mam/Job.xml"
@@ -51,15 +51,15 @@
         "end": [
           "Job",
           35,
-          9,
-          "first-word"
+          10,
+          "a-middle-word"
         ]
       }
     ],
     "ranges-friendly": [
       {
         "start": "Job 34:24-first",
-        "end": "Job 35:9-first"
+        "end": "Job 35:10-mid"
       }
     ],
     "line_count": 28

@@ -108,3 +108,9 @@ After making changes to Python source files, verify the HTML output is unchanged
 1. Run: `python ./main_gen_misc_authored_english_documents.py`
 2. Check: `git status --porcelain docs/`
 3. If any files in `docs/` are modified, investigate and fix the differences before considering the task complete
+
+## Git Discipline
+
+- **Never auto-commit.** Only commit when the user explicitly asks.
+- **Before discarding work** (`git reset`, `git checkout -- .`, `git stash drop`, etc.): always run `git status` and `git diff --stat` first. If there are uncommitted changes beyond the current experiment, alert the user and ask them to commit or stash before proceeding.
+- **Before a series of experiments** that might need to be thrown away: ask the user to commit the current clean state first, so there is a safe baseline to return to.

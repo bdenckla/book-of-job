@@ -329,8 +329,8 @@ themselves. See `py_ac_loc/aleppo_col_lines_format.md` for the schema.
 |------|---------------|------|
 | 270r | Ps 149:1-first – Job 1:16-last | `aleppo_col_lines_270r.json` |
 | 278v | Job 32:8-first – Job 33:33-first | `aleppo_col_lines_278v.json` |
-| 279r | Job 34:1-first – Job 35:9-first | `aleppo_col_lines_279r.json` |
-| 279v | Job 35:10-first – Job 37:8-first | `aleppo_col_lines_279v.json` |
+| 279r | Job 34:1-first – Job 35:10-mid | `aleppo_col_lines_279r.json` |
+| 279v | Job 35:10-mid – Job 37:8-first | `aleppo_col_lines_279v.json` |
 | 280r | Job 37:9-mid – Job 38:30-first | `aleppo_col_lines_280r.json` |
 | 280v | Job 38:31-first – Job 40:5-first | `aleppo_col_lines_280v.json` |
 | 281r | Job 40:6-first – Job 41:22-first | `aleppo_col_lines_281r.json` |

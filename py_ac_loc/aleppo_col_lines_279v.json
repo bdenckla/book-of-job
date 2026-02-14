@@ -5,7 +5,7 @@
     "to the page image (two columns)."
   ],
   "overall range (all columns)": {
-    "start": "Job 35:10-first",
+    "start": "Job 35:10-mid",
     "end": "Job 37:8-first"
   },
   "MAM-XML source file(s)": [
@@ -20,7 +20,7 @@
           "Job",
           35,
           10,
-          "first-word"
+          "a-middle-word"
         ],
         "end": [
           "Job",
@@ -32,7 +32,7 @@
     ],
     "ranges-friendly": [
       {
-        "start": "Job 35:10-first",
+        "start": "Job 35:10-mid",
         "end": "Job 36:18-last"
       }
     ],
