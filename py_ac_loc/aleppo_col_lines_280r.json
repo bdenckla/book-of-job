@@ -1,10 +1,10 @@
 {
-  "leaf": "280r",
-  "description": [
+  "file-description": [
     "Line-by-line alignment of an Aleppo Codex",
     " page image to the corresponding MAM-XML text."
   ],
-  "ranges-covered-by-this-page": [
+  "page-id": "280r",
+  "page-ranges": [
     {
       "start": [
         "Job",
@@ -20,19 +20,33 @@
       ]
     }
   ],
-  "ranges-covered-by-this-page-friendly": [
+  "page-ranges-friendly": [
     {
       "start": "Job 37:9-mid",
       "end": "Job 38:30-first"
     }
   ],
-  "MAM-XML source file(s)": [
+  "page-MAM-XML-files": [
     "MAM-XML/out/xml-vtrad-mam/Job.xml"
   ],
-  "page_image": "https://www.mgketer.org/mikra/29/37/1/mg/106",
-  "column_1": {
-    "side": "right",
-    "ranges-covered-by-this-column": [
+  "page-image": "https://www.mgketer.org/mikra/29/37/1/mg/106",
+  "page-col-positions-possible": [
+    "right",
+    "left"
+  ],
+  "page-column-symbol-recs": [
+    {
+      "csr-header": "column-right",
+      "csr-lines": "column-right-lines"
+    },
+    {
+      "csr-header": "column-left",
+      "csr-lines": "column-left-lines"
+    }
+  ],
+  "column-right": {
+    "col-position": "right",
+    "col-ranges": [
       {
         "start": [
           "Job",
@@ -48,20 +62,20 @@
         ]
       }
     ],
-    "ranges-covered-by-this-column-friendly": [
+    "col-ranges-friendly": [
       {
         "start": "Job 37:9-mid",
         "end": "Job 38:6-first"
       }
     ],
-    "line_count": 28,
-    "pe_lines": [
+    "col-line-count": 28,
+    "col-pe-lines": [
       21
     ]
   },
-  "column_2": {
-    "side": "left",
-    "ranges-covered-by-this-column": [
+  "column-left": {
+    "col-position": "left",
+    "col-ranges": [
       {
         "start": [
           "Job",
@@ -77,15 +91,15 @@
         ]
       }
     ],
-    "ranges-covered-by-this-column-friendly": [
+    "col-ranges-friendly": [
       {
         "start": "Job 38:7-first",
         "end": "Job 38:30-first"
       }
     ],
-    "line_count": 28
+    "col-line-count": 28
   },
-  "column_1_lines": [
+  "column-right-lines": [
     {
       "line-num": 1,
       "range": {
@@ -308,7 +322,7 @@
       "MAM-XML-fragment": "הׇטְבָּ֑עוּ א֥וֹ מִי־יָ֝רָ֗ה אֶ֣בֶן פִּנָּתָֽהּ׃"
     }
   ],
-  "column_2_lines": [
+  "column-left-lines": [
     {
       "line-num": 1,
       "range": {

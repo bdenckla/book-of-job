@@ -1,10 +1,10 @@
 {
-  "leaf": "270r",
-  "description": [
+  "file-description": [
     "Line-by-line alignment of an Aleppo Codex",
     " page image to the corresponding MAM-XML text."
   ],
-  "ranges-covered-by-this-page": [
+  "page-id": "270r",
+  "page-ranges": [
     {
       "start": [
         "Ps",
@@ -34,7 +34,7 @@
       ]
     }
   ],
-  "ranges-covered-by-this-page-friendly": [
+  "page-ranges-friendly": [
     {
       "start": "Ps 149:1-first",
       "end": "Ps 150:6-first"
@@ -44,14 +44,28 @@
       "end": "Job 1:16-last"
     }
   ],
-  "MAM-XML source file(s)": [
+  "page-MAM-XML-files": [
     "MAM-XML/out/xml-vtrad-mam/Ps.xml",
     "MAM-XML/out/xml-vtrad-mam/Job.xml"
   ],
-  "page_image": "https://archive.org/details/aleppo-codex/page/n540/mode/1up",
-  "column_1": {
-    "side": "right",
-    "ranges-covered-by-this-column": [
+  "page-image": "https://archive.org/details/aleppo-codex/page/n540/mode/1up",
+  "page-col-positions-possible": [
+    "right",
+    "left"
+  ],
+  "page-column-symbol-recs": [
+    {
+      "csr-header": "column-right",
+      "csr-lines": "column-right-lines"
+    },
+    {
+      "csr-header": "column-left",
+      "csr-lines": "column-left-lines"
+    }
+  ],
+  "column-right": {
+    "col-position": "right",
+    "col-ranges": [
       {
         "start": [
           "Ps",
@@ -81,7 +95,7 @@
         ]
       }
     ],
-    "ranges-covered-by-this-column-friendly": [
+    "col-ranges-friendly": [
       {
         "start": "Ps 149:1-first",
         "end": "Ps 150:6-first"
@@ -91,15 +105,15 @@
         "end": "Job 1:4-last"
       }
     ],
-    "line_count": 28,
-    "blank_lines": [
+    "col-line-count": 28,
+    "col-blank-lines": [
       19,
       20
     ]
   },
-  "column_2": {
-    "side": "left",
-    "ranges-covered-by-this-column": [
+  "column-left": {
+    "col-position": "left",
+    "col-ranges": [
       {
         "start": [
           "Job",
@@ -115,18 +129,18 @@
         ]
       }
     ],
-    "ranges-covered-by-this-column-friendly": [
+    "col-ranges-friendly": [
       {
         "start": "Job 1:4-mid",
         "end": "Job 1:16-last"
       }
     ],
-    "line_count": 28,
-    "notes": [
+    "col-line-count": 28,
+    "col-notes": [
       "Line 6 includes {פ} after Job 1:5"
     ]
   },
-  "column_1_lines": [
+  "column-right-lines": [
     {
       "line-num": 1,
       "range": {
@@ -346,7 +360,7 @@
       "MAM-XML-fragment": "וְהָלְכ֤וּ בָנָיו֙ וְעָשׂ֣וּ מִשְׁתֶּ֔ה בֵּ֖ית אִ֣ישׁ יוֹמ֑וֹ"
     }
   ],
-  "column_2_lines": [
+  "column-left-lines": [
     {
       "line-num": 1,
       "range": {

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Each `py_ac_loc/aleppo_col_lines_{leaf}.json` file records the line-by-line
+Each `py_ac_loc/aleppo_col_lines_{page}.json` file records the line-by-line
 alignment of one Aleppo Codex page image to the corresponding MAM-XML text.
 
 ## Consistency Checker
@@ -20,34 +20,45 @@ machine-readable counterparts.
 
 | Key | Type | Description |
 |-----|------|-------------|
-| `leaf` | string | Leaf identifier, e.g. `"281v"` |
-| `description` | list of strings | Generic description (same in every file) |
-| `ranges-covered-by-this-page` | list of range objects | Overall text extent of the page in machine-readable form, split per book (see [Range Object](#range-object)) |
-| `ranges-covered-by-this-page-friendly` | list of ranges-friendly objects | Human-readable version of `ranges-covered-by-this-page` (see [Ranges-Friendly](#ranges-friendly-format)). **Redundant** — must match `ranges-covered-by-this-page`. |
-| `MAM-XML source file(s)` | list of strings | Repo-relative paths to source XML files, e.g. `"MAM-XML/out/xml-vtrad-mam/Job.xml"` |
-| `page_image` | string | URL to the page image on archive.org |
-| `column_1` | object | Metadata for the right column (see [Column Object](#column-object)) |
-| `column_2` | object | Metadata for the left column (see [Column Object](#column-object)) |
-| `column_1_lines` | list of line objects | Line data for column 1 (see [Line Data](#line-data)) |
-| `column_2_lines` | list of line objects | Line data for column 2 (see [Line Data](#line-data)) |
+| `file-description` | list of strings | Generic description (same in every file) |
+| `page-id` | string | Page identifier, e.g. `"281v"` |
+| `page-ranges` | list of range objects | Overall text extent of the page in machine-readable form, split per book (see [Range Object](#range-object)) |
+| `page-ranges-friendly` | list of ranges-friendly objects | Human-readable version of `page-ranges` (see [Ranges-Friendly](#ranges-friendly-format)). **Redundant** — must match `page-ranges`. |
+| `page-MAM-XML-files` | list of strings | Repo-relative paths to source XML files, e.g. `"MAM-XML/out/xml-vtrad-mam/Job.xml"` |
+| `page-image` | string | URL to the page image on archive.org |
+| `page-col-positions-possible` | list of strings | All possible column positions for this page, e.g. `["right", "left"]`. Future pages may include `"middle"`. |
+| `page-column-symbol-recs` | list of column-symbol-rec objects | Maps symbolic column key names to their header and lines keys (see [Column Symbol Rec](#column-symbol-rec)) |
+| `column-right` | object | Metadata for the right column (see [Column Object](#column-object)) |
+| `column-left` | object | Metadata for the left column (see [Column Object](#column-object)) |
+| `column-right-lines` | list of line objects | Line data for the right column (see [Line Data](#line-data)) |
+| `column-left-lines` | list of line objects | Line data for the left column (see [Line Data](#line-data)) |
+
+## Column Symbol Rec
+
+Each entry in `page-column-symbol-recs` identifies the JSON key names for a column's header object and line data:
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `csr-header` | string | Key name of the column header object, e.g. `"column-right"` |
+| `csr-lines` | string | Key name of the column line data array, e.g. `"column-right-lines"` |
 
 ## Column Object
 
-Each column object (`column_1`, `column_2`) contains:
+Each column object (`column-right`, `column-left`) contains:
 
 | Key | Type | Required | Description |
 |-----|------|----------|-------------|
-| `side` | string | yes | `"right"` for column 1, `"left"` for column 2 |
-| `ranges-covered-by-this-column` | list of range objects | yes | Machine-readable text ranges (see [Range Object](#range-object)) |
-| `ranges-covered-by-this-column-friendly` | list of ranges-friendly objects | yes | Human-readable version of `ranges-covered-by-this-column` (see [Ranges-Friendly](#ranges-friendly-format)). **Redundant** — must match `ranges-covered-by-this-column`. |
-| `line_count` | integer | yes | Number of lines in the column (typically 28) |
-| `blank_lines` | list of integers | if any | Line numbers that are blank (empty string). Used at book boundaries. |
-| `pe_lines` | list of integers | if any | Line numbers containing only `{פ}` (parashah pe break). |
-| `ketivs` | list of ketiv objects | if any | Ketiv readings in this column (see [Ketiv Object](#ketiv-object)) |
-| `notes` | list of strings | if any | Free-form English notes for anything not captured by the structured fields above |
+| `col-position` | string | yes | `"right"` for `column-right`, `"left"` for `column-left` |
+| `col-ranges` | list of range objects | yes | Machine-readable text ranges (see [Range Object](#range-object)) |
+| `col-ranges-friendly` | list of ranges-friendly objects | yes | Human-readable version of `col-ranges` (see [Ranges-Friendly](#ranges-friendly-format)). **Redundant** — must match `col-ranges`. |
+| `col-line-count` | integer | yes | Number of lines in the column (typically 28) |
+| `col-blank-lines` | list of integers | if any | Line numbers that are blank (empty string). Used at book boundaries. |
+| `col-pe-lines` | list of integers | if any | Line numbers containing only `{פ}` (parashah pe break). |
+| `col-ketivs` | list of ketiv objects | if any | Ketiv readings in this column (see [Ketiv Object](#ketiv-object)) |
+| `col-notes` | list of strings | if any | Free-form English notes for anything not captured by the structured fields above |
 
-Keys are omitted when the list would be empty (`blank_lines`, `pe_lines`,
-`ketivs`, `notes`).
+Keys are omitted when the list would be empty (`col-blank-lines`, `col-pe-lines`,
+`col-ketivs`, `col-notes`).
 
 ## Range Object
 
@@ -95,8 +106,8 @@ The suffix mapping is:
 | `"a-middle-word"` | `-mid` |
 | `"last-word"` | `-last` |
 
-The top-level `"ranges-covered-by-this-page"` uses the machine-readable
-range-object format, and `"ranges-covered-by-this-page-friendly"` uses the
+The top-level `"page-ranges"` uses the machine-readable
+range-object format, and `"page-ranges-friendly"` uses the
 ranges-friendly format. Both are lists of range objects (one per book),
 derived by merging all column ranges across both columns and grouping by book.
 
@@ -123,7 +134,7 @@ The `fml` value here indicates where the ketiv word falls within its verse
 
 ## Line Data
 
-Each `column_N_lines` array contains objects with the following fields:
+Each `column-right-lines` / `column-left-lines` array contains objects with the following fields:
 
 | Key | Type | Description |
 |-----|------|-------------|
@@ -174,13 +185,13 @@ Several fields are intentionally redundant to aid human readability:
 
 | Friendly field | Must match |
 |----------------|-----------|
-| `ranges-covered-by-this-column-friendly` | `ranges-covered-by-this-column` |
-| `ranges-covered-by-this-page` | `ranges-covered-by-this-page-friendly` (machine ↔ friendly) |
-| `ranges-covered-by-this-page-friendly` | Merge of all column `ranges-covered-by-this-column-friendly` entries, grouped by book |
+| `col-ranges-friendly` | `col-ranges` |
+| `page-ranges` | `page-ranges-friendly` (machine ↔ friendly) |
+| `page-ranges-friendly` | Merge of all column `col-ranges-friendly` entries, grouped by book |
 | `bcv-fml-friendly` (in ketivs) | `bcv-fml` |
-| `blank_lines` | Lines in `column_N_lines` with empty text |
-| `pe_lines` | Lines in `column_N_lines` with text `"{פ}"` |
-| ketiv `word` | Must appear in some line in `column_N_lines` |
+| `col-blank-lines` | Lines in `column-right-lines` / `column-left-lines` with empty text |
+| `col-pe-lines` | Lines in `column-right-lines` / `column-left-lines` with text `"{פ}"` |
+| ketiv `word` | Must appear in some line in `column-right-lines` / `column-left-lines` |
 | line range | `null` for blank/{פ} lines; non-null `[start, end]` range pair for text lines |
 
 Run `python py_ac_loc/check_aleppo_col_lines.py` to verify all of these.
@@ -189,20 +200,20 @@ Run `python py_ac_loc/check_aleppo_col_lines.py` to verify all of these.
 
 ```json
 {
-  "side": "right",
-  "ranges-covered-by-this-column": [
+  "col-position": "right",
+  "col-ranges": [
     {
       "start": ["Job", 32, 8, "first-word"],
       "end": ["Job", 33, 11, "first-word"]
     }
   ],
-  "ranges-covered-by-this-column-friendly": [
+  "col-ranges-friendly": [
     {
       "start": "Job 32:8-first",
       "end": "Job 33:11-first"
     }
   ],
-  "line_count": 28
+  "col-line-count": 28
 }
 ```
 
@@ -210,22 +221,22 @@ Run `python py_ac_loc/check_aleppo_col_lines.py` to verify all of these.
 
 ```json
 {
-  "side": "right",
-  "ranges-covered-by-this-column": [
+  "col-position": "right",
+  "col-ranges": [
     {
       "start": ["Job", 41, 23, "first-word"],
       "end": ["Job", 42, 10, "first-word"]
     }
   ],
-  "ranges-covered-by-this-column-friendly": [
+  "col-ranges-friendly": [
     {
       "start": "Job 41:23-first",
       "end": "Job 42:10-first"
     }
   ],
-  "line_count": 28,
-  "pe_lines": [5, 14],
-  "ketivs": [
+  "col-line-count": 28,
+  "col-pe-lines": [5, 14],
+  "col-ketivs": [
     {
       "bcv-fml": ["Job", 42, 2, "first-word"],
       "bcv-fml-friendly": "Job 42:2-first",

@@ -1,10 +1,10 @@
 {
-  "leaf": "281v",
-  "description": [
+  "file-description": [
     "Line-by-line alignment of an Aleppo Codex",
     " page image to the corresponding MAM-XML text."
   ],
-  "ranges-covered-by-this-page": [
+  "page-id": "281v",
+  "page-ranges": [
     {
       "start": [
         "Job",
@@ -34,7 +34,7 @@
       ]
     }
   ],
-  "ranges-covered-by-this-page-friendly": [
+  "page-ranges-friendly": [
     {
       "start": "Job 41:23-first",
       "end": "Job 42:17-first"
@@ -44,14 +44,28 @@
       "end": "Prov 1:8-first"
     }
   ],
-  "MAM-XML source file(s)": [
+  "page-MAM-XML-files": [
     "MAM-XML/out/xml-vtrad-mam/Job.xml",
     "MAM-XML/out/xml-vtrad-mam/Prov.xml"
   ],
-  "page_image": "https://archive.org/details/aleppo-codex/page/n563/mode/1up",
-  "column_1": {
-    "side": "right",
-    "ranges-covered-by-this-column": [
+  "page-image": "https://archive.org/details/aleppo-codex/page/n563/mode/1up",
+  "page-col-positions-possible": [
+    "right",
+    "left"
+  ],
+  "page-column-symbol-recs": [
+    {
+      "csr-header": "column-right",
+      "csr-lines": "column-right-lines"
+    },
+    {
+      "csr-header": "column-left",
+      "csr-lines": "column-left-lines"
+    }
+  ],
+  "column-right": {
+    "col-position": "right",
+    "col-ranges": [
       {
         "start": [
           "Job",
@@ -67,18 +81,18 @@
         ]
       }
     ],
-    "ranges-covered-by-this-column-friendly": [
+    "col-ranges-friendly": [
       {
         "start": "Job 41:23-first",
         "end": "Job 42:10-first"
       }
     ],
-    "line_count": 28,
-    "pe_lines": [
+    "col-line-count": 28,
+    "col-pe-lines": [
       5,
       14
     ],
-    "ketivs": [
+    "col-ketivs": [
       {
         "bcv-fml": [
           "Job",
@@ -101,9 +115,9 @@
       }
     ]
   },
-  "column_2": {
-    "side": "left",
-    "ranges-covered-by-this-column": [
+  "column-left": {
+    "col-position": "left",
+    "col-ranges": [
       {
         "start": [
           "Job",
@@ -133,7 +147,7 @@
         ]
       }
     ],
-    "ranges-covered-by-this-column-friendly": [
+    "col-ranges-friendly": [
       {
         "start": "Job 42:11-first",
         "end": "Job 42:17-first"
@@ -143,15 +157,15 @@
         "end": "Prov 1:8-first"
       }
     ],
-    "line_count": 28,
-    "blank_lines": [
+    "col-line-count": 28,
+    "col-blank-lines": [
       17,
       18
     ],
-    "pe_lines": [
+    "col-pe-lines": [
       27
     ],
-    "ketivs": [
+    "col-ketivs": [
       {
         "bcv-fml": [
           "Job",
@@ -164,7 +178,7 @@
       }
     ]
   },
-  "column_1_lines": [
+  "column-right-lines": [
     {
       "line-num": 1,
       "range": {
@@ -384,7 +398,7 @@
       "MAM-XML-fragment": "וַיֹּ֧סֶף יְהֹוָ֛ה אֶת־כׇּל־אֲשֶׁ֥ר לְאִיּ֖וֹב לְמִשְׁנֶֽה׃"
     }
   ],
-  "column_2_lines": [
+  "column-left-lines": [
     {
       "line-num": 1,
       "range": {

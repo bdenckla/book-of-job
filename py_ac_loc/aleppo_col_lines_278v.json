@@ -1,10 +1,10 @@
 {
-  "leaf": "278v",
-  "description": [
+  "file-description": [
     "Line-by-line alignment of an Aleppo Codex",
     " page image to the corresponding MAM-XML text."
   ],
-  "ranges-covered-by-this-page": [
+  "page-id": "278v",
+  "page-ranges": [
     {
       "start": [
         "Job",
@@ -20,19 +20,33 @@
       ]
     }
   ],
-  "ranges-covered-by-this-page-friendly": [
+  "page-ranges-friendly": [
     {
       "start": "Job 32:8-first",
       "end": "Job 33:33-first"
     }
   ],
-  "MAM-XML source file(s)": [
+  "page-MAM-XML-files": [
     "MAM-XML/out/xml-vtrad-mam/Job.xml"
   ],
-  "page_image": "https://archive.org/details/aleppo-codex/page/n557/mode/1up",
-  "column_1": {
-    "side": "right",
-    "ranges-covered-by-this-column": [
+  "page-image": "https://archive.org/details/aleppo-codex/page/n557/mode/1up",
+  "page-col-positions-possible": [
+    "right",
+    "left"
+  ],
+  "page-column-symbol-recs": [
+    {
+      "csr-header": "column-right",
+      "csr-lines": "column-right-lines"
+    },
+    {
+      "csr-header": "column-left",
+      "csr-lines": "column-left-lines"
+    }
+  ],
+  "column-right": {
+    "col-position": "right",
+    "col-ranges": [
       {
         "start": [
           "Job",
@@ -48,17 +62,17 @@
         ]
       }
     ],
-    "ranges-covered-by-this-column-friendly": [
+    "col-ranges-friendly": [
       {
         "start": "Job 32:8-first",
         "end": "Job 33:11-first"
       }
     ],
-    "line_count": 28
+    "col-line-count": 28
   },
-  "column_2": {
-    "side": "left",
-    "ranges-covered-by-this-column": [
+  "column-left": {
+    "col-position": "left",
+    "col-ranges": [
       {
         "start": [
           "Job",
@@ -74,15 +88,15 @@
         ]
       }
     ],
-    "ranges-covered-by-this-column-friendly": [
+    "col-ranges-friendly": [
       {
         "start": "Job 33:12-first",
         "end": "Job 33:33-first"
       }
     ],
-    "line_count": 28
+    "col-line-count": 28
   },
-  "column_1_lines": [
+  "column-right-lines": [
     {
       "line-num": 1,
       "range": {
@@ -308,7 +322,7 @@
       "MAM-XML-fragment": "יָשֵׂ֣ם בַּסַּ֣ד רַגְלָ֑י יִ֝שְׁמֹ֗ר כׇּל־אׇרְחֹתָֽי׃"
     }
   ],
-  "column_2_lines": [
+  "column-left-lines": [
     {
       "line-num": 1,
       "range": {
