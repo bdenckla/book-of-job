@@ -27,8 +27,8 @@ machine-readable counterparts.
 | `page_image` | string | URL to the page image on archive.org |
 | `column_1` | object | Metadata for the right column (see [Column Object](#column-object)) |
 | `column_2` | object | Metadata for the left column (see [Column Object](#column-object)) |
-| `column_1_lines` | list of `[int, string\|null, string]` | Line data for column 1 (see [Line Data](#line-data)) |
-| `column_2_lines` | list of `[int, string\|null, string]` | Line data for column 2 (see [Line Data](#line-data)) |
+| `column_1_lines` | list of `[int, [string,string]\|null, string]` | Line data for column 1 (see [Line Data](#line-data)) |
+| `column_2_lines` | list of `[int, [string,string]\|null, string]` | Line data for column 2 (see [Line Data](#line-data)) |
 
 ## Column Object
 
@@ -125,29 +125,41 @@ Each `column_N_lines` array contains `[line_number, range, text]` triples:
 
 ```json
 [
-  [1, "Job 41:23", "יַרְתִּ֙יחַ כַּסִּ֙יר מְצוּלָ֑ה יָם׀ח יָשִׂ֥ים כַּמֶּרְקָחָֽה׃"],
-  [2, "Job 41:24", "אַ֭חֲרָיו יָאִ֙יר נָתִ֑יב יַחְשֹׁ֖ב תְּה֙וֹם לְשֵׂיבָֽה׃"],
-  [3, "Job 41:25–41:26", "אֵֽין־עַל־עָפָ֥ר ..."],
+  [1, ["Job 41:23-first", "Job 41:23-last"], "יַרְתִּ֙יחַ כַּסִּ֙יר מְצוּלָ֑ה יָם׀ח יָשִׂ֥ים כַּמֶּרְקָחָֽה׃"],
+  [2, ["Job 41:24-first", "Job 41:24-last"], "אַ֭חֲרָיו יָאִ֙יר נָתִ֑יב יַחְשֹׁ֖ב תְּה֙וֹם לְשֵׂיבָֽה׃"],
+  [3, ["Job 41:25-mid", "Job 41:26-mid"], "אֵֽין־עַל־עָפָ֥ר ..."],
   ...
 ]
 ```
 
-The **range** (2nd element) is a string indicating which verse(s) appear
-on that line:
+The **range** (2nd element) is either `null` or a 2-element `[start, end]`
+array indicating the verse range that appears on that line.
 
-| Format | Example | Meaning |
-|--------|---------|--------|
-| `"Book ch:vs"` | `"Job 41:23"` | Single verse |
-| `"Book ch:vs–ch:vs"` | `"Job 41:25–42:1"` | Multiple verses (en-dash U+2013) |
-| `null` | | Blank line or {פ}-only line |
+Each endpoint is a string in the format `"Book ch:vs-qualifier"` where the
+qualifier indicates the word position within the verse:
+
+| Qualifier | Meaning |
+|-----------|---------|
+| `-first` | The line includes the first word of this verse |
+| `-mid` | The line starts/ends at a middle word (neither first nor last) |
+| `-last` | The line includes the last word of this verse |
+
+Examples:
+
+| Range | Meaning |
+|-------|---------|
+| `["Job 41:23-first", "Job 41:23-last"]` | Full verse on one line |
+| `["Job 1:1-first", "Job 1:1-mid"]` | First part of a verse |
+| `["Job 1:1-mid", "Job 1:1-last"]` | Last part of a verse |
+| `["Job 1:7-mid", "Job 1:8-mid"]` | End of one verse + start of the next |
+| `null` | Blank line or {פ}-only line |
 
 Special line types:
 - **Blank line:** `[17, null, ""]` — used at book boundaries
 - **Pe-only line:** `[5, null, "{פ}"]` — parashah pe break occupying an entire line
-- **Pe within text:** `[6, "Job 1:5", "כָּכָה יַעֲשֶׂ֥ה אִיֹּ֖ב כָּל־הַיָּמִֽים׃ {פ}"]` — pe marker at end of a text line
+- **Pe within text:** `[6, ["Job 1:5-mid", "Job 1:5-last"], "כָּכָה יַעֲשֶׂ֥ה אִיֹּ֖ב כָּל־הַיָּמִֽים׃ {פ}"]` — pe marker at end of a text line
 
 Line numbers are 1-based and sequential.
-
 ## Redundancy
 
 Several fields are intentionally redundant to aid human readability:
@@ -160,7 +172,7 @@ Several fields are intentionally redundant to aid human readability:
 | `blank_lines` | Lines in `column_N_lines` with empty text |
 | `pe_lines` | Lines in `column_N_lines` with text `"{פ}"` |
 | ketiv `word` | Must appear in some line in `column_N_lines` |
-| line range | `null` for blank/{פ} lines; non-null verse string for text lines |
+| line range | `null` for blank/{פ} lines; non-null `[start, end]` range pair for text lines |
 
 Run `python py_ac_loc/check_aleppo_col_lines.py` to verify all of these.
 

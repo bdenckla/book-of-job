@@ -103,9 +103,8 @@ for json_path in sorted(AC_DIR.glob("aleppo_col_lines_*.json")):
         # --- Check 6: line range annotations ---
         if line_ranges is not None:
             import re
-            range_pat = re.compile(
-                r'^[A-Za-z]+ \d+:\d+'
-                r'(?:\u2013\d+:\d+)?$'  # optional en-dash range
+            endpoint_pat = re.compile(
+                r'^[A-Za-z1-9]+ \d+:\d+-(first|mid|last)$'
             )
             for ln, rng in line_ranges:
                 txt = dict(line_texts)[ln]
@@ -114,8 +113,14 @@ for json_path in sorted(AC_DIR.glob("aleppo_col_lines_*.json")):
                     err(leaf, col_key, f"line {ln}: blank/{'{'}פ{'}'} line should have null range, got {rng!r}")
                 elif not is_blank and rng is None:
                     err(leaf, col_key, f"line {ln}: text line should have a range, got null")
-                elif rng is not None and not range_pat.match(rng):
-                    err(leaf, col_key, f"line {ln}: range {rng!r} does not match expected format")
+                elif rng is not None:
+                    if not isinstance(rng, list) or len(rng) != 2:
+                        err(leaf, col_key, f"line {ln}: range should be a 2-element [start, end] list, got {rng!r}")
+                    else:
+                        for j, ep in enumerate(rng):
+                            if not isinstance(ep, str) or not endpoint_pat.match(ep):
+                                label = "start" if j == 0 else "end"
+                                err(leaf, col_key, f"line {ln}: range {label} {ep!r} does not match 'Book ch:vs-(first|mid|last)'")
 
     # --- Check 7: overall range (all columns) ---
     overall = data.get("overall range (all columns)")
