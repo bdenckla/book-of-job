@@ -30,7 +30,7 @@
         "Job",
         1,
         16,
-        "last-word"
+        "a-middle-word"
       ]
     }
   ],
@@ -41,7 +41,7 @@
     },
     {
       "start": "Job 1:1-first",
-      "end": "Job 1:16-last"
+      "end": "Job 1:16-mid"
     }
   ],
   "page-MAM-XML-files": [
@@ -125,14 +125,14 @@
           "Job",
           1,
           16,
-          "last-word"
+          "a-middle-word"
         ]
       }
     ],
     "col-ranges-friendly": [
       {
         "start": "Job 1:4-mid",
-        "end": "Job 1:16-last"
+        "end": "Job 1:16-mid"
       }
     ],
     "col-line-count": 28,

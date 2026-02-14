@@ -58,14 +58,14 @@
           "Job",
           40,
           30,
-          "last-word"
+          "a-middle-word"
         ]
       }
     ],
     "col-ranges-friendly": [
       {
         "start": "Job 40:6-first",
-        "end": "Job 40:30-last"
+        "end": "Job 40:30-mid"
       }
     ],
     "col-line-count": 28,
