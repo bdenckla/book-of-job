@@ -9,6 +9,8 @@ Checks:
 5. ketiv words actually appear in the corresponding line data
 6. line range annotations: null for blank/{פ} lines, non-null for text lines,
    and formatted as "Book ch:vs" or "Book ch:vs–ch:vs"
+7. overall range (all columns) matches col1 first start / col2 last end
+8. description is the generic (non-leaf-specific) form
 
 Usage:
     python py_ac_loc/check_aleppo_col_lines.py
@@ -114,6 +116,29 @@ for json_path in sorted(AC_DIR.glob("aleppo_col_lines_*.json")):
                     err(leaf, col_key, f"line {ln}: text line should have a range, got null")
                 elif rng is not None and not range_pat.match(rng):
                     err(leaf, col_key, f"line {ln}: range {rng!r} does not match expected format")
+
+    # --- Check 7: overall range (all columns) ---
+    overall = data.get("overall range (all columns)")
+    if overall is None:
+        err(leaf, "(top)", "missing 'overall range (all columns)' field")
+    else:
+        col1_rf = data["column_1"]["ranges-friendly"]
+        col2_rf = data["column_2"]["ranges-friendly"]
+        expected_start = col1_rf[0]["start"]
+        expected_end = col2_rf[-1]["end"]
+        if overall.get("start") != expected_start:
+            err(leaf, "(top)", f"overall range start = {overall.get('start')!r}, expected {expected_start!r}")
+        if overall.get("end") != expected_end:
+            err(leaf, "(top)", f"overall range end = {overall.get('end')!r}, expected {expected_end!r}")
+
+    # --- Check 8: generic description ---
+    GENERIC_DESC = [
+        "Manual line-by-line alignment of an Aleppo Codex leaf",
+        "to the page image (two columns)."
+    ]
+    desc = data.get("description")
+    if desc != GENERIC_DESC:
+        err(leaf, "(top)", f"description is not the generic form: {desc!r}")
 
 if errors:
     print(f"FAILED: {len(errors)} error(s):")

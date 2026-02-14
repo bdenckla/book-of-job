@@ -10,7 +10,7 @@ However, after editing any `aleppo_col_lines_*.json` file, **always** run the co
 python py_ac_loc/check_aleppo_col_lines.py
 ```
 
-This validates that all redundant/friendly fields are consistent with their machine-readable counterparts (ranges-friendly ↔ ranges, blank_lines ↔ actual blanks, pe_lines ↔ actual {פ} lines, ketiv bcv-fml-friendly ↔ bcv-fml, ketiv words present in line data, line range annotations consistent with line content).
+This validates that all redundant/friendly fields are consistent with their machine-readable counterparts (ranges-friendly ↔ ranges, blank_lines ↔ actual blanks, pe_lines ↔ actual {פ} lines, ketiv bcv-fml-friendly ↔ bcv-fml, ketiv words present in line data, line range annotations consistent with line content, overall range ↔ column ranges, generic description).
 
 ## Goal
 

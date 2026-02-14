@@ -1,9 +1,16 @@
 {
   "leaf": "270r",
   "description": [
-    "Manual line-by-line alignment of Aleppo Codex leaf 270r",
-    "(Ps 149:1 – Job 1:16) to the page image (two columns).",
-    "Ground truth text: MAM-XML (Ps.xml, Job.xml)"
+    "Manual line-by-line alignment of an Aleppo Codex leaf",
+    "to the page image (two columns)."
+  ],
+  "overall range (all columns)": {
+    "start": "Ps 149:1-first",
+    "end": "Job 1:16-last"
+  },
+  "MAM-XML source file(s)": [
+    "MAM-XML/out/xml-vtrad-mam/Ps.xml",
+    "MAM-XML/out/xml-vtrad-mam/Job.xml"
   ],
   "page_image": "https://archive.org/details/aleppo-codex/page/n540/mode/1up",
   "column_1": {

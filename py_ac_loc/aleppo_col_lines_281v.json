@@ -1,9 +1,16 @@
 {
   "leaf": "281v",
   "description": [
-    "Manual line-by-line alignment of Aleppo Codex leaf 281v",
-    "(Job 41:23–Prov 1:8) to the page image (two columns).",
-    "Ground truth text: MAM-XML (Job.xml, Prov.xml)"
+    "Manual line-by-line alignment of an Aleppo Codex leaf",
+    "to the page image (two columns)."
+  ],
+  "overall range (all columns)": {
+    "start": "Job 41:23-first",
+    "end": "Prov 1:8-first"
+  },
+  "MAM-XML source file(s)": [
+    "MAM-XML/out/xml-vtrad-mam/Job.xml",
+    "MAM-XML/out/xml-vtrad-mam/Prov.xml"
   ],
   "page_image": "https://archive.org/details/aleppo-codex/page/n563/mode/1up",
   "column_1": {

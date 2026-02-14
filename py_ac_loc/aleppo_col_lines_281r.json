@@ -1,9 +1,15 @@
 {
   "leaf": "281r",
   "description": [
-    "Manual line-by-line alignment of Aleppo Codex leaf 281r",
-    "(Job 40:6–41:22) to the page image (two columns).",
-    "Ground truth text: MAM-XML (Job.xml)"
+    "Manual line-by-line alignment of an Aleppo Codex leaf",
+    "to the page image (two columns)."
+  ],
+  "overall range (all columns)": {
+    "start": "Job 40:6-first",
+    "end": "Job 41:22-first"
+  },
+  "MAM-XML source file(s)": [
+    "MAM-XML/out/xml-vtrad-mam/Job.xml"
   ],
   "page_image": "https://archive.org/details/aleppo-codex/page/n562/mode/1up",
   "column_1": {

@@ -1,9 +1,15 @@
 {
   "leaf": "280r",
   "description": [
-    "Manual line-by-line alignment of Aleppo Codex leaf 280r",
-    "(Job 37:9–38:30) to the page image (two columns).",
-    "Ground truth text: MAM-XML (Job.xml)"
+    "Manual line-by-line alignment of an Aleppo Codex leaf",
+    "to the page image (two columns)."
+  ],
+  "overall range (all columns)": {
+    "start": "Job 37:9-mid",
+    "end": "Job 38:30-first"
+  },
+  "MAM-XML source file(s)": [
+    "MAM-XML/out/xml-vtrad-mam/Job.xml"
   ],
   "page_image": "https://www.mgketer.org/mikra/29/37/1/mg/106",
   "column_1": {

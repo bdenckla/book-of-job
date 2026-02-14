@@ -1,9 +1,15 @@
 {
   "leaf": "280v",
   "description": [
-    "Manual line-by-line alignment of Aleppo Codex leaf 280v",
-    "(Job 38:31–40:5) to the page image (two columns).",
-    "Ground truth text: MAM-XML (Job.xml)"
+    "Manual line-by-line alignment of an Aleppo Codex leaf",
+    "to the page image (two columns)."
+  ],
+  "overall range (all columns)": {
+    "start": "Job 38:31-first",
+    "end": "Job 40:5-first"
+  },
+  "MAM-XML source file(s)": [
+    "MAM-XML/out/xml-vtrad-mam/Job.xml"
   ],
   "page_image": "https://archive.org/details/aleppo-codex/page/n561/mode/1up",
   "column_1": {
