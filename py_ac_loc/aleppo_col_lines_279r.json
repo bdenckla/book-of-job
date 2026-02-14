@@ -1,6 +1,15 @@
 {
   "leaf": "279r",
-  "description": "Manual line-by-line alignment of Aleppo Codex leaf 279r\n(Job 34:1–35:9) to the page image (two columns).\n\nColumn 1 (right): Job 34:1–23, 28 lines\nColumn 2 (left):  Job 34:24–35:9, 28 lines\n\nGround truth text: MAM-XML (Job.xml)\nPage image: https://www.mgketer.org/mikra/29/34/1/mg/106",
+  "description": [
+    "Manual line-by-line alignment of Aleppo Codex leaf 279r",
+    "(Job 34:1–35:9) to the page image (two columns).",
+    "",
+    "Column 1 (right): Job 34:1–23, 28 lines",
+    "Column 2 (left):  Job 34:24–35:9, 28 lines",
+    "",
+    "Ground truth text: MAM-XML (Job.xml)",
+    "Page image: https://www.mgketer.org/mikra/29/34/1/mg/106"
+  ],
   "column_1_lines": [
     [
       1,

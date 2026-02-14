@@ -1,6 +1,15 @@
 {
   "leaf": "280r",
-  "description": "Manual line-by-line alignment of Aleppo Codex leaf 280r\n(Job 37:9–38:30) to the page image (two columns).\n\nColumn 1 (right): Job 37:9 (cont.)–38:6, 28 lines\nColumn 2 (left): Job 38:7–38:30, 28 lines\n\nGround truth text: MAM-XML (Job.xml)\nPage image: https://www.mgketer.org/mikra/29/37/1/mg/106",
+  "description": [
+    "Manual line-by-line alignment of Aleppo Codex leaf 280r",
+    "(Job 37:9–38:30) to the page image (two columns).",
+    "",
+    "Column 1 (right): Job 37:9 (cont.)–38:6, 28 lines",
+    "Column 2 (left): Job 38:7–38:30, 28 lines",
+    "",
+    "Ground truth text: MAM-XML (Job.xml)",
+    "Page image: https://www.mgketer.org/mikra/29/37/1/mg/106"
+  ],
   "notes": "Line 21 is blank (parashah pe break between Job 37:24 and 38:1).",
   "column_1_lines": [
     [

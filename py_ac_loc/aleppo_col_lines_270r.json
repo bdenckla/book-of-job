@@ -1,6 +1,17 @@
 {
   "leaf": "270r",
-  "description": "Manual line-by-line alignment of Aleppo Codex leaf 270r\n(Ps 149:1 – Job 1:16) to the page image (two columns).\n\nColumn 1 (right): Ps 149:1–150:6 + Job 1:1–1:4 (partial), 28 lines\n    Lines 19–20 blank (Psalms→Job book boundary)\nColumn 2 (left):  Job 1:4 (cont.)–1:16 (partial), 28 lines\n    Line 6 includes {פ} after Job 1:5\n\nGround truth text: MAM-XML (Ps.xml, Job.xml)\nPage image: https://archive.org/details/aleppo-codex/page/n540/mode/1up",
+  "description": [
+    "Manual line-by-line alignment of Aleppo Codex leaf 270r",
+    "(Ps 149:1 – Job 1:16) to the page image (two columns).",
+    "",
+    "Column 1 (right): Ps 149:1–150:6 + Job 1:1–1:4 (partial), 28 lines",
+    "    Lines 19–20 blank (Psalms→Job book boundary)",
+    "Column 2 (left):  Job 1:4 (cont.)–1:16 (partial), 28 lines",
+    "    Line 6 includes {פ} after Job 1:5",
+    "",
+    "Ground truth text: MAM-XML (Ps.xml, Job.xml)",
+    "Page image: https://archive.org/details/aleppo-codex/page/n540/mode/1up"
+  ],
   "column_1_lines": [
     [
       1,

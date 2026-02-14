@@ -1,6 +1,18 @@
 {
   "leaf": "281r",
-  "description": "Manual line-by-line alignment of Aleppo Codex leaf 281r\n(Job 40:6–41:22) to the page image (two columns).\n\nColumn 1 (right): Job 40:6–40:30 (partial), 28 lines\n  Line 1 = {פ} (pe break after 40:5 on previous leaf)\n  Line 2 starts with 40:6; 40:6 has ketiv מנסערה\nColumn 2 (left): Job 40:30 (cont.)–41:22, 28 lines\n  41:4 has ketiv לא\n\nGround truth text: MAM-XML (Job.xml)\nPage image: https://archive.org/details/aleppo-codex/page/n562/mode/1up",
+  "description": [
+    "Manual line-by-line alignment of Aleppo Codex leaf 281r",
+    "(Job 40:6–41:22) to the page image (two columns).",
+    "",
+    "Column 1 (right): Job 40:6–40:30 (partial), 28 lines",
+    "  Line 1 = {פ} (pe break after 40:5 on previous leaf)",
+    "  Line 2 starts with 40:6; 40:6 has ketiv מנסערה",
+    "Column 2 (left): Job 40:30 (cont.)–41:22, 28 lines",
+    "  41:4 has ketiv לא",
+    "",
+    "Ground truth text: MAM-XML (Job.xml)",
+    "Page image: https://archive.org/details/aleppo-codex/page/n562/mode/1up"
+  ],
   "column_1_lines": [
     [
       1,
