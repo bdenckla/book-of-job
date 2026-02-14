@@ -241,6 +241,39 @@ When the previous page ends with a parashah break (e.g., `{פ}` after 40:5 on 28
 
 Maqaf-joined word parts display with zero gap between them but each part remains independently clickable. This is handled automatically by the CSS classes `maqaf-end` (on the part ending with maqaf) and `after-maqaf` (on the following part). No special configuration needed.
 
+#### Book-boundary pages
+
+When a column spans two books (e.g., 281v col2: Job 42:11–42:17 + Prov 1:1–1:8), use the `extra_sources` parameter instead of writing an ad-hoc script:
+
+```python
+MAM_XML_DIR = r'C:\Users\BenDe\GitRepos\MAM-XML\out\xml-vtrad-mam'
+
+generate_alignment_html(
+    out_path=r'.novc\aleppo_align_281v_col2.html',
+    image_path='aleppo_281v_col2.jpg',
+    title='Leaf 281v, Job 42:11–Prov 1:8, Column 2',
+    column_var='COLUMN_2_LINES',
+    xml_path=rf'{MAM_XML_DIR}\Job.xml',
+    book='Job',
+    verse_range=((42, 11), (42, 17)),
+    extra_sources=[
+        {
+            'xml_path': rf'{MAM_XML_DIR}\Prov.xml',
+            'book': 'Prov',
+            'verse_range': ((1, 1), (1, 8)),
+        },
+    ],
+)
+```
+
+This concatenates the verses from all sources, prefixing cv labels with the book name (e.g., `"Job 42:11"`, `"Prov 1:1"`) so the user can see the book boundary in the alignment UI.
+
+**Book-boundary pages in the Aleppo Codex** (20 total across the Tanakh). The two that involve Job are:
+- `270r`: Ps 149:1 – Job 1:16
+- `281v`: Job 41:23 – Prov 1:8
+
+After alignment, insert blank lines in the output file at the book boundary to represent the physical gap in the manuscript (e.g., 2 blank lines between Job 42:17 and Prov 1:1 on leaf 281v col2). Use empty strings `""` for blank line text.
+
 ### 4. User aligns text to image
 
 The user opens the HTML in a browser, loads the image, and clicks the last word/segment of each manuscript line. When finished, clicks **Copy to Clipboard** and pastes the result.
@@ -279,3 +312,9 @@ Replace the `COLUMN_{N}_LINES` list in `py_uxlc_loc/aleppo_col_lines_{leaf}.py` 
 - **Leaf 280v** (Job 38:31–40:5): `py_uxlc_loc/aleppo_col_lines_280v.py`
   - Column 1: Job 38:31–39:13, 28 lines
   - Column 2: Job 39:14–40:5, 28 lines (line 7 = `"{פ}"`, line 23 = `"{פ}"` + 40:1, line 25 = `"{פ}"`)
+- **Leaf 281r** (Job 40:6–41:22): `py_uxlc_loc/aleppo_col_lines_281r.py`
+  - Column 1: Job 40:6–40:30 (partial), 28 lines (line 1 = `"{פ}"` pe break; 40:6 ketiv מנסערה)
+  - Column 2: Job 40:30 (cont.)–41:22, 28 lines (41:4 ketiv לא)
+- **Leaf 281v** (Job 41:23–Prov 1:8): `py_uxlc_loc/aleppo_col_lines_281v.py`
+  - Column 1: Job 41:23–42:10, 28 lines (line 5 = `"{פ}"`, line 14 = `"{פ}"`; 42:2 ketiv ידעת, 42:10 ketiv שבית)
+  - Column 2: Job 42:11–42:17 + Prov 1:1–1:8, 28 lines (lines 17–18 blank = book boundary; 42:16 ketiv וירא; line 27 = `"{פ}"` after Prov 1:7)

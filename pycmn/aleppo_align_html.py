@@ -21,6 +21,34 @@ Usage from a thin column-specific script::
         lead_in_words=['מִן־הַ֭חֶדֶר'],  # words already on prev column
         lead_in_skip=1,                    # how many words to skip from first verse
     )
+
+To resume alignment with previously-completed lines locked::
+
+    generate_alignment_html(
+        ...,
+        locked_lines=[
+            '{פ}',
+            'וַיַּעַן־יְהֹוָ֣ה אֶת־אִ֭יּוֹב ...',
+            ...,
+        ],
+    )
+
+For book-boundary pages (column spans two books), append additional
+text sources via ``extra_sources``::
+
+    generate_alignment_html(
+        ...,
+        xml_path=r'C:\\...\\Job.xml',
+        book='Job',
+        verse_range=((42, 11), (42, 17)),
+        extra_sources=[
+            {
+                'xml_path': r'C:\\...\\Prov.xml',
+                'book': 'Prov',
+                'verse_range': ((1, 1), (1, 8)),
+            },
+        ],
+    )
 """
 
 import json
@@ -40,6 +68,8 @@ def generate_alignment_html(
     verse_range: tuple,
     lead_in_words: list[str] | None = None,
     lead_in_skip: int = 0,
+    locked_lines: list[str] | None = None,
+    extra_sources: list[dict] | None = None,
 ):
     """
     Generate an interactive alignment HTML file.
@@ -54,18 +84,45 @@ def generate_alignment_html(
         verse_range: ((start_ch, start_vs), (end_ch, end_vs))
         lead_in_words: words from previous column shown grayed out, or None
         lead_in_skip: number of words to skip from the start of the first verse
+        locked_lines: previously-aligned line texts to lock in the HTML.
+            These appear as non-clickable, pre-selected lines so the user
+            can resume alignment where they left off (or review/edit).
+        extra_sources: additional text sources for book-boundary pages.
+            Each dict has keys: 'xml_path', 'book', 'verse_range'.
+            Verses from these sources are appended after the primary source.
     """
     start_cv, end_cv = verse_range
     verses = get_verses_in_range(xml_path, book, start_cv, end_cv)
 
+    if extra_sources:
+        for src in extra_sources:
+            src_start, src_end = src['verse_range']
+            extra_verses = get_verses_in_range(
+                src['xml_path'], src['book'], src_start, src_end,
+            )
+            # Prefix cv labels with book name to disambiguate
+            for v in extra_verses:
+                v['cv'] = f"{src['book']} {v['cv']}"
+            verses.extend(extra_verses)
+        # Also prefix primary book cv labels when mixing books
+        for v in verses:
+            if not v['cv'].startswith(book + ' ') and ' ' not in v['cv']:
+                v['cv'] = f"{book} {v['cv']}"
+
     js_verses = _build_js_verses(verses, lead_in_words, lead_in_skip)
     verses_js = ',\n'.join(js_verses)
+
+    locked_indices_js = '[]'
+    if locked_lines:
+        end_indices = _compute_locked_end_indices(locked_lines)
+        locked_indices_js = json.dumps(end_indices)
 
     html = _HTML_TEMPLATE.format(
         title=title,
         image_path=image_path,
         column_var=column_var,
         verses_js=verses_js,
+        locked_indices_js=locked_indices_js,
     )
 
     out = Path(out_path)
@@ -104,11 +161,44 @@ def _build_js_verses(verses, lead_in_words, lead_in_skip):
     return js_verses
 
 
+Maqaf = '\u05BE'
+
+
+def _count_maqaf_segments(line_text: str) -> int:
+    """Count maqaf-split segments in a line, matching the JS splitAtMaqaf logic."""
+    count = 0
+    for token in line_text.split():
+        parts = 0
+        current = ''
+        for ch in token:
+            current += ch
+            if ch == Maqaf:
+                parts += 1
+                current = ''
+        if current:
+            parts += 1
+        count += parts
+    return count
+
+
+def _compute_locked_end_indices(locked_lines: list[str]) -> list[int]:
+    """Compute allWords end-indices for each locked line by segment counting."""
+    end_indices = []
+    pos = 0
+    for line_text in locked_lines:
+        seg_count = _count_maqaf_segments(line_text)
+        end_idx = pos + seg_count - 1
+        end_indices.append(end_idx)
+        pos = end_idx + 1
+    return end_indices
+
+
 # ---------------------------------------------------------------------------
 # HTML template
 # ---------------------------------------------------------------------------
 # Uses {{ and }} for literal braces in the f-string.
-# Substitutable placeholders: {title}, {image_path}, {column_var}, {verses_js}
+# Substitutable placeholders: {title}, {image_path}, {column_var}, {verses_js},
+# {locked_indices_js}
 
 _HTML_TEMPLATE = '''<!DOCTYPE html>
 <html lang="he" dir="rtl">
@@ -405,6 +495,15 @@ function copyToClipboard() {{
         alert('Copied to clipboard!');
     }});
 }}
+
+// Apply locked (pre-selected) lines
+(function() {{
+    const lockedIndices = {locked_indices_js};
+    lockedIndices.forEach(idx => {{
+        lineEndIndices.add(idx);
+        lockedEnds.add(idx);
+    }});
+}})();
 
 render();
 </script>
