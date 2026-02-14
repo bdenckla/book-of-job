@@ -4,6 +4,14 @@
 
 Files in `py_ac_loc/` are **not** consumed by `main_gen_misc_authored_english_documents.py`. Changes to alignment data or alignment-related code here do **not** require running the generation script or checking `docs/` for changes.
 
+However, after editing any `aleppo_col_lines_*.json` file, **always** run the consistency checker:
+
+```
+python py_ac_loc/check_aleppo_col_lines.py
+```
+
+This validates that all redundant/friendly fields are consistent with their machine-readable counterparts (ranges-friendly ↔ ranges, blank_lines ↔ actual blanks, pe_lines ↔ actual {פ} lines, ketiv bcv-fml-friendly ↔ bcv-fml, ketiv words present in line data, line range annotations consistent with line content).
+
 ## Goal
 
 Align ground truth text (extracted from mam-xml) to the physical manuscript lines visible in an Aleppo Codex page image from mgketer.org.
@@ -78,7 +86,7 @@ https://www.mgketer.org/mikra/29/{chnu}/1/mg/106
 
 ## Outputs
 
-- **Alignment file:** `py_ac_loc/aleppo_col_lines_{leaf}.json` — one file per leaf (e.g., `aleppo_col_lines_280r.json`), containing `column_1_lines` and `column_2_lines`.
+- **Alignment file:** `py_ac_loc/aleppo_col_lines_{leaf}.json` — one file per leaf (e.g., `aleppo_col_lines_280r.json`). See `py_ac_loc/aleppo_col_lines_format.md` for the full JSON schema documentation. Each line entry is `[line_num, range_or_null, text]` where `range_or_null` is a verse range string (e.g., `"Job 41:23"` or `"Job 35:9–35:10"`) or `null` for blank/parashah lines.
 - **Interactive alignment tool:** `.novc/aleppo_align_{leaf}_col{N}.html` — an HTML page for the user to visually align text to the image.
 
 ## Page Lookup
@@ -286,6 +294,16 @@ The user opens the HTML in a browser, loads the image, and clicks the last word/
 
 Replace the `column_{n}_lines` array in `py_ac_loc/aleppo_col_lines_{leaf}.json` with the pasted output.
 
+**Note:** The clipboard export from `aleppo_align_html.py` produces 2-element entries `[line_num, text]`. After pasting, run the range annotation script (`.novc/add_line_ranges.py`) to convert these to 3-element entries `[line_num, range_or_null, text]` with verse range annotations derived from the MAM-XML ground truth.
+
+After updating the line data, also update the column metadata (`ranges`, `ranges-friendly`, `line_count`, `blank_lines`, `pe_lines`, `ketivs`, `notes`) and the top-level fields (`overall range (all columns)`, `MAM-XML source file(s)`, `page_image`). See `py_ac_loc/aleppo_col_lines_format.md` for the full schema.
+
+Then run the consistency checker:
+
+```
+python py_ac_loc/check_aleppo_col_lines.py
+```
+
 ## Line Break Heuristics
 
 - Early verses in Job's poetic sections often fit **one verse per line**.
@@ -304,27 +322,16 @@ Replace the `column_{n}_lines` array in `py_ac_loc/aleppo_col_lines_{leaf}.json`
 
 ## Completed Alignments
 
-- **Leaf 270r** (Ps 149:1 – Job 1:16): `py_ac_loc/aleppo_col_lines_270r.json`
-  - Column 1: Ps 149:1–150:6 + Job 1:1–1:4 (partial), 28 lines (lines 19–20 blank = Ps→Job book boundary; line 11 = `"{פ}"` after Ps 149:9)
-  - Column 2: Job 1:4 (cont.)–1:16 (partial), 28 lines (line 6 = `"{פ}"` after Job 1:5; 1:10 ketiv את)
-- **Leaf 278v** (Job 32:8–33:33): `py_ac_loc/aleppo_col_lines_278v.json`
-  - Column 1: Job 32:8–33:11, 28 lines
-  - Column 2: Job 33:12–33:33, 28 lines (33:19 ketiv וריב, 33:21 ketiv נפשי+וחיתי, 33:28 ketiv נפשי+וחיתי; 33:33 parashah {פ})
-- **Leaf 279r** (Job 34:1–35:9): `py_ac_loc/aleppo_col_lines_279r.json`
-  - Column 1: Job 34:1–23, 28 lines
-  - Column 2: Job 34:24–35:9, 28 lines
-- **Leaf 279v** (Job 35:10–37:8): `py_ac_loc/aleppo_col_lines_279v.json`
-  - Column 1: Job 35:10–36:18 (partial), 28 lines
-  - Column 2: Job 36:18 (cont.)–37:8, 28 lines
-- **Leaf 280r** (Job 37:9–38:30): `py_ac_loc/aleppo_col_lines_280r.json`
-  - Column 1: Job 37:9 (cont.)–38:6, 28 lines (line 21 = `"{פ}"` pe break)
-  - Column 2: Job 38:7–38:30, 28 lines
-- **Leaf 280v** (Job 38:31–40:5): `py_ac_loc/aleppo_col_lines_280v.json`
-  - Column 1: Job 38:31–39:13, 28 lines
-  - Column 2: Job 39:14–40:5, 28 lines (line 7 = `"{פ}"`, line 23 = `"{פ}"` + 40:1, line 25 = `"{פ}"`)
-- **Leaf 281r** (Job 40:6–41:22): `py_ac_loc/aleppo_col_lines_281r.json`
-  - Column 1: Job 40:6–40:30 (partial), 28 lines (line 1 = `"{פ}"` pe break; 40:6 ketiv מנסערה)
-  - Column 2: Job 40:30 (cont.)–41:22, 28 lines (41:4 ketiv לא)
-- **Leaf 281v** (Job 41:23–Prov 1:8): `py_ac_loc/aleppo_col_lines_281v.json`
-  - Column 1: Job 41:23–42:10, 28 lines (line 5 = `"{פ}"`, line 14 = `"{פ}"`; 42:2 ketiv ידעת, 42:10 ketiv שבית)
-  - Column 2: Job 42:11–42:17 + Prov 1:1–1:8, 28 lines (lines 17–18 blank = book boundary; 42:16 ketiv וירא; line 27 = `"{פ}"` after Prov 1:7)
+All details (ranges, blank lines, pe lines, ketivs, notes) are in the JSON files
+themselves. See `py_ac_loc/aleppo_col_lines_format.md` for the schema.
+
+| Leaf | Overall Range | File |
+|------|---------------|------|
+| 270r | Ps 149:1-first – Job 1:16-last | `aleppo_col_lines_270r.json` |
+| 278v | Job 32:8-first – Job 33:33-first | `aleppo_col_lines_278v.json` |
+| 279r | Job 34:1-first – Job 35:9-first | `aleppo_col_lines_279r.json` |
+| 279v | Job 35:10-first – Job 37:8-first | `aleppo_col_lines_279v.json` |
+| 280r | Job 37:9-mid – Job 38:30-first | `aleppo_col_lines_280r.json` |
+| 280v | Job 38:31-first – Job 40:5-first | `aleppo_col_lines_280v.json` |
+| 281r | Job 40:6-first – Job 41:22-first | `aleppo_col_lines_281r.json` |
+| 281v | Job 41:23-first – Prov 1:8-first | `aleppo_col_lines_281v.json` |
