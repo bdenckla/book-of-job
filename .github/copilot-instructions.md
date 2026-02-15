@@ -109,6 +109,27 @@ After making changes to Python source files, verify the HTML output is unchanged
 2. Check: `git status --porcelain docs/`
 3. If any files in `docs/` are modified, investigate and fix the differences before considering the task complete
 
+## Line Break Editing Workflow
+
+To add line-break markers for an Aleppo Codex page column:
+
+1. **Generate the flat-stream JSON** (if it doesn't already exist in `py_ac_loc/line-breaks/`):
+   ```
+   python py_ac_loc/gen_lb_flat_stream.py <page_id>
+   ```
+
+2. **Generate the interactive HTML editor:**
+   ```
+   python py_ac_loc/gen_line_break_editor.py <page_id> <col>
+   ```
+   where col 1 = right column, col 2 = left column. This opens a browser editor.
+
+3. **Mark line breaks** in the editor by clicking the last word of each line, then click **Export JSON to Clipboard**.
+
+4. **Paste directly** into `py_ac_loc/line-breaks/<page_id>.json`, replacing its entire contents.
+
+**Do NOT** paste the exported JSON into the chat window — that causes Unicode NFC normalization of Hebrew text. Pasting directly into the file preserves the original byte sequences and avoids the need for `merge_line_markers.py`.
+
 ## Git Discipline
 
 - **Never auto-commit.** Only commit when the user explicitly asks.
