@@ -169,8 +169,7 @@ def generate_editor_html(page_id, col):
     stream_json = json.dumps(stream_no_lines, ensure_ascii=False, indent=2)
     page_start_js = "null" if page_start_idx is None else str(page_start_idx)
 
-    col1_sel = ' selected' if col == 1 else ''
-    col2_sel = ' selected' if col == 2 else ''
+    col_label = '1 (right)' if col == 1 else ('2 (left)' if col == 2 else '3 (center/prose)')
 
     html = _HTML_TEMPLATE.format(
         page_id=page_id,
@@ -178,8 +177,8 @@ def generate_editor_html(page_id, col):
         img_css=img_css_skinny,
         img_css_normal=img_css,
         img_css_skinny=img_css_skinny,
-        col1_sel=col1_sel,
-        col2_sel=col2_sel,
+        col_label=col_label,
+        col_num=col,
         words_json=words_json,
         line_ends_json=line_ends_json,
         stream_json=stream_json,
@@ -201,8 +200,18 @@ _HTML_TEMPLATE = '''<!DOCTYPE html>
 <style>
 * {{ box-sizing: border-box; margin: 0; padding: 0; }}
 body {{ font-family: 'Segoe UI', sans-serif; background: #1e1e1e; color: #d4d4d4; }}
-h1 {{ text-align: center; padding: 10px; font-size: 17px; }}
-.container {{ display: flex; height: calc(100vh - 90px); }}
+h1 {{ text-align: center; padding: 10px; font-size: 17px; background: #252526; border-bottom: 1px solid #444; direction: ltr; }}
+h1 button {{
+    padding: 4px 12px; margin: 0 4px; cursor: pointer;
+    background: #0e639c; color: #fff; border: none; border-radius: 4px;
+    font-size: 13px; vertical-align: middle;
+}}
+h1 button:hover {{ background: #1177bb; }}
+#status {{
+    display: inline-block; margin-left: 12px;
+    font-size: 13px; color: #888;
+}}
+.container {{ display: flex; height: calc(100vh - 45px); }}
 .col-words {{
     overflow-y: auto; padding: 16px; direction: rtl;
     font-size: 22px;
@@ -291,46 +300,22 @@ h1 {{ text-align: center; padding: 10px; font-size: 17px; }}
     margin-left: 2px;
     vertical-align: super;
 }}
-.toolbar {{
-    text-align: center; padding: 8px; background: #252526;
-    border-top: 1px solid #444; direction: ltr;
-}}
-.toolbar button {{
-    padding: 8px 16px; margin: 0 4px; cursor: pointer;
-    background: #0e639c; color: #fff; border: none; border-radius: 4px;
-    font-size: 14px;
-}}
-.toolbar button:hover {{ background: #1177bb; }}
-.toolbar select {{
-    padding: 6px 10px; margin: 0 4px; font-size: 14px;
-    background: #333; color: #d4d4d4; border: 1px solid #555;
-    border-radius: 4px;
-}}
-#status {{
-    display: inline-block; margin-left: 12px;
-    font-size: 13px; color: #888; direction: ltr;
-}}
+
 </style>
 </head>
 <body>
 
-<h1>Line Break Editor \u2014 {page_id}</h1>
+<h1>Line Break Editor \u2014 {page_id} \u2014 Col {col_label}
+    <button onclick="exportJSON()">Export</button>
+    <button id="skinnyBtn" onclick="toggleSkinnyMode()">Go wide</button>
+    <span id="status"></span>
+</h1>
 <div class="container" id="container">
     <div class="col-words" id="wordsPanel"></div>
     <div class="divider" id="divider"></div>
     <div class="col-image" id="imagePanel">
         <img src="{image_url}" alt="Aleppo Codex {page_id}">
     </div>
-</div>
-<div class="toolbar">
-    <label>Column: <select id="colSelect">
-        <option value="1"{col1_sel}>1 (right)</option>
-        <option value="2"{col2_sel}>2 (left)</option>
-        <option value="3">3 (center/prose)</option>
-    </select></label>
-    <button onclick="exportJSON()">Export JSON to Clipboard</button>
-    <button id="skinnyBtn" onclick="toggleSkinnyMode()">Go to normal mode</button>
-    <span id="status"></span>
 </div>
 
 <script>
@@ -357,8 +342,9 @@ preExistingLineEnds.forEach(le => {{
     lineEndMap.set(le.idx, {{col: le.col, lineNum: le.lineNum}});
 }});
 
+const CURRENT_COL = {col_num};
 function currentCol() {{
-    return parseInt(document.getElementById('colSelect').value, 10);
+    return CURRENT_COL;
 }}
 
 function recalcLineNums() {{
@@ -559,7 +545,7 @@ function toggleSkinnyMode() {{
     const css = isSkinnyMode ? IMG_CSS_SKINNY : IMG_CSS_NORMAL;
     img.style.cssText = css + ' cursor: crosshair;';
     document.getElementById('skinnyBtn').textContent =
-        isSkinnyMode ? 'Go to normal mode' : 'Go to skinny mode';
+        isSkinnyMode ? 'Go wide' : 'Go skinny';
 }}
 
 function exportJSON() {{
@@ -579,6 +565,22 @@ function exportJSON() {{
 }}
 
 render();
+
+// Auto-scroll: if editing col 2 and col 1 markers exist, scroll to
+// show the last col 1 line-end (so user is "ready for col 2").
+if (CURRENT_COL === 2) {{
+    const col1Ends = [...lineEndMap.entries()]
+        .filter(([_, info]) => info.col === 1)
+        .sort((a, b) => a[0] - b[0]);
+    if (col1Ends.length > 0) {{
+        const lastCol1Idx = col1Ends[col1Ends.length - 1][0];
+        const el = document.querySelector(`.word[data-idx="${{lastCol1Idx}}"]`);
+        if (el) {{
+            const panel = document.getElementById('wordsPanel');
+            panel.scrollTop = el.offsetTop - 40;
+        }}
+    }}
+}}
 
 // --- Resizable divider ---
 (function() {{
