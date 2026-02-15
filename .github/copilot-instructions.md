@@ -111,7 +111,7 @@ After making changes to Python source files, verify the HTML output is unchanged
 
 ## Line Break Editing Workflow
 
-To add line-break markers for an Aleppo Codex page column:
+To add line-break markers for an Aleppo Codex page:
 
 1. **Generate the flat-stream JSON** (if it doesn't already exist in `py_ac_loc/line-breaks/`):
    ```
@@ -122,9 +122,11 @@ To add line-break markers for an Aleppo Codex page column:
    ```
    python py_ac_loc/gen_line_break_editor.py <page_id> <col>
    ```
-   where col 1 = right column, col 2 = left column. This opens a browser editor.
+   where col 1 = right column, col 2 = left column. This opens a browser
+   editor with skinny/wide image crop toggle and a col 1/col 2 toggle,
+   so both columns can be done in one session.
 
-3. **Mark line breaks** in the editor by clicking the last word of each line, then click **Export JSON to Clipboard**.
+3. **Mark line breaks** in the editor by clicking the last word of each line, then click **Export**.
 
 4. **Paste directly** into `py_ac_loc/line-breaks/<page_id>.json`, replacing its entire contents.
 

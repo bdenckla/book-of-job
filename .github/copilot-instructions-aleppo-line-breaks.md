@@ -18,6 +18,7 @@ py_ac_loc/
   codex-index/          ← page index mapping leaves to verse ranges
   MAM-XML/              ← MAM-XML source files (Job.xml, Ps.xml, Prov.xml)
   gen_flat_stream.py    ← generates initial flat-stream JSON (no line markers)
+  gen_lb_flat_stream.py ← wrapper: generates flat stream for a page
   gen_line_break_editor.py  ← generates interactive HTML editor
   merge_line_markers.py ← merges edited line markers back, handling NFC normalization
   mam_xml_verses.py     ← low-level MAM-XML verse extraction (used by gen_flat_stream)
@@ -105,7 +106,7 @@ Two pages span book boundaries: 270r (Ps→Job) and 281v (Job→Prov).
 ### 1. Generate the flat stream (if not already present)
 
 ```
-python .novc/gen_lb_flat_stream.py 270v
+python py_ac_loc/gen_lb_flat_stream.py 270v
 ```
 
 This creates `py_ac_loc/line-breaks/270v.json` with all words and
@@ -119,41 +120,37 @@ python py_ac_loc/gen_line_break_editor.py 270v 1
 ```
 
 Arguments: `<page_id> <col>` where col 1 = right column, col 2 = left
-column. The image is CSS-cropped to show only the relevant column (60%).
-
-This generates `.novc/lb_editor_270v_col1.html` and opens it in the
-browser. The editor shows:
+column. This generates `.novc/lb_editor_270v_col1.html` and opens it in
+the browser. The editor shows:
 
 - **Left panel (RTL):** Clickable Hebrew words with verse-start
   indicators and any pre-existing line-end markers.
 - **Right panel:** Aleppo Codex page image from archive.org, cropped to
   the selected column.
 
-Click the last word of each manuscript line to toggle a line-end marker.
-The column selector sets which column number new markers get.
-Line numbers auto-renumber per column.
+Editor features:
+- Click the last word of each manuscript line to toggle a line-end marker.
+- **Skinny/wide mode** button toggles between a tight 30% crop (default)
+  and a wider 60% crop of the page image.
+- **Col toggle** button switches between col 1 and col 2 without
+  relaunching, so both columns of a page can be done in one session.
+- Line numbers auto-renumber per column.
 
-### 3. Export and merge
+### 3. Export
 
-Click **Export JSON to Clipboard**. The user will paste the exported
-JSON into the chat. Save the pasted content to `.novc/edited_<page>.json`
-and run the merge script:
+Click **Export**. This copies the updated flat-stream JSON (with
+line-start/line-end markers) to the clipboard.
 
-```
-python py_ac_loc/merge_line_markers.py <page_id>
-```
+**Paste directly** into `py_ac_loc/line-breaks/<page_id>.json`,
+replacing its entire contents.
 
-This reads `.novc/edited_<page>.json` by default. The merge script
-matches words by NFC-normalized comparison (the clipboard/chat pipeline
-may normalize Hebrew strings) but preserves the original pristine
-strings from the flat-stream source. It strips any pre-existing line
-markers from the original before re-inserting the edited ones.
+**Do NOT** paste the exported JSON into the chat window — that causes
+Unicode NFC normalization of Hebrew text. Pasting directly into the
+file preserves the original byte sequences.
 
-### 4. Repeat for the other column
-
-Run the editor again with the other column number. The file already has
-column 1 markers, so they will display as pre-existing markers while you
-work on column 2.
+If both columns were done in one session, a single export/paste covers
+both. If columns were done separately, paste after each column’s export
+(the second export will include both columns’ markers).
 
 ## Line break heuristics
 
@@ -166,19 +163,8 @@ work on column 2.
 
 ## Pages with line breaks defined
 
-| Page | Range | Status |
-|------|-------|--------|
-| 270r | Ps 149:1 – Job 1:16 | Done |
-| 270v | Job 1:16 – Job 3:6 | Col 1 done (28 lines) |
-| 278v | Job 32:8 – Job 33:33 | Done |
-| 279r | Job 34:1 – Job 35:10 | Done |
-| 279v | Job 35:10 – Job 37:9 | Done |
-| 280r | Job 37:9 – Job 38:30 | Done |
-| 280v | Job 38:31 – Job 40:5 | Done |
-| 281r | Job 40:6 – Job 41:22 | Done |
-| 281v | Job 41:23 – Prov 1:8 | Done |
-
-All data is in `py_ac_loc/line-breaks/*.json`.
+All 24 Job pages (270r–281v) have line breaks defined for both columns
+(28 lines per column). All data is in `py_ac_loc/line-breaks/*.json`.
 
 ## Script promotion policy
 
