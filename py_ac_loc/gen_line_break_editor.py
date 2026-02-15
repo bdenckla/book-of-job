@@ -192,13 +192,23 @@ body {{ font-family: 'Segoe UI', sans-serif; background: #1e1e1e; color: #d4d4d4
 h1 {{ text-align: center; padding: 10px; font-size: 17px; }}
 .container {{ display: flex; height: calc(100vh - 90px); }}
 .col-words {{
-    flex: 1; overflow-y: auto; padding: 16px; direction: rtl;
+    overflow-y: auto; padding: 16px; direction: rtl;
+    text-align: end;
     font-size: 22px;
     font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif;
 }}
+.divider {{
+    width: 6px;
+    cursor: col-resize;
+    background: transparent;
+    transition: background 0.15s;
+    flex-shrink: 0;
+}}
+.divider:hover, .divider.active {{
+    background: #0e639c;
+}}
 .col-image {{
-    flex: 1; overflow-x: hidden; overflow-y: auto;
-    border-left: 2px solid #444;
+    overflow-x: hidden; overflow-y: auto;
     padding: 8px; direction: ltr;
 }}
 .col-image img {{ {img_css} cursor: crosshair; }}
@@ -294,8 +304,9 @@ h1 {{ text-align: center; padding: 10px; font-size: 17px; }}
 <body>
 
 <h1>Line Break Editor \u2014 {page_id}</h1>
-<div class="container">
+<div class="container" id="container">
     <div class="col-words" id="wordsPanel"></div>
+    <div class="divider" id="divider"></div>
     <div class="col-image" id="imagePanel">
         <img src="{image_url}" alt="Aleppo Codex {page_id}">
     </div>
@@ -543,6 +554,39 @@ function exportJSON() {{
 }}
 
 render();
+
+// --- Resizable divider ---
+(function() {{
+    const container = document.getElementById('container');
+    const words = document.getElementById('wordsPanel');
+    const divider = document.getElementById('divider');
+    const image = document.getElementById('imagePanel');
+    // Default 30/70
+    let wordsPct = 30;
+    words.style.flex = '0 0 ' + wordsPct + '%';
+    image.style.flex = '1 1 0%';
+    let dragging = false;
+    divider.addEventListener('mousedown', (e) => {{
+        e.preventDefault();
+        dragging = true;
+        divider.classList.add('active');
+    }});
+    document.addEventListener('mousemove', (e) => {{
+        if (!dragging) return;
+        const rect = container.getBoundingClientRect();
+        // RTL layout: words panel is on the right, image on the left
+        let pct = ((rect.right - e.clientX) / rect.width) * 100;
+        pct = Math.max(10, Math.min(pct, 80));
+        wordsPct = pct;
+        words.style.flex = '0 0 ' + pct + '%';
+    }});
+    document.addEventListener('mouseup', () => {{
+        if (dragging) {{
+            dragging = false;
+            divider.classList.remove('active');
+        }}
+    }});
+}})();
 </script>
 </body>
 </html>
