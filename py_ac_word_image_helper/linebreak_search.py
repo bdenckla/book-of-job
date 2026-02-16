@@ -27,13 +27,20 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
 
     consensus_stripped = strip_heb(consensus)
 
+    # Check if consensus contains maqaf (multi-token in line-break data)
+    MAQAF = "\u05BE"
+    consensus_has_maqaf = MAQAF in consensus
+
     # First pass: find which col+line the word is on.
     target_col = None
     target_line = None
+    # For maqaf-joined consensus, track the index of the first part
+    recent_words = []  # buffer of recent words for maqaf joining
     for item in stream:
         if isinstance(item, dict):
             if item.get("verse-start") == verse_label or item.get("verse-fragment-start") == verse_label:
                 in_verse = True
+                recent_words = []
                 continue
             if item.get("verse-end") == verse_label or item.get("verse-fragment-end") == verse_label:
                 in_verse = False
@@ -49,11 +56,24 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
             matched = (
                 item == consensus
                 or item_stripped == consensus_stripped
-                or (consensus.endswith("\u05BE") and item_stripped == strip_heb(consensus[:-1]))
+                or (consensus.endswith(MAQAF) and item_stripped == strip_heb(consensus[:-1]))
             )
             if matched:
                 target_col, target_line = cur_col, cur_line
                 break
+
+            # Try joining recent maqaf-ending words with the current word
+            if consensus_has_maqaf:
+                recent_words.append(item)
+                # Keep only words that could form the start of the consensus
+                joined = "".join(recent_words)
+                joined_stripped = strip_heb(joined)
+                if joined_stripped == consensus_stripped or joined == consensus:
+                    target_col, target_line = cur_col, cur_line
+                    break
+                # If joined doesn't start the consensus, trim from the left
+                while recent_words and not consensus_stripped.startswith(strip_heb("".join(recent_words))):
+                    recent_words.pop(0)
 
     if target_col is None:
         return None, None, None, []
@@ -80,8 +100,21 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
         w_stripped = strip_heb(w)
         if (w == consensus
                 or w_stripped == consensus_stripped
-                or (consensus.endswith("\u05BE") and w_stripped == strip_heb(consensus[:-1]))):
+                or (consensus.endswith(MAQAF) and w_stripped == strip_heb(consensus[:-1]))):
             target_word_idx = i
             break
+        # Try joining consecutive maqaf-connected words starting at i
+        if consensus_has_maqaf and w.endswith(MAQAF):
+            joined = w
+            for j in range(i + 1, len(cur_line_words)):
+                joined += cur_line_words[j]
+                j_stripped = strip_heb(joined)
+                if j_stripped == consensus_stripped or joined == consensus:
+                    target_word_idx = i
+                    break
+                if not cur_line_words[j].endswith(MAQAF):
+                    break
+            if target_word_idx is not None:
+                break
 
     return target_col, target_line, target_word_idx, cur_line_words
