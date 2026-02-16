@@ -1,24 +1,23 @@
 # Procedure: Generating Aleppo Codex Word Crops for Quirkrecs
 
 This describes the workflow for supplying μA (Aleppo Codex) word-level
-image crops to quirkrecs that lack them. It replaces the old manual
-screenshot workflow (in `copilot-instructions-aleppo-images.md`) with a
-semi-automated approach that uses the column-coordinate and line-break
-data already captured for all 24 Job pages.
+image crops to quirkrecs that lack them. It uses the column-coordinate
+and line-break data already captured for all 24 Job pages (270r–281v).
 
 ## Overview
 
-143 of the 156 quirkrecs are missing a `qr-aleppo-img`. The goal is to
-supply these by:
+Each quirkrec that is missing a `qr-aleppo-img` needs a cropped PNG
+of the relevant word from the Aleppo Codex manuscript image. The
+workflow is:
 
-1. Looking up each quirkrec's verse+word in the line-break data → page,
-   column, line number, word index within that line
-2. Looking up that page/col/line in the column-coordinate data → pixel
-   bounding box for the line
-3. Opening an interactive crop editor (served as local HTML) that shows
-   the relevant line from the archive.org image with the target word
-   highlighted, and lets the user adjust the crop rectangle
-4. Exporting the crop as a PNG saved to `docs/jobn/img/Aleppo-{sid}.png`
+1. **List missing** → identify which quirkrecs still need images
+2. **Generate crop editor** → interactive HTML with draggable bounding
+   boxes overlaid on the manuscript image
+3. **User adjusts** → drag/nudge boxes to tightly frame each word
+4. **Export JSON** → user clicks Export, copies bbox coordinates
+5. **Apply crops** → download hi-res image, crop, save PNGs
+6. **Rebuild HTML** → verify images appear in the output
+7. **Show in browser** → open detail pages to visually confirm
 
 ## Prerequisites
 
@@ -28,115 +27,157 @@ All 24 Job pages (270r–281v) must have:
 
 Both are already complete.
 
-## Data flow
-
-```
-quirkrec (qr-cv, qr-consensus)
-  → line-break files → page, col, line-num, word position within line
-  → column-coordinate files → pixel bbox for that line
-  → archive.org image URL (scale=1 for hi-res)
-  → interactive crop editor → user adjusts crop → saves PNG
-```
-
-## Key data sources
-
-### Line-break files (`py_ac_loc/line-breaks/{page}.json`)
-
-Flat JSON arrays interleaving structural markers and Hebrew words.
-Each word sits between `line-start` and `line-end` markers that record
-`col` (1=right, 2=left) and `line-num` (1–28). Verse boundaries are
-marked with `verse-start` / `verse-end` / `verse-fragment-start` /
-`verse-fragment-end`.
-
-To find a word: scan for the `verse-start` (or `verse-fragment-start`)
-matching the quirkrec's chapter:verse, then locate the word matching
-`qr-consensus` (stripping cantillation/vowels for comparison if needed).
-The surrounding `line-start` marker gives col and line-num.
-
-### Column-coordinate files (`py_ac_loc/column-coordinates/{page}.json`)
-
-JSON with `columns.col1` and `columns.col2`, each having `px` (pixel)
-coordinates: `x, y, w, h, top_angle, bot_angle, line_spacing`.
-
-To get pixel bbox for line L of column C:
-```
-col = columns["col" + str(C)]
-line_top_y = col.px.y + (L - 1) * col.px.line_spacing
-line_bot_y = line_top_y + col.px.line_spacing
-line_left_x = col.px.x
-line_right_x = col.px.x + col.px.w
-```
-(Skew angles can refine this if needed.)
-
-### Archive.org image URL
-
-```
-https://ia601801.us.archive.org/BookReader/BookReaderImages.php?zip=/7/items/aleppo-codex/Aleppo%20Codex_jp2.zip&file=Aleppo%20Codex_jp2/Aleppo%20Codex_{NNNN}.jp2&id=aleppo-codex&scale=1&rotate=0
-```
-
-Page number `NNNN` is computed from the leaf using the table in
-`copilot-instructions-aleppo-line-breaks.md`.
-
 ## Scripts
 
-### `py_ac_loc/gen_word_crop_editor.py`
+### `main_list_missing_aleppo_imgs.py`
 
-Generates an interactive HTML editor for cropping a word from the
-Aleppo Codex image. Usage:
+Lists all quirkrecs that don't yet have an Aleppo image.
 
 ```
-python py_ac_loc/gen_word_crop_editor.py <short_id>
+python main_list_missing_aleppo_imgs.py          # first 15 missing
+python main_list_missing_aleppo_imgs.py --all    # all missing
+python main_list_missing_aleppo_imgs.py -n 20    # first 20 missing
 ```
 
-where `<short_id>` is the quirkrec's short ID (e.g. `0119`, `0816-HVA`).
+A quirkrec counts as "done" if `docs/jobn/img/Aleppo-{sid}.png` exists
+or it already has a `qr-aleppo-img` key.
+
+### `main_gen_word_crop_editor.py`
+
+Generates an interactive HTML crop editor at `.novc/word_crop_editor.html`.
+
+```
+python main_gen_word_crop_editor.py 0417 0505 0520    # specific SIDs
+python main_gen_word_crop_editor.py --all              # all missing
+```
 
 The script:
-1. Loads the quirkrec from `pyauthor_util/job_quirkrecs.py`
-2. Locates the word in the line-break data
+1. Loads each quirkrec from `pyauthor_util/job_quirkrecs.py`
+2. Locates the consensus word in the line-break data via
+   `py_ac_word_image_helper/linebreak_search.py`
 3. Computes pixel coordinates from column-coordinate data
-4. Generates `.novc/word_crop_{short_id}.html` and opens it in browser
+4. Downloads manuscript images from archive.org at scale=2 (cached in
+   `.novc/page_cache_{page}_s2.jpg`)
+5. Generates crop-edit PNGs showing the target line with a fade overlay
+   and the target word highlighted
+6. Builds an interactive HTML editor with SVG overlays for each item
 
-The HTML editor:
-- Shows the relevant section of the archive.org page image
-- Pre-positions a draggable/resizable crop rectangle around the target
-  line, roughly centered on the estimated word position
-- The user adjusts the crop to tightly frame the word
-- Click **Export** to save the crop as a PNG
+The HTML editor features:
+- Draggable corner/side handles to resize the bounding box
+- Fine mode (default, toggle with F key) — 1/5 sensitivity for
+  precise adjustments
+- Arrow keys to nudge the active side (1–4 keys select which side)
+- Tab/Shift-Tab to cycle between items
+- Reset button to restore initial bbox
+- **Export JSON** button → copies all bbox coordinates to clipboard
 
-### `py_ac_loc/list_missing_aleppo_imgs.py`
+### Apply crops (one-off scripts in `.novc/`)
 
-Lists all quirkrecs that don't yet have an Aleppo image on disk.
+After the user exports JSON from the editor, create a one-off script
+(e.g., `.novc/apply_word_crops_batchN.py`) that:
 
+1. Defines the `CROPS` list with `sid`, `page`, and `bbox_ref` for each
+2. Downloads page images at scale=1 (2× the reference coordinates)
+3. Scales `bbox_ref` by factor 2 and crops
+4. Saves to `docs/jobn/img/Aleppo-{sid}.png`
+
+Template:
+```python
+"""Apply word crop bounding boxes for batch N."""
+import sys
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+from py_ac_word_image_helper.codex_page import download_page
+
+OUT_DIR = ROOT / "docs" / "jobn" / "img"
+CROPS = [
+    {"sid": "XXXX", "page": "NNNx", "bbox_ref": {"x": ..., "y": ..., "w": ..., "h": ...}},
+    # ...
+]
+
+def main():
+    factor = 2.0  # scale=2 reference coords → scale=1 crop coords
+    page_imgs = {}
+    for crop in CROPS:
+        page_id = crop["page"]
+        if page_id not in page_imgs:
+            page_imgs[page_id] = download_page(page_id, scale=1)
+        img = page_imgs[page_id]
+        bb = crop["bbox_ref"]
+        x, y, w, h = [int(v * factor) for v in [bb["x"], bb["y"], bb["w"], bb["h"]]]
+        cropped = img.crop((x, y, x + w, y + h))
+        out_path = OUT_DIR / f"Aleppo-{crop['sid']}.png"
+        cropped.save(out_path)
+        print(f"  {out_path.name}: {cropped.size[0]}x{cropped.size[1]}")
+    print(f"Done. {len(CROPS)} images saved.")
+
+if __name__ == "__main__":
+    main()
 ```
-python py_ac_loc/list_missing_aleppo_imgs.py
-```
+
+## Batch workflow (step by step)
+
+Process quirkrecs in batches of ~5:
+
+1. **List missing:**
+   ```
+   python main_list_missing_aleppo_imgs.py
+   ```
+   Pick the next 5 SIDs from the output.
+
+2. **Generate crop editor:**
+   ```
+   python main_gen_word_crop_editor.py SID1 SID2 SID3 SID4 SID5
+   ```
+   Then open `.novc/word_crop_editor.html` in the browser.
+
+3. **Adjust bounding boxes** in the editor, then click **Export JSON**.
+
+4. **Paste the JSON** into the chat. The assistant creates an apply
+   script in `.novc/`, runs it, and generates the PNGs.
+
+5. **Rebuild HTML and verify:**
+   ```
+   python main_gen_misc_authored_english_documents.py
+   git status --porcelain docs/
+   ```
+
+6. **Show in browser** (requires local HTTP server for fragment URLs):
+   ```
+   python -m http.server 8471 --directory docs
+   ```
+   Then open each detail page:
+   ```
+   http://localhost:8471/jobn/job1_full_list_details.html#row-SID
+   ```
+
+7. **Commit** when satisfied.
 
 ## Image naming convention
 
-Same as existing convention (see `pyauthor_util/img_util.py`):
-- `Aleppo-{short_id}.png` where `short_id` = `CCVV` or `CCVV-WORDID`
+- `Aleppo-{short_id}.png` where `short_id` = `CCVV` or `CCVV_WORDID`
 - Saved to `docs/jobn/img/`
+- Typical size: ~130–430px wide, ~190–220px tall
 
-## Batch workflow
+## Scale conventions
 
-1. Run `list_missing_aleppo_imgs.py` to get the list of missing images
-2. For each missing quirkrec:
-   a. Run `gen_word_crop_editor.py {short_id}`
-   b. Adjust the crop in the browser
-   c. Export the PNG (saved automatically to `docs/jobn/img/`)
-   d. Run `python main_gen_misc_authored_english_documents.py` to rebuild
-   e. Verify the image appears correctly in the HTML output
-3. Commit in batches (e.g. per-chapter or per-page)
+- **scale=2** (~1660×1952 px): used as the reference coordinate system
+  for column-coordinates and `bbox_ref` values
+- **scale=1** (~3320×3904 px): used for final crops (2× bigger, giving
+  crisp output at ~200px display width)
+- Factor: multiply `bbox_ref` coordinates by 2.0 to get scale=1 pixels
 
-## After adding images
+## Key modules
 
-After adding new Aleppo PNGs:
-
-```
-python main_gen_misc_authored_english_documents.py
-git status --porcelain docs/
-```
-
-The `get_auto_imgs()` function in `pyauthor_util/img_util.py`
-auto-detects new `Aleppo-{sid}.png` files in `docs/jobn/img/` and
-populates `qr-aleppo-img` in the generated output.
+- `py_ac_word_image_helper/linebreak_search.py` — `find_word_in_linebreaks()`
+  locates a word in line-break data. Handles maqaf-joined consensus words
+  (e.g., `הׇשְׁלְמָה־לָּֽךְ׃`) by joining adjacent maqaf-connected tokens.
+- `py_ac_word_image_helper/codex_page.py` — `download_page()` fetches
+  archive.org images with caching in `.novc/`.
+- `py_ac_word_image_helper/hebrew_metrics.py` — `strip_heb()` strips
+  cantillation and vowels for fuzzy word matching.
+- `pyauthor_util/short_id_etc.py` — `short_id()` extracts the SID from
+  a quirkrec.
+- `pyauthor_util/img_util.py` — `get_auto_imgs()` auto-detects
+  `Aleppo-{sid}.png` files and populates `qr-aleppo-img` in HTML output.
