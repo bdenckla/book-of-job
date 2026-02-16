@@ -64,7 +64,9 @@ def process_quirkrec(qr, pages, scale=2):
     )
     if col is None:
         print("  ERROR: Could not find word in line-break data")
-        return None    assert line_num is not None and word_idx is not None    print(f"  Location: col {col}, line {line_num}, word {word_idx}")
+        return None
+    assert line_num is not None and word_idx is not None
+    print(f"  Location: col {col}, line {line_num}, word {word_idx}")
 
     # Crop coordinates at reference image size
     crop_left, crop_top, crop_right, crop_bot, target_offset, ls = get_line_bbox(

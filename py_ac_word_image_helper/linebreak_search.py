@@ -30,7 +30,6 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
     # First pass: find which col+line the word is on.
     target_col = None
     target_line = None
-    target_word_idx = None
     for item in stream:
         if isinstance(item, dict):
             if item.get("verse-start") == verse_label or item.get("verse-fragment-start") == verse_label:
@@ -42,21 +41,19 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
             if "line-start" in item:
                 cur_col = item["line-start"]["col"]
                 cur_line = item["line-start"]["line-num"]
-                word_idx = 0
                 continue
             if "line-end" in item:
                 continue
         elif isinstance(item, str) and in_verse:
             item_stripped = strip_heb(item)
-            if item == consensus or item_stripped == consensus_stripped:
+            matched = (
+                item == consensus
+                or item_stripped == consensus_stripped
+                or (consensus.endswith("\u05BE") and item_stripped == strip_heb(consensus[:-1]))
+            )
+            if matched:
                 target_col, target_line = cur_col, cur_line
-                target_word_idx = word_idx
                 break
-            if consensus.endswith("\u05BE") and item_stripped == strip_heb(consensus[:-1]):
-                target_col, target_line = cur_col, cur_line
-                target_word_idx = word_idx
-                break
-            word_idx += 1
 
     if target_col is None:
         return None, None, None, []
@@ -76,5 +73,15 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
                 break
         elif isinstance(item, str) and in_target_line:
             cur_line_words.append(item)
+
+    # Find word index within the full line word list
+    target_word_idx = None
+    for i, w in enumerate(cur_line_words):
+        w_stripped = strip_heb(w)
+        if (w == consensus
+                or w_stripped == consensus_stripped
+                or (consensus.endswith("\u05BE") and w_stripped == strip_heb(consensus[:-1]))):
+            target_word_idx = i
+            break
 
     return target_col, target_line, target_word_idx, cur_line_words
