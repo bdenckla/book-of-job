@@ -154,6 +154,15 @@ To add line-break markers for an Aleppo Codex page:
 
 **Do NOT** paste the exported JSON into the chat window — that causes Unicode NFC normalization of Hebrew text. Pasting directly into the file preserves the original byte sequences and avoids the need for `merge_line_markers.py`.
 
+## Aleppo Word Crop Workflow
+
+To supply Aleppo Codex (μA) word-level image crops for quirkrecs that lack them,
+see `.github/copilot-instructions-aleppo-word-crops.md`.
+
+## Opening HTML Files
+
+When displaying an HTML file that only uses local/relative resources (images, CSS, etc.), open it directly as a file (`Start-Process "path/to/file.html"`) rather than starting a local HTTP server. Only use a server when the page requires it (e.g., fetching from external APIs with CORS restrictions, or serving content that browsers block via `file://`).
+
 ## Git Discipline
 
 - **Never auto-commit.** Only commit when the user explicitly asks.

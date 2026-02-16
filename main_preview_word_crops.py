@@ -1,0 +1,304 @@
+"""
+Preview: show generous crops around quirkrec words on Aleppo Codex pages.
+
+For a set of example quirkrecs, this script:
+1. Looks up the word in line-break data (page, col, line-num)
+2. Gets pixel coordinates from column-coordinate data
+3. Downloads the page image from archive.org
+4. Crops a generous region around the target line with a 2D fade overlay
+5. Generates an HTML preview page in .novc/
+"""
+
+import json
+import os
+import sys
+import traceback
+import webbrowser
+from pathlib import Path
+
+import numpy as np
+from PIL import Image, ImageDraw
+
+ROOT = Path(__file__).resolve().parent
+OUT_DIR = ROOT / ".novc"
+
+sys.path.insert(0, str(ROOT))
+from py_ac_word_image_helper.codex_page import (
+    CC_DIR,
+    download_page,
+    find_page_for_verse,
+    get_line_bbox,
+    load_index,
+)
+from py_ac_word_image_helper.hebrew_metrics import (
+    SPACE_WIDTH,
+    join_maqaf,
+    line_widths,
+)
+from py_ac_word_image_helper.linebreak_search import find_word_in_linebreaks
+from pyauthor_util.job_quirkrecs import QUIRKRECS
+from pyauthor_util.short_id_etc import short_id
+
+
+def process_quirkrec(qr, pages, scale=2):
+    sid = short_id(qr)
+    cv = qr["qr-cv"]
+    consensus = qr["qr-consensus"]
+    ch, v = (int(x) for x in cv.split(":"))
+
+    print(f"\n=== {sid} (Job {cv}): {consensus} ===")
+
+    page_id = find_page_for_verse(pages, ch, v)
+    if not page_id:
+        print(f"  ERROR: Could not find page for Job {cv}")
+        return
+    print(f"  Page: {page_id}")
+
+    col, line_num, word_idx, line_words = find_word_in_linebreaks(page_id, ch, v, consensus)
+    if col is None:
+        print(f"  ERROR: Could not find word in line-break data")
+        return
+    print(f"  Location: col {col}, line {line_num}, word {word_idx}")
+    print(f"  Line: {' '.join(line_words)}")
+
+    # Get crop coordinates (at full image size)
+    crop_left, crop_top, crop_right, crop_bot, target_offset, ls = \
+        get_line_bbox(page_id, col, line_num)
+
+    # Download at the requested scale
+    img = download_page(page_id, scale=scale)
+    actual_w, actual_h = img.size
+
+    # Scale factor: column-coordinates reference a specific image size
+    cc_path = CC_DIR / f"{page_id}.json"
+    with open(cc_path, encoding="utf-8") as f:
+        cc = json.load(f)
+    ref_w = cc["image_size"]["width"]
+    ref_h = cc["image_size"]["height"]
+    sx = actual_w / ref_w
+    sy = actual_h / ref_h
+    print(f"  Image: {actual_w}x{actual_h} (ref {ref_w}x{ref_h}, scale {sx:.2f}x{sy:.2f})")
+
+    # Apply scale to crop coordinates
+    cl = int(crop_left * sx)
+    ct = int(crop_top * sy)
+    cr = int(crop_right * sx)
+    cb = int(crop_bot * sy)
+    tgt_y = int(target_offset * sy)
+    tgt_ls = int(ls * sy)
+
+    crop = img.crop((cl, ct, cr, cb)).convert("RGBA")
+
+    # Highlight area: 1 line-width centered on the target line
+    highlight_top = tgt_y
+    highlight_bot = tgt_y + tgt_ls
+
+    # Estimate horizontal word position (RTL: word 0 is at right edge)
+    # Use proportional Hebrew character width metrics
+    word_ws, total_width = line_widths(line_words)
+    if total_width > 0:
+        # Width from right edge to the start of target word
+        width_before = sum(word_ws[:word_idx]) + SPACE_WIDTH * word_idx
+        width_target = word_ws[word_idx] if word_idx < len(word_ws) else 0
+        # As fraction of total line width
+        frac_start = width_before / total_width  # from right
+        frac_end = (width_before + width_target) / total_width
+        # Add buffer around estimated word position (\u00b115% of line width)
+        buffer = 0.15
+        frac_left = max(0, frac_start - buffer)
+        frac_right = min(1, frac_end + buffer)
+        # Convert to pixel x coords (RTL: right side = high x values)
+        highlight_right = int(crop.width * (1 - frac_left))
+        highlight_left = int(crop.width * (1 - frac_right))
+    else:
+        highlight_left = 0
+        highlight_right = crop.width
+
+    # Create 2D gradient overlay combining vertical and horizontal fades
+    h, w = crop.height, crop.width
+    fade_color = (200, 180, 60)  # warm yellow
+    max_alpha = 200  # strong opacity at the edges
+
+    # Vertical fade: 0 inside highlight band, increases toward top/bottom
+    vert_fade = np.zeros(h, dtype=np.float64)
+    for y in range(h):
+        if y < highlight_top:
+            dist = highlight_top - y
+            fade_range = max(highlight_top, 1)
+            vert_fade[y] = (dist / fade_range) ** 0.6
+        elif y > highlight_bot:
+            dist = y - highlight_bot
+            fade_range = max(h - highlight_bot, 1)
+            vert_fade[y] = (dist / fade_range) ** 0.6
+
+    # Horizontal fade: 0 inside highlight band, increases toward left/right
+    horiz_fade = np.zeros(w, dtype=np.float64)
+    for x in range(w):
+        if x < highlight_left:
+            dist = highlight_left - x
+            fade_range = max(highlight_left, 1)
+            horiz_fade[x] = (dist / fade_range) ** 0.6
+        elif x > highlight_right:
+            dist = x - highlight_right
+            fade_range = max(w - highlight_right, 1)
+            horiz_fade[x] = (dist / fade_range) ** 0.6
+
+    # Combine: take the max of vertical and horizontal fade at each pixel
+    vert_2d = vert_fade[:, np.newaxis]  # (h, 1)
+    horiz_2d = horiz_fade[np.newaxis, :]  # (1, w)
+    combined = np.maximum(vert_2d, horiz_2d)  # (h, w)
+    alpha_arr = (combined * max_alpha).clip(0, 255).astype(np.uint8)
+
+    # Build RGBA overlay
+    overlay_arr = np.zeros((h, w, 4), dtype=np.uint8)
+    overlay_arr[:, :, 0] = fade_color[0]
+    overlay_arr[:, :, 1] = fade_color[1]
+    overlay_arr[:, :, 2] = fade_color[2]
+    overlay_arr[:, :, 3] = alpha_arr
+    overlay = Image.fromarray(overlay_arr, "RGBA")
+
+    crop = Image.alpha_composite(crop, overlay)
+
+    # Save version without red lines
+    out_path = OUT_DIR / f"preview_{sid}.png"
+    crop.save(out_path)
+
+    # Build red-lines overlay: fading top/bottom lines with center tick marks
+    red_overlay = Image.new("RGBA", crop.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(red_overlay)
+    half_ls = tgt_ls // 2
+    box_top = max(0, highlight_top - half_ls)
+    box_bot = min(h - 1, highlight_bot + half_ls)
+    cx = (highlight_left + highlight_right) // 2
+    half_w = max(cx - highlight_left, highlight_right - cx, 1)
+    for x_pos in range(highlight_left, highlight_right + 1):
+        dist = abs(x_pos - cx)
+        alpha = max(0, int(255 * (1 - dist / half_w)))
+        color = (255, 0, 0, alpha)
+        draw.point((x_pos, box_top), fill=color)
+        draw.point((x_pos, box_top + 1), fill=color)
+        draw.point((x_pos, box_bot), fill=color)
+        draw.point((x_pos, box_bot - 1), fill=color)
+    tick = min(12, (box_bot - box_top) // 4)
+    draw.line([(cx, box_top), (cx, box_top + tick)], fill=(255, 0, 0, 255), width=2)
+    draw.line([(cx, box_bot - tick), (cx, box_bot)], fill=(255, 0, 0, 255), width=2)
+    crop_red = Image.alpha_composite(crop, red_overlay)
+    out_path_red = OUT_DIR / f"preview_{sid}_red.png"
+    crop_red.save(out_path_red)
+
+    print(f"  Saved: {out_path.name} + {out_path_red.name} ({crop.width}x{crop.height})")
+
+    # Word context from the manuscript line
+    before = line_words[:word_idx]
+    matched_word = line_words[word_idx] if word_idx < len(line_words) else consensus
+    after = line_words[word_idx + 1:] if word_idx + 1 < len(line_words) else []
+    print(f"  Context: {' '.join(before)} [{matched_word}] {' '.join(after)}")
+    return {
+        "sid": sid,
+        "cv": cv,
+        "consensus": consensus,
+        "page": page_id,
+        "col": col,
+        "line_num": line_num,
+        "word_idx": word_idx,
+        "before": before,
+        "matched_word": matched_word,
+        "after": after,
+    }
+
+
+def main():
+    pages = load_index()
+
+    # Pick a spread of example quirkrecs: early, middle, late
+    examples = []
+    target_sids = {"0119", "0303", "0701", "1503", "2001", "3001", "3820", "4003"}
+    for qr in QUIRKRECS:
+        sid = short_id(qr)
+        if sid in target_sids:
+            examples.append(qr)
+    # If we didn\u2019t find all, take first few that are missing aleppo images
+    if len(examples) < 4:
+        for qr in QUIRKRECS:
+            sid = short_id(qr)
+            img_path = ROOT / "docs" / "jobn" / "img" / f"Aleppo-{sid}.png"
+            if not os.path.exists(img_path) and qr not in examples:
+                examples.append(qr)
+                if len(examples) >= 6:
+                    break
+
+    print(f"Processing {len(examples)} example quirkrecs...")
+    results = []
+    for qr in examples:
+        try:
+            result = process_quirkrec(qr, pages)
+            if result:
+                results.append(result)
+        except Exception as e:
+            print(f"  ERROR: {e}")
+            traceback.print_exc()
+
+    # Generate HTML
+    html_path = OUT_DIR / "preview_word_crops.html"
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write("""<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Preview Word Crops</title>
+<style>
+body { background: #222; color: #eee; font-family: sans-serif; padding: 20px; }
+.preview { margin-bottom: 30px; }
+.preview img { border: 1px solid #555; display: block; }
+.preview h2 { margin-bottom: 5px; }
+.preview .meta { margin-top: 2px; color: #aaa; font-size: 14px; }
+.crop-box { display: inline-block; }
+.context { direction: rtl; unicode-bidi: embed; font-size: 22px; margin: 0; padding: 6px 0; text-align: center; border: 1px solid #555; border-bottom: none; background: #2a2a2a; }
+.context .before, .context .after { color: #888; }
+.context .target { color: #fff; background: #553; padding: 2px 4px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<h1>Aleppo Codex Word Crop Previews</h1>
+<p>Yellow fade marks surrounding lines; clear band = target line.</p>
+<p><button id="toggle-red" onclick="toggleRed()">Show red position lines</button></p>
+<script>
+let showRed = false;
+function toggleRed() {
+  showRed = !showRed;
+  document.getElementById('toggle-red').textContent = showRed ? 'Hide red position lines' : 'Show red position lines';
+  document.querySelectorAll('.crop-img').forEach(img => {
+    img.src = img.dataset[showRed ? 'red' : 'plain'];
+  });
+}
+</script>
+""")
+        for r in results:
+            before_joined = join_maqaf(r["before"])
+            after_joined = join_maqaf(r["after"])
+            target_display = r["matched_word"]
+            # If last before-word ends with maqaf, glue it onto target
+            if before_joined and before_joined[-1].endswith("\u05BE"):
+                target_display = before_joined.pop() + target_display
+            # If target ends with maqaf, glue next after-word onto it
+            if target_display.endswith("\u05BE") and after_joined:
+                target_display = target_display + after_joined.pop(0)
+            before_html = " ".join(before_joined)
+            after_html = " ".join(after_joined)
+            f.write(f"""
+<div class="preview">
+<h2>{r["sid"]} \u2014 Job {r["cv"]} \u2014 {r["consensus"]}</h2>
+<p class="meta">Page {r["page"]}, col {r["col"]}, line {r["line_num"]}, word {r["word_idx"]}</p>
+<div class="crop-box">
+<p class="context"><span class="before">{before_html}</span> <span class="target">{target_display}</span> <span class="after">{after_html}</span></p>
+<img class="crop-img" src="preview_{r["sid"]}.png" data-plain="preview_{r["sid"]}.png" data-red="preview_{r["sid"]}_red.png">
+</div>
+</div>
+""")
+        f.write("</body></html>\n")
+    print(f"\nHTML: {html_path}")
+    webbrowser.open(str(html_path))
+
+
+if __name__ == "__main__":
+    main()
