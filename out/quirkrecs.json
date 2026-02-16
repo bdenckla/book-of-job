@@ -13,6 +13,7 @@
       "line": 21
     },
     "qr-lc-img": "0119.png",
+    "qr-aleppo-img": "Aleppo-0119.png",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -69,6 +70,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "0303.png",
+    "qr-aleppo-img": "Aleppo-0303.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -702,6 +704,7 @@
     "qr-bhq-comment": "$BHQ silently ignores the possible רביע.",
     "qr-noted-by": "nBHL",
     "qr-lc-img": "0701.png",
+    "qr-aleppo-img": "Aleppo-0701.png",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -2655,6 +2658,7 @@
       "line": 28
     },
     "qr-lc-img": "2001.png",
+    "qr-aleppo-img": "Aleppo-2001.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5651,6 +5655,7 @@
     },
     "qr-noted-by": "nDM",
     "qr-lc-img": "3820.png",
+    "qr-aleppo-img": "Aleppo-3820.png",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
