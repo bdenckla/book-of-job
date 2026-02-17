@@ -14,6 +14,7 @@
     },
     "qr-lc-img": "0119.png",
     "qr-aleppo-img": "Aleppo-0119.png",
+    "aleppo-img-intro": "page 270v, col 1, line 9, word 2",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -45,6 +46,7 @@
     "qr-noted-by": "nBHQ-nBHL-nDM-nWLC",
     "qr-lc-img": "0121.png",
     "qr-aleppo-img": "Aleppo-0121.png",
+    "aleppo-img-intro": "page 270v, col 1, line 13, word 3",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "nBHL",
@@ -72,6 +74,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "0303.png",
     "qr-aleppo-img": "Aleppo-0303.png",
+    "aleppo-img-intro": "page 270v, col 2, line 23, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -99,6 +102,7 @@
     },
     "qr-lc-img": "0304.png",
     "qr-aleppo-img": "Aleppo-0304.png",
+    "aleppo-img-intro": "page 270v, col 2, line 25, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -132,6 +136,7 @@
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "0316.png",
     "qr-aleppo-img": "Aleppo-0316.png",
+    "aleppo-img-intro": "page 271r, col 1, line 11, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -159,6 +164,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "0404.png",
     "qr-aleppo-img": "Aleppo-0404.png",
+    "aleppo-img-intro": "page 271r, col 1, line 25, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -189,6 +195,7 @@
     "qr-noted-by": "nBHQ-nBHL-nDM",
     "qr-lc-img": "0409.png",
     "qr-aleppo-img": "Aleppo-0409.png",
+    "aleppo-img-intro": "page 271r, col 2, line 2, word 2",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "nBHL",
@@ -219,6 +226,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "0417.png",
     "qr-aleppo-img": "Aleppo-0417.png",
+    "aleppo-img-intro": "page 271r, col 2, line 11, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -285,6 +293,7 @@
     "qr-noted-by": "tBHQ-nDM",
     "qr-lc-img": "0505.png",
     "qr-aleppo-img": "Aleppo-0505.png",
+    "aleppo-img-intro": "page 271r, col 2, line 23, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -312,6 +321,7 @@
     },
     "qr-lc-img": "0520.png",
     "qr-aleppo-img": "Aleppo-0520.png",
+    "aleppo-img-intro": "page 271v, col 1, line 12, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -343,6 +353,7 @@
     },
     "qr-lc-img": "0523.png",
     "qr-aleppo-img": "Aleppo-0523.png",
+    "aleppo-img-intro": "page 271v, col 1, line 17, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -373,6 +384,7 @@
     },
     "qr-lc-img": "0524.png",
     "qr-aleppo-img": "Aleppo-0524.png",
+    "aleppo-img-intro": "page 271v, col 1, line 18, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -510,6 +522,7 @@
     ],
     "qr-lc-img": "0610.png",
     "qr-aleppo-img": "Aleppo-0610.png",
+    "aleppo-img-intro": "page 271v, col 2, line 5, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -539,6 +552,7 @@
     },
     "qr-lc-img": "0617.png",
     "qr-aleppo-img": "Aleppo-0617.png",
+    "aleppo-img-intro": "page 271v, col 2, line 13, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -633,6 +647,7 @@
     },
     "qr-lc-img": "0621.png",
     "qr-aleppo-img": "Aleppo-0621.png",
+    "aleppo-img-intro": "page 271v, col 2, line 17, word 6",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -661,6 +676,7 @@
     },
     "qr-lc-img": "0627.png",
     "qr-aleppo-img": "Aleppo-0627.png",
+    "aleppo-img-intro": "page 271v, col 2, line 25, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -692,6 +708,7 @@
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "0629.png",
     "qr-aleppo-img": "Aleppo-0629.png",
+    "aleppo-img-intro": "page 271v, col 2, line 27, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -720,6 +737,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "0701.png",
     "qr-aleppo-img": "Aleppo-0701.png",
+    "aleppo-img-intro": "page 272r, col 1, line 1, word 6",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -747,6 +765,7 @@
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "0709.png",
     "qr-aleppo-img": "Aleppo-0709.png",
+    "aleppo-img-intro": "page 272r, col 1, line 10, word 8",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -779,6 +798,7 @@
     ],
     "qr-lc-img": "0720.png",
     "qr-aleppo-img": "Aleppo-0720.png",
+    "aleppo-img-intro": "page 272r, col 1, line 23, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -809,6 +829,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "0721.png",
     "qr-aleppo-img": "Aleppo-0721.png",
+    "aleppo-img-intro": "page 272r, col 1, line 26, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -838,6 +859,7 @@
     "qr-noted-by": "nBHQ-nBHL-nWLC",
     "qr-lc-img": "0801.png",
     "qr-aleppo-img": "Aleppo-0801.png",
+    "aleppo-img-intro": "page 272r, col 1, line 27, word 4",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "nBHL",
@@ -865,6 +887,7 @@
     },
     "qr-lc-img": "0802.png",
     "qr-aleppo-img": "Aleppo-0802.png",
+    "aleppo-img-intro": "page 272r, col 1, line 28, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -895,6 +918,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "0807.png",
     "qr-aleppo-img": "Aleppo-0807.png",
+    "aleppo-img-intro": "page 272r, col 2, line 7, word 1",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -926,6 +950,7 @@
     "qr-noted-by": "nDM-nWLC",
     "qr-lc-img": "0814.png",
     "qr-aleppo-img": "Aleppo-0814.png",
+    "aleppo-img-intro": "page 272r, col 2, line 14, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -954,6 +979,7 @@
     "qr-word-id": "HVA",
     "qr-lc-img": "0816-HVA.png",
     "qr-aleppo-img": "Aleppo-0816-HVA.png",
+    "aleppo-img-intro": "page 272r, col 2, line 16, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -985,6 +1011,7 @@
     "qr-word-id": "YNQFV",
     "qr-lc-img": "0816-YNQFV.png",
     "qr-aleppo-img": "Aleppo-0816-YNQFV.png",
+    "aleppo-img-intro": "page 272r, col 2, line 17, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -1014,6 +1041,7 @@
     "qr-noted-by": "tBHQ-nWLC",
     "qr-lc-img": "0906.png",
     "qr-aleppo-img": "Aleppo-0906.png",
+    "aleppo-img-intro": "page 272v, col 1, line 2, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -1048,6 +1076,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2022.10.19%20-%20Changes/2022.10.19%20-%20Changes.xml?2022.07.05-3",
     "qr-lc-img": "0910.png",
     "qr-aleppo-img": "Aleppo-0910.png",
+    "aleppo-img-intro": "page 272v, col 1, line 6, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -1080,6 +1109,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "0914.png",
     "qr-aleppo-img": "Aleppo-0914.png",
+    "aleppo-img-intro": "page 272v, col 1, line 11, word 2",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -1111,6 +1141,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "0930.png",
     "qr-aleppo-img": "Aleppo-0930.png",
+    "aleppo-img-intro": "page 272v, col 2, line 1, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -1141,6 +1172,7 @@
     ],
     "qr-lc-img": "0935.png",
     "qr-aleppo-img": "Aleppo-0935.png",
+    "aleppo-img-intro": "page 272v, col 2, line 5, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -1169,6 +1201,7 @@
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "1001.png",
     "qr-aleppo-img": "Aleppo-1001.png",
+    "aleppo-img-intro": "page 272v, col 2, line 7, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -1349,6 +1382,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-9",
     "qr-lc-img": "1006.png",
     "qr-aleppo-img": "Aleppo-1006.png",
+    "aleppo-img-intro": "page 272v, col 2, line 13, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -1379,6 +1413,7 @@
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "1015.png",
     "qr-aleppo-img": "Aleppo-1015.png",
+    "aleppo-img-intro": "page 272v, col 2, line 23, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -1406,6 +1441,7 @@
     "qr-noted-by": "tBHQ-nBHL-nWLC",
     "qr-lc-img": "1103.png",
     "qr-aleppo-img": "Aleppo-1103.png",
+    "aleppo-img-intro": "page 273r, col 1, line 6, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -1437,6 +1473,7 @@
     "qr-noted-by": "nBHQ-nBHL-nDM",
     "qr-lc-img": "1106.png",
     "qr-aleppo-img": "Aleppo-1106.png",
+    "aleppo-img-intro": "page 273r, col 1, line 10, word 5",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "nBHL",
@@ -1467,6 +1504,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "1107.png",
     "qr-aleppo-img": "Aleppo-1107.png",
+    "aleppo-img-intro": "page 273r, col 1, line 11, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -1496,6 +1534,7 @@
     "qr-noted-by-uxlc": true,
     "qr-lc-img": "1113.png",
     "qr-aleppo-img": "Aleppo-1113.png",
+    "aleppo-img-intro": "page 273r, col 1, line 17, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -1526,6 +1565,7 @@
     "qr-noted-by": "nBHL-nDM",
     "qr-lc-img": "1203.png",
     "qr-aleppo-img": "Aleppo-1203.png",
+    "aleppo-img-intro": "page 273r, col 2, line 1, word 1",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -1557,6 +1597,7 @@
     ],
     "qr-lc-img": "1209.png",
     "qr-aleppo-img": "Aleppo-1209.png",
+    "aleppo-img-intro": "page 273r, col 2, line 9, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -1591,6 +1632,7 @@
     "qr-noted-by": "tBHQ-nWLC",
     "qr-lc-img": "1216.png",
     "qr-aleppo-img": "Aleppo-1216.png",
+    "aleppo-img-intro": "page 273r, col 2, line 16, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -1620,6 +1662,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-12",
     "qr-lc-img": "1219.png",
     "qr-aleppo-img": "Aleppo-1219.png",
+    "aleppo-img-intro": "page 273r, col 2, line 20, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -1740,6 +1783,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "1409.png",
     "qr-aleppo-img": "Aleppo-1409.png",
+    "aleppo-img-intro": "page 273v, col 2, line 11, word 4",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -1879,6 +1923,7 @@
     "qr-noted-by": "nWLC",
     "qr-lc-img": "1413.png",
     "qr-aleppo-img": "Aleppo-1413.png",
+    "aleppo-img-intro": "page 273v, col 2, line 17, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -1909,6 +1954,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "1508.png",
     "qr-aleppo-img": "Aleppo-1508.png",
+    "aleppo-img-intro": "page 274r, col 1, line 9, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -1937,6 +1983,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "1534.png",
     "qr-aleppo-img": "Aleppo-1534.png",
+    "aleppo-img-intro": "page 274r, col 2, line 11, word 4",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -1974,6 +2021,7 @@
     "qr-noted-by": "tBHQ-nDM",
     "qr-lc-img": "1535.png",
     "qr-aleppo-img": "Aleppo-1535.png",
+    "aleppo-img-intro": "page 274r, col 2, line 12, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2007,6 +2055,7 @@
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "1604.png",
     "qr-aleppo-img": "Aleppo-1604.png",
+    "aleppo-img-intro": "page 274r, col 2, line 16, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -2037,6 +2086,7 @@
     ],
     "qr-lc-img": "1606.png",
     "qr-aleppo-img": "Aleppo-1606.png",
+    "aleppo-img-intro": "page 274r, col 2, line 20, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2065,6 +2115,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "1613.png",
     "qr-aleppo-img": "Aleppo-1613.png",
+    "aleppo-img-intro": "page 274v, col 1, line 2, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -2095,6 +2146,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "1620.png",
     "qr-aleppo-img": "Aleppo-1620.png",
+    "aleppo-img-intro": "page 274v, col 1, line 9, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -2125,6 +2177,7 @@
     },
     "qr-lc-img": "1703.png",
     "qr-aleppo-img": "Aleppo-1703.png",
+    "aleppo-img-intro": "page 274v, col 1, line 14, word 3",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -2215,6 +2268,7 @@
     ],
     "qr-lc-img": "1704.png",
     "qr-aleppo-img": "Aleppo-1704.png",
+    "aleppo-img-intro": "page 274v, col 1, line 15, word 4",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -2246,6 +2300,7 @@
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "1706.png",
     "qr-aleppo-img": "Aleppo-1706.png",
+    "aleppo-img-intro": "page 274v, col 1, line 17, word 4",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -2274,6 +2329,7 @@
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "1711.png",
     "qr-aleppo-img": "Aleppo-1711.png",
+    "aleppo-img-intro": "page 274v, col 1, line 22, word 8",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -2315,6 +2371,7 @@
     "qr-word-id": "HLM3N5_1_of_2_FTW",
     "qr-lc-img": "1804-HLM3N5_1_of_2_FTW.png",
     "qr-aleppo-img": "Aleppo-1804-HLM3N5_1_of_2_FTW.png",
+    "aleppo-img-intro": "page 274v, col 2, line 3, word 4",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -2356,6 +2413,7 @@
     "qr-word-id": "HLM3N5_2_of_2_FTW",
     "qr-lc-img": "1804-HLM3N5_2_of_2_FTW.png",
     "qr-aleppo-img": "Aleppo-1804-HLM3N5_2_of_2_FTW.png",
+    "aleppo-img-intro": "page 274v, col 2, line 3, word 4",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "nBHL",
@@ -2387,6 +2445,7 @@
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "1806.png",
     "qr-aleppo-img": "Aleppo-1806.png",
+    "aleppo-img-intro": "page 274v, col 2, line 5, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -2422,6 +2481,7 @@
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "1809.png",
     "qr-aleppo-img": "Aleppo-1809.png",
+    "aleppo-img-intro": "page 274v, col 2, line 8, word 5",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -2453,6 +2513,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-19",
     "qr-lc-img": "1902.png",
     "qr-aleppo-img": "Aleppo-1902.png",
+    "aleppo-img-intro": "page 274v, col 2, line 24, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2586,6 +2647,7 @@
     "qr-noted-by": "nBHL-nWLC",
     "qr-lc-img": "1905.png",
     "qr-aleppo-img": "Aleppo-1905.png",
+    "aleppo-img-intro": "page 274v, col 2, line 27, word 7",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -2617,6 +2679,7 @@
     "qr-word-id": "QRAFY",
     "qr-lc-img": "1916-QRAFY.png",
     "qr-aleppo-img": "Aleppo-1916-QRAFY.png",
+    "aleppo-img-intro": "page 275r, col 1, line 11, word 4",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "nBHL",
@@ -2664,6 +2727,7 @@
     "qr-word-id": "BMV0PY",
     "qr-lc-img": "1916-BMV0PY.png",
     "qr-aleppo-img": "Aleppo-1916-BMV0PY.png",
+    "aleppo-img-intro": "page 275r, col 1, line 12, word 2",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -2691,6 +2755,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "1928.png",
     "qr-aleppo-img": "Aleppo-1928.png",
+    "aleppo-img-intro": "page 275r, col 1, line 24, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2719,6 +2784,7 @@
     },
     "qr-lc-img": "2001.png",
     "qr-aleppo-img": "Aleppo-2001.png",
+    "aleppo-img-intro": "page 275r, col 1, line 27, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2746,6 +2812,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "2023.png",
     "qr-aleppo-img": "Aleppo-2023.png",
+    "aleppo-img-intro": "page 275r, col 2, line 23, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2774,6 +2841,7 @@
     },
     "qr-lc-img": "2107.png",
     "qr-aleppo-img": "Aleppo-2107.png",
+    "aleppo-img-intro": "page 275v, col 1, line 10, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2804,6 +2872,7 @@
     },
     "qr-lc-img": "2115.png",
     "qr-aleppo-img": "Aleppo-2115.png",
+    "aleppo-img-intro": "page 275v, col 1, line 20, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2837,6 +2906,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "2125.png",
     "qr-aleppo-img": "Aleppo-2125.png",
+    "aleppo-img-intro": "page 275v, col 2, line 3, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -2865,6 +2935,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-24",
     "qr-lc-img": "2134.png",
     "qr-aleppo-img": "Aleppo-2134.png",
+    "aleppo-img-intro": "page 275v, col 2, line 14, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2896,6 +2967,7 @@
     },
     "qr-lc-img": "2210.png",
     "qr-aleppo-img": "Aleppo-2210.png",
+    "aleppo-img-intro": "page 275v, col 2, line 25, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2926,6 +2998,7 @@
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "2212.png",
     "qr-aleppo-img": "Aleppo-2212.png",
+    "aleppo-img-intro": "page 275v, col 2, line 27, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2953,6 +3026,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "2214.png",
     "qr-aleppo-img": "Aleppo-2214.png",
+    "aleppo-img-intro": "page 276r, col 1, line 1, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -2995,6 +3069,7 @@
     "qr-lc-img": "2221-3MV.png",
     "qr-aleppo-img": "Aleppo-2221-3MV.png",
     "qr-cam1753-img": "Cam1753-2221-3MV.png",
+    "aleppo-img-intro": "page 276r, col 1, line 10, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -3029,6 +3104,7 @@
     "qr-word-id": "VJL6",
     "qr-lc-img": "2221-VJL6.png",
     "qr-aleppo-img": "Aleppo-2221-VJL6.png",
+    "aleppo-img-intro": "page 276r, col 1, line 10, word 4",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -3062,6 +3138,7 @@
     ],
     "qr-lc-img": "2224.png",
     "qr-aleppo-img": "Aleppo-2224.png",
+    "aleppo-img-intro": "page 276r, col 1, line 14, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3150,6 +3227,7 @@
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "2228.png",
     "qr-aleppo-img": "Aleppo-2228.png",
+    "aleppo-img-intro": "page 276r, col 1, line 17, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -3186,6 +3264,7 @@
     "qr-word-id": "YMLE",
     "qr-lc-img": "2230-YMLE.png",
     "qr-aleppo-img": "Aleppo-2230-YMLE.png",
+    "aleppo-img-intro": "page 276r, col 1, line 20, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3220,6 +3299,7 @@
     "qr-word-id": "VNMLE",
     "qr-lc-img": "2230-VNMLE.png",
     "qr-aleppo-img": "Aleppo-2230-VNMLE.png",
+    "aleppo-img-intro": "page 276r, col 1, line 20, word 5",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -3312,6 +3392,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "2306.png",
     "qr-aleppo-img": "Aleppo-2306.png",
+    "aleppo-img-intro": "page 276r, col 1, line 26, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3390,6 +3471,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2022.04.01%20-%20Changes/2022.04.01%20-%20Changes.xml?2022.02.17-2",
     "qr-lc-img": "2401.png",
     "qr-aleppo-img": "Aleppo-2401.png",
+    "aleppo-img-intro": "page 276r, col 2, line 11, word 6",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -3418,6 +3500,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-31",
     "qr-lc-img": "2405.png",
     "qr-aleppo-img": "Aleppo-2405.png",
+    "aleppo-img-intro": "page 276r, col 2, line 16, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3447,6 +3530,7 @@
     },
     "qr-lc-img": "2413.png",
     "qr-aleppo-img": "Aleppo-2413.png",
+    "aleppo-img-intro": "page 276r, col 2, line 26, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3519,6 +3603,7 @@
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "2416.png",
     "qr-aleppo-img": "Aleppo-2416.png",
+    "aleppo-img-intro": "page 276v, col 1, line 3, word 5",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -3546,6 +3631,7 @@
     },
     "qr-lc-img": "2418.png",
     "qr-aleppo-img": "Aleppo-2418.png",
+    "aleppo-img-intro": "page 276v, col 1, line 6, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3580,6 +3666,7 @@
     "qr-noted-by": "nBHL-nDM",
     "qr-lc-img": "2421.png",
     "qr-aleppo-img": "Aleppo-2421.png",
+    "aleppo-img-intro": "page 276v, col 1, line 10, word 1",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -3721,6 +3808,7 @@
     "qr-noted-by": "nBHL-nDM",
     "qr-lc-img": "2702.png",
     "qr-aleppo-img": "Aleppo-2702.png",
+    "aleppo-img-intro": "page 276v, col 2, line 11, word 1",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -3751,6 +3839,7 @@
     ],
     "qr-lc-img": "2709.png",
     "qr-aleppo-img": "Aleppo-2709.png",
+    "aleppo-img-intro": "page 276v, col 2, line 20, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3782,6 +3871,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2022.04.01%20-%20Changes/2022.04.01%20-%20Changes.xml?2022.02.17-3",
     "qr-lc-img": "2713.png",
     "qr-aleppo-img": "Aleppo-2713.png",
+    "aleppo-img-intro": "page 276v, col 2, line 25, word 6",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -3814,6 +3904,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "2808.png",
     "qr-aleppo-img": "Aleppo-2808.png",
+    "aleppo-img-intro": "page 277r, col 1, line 17, word 2",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -3841,6 +3932,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "2824.png",
     "qr-aleppo-img": "Aleppo-2824.png",
+    "aleppo-img-intro": "page 277r, col 2, line 8, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3874,6 +3966,7 @@
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "2826.png",
     "qr-aleppo-img": "Aleppo-2826.png",
+    "aleppo-img-intro": "page 277r, col 2, line 10, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3901,6 +3994,7 @@
     },
     "qr-lc-img": "2903.png",
     "qr-aleppo-img": "Aleppo-2903.png",
+    "aleppo-img-intro": "page 277r, col 2, line 16, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3932,6 +4026,7 @@
     "qr-ignore-g3yh-diff": true,
     "qr-lc-img": "2908.png",
     "qr-aleppo-img": "Aleppo-2908.png",
+    "aleppo-img-intro": "page 277r, col 2, line 22, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3962,6 +4057,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "2911.png",
     "qr-aleppo-img": "Aleppo-2911.png",
+    "aleppo-img-intro": "page 277r, col 2, line 25, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -3992,6 +4088,7 @@
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "2919.png",
     "qr-aleppo-img": "Aleppo-2919.png",
+    "aleppo-img-intro": "page 277v, col 1, line 6, word 7",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -4019,6 +4116,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3018.png",
     "qr-aleppo-img": "Aleppo-3018.png",
+    "aleppo-img-intro": "page 277v, col 2, line 7, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4046,6 +4144,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3022.png",
     "qr-aleppo-img": "Aleppo-3022.png",
+    "aleppo-img-intro": "page 277v, col 2, line 11, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4073,6 +4172,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3030.png",
     "qr-aleppo-img": "Aleppo-3030.png",
+    "aleppo-img-intro": "page 277v, col 2, line 21, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4104,6 +4204,7 @@
     ],
     "qr-lc-img": "3102.png",
     "qr-aleppo-img": "Aleppo-3102.png",
+    "aleppo-img-intro": "page 277v, col 2, line 24, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4131,6 +4232,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3104.png",
     "qr-aleppo-img": "Aleppo-3104.png",
+    "aleppo-img-intro": "page 277v, col 2, line 26, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4163,6 +4265,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "3105.png",
     "qr-aleppo-img": "Aleppo-3105.png",
+    "aleppo-img-intro": "page 277v, col 2, line 27, word 8",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -4278,6 +4381,7 @@
     "qr-noted-by": "nBHL-nDM-nWLC",
     "qr-lc-img": "3107.png",
     "qr-aleppo-img": "Aleppo-3107.png",
+    "aleppo-img-intro": "page 278r, col 1, line 2, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -4312,6 +4416,7 @@
     ],
     "qr-lc-img": "3115.png",
     "qr-aleppo-img": "Aleppo-3115.png",
+    "aleppo-img-intro": "page 278r, col 1, line 11, word 1",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -4339,6 +4444,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3119.png",
     "qr-aleppo-img": "Aleppo-3119.png",
+    "aleppo-img-intro": "page 278r, col 1, line 15, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4366,6 +4472,7 @@
     },
     "qr-lc-img": "3120.png",
     "qr-aleppo-img": "Aleppo-3120.png",
+    "aleppo-img-intro": "page 278r, col 1, line 17, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4393,6 +4500,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3128.png",
     "qr-aleppo-img": "Aleppo-3128.png",
+    "aleppo-img-intro": "page 278r, col 1, line 25, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4421,6 +4529,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "3133.png",
     "qr-aleppo-img": "Aleppo-3133.png",
+    "aleppo-img-intro": "page 278r, col 2, line 4, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -4448,6 +4557,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3139.png",
     "qr-aleppo-img": "Aleppo-3139.png",
+    "aleppo-img-intro": "page 278r, col 2, line 11, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4479,6 +4589,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "3206.png",
     "qr-aleppo-img": "Aleppo-3206.png",
+    "aleppo-img-intro": "page 278r, col 2, line 26, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -4510,6 +4621,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-40",
     "qr-lc-img": "3210.png",
     "qr-aleppo-img": "Aleppo-3210.png",
+    "aleppo-img-intro": "page 278v, col 1, line 3, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4540,6 +4652,7 @@
     ],
     "qr-lc-img": "3211.png",
     "qr-aleppo-img": "Aleppo-3211.png",
+    "aleppo-img-intro": "page 278v, col 1, line 4, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4570,6 +4683,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "3312.png",
     "qr-aleppo-img": "Aleppo-3312.png",
+    "aleppo-img-intro": "page 278v, col 2, line 2, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -4601,6 +4715,7 @@
     ],
     "qr-lc-img": "3328.png",
     "qr-aleppo-img": "Aleppo-3328.png",
+    "aleppo-img-intro": "page 278v, col 2, line 21, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4633,6 +4748,7 @@
     "qr-noted-by": "nBHQ-nBHL-nDM",
     "qr-lc-img": "3330.png",
     "qr-aleppo-img": "Aleppo-3330.png",
+    "aleppo-img-intro": "page 278v, col 2, line 24, word 5",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "nBHL",
@@ -4662,6 +4778,7 @@
     },
     "qr-lc-img": "3405.png",
     "qr-aleppo-img": "Aleppo-3405.png",
+    "aleppo-img-intro": "page 279r, col 1, line 5, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4739,6 +4856,7 @@
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "3410.png",
     "qr-aleppo-img": "Aleppo-3410.png",
+    "aleppo-img-intro": "page 279r, col 1, line 10, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4859,6 +4977,7 @@
     "qr-word-id": "NKR0",
     "qr-lc-img": "3419-NKR0.png",
     "qr-aleppo-img": "Aleppo-3419-NKR0.png",
+    "aleppo-img-intro": "page 279r, col 1, line 22, word 7",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -4887,6 +5006,7 @@
     "qr-word-id": "JV3",
     "qr-lc-img": "3419-JV3.png",
     "qr-aleppo-img": "Aleppo-3419-JV3.png",
+    "aleppo-img-intro": "page 279r, col 1, line 22, word 8",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4914,6 +5034,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3422.png",
     "qr-aleppo-img": "Aleppo-3422.png",
+    "aleppo-img-intro": "page 279r, col 1, line 26, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4945,6 +5066,7 @@
     "qr-word-id": "HM3M5",
     "qr-lc-img": "3433-HM3M5.png",
     "qr-aleppo-img": "Aleppo-3433-HM3M5.png",
+    "aleppo-img-intro": "page 279r, col 2, line 11, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4977,6 +5099,7 @@
     "qr-word-id": "YJLMNH_1_of_2_FTW",
     "qr-lc-img": "3433-YJLMNH_1_of_2_FTW.png",
     "qr-aleppo-img": "Aleppo-3433-YJLMNH_1_of_2_FTW.png",
+    "aleppo-img-intro": "page 279r, col 2, line 11, word 7",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5012,6 +5135,7 @@
     "qr-word-id": "YJLMNH_2_of_2_FTW",
     "qr-lc-img": "3433-YJLMNH_2_of_2_FTW.png",
     "qr-aleppo-img": "Aleppo-3433-YJLMNH_2_of_2_FTW.png",
+    "aleppo-img-intro": "page 279r, col 2, line 11, word 7",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5043,6 +5167,7 @@
     "qr-word-id": "VMH0YD3F",
     "qr-lc-img": "3433-VMH0YD3F.png",
     "qr-aleppo-img": "Aleppo-3433-VMH0YD3F.png",
+    "aleppo-img-intro": "page 279r, col 2, line 13, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5073,6 +5198,7 @@
     ],
     "qr-lc-img": "3437.png",
     "qr-aleppo-img": "Aleppo-3437.png",
+    "aleppo-img-intro": "page 279r, col 2, line 18, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5103,6 +5229,7 @@
     ],
     "qr-lc-img": "3507.png",
     "qr-aleppo-img": "Aleppo-3507.png",
+    "aleppo-img-intro": "page 279r, col 2, line 26, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5130,6 +5257,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3514.png",
     "qr-aleppo-img": "Aleppo-3514.png",
+    "aleppo-img-intro": "page 279v, col 1, line 5, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5171,6 +5299,7 @@
     "qr-noted-by": "nDM",
     "qr-lc-img": "3611.png",
     "qr-aleppo-img": "Aleppo-3611.png",
+    "aleppo-img-intro": "page 279v, col 1, line 20, word 1",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -5289,6 +5418,7 @@
     "qr-lc-img": "3612.png",
     "qr-aleppo-img": "Aleppo-3612.png",
     "qr-cam1753-img": "Cam1753-3612.png",
+    "aleppo-img-intro": "page 279v, col 1, line 22, word 2",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -5326,6 +5456,7 @@
     ],
     "qr-lc-img": "3619.png",
     "qr-aleppo-img": "Aleppo-3619.png",
+    "aleppo-img-intro": "page 279v, col 2, line 1, word 7",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5409,6 +5540,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "3629.png",
     "qr-aleppo-img": "Aleppo-3629.png",
+    "aleppo-img-intro": "page 279v, col 2, line 13, word 4",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -5436,6 +5568,7 @@
     "qr-noted-by": "tBHQ-nBHL-nWLC",
     "qr-lc-img": "3706.png",
     "qr-aleppo-img": "Aleppo-3706.png",
+    "aleppo-img-intro": "page 279v, col 2, line 24, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -5467,6 +5600,7 @@
     "qr-word-id": "HVDY3NV",
     "qr-lc-img": "3719-HVDY3NV.png",
     "qr-aleppo-img": "Aleppo-3719-HVDY3NV.png",
+    "aleppo-img-intro": "page 280r, col 1, line 13, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5499,6 +5633,7 @@
     "qr-word-id": "LA0",
     "qr-lc-img": "3719-LA0.png",
     "qr-aleppo-img": "Aleppo-3719-LA0.png",
+    "aleppo-img-intro": "page 280r, col 1, line 13, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5526,6 +5661,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3720.png",
     "qr-aleppo-img": "Aleppo-3720.png",
+    "aleppo-img-intro": "page 280r, col 1, line 14, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5558,6 +5694,7 @@
     "qr-word-id": "HMYMY5",
     "qr-lc-img": "3812-HMYMY5.png",
     "qr-aleppo-img": "Aleppo-3812-HMYMY5.png",
+    "aleppo-img-intro": "page 280r, col 2, line 6, word 5",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "nBHL",
@@ -5726,6 +5863,7 @@
     "qr-lc-img": "3812-YD3F_HJXR.png",
     "qr-aleppo-img": "Aleppo-3812-YD3F_HJXR.png",
     "qr-jc-img": "Jerusalem-Crown-3812-YD3F_HJXR.png",
+    "aleppo-img-intro": "page 280r, col 2, line 7, word 3",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -5754,6 +5892,7 @@
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "3817.png",
     "qr-aleppo-img": "Aleppo-3817.png",
+    "aleppo-img-intro": "page 280r, col 2, line 12, word 6",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -5784,6 +5923,7 @@
     "qr-noted-by": "nDM",
     "qr-lc-img": "3820.png",
     "qr-aleppo-img": "Aleppo-3820.png",
+    "aleppo-img-intro": "page 280r, col 2, line 16, word 4",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -5811,6 +5951,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3827.png",
     "qr-aleppo-img": "Aleppo-3827.png",
+    "aleppo-img-intro": "page 280r, col 2, line 24, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5841,6 +5982,7 @@
     },
     "qr-lc-img": "3829.png",
     "qr-aleppo-img": "Aleppo-3829.png",
+    "aleppo-img-intro": "page 280r, col 2, line 27, word 6",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -5953,6 +6095,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "3902.png",
     "qr-aleppo-img": "Aleppo-3902.png",
+    "aleppo-img-intro": "page 280v, col 1, line 16, word 1",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -5981,6 +6124,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "3906.png",
     "qr-aleppo-img": "Aleppo-3906.png",
+    "aleppo-img-intro": "page 280v, col 1, line 20, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -6008,6 +6152,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3911.png",
     "qr-aleppo-img": "Aleppo-3911.png",
+    "aleppo-img-intro": "page 280v, col 1, line 26, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -6035,6 +6180,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "3912.png",
     "qr-aleppo-img": "Aleppo-3912.png",
+    "aleppo-img-intro": "page 280v, col 1, line 27, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -6069,6 +6215,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "3913.png",
     "qr-aleppo-img": "Aleppo-3913.png",
+    "aleppo-img-intro": "page 280v, col 1, line 28, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -6096,6 +6243,7 @@
     },
     "qr-lc-img": "3915.png",
     "qr-aleppo-img": "Aleppo-3915.png",
+    "aleppo-img-intro": "page 280v, col 2, line 2, word 7",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -6124,6 +6272,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "3920.png",
     "qr-aleppo-img": "Aleppo-3920.png",
+    "aleppo-img-intro": "page 280v, col 2, line 9, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -6154,6 +6303,7 @@
     },
     "qr-lc-img": "3925.png",
     "qr-aleppo-img": "Aleppo-3925.png",
+    "aleppo-img-intro": "page 280v, col 2, line 16, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -6183,6 +6333,7 @@
     "qr-noted-by": "tBHQ-nBHL-nWLC",
     "qr-lc-img": "4010.png",
     "qr-aleppo-img": "Aleppo-4010.png",
+    "aleppo-img-intro": "page 281r, col 1, line 6, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -6211,6 +6362,7 @@
     "qr-word-id": "HVA",
     "qr-lc-img": "4019-HVA.png",
     "qr-aleppo-img": "Aleppo-4019-HVA.png",
+    "aleppo-img-intro": "page 281r, col 1, line 16, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -6242,6 +6394,7 @@
     "qr-word-id": "H3JV",
     "qr-lc-img": "4019-H3JV.png",
     "qr-aleppo-img": "Aleppo-4019-H3JV.png",
+    "aleppo-img-intro": "page 281r, col 1, line 16, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -6270,6 +6423,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "4026.png",
     "qr-aleppo-img": "Aleppo-4026.png",
+    "aleppo-img-intro": "page 281r, col 1, line 25, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -6297,6 +6451,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "4029.png",
     "qr-aleppo-img": "Aleppo-4029.png",
+    "aleppo-img-intro": "page 281r, col 1, line 27, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -6327,6 +6482,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "4125.png",
     "qr-aleppo-img": "Aleppo-4125.png",
+    "aleppo-img-intro": "page 281v, col 1, line 3, word 6",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -6360,6 +6516,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-48",
     "qr-lc-img": "4210.png",
     "qr-aleppo-img": "Aleppo-4210.png",
+    "aleppo-img-intro": "page 281v, col 1, line 28, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -6389,6 +6546,7 @@
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "4213.png",
     "qr-aleppo-img": "Aleppo-4213.png",
+    "aleppo-img-intro": "page 281v, col 2, line 9, word 3",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
