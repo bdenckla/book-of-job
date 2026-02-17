@@ -36,6 +36,7 @@ RECORD_2401 = {
     ],
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "403B", "column": 2, "line": 25},
+    "qr-ac-loc": {"page": "276r", "column": 2, "line": 11, "word": 6},
     "qr-noted-by": "nUXLC",
     "qr-uxlc-change-url": uxlc_change("2022.04.01", "2022.02.17-2"),
 }

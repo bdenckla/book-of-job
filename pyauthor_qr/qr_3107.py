@@ -30,6 +30,7 @@ RECORD_3107 = {
     "qr-consensus": "מֽאֿוּם׃",
     "qr-highlight": [1, 3],
     "qr-lc-loc": {"page": "405B", "column": 1, "line": -6, "including-blank-lines": 1},
+    "qr-ac-loc": {"page": "278r", "column": 1, "line": 2, "word": 5},
     "qr-generic-comment": [
         "The consensus has סילוק under מ and nothing (אפס (zero)) under $vav."
     ],

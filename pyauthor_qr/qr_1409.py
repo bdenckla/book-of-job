@@ -40,6 +40,7 @@ RECORD_1409 = {
     "qr-consensus": "מֵרֵ֣יחַ",
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "401A", "column": 1, "line": -9},
+    "qr-ac-loc": {"page": "273v", "column": 2, "line": 11, "word": 4},
     "qr-generic-comment": [
         author.para(_COM1),
         author.para(_COM2),

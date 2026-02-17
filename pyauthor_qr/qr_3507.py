@@ -8,5 +8,6 @@ RECORD_3507 = {
     "qr-what-is-weird": "מ after %מח lacks דגש",
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "407A", "column": 2, "line": 4},
+    "qr-ac-loc": {"page": "279r", "column": 2, "line": 26, "word": 2},
     "qr-generic-comment": no_dag_after_mah("35:7"),
 }

@@ -9,5 +9,6 @@ RECORD_0814 = {
     ],
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "399A", "column": 2, "line": 20},
+    "qr-ac-loc": {"page": "272r", "column": 2, "line": 14, "word": 5},
     "qr-noted-by": "nDM-nWLC",
 }

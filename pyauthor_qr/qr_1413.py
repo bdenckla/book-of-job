@@ -56,6 +56,7 @@ RECORD_1413 = {
     ],
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "401A", "column": 1, "line": -3},
+    "qr-ac-loc": {"page": "273v", "column": 2, "line": 17, "word": 5},
     "qr-bhq-comment": [
         "In my opinion, $BHQ benefits from ignoring $WLC here,",
         " though $BHQ likely ignored $WLC as a whole",

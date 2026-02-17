@@ -13,8 +13,10 @@ RECORD_0816_YNQFV = {
         " seem no weirder than it really is.",
         " In other words, it is better to frame this as a question of דחי versus געיה",
         " than as a question of דחי versus no mark at all.",
+        " Note that μA has no געיה here.",
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "399A", "column": 2, "line": -4},
+    "qr-ac-loc": {"page": "272r", "column": 2, "line": 17, "word": 3},
     "qr-noted-by": "tBHQ-zmiscWLC",
 }

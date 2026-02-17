@@ -5,5 +5,6 @@ RECORD_3030 = {
     "qr-consensus": "ע֭וֹרִי",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "405B", "column": 1, "line": 12},
+    "qr-ac-loc": {"page": "277v", "column": 2, "line": 21, "word": 1},
     "qr-noted-by": "tBHQ-zdexiWLC",
 }

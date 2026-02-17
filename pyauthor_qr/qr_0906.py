@@ -6,5 +6,6 @@ RECORD_0906 = {
     "qr-generic-comment": "There is a bump on the פ that might be a misplaced דגש.",
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "399B", "column": 1, "line": 12, "including-blank-lines": 1},
+    "qr-ac-loc": {"page": "272v", "column": 1, "line": 2, "word": 2},
     "qr-noted-by": "tBHQ-nWLC",
 }

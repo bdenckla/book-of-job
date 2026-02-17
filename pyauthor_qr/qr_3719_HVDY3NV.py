@@ -5,6 +5,7 @@ RECORD_3719_HVDY3NV = {
     "qr-consensus": "ה֭וֹדִיעֵנוּ",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "407B", "column": 2, "line": 23},
+    "qr-ac-loc": {"page": "280r", "column": 1, "line": 13, "word": 1},
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-generic-comment": [
         "The pointing of this word must, by necessity, be transcribed with much charity.",

@@ -29,6 +29,7 @@ RECORD_3902 = {
     "qr-generic-comment": [author.para(_COMMENT_3902)],
     "qr-highlight": 5,
     "qr-lc-loc": {"page": "408A", "column": 2, "line": -3},
+    "qr-ac-loc": {"page": "280v", "column": 1, "line": 16, "word": 1},
     "qr-bhq-comment": [author.para(_BHQ_COMMENT_3902)],
     "qr-noted-by": "nBHL",
     # Perhaps I should have been charitable to BHQ and said tBHQ instead of xBHQ,

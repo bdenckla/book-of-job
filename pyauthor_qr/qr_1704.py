@@ -20,6 +20,7 @@ RECORD_1704 = {
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "402A", "column": 1, "line": 5},
+    "qr-ac-loc": {"page": "274v", "column": 1, "line": 15, "word": 4},
     "qr-bhq-comment": correctly_ignores("דגש", "17:4"),
     "qr-noted-by": "nWLC",
     "qr-uxlc-needs-fix": _UXLC_NEEDS_FIX,

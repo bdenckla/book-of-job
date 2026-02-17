@@ -8,6 +8,7 @@ RECORD_0930 = {
     "qr-consensus": "כַּפָּֽי׃",
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "399B", "column": 2, "line": 15},
+    "qr-ac-loc": {"page": "272v", "column": 2, "line": 1, "word": 5},
     "qr-bhq-comment": BHQ_COMMENT_0914_AND_0930,
     "qr-noted-by": "nBHL",
 }

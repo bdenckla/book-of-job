@@ -13,6 +13,7 @@ RECORD_3419_NKR0 = {
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "406B", "column": 2, "line": -2},
+    "qr-ac-loc": {"page": "279r", "column": 1, "line": 22, "word": 7},
     "qr-bhq-comment": correctly_ignores("דגש", "34:19"),
     "qr-noted-by": "nBHL-nDM",
 }

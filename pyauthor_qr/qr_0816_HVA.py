@@ -5,5 +5,6 @@ RECORD_0816_HVA = {
     "qr-consensus": "ה֭וּא",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "399A", "column": 2, "line": 23},
+    "qr-ac-loc": {"page": "272r", "column": 2, "line": 16, "word": 6},
     "qr-noted-by": "tBHQ-zdexiWLC",
 }

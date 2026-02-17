@@ -7,6 +7,7 @@ RECORD_3115 = {
     "qr-what-is-weird": "גרש מוקדם fights דחי",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "405B", "column": 2, "line": 4},
+    "qr-ac-loc": {"page": "278r", "column": 1, "line": 11, "word": 1},
     "qr-generic-comment": [
         "A גרש מוקדם accent doesn’t make sense here,",
         " and the color image suggests that the mark is not ink.",

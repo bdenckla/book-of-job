@@ -6,6 +6,7 @@ RECORD_2908 = {
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 5,
     "qr-lc-loc": {"page": "405A", "column": 1, "line": 12},
+    "qr-ac-loc": {"page": "277r", "column": 2, "line": 22, "word": 2},
     "qr-generic-comment": [
         "As far as I know, this is the only such case that $DM fails to note.",
         " (It is the policy of $BHL and $WLC",

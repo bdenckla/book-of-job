@@ -5,6 +5,7 @@ RECORD_0701 = {
     "qr-consensus": "וְכִימֵ֖י",
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "399A", "column": 1, "line": 4},
+    "qr-ac-loc": {"page": "272r", "column": 1, "line": 1, "word": 6},
     "qr-bhq-comment": "$BHQ silently ignores the possible רביע.",
     "qr-noted-by": "nBHL",
 }

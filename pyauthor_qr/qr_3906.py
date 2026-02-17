@@ -6,5 +6,6 @@ RECORD_3906 = {
     "qr-highlight-lc-proposed": 2,
     "qr-highlight-consensus": 3,
     "qr-lc-loc": {"page": "408B", "column": 1, "line": 3},
+    "qr-ac-loc": {"page": "280v", "column": 1, "line": 20, "word": 6},
     "qr-noted-by": "tBHQ-nBHL-nDM",
 }

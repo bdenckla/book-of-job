@@ -6,6 +6,7 @@ RECORD_3812_HMYMY5 = {
     "qr-generic-comment": "39:20 is similar",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "408A", "column": 1, "line": -12},
+    "qr-ac-loc": {"page": "280r", "column": 2, "line": 6, "word": 5},
     "qr-bhq-comment": [
         "$BHQ notes that here μL disagrees with μA and μY,",
         " which have the consensus pointing.",

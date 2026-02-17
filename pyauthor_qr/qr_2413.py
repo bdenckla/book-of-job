@@ -9,4 +9,5 @@ RECORD_2413 = {
     ],
     # XXX perhaps MAM should note מקף in L.
     "qr-lc-loc": {"page": "404A", "column": 1, "line": 11},
+    "qr-ac-loc": {"page": "276r", "column": 2, "line": 26, "word": 1},
 }

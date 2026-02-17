@@ -9,4 +9,5 @@ RECORD_2115 = {
     "qr-generic-comment": no_dag_after_mah("21:15"),
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "403A", "column": 1, "line": 26},
+    "qr-ac-loc": {"page": "275v", "column": 1, "line": 20, "word": 1},
 }

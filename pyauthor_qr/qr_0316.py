@@ -13,6 +13,7 @@ RECORD_0316 = {
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "398A", "column": 1, "line": 3},
+    "qr-ac-loc": {"page": "271r", "column": 1, "line": 11, "word": 1},
     "qr-bhq-comment": [
         "I don’t think $BHQ is really proposing that μL has יתיב here.",
         " This is more likely a typo (inherited from $BHS) than a deliberate choice.",

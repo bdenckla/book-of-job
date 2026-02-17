@@ -37,7 +37,9 @@ Place any temporary generated files (scripts, HTML reports, debugging output, et
 
 ## Running Python Code
 
-**Never run Python one-liners via `python -c "..."` in the terminal.** These invariably fail due to character encoding and/or shell escaping issues, especially with Hebrew text. Instead, always create an actual `.py` file in `.novc/` and run it with `python .novc/<filename>.py`.
+**Always use the project venv Python** (`.venv\Scripts\python.exe`) when running scripts — never the bare `python` command, which may resolve to a system Python missing project dependencies.
+
+**Never run Python one-liners via `python -c "..."` in the terminal.** These invariably fail due to character encoding and/or shell escaping issues, especially with Hebrew text. Instead, always create an actual `.py` file in `.novc/` and run it with `.venv\Scripts\python.exe .novc/<filename>.py`.
 
 **Always set `$env:PYTHONIOENCODING="utf-8"` before running any Python command in PowerShell.** The Windows console defaults to cp1252, which cannot encode Hebrew characters and causes `UnicodeEncodeError` on any `print()` that includes Hebrew text. Set the variable once per terminal session before the first Python invocation.
 

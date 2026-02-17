@@ -8,6 +8,7 @@ RECORD_3437 = {
     # JC and Feldheim agree with μA, i.e. they have ש here.
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "407A", "column": 1, "line": 22},
+    "qr-ac-loc": {"page": "279r", "column": 2, "line": 18, "word": 2},
     "qr-generic-comment": [
         "Although my focus is pointing rather than spelling,",
         " I am interested in a spelling difference like this,",

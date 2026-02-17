@@ -13,6 +13,7 @@ RECORD_3913 = {
     "qr-generic-comment": _COMMENT_3913,
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "408B", "column": 1, "line": 11},
+    "qr-ac-loc": {"page": "280v", "column": 1, "line": 28, "word": 5},
     "qr-bhq-comment": [
         "$BHQ seems to split the mark(s) in question",
         " into a רביע on ר and a masorah circle on ב.",

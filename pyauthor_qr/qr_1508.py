@@ -7,6 +7,7 @@ RECORD_1508 = {
     "qr-consensus": "אֱל֣וֹהַּ",
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "401A", "column": 2, "line": -7},
+    "qr-ac-loc": {"page": "274r", "column": 1, "line": 9, "word": 2},
     "qr-bhq-comment": BHQ_COMMENT_LIKE_0409,
     "qr-noted-by": "tBHQ-nBHL-nDM",
 }

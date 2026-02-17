@@ -16,6 +16,7 @@ RECORD_0409 = {
     "qr-consensus": "אֱל֣וֹהַּ",
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "398A", "column": 1, "line": -2},
+    "qr-ac-loc": {"page": "271r", "column": 2, "line": 2, "word": 2},
     "qr-bhq-comment": BHQ_COMMENT_0409,
     "qr-noted-by": "nBHQ-nBHL-nDM",
 }

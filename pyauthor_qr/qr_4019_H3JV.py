@@ -6,6 +6,7 @@ RECORD_4019_H3JV = {
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "408B", "column": 2, "line": 27},
+    "qr-ac-loc": {"page": "281r", "column": 1, "line": 16, "word": 5},
     "qr-generic-comment": [
         "There is a confusing constellation of three dots surrounding the ש in μL,",
         " but only one of those dots, a $sin dot, belongs to the ש.",

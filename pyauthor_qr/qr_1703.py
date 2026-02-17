@@ -11,4 +11,5 @@ RECORD_1703 = {
         " under the horizontal line that is transcribed as a פתח.",
     ],
     "qr-lc-loc": {"page": "402A", "column": 1, "line": 4},
+    "qr-ac-loc": {"page": "274v", "column": 1, "line": 14, "word": 3},
 }

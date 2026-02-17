@@ -7,6 +7,7 @@ RECORD_3619 = {
     "qr-consensus": "שׁ֭וּעֲךָ",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "407B", "column": 1, "line": 11},
+    "qr-ac-loc": {"page": "279v", "column": 2, "line": 1, "word": 7},
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-generic-comment": [
         "All but the southeast end of the דחי seems to have flaked off,",

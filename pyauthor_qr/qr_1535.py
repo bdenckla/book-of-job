@@ -19,5 +19,6 @@ RECORD_1535 = {
     ],
     "qr-highlight": [2, 3],
     "qr-lc-loc": {"page": "401B", "column": 1, "line": -3},
+    "qr-ac-loc": {"page": "274r", "column": 2, "line": 12, "word": 1},
     "qr-noted-by": "tBHQ-nDM",
 }

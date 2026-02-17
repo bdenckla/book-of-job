@@ -8,5 +8,6 @@ RECORD_2709 = {
     "qr-what-is-weird": "פתח on ה is not חטף",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "404B", "column": 1, "line": 7},
+    "qr-ac-loc": {"page": "276v", "column": 2, "line": 20, "word": 1},
     "qr-generic-comment": ptx_is_not_xtf("27:9"),
 }

@@ -11,6 +11,7 @@ RECORD_0910 = {
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "399B", "column": 1, "line": 16},
+    "qr-ac-loc": {"page": "272v", "column": 1, "line": 6, "word": 1},
     "qr-bhq-comment": [
         "The evidence for this גרש מוקדם is slim,",
         " so $BHQ’s choice to leave it out is reasonable.",

@@ -5,5 +5,6 @@ RECORD_1103 = {
     "qr-consensus": "יַחֲרִ֑ישׁוּ",
     "qr-highlight": 6,
     "qr-lc-loc": {"page": "400A", "column": 1, "line": -1},
+    "qr-ac-loc": {"page": "273r", "column": 1, "line": 6, "word": 3},
     "qr-noted-by": "tBHQ-nBHL-nWLC",
 }

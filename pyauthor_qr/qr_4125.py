@@ -9,6 +9,7 @@ RECORD_4125 = {
     "qr-consensus": "לִבְלִי־חָֽת׃",
     "qr-highlight": 6,
     "qr-lc-loc": {"page": "409A", "column": 2, "line": 14},
+    "qr-ac-loc": {"page": "281v", "column": 1, "line": 3, "word": 6},
     "qr-bhq-comment": _BHQ_COMMENT_4125,
     "qr-noted-by": "nBHL",
 }

@@ -8,4 +8,5 @@ RECORD_3405 = {
     "qr-highlight-lc-proposed": 4,
     "qr-generic-comment": "See 6:17.",
     "qr-lc-loc": {"page": "406B", "column": 2, "line": 8},
+    "qr-ac-loc": {"page": "279r", "column": 1, "line": 5, "word": 1},
 }

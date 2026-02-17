@@ -11,6 +11,7 @@ RECORD_3210 = {
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "406A", "column": 2, "line": 1},
+    "qr-ac-loc": {"page": "278v", "column": 1, "line": 3, "word": 6},
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": uxlc_change("2023.10.19", "2023.06.10-40"),
 }

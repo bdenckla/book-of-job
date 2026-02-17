@@ -13,4 +13,5 @@ RECORD_2210 = {
     ],
     "qr-ignore-g3yh-diff": True,
     "qr-lc-loc": {"page": "403B", "column": 1, "line": 10},
+    "qr-ac-loc": {"page": "275v", "column": 2, "line": 25, "word": 2},
 }

@@ -8,5 +8,6 @@ RECORD_3433_VMH0YD3F = {
     "qr-what-is-weird": "$yod lacks דגש",
     "qr-highlight": 5,
     "qr-lc-loc": {"page": "407A", "column": 1, "line": 18},
+    "qr-ac-loc": {"page": "279r", "column": 2, "line": 13, "word": 1},
     "qr-generic-comment": no_dag_after_mah("34:33"),
 }

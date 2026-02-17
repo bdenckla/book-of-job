@@ -34,6 +34,7 @@ RECORD_0505 = {
         author.para(_COMPAR4),
     ],
     "qr-lc-loc": {"page": "398A", "column": 2, "line": 22},
+    "qr-ac-loc": {"page": "271r", "column": 2, "line": 23, "word": 2},
     "qr-bhq-comment": [
         "The proposed transcription",
         " must either be a simple typo or",

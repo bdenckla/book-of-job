@@ -19,4 +19,5 @@ RECORD_1804_HLM3N5_1_of_2_FTW = {
     "qr-highlight": 1,
     "qr-bhq-comment": _BHQ_COMMENT_1804_A,
     "qr-noted-by": "nBHL-nDM",
+    "qr-ac-loc": {"page": "274v", "column": 2, "line": 3, "word": 4},
 }

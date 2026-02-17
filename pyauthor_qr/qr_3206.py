@@ -11,6 +11,7 @@ RECORD_3206 = {
     "qr-consensus": "יְשִׁישִׁ֑ים",
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "406A", "column": 1, "line": -6},
+    "qr-ac-loc": {"page": "278r", "column": 2, "line": 26, "word": 5},
     "qr-uxlc-position-within-verse": 11,
     "qr-bhq-comment": _BHQ_COMMENT_3206,
     "qr-noted-by": "nBHL",

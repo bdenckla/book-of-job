@@ -23,6 +23,7 @@ RECORD_4210 = {
     "qr-highlight-consensus": 2,
     "qr-extra-letter-spacing": True,
     "qr-lc-loc": {"page": "409B", "column": 1, "line": 10},
+    "qr-ac-loc": {"page": "281v", "column": 1, "line": 28, "word": 1},
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": uxlc_change("2023.10.19", "2023.06.10-48"),
 }

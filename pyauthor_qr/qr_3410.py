@@ -41,5 +41,6 @@ RECORD_3410 = {
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "406B", "column": 2, "line": 14},
+    "qr-ac-loc": {"page": "279r", "column": 1, "line": 10, "word": 5},
     "qr-noted-by": "tBHQ-zmiscWLC",
 }

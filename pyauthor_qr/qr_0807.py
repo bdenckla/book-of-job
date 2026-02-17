@@ -6,6 +6,7 @@ RECORD_0807 = {
     "qr-ignore-g3yh-diff": True,
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "399A", "column": 2, "line": 13, "including-blank-lines": 1},
+    "qr-ac-loc": {"page": "272r", "column": 2, "line": 7, "word": 1},
     "qr-bhq-comment": "$BHQ silently ignores the possible שורוק dot.",
     "qr-noted-by": "nBHL",
 }

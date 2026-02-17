@@ -10,6 +10,7 @@ RECORD_1209 = {
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 6,
     "qr-lc-loc": {"page": "400B", "column": 1, "line": 9},
+    "qr-ac-loc": {"page": "273r", "column": 2, "line": 9, "word": 2},
     "qr-generic-comment": [
         "The חולם חסר dot’s absence from μL is not important to us here."
     ],

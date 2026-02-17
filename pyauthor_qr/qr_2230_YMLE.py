@@ -21,6 +21,7 @@ RECORD_2230_YMLE = {
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "403B", "column": 2, "line": 4},
+    "qr-ac-loc": {"page": "276r", "column": 1, "line": 20, "word": 2},
     "qr-bhq-comment": _BHQ_COMMENT_2230_A,
     "qr-noted-by": "tBHQ-nWLC",
     "qr-uxlc-needs-fix": "add t-note (transcription uncertain)",

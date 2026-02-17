@@ -26,4 +26,5 @@ RECORD_2221_3MV = {
     "qr-noted-by": "tBHQ-nBHL-nWLC",
     "qr-cam1753-page-url": f"{CAM1753_PAGE_URL_BASE}/n83/mode/1up",
     "qr-cam1753-img-intro": _CAM1753_IMG_INTRO_2221,
+    "qr-ac-loc": {"page": "276r", "column": 1, "line": 10, "word": 3},
 }

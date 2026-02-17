@@ -27,6 +27,7 @@ RECORD_1905 = {
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "402A", "column": 2, "line": -5},
+    "qr-ac-loc": {"page": "274v", "column": 2, "line": 27, "word": 7},
     "qr-bhq-comment": [
         author.para(_BHQ_COMMENT_PART_1),
         author.para(_BHQ_COMMENT_PART_2),

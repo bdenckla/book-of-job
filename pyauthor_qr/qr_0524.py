@@ -16,4 +16,5 @@ RECORD_0524 = {
         " which, coincidentally, is part of our entry for 5:23.",
     ],
     "qr-lc-loc": {"page": "398B", "column": 1, "line": 19},
+    "qr-ac-loc": {"page": "271v", "column": 1, "line": 18, "word": 2},
 }

@@ -12,8 +12,6 @@ from pyauthor_util.qr_make_json_outputs import (
     write_qr_field_stats_json,
     write_enriched_quirkrecs_json,
 )
-from py_ac_word_image_helper.codex_page import find_page_for_verse, load_index
-from py_ac_word_image_helper.linebreak_search import find_word_in_linebreaks
 from pycmn.my_utils import sl_map
 
 
@@ -46,25 +44,23 @@ def _enrich_quirkrecs(jobn_rel_top):
     # of quirkrecs (to detect same-verse duplicates). It also must
     # precede the pointwise pass, since auto-imgs use word IDs in
     # their filenames.
-    pages = load_index()
     result = sl_map(
-        (_do_pointwise_enrichments_of_one_qr, jobn_rel_top, pages), result
+        (_do_pointwise_enrichments_of_one_qr, jobn_rel_top), result
     )
     return result
 
 
-def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, pages, pe_quirkrec):
+def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, pe_quirkrec):
     """Apply all per-quirkrec enrichments that don't need cross-quirkrec context.
 
     Args:
         jobn_rel_top: path to the jobn directory, relative to repo root
             (used to locate image files on disk).
-        pages: page index from load_index() (for Aleppo location lookup).
         pe_quirkrec: partially-enriched quirkrec dict (word ID already
             added, but no other enrichments yet).
     """
     result = _enrich_one_qr_by_adding_auto_imgs(jobn_rel_top, pe_quirkrec)
-    result = _enrich_one_qr_by_adding_aleppo_loc(pages, result)
+    result = _enrich_one_qr_by_adding_aleppo_intro(result)
     result = _enrich_one_qr_by_adding_nbd(result)
     result = _enrich_one_qr_by_adding_pgroup(result)
     result = _enrich_one_qr_by_adding_auto_diff(result)
@@ -73,23 +69,15 @@ def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, pages, pe_quirkrec):
     return result
 
 
-def _enrich_one_qr_by_adding_aleppo_loc(pages, quirkrec):
-    """Add aleppo-img-intro with manuscript location if an Aleppo image exists."""
-    if "qr-aleppo-img" not in quirkrec:
+def _enrich_one_qr_by_adding_aleppo_intro(quirkrec):
+    """Add aleppo-img-intro from the static qr-ac-loc field, if present."""
+    ac_loc = quirkrec.get("qr-ac-loc")
+    if ac_loc is None:
         return quirkrec
-    cv = quirkrec["qr-cv"]
-    ch, v = (int(x) for x in cv.split(":"))
-    page_id = find_page_for_verse(pages, ch, v)
-    if page_id is None:
-        return quirkrec
-    consensus = quirkrec["qr-consensus"]
-    lb_word = quirkrec.get("qr-consensus-ketiv", consensus)
-    col, line_num, word_idx, _line_words = find_word_in_linebreaks(
-        page_id, ch, v, lb_word
+    intro = (
+        f"page {ac_loc['page']}, col {ac_loc['column']}, "
+        f"line {ac_loc['line']}, word {ac_loc['word']}"
     )
-    if col is None:
-        return quirkrec
-    intro = f"page {page_id}, col {col}, line {line_num}, word {word_idx + 1}"
     return {**quirkrec, "aleppo-img-intro": intro}
 
 

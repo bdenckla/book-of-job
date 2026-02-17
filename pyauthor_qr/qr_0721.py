@@ -11,5 +11,6 @@ RECORD_0721 = {
     ],
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "399A", "column": 2, "line": 3},
+    "qr-ac-loc": {"page": "272r", "column": 1, "line": 26, "word": 3},
     "qr-noted-by": "tBHQ-nBHL-nDM",
 }

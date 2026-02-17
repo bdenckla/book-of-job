@@ -17,5 +17,6 @@ RECORD_1216 = {
     ],
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "400B", "column": 1, "line": -11},
+    "qr-ac-loc": {"page": "273r", "column": 2, "line": 16, "word": 6},
     "qr-noted-by": "tBHQ-nWLC",
 }

@@ -13,6 +13,7 @@ RECORD_2224 = {
         " re-inked, not the pointing.",
     ],
     "qr-lc-loc": {"page": "403B", "column": 1, "line": 25},
+    "qr-ac-loc": {"page": "276r", "column": 1, "line": 14, "word": 1},
     "qr-generic-comment": [
         "Although my focus is pointing rather than spelling,",
         " I am interested in a spelling difference like this,",

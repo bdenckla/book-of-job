@@ -9,6 +9,7 @@ RECORD_2230_VNMLE = {
     "qr-generic-comment": "The dot in question is suspiciously smaller than nearby ones.",
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "403B", "column": 2, "line": 4},
+    "qr-ac-loc": {"page": "276r", "column": 1, "line": 20, "word": 5},
     "qr-bhq-comment": BHQ_COMMENT_XELSEWHERE_DUBIOUS,
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": True,

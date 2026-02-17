@@ -7,4 +7,5 @@ RECORD_3433_YJLMNH_1_of_2_FTW = {
     "qr-what-is-weird": "ל lacks דגש",
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "407A", "column": 1, "line": 16},
+    "qr-ac-loc": {"page": "279r", "column": 2, "line": 11, "word": 7},
 }

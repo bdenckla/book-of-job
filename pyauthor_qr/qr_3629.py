@@ -13,6 +13,7 @@ RECORD_3629 = {
     "qr-generic-comment": _COMMENT_3629,
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "407B", "column": 1, "line": -5},
+    "qr-ac-loc": {"page": "279v", "column": 2, "line": 13, "word": 4},
     "qr-bhq-comment": correctly_ignores("געיה", "36:29", "large"),
     "qr-noted-by": "nBHL",
 }

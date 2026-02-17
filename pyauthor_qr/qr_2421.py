@@ -18,6 +18,7 @@ RECORD_2421 = {
     "qr-generic-comment": _COMMENT_2421,
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "404A", "column": 1, "line": -6},
+    "qr-ac-loc": {"page": "276v", "column": 1, "line": 10, "word": 1},
     "qr-bhq-comment": _BHQ_COMMENT_2421,
     "qr-noted-by": "nBHL-nDM",
 }

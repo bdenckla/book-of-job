@@ -12,6 +12,7 @@ RECORD_1806 = {
     "qr-generic-comment": "The scribe of μL probably intended a דחי but placed it like a טרחא.",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "402A", "column": 1, "line": -2},
+    "qr-ac-loc": {"page": "274v", "column": 2, "line": 5, "word": 6},
     "qr-bhq-comment": _BHQ_COMMENT_1806,
     "qr-noted-by": "tBHQ-nBHL",
 }

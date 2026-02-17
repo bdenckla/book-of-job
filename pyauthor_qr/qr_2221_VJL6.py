@@ -19,6 +19,7 @@ RECORD_2221_VJL6 = {
     "qr-generic-comment": _COMMENT_2221_B,
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "403B", "column": 1, "line": -6},
+    "qr-ac-loc": {"page": "276r", "column": 1, "line": 10, "word": 4},
     "qr-bhq-comment": _BHQ_COMMENT_2221_B,
     "qr-noted-by": "nBHQ-nWLC",
 }

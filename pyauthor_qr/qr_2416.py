@@ -35,6 +35,7 @@ RECORD_2416 = {
     ],
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "404A", "column": 1, "line": -12},
+    "qr-ac-loc": {"page": "276v", "column": 1, "line": 3, "word": 5},
     "qr-bhq-comment": BHQ_COMMENT_XELSEWHERE_DUBIOUS,
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": True,

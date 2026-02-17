@@ -6,4 +6,5 @@ RECORD_3915 = {
     "qr-what-is-weird": "ת has דגש",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "408B", "column": 1, "line": 14},
+    "qr-ac-loc": {"page": "280v", "column": 2, "line": 2, "word": 7},
 }

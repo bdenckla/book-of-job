@@ -62,6 +62,7 @@ RECORD_1006 = {
     "qr-consensus": "וּֽלְחַטָּאתִ֥י",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "400A", "column": 1, "line": 2},
+    "qr-ac-loc": {"page": "272v", "column": 2, "line": 13, "word": 4},
     "qr-generic-comment": [
         author.para(_COMPAR1),
         author.para(_COMPAR2),

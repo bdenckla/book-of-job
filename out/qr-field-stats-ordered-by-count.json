@@ -79,6 +79,26 @@
       "count": 158
     },
     {
+      "field": "qr-ac-loc",
+      "count": 158
+    },
+    {
+      "field": "qr-ac-loc.column",
+      "count": 158
+    },
+    {
+      "field": "qr-ac-loc.line",
+      "count": 158
+    },
+    {
+      "field": "qr-ac-loc.page",
+      "count": 158
+    },
+    {
+      "field": "qr-ac-loc.word",
+      "count": 158
+    },
+    {
       "field": "qr-lc-proposed",
       "count": 158
     },

@@ -9,6 +9,7 @@ RECORD_2808 = {
     "qr-generic-comment": "The מלא/חסר spelling difference is not important to us here.",
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "404B", "column": 2, "line": 5},
+    "qr-ac-loc": {"page": "277r", "column": 1, "line": 17, "word": 2},
     "qr-bhq-comment": BHQ_COMMENT_2808_AND_2911,
     "qr-noted-by": "nBHL",
 }

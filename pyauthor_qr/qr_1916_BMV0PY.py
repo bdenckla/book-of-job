@@ -24,6 +24,7 @@ RECORD_1916_BMV0PY = {
     "qr-highlight-consensus": 5,
     "qr-what-is-weird": "רביע מוגרש spans מקף",
     "qr-lc-loc": {"page": "402B", "column": 1, "line": 8},
+    "qr-ac-loc": {"page": "275r", "column": 1, "line": 12, "word": 2},
     "qr-generic-comment": [
         author.para(_GENCOM_PARA_1),
         author.para(_GENCOM_PARA_2),

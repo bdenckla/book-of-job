@@ -5,5 +5,6 @@ RECORD_2214 = {
     "qr-consensus": "ל֭וֹ",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "403B", "column": 1, "line": 14},
+    "qr-ac-loc": {"page": "276r", "column": 1, "line": 1, "word": 6},
     "qr-noted-by": "tBHQ-zdexiWLC",
 }

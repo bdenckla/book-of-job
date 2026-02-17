@@ -6,4 +6,5 @@ RECORD_2903 = {
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "405A", "column": 1, "line": 7},
+    "qr-ac-loc": {"page": "277r", "column": 2, "line": 16, "word": 5},
 }

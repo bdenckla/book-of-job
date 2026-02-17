@@ -6,5 +6,6 @@ RECORD_3920 = {
     "qr-generic-comment": "The situation with %המימיך in 38:12 is similar.",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "408B", "column": 1, "line": -10},
+    "qr-ac-loc": {"page": "280v", "column": 2, "line": 9, "word": 2},
     "qr-noted-by": "tBHQ-nBHL-nDM",
 }

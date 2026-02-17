@@ -5,6 +5,7 @@ RECORD_2212 = {
     "qr-consensus": "רֹ֖אשׁ",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "403B", "column": 1, "line": 12},
+    "qr-ac-loc": {"page": "275v", "column": 2, "line": 27, "word": 6},
     "qr-bhq-comment": [
         "The transcription differs from the consensus in way opposite to most such reports here:",
         " here we see a דחי versus טרחא difference, with $BHQ having דחי,",

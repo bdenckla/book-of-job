@@ -13,6 +13,7 @@ RECORD_0121 = {
     "qr-consensus": "שָׁ֔מָּה",
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "397B", "column": 1, "line": 1},
+    "qr-ac-loc": {"page": "270v", "column": 1, "line": 13, "word": 3},
     "qr-uxlc-position-within-verse": 8,
     "qr-bhq-comment": _BHQ_COMMENT_0121,
     "qr-noted-by": "nBHQ-nBHL-nDM-nWLC",

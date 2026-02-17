@@ -10,6 +10,7 @@ RECORD_1706 = {
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "402A", "column": 1, "line": 7},
+    "qr-ac-loc": {"page": "274v", "column": 1, "line": 17, "word": 4},
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": True,
 }

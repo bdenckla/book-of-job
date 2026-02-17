@@ -13,6 +13,7 @@ RECORD_1809 = {
     ],
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "402A", "column": 2, "line": 2},
+    "qr-ac-loc": {"page": "274v", "column": 2, "line": 8, "word": 5},
     "qr-bhq-comment": BHQ_COMMENT_XELSEWHERE_DUBIOUS,
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": True,

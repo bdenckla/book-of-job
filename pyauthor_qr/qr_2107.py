@@ -6,4 +6,5 @@ RECORD_2107 = {
     "qr-what-is-weird": "מונח not דחי",
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "403A", "column": 1, "line": 16, "including-blank-lines": 1},
+    "qr-ac-loc": {"page": "275v", "column": 1, "line": 10, "word": 4},
 }
