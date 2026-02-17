@@ -37,8 +37,16 @@ def _enrich_quirkrecs(jobn_rel_top):
     return result
 
 
-def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, quirkrec):
-    result = _enrich_one_qr_by_adding_auto_imgs(jobn_rel_top, quirkrec)
+def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, pe_quirkrec):
+    """Apply all per-quirkrec enrichments that don't need cross-quirkrec context.
+
+    Args:
+        jobn_rel_top: path to the jobn directory, relative to repo root
+            (used to locate image files on disk).
+        pe_quirkrec: partially-enriched quirkrec dict (word ID already
+            added, but no other enrichments yet).
+    """
+    result = _enrich_one_qr_by_adding_auto_imgs(jobn_rel_top, pe_quirkrec)
     result = _enrich_one_qr_by_adding_nbd(result)
     result = _enrich_one_qr_by_adding_pgroup(result)
     result = _enrich_one_qr_by_adding_auto_diff(result)
@@ -74,9 +82,9 @@ def _assert_lc_img_fields_filled(qr):
     assert qr.get("qr-lc-img"), f"Missing qr-lc-img for {short_id(qr)}"
 
 
-def _enrich_quirkrecs_by_adding_word_ids(quirkrecs):
+def _enrich_quirkrecs_by_adding_word_ids(raw_quirkrecs):
     by_cv = {}
-    for qr in quirkrecs:
+    for qr in raw_quirkrecs:
         by_cv.setdefault(qr["qr-cv"], []).append(qr)
     result = []
     for group in by_cv.values():
@@ -100,12 +108,12 @@ def _cv_key(quirkrec):
     return (ch, vr)
 
 
-def _assert_cv_ordering(quirkrecs):
-    for i in range(1, len(quirkrecs)):
-        prev = _cv_key(quirkrecs[i - 1])
-        curr = _cv_key(quirkrecs[i])
+def _assert_cv_ordering(raw_quirkrecs):
+    for i in range(1, len(raw_quirkrecs)):
+        prev = _cv_key(raw_quirkrecs[i - 1])
+        curr = _cv_key(raw_quirkrecs[i])
         assert prev <= curr, (
             f"RAW_QUIRKRECS not in chapter-verse order: "
-            f"{quirkrecs[i-1]['qr-cv']} > {quirkrecs[i]['qr-cv']} "
+            f"{raw_quirkrecs[i-1]['qr-cv']} > {raw_quirkrecs[i]['qr-cv']} "
             f"at index {i}"
         )
