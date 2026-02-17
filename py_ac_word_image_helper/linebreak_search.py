@@ -31,6 +31,8 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
     # Check if consensus contains maqaf (multi-token in line-break data)
     MAQAF = "\u05BE"
     consensus_has_maqaf = MAQAF in consensus
+    # Check if consensus contains a space (multi-word in line-break data)
+    consensus_has_space = " " in consensus
 
     # First pass: find which col+line the word is on.
     target_col = None
@@ -38,11 +40,13 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
     match_count = 0  # count matches to detect ambiguity
     # For maqaf-joined consensus, track the index of the first part
     recent_words = []  # buffer of recent words for maqaf joining
+    recent_words_sp = []  # buffer of recent words for space joining
     for item in stream:
         if isinstance(item, dict):
             if item.get("verse-start") == verse_label or item.get("verse-fragment-start") == verse_label:
                 in_verse = True
                 recent_words = []
+                recent_words_sp = []
                 continue
             if item.get("verse-end") == verse_label or item.get("verse-fragment-end") == verse_label:
                 in_verse = False
@@ -80,6 +84,20 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
                 # If joined doesn't start the consensus, trim from the left
                 while recent_words and not consensus_stripped.startswith(strip_heb("".join(recent_words))):
                     recent_words.pop(0)
+
+            # Try joining recent words with spaces
+            if consensus_has_space:
+                recent_words_sp.append(item)
+                joined = " ".join(recent_words_sp)
+                joined_stripped = strip_heb(joined)
+                if joined_stripped == consensus_stripped or joined == consensus:
+                    match_count += 1
+                    if match_count == 1:
+                        target_col, target_line = cur_col, cur_line
+                    continue
+                # Trim from front if joined can't be a prefix of consensus
+                while recent_words_sp and not consensus_stripped.startswith(strip_heb(" ".join(recent_words_sp))):
+                    recent_words_sp.pop(0)
 
     if match_count > 1:
         raise ValueError(
@@ -125,6 +143,17 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
                     target_word_idx = i
                     break
                 if not cur_line_words[j].endswith(MAQAF):
+                    break
+            if target_word_idx is not None:
+                break
+        # Try joining consecutive space-separated words starting at i
+        if consensus_has_space:
+            joined = w
+            for j in range(i + 1, len(cur_line_words)):
+                joined += " " + cur_line_words[j]
+                j_stripped = strip_heb(joined)
+                if j_stripped == consensus_stripped or joined == consensus:
+                    target_word_idx = i
                     break
             if target_word_idx is not None:
                 break

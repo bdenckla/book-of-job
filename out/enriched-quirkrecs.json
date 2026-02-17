@@ -679,6 +679,7 @@
     "qr-lc-proposed": "וְשֽׁוּבוּ",
     "qr-what-is-weird": "געיה not מרכא",
     "qr-consensus": "וְשׁ֥וּבוּ",
+    "qr-consensus-ketiv": "ושבי",
     "qr-generic-comment": [
       "Contrary to the transcription shown above, the most likely scribal intent was מרכא."
     ],
@@ -690,6 +691,7 @@
     },
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "0629.png",
+    "qr-aleppo-img": "Aleppo-0629.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3444,6 +3446,7 @@
       "line": 11
     },
     "qr-lc-img": "2413.png",
+    "qr-aleppo-img": "Aleppo-2413.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4308,6 +4311,7 @@
       "$BHQ has wisely removed the גרש מוקדם that $BHS had here. Unfortunately, as always, $BHQ has not documented this change, leaving it as a painful “exercise left to the reader” to discover such changes."
     ],
     "qr-lc-img": "3115.png",
+    "qr-aleppo-img": "Aleppo-3115.png",
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -4596,6 +4600,7 @@
       "Note that above we only show (and are only concerned with) the קרי form."
     ],
     "qr-lc-img": "3328.png",
+    "qr-aleppo-img": "Aleppo-3328.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5571,6 +5576,7 @@
     "qr-lc-proposed": "יִדַּ֖עְתָּה הַשַּׁ֣חַר",
     "qr-what-is-weird": "ה copied not moved in קרי",
     "qr-consensus": "יִדַּ֖עְתָּ הַשַּׁ֣חַר",
+    "qr-consensus-ketiv": "ידעתה שחר",
     "qr-generic-comment": [
       {
         "_htel_tag": "p",

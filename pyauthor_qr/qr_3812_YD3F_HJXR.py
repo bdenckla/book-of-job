@@ -58,6 +58,7 @@ RECORD_3812_YD3F_HJXR = {
     "qr-lc-proposed": "יִדַּ֖עְתָּה הַשַּׁ֣חַר",
     "qr-what-is-weird": "ה copied not moved in קרי",
     "qr-consensus": "יִדַּ֖עְתָּ הַשַּׁ֣חַר",
+    "qr-consensus-ketiv": "ידעתה שחר",
     "qr-generic-comment": [
         author.para(_GENCOM_1),
         author.para(_GENCOM_2),

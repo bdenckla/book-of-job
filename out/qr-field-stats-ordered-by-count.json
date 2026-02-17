@@ -31,6 +31,10 @@
       "count": 160
     },
     {
+      "field": "qr-aleppo-img",
+      "count": 160
+    },
+    {
       "field": "qr-auto-diff",
       "count": 160
     },
@@ -73,10 +77,6 @@
     {
       "field": "qr-lc-proposed",
       "count": 158
-    },
-    {
-      "field": "qr-aleppo-img",
-      "count": 156
     },
     {
       "field": "qr-highlight",
@@ -143,6 +143,10 @@
       "count": 3
     },
     {
+      "field": "qr-consensus-ketiv",
+      "count": 3
+    },
+    {
       "field": "qr-ac-proposed",
       "count": 2
     },
@@ -164,10 +168,6 @@
     },
     {
       "field": "qr-cam1753-img-intro",
-      "count": 1
-    },
-    {
-      "field": "qr-consensus-ketiv",
       "count": 1
     },
     {
