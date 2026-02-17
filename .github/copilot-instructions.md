@@ -43,6 +43,11 @@ Place any temporary generated files (scripts, HTML reports, debugging output, et
 
 **Always set `$env:PYTHONIOENCODING="utf-8"` before running any Python command in PowerShell.** The Windows console defaults to cp1252, which cannot encode Hebrew characters and causes `UnicodeEncodeError` on any `print()` that includes Hebrew text. Set the variable once per terminal session before the first Python invocation.
 
+**Running Black:** From the repo top directory, run:
+```
+.venv\Scripts\python.exe -m black **/*.py
+```
+
 ## Installing Python Packages
 
 **Never install packages to the system Python.** Always install into the project venv using `.venv\Scripts\pip.exe install <package>` (or ensure the venv is activated first). Add new dependencies to `requirements.txt` at the top level.
