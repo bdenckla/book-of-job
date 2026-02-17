@@ -22,8 +22,22 @@ COORD_DIR = Path(__file__).resolve().parent / "column-coordinates"
 LINES_PER_COL = 28
 
 _FALLBACK_DEFAULTS = {
-    "col1": {"cx": 0.7242, "cy": 0.4535, "hw": 0.19, "hh": 0.3714, "topAngle": 0, "botAngle": 0},
-    "col2": {"cx": 0.2604, "cy": 0.4541, "hw": 0.1934, "hh": 0.3725, "topAngle": 0, "botAngle": 0},
+    "col1": {
+        "cx": 0.7242,
+        "cy": 0.4535,
+        "hw": 0.19,
+        "hh": 0.3714,
+        "topAngle": 0,
+        "botAngle": 0,
+    },
+    "col2": {
+        "cx": 0.2604,
+        "cy": 0.4541,
+        "hw": 0.1934,
+        "hh": 0.3725,
+        "topAngle": 0,
+        "botAngle": 0,
+    },
 }
 
 
@@ -74,7 +88,9 @@ def generate_editor(page_id):
     defaults, from_file = _load_defaults(page_id)
     c1 = defaults["col1"]
     c2 = defaults["col2"]
-    source_note = f"column-coordinates/{page_id}.json" if from_file else "fallback defaults"
+    source_note = (
+        f"column-coordinates/{page_id}.json" if from_file else "fallback defaults"
+    )
 
     html = f"""\
 <!DOCTYPE html>
@@ -174,8 +190,8 @@ def generate_editor(page_id):
   <span><b>Col Location</b> \u2014 {page_id}</span>
   <button id="fine-btn" onclick="toggleFine()" style="background:#070">Fine: ON</button>
   <button id="skew-btn" onclick="cycleSkew()">Skew: C1 Top</button>
-  <button onclick="rotate(-1)">Rotate \u21B6</button>
-  <button onclick="rotate(+1)">Rotate \u21B7</button>
+  <button onclick="rotate(-1)">Rotate \u21b6</button>
+  <button onclick="rotate(+1)">Rotate \u21b7</button>
   <button onclick="resetPositions()">Reset</button>
   <button onclick="exportJSON()">Export JSON</button>
   <span class="info" id="status">Drag handles to resize; buttons to skew</span>

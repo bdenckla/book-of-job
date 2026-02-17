@@ -79,16 +79,19 @@ def _extract_words_and_markers(stream):
 
     for item in stream:
         if isinstance(item, str):
-            is_first = (current_verse is not None and
-                        (len(words) == 0 or
-                         words[-1].get("verse_label") != current_verse or
-                         words[-1].get("is_parashah")))
-            words.append({
-                "text": item,
-                "is_verse_start": is_first,
-                "verse_label": current_verse,
-                "is_parashah": False,
-            })
+            is_first = current_verse is not None and (
+                len(words) == 0
+                or words[-1].get("verse_label") != current_verse
+                or words[-1].get("is_parashah")
+            )
+            words.append(
+                {
+                    "text": item,
+                    "is_verse_start": is_first,
+                    "verse_label": current_verse,
+                    "is_parashah": False,
+                }
+            )
             word_idx += 1
         elif isinstance(item, dict):
             if "verse-start" in item:
@@ -96,13 +99,15 @@ def _extract_words_and_markers(stream):
             elif "verse-end" in item:
                 pass
             elif "parashah" in item:
-                words.append({
-                    "text": item["parashah"],
-                    "is_verse_start": False,
-                    "verse_label": current_verse,
-                    "is_parashah": True,
-                    "parashah_value": item["parashah"],
-                })
+                words.append(
+                    {
+                        "text": item["parashah"],
+                        "is_verse_start": False,
+                        "verse_label": current_verse,
+                        "is_parashah": True,
+                        "parashah_value": item["parashah"],
+                    }
+                )
                 word_idx += 1
             elif "line-start" in item:
                 ls = item["line-start"]
@@ -110,11 +115,13 @@ def _extract_words_and_markers(stream):
                     page_start_idx = word_idx
             elif "line-end" in item:
                 if word_idx > 0:
-                    line_ends.append((
-                        word_idx - 1,
-                        item["line-end"]["col"],
-                        item["line-end"]["line-num"],
-                    ))
+                    line_ends.append(
+                        (
+                            word_idx - 1,
+                            item["line-end"]["col"],
+                            item["line-end"]["line-num"],
+                        )
+                    )
             # page-start, page-end: skip
 
     return words, line_ends, page_start_idx
@@ -157,20 +164,24 @@ def generate_editor_html(page_id, col):
 
     # Pre-existing line-end word indices with col/line info
     js_line_ends = []
-    for (widx, col_num, lnum) in line_ends:
+    for widx, col_num, lnum in line_ends:
         js_line_ends.append({"idx": widx, "col": col_num, "lineNum": lnum})
 
     # Build the stream without line markers for export reconstruction
-    stream_no_lines = [item for item in stream
-                       if not (isinstance(item, dict) and
-                               ("line-start" in item or "line-end" in item))]
+    stream_no_lines = [
+        item
+        for item in stream
+        if not (isinstance(item, dict) and ("line-start" in item or "line-end" in item))
+    ]
 
     words_json = json.dumps(js_words, ensure_ascii=False, indent=None)
     line_ends_json = json.dumps(js_line_ends, ensure_ascii=False)
     stream_json = json.dumps(stream_no_lines, ensure_ascii=False, indent=2)
     page_start_js = "null" if page_start_idx is None else str(page_start_idx)
 
-    col_label = '1 (right)' if col == 1 else ('2 (left)' if col == 2 else '3 (center/prose)')
+    col_label = (
+        "1 (right)" if col == 1 else ("2 (left)" if col == 2 else "3 (center/prose)")
+    )
 
     # Initial CSS is skinny for the selected col
     initial_img_css = col1_skinny if col == 1 else col2_skinny
@@ -199,7 +210,7 @@ def generate_editor_html(page_id, col):
     return out_path
 
 
-_HTML_TEMPLATE = '''<!DOCTYPE html>
+_HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -434,7 +445,7 @@ function render() {{
         if (pageStartIdx === idx) {{
             const lbl = document.createElement('span');
             lbl.className = 'page-start-label';
-            lbl.textContent = '\u25C0 page start';
+            lbl.textContent = '\u25c0 page start';
             panel.appendChild(lbl);
         }}
 
@@ -719,7 +730,7 @@ if (currentColNum === 2) {{
 </script>
 </body>
 </html>
-'''
+"""
 
 
 def main():
@@ -732,6 +743,7 @@ def main():
     col = int(sys.argv[2])
     out_path = generate_editor_html(page_id, col)
     import webbrowser
+
     webbrowser.open(str(out_path))
 
 

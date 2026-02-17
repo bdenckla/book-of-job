@@ -44,9 +44,7 @@ def _enrich_quirkrecs(jobn_rel_top):
     # of quirkrecs (to detect same-verse duplicates). It also must
     # precede the pointwise pass, since auto-imgs use word IDs in
     # their filenames.
-    result = sl_map(
-        (_do_pointwise_enrichments_of_one_qr, jobn_rel_top), result
-    )
+    result = sl_map((_do_pointwise_enrichments_of_one_qr, jobn_rel_top), result)
     return result
 
 

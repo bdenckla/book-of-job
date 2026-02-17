@@ -20,7 +20,7 @@ def join_maqaf(words):
     """Join maqaf-ending words with the following word. Returns new list."""
     result = []
     for w in words:
-        if result and result[-1].endswith("\u05BE"):
+        if result and result[-1].endswith("\u05be"):
             result[-1] = result[-1] + w
         else:
             result.append(w)
@@ -32,42 +32,42 @@ def join_maqaf(words):
 # Values are relative to an "average" letter width of 1.0.
 HEB_WIDTHS = {
     # Very narrow
-    "\u05D9": 0.4,  # yod
-    "\u05D5": 0.5,  # vav
-    "\u05DF": 0.5,  # nun sofit
+    "\u05d9": 0.4,  # yod
+    "\u05d5": 0.5,  # vav
+    "\u05df": 0.5,  # nun sofit
     # Narrow
-    "\u05D6": 0.6,  # zayin
-    "\u05D2": 0.7,  # gimel
-    "\u05E8": 0.7,  # resh
-    "\u05DA": 0.7,  # kaf sofit
-    "\u05E3": 0.7,  # pe sofit
+    "\u05d6": 0.6,  # zayin
+    "\u05d2": 0.7,  # gimel
+    "\u05e8": 0.7,  # resh
+    "\u05da": 0.7,  # kaf sofit
+    "\u05e3": 0.7,  # pe sofit
     # Medium
-    "\u05D1": 0.85,  # bet
-    "\u05D3": 0.85,  # dalet
-    "\u05D4": 0.9,  # he
-    "\u05DB": 0.85,  # kaf
-    "\u05DC": 0.7,  # lamed
-    "\u05E0": 0.7,  # nun
-    "\u05E2": 0.9,  # ayin
-    "\u05E4": 0.9,  # pe
-    "\u05E5": 0.8,  # tsade sofit
-    "\u05E6": 0.8,  # tsade
-    "\u05E7": 0.9,  # qof
-    "\u05EA": 0.9,  # tav
+    "\u05d1": 0.85,  # bet
+    "\u05d3": 0.85,  # dalet
+    "\u05d4": 0.9,  # he
+    "\u05db": 0.85,  # kaf
+    "\u05dc": 0.7,  # lamed
+    "\u05e0": 0.7,  # nun
+    "\u05e2": 0.9,  # ayin
+    "\u05e4": 0.9,  # pe
+    "\u05e5": 0.8,  # tsade sofit
+    "\u05e6": 0.8,  # tsade
+    "\u05e7": 0.9,  # qof
+    "\u05ea": 0.9,  # tav
     # Wide
-    "\u05D0": 1.0,  # alef
-    "\u05D7": 1.0,  # chet
-    "\u05D8": 1.0,  # tet
-    "\u05DE": 1.0,  # mem
-    "\u05E1": 1.0,  # samekh
-    "\u05E9": 1.1,  # shin
+    "\u05d0": 1.0,  # alef
+    "\u05d7": 1.0,  # chet
+    "\u05d8": 1.0,  # tet
+    "\u05de": 1.0,  # mem
+    "\u05e1": 1.0,  # samekh
+    "\u05e9": 1.1,  # shin
     # Very wide
-    "\u05DD": 1.1,  # mem sofit
+    "\u05dd": 1.1,  # mem sofit
     # Punctuation
-    "\u05BE": 0.6,  # maqaf
-    "\u05C0": 0.3,  # paseq
-    "\u05C3": 0.3,  # sof pasuq
-    "\u003A": 0.3,  # colon (sometimes used for sof pasuq in data)
+    "\u05be": 0.6,  # maqaf
+    "\u05c0": 0.3,  # paseq
+    "\u05c3": 0.3,  # sof pasuq
+    "\u003a": 0.3,  # colon (sometimes used for sof pasuq in data)
 }
 
 # Inter-word space

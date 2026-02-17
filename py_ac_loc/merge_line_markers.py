@@ -56,7 +56,7 @@ def extract_line_markers_by_word_idx(edited_stream):
         after: dict mapping word_idx → list of dicts to insert AFTER that word.
     """
     before = {}  # word_idx -> [marker, ...]
-    after = {}   # word_idx -> [marker, ...]
+    after = {}  # word_idx -> [marker, ...]
     word_idx = 0
     pending_before = []  # markers seen since last word (to attach to NEXT word)
 
@@ -94,7 +94,9 @@ def verify_words_match(orig_words, edited_words):
             been Unicode-normalized during the clipboard/browser pipeline).
     """
     if len(orig_words) != len(edited_words):
-        print(f"ERROR: Word count mismatch: original={len(orig_words)}, edited={len(edited_words)}")
+        print(
+            f"ERROR: Word count mismatch: original={len(orig_words)}, edited={len(edited_words)}"
+        )
         sys.exit(1)
 
     mismatches = []
@@ -142,9 +144,9 @@ def merge(orig_stream, edited_stream):
     """
     # Strip existing line markers from original
     base_stream = [
-        item for item in orig_stream
-        if not (isinstance(item, dict) and
-                ("line-start" in item or "line-end" in item))
+        item
+        for item in orig_stream
+        if not (isinstance(item, dict) and ("line-start" in item or "line-end" in item))
     ]
 
     # Extract words from both
@@ -160,7 +162,9 @@ def merge(orig_stream, edited_stream):
     word_idx = 0
 
     for item in base_stream:
-        is_word = isinstance(item, str) or (isinstance(item, dict) and "parashah" in item)
+        is_word = isinstance(item, str) or (
+            isinstance(item, dict) and "parashah" in item
+        )
         if is_word:
             # Insert any "before" markers
             if word_idx in before:

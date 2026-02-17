@@ -41,16 +41,13 @@ WORKSPACE = Path(__file__).resolve().parent.parent
 OUT_DIR = WORKSPACE / ".novc"
 COORD_DIR = Path(__file__).resolve().parent / "column-coordinates"
 
-ALL_PAGES = [
-    f"{leaf}{side}"
-    for leaf in range(270, 282)
-    for side in ("r", "v")
-]
+ALL_PAGES = [f"{leaf}{side}" for leaf in range(270, 282) for side in ("r", "v")]
 
 PAD = 5  # pixels of padding around column crop
 
 
 # ── image helpers ──────────────────────────────────────────────
+
 
 def _leaf_to_page_n(page_id):
     num = int(page_id[:-1])
@@ -82,6 +79,7 @@ def download_image(page_id):
 
 # ── column geometry ────────────────────────────────────────────
 
+
 def load_page_data(page_id):
     coord_file = COORD_DIR / f"{page_id}.json"
     return json.loads(coord_file.read_text(encoding="utf-8"))
@@ -106,6 +104,7 @@ def crop_column(img, col_px):
 
 # ── segmentation + grid matching ──────────────────────────────
 
+
 def segment_column(img, col_px):
     """Crop column, run kraken, return detected lines in full-image coords."""
     crop, ox, oy = crop_column(img, col_px)
@@ -118,15 +117,17 @@ def segment_column(img, col_px):
         avg_x = sum(p[0] for p in bl) / len(bl)
         x_min = min(p[0] for p in bl)
         x_max = max(p[0] for p in bl)
-        lines.append({
-            "baseline": bl,
-            "boundary": bd,
-            "avg_y": round(avg_y, 1),
-            "avg_x": round(avg_x, 1),
-            "x_min": x_min,
-            "x_max": x_max,
-            "width": x_max - x_min,
-        })
+        lines.append(
+            {
+                "baseline": bl,
+                "boundary": bd,
+                "avg_y": round(avg_y, 1),
+                "avg_x": round(avg_x, 1),
+                "x_min": x_min,
+                "x_max": x_max,
+                "width": x_max - x_min,
+            }
+        )
     return lines
 
 
@@ -185,37 +186,42 @@ def match_to_grid(detected_lines, grid_ys, line_spacing):
         if best_idx is not None and best_dist < max_dist:
             dl = detected_lines[best_idx]
             used.add(best_idx)
-            result.append({
-                "grid_idx": i,
-                "grid_y": round(gy, 1),
-                "matched": True,
-                "baseline": dl["baseline"],
-                "boundary": dl["boundary"],
-                "avg_y": dl["avg_y"],
-                "avg_x": dl["avg_x"],
-                "x_min": dl["x_min"],
-                "x_max": dl["x_max"],
-                "width": dl["width"],
-            })
+            result.append(
+                {
+                    "grid_idx": i,
+                    "grid_y": round(gy, 1),
+                    "matched": True,
+                    "baseline": dl["baseline"],
+                    "boundary": dl["boundary"],
+                    "avg_y": dl["avg_y"],
+                    "avg_x": dl["avg_x"],
+                    "x_min": dl["x_min"],
+                    "x_max": dl["x_max"],
+                    "width": dl["width"],
+                }
+            )
         else:
-            result.append({
-                "grid_idx": i,
-                "grid_y": round(gy, 1),
-                "matched": False,
-                "baseline": None,
-                "boundary": None,
-                "avg_y": None,
-                "avg_x": None,
-                "x_min": None,
-                "x_max": None,
-                "width": None,
-            })
+            result.append(
+                {
+                    "grid_idx": i,
+                    "grid_y": round(gy, 1),
+                    "matched": False,
+                    "baseline": None,
+                    "boundary": None,
+                    "avg_y": None,
+                    "avg_x": None,
+                    "x_min": None,
+                    "x_max": None,
+                    "width": None,
+                }
+            )
 
     n_unmatched_kraken = len(detected_lines) - len(used)
     return result, offset, n_unmatched_kraken
 
 
 # ── main processing ───────────────────────────────────────────
+
 
 def segment_page(page_id):
     print(f"\n{'='*50}")
@@ -234,16 +240,20 @@ def segment_page(page_id):
         spacing = col_px["line_spacing"]
         grid_ys = grid_y_positions(col_px, lines_per_col)
 
-        print(f"  {col_key}: segmenting (col_w={col_px['w']}px, spacing={spacing}px)...")
+        print(
+            f"  {col_key}: segmenting (col_w={col_px['w']}px, spacing={spacing}px)..."
+        )
         detected = segment_column(img, col_px)
         print(f"    kraken found {len(detected)} raw lines")
 
         matched, offset, n_extra = match_to_grid(detected, grid_ys, spacing)
         n_filled = sum(1 for s in matched if s["matched"])
         n_empty = lines_per_col - n_filled
-        print(f"    grid match: {n_filled}/{lines_per_col} filled, "
-              f"{n_empty} empty, offset={offset:+.1f}px, "
-              f"{n_extra} kraken lines unmatched (masorah etc.)")
+        print(
+            f"    grid match: {n_filled}/{lines_per_col} filled, "
+            f"{n_empty} empty, offset={offset:+.1f}px, "
+            f"{n_extra} kraken lines unmatched (masorah etc.)"
+        )
 
         empty_idxs = [s["grid_idx"] for s in matched if not s["matched"]]
         if empty_idxs:
@@ -299,14 +309,16 @@ def segment_page(page_id):
         # Column bounding box in green
         draw.rectangle(
             [(px["x"], px["y"]), (px["x"] + px["w"], px["y"] + px["h"])],
-            outline="lime", width=1,
+            outline="lime",
+            width=1,
         )
 
         # Grid lines in dim yellow
         for i, gy in enumerate(cr["grid_ys"]):
             draw.line(
                 [(px["x"], gy), (px["x"] + px["w"], gy)],
-                fill=(80, 80, 40), width=1,
+                fill=(80, 80, 40),
+                width=1,
             )
             draw.text((px["x"] - 18, gy - 6), str(i), fill=(80, 80, 40))
 
@@ -323,8 +335,7 @@ def segment_page(page_id):
                 bl = s["baseline"]
                 if len(bl) >= 2:
                     draw.line([tuple(p) for p in bl], fill=color, width=2)
-                draw.text((bl[-1][0] + 3, bl[-1][1] - 8),
-                          str(idx), fill=color)
+                draw.text((bl[-1][0] + 3, bl[-1][1] - 8), str(idx), fill=color)
             else:
                 gy = s["grid_y"]
                 cx = px["x"] + px["w"] // 2
@@ -360,5 +371,6 @@ if __name__ == "__main__":
         c1e = r["col1"]["empty"]
         c2f = r["col2"]["filled"]
         c2e = r["col2"]["empty"]
-        print(f"  {page_id}: col1={c1f}/28 ({c1e} empty)  "
-              f"col2={c2f}/28 ({c2e} empty)")
+        print(
+            f"  {page_id}: col1={c1f}/28 ({c1e} empty)  " f"col2={c2f}/28 ({c2e} empty)"
+        )

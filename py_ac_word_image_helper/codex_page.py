@@ -100,7 +100,10 @@ def get_line_bbox(page_id, col, line_num, buffer_lines=2):
     crop_right = min(img_w, x + w + margin_x)
 
     return (
-        int(crop_left), int(crop_top), int(crop_right), int(crop_bot),
+        int(crop_left),
+        int(crop_top),
+        int(crop_right),
+        int(crop_bot),
         int(line_top - crop_top),  # target line offset from crop top
         int(ls),  # line spacing in px
     )

@@ -17,8 +17,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from py_ac_loc.gen_flat_stream import (
-    load_index, build_flat_stream,
-    BOOK_XML, BOOK_END_SENTINEL, BOOK_START, MAM_XML_DIR,
+    load_index,
+    build_flat_stream,
+    BOOK_XML,
+    BOOK_END_SENTINEL,
+    BOOK_START,
+    MAM_XML_DIR,
 )
 from py_ac_loc.mam_xml_verses import get_verses_in_range
 
@@ -85,10 +89,14 @@ def classify_item(item):
         return "word"
     if isinstance(item, dict):
         for key in (
-            "page-start", "page-end",
-            "verse-start", "verse-end",
-            "verse-fragment-start", "verse-fragment-end",
-            "line-start", "line-end",
+            "page-start",
+            "page-end",
+            "verse-start",
+            "verse-end",
+            "verse-fragment-start",
+            "verse-fragment-end",
+            "line-start",
+            "line-end",
             "parashah",
         ):
             if key in item:
@@ -135,8 +143,8 @@ def check_file(path, verbose=True):
     line_start_counts = Counter()  # (col, line-num) -> count
     line_end_counts = Counter()
     line_starts = {}  # (col, line-num) -> last stream index (for ordering check)
-    line_ends = {}    # (col, line-num) -> last stream index
-    col_lines = {}    # col -> list of line-nums (from line-end markers)
+    line_ends = {}  # (col, line-num) -> last stream index
+    col_lines = {}  # col -> list of line-nums (from line-end markers)
 
     for idx, item in enumerate(stream):
         cls = classify_item(item)
@@ -161,13 +169,21 @@ def check_file(path, verbose=True):
         sc = line_start_counts[key]
         ec = line_end_counts[key]
         if sc == 0:
-            issues.append(f"line-end(col={key[0]}, num={key[1]}) with no matching line-start")
+            issues.append(
+                f"line-end(col={key[0]}, num={key[1]}) with no matching line-start"
+            )
         elif sc > 1:
-            issues.append(f"line-start(col={key[0]}, num={key[1]}) appears {sc} times (expected 1)")
+            issues.append(
+                f"line-start(col={key[0]}, num={key[1]}) appears {sc} times (expected 1)"
+            )
         if ec == 0:
-            issues.append(f"line-start(col={key[0]}, num={key[1]}) with no matching line-end")
+            issues.append(
+                f"line-start(col={key[0]}, num={key[1]}) with no matching line-end"
+            )
         elif ec > 1:
-            issues.append(f"line-end(col={key[0]}, num={key[1]}) appears {ec} times (expected 1)")
+            issues.append(
+                f"line-end(col={key[0]}, num={key[1]}) appears {ec} times (expected 1)"
+            )
 
     # Reversed-order pairs (line-end before line-start) must be truly
     # empty (no words between them)
@@ -178,7 +194,8 @@ def check_file(path, verbose=True):
         e_idx = line_ends[key]
         if e_idx < s_idx:
             words_between = [
-                stream[i] for i in range(e_idx + 1, s_idx)
+                stream[i]
+                for i in range(e_idx + 1, s_idx)
                 if classify_item(stream[i]) == "word"
             ]
             if words_between:
@@ -194,14 +211,11 @@ def check_file(path, verbose=True):
         nums = col_lines[col]
         n = len(nums)
         if n != EXPECTED_LINES_PER_COL:
-            issues.append(
-                f"Col {col}: {n} lines (expected {EXPECTED_LINES_PER_COL})"
-            )
+            issues.append(f"Col {col}: {n} lines (expected {EXPECTED_LINES_PER_COL})")
         expected_nums = list(range(1, n + 1))
         if nums != expected_nums:
             issues.append(
-                f"Col {col}: line numbers are {nums}, "
-                f"expected {expected_nums}"
+                f"Col {col}: line numbers are {nums}, " f"expected {expected_nums}"
             )
 
     # No words before first line-start or after last line-end
@@ -220,7 +234,8 @@ def check_file(path, verbose=True):
             last_le = i
     if last_le is not None:
         post_words = [
-            i for i in range(last_le + 1, len(stream))
+            i
+            for i in range(last_le + 1, len(stream))
             if classify_item(stream[i]) == "word"
         ]
         if post_words:
@@ -237,8 +252,12 @@ def check_file(path, verbose=True):
     # All verse identifiers are well-formed (Book C:V)
     for item in stream:
         if isinstance(item, dict):
-            for key in ("verse-start", "verse-fragment-start",
-                        "verse-end", "verse-fragment-end"):
+            for key in (
+                "verse-start",
+                "verse-fragment-start",
+                "verse-end",
+                "verse-fragment-end",
+            ):
                 if key in item:
                     vs = item[key]
                     parts = vs.rsplit(" ", 1)
@@ -247,7 +266,7 @@ def check_file(path, verbose=True):
 
     # Every verse-start has exactly one matching verse-end or verse-fragment-end
     start_counts = Counter()  # counts of verse-end/verse-fragment-end per verse ID
-    end_counts = Counter()    # counts of verse-start/verse-fragment-start per verse ID
+    end_counts = Counter()  # counts of verse-start/verse-fragment-start per verse ID
     file_verse_starts = set()
     file_verse_ends = set()
     for item in stream:
@@ -266,17 +285,25 @@ def check_file(path, verbose=True):
     for v in sorted(file_verse_starts):
         n = start_counts[v]
         if n == 0:
-            issues.append(f"verse-start {v} has no matching verse-end or verse-fragment-end")
+            issues.append(
+                f"verse-start {v} has no matching verse-end or verse-fragment-end"
+            )
         elif n > 1:
-            issues.append(f"verse-start {v} has {n} matching verse-end/verse-fragment-end markers (expected 1)")
+            issues.append(
+                f"verse-start {v} has {n} matching verse-end/verse-fragment-end markers (expected 1)"
+            )
 
     # Every verse-end has exactly one matching verse-start or verse-fragment-start
     for v in sorted(file_verse_ends):
         n = end_counts[v]
         if n == 0:
-            issues.append(f"verse-end {v} has no matching verse-start or verse-fragment-start")
+            issues.append(
+                f"verse-end {v} has no matching verse-start or verse-fragment-start"
+            )
         elif n > 1:
-            issues.append(f"verse-end {v} has {n} matching verse-start/verse-fragment-start markers (expected 1)")
+            issues.append(
+                f"verse-end {v} has {n} matching verse-start/verse-fragment-start markers (expected 1)"
+            )
 
     # --- Word count ---
     word_count = classes.get("word", 0)
@@ -391,7 +418,7 @@ def main():
                 total_issues += 1
                 all_stats[0]["issues"].append(msg)
             else:
-                mam_slice = mam_words[match_start:match_start + len(json_words)]
+                mam_slice = mam_words[match_start : match_start + len(json_words)]
                 if len(mam_slice) < len(json_words):
                     msg = (
                         f"Cross-file word check: JSON has {len(json_words)} words "

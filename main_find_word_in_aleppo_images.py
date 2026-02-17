@@ -72,8 +72,9 @@ def find_and_preview(word, cv, pages, scale=2):
     print(f"  Line: {' '.join(line_words)}")
 
     # Get crop coordinates (at full image size)
-    crop_left, crop_top, crop_right, crop_bot, target_offset, ls = \
-        get_line_bbox(page_id, col, line_num)
+    crop_left, crop_top, crop_right, crop_bot, target_offset, ls = get_line_bbox(
+        page_id, col, line_num
+    )
 
     # Download at the requested scale
     img = download_page(page_id, scale=scale)
@@ -87,7 +88,9 @@ def find_and_preview(word, cv, pages, scale=2):
     ref_h = cc["image_size"]["height"]
     sx = actual_w / ref_w
     sy = actual_h / ref_h
-    print(f"  Image: {actual_w}x{actual_h} (ref {ref_w}x{ref_h}, scale {sx:.2f}x{sy:.2f})")
+    print(
+        f"  Image: {actual_w}x{actual_h} (ref {ref_w}x{ref_h}, scale {sx:.2f}x{sy:.2f})"
+    )
 
     # Apply scale to crop coordinates
     cl = int(crop_left * sx)
@@ -210,7 +213,7 @@ def find_and_preview(word, cv, pages, scale=2):
     # Word context from the manuscript line
     before = line_words[:word_idx]
     matched_word = line_words[word_idx] if word_idx < len(line_words) else word
-    after = line_words[word_idx + 1:] if word_idx + 1 < len(line_words) else []
+    after = line_words[word_idx + 1 :] if word_idx + 1 < len(line_words) else []
     print(f"  Context: {' '.join(before)} [{matched_word}] {' '.join(after)}")
     return {
         "label": label,
@@ -232,7 +235,7 @@ def generate_html(result):
     before_joined = join_maqaf(list(r["before"]))
     after_joined = join_maqaf(list(r["after"]))
     target_display = r["matched_word"]
-    MAQAF = "\u05BE"
+    MAQAF = "\u05be"
     # If last before-word ends with maqaf, glue it onto target
     if before_joined and before_joined[-1].endswith(MAQAF):
         target_display = before_joined.pop() + target_display

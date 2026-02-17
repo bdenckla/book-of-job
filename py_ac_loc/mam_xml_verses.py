@@ -24,8 +24,8 @@ Usage:
 
 import xml.etree.ElementTree as ET
 
-PASEQ = '\u05C0'
-MAQAF = '\u05BE'
+PASEQ = "\u05c0"
+MAQAF = "\u05be"
 
 
 def get_verse_words(verse_el):
@@ -42,48 +42,48 @@ def get_verse_words(verse_el):
     raw_words = []
     ketiv_flags = []
 
-    if 'text' in verse_el.attrib:
+    if "text" in verse_el.attrib:
         # Simple verse: text is directly on the element
-        raw_words = verse_el.attrib['text'].split()
+        raw_words = verse_el.attrib["text"].split()
         ketiv_flags = [False] * len(raw_words)
     else:
         # Complex verse: iterate children
         for child in verse_el:
             tag = child.tag
-            if tag == 'text':
-                text = child.attrib.get('text', '').strip()
+            if tag == "text":
+                text = child.attrib.get("text", "").strip()
                 if text:
                     ws = text.split()
                     raw_words.extend(ws)
                     ketiv_flags.extend([False] * len(ws))
-            elif tag in ('lp-legarmeih', 'lp-paseq'):
+            elif tag in ("lp-legarmeih", "lp-paseq"):
                 # Append paseq to the last word
                 if raw_words:
                     raw_words[-1] = raw_words[-1] + PASEQ
-            elif tag == 'kq':
+            elif tag == "kq":
                 # Non-trivial ketiv/qere — use ketiv text (unpointed)
-                kq_k = child.find('kq-k')
+                kq_k = child.find("kq-k")
                 if kq_k is not None:
-                    kt = kq_k.attrib.get('text', '').strip()
+                    kt = kq_k.attrib.get("text", "").strip()
                     if kt:
                         ws = kt.split()
                         raw_words.extend(ws)
                         ketiv_flags.extend([True] * len(ws))
-            elif tag == 'kq-trivial':
+            elif tag == "kq-trivial":
                 # Trivial k/q — use pointed text attribute
-                text = child.attrib.get('text', '').strip()
+                text = child.attrib.get("text", "").strip()
                 if text:
                     ws = text.split()
                     raw_words.extend(ws)
                     ketiv_flags.extend([False] * len(ws))
-            elif tag == 'slh-word':
+            elif tag == "slh-word":
                 # Suspended-letter word — use desc-0 (full pointed word)
-                text = child.attrib.get('slhw-desc-0', '').strip()
+                text = child.attrib.get("slhw-desc-0", "").strip()
                 if text:
                     ws = text.split()
                     raw_words.extend(ws)
                     ketiv_flags.extend([False] * len(ws))
-            elif tag == 'implicit-maqaf':
+            elif tag == "implicit-maqaf":
                 pass  # No visible text
             # Other unknown tags: silently skip
 
@@ -102,7 +102,7 @@ def get_verse_words(verse_el):
     # Attach standalone sof pasuq (׃) to the preceding word.
     # This happens when a <kq> element is followed by <text text="׃" />
     # in the MAM-XML — the sof pasuq ends up as its own token.
-    SOF_PASUQ = '\u05C3'
+    SOF_PASUQ = "\u05c3"
     merged = []
     merged_ketiv = []
     for w, is_k in zip(joined, joined_ketiv):
@@ -113,7 +113,7 @@ def get_verse_words(verse_el):
             merged_ketiv.append(is_k)
 
     ketiv_indices = [i for i, k in enumerate(merged_ketiv) if k]
-    return {'words': merged, 'ketiv_indices': ketiv_indices}
+    return {"words": merged, "ketiv_indices": ketiv_indices}
 
 
 def get_verses_in_range(xml_path, book_osis_prefix, start_cv, end_cv):
@@ -137,33 +137,33 @@ def get_verses_in_range(xml_path, book_osis_prefix, start_cv, end_cv):
     tree = ET.parse(xml_path)
     book39 = tree.getroot()[0]
 
-    sampe_tag = {'pe2': 'spi-pe2', 'samekh2': 'spi-samekh2'}
+    sampe_tag = {"pe2": "spi-pe2", "samekh2": "spi-samekh2"}
 
     verses = []
     for child in book39:
-        if child.tag != 'chapter':
+        if child.tag != "chapter":
             continue
-        osis = child.attrib.get('osisID', '')  # e.g., 'Job.37'
-        if not osis.startswith(book_osis_prefix + '.'):
+        osis = child.attrib.get("osisID", "")  # e.g., 'Job.37'
+        if not osis.startswith(book_osis_prefix + "."):
             continue
-        ch = int(osis.split('.')[-1])
+        ch = int(osis.split(".")[-1])
 
         for v in child:
-            if v.tag != 'verse':
+            if v.tag != "verse":
                 continue
-            v_osis = v.attrib['osisID']
-            vs = int(v_osis.split('.')[-1])
+            v_osis = v.attrib["osisID"]
+            vs = int(v_osis.split(".")[-1])
             if (ch, vs) < start_cv or (ch, vs) > end_cv:
                 continue
             result = get_verse_words(v)
-            result['cv'] = f'{ch}:{vs}'
+            result["cv"] = f"{ch}:{vs}"
 
             # Check for parashah break before this verse
-            sws = v.attrib.get('starts-with-sampe')
+            sws = v.attrib.get("starts-with-sampe")
             if sws and sws in sampe_tag:
-                result['parashah_before'] = {"parashah": sampe_tag[sws]}
+                result["parashah_before"] = {"parashah": sampe_tag[sws]}
             else:
-                result['parashah_before'] = None
+                result["parashah_before"] = None
 
             verses.append(result)
 

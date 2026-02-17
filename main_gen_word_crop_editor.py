@@ -174,7 +174,7 @@ def process_quirkrec(qr, pages, scale=2):
     # Context words
     before = line_words[:word_idx]
     matched_word = line_words[word_idx] if word_idx < len(line_words) else consensus
-    after = line_words[word_idx + 1:] if word_idx + 1 < len(line_words) else []
+    after = line_words[word_idx + 1 :] if word_idx + 1 < len(line_words) else []
 
     return {
         "sid": sid,
@@ -213,28 +213,30 @@ def generate_html(results):
     # JS-embeddable items data
     items_data = []
     for r in results:
-        items_data.append({
-            "sid": r["sid"],
-            "cv": r["cv"],
-            "consensus": r["consensus"],
-            "page": r["page"],
-            "col": r["col"],
-            "lineNum": r["line_num"],
-            "wordIdx": r["word_idx"],
-            "imgFile": r["img_file"],
-            "cropW": r["crop_w"],
-            "cropH": r["crop_h"],
-            "box": {
-                "left": r["box_left"],
-                "top": r["box_top"],
-                "right": r["box_right"],
-                "bottom": r["box_bot"],
-            },
-            "scaledCropLeft": r["scaled_crop_left"],
-            "scaledCropTop": r["scaled_crop_top"],
-            "sx": round(r["sx"], 6),
-            "sy": round(r["sy"], 6),
-        })
+        items_data.append(
+            {
+                "sid": r["sid"],
+                "cv": r["cv"],
+                "consensus": r["consensus"],
+                "page": r["page"],
+                "col": r["col"],
+                "lineNum": r["line_num"],
+                "wordIdx": r["word_idx"],
+                "imgFile": r["img_file"],
+                "cropW": r["crop_w"],
+                "cropH": r["crop_h"],
+                "box": {
+                    "left": r["box_left"],
+                    "top": r["box_top"],
+                    "right": r["box_right"],
+                    "bottom": r["box_bot"],
+                },
+                "scaledCropLeft": r["scaled_crop_left"],
+                "scaledCropTop": r["scaled_crop_top"],
+                "sx": round(r["sx"], 6),
+                "sy": round(r["sy"], 6),
+            }
+        )
 
     items_json = json.dumps(items_data, ensure_ascii=False)
 
@@ -244,9 +246,9 @@ def generate_html(results):
         before_joined = join_maqaf(list(r["before"]))
         after_joined = join_maqaf(list(r["after"]))
         target_display = r["matched_word"]
-        if before_joined and before_joined[-1].endswith("\u05BE"):
+        if before_joined and before_joined[-1].endswith("\u05be"):
             target_display = before_joined.pop() + target_display
-        if target_display.endswith("\u05BE") and after_joined:
+        if target_display.endswith("\u05be") and after_joined:
             target_display = target_display + after_joined.pop(0)
         before_html = " ".join(before_joined)
         after_html = " ".join(after_joined)
@@ -265,9 +267,9 @@ def generate_html(results):
             f'      <img id="img-{i}" src="{r["img_file"]}">\n'
             f'      <svg id="svg-{i}" viewBox="0 0 1 1" '
             f'preserveAspectRatio="none"></svg>\n'
-            f'    </div>\n'
-            f'  </div>\n'
-            f'</div>'
+            f"    </div>\n"
+            f"  </div>\n"
+            f"</div>"
         )
 
     items_html = "\n".join(items_html_parts)
@@ -678,7 +680,14 @@ def main():
                 examples.append(eqr)
     else:
         target_sids = {
-            "0119", "0303", "0701", "1503", "2001", "3001", "3820", "4003",
+            "0119",
+            "0303",
+            "0701",
+            "1503",
+            "2001",
+            "3001",
+            "3820",
+            "4003",
         }
         for eqr in EQRS:
             sid = short_id(eqr)

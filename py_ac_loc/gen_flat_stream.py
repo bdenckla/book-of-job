@@ -39,8 +39,14 @@ BOOK_XML = {
 
 # Pages we care about
 OUR_PAGES = [
-    "270r", "278v", "279r", "279v",
-    "280r", "280v", "281r", "281v",
+    "270r",
+    "278v",
+    "279r",
+    "279v",
+    "280r",
+    "280v",
+    "281r",
+    "281v",
 ]
 
 # For cross-book pages we need to know where each book ends
@@ -78,8 +84,10 @@ def get_page_verses(text_range):
         # Same book — simple case
         xml_path = str(MAM_XML_DIR / BOOK_XML[start_book])
         verses = get_verses_in_range(
-            xml_path, start_book,
-            (start_ch, start_vs), (end_ch, end_vs),
+            xml_path,
+            start_book,
+            (start_ch, start_vs),
+            (end_ch, end_vs),
         )
         for v in verses:
             v["book"] = start_book
@@ -91,8 +99,10 @@ def get_page_verses(text_range):
         # First book: from start_cv to end of book
         xml_path = str(MAM_XML_DIR / BOOK_XML[start_book])
         verses1 = get_verses_in_range(
-            xml_path, start_book,
-            (start_ch, start_vs), BOOK_END_SENTINEL,
+            xml_path,
+            start_book,
+            (start_ch, start_vs),
+            BOOK_END_SENTINEL,
         )
         for v in verses1:
             v["book"] = start_book
@@ -101,8 +111,10 @@ def get_page_verses(text_range):
         # Second book: from start of book to end_cv
         xml_path = str(MAM_XML_DIR / BOOK_XML[end_book])
         verses2 = get_verses_in_range(
-            xml_path, end_book,
-            BOOK_START, (end_ch, end_vs),
+            xml_path,
+            end_book,
+            BOOK_START,
+            (end_ch, end_vs),
         )
         for v in verses2:
             v["book"] = end_book
@@ -159,7 +171,7 @@ def _assert_standard_order(word, verse_label):
             for m in marks:
                 g = _mark_group(ord(m))
                 if g < max_group_seen:
-                    marks_str = ' '.join(f'U+{ord(x):04X}' for x in marks)
+                    marks_str = " ".join(f"U+{ord(x):04X}" for x in marks)
                     raise AssertionError(
                         f"Non-standard combining mark order in {verse_label}, "
                         f"word '{word}': group {g} mark U+{ord(m):04X} "
@@ -198,10 +210,10 @@ def build_flat_stream(page_id, verses):
             _assert_standard_order(word, label)
             # Split at maqaf (U+05BE) keeping the maqaf attached
             # to the preceding fragment: "אֽוֹ־מֹשְׁכ֖וֹת" → ["אֽוֹ־", "מֹשְׁכ֖וֹת"]
-            parts = word.split("\u05BE")
+            parts = word.split("\u05be")
             for k, part in enumerate(parts):
                 if k < len(parts) - 1:
-                    stream.append(part + "\u05BE")
+                    stream.append(part + "\u05be")
                 else:
                     stream.append(part)
         stream.append({"verse-end": label})
@@ -245,7 +257,9 @@ def main():
 
         if page_id in pages_set:
             word_count = sum(1 for x in stream if isinstance(x, str))
-            verse_count = sum(1 for x in stream if isinstance(x, dict) and "verse-start" in x)
+            verse_count = sum(
+                1 for x in stream if isinstance(x, dict) and "verse-start" in x
+            )
             out_path = write_stream(page_id, stream)
             print(f"  -> {out_path.name}: {verse_count} verses, {word_count} words")
         else:

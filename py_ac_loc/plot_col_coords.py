@@ -51,10 +51,14 @@ def plot_corners(data):
         for col_key in ("col1", "col2"):
             rel = d["columns"][col_key]["rel"]
             x, y, w, h = rel["x"], rel["y"], rel["w"], rel["h"]
-            corners[side][col_key].extend([
-                (x, y, "TL"), (x + w, y, "TR"),
-                (x, y + h, "BL"), (x + w, y + h, "BR"),
-            ])
+            corners[side][col_key].extend(
+                [
+                    (x, y, "TL"),
+                    (x + w, y, "TR"),
+                    (x, y + h, "BL"),
+                    (x + w, y + h, "BR"),
+                ]
+            )
 
     fig, ax = plt.subplots(figsize=(10, 10))
     ax.set_title("Column Corners in Relative Image Space", fontsize=13)
@@ -85,8 +89,12 @@ def plot_corners(data):
                     xs = [p[0] for p in subset]
                     ys = [p[1] for p in subset]
                     ax.scatter(
-                        xs, ys, c=color, marker=markers[corner_type],
-                        s=40, zorder=3,
+                        xs,
+                        ys,
+                        c=color,
+                        marker=markers[corner_type],
+                        s=40,
+                        zorder=3,
                         label=f"{side_label} {col_label} {corner_type}",
                     )
 
@@ -120,7 +128,8 @@ def plot_angle_fan(data):
     ax.set_title(
         f"Column Skew Angles ({ANGLE_EXAGGERATION}\u00d7 exaggerated)\n"
         f"{ANGLE_BINS} bins, bar length = count",
-        fontsize=13, pad=20,
+        fontsize=13,
+        pad=20,
     )
 
     all_angles = [a for angles in angle_groups.values() for a in angles]
@@ -146,9 +155,14 @@ def plot_angle_fan(data):
         counts, _ = np.histogram(exag_angles, bins=bin_edges_deg)
         color, label = colors[key]
         ax.bar(
-            bin_centers_rad + offset, counts,
-            width=bar_width, bottom=0,
-            color=color, alpha=0.7, label=label, zorder=3,
+            bin_centers_rad + offset,
+            counts,
+            width=bar_width,
+            bottom=0,
+            color=color,
+            alpha=0.7,
+            label=label,
+            zorder=3,
         )
 
     ax.set_theta_zero_location("E")
@@ -157,9 +171,11 @@ def plot_angle_fan(data):
     ax.set_thetamax(exag_max + margin + 2)
 
     max_count = max(
-        max(np.histogram(
-            [a * ANGLE_EXAGGERATION for a in angle_groups[k]], bins=bin_edges_deg
-        )[0])
+        max(
+            np.histogram(
+                [a * ANGLE_EXAGGERATION for a in angle_groups[k]], bins=bin_edges_deg
+            )[0]
+        )
         for k in keys
     )
     ax.set_ylim(0, max_count + 1)
@@ -169,9 +185,11 @@ def plot_angle_fan(data):
     ax.legend(loc="upper right", bbox_to_anchor=(1.3, 1.05), fontsize=9)
 
     fig.text(
-        0.02, 0.02,
+        0.02,
+        0.02,
         f"actual range: {min(all_angles):.2f}\u00b0 to {max(all_angles):.2f}\u00b0",
-        fontsize=9, color="gray",
+        fontsize=9,
+        color="gray",
     )
     fig.tight_layout()
     _save(fig, "col_angle_fan.png")
@@ -192,7 +210,11 @@ def plot_linespacing(data):
     ax.set_title(f"Line Spacing Distribution ({SPACING_BINS} bins)", fontsize=13)
 
     counts, _, _ = ax.hist(
-        spacings, bins=bin_edges, color="steelblue", alpha=0.8, edgecolor="white",
+        spacings,
+        bins=bin_edges,
+        color="steelblue",
+        alpha=0.8,
+        edgecolor="white",
     )
 
     ax.set_xlabel("Line spacing (% of image height)")
@@ -200,9 +222,11 @@ def plot_linespacing(data):
     ax.set_yticks(range(0, int(max(counts)) + 2))
 
     fig.text(
-        0.02, 0.02,
+        0.02,
+        0.02,
         f"range: {lo:.3f}% to {hi:.3f}%",
-        fontsize=9, color="gray",
+        fontsize=9,
+        color="gray",
     )
     fig.tight_layout()
     _save(fig, "col_linespacing_hist.png")
