@@ -170,6 +170,11 @@ To add line-break markers for an Aleppo Codex page:
 To supply Aleppo Codex (μA) word-level image crops for quirkrecs that lack them,
 see `.github/copilot-instructions-aleppo-word-crops.md`.
 
+## Adding or Updating Quirkrec Comments
+
+To add or modify comments on quirkrec entries (e.g., noting μA/μL observations),
+see `.github/copilot-instructions-quirkrec-comments.md`.
+
 ## Opening HTML Files
 
 When displaying an HTML file that only uses local/relative resources (images, CSS, etc.), open it directly as a file (`Start-Process "path/to/file.html"`) rather than starting a local HTTP server. Only use a server when the page requires it (e.g., fetching from external APIs with CORS restrictions, or serving content that browsers block via `file://`).
