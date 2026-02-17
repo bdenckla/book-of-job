@@ -144,14 +144,17 @@ Process quirkrecs in batches of ~5:
    git status --porcelain docs/
    ```
 
-6. **Show in browser** (requires local HTTP server for fragment URLs):
-   ```
+6. **Show in browser** via a local HTTP server (needed for fragment
+   anchors to scroll correctly — `file:///` URIs drop the `#fragment`):
+   ```powershell
    python -m http.server 8471 --directory docs
    ```
    Then open each detail page:
+   ```powershell
+   $sids = @("SID1","SID2","SID3","SID4","SID5")
+   foreach ($s in $sids) { Start-Process "http://localhost:8471/jobn/job1_full_list_details.html#row-$s"; Start-Sleep -Milliseconds 500 }
    ```
-   http://localhost:8471/jobn/job1_full_list_details.html#row-SID
-   ```
+   The 500 ms delay prevents tabs from being dropped.
 
 7. **Commit** when satisfied.
 
