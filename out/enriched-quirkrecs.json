@@ -146,7 +146,7 @@
     "qr-what-is-weird": "יתיב not מהפך",
     "qr-consensus": "א֤וֹ",
     "qr-generic-comment": [
-      "The יתיב accent doesn’t make sense here because this is in the poetic rather than prose section of Job (~3:2 – ~42:6)."
+      "The יתיב accent doesn’t make sense here because this is in the poetic rather than prose section of Job ($plain_3_2 – $plain_42_6)."
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {
@@ -1362,7 +1362,7 @@
     },
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-generic-comment": [
-      "As $DM footnote 20 mentions, this is one of three such cases, the other two being 27:9 and 34:33@HM3M5. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
+      "As $DM footnote 20 mentions, this is one of three such cases, the other two being 27:9 and $link_34_33_HM3M5. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
     ],
     "qr-lc-img": "0935.png",
     "qr-aleppo-img": "Aleppo-0935.png",
@@ -2384,7 +2384,7 @@
       "word": 3
     },
     "qr-generic-comment": [
-      "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See 21:15, 34:33@VMH0YD3F, and 35:7."
+      "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See 21:15, $link_34_33_VMH0YD3F, and 35:7."
     ],
     "qr-lc-img": "1606.png",
     "qr-aleppo-img": "Aleppo-1606.png",
@@ -3272,7 +3272,7 @@
     "qr-lc-proposed": "מַה־שַׁדַּ֥י",
     "qr-what-is-weird": "ש lacks דגש",
     "qr-generic-comment": [
-      "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See 16:6, 34:33@VMH0YD3F, and 35:7. Aside: μA lacks the מקף."
+      "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See 16:6, $link_34_33_VMH0YD3F, and 35:7. Aside: μA lacks the מקף."
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {
@@ -3546,7 +3546,7 @@
     "qr-what-is-weird": "ל lacks קמץ-אתנח",
     "qr-consensus": "וּשְׁלָ֑ם",
     "qr-generic-comment": [
-      "Perhaps some very faint remains of an אתנח under ל can be seen. The top dot of the שווא (under the ש) is very faint. See my entry for 22:21@3MV %עמי for μA and μY images."
+      "Perhaps some very faint remains of an אתנח under ל can be seen. The top dot of the שווא (under the ש) is very faint. See my entry for $link_22_21_3MV %עמי for μA and μY images."
     ],
     "qr-highlight": 3,
     "qr-ac-loc": {
@@ -4294,7 +4294,7 @@
           "ידעתה השחר"
         ]
       },
-      " in 38:12@YD3F_HJXR."
+      " in $link_38_12_YD3F_HJXR."
     ],
     "qr-noted-by": "nWLC",
     "qr-lc-img": "2614.png",
@@ -4371,7 +4371,7 @@
       "word": 1
     },
     "qr-generic-comment": [
-      "As $DM footnote 20 mentions, this is one of three such cases, the other two being 9:35 and 34:33@HM3M5. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
+      "As $DM footnote 20 mentions, this is one of three such cases, the other two being 9:35 and $link_34_33_HM3M5. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
     ],
     "qr-lc-img": "2709.png",
     "qr-aleppo-img": "Aleppo-2709.png",
@@ -5329,7 +5329,7 @@
       "word": 2
     },
     "qr-generic-comment": [
-      "As $DM footnote 32 mentions, in two cases in Job, μL omits the לגרמיה stroke before a word with געיה and רביע. The other such case is 34:33@YJLMNH_2_of_2_FTW. In both cases, it looks like there may have been an erasure in between the words, where one would expect a לגרמיה to have been, if one was originally present in μL."
+      "As $DM footnote 32 mentions, in two cases in Job, μL omits the לגרמיה stroke before a word with געיה and רביע. The other such case is $link_34_33_YJLMNH_2_of_2_FTW. In both cases, it looks like there may have been an erasure in between the words, where one would expect a לגרמיה to have been, if one was originally present in μL."
     ],
     "qr-lc-img": "3211.png",
     "qr-aleppo-img": "Aleppo-3211.png",
@@ -5877,7 +5877,7 @@
       "word": 7
     },
     "qr-generic-comment": [
-      "As $DM footnote 32 mentions, in two cases in Job, μL omits the לגרמיה stroke before a word with געיה and רביע. The other such case is 32:11. In both cases, it looks like there may have been an erasure in between the words, where one would expect a לגרמיה to have been, if one was originally present in μL. In this case here in ~34:33, there is an additional mark after the possible erasure. This mark is hard to interpret."
+      "As $DM footnote 32 mentions, in two cases in Job, μL omits the לגרמיה stroke before a word with געיה and רביע. The other such case is 32:11. In both cases, it looks like there may have been an erasure in between the words, where one would expect a לגרמיה to have been, if one was originally present in μL. In this case here in $plain_34_33, there is an additional mark after the possible erasure. This mark is hard to interpret."
     ],
     "qr-word-id": "YJLMNH_2_of_2_FTW",
     "qr-lc-img": "3433-YJLMNH_2_of_2_FTW.png",
@@ -5990,7 +5990,7 @@
       "word": 2
     },
     "qr-generic-comment": [
-      "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See 16:6, 21:15, and 34:33@VMH0YD3F."
+      "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See 16:6, 21:15, and $link_34_33_VMH0YD3F."
     ],
     "qr-lc-img": "3507.png",
     "qr-aleppo-img": "Aleppo-3507.png",
@@ -7153,7 +7153,7 @@
     "qr-lc-proposed": "הְֽ֭תַרְעִישֶׁנּוּ",
     "qr-what-is-weird": "simple שווא not חטף פתח",
     "qr-consensus": "הֲֽ֭תַרְעִישֶׁנּוּ",
-    "qr-generic-comment": "The situation with %המימיך in 38:12@HMYMY5 is similar.",
+    "qr-generic-comment": "The situation with %המימיך in $link_38_12_HMYMY5 is similar.",
     "qr-highlight": 1,
     "qr-lc-loc": {
       "page": "408B",

@@ -168,6 +168,11 @@ def dollar_sub(contents):
     return dollar_sub_g.dollar_sub_g(_DOLLAR_SUB_DISPATCH, contents)
 
 
+def add_dollar_sub_entries(extras):
+    """Merge extra $-dispatch entries (from verse_ref_link) at runtime."""
+    _DOLLAR_SUB_DISPATCH.update(extras)
+
+
 def std_table(
     table_data,
     coldirs=None,

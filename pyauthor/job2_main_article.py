@@ -314,7 +314,9 @@ def _reiterates_part1(the_len):
 
 
 _COUNT_OF_RNTQ = 3  # RNTQ: reiterations new to BHQ
-_DESCRIPTION_OF_RNTQ = ["three that are new are the ones in 6:21, ~18:4, and ~19:16"]
+_DESCRIPTION_OF_RNTQ = [
+    "three that are new are the ones in 6:21, $plain_18_4, and $plain_19_16"
+]
 _WORDS_FOR_NUMBERS = {1: "one", 2: "two", 3: "three", 4: "four"}
 
 

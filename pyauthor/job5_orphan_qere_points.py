@@ -29,7 +29,7 @@ def _make_cbody():
         author.heading_level_1(D5_H1_CONTENTS),
         author.para(_INTRO),
         #
-        author.heading_level_2("2 Kings ~4:7"),
+        author.heading_level_2("$2Kings_4_7"),
         author.para(_KINGS_INTRO),
         author.para(_KINGS_DISCUSSION_1),
         author.para(_KINGS_DISCUSSION_2),
@@ -40,13 +40,13 @@ def _make_cbody():
         author.para(_KINGS_DISCUSSION_5),
         author.para(_KINGS_DISCUSSION_6),
         #
-        author.heading_level_2("Lamentations ~4:16"),
+        author.heading_level_2("$Lamentations_4_16"),
         author.para(_LAMENTATIONS_INTRO),
         author.para(_LAMENTATIONS_DISCUSSION_1),
         _img("Sassoon-1053-Lamentations-c4v16.png"),
         author.para(_LAMENTATIONS_DISCUSSION_2),
         #
-        author.heading_level_2("2 Samuel ~18:20"),
+        author.heading_level_2("$2Samuel_18_20"),
         author.para(_SAMUEL_INTRO),
         author.para(_SAMUEL_DISCUSSION_1),
         _img("2-Samuel-c18v20.png"),
@@ -59,7 +59,7 @@ def _img(img):
 
 
 _INTRO = [
-    "In Job 38:12@YD3F_HJXR, the Jerusalem Crown edition puts a פתח on no letter.",
+    "In Job $link_38_12_YD3F_HJXR, the Jerusalem Crown edition puts a פתח on no letter.",
     " The פתח floats before the ש of %שחר.",
     #
     " Although neither μA nor μL presents this כתיב/קרי like this,",
@@ -68,7 +68,7 @@ _INTRO = [
 ]
 
 _KINGS_INTRO = [
-    ["In 2 Kings ~4:7 (", *_links_to_u_and_m(tbn.BK_SND_KGS, 4, 7), "),"],
+    ["In $2Kings_4_7 (", *_links_to_u_and_m(tbn.BK_SND_KGS, 4, 7), "),"],
     [" there is a קרי of ", author.hbo("וּבָנַ֔יִךְ")],
     [" corresponding to a כתיב of ", author.hbo("בניכי"), "."],
 ]
@@ -107,7 +107,7 @@ _KINGS_DISCUSSION_5 = [
     #
     " When a כתיב lacks a final שורוק, we see a related use of קובוץ.",
     #
-    " An example is found in 1 Samuel ~12:10",
+    " An example is found in $1Samuel_12_10",
     [" (", *_links_to_u_and_m(tbn.BK_FST_SAM, 12, 10), ")"],
     " where, in Tiberian manuscripts,",
     [" a pointed כתיב of ", author.hbo("וַיֹּאמְרֻ֣")],
@@ -130,12 +130,12 @@ _KINGS_DISCUSSION_6 = [
 ]
 
 _LAMENTATIONS_INTRO = [
-    ["In Lamentations ~4:16 (", *_links_to_u_and_m(tbn.BK_LAMENT, 4, 16), "),"],
+    ["In $Lamentations_4_16 (", *_links_to_u_and_m(tbn.BK_LAMENT, 4, 16), "),"],
     [" there is a קרי of ", author.hbo("וּזְקֵנִ֖ים")],
     [" corresponding to a כתיב of ", author.hbo("זקנים"), "."],
 ]
 _LAMENTATIONS_DISCUSSION_1 = [
-    "As in 2 Kings ~4:7,",
+    "As in $2Kings_4_7,",
     " the קובוץ floats before the first letter of the word,",
     " which in this case is ז.",
     " Here is the way this word looks in Sassoon 1053:",
@@ -148,7 +148,7 @@ _LAMENTATIONS_DISCUSSION_2 = [
 ]
 
 _SAMUEL_INTRO = [
-    ["2 Samuel ~18:20 (", *_links_to_u_and_m(tbn.BK_SND_SAM, 18, 20), ")"],
+    ["$2Samuel_18_20 (", *_links_to_u_and_m(tbn.BK_SND_SAM, 18, 20), ")"],
     [" is a קרי ולא כתיב: the word ", author.hbo("כֵּ֥ן")],
     " is read but not written, where by “not written” we mean not written in formal texts.",
     #
