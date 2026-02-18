@@ -71,5 +71,20 @@ def _bare_cv(v: str) -> str:
     return v
 
 
+_REITERATION_NEW_IN_BHQ_VERSES = [
+    "$link_6_21",
+    "$link_18_4_HLM3N5_2_of_2_FTW",
+    "$link_19_16_QRAFY",
+]
+
+
+def reiteration_new_in_bhq(cv: str) -> str:
+    others = _all_verses_but_this(_REITERATION_NEW_IN_BHQ_VERSES, cv)
+    return (
+        "This is one of the three reiterations that is new in $BHQ,"
+        f" i.e. not present in $BHS. The other two are {others}."
+    )
+
+
 def _all_ndam_but_this(cv: str) -> str:
     return _all_verses_but_this(_NO_DAG_AFTER_MAH_VERSES, cv)

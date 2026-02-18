@@ -724,6 +724,7 @@
         ]
       }
     ],
+    "qr-bhq-comment": "This is one of the three reiterations that is new in $BHQ, i.e. not present in $BHS. The other two are $link_18_4_HLM3N5_2_of_2_FTW and $link_19_16_QRAFY.",
     "qr-lc-loc": {
       "page": "398B",
       "column": 2,
@@ -2751,7 +2752,7 @@
     "qr-ignore-g3yh-diff-in-consensus": true,
     "qr-highlight": 3,
     "qr-bhq-comment": [
-      "$BHQ notes that the דגש on the מ in μL disagrees with μA and μY. $BHQ misses the געיה in μA. This געיה is irrelevant to $BHQ’s point here, which is about the דגש. Still, it would have been nice if $BHQ had transcribed μA’s געיה."
+      "$BHQ notes that the דגש on the מ in μL disagrees with μA and μY. $BHQ misses the געיה in μA. This געיה is irrelevant to $BHQ’s point here, which is about the דגש. Still, it would have been nice if $BHQ had transcribed μA’s געיה. This is one of the three reiterations that is new in $BHQ, i.e. not present in $BHS. The other two are $link_6_21 and $link_19_16_QRAFY."
     ],
     "qr-noted-by": "nBHQ-nBHL-nDM",
     "qr-ac-loc": {
@@ -3054,7 +3055,9 @@
       "line": 11,
       "word": 4
     },
-    "qr-bhq-comment": "$BHQ notes that the דגש on the ק in μL disagrees with μA and μY.",
+    "qr-bhq-comment": [
+      "$BHQ notes that the דגש on the ק in μL disagrees with μA and μY. This is one of the three reiterations that is new in $BHQ, i.e. not present in $BHS. The other two are $link_6_21 and $link_18_4_HLM3N5_2_of_2_FTW."
+    ],
     "qr-noted-by": "nBHQ-nBHL",
     "qr-word-id": "QRAFY",
     "qr-lc-img": "1916-QRAFY.png",

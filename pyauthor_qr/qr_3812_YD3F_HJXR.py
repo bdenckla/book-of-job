@@ -21,7 +21,11 @@ _GENCOM_1 = [
         author.span_unpointed_tanakh("הייתה מוציא"),
         ") and",
     ],
-    [" $Ezekiel_42_9 (the כתיב is ", author.span_unpointed_tanakh("ומתחתה לשכות"), ")."],
+    [
+        " $Ezekiel_42_9 (the כתיב is ",
+        author.span_unpointed_tanakh("ומתחתה לשכות"),
+        ").",
+    ],
     " In contrast to the consensus, in going from כתיב to קרי,",
     [" μL can be thought of as having ", my_html.bold("copied")],
     " the ה to the second word rather than moving it.",

@@ -1,3 +1,4 @@
+from pyauthor_util.all_verses_but_this import reiteration_new_in_bhq
 from pyauthor_util.job_common import RECORD_1804_CMN_AB
 
 _BHQ_COMMENT_1804_B = [
@@ -5,6 +6,8 @@ _BHQ_COMMENT_1804_B = [
     " $BHQ misses the געיה in μA.",
     " This געיה is irrelevant to $BHQ’s point here, which is about the דגש.",
     " Still, it would have been nice if $BHQ had transcribed μA’s געיה.",
+    " ",
+    reiteration_new_in_bhq("18:4"),
 ]
 RECORD_1804_HLM3N5_2_of_2_FTW = {
     **RECORD_1804_CMN_AB,

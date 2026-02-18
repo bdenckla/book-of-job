@@ -1,4 +1,5 @@
 from pyauthor_util import author
+from pyauthor_util.all_verses_but_this import reiteration_new_in_bhq
 
 _GENCOM_PARA1 = [
     "Consensus has no כתיב/קרי here, or, if you like,",
@@ -22,6 +23,7 @@ RECORD_0621 = {
     "qr-what-is-weird": "קרי of %לו not %לא",
     "qr-highlight": [1, 2],
     "qr-generic-comment": [author.para(_GENCOM_PARA1), author.para(_GENCOM_PARA2)],
+    "qr-bhq-comment": reiteration_new_in_bhq("6:21"),
     "qr-lc-loc": {"page": "398B", "column": 2, "line": 20},
     "qr-ac-loc": {"page": "271v", "column": 2, "line": 17, "word": 6},
 }
