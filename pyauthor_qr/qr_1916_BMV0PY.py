@@ -18,6 +18,7 @@ RECORD_1916_BMV0PY = {
     "qr-noted-by-mam": True,
     "qr-noted-by": "aDM",
     "qr-cv": "19:16",
+    "qr-word-id": "BMV0PY",
     "qr-ac-proposed": "בְּ֝מוֹ־פִ֗י",
     "qr-consensus": "בְּמוֹ־פִ֝֗י",
     "qr-highlight-ac-proposed": [1, 5],

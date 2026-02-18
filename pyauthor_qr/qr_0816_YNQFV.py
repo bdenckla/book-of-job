@@ -1,5 +1,6 @@
 RECORD_0816_YNQFV = {
     "qr-cv": "8:16",
+    "qr-word-id": "YNQFV",
     "qr-lc-proposed": "יֹ֭נַקְתּ֥וֹ",
     "qr-what-is-weird": "דחי not געיה",
     "qr-consensus": "יֹֽנַקְתּ֥וֹ",

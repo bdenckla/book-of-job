@@ -16,6 +16,7 @@ _CAM1753_IMG_INTRO_2221 = [
 ]
 RECORD_2221_3MV = {
     **RECORD_2221_CMN_AB,
+    "qr-word-id": "3MV",
     "qr-lc-q": "(?)",
     "qr-lc-proposed": "עִמּ֑וֹ",
     "qr-what-is-weird": "אתנח not מונח",

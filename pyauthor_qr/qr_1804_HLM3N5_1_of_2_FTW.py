@@ -9,6 +9,7 @@ _BHQ_COMMENT_1804_A = [
 ]
 RECORD_1804_HLM3N5_1_of_2_FTW = {
     **RECORD_1804_CMN_AB,
+    "qr-word-id": "HLM3N5_1_of_2_FTW",
     "qr-intermediate": "הַֽ֭לְמַּעַנְךָ",
     "qr-n_of_m_for_this_word": (1, 2),  # this is record 1 of 2 for this word
     "qr-what-is-weird": "פתח on ה is חטף",

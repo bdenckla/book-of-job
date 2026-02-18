@@ -1,6 +1,7 @@
 RECORD_4019_H3JV = {
     "qr-noted-by": "nDM",
     "qr-cv": "40:19",
+    "qr-word-id": "H3JV",
     "qr-consensus": "הָ֝עֹשׂ֗וֹ",
     "qr-lc-proposed": "הָ֝עֹשׂוֹ",
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",

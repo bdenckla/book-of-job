@@ -13,6 +13,7 @@ _BHQ_COMMENT_2221_B = [
 ]
 RECORD_2221_VJL6 = {
     **RECORD_2221_CMN_AB,
+    "qr-word-id": "VJL6",
     "qr-lc-proposed": "וּשְׁלם",
     "qr-what-is-weird": "ל lacks קמץ-אתנח",
     "qr-consensus": "וּשְׁלָ֑ם",

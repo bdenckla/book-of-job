@@ -1,5 +1,6 @@
 RECORD_4019_HVA = {
     "qr-cv": "40:19",
+    "qr-word-id": "HVA",
     "qr-lc-proposed": "ה֖וּא",
     "qr-what-is-weird": "טרחא not דחי",
     "qr-consensus": "ה֭וּא",

@@ -2,6 +2,7 @@ from pyauthor_util.all_verses_but_this import reiteration_new_in_bhq
 
 RECORD_1916_QRAFY = {
     "qr-cv": "19:16",
+    "qr-word-id": "QRAFY",
     "qr-lc-q": "(?)",
     "qr-lc-proposed": "קָּ֭רָאתִי",
     "qr-what-is-weird": "ק has דגש",

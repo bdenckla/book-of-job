@@ -2,6 +2,7 @@ from pyauthor_util.uxlc_change import uxlc_change
 
 RECORD_3719_LA0 = {
     "qr-cv": "37:19",
+    "qr-word-id": "LA0",
     "qr-lc-proposed": "לֹ֥א־",
     "qr-what-is-weird": "מרכא not געיה",
     "qr-consensus": "לֹֽא־",

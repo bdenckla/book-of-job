@@ -8,6 +8,7 @@ _BHQ_COMMENT_2230_A = [
 
 RECORD_2230_YMLE = {
     "qr-cv": "22:30",
+    "qr-word-id": "YMLE",
     "qr-lc-proposed": "יֽ͏ְמַלֵּ֥ט",
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "$yod has געיה",

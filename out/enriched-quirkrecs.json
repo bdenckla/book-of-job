@@ -1117,6 +1117,7 @@
   },
   {
     "qr-cv": "8:16",
+    "qr-word-id": "HVA",
     "qr-lc-proposed": "ה֖וּא",
     "qr-what-is-weird": "טרחא not דחי",
     "qr-consensus": "ה֭וּא",
@@ -1133,7 +1134,6 @@
       "word": 6
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
-    "qr-word-id": "HVA",
     "qr-lc-img": "0816-HVA.png",
     "qr-aleppo-img": "Aleppo-0816-HVA.png",
     "aleppo-img-intro": "page 272r, col 2, line 16, word 6",
@@ -1152,6 +1152,7 @@
   },
   {
     "qr-cv": "8:16",
+    "qr-word-id": "YNQFV",
     "qr-lc-proposed": "יֹ֭נַקְתּ֥וֹ",
     "qr-what-is-weird": "דחי not געיה",
     "qr-consensus": "יֹֽנַקְתּ֥וֹ",
@@ -1171,7 +1172,6 @@
       "word": 3
     },
     "qr-noted-by": "tBHQ-zmiscWLC",
-    "qr-word-id": "YNQFV",
     "qr-lc-img": "0816-YNQFV.png",
     "qr-aleppo-img": "Aleppo-0816-YNQFV.png",
     "aleppo-img-intro": "page 272r, col 2, line 17, word 3",
@@ -2692,6 +2692,7 @@
       "column": 1,
       "line": -4
     },
+    "qr-word-id": "HLM3N5_1_of_2_FTW",
     "qr-intermediate": "הַֽ֭לְמַּעַנְךָ",
     "qr-n_of_m_for_this_word": [
       1,
@@ -2713,7 +2714,6 @@
       "line": 3,
       "word": 4
     },
-    "qr-word-id": "HLM3N5_1_of_2_FTW",
     "qr-lc-img": "1804-HLM3N5_1_of_2_FTW.png",
     "qr-aleppo-img": "Aleppo-1804-HLM3N5_1_of_2_FTW.png",
     "aleppo-img-intro": "page 274v, col 2, line 3, word 4",
@@ -2740,6 +2740,7 @@
       "column": 1,
       "line": -4
     },
+    "qr-word-id": "HLM3N5_2_of_2_FTW",
     "qr-intermediate": "הֲ֭לְמַעַנְךָ",
     "qr-n_of_m_for_this_word": [
       2,
@@ -2761,7 +2762,6 @@
       "line": 3,
       "word": 4
     },
-    "qr-word-id": "HLM3N5_2_of_2_FTW",
     "qr-lc-img": "1804-HLM3N5_2_of_2_FTW.png",
     "qr-aleppo-img": "Aleppo-1804-HLM3N5_2_of_2_FTW.png",
     "aleppo-img-intro": "page 274v, col 2, line 3, word 4",
@@ -3038,6 +3038,7 @@
   },
   {
     "qr-cv": "19:16",
+    "qr-word-id": "QRAFY",
     "qr-lc-q": "(?)",
     "qr-lc-proposed": "קָּ֭רָאתִי",
     "qr-what-is-weird": "ק has דגש",
@@ -3059,7 +3060,6 @@
       "$BHQ notes that the דגש on the ק in μL disagrees with μA and μY. This is one of the three reiterations that is new in $BHQ, i.e. not present in $BHS. The other two are $link_6_21 and $link_18_4_HLM3N5_2_of_2_FTW."
     ],
     "qr-noted-by": "nBHQ-nBHL",
-    "qr-word-id": "QRAFY",
     "qr-lc-img": "1916-QRAFY.png",
     "qr-aleppo-img": "Aleppo-1916-QRAFY.png",
     "aleppo-img-intro": "page 275r, col 1, line 11, word 4",
@@ -3080,6 +3080,7 @@
     "qr-noted-by-mam": true,
     "qr-noted-by": "aDM",
     "qr-cv": "19:16",
+    "qr-word-id": "BMV0PY",
     "qr-ac-proposed": "בְּ֝מוֹ־פִ֗י",
     "qr-consensus": "בְּמוֹ־פִ֝֗י",
     "qr-highlight-ac-proposed": [
@@ -3113,7 +3114,6 @@
         ]
       }
     ],
-    "qr-word-id": "BMV0PY",
     "qr-lc-img": "1916-BMV0PY.png",
     "qr-aleppo-img": "Aleppo-1916-BMV0PY.png",
     "aleppo-img-intro": "page 275r, col 1, line 12, word 2",
@@ -3496,6 +3496,7 @@
       "column": 1,
       "line": -6
     },
+    "qr-word-id": "3MV",
     "qr-lc-q": "(?)",
     "qr-lc-proposed": "עִמּ֑וֹ",
     "qr-what-is-weird": "אתנח not מונח",
@@ -3520,7 +3521,6 @@
       "line": 10,
       "word": 3
     },
-    "qr-word-id": "3MV",
     "qr-lc-img": "2221-3MV.png",
     "qr-aleppo-img": "Aleppo-2221-3MV.png",
     "qr-cam1753-img": "Cam1753-2221-3MV.png",
@@ -3545,6 +3545,7 @@
       "column": 1,
       "line": -6
     },
+    "qr-word-id": "VJL6",
     "qr-lc-proposed": "וּשְׁלם",
     "qr-what-is-weird": "ל lacks קמץ-אתנח",
     "qr-consensus": "וּשְׁלָ֑ם",
@@ -3562,7 +3563,6 @@
       "$BHQ (charitably) transcribes the top dot of the שווא using, as one often has to, faint evidence bolstered by consensus expectations. $BHQ notes (as does $BHS) that whereas the ל of %ושלם is unpointed in μL, that ל has קמץ and אתנח in μA and μY."
     ],
     "qr-noted-by": "nBHQ-nWLC",
-    "qr-word-id": "VJL6",
     "qr-lc-img": "2221-VJL6.png",
     "qr-aleppo-img": "Aleppo-2221-VJL6.png",
     "aleppo-img-intro": "page 276r, col 1, line 10, word 4",
@@ -3716,6 +3716,7 @@
   },
   {
     "qr-cv": "22:30",
+    "qr-word-id": "YMLE",
     "qr-lc-proposed": "יֽ͏ְמַלֵּ֥ט",
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "$yod has געיה",
@@ -3740,7 +3741,6 @@
     ],
     "qr-noted-by": "tBHQ-nWLC",
     "qr-uxlc-needs-fix": "add t-note (transcription uncertain)",
-    "qr-word-id": "YMLE",
     "qr-lc-img": "2230-YMLE.png",
     "qr-aleppo-img": "Aleppo-2230-YMLE.png",
     "aleppo-img-intro": "page 276r, col 1, line 20, word 2",
@@ -3759,6 +3759,7 @@
   },
   {
     "qr-cv": "22:30",
+    "qr-word-id": "VNMLE",
     "qr-lc-proposed": "וְ֝נִּמְלַ֗ט",
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "נ has דגש",
@@ -3781,7 +3782,6 @@
     ],
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": true,
-    "qr-word-id": "VNMLE",
     "qr-lc-img": "2230-VNMLE.png",
     "qr-aleppo-img": "Aleppo-2230-VNMLE.png",
     "aleppo-img-intro": "page 276r, col 1, line 20, word 5",
@@ -5586,6 +5586,7 @@
   },
   {
     "qr-cv": "34:19",
+    "qr-word-id": "NKR0",
     "qr-lc-proposed": "נִּכַּר־",
     "qr-what-is-weird": "נ has דגש",
     "qr-consensus": "נִכַּר־",
@@ -5694,7 +5695,6 @@
       }
     ],
     "qr-noted-by": "nBHL-nDM",
-    "qr-word-id": "NKR0",
     "qr-lc-img": "3419-NKR0.png",
     "qr-aleppo-img": "Aleppo-3419-NKR0.png",
     "aleppo-img-intro": "page 279r, col 1, line 22, word 7",
@@ -5713,6 +5713,7 @@
   },
   {
     "qr-cv": "34:19",
+    "qr-word-id": "JV3",
     "qr-lc-proposed": "שׁ֖וֹעַ",
     "qr-what-is-weird": "טרחא not דחי",
     "qr-consensus": "שׁ֭וֹעַ",
@@ -5729,7 +5730,6 @@
       "word": 8
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
-    "qr-word-id": "JV3",
     "qr-lc-img": "3419-JV3.png",
     "qr-aleppo-img": "Aleppo-3419-JV3.png",
     "aleppo-img-intro": "page 279r, col 1, line 22, word 8",
@@ -5783,6 +5783,7 @@
   {
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "34:33",
+    "qr-word-id": "HM3M5",
     "qr-consensus": "הֲֽמֵעִמְּךָ֬",
     "qr-lc-proposed": "הַֽמֵעִמְּךָ֬",
     "qr-what-is-weird": "פתח on ה is not חטף",
@@ -5801,7 +5802,6 @@
     "qr-generic-comment": [
       "As $DM footnote 20 mentions, this is one of three such cases, the other two being $link_9_35 and $link_27_9. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
     ],
-    "qr-word-id": "HM3M5",
     "qr-lc-img": "3433-HM3M5.png",
     "qr-aleppo-img": "Aleppo-3433-HM3M5.png",
     "aleppo-img-intro": "page 279r, col 2, line 11, word 6",
@@ -5821,6 +5821,7 @@
   {
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "34:33",
+    "qr-word-id": "YJLMNH_1_of_2_FTW",
     "qr-n_of_m_for_this_word": [
       1,
       2
@@ -5840,7 +5841,6 @@
       "line": 11,
       "word": 7
     },
-    "qr-word-id": "YJLMNH_1_of_2_FTW",
     "qr-lc-img": "3433-YJLMNH_1_of_2_FTW.png",
     "qr-aleppo-img": "Aleppo-3433-YJLMNH_1_of_2_FTW.png",
     "aleppo-img-intro": "page 279r, col 2, line 11, word 7",
@@ -5860,6 +5860,7 @@
   {
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "34:33",
+    "qr-word-id": "YJLMNH_2_of_2_FTW",
     "qr-n_of_m_for_this_word": [
       2,
       2
@@ -5882,7 +5883,6 @@
     "qr-generic-comment": [
       "As $DM footnote 32 mentions, in two cases in Job, μL omits the לגרמיה stroke before a word with געיה and רביע. The other such case is $link_32_11. In both cases, it looks like there may have been an erasure in between the words, where one would expect a לגרמיה to have been, if one was originally present in μL. In this case here in $plain_34_33, there is an additional mark after the possible erasure. This mark is hard to interpret."
     ],
-    "qr-word-id": "YJLMNH_2_of_2_FTW",
     "qr-lc-img": "3433-YJLMNH_2_of_2_FTW.png",
     "qr-aleppo-img": "Aleppo-3433-YJLMNH_2_of_2_FTW.png",
     "aleppo-img-intro": "page 279r, col 2, line 11, word 7",
@@ -5902,6 +5902,7 @@
   {
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "34:33",
+    "qr-word-id": "VMH0YD3F",
     "qr-consensus": "וּֽמַה־יָּדַ֥עְתָּ",
     "qr-lc-proposed": "וּֽמַה־יָדַ֥עְתָּ",
     "qr-what-is-weird": "$yod lacks דגש",
@@ -5920,7 +5921,6 @@
     "qr-generic-comment": [
       "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See $link_16_6, $link_21_15, and $link_35_7."
     ],
-    "qr-word-id": "VMH0YD3F",
     "qr-lc-img": "3433-VMH0YD3F.png",
     "qr-aleppo-img": "Aleppo-3433-VMH0YD3F.png",
     "aleppo-img-intro": "page 279r, col 2, line 13, word 1",
@@ -6388,6 +6388,7 @@
   },
   {
     "qr-cv": "37:19",
+    "qr-word-id": "HVDY3NV",
     "qr-lc-proposed": "ה֖וֹדִיעֵנוּ",
     "qr-what-is-weird": "טרחא not דחי",
     "qr-consensus": "ה֭וֹדִיעֵנוּ",
@@ -6407,7 +6408,6 @@
     "qr-generic-comment": [
       "The pointing of this word must, by necessity, be transcribed with much charity. Nonetheless, the mark in question here is fairly clearly positioned as a דחי not a טרחא, though it is, unfortunately, attached to the right leg of the ה. (At least, it is attached to the right leg of the re-inked ה.)"
     ],
-    "qr-word-id": "HVDY3NV",
     "qr-lc-img": "3719-HVDY3NV.png",
     "qr-aleppo-img": "Aleppo-3719-HVDY3NV.png",
     "aleppo-img-intro": "page 280r, col 1, line 13, word 1",
@@ -6426,6 +6426,7 @@
   },
   {
     "qr-cv": "37:19",
+    "qr-word-id": "LA0",
     "qr-lc-proposed": "לֹ֥א־",
     "qr-what-is-weird": "מרכא not געיה",
     "qr-consensus": "לֹֽא־",
@@ -6446,7 +6447,6 @@
     },
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-43",
-    "qr-word-id": "LA0",
     "qr-lc-img": "3719-LA0.png",
     "qr-aleppo-img": "Aleppo-3719-LA0.png",
     "aleppo-img-intro": "page 280r, col 1, line 13, word 5",
@@ -6499,6 +6499,7 @@
   },
   {
     "qr-cv": "38:12",
+    "qr-word-id": "HMYMY5",
     "qr-lc-proposed": "הְֽ֭מִיָּמֶיךָ",
     "qr-what-is-weird": "simple שווא not חטף פתח",
     "qr-consensus": "הֲֽ֭מִיָּמֶיךָ",
@@ -6519,7 +6520,6 @@
       "$BHQ notes that here μL disagrees with μA and μY, which have the consensus pointing."
     ],
     "qr-noted-by": "nBHQ-nBHL-nDM-nWLC",
-    "qr-word-id": "HMYMY5",
     "qr-lc-img": "3812-HMYMY5.png",
     "qr-aleppo-img": "Aleppo-3812-HMYMY5.png",
     "aleppo-img-intro": "page 280r, col 2, line 6, word 5",
@@ -6538,6 +6538,7 @@
   },
   {
     "qr-cv": "38:12",
+    "qr-word-id": "YD3F_HJXR",
     "qr-lc-proposed": "יִדַּ֖עְתָּה הַשַּׁ֣חַר",
     "qr-what-is-weird": "ה copied not moved in קרי",
     "qr-consensus": "יִדַּ֖עְתָּ הַשַּׁ֣חַר",
@@ -6693,7 +6694,6 @@
       }
     ],
     "qr-noted-by": "nWLC",
-    "qr-word-id": "YD3F_HJXR",
     "qr-lc-img": "3812-YD3F_HJXR.png",
     "qr-aleppo-img": "Aleppo-3812-YD3F_HJXR.png",
     "qr-jc-img": "Jerusalem-Crown-3812-YD3F_HJXR.png",
@@ -7261,6 +7261,7 @@
   },
   {
     "qr-cv": "40:19",
+    "qr-word-id": "HVA",
     "qr-lc-proposed": "ה֖וּא",
     "qr-what-is-weird": "טרחא not דחי",
     "qr-consensus": "ה֭וּא",
@@ -7277,7 +7278,6 @@
       "word": 1
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
-    "qr-word-id": "HVA",
     "qr-lc-img": "4019-HVA.png",
     "qr-aleppo-img": "Aleppo-4019-HVA.png",
     "aleppo-img-intro": "page 281r, col 1, line 16, word 1",
@@ -7297,6 +7297,7 @@
   {
     "qr-noted-by": "nDM",
     "qr-cv": "40:19",
+    "qr-word-id": "H3JV",
     "qr-consensus": "הָ֝עֹשׂ֗וֹ",
     "qr-lc-proposed": "הָ֝עֹשׂוֹ",
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
@@ -7315,7 +7316,6 @@
     "qr-generic-comment": [
       "There is a confusing constellation of three dots surrounding the ש in μL, but only one of those dots, a $sin dot, belongs to the ש. Working backwards (to the right) from that $sin dot, the next dot is a “קמץ dot” belonging to the מ of %גרמיו on the line above. The next dot is a חולם חסר dot belonging to the ע. (Or, if you prefer an alternative interpretation of חולם חסר dots in general, the חולם חסר dot belongs to an implicit $vav between the ע and ש.) The issue at hand is there is no fourth dot that could be interpreted as a רביע above the ש."
     ],
-    "qr-word-id": "H3JV",
     "qr-lc-img": "4019-H3JV.png",
     "qr-aleppo-img": "Aleppo-4019-H3JV.png",
     "aleppo-img-intro": "page 281r, col 1, line 16, word 5",

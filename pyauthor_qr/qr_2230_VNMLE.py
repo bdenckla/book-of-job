@@ -2,6 +2,7 @@ from pyauthor_util.job_common import BHQ_COMMENT_XELSEWHERE_DUBIOUS
 
 RECORD_2230_VNMLE = {
     "qr-cv": "22:30",
+    "qr-word-id": "VNMLE",
     "qr-lc-proposed": "וְ֝נִּמְלַ֗ט",
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "נ has דגש",

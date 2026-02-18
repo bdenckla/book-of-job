@@ -59,6 +59,7 @@ _BHQ_COMMENT_3812_B = [
 ]
 RECORD_3812_YD3F_HJXR = {
     "qr-cv": "38:12",
+    "qr-word-id": "YD3F_HJXR",
     "qr-lc-proposed": "יִדַּ֖עְתָּה הַשַּׁ֣חַר",
     "qr-what-is-weird": "ה copied not moved in קרי",
     "qr-consensus": "יִדַּ֖עְתָּ הַשַּׁ֣חַר",
