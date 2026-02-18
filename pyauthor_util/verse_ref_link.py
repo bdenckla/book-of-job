@@ -62,6 +62,8 @@ def dollar_sub_extras():
             entries[f"$link_{ch}_{vs}"] = my_html.anchor_h(cv, href)
     # Multi-record Job verses: disambiguated links
     for cv, cv_under, wordid in [
+        ("18:4", "18_4", "HLM3N5_2_of_2_FTW"),
+        ("19:16", "19_16", "QRAFY"),
         ("22:21", "22_21", "3MV"),
         ("38:12", "38_12", "YD3F_HJXR"),
         ("38:12", "38_12", "HMYMY5"),

@@ -528,8 +528,6 @@ _DOLLAR_SUB_DISPATCH = {
     # Plain verse references (no link): multi-record Job verses
     "$plain_3_2": "3:2",
     "$plain_42_6": "42:6",
-    "$plain_18_4": "18:4",
-    "$plain_19_16": "19:16",
     "$plain_34_33": "34:33",
     #
     # Verse-ref links: static plain-text fallbacks for $link_C_V tokens.
@@ -565,6 +563,8 @@ _DOLLAR_SUB_DISPATCH = {
     "$link_39_20": "39:20",
     #
     # Multi-record verse-ref links (disambiguated by word ID)
+    "$link_18_4_HLM3N5_2_of_2_FTW": "18:4",
+    "$link_19_16_QRAFY": "19:16",
     "$link_22_21_3MV": "22:21",
     "$link_38_12_YD3F_HJXR": "38:12",
     "$link_38_12_HMYMY5": "38:12",
