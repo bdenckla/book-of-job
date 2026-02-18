@@ -1,6 +1,8 @@
 import os
+from collections import Counter
 from pyauthor_util.add_auto_diff import _enrich_one_qr_by_adding_auto_diff
 from pyauthor_util.flatten_qrs import _enrich_one_qr_by_flattening_strs
+from pyauthor_util.author import consensus_to_ascii
 from pyauthor_util.img_util import _INFO_ABOUT_OPTIONAL_IMAGES, get_auto_imgs
 from pyauthor_util.short_id_etc import short_id
 from pyauthor_util.noted_by import nb_dict
@@ -37,6 +39,7 @@ def get_enriched_quirkrecs(jobn_rel_top, json_outdir):
 
 def _enrich_quirkrecs(jobn_rel_top):
     _assert_cv_ordering(RAW_QUIRKRECS)
+    _assert_word_ids(RAW_QUIRKRECS)
     result = sl_map((_do_pointwise_enrichments_of_one_qr, jobn_rel_top), RAW_QUIRKRECS)
     return result
 
@@ -105,6 +108,37 @@ def _enrich_one_qr_by_adding_auto_imgs(jobn_rel_top, quirkrec):
 
 def _assert_lc_img_fields_filled(qr):
     assert qr.get("qr-lc-img"), f"Missing qr-lc-img for {short_id(qr)}"
+
+
+def _assert_word_ids(raw_quirkrecs):
+    """Assert that hard-coded qr-word-id values match what would be computed.
+
+    Single-record verses must not have qr-word-id.
+    Multi-record verses must have qr-word-id matching the value derived
+    from consensus_to_ascii (with _N_of_M_FTW suffix when needed).
+    """
+    by_cv = {}
+    for qr in raw_quirkrecs:
+        by_cv.setdefault(qr["qr-cv"], []).append(qr)
+    for cv, group in by_cv.items():
+        if len(group) == 1:
+            assert "qr-word-id" not in group[0], (
+                f"{cv}: single-record verse should not have qr-word-id"
+            )
+            continue
+        base_wids = [consensus_to_ascii(qr["qr-consensus"]) for qr in group]
+        wid_counts = Counter(base_wids)
+        for qr, base_wid in zip(group, base_wids):
+            if wid_counts[base_wid] > 1:
+                n, m = qr["qr-n_of_m_for_this_word"]
+                expected = f"{base_wid}_{n}_of_{m}_FTW"
+            else:
+                expected = base_wid
+            actual = qr.get("qr-word-id")
+            assert actual == expected, (
+                f"{cv}: qr-word-id mismatch: "
+                f"hard-coded {actual!r} != computed {expected!r}"
+            )
 
 
 def _cv_key(quirkrec):

@@ -5,7 +5,8 @@ Run all check scripts for this project.
 Checks run:
   1. pyspellcheck/spellcheck_quirkrecs.py  (spell check quirk records)
   2. check_function_ordering.py            (public-before-private ordering)
-  3. check_html_syntax_and_sanity.py       (HTML output lint)
+  3. check_qr_consistency.py               (qr filename/record/word-id sync)
+  4. check_html_syntax_and_sanity.py       (HTML output lint)
 
 Exit codes:
   0 - All checks passed
@@ -22,6 +23,7 @@ import sys
 
 import check_function_ordering
 import check_html_syntax_and_sanity
+import check_qr_consistency
 import check_spelling_in_html
 
 _SEPARATOR = "\u2500" * 60
@@ -46,6 +48,7 @@ def main():
     checks = [
         ("Spell check (HTML output)", _run_spellcheck),
         ("Function ordering", _run_function_ordering),
+        ("QR filename/record consistency", _run_qr_consistency),
         ("HTML output lint", lambda: _run_html_lint(args)),
     ]
 
@@ -77,6 +80,10 @@ def _run_spellcheck():
 
 def _run_function_ordering():
     return check_function_ordering.main()
+
+
+def _run_qr_consistency():
+    return check_qr_consistency.main()
 
 
 def _run_html_lint(args):
