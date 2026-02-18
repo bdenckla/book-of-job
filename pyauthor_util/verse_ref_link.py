@@ -10,7 +10,7 @@ _d1d_fname = None
 
 
 def init_verse_links(enriched_quirkrecs, d1d_fname):
-    """Build and store the verse-reference auto-linking map.
+    """Build and store the verse-reference linking map.
 
     Args:
         enriched_quirkrecs: list of enriched quirkrec dicts
@@ -29,33 +29,6 @@ def init_verse_links(enriched_quirkrecs, d1d_fname):
     add_dollar_sub_entries(dollar_sub_extras())
 
 
-def verse_ref_link(cv):
-    """Convert a chapter:verse string to a link, or assert on problems.
-
-    Returns an <a> element linking to the detail row for unambiguous
-    verses.  Asserts (fails the build) when the verse has no record or
-    has multiple records.
-    """
-    if _cv_to_sids is None:
-        # Verse linking not initialized; pass through as plain text.
-        return cv
-    sids = _cv_to_sids.get(cv)
-    if sids is None:
-        assert False, (
-            f"Verse reference {cv} has no quirkrec record. "
-            f"Use a $-entry to suppress auto-linking."
-        )
-    if len(sids) > 1:
-        assert False, (
-            f"Verse reference {cv} has multiple quirkrec records "
-            f"({', '.join(sids)}). "
-            f"Use a $link_ or $plain_ entry to handle this."
-        )
-    sid = sids[0]
-    href = f"{_d1d_fname}#row-{sid}"
-    return my_html.anchor_h(cv, href)
-
-
 def _link_to_sid(cv, wordid):
     """Build an <a> element linking to a specific multi-record row."""
     ch, vs = cv.split(":")
@@ -70,23 +43,23 @@ def _link_to_sid(cv, wordid):
 
 
 def dollar_sub_extras():
-    """Return extra $-dispatch entries for verse-ref special cases.
+    """Return extra $-dispatch entries for verse-ref linking.
 
     These cover:
-    - $plain_C_V: multi-record Job verses rendered as plain text
+    - $link_C_V: single-record Job verses linked to their detail row
     - $link_C_V_WORDID: multi-record Job verses linked to a specific row
-    - $BOOK_C_V: non-Job bible references rendered as plain text
+
+    Plain-text entries ($plain_C_V, $BOOK_C_V) are in the static
+    dispatch dict in author.py since they must be available at import time.
     """
     entries = {}
-    # Multi-record Job verses: plain text (no link)
-    for cv_under, display in [
-        ("3_2", "3:2"),
-        ("42_6", "42:6"),
-        ("18_4", "18:4"),
-        ("19_16", "19:16"),
-        ("34_33", "34:33"),
-    ]:
-        entries[f"$plain_{cv_under}"] = display
+    # Single-record Job verses: auto-generate $link_C_V for each
+    for cv, sids in _cv_to_sids.items():
+        if len(sids) == 1:
+            ch, vs = cv.split(":")
+            sid = sids[0]
+            href = f"{_d1d_fname}#row-{sid}"
+            entries[f"$link_{ch}_{vs}"] = my_html.anchor_h(cv, href)
     # Multi-record Job verses: disambiguated links
     for cv, cv_under, wordid in [
         ("22:21", "22_21", "3MV"),
@@ -97,12 +70,4 @@ def dollar_sub_extras():
         ("34:33", "34_33", "YJLMNH_2_of_2_FTW"),
     ]:
         entries[f"$link_{cv_under}_{wordid}"] = _link_to_sid(cv, wordid)
-    # Non-Job bible references: plain text
-    for key, display in [
-        ("$2Kings_4_7", "2 Kings 4:7"),
-        ("$Lamentations_4_16", "Lamentations 4:16"),
-        ("$2Samuel_18_20", "2 Samuel 18:20"),
-        ("$1Samuel_12_10", "1 Samuel 12:10"),
-    ]:
-        entries[key] = display
     return entries

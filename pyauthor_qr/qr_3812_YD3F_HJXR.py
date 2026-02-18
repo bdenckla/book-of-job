@@ -17,11 +17,11 @@ _GENCOM_1 = [
     " moves to the start of the second word in the קרי.",
     " Similar cases include",
     [
-        " 2 Samuel 5:2 (the כתיב is ",
+        " $2Samuel_5_2 (the כתיב is ",
         author.span_unpointed_tanakh("הייתה מוציא"),
         ") and",
     ],
-    [" Ezekiel 42:9 (the כתיב is ", author.span_unpointed_tanakh("ומתחתה לשכות"), ")."],
+    [" $Ezekiel_42_9 (the כתיב is ", author.span_unpointed_tanakh("ומתחתה לשכות"), ")."],
     " In contrast to the consensus, in going from כתיב to קרי,",
     [" μL can be thought of as having ", my_html.bold("copied")],
     " the ה to the second word rather than moving it.",
@@ -51,7 +51,7 @@ _BHQ_COMMENT_3812_B = [
     " $BHQ half-fixes the error in $BHS:",
     " it updates its marginal קרי note to reflect μL rather than the consensus,",
     " but it does not correspondingly update its bottom-of-page critical apparatus note.",
-    " This is similar to what happened with 26:14.",
+    " This is similar to what happened with $link_26_14.",
 ]
 RECORD_3812_YD3F_HJXR = {
     "qr-cv": "38:12",

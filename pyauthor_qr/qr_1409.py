@@ -25,7 +25,7 @@ _COM3 = [
     " may seem to support the idea that the פתח belongs to the $yod,",
     " this is actually a common position for a furtive פתח.",
     #
-    " See, for example, the image we provide of %אלוה in 4:9 and 11:6."
+    " See, for example, the image we provide of %אלוה in $link_4_9 and $link_11_6."
     #
     " So, the position of the פתח",
     " is actually more consistent with the פתח belonging to the ח."

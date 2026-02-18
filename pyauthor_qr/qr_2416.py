@@ -20,7 +20,7 @@ _COM3 = [
     " The dot in question is suspiciously larger than nearby ones,",
     " and looks different from them in other ways.",
     #
-    " See 19:5.",
+    " See $link_19_5.",
 ]
 RECORD_2416 = {
     "qr-cv": "24:16",

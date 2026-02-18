@@ -2,11 +2,11 @@ from pyauthor_util.job_common import BHQ_COMMENT_CMN_0409_AND_SIMILAR
 
 BHQ_COMMENT_0409 = [
     *BHQ_COMMENT_CMN_0409_AND_SIMILAR,
-    " Six of these seven, including this one, are noted in the entry for 4:9 in the $BHQ",
+    " Six of these seven, including this one, are noted in the entry for $link_4_9 in the $BHQ",
     " section “Commentary on the Critical Apparatus.”",
-    " Only this one and 11:6",
+    " Only this one and $link_11_6",
     " are noted in the bottom-of-page critical apparatus as well.",
-    " The one in 4:17 is not noted in any way in $BHQ.",
+    " The one in $link_4_17 is not noted in any way in $BHQ.",
 ]
 
 RECORD_0409 = {

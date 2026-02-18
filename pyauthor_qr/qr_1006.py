@@ -7,35 +7,35 @@ _COMPAR1 = [
     " here we will try to explain why the transcription’s divergence from consensus",
     " seems so unlikely to reflect the scribal intent.",
 ]
-_PS118 = ["Ps 118:5 ", author.hbo("הַ֭מֵּצַ֥ר")]
+_PS118 = ["$Ps_118_5 ", author.hbo("הַ֭מֵּצַ֥ר")]
 _COMPAR2 = [
     ["In $BHS, a דחי followed by מרכא is probably found only here"],
     [" and in the following three cases:"],
-    [" Ps 86:7 ", author.hbo("צָ֭רָתִ֥י"), ","],
+    [" $Ps_86_7 ", author.hbo("צָ֭רָתִ֥י"), ","],
     [" ", *_PS118, ", and"],
-    [" Ps 139:7 ", author.hbo("אָ֭נָ֥ה"), "."],
+    [" $Ps_139_7 ", author.hbo("אָ֭נָ֥ה"), "."],
     [" In those three cases, there is little question about the דחי:"],
     [" the question is only whether the second mark is מרכא or געיה."],
     [" (In the ", *_PS118, " case, there is also a question of"],
     [" whether there should be a second mark at all.)"],
 ]
 _COMPAR3 = [
-    ["In contrast, here in 10:6 the דחי is highly questionable"],
+    ["In contrast, here in $plain_10_6 the דחי is highly questionable"],
     [" because it follows an אתנח,"],
     [" a sequence unprecedented in the consensus"],
     [" and rare even in $BHS, where it is probably found in only two other cases:"],
-    [" Ps 115:3 ", author.hbo("כֹּ֭ל אֲשֶׁר־חָפֵ֣ץ עָשָֽׂה׃"), " and"],
-    [" Ps 119:16 ", author.hbo("לֹ֭א אֶשְׁכַּ֣ח דְּבָרֶֽךָ׃"), "."],
+    [" $Ps_115_3 ", author.hbo("כֹּ֭ל אֲשֶׁר־חָפֵ֣ץ עָשָֽׂה׃"), " and"],
+    [" $Ps_119_16 ", author.hbo("לֹ֭א אֶשְׁכַּ֣ח דְּבָרֶֽךָ׃"), "."],
     [" In both of those two cases, טרחא is a better transcription of μL."],
 ]
 _COMPAR4 = [
-    ["After אתנח, the consensus sequence here in 10:6 is מרכא and then סילוק:"],
+    ["After אתנח, the consensus sequence here in $plain_10_6 is מרכא and then סילוק:"],
     [" ", author.hbo("וּֽלְחַטָּאתִ֥י תִדְרֽוֹשׁ׃"), "."],
     [" After אתנח, this sequence is found about 194 times in poetic verses,"],
     [" about 38 of which are in Job,"],
-    [" e.g. 6:12 ", author.hbo("אִֽם־בְּשָׂרִ֥י נָחֽוּשׁ׃"), ","],
-    [" 7:14 ", author.hbo("וּֽמֵחֶזְיֹנ֥וֹת תְּבַעֲתַֽנִּי׃"), ", and"],
-    [" 8:11 ", author.hbo("יִשְׂגֶּה־אָ֥חוּ בְלִי־מָֽיִם׃"), "."],
+    [" e.g. $plain_6_12 ", author.hbo("אִֽם־בְּשָׂרִ֥י נָחֽוּשׁ׃"), ","],
+    [" $plain_7_14 ", author.hbo("וּֽמֵחֶזְיֹנ֥וֹת תְּבַעֲתַֽנִּי׃"), ", and"],
+    [" $plain_8_11 ", author.hbo("יִשְׂגֶּה־אָ֥חוּ בְלִי־מָֽיִם׃"), "."],
 ]
 _COMPAR5 = [
     "This mark was probably transcribed as a דחי",

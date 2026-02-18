@@ -2,7 +2,7 @@ from pyauthor_util.job_common import BHQ_COMMENT_CMN_3105_3206
 
 _BHQ_COMMENT_3105 = [
     *BHQ_COMMENT_CMN_3105_3206,
-    " 32:6 is similar.",
+    " $link_32_6 is similar.",
     " In my opinion $BHQ shows itself to be out of date by continuing to aspire,",
     " as $BHS did,",
     " to reflect all such ordering quirks.",

@@ -315,7 +315,7 @@ def _reiterates_part1(the_len):
 
 _COUNT_OF_RNTQ = 3  # RNTQ: reiterations new to BHQ
 _DESCRIPTION_OF_RNTQ = [
-    "three that are new are the ones in 6:21, $plain_18_4, and $plain_19_16"
+    "three that are new are the ones in $link_6_21, $plain_18_4, and $plain_19_16"
 ]
 _WORDS_FOR_NUMBERS = {1: "one", 2: "two", 3: "three", 4: "four"}
 
@@ -363,7 +363,7 @@ def _bad_news_1(the_len):
         " But overall these missing transcriptions reflect poorly on $BHQ Job.",
         #
         " In all but one case, a note is also lacking.",
-        " (The one with a note is the one regarding %מאום in 31:7,",
+        " (The one with a note is the one regarding %מאום in $link_31_7,",
         " although the note, too, is inaccurate.)",
     ]
 

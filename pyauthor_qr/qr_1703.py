@@ -6,7 +6,7 @@ RECORD_1703 = {
     "qr-what-is-weird": "פתח not קמץ (קטן)",
     "qr-highlight": 1,
     "qr-generic-comment": [
-        "This case is the opposite of 3:4, except there the קמץ is not קטן."
+        "This case is the opposite of $link_3_4, except there the קמץ is not קטן."
         " Some very faint remains of what might have been a “קמץ dot” can perhaps be seen",
         " under the horizontal line that is transcribed as a פתח.",
     ],

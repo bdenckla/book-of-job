@@ -9,7 +9,7 @@ def suffix(contents):
 def correctly_ignores(what, cv, adjective=""):
     return [
         _corr_ig_cmn(what, adjective),
-        *_CORRECTLY_IGNORES[cv],
+        *[author.para(c) for c in _CORRECTLY_IGNORES_CONTENTS[cv]],
     ]
 
 
@@ -41,14 +41,10 @@ def _corr_ig_cmn(what, adjective):
     return author.para(contents)
 
 
-_SEE_3419 = [
-    author.para(
-        [
-            "See my entry on ",
-            author.span_unpointed_tanakh("נכר"),
-            " in 34:19 for further discussion.",
-        ]
-    )
+_SEE_3419_CONTENTS = [
+    "See my entry on ",
+    author.span_unpointed_tanakh("נכר"),
+    " in $link_34_19 for further discussion.",
 ]
 _MORE_BROADLY = [
     "More broadly, $BHQ Job never notes",
@@ -62,14 +58,14 @@ _MORE_BROADLY = [
     " $BHQ should, in my opinion, indicate to the reader the specific cases",
     " where its transcription is particularly uncertain.",
 ]
-_CORRECTLY_IGNORES_3419 = [
-    author.para(core_ignores("")),
-    author.para(_MORE_BROADLY),
+_CORRECTLY_IGNORES_3419_CONTENTS = [
+    core_ignores(""),
+    _MORE_BROADLY,
 ]
-_CORRECTLY_IGNORES = {
-    "34:19": _CORRECTLY_IGNORES_3419,
-    "36:29": _SEE_3419,
-    "17:4": _SEE_3419,
+_CORRECTLY_IGNORES_CONTENTS = {
+    "34:19": _CORRECTLY_IGNORES_3419_CONTENTS,
+    "36:29": [_SEE_3419_CONTENTS],
+    "17:4": [_SEE_3419_CONTENTS],
 }
 
 
@@ -88,7 +84,7 @@ BHQ_COMMENT_CMN_0409_AND_SIMILAR = [
 ]
 BHQ_COMMENT_LIKE_0409 = [
     *BHQ_COMMENT_CMN_0409_AND_SIMILAR,
-    " 4:9 discusses the matter at greater length.",
+    " $link_4_9 discusses the matter at greater length.",
 ]
 
 

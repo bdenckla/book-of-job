@@ -5,7 +5,7 @@ RECORD_2713 = {
     "qr-lc-proposed": "מִשַׁדַּ֥י",
     "qr-what-is-weird": "ש lacks דגש",
     "qr-consensus": "מִשַּׁדַּ֥י",
-    "qr-generic-comment": ["See 24:1 for discussion of the דגש in ש in %שדי."],
+    "qr-generic-comment": ["See $link_24_1 for discussion of the דגש in ש in %שדי."],
     "qr-highlight": 2,
     "qr-lc-loc": {"page": "404B", "column": 1, "line": 12},
     "qr-ac-loc": {"page": "276v", "column": 2, "line": 25, "word": 6},

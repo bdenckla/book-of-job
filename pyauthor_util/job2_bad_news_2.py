@@ -33,7 +33,7 @@ def wlc_misc_group_intro(len_misc):
 def wlc_dexi(len_dexi):
     return [
         _wlc_dexi_core(len_dexi),
-        " (note that 18:6 and 22:28 could also be considered to be in this group):",
+        " (note that $link_18_6 and $link_22_28 could also be considered to be in this group):",
     ]
 
 
@@ -43,7 +43,7 @@ def wlc_misc(len_misc):
         [" ", _wlc_misc_core(len_misc), "."],
         #
         f" (One of those {str(len_misc)},",
-        " the one in 22:12 goes in the opposite direction:",
+        " the one in $link_22_12 goes in the opposite direction:",
         " $BHQ has דחי but should probably have טרחא.)",
         #
         f" Here are those {str(len_misc)} cases:",

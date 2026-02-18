@@ -2,18 +2,18 @@ from pyauthor_util.english_list import english_list
 
 # Job verses where L omits dagesh after מה
 _NO_DAG_AFTER_MAH_VERSES = [
-    "16:6",
-    "21:15",
+    "$link_16_6",
+    "$link_21_15",
     "$link_34_33_VMH0YD3F",
-    "35:7",
+    "$link_35_7",
 ]
 _PTX_IS_NOT_XTF_VERSES = [
-    "9:35",
-    "27:9",
+    "$link_9_35",
+    "$link_27_9",
     "$link_34_33_HM3M5",
 ]
 _LEG_MISSING_BEFORE_G3YH_RBY3_VERSES = [
-    "32:11",
+    "$link_32_11",
     "$link_34_33_YJLMNH_2_of_2_FTW",
 ]
 

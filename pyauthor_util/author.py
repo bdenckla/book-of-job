@@ -502,6 +502,75 @@ _DOLLAR_SUB_DISPATCH = {
     **_UNICODE_NAME_SC,
     **_ABBR_SC,
     **_ROMANIZED,
+    #
+    # Plain verse references (no link): non-Job bible references
+    "$2Kings_4_7": "2 Kings 4:7",
+    "$Lamentations_4_16": "Lamentations 4:16",
+    "$2Samuel_18_20": "2 Samuel 18:20",
+    "$2Samuel_5_2": "2 Samuel 5:2",
+    "$1Samuel_12_10": "1 Samuel 12:10",
+    "$Isaiah_13_6": "Isaiah 13:6",
+    "$Joel_1_15": "Joel 1:15",
+    "$Ezekiel_42_9": "Ezekiel 42:9",
+    "$Ps_118_5": "Ps 118:5",
+    "$Ps_86_7": "Ps 86:7",
+    "$Ps_139_7": "Ps 139:7",
+    "$Ps_115_3": "Ps 115:3",
+    "$Ps_119_16": "Ps 119:16",
+    #
+    # Plain verse references (no link): Job verses without quirkrec records
+    # or self-references
+    "$plain_6_12": "6:12",
+    "$plain_7_14": "7:14",
+    "$plain_8_11": "8:11",
+    "$plain_10_6": "10:6",
+    #
+    # Plain verse references (no link): multi-record Job verses
+    "$plain_3_2": "3:2",
+    "$plain_42_6": "42:6",
+    "$plain_18_4": "18:4",
+    "$plain_19_16": "19:16",
+    "$plain_34_33": "34:33",
+    #
+    # Verse-ref links: static plain-text fallbacks for $link_C_V tokens.
+    # init_verse_links() overwrites these with <a> elements at runtime,
+    # but some qr_*.py files call author.para() at import time (before
+    # init_verse_links runs), so plain-text fallbacks must exist here.
+    "$link_3_4": "3:4",
+    "$link_4_9": "4:9",
+    "$link_4_17": "4:17",
+    "$link_5_23": "5:23",
+    "$link_6_17": "6:17",
+    "$link_6_21": "6:21",
+    "$link_9_35": "9:35",
+    "$link_11_6": "11:6",
+    "$link_16_6": "16:6",
+    "$link_18_6": "18:6",
+    "$link_19_5": "19:5",
+    "$link_21_15": "21:15",
+    "$link_22_12": "22:12",
+    "$link_22_28": "22:28",
+    "$link_24_1": "24:1",
+    "$link_24_16": "24:16",
+    "$link_26_14": "26:14",
+    "$link_27_9": "27:9",
+    "$link_27_13": "27:13",
+    "$link_31_5": "31:5",
+    "$link_31_7": "31:7",
+    "$link_32_6": "32:6",
+    "$link_32_11": "32:11",
+    "$link_34_5": "34:5",
+    "$link_34_19": "34:19",
+    "$link_35_7": "35:7",
+    "$link_39_20": "39:20",
+    #
+    # Multi-record verse-ref links (disambiguated by word ID)
+    "$link_22_21_3MV": "22:21",
+    "$link_38_12_YD3F_HJXR": "38:12",
+    "$link_38_12_HMYMY5": "38:12",
+    "$link_34_33_VMH0YD3F": "34:33",
+    "$link_34_33_HM3M5": "34:33",
+    "$link_34_33_YJLMNH_2_of_2_FTW": "34:33",
 }
 
 

@@ -2,7 +2,6 @@ import re
 
 from py import my_html
 from pycmn.my_utils import sl_map
-from pyauthor_util.verse_ref_link import verse_ref_link
 
 
 def dollar_sub_g(dispatch, contents):
@@ -18,6 +17,7 @@ def dollar_sub_g(dispatch, contents):
     flat_1 = my_html.flatten(contents)
     assert flat_1 is not None
     _check_no_undollared(dispatch, flat_1)
+    _check_no_bare_cv(flat_1)
     return sl_map((_dollar_sub_flat_el, dispatch), flat_1)
 
 
@@ -49,9 +49,30 @@ def _dollar_sub_flat_el(dispatch, flat_el):
     return flat_el
 
 
+def _check_no_bare_cv(flat_list):
+    """Assert that no bare chapter:verse references appear in display text.
+
+    All verse references must use explicit $-dispatch entries like
+    $link_C_V, $plain_C_V, $Ps_C_V, $Isaiah_C_V, etc.
+    Matches inside $-tokens are excluded by scrubbing them first.
+    """
+    strings = [el for el in flat_list if isinstance(el, str)]
+    full_text = "".join(strings)
+    # Remove all $-tokens first so their internal digits aren't matched
+    scrubbed = re.sub(r"\$[a-zA-Z0-9_]+", "", full_text)
+    m = re.search(r"\d+:\d+", scrubbed)
+    if m:
+        snippet = full_text[:200] if len(full_text) > 200 else full_text
+        assert False, (
+            f"Bare verse reference '{m.group()}' found in display text. "
+            f"Use a $link_C_V or $plain_C_V entry instead.\n"
+            f"Context: {snippet!r}"
+        )
+
+
 def _dollar_sub_str(dispatch, str):
     parts = re.split(
-        r"([$][a-zA-Z0-9_]+|%[\u05d0-\u05ea\u05be]+|\d+:\d+)",
+        r"([$][a-zA-Z0-9_]+|%[\u05d0-\u05ea\u05be]+)",
         str,
     )
     return sl_map((_dollar_sub_str_part, dispatch), parts)
@@ -62,6 +83,4 @@ def _dollar_sub_str_part(dispatch, part):
         return dispatch[part]
     if part.startswith("%"):
         return my_html.span_c(part[1:], "unpointed-tanakh")
-    if re.fullmatch(r"\d+:\d+", part):
-        return verse_ref_link(part)
     return part

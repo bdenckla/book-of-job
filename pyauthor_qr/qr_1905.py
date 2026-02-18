@@ -23,7 +23,7 @@ RECORD_1905 = {
         "A דגש on a letter with רפה doesn’t make sense.",
         " The color image of μL reveals this דגש to be unlikely.",
         [" It is judged to be just a speck, not a דגש, in ", golinets_citation("251")],
-        " See 24:16.",
+        " See $link_24_16.",
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {"page": "402A", "column": 2, "line": -5},
