@@ -2,7 +2,7 @@ import re
 
 from py import my_html
 from pycmn.my_utils import sl_map
-from pyauthor_util.verse_ref_link import verse_ref_link
+from pyauthor_util.verse_ref_link import verse_ref_link, verse_ref_link_disambig
 
 
 def dollar_sub_g(dispatch, contents):
@@ -50,7 +50,10 @@ def _dollar_sub_flat_el(dispatch, flat_el):
 
 
 def _dollar_sub_str(dispatch, str):
-    parts = re.split("([$][a-zA-Z0-9_]+|%[\u05d0-\u05ea\u05be]+|~\d+:\d+|\d+:\d+)", str)
+    parts = re.split(
+        "([$][a-zA-Z0-9_]+|%[\u05d0-\u05ea\u05be]+|~\d+:\d+|\d+:\d+@[A-Za-z0-9_]+|\d+:\d+)",
+        str,
+    )
     return sl_map((_dollar_sub_str_part, dispatch), parts)
 
 
@@ -62,6 +65,10 @@ def _dollar_sub_str_part(dispatch, part):
     if part.startswith("~") and ":" in part:
         # Suppressed verse reference: strip ~ and emit as plain text.
         return part[1:]
+    if "@" in part:
+        cv, wordid = part.split("@", 1)
+        if re.fullmatch(r"\d+:\d+", cv):
+            return verse_ref_link_disambig(cv, wordid)
     if re.fullmatch(r"\d+:\d+", part):
         return verse_ref_link(part)
     return part

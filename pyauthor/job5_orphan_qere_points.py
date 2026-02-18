@@ -59,7 +59,7 @@ def _img(img):
 
 
 _INTRO = [
-    "In Job ~38:12, the Jerusalem Crown edition puts a פתח on no letter.",
+    "In Job 38:12@YD3F_HJXR, the Jerusalem Crown edition puts a פתח on no letter.",
     " The פתח floats before the ש of %שחר.",
     #
     " Although neither μA nor μL presents this כתיב/קרי like this,",

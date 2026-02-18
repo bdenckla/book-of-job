@@ -46,8 +46,32 @@ def verse_ref_link(cv):
     if len(sids) > 1:
         assert False, (
             f"Verse reference {cv} has multiple quirkrec records "
-            f"({', '.join(sids)}). Use an explicit link instead."
+            f"({', '.join(sids)}). "
+            f"Use @WORDID to disambiguate, e.g. {cv}@WORDID"
         )
     sid = sids[0]
+    href = f"{_d1d_fname}#row-{sid}"
+    return my_html.anchor_h(cv, href)
+
+
+def verse_ref_link_disambig(cv, wordid):
+    """Link to a specific record for a multi-record verse.
+
+    Args:
+        cv: chapter:verse string, e.g. "38:12".
+        wordid: word identifier suffix, e.g. "HMYMY5".
+
+    The SID is constructed as CCVV-WORDID and validated against the
+    known quirkrec records.
+    """
+    if _cv_to_sids is None:
+        return cv
+    ch, vs = cv.split(":")
+    sid = f"{int(ch):02d}{int(vs):02d}-{wordid}"
+    sids = _cv_to_sids.get(cv, [])
+    assert sid in sids, (
+        f"Disambiguated verse ref {cv}@{wordid} → SID {sid} "
+        f"not found in known SIDs for {cv}: {sids}"
+    )
     href = f"{_d1d_fname}#row-{sid}"
     return my_html.anchor_h(cv, href)
