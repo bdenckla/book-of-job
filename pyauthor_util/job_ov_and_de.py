@@ -4,7 +4,7 @@ from py import my_html
 from pyauthor_util.is_lop import is_lop
 from pycmn import my_utils
 from pycmn.my_utils import intersperse, sl_map
-from pyauthor_util.common_titles_etc import D1D_FNAME
+from pyauthor_util.common_titles_etc import d1d_detail_href
 from pyauthor_util import author
 from pyauthor_util.proposed import key_for_proposed
 from pyauthor_util.says import says
@@ -78,7 +78,8 @@ def _make_one_ov_and_de(uxlc, pbi, quirkrec):
         print(ri, quirkrec["qr-lc-loc"])
     return {
         "od-overview": _make_overview_row(quirkrec),
-        "od-details": _make_details_html(quirkrec),
+        "od-details": _make_details_html(quirkrec, "../jobn/img"),
+        "od-quirkrec": quirkrec,
     }
 
 
@@ -141,7 +142,8 @@ def _make_overview_row(quirkrec):
     nowrap = {"style": "text-wrap: nowrap"}
     td1_attrs = {**hbo_rtl, **nowrap, **_els(quirkrec)}
     the_row_id = row_id(quirkrec)
-    anc = my_html.anchor_h("#", f"{D1D_FNAME}#{the_row_id}")  # self-anchor
+    sid = short_id(quirkrec)
+    anc = my_html.anchor_h("#", d1d_detail_href(sid))
     tr_contents = [
         my_html.table_datum(_lcp_and_con(quirkrec), td1_attrs),
         my_html.table_datum([anc, " ", quirkrec["qr-cv"]]),
@@ -186,8 +188,8 @@ def _els(quirkrec):
     return {}
 
 
-def _img(img):
-    return author.para_for_img(img, "maxwidth50pc")
+def _img(img, img_prefix="img"):
+    return author.para_for_img(img, "maxwidth50pc", img_prefix=img_prefix)
 
 
 _MI_ARGS = {
@@ -209,7 +211,7 @@ _MI_ARGS = {
 }
 
 
-def _maybe_one_img(quirkrec, mi_args_key):
+def _maybe_one_img(quirkrec, mi_args_key, img_prefix="img"):
     ms_name, iikey, ipkey = _MI_ARGS[mi_args_key]
     maybe_img_path = quirkrec.get(ipkey)
     if maybe_img_path is None:
@@ -219,13 +221,13 @@ def _maybe_one_img(quirkrec, mi_args_key):
     else:
         intro = []
     cpara = [ms_name, *intro, ":"]
-    return [author.para(cpara), _img(maybe_img_path)]
+    return [author.para(cpara), _img(maybe_img_path, img_prefix)]
 
 
-def _maybe_imgs(quirkrec):
+def _maybe_imgs(quirkrec, img_prefix="img"):
     result = []
     for mi_args_key in _MI_ARGS:
-        result.extend(_maybe_one_img(quirkrec, mi_args_key))
+        result.extend(_maybe_one_img(quirkrec, mi_args_key, img_prefix))
     return result
 
 
@@ -311,12 +313,11 @@ def _maybe_g3yh_dontcare_message(quirkrec):
     return []
 
 
-def _make_details_html(quirkrec):
+def _make_details_html(quirkrec, img_prefix="img"):
     return [
         author.table_c(_make_overview_row(quirkrec)),
         *_maybe_bhq(quirkrec.get("qr-bhq")),
         _dpe(quirkrec),
-        _img(quirkrec["qr-lc-img"]),
-        *_maybe_imgs(quirkrec),
-        my_html.horizontal_rule(),
+        _img(quirkrec["qr-lc-img"], img_prefix),
+        *_maybe_imgs(quirkrec, img_prefix),
     ]

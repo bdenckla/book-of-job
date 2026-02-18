@@ -1,24 +1,22 @@
 """Auto-link chapter:verse references to quirkrec detail rows."""
 
 from py import my_html
+from pyauthor_util.common_titles_etc import d1d_detail_href
 from pyauthor_util.short_id_etc import short_id
 
 # Module-level verse-link mapping, set by init_verse_links().
 # Maps chapter:verse strings (e.g. "27:13") to a list of SIDs.
 _cv_to_sids = None
-_d1d_fname = None
 
 
-def init_verse_links(enriched_quirkrecs, d1d_fname):
+def init_verse_links(enriched_quirkrecs):
     """Build and store the verse-reference linking map.
 
     Args:
         enriched_quirkrecs: list of enriched quirkrec dicts
             (each must have at least "qr-cv").
-        d1d_fname: filename for the detail page (e.g. "job1_full_list_details.html").
     """
-    global _cv_to_sids, _d1d_fname
-    _d1d_fname = d1d_fname
+    global _cv_to_sids
     mapping = {}
     for eqr in enriched_quirkrecs:
         cv = eqr["qr-cv"]
@@ -38,8 +36,7 @@ def _link_to_sid(cv, wordid):
         f"$link_{ch}_{vs}_{wordid} → SID {sid} "
         f"not found in known SIDs for {cv}: {sids}"
     )
-    href = f"{_d1d_fname}#row-{sid}"
-    return my_html.anchor_h(cv, href)
+    return my_html.anchor_h(cv, d1d_detail_href(sid))
 
 
 def dollar_sub_extras():
@@ -58,8 +55,7 @@ def dollar_sub_extras():
         if len(sids) == 1:
             ch, vs = cv.split(":")
             sid = sids[0]
-            href = f"{_d1d_fname}#row-{sid}"
-            entries[f"$link_{ch}_{vs}"] = my_html.anchor_h(cv, href)
+            entries[f"$link_{ch}_{vs}"] = my_html.anchor_h(cv, d1d_detail_href(sid))
     # Multi-record Job verses: disambiguated links
     for cv, cv_under, wordid in [
         ("18:4", "18_4", "HLM3N5_2_of_2_FTW"),

@@ -58,11 +58,17 @@ def d2_anchor(jobn_dir="."):
 
 D1D_TITLE = "Quirks in μL in Job"
 D1D_H1_CONTENTS = D1D_TITLE
-D1D_FNAME = "job1_full_list_details.html"
+D1D_DIR = "jobn-details"
+
+
+def d1d_detail_href(sid):
+    """Return the relative href from docs/jobn/ to an individual detail file."""
+    return f"../{D1D_DIR}/{sid}.html"
 
 
 def d1d_anchor(jobn_dir="."):
-    anc = my_html.anchor_h("document", f"{jobn_dir}/{D1D_FNAME}")
+    # The anchor points to the overview page, not to the (now split) details.
+    anc = my_html.anchor_h("document", f"{jobn_dir}/{D1V_FNAME}")
     return author.std_anchor(anc, D1D_H1_CONTENTS)
 
 

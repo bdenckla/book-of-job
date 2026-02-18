@@ -1,24 +1,24 @@
-"""Exports gen_html_file and anchor"""
+"""Generate individual detail HTML files, one per quirkrec."""
 
-from pyauthor_util.common_titles_etc import D1D_TITLE, D1D_H1_CONTENTS, D1D_FNAME
-from pyauthor_util.introduce_quirkrec_table import qr_table_intro, here_is
+import os
+from pyauthor_util.common_titles_etc import D1D_DIR
 from py import my_html
-from pyauthor_util import author
 
 
-def gen_html_file(tdm_ch, ov_and_de):
-    author.assert_stem_eq(__file__, D1D_FNAME)
-    cbody = _make_cbody(ov_and_de)
-    author.help_gen_html_file(tdm_ch, D1D_FNAME, D1D_TITLE, cbody)
+def gen_html_files(ov_and_de):
+    """Write one HTML file per quirkrec into docs/jobn-details/.
 
-
-def _make_cbody(ov_and_de):
-    details = [od["od-details"] for od in ov_and_de.values()]
-    cbody = [
-        author.heading_level_1(D1D_H1_CONTENTS),
-        author.para(here_is("This document presents")),
-        *qr_table_intro("intro-details"),
-        my_html.horizontal_rule(),
-        *details,
-    ]
-    return cbody
+    Args:
+        ov_and_de: dict mapping row IDs ("row-{SID}") to sub-dicts
+            with keys "od-details", "od-quirkrec", etc.
+    """
+    out_dir = f"docs/{D1D_DIR}"
+    os.makedirs(out_dir, exist_ok=True)
+    css_href = "../jobn/style.css"
+    for row_key, od in ov_and_de.items():
+        sid = row_key.removeprefix("row-")
+        cv = od["od-quirkrec"]["qr-cv"]
+        title = f"Job {cv}"
+        out_path = f"{out_dir}/{sid}.html"
+        write_ctx = my_html.WriteCtx(title, out_path, css_hrefs=(css_href,))
+        my_html.write_html_to_file(od["od-details"], write_ctx)

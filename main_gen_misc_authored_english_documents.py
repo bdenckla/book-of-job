@@ -14,7 +14,7 @@ from pyauthor import (
     job5_orphan_qere_points,
 )
 from pyauthor_util.all_quirks import AllQuirks
-from pyauthor_util.common_titles_etc import d2_anchor, D1D_FNAME
+from pyauthor_util.common_titles_etc import d2_anchor, D1D_DIR
 from pyauthor_util.job_ov_and_de import make_ov_and_de
 from pyauthor_util.get_qr_groups import get_qr_groups
 from pyauthor_util.verse_ref_link import init_verse_links
@@ -28,6 +28,7 @@ def main():
     jobn_rel_top = "docs/jobn"
     # Delete all HTML and CSS files to avoid stale files when output names change
     _delete_files(jobn_rel_top, ["*.html", "*.css"])
+    _delete_files(f"docs/{D1D_DIR}", ["*.html"])
     #
     css_href = "style.css"
     tcstyles.make_css_file_for_authored(f"docs/{css_href}")
@@ -36,11 +37,11 @@ def main():
     tdm_ch = jobn_rel_top, css_href
     #
     eqrs = get_enriched_quirkrecs(jobn_rel_top, "./out")
-    init_verse_links(eqrs, D1D_FNAME)
+    init_verse_links(eqrs)
     ov_and_de = make_ov_and_de(eqrs)
     qr_groups = get_qr_groups(eqrs)
     aq = AllQuirks(tdm_ch, ov_and_de, qr_groups)
-    job1_full_list_details.gen_html_file(tdm_ch, ov_and_de)
+    job1_full_list_details.gen_html_files(ov_and_de)
     job2_main_article.gen_html_file(aq)
     job3_uxlc.gen_html_file(aq)
     job4_quirks_in_mu_a.gen_html_file(aq)

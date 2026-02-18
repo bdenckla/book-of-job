@@ -120,9 +120,9 @@ def hbo_big_es(contents, attr=None):
     return hbo(contents, _awc(attr, "big extra-letter-spacing"))
 
 
-def para_for_img(img_path, widthclass=None):
+def para_for_img(img_path, widthclass=None, img_prefix="img"):
     img_class = {"class": widthclass} if widthclass is not None else {}
-    img_element = my_html.img({"src": f"img/{img_path}", **img_class})
+    img_element = my_html.img({"src": f"{img_prefix}/{img_path}", **img_class})
     return my_html.para(img_element, {"class": "center"})
 
 
