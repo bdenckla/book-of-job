@@ -42,5 +42,5 @@ img.width5em { width: 5em; }
 img.maxwidth50pc { max-width: 50%; }
 th, td { padding-right: 0.4em; padding-left: 0.4em; }
 img { max-width: 100%; }
-span.unpointed-tanakh { /* semantic marker, no visual styling */ }
+span.unpointed-tanakh { /* no visual styling; exists so check_spelling_in_html.py can skip these */ }
 """
