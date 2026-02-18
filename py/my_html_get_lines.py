@@ -26,7 +26,7 @@ def _el_to_paragraphs(hgl_opts, io_paragraphs, html_el):
     if contents := html_el.get("contents"):
         assert isinstance(contents, (tuple, list))
         for seq_el in contents:
-            if eltag == "style":
+            if eltag in ("style", "script"):
                 _add_word(io_paragraphs[-1], seq_el)
             else:
                 _el_to_paragraphs(hgl_opts, io_paragraphs, seq_el)
@@ -101,6 +101,7 @@ _LB2 = {
     "head": "\n",
     "title": "\n",
     "style": "\n",
+    "script": "\n",
     "body": "\n",
     "h1": "\n",
     "h2": "\n",
@@ -137,6 +138,7 @@ _LB1 = {
     **{tag: "" for tag in _NOCLOSE_TUPLE},
     #
     "title": "",
+    "script": "",
     "h1": "",
     "h2": "",
     "h3": "",
