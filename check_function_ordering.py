@@ -74,7 +74,9 @@ def main():
             files_to_check.extend(
                 f
                 for f in path.rglob("*.py")
-                if "__pycache__" not in f.parts and ".venv" not in f.parts
+                if "__pycache__" not in f.parts
+                and ".venv" not in f.parts
+                and ".novc" not in f.parts
             )
 
     total_violations = 0

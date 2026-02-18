@@ -15,12 +15,6 @@ INDEX_PATH = ROOT / "py_ac_loc" / "codex-index" / "index-flat.json"
 CACHE_DIR = ROOT / ".novc"
 
 
-def _leaf_to_page_n(page_id):
-    num = int(page_id[:-1])
-    side = page_id[-1]
-    return (num - 1) * 2 + 2 + (0 if side == "r" else 1)
-
-
 def image_url(page_id, scale=2):
     n = _leaf_to_page_n(page_id)
     return (
@@ -121,3 +115,9 @@ def download_page(page_id, scale=2):
     img = Image.open(BytesIO(data))
     img.save(cache_path, "JPEG")
     return img
+
+
+def _leaf_to_page_n(page_id):
+    num = int(page_id[:-1])
+    side = page_id[-1]
+    return (num - 1) * 2 + 2 + (0 if side == "r" else 1)

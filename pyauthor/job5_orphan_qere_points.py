@@ -9,6 +9,12 @@ _MWD = "https://bdenckla.github.io/MAM-with-doc"
 _UXLC = "https://tanach.us/Tanach.xml"
 
 
+def gen_html_file(tdm_ch):
+    author.assert_stem_eq(__file__, D5_FNAME)
+    cbody = _make_cbody()
+    author.help_gen_html_file(tdm_ch, D5_FNAME, D5_TITLE, cbody)
+
+
 def _links_to_u_and_m(bkid, ch, vr):
     cv = f"{ch}:{vr}"
     cn_v_vn = f"c{ch}v{vr}"
@@ -16,12 +22,6 @@ def _links_to_u_and_m(bkid, ch, vr):
     u = my_html.anchor_h("U", f"{_UXLC}?{bkid}{cv}")
     m = my_html.anchor_h("M", f"{_MWD}/{osdf}.html#{cn_v_vn}")
     return u, ", ", m
-
-
-def gen_html_file(tdm_ch):
-    author.assert_stem_eq(__file__, D5_FNAME)
-    cbody = _make_cbody()
-    author.help_gen_html_file(tdm_ch, D5_FNAME, D5_TITLE, cbody)
 
 
 def _make_cbody():

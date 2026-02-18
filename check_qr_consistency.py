@@ -20,38 +20,6 @@ import sys
 from pathlib import Path
 
 
-def _ccvv_to_cv(ccvv: str) -> str:
-    """Convert CCVV like '0816' to qr-cv format like '8:16'."""
-    chapter = int(ccvv[:2])
-    verse = int(ccvv[2:])
-    return f"{chapter}:{verse}"
-
-
-def _parse_qr_tag(tag: str, prefix: str) -> tuple[str, str | None]:
-    """
-    Strip *prefix* (e.g. "qr_" or "RECORD_") and split into
-    (ccvv, wordid_or_None).
-    """
-    rest = tag[len(prefix) :]  # e.g. "0816" or "0816_HVA"
-    ccvv = rest[:4]
-    if not ccvv.isdigit():
-        raise ValueError(f"Expected 4 digits after {prefix!r}, got {ccvv!r}")
-    if len(rest) > 4:
-        if rest[4] != "_":
-            raise ValueError(f"Expected '_' at position 4 in {rest!r}")
-        return ccvv, rest[5:]
-    return ccvv, None
-
-
-def _find_str_value(dict_node: ast.Dict, key_name: str) -> str | None:
-    """Return the string value for *key_name* if it is a literal key."""
-    for k, v in zip(dict_node.keys, dict_node.values):
-        if isinstance(k, ast.Constant) and k.value == key_name:
-            if isinstance(v, ast.Constant) and isinstance(v.value, str):
-                return v.value
-    return None
-
-
 def check_file(filepath: Path) -> list[str]:
     """Check one qr_*.py file.  Returns a list of violation messages."""
     source = filepath.read_text(encoding="utf-8")
@@ -175,6 +143,38 @@ def main():
         return 1
     print(f"No qr consistency violations found ({len(files_to_check)} files checked).")
     return 0
+
+
+def _ccvv_to_cv(ccvv: str) -> str:
+    """Convert CCVV like '0816' to qr-cv format like '8:16'."""
+    chapter = int(ccvv[:2])
+    verse = int(ccvv[2:])
+    return f"{chapter}:{verse}"
+
+
+def _parse_qr_tag(tag: str, prefix: str) -> tuple[str, str | None]:
+    """
+    Strip *prefix* (e.g. "qr_" or "RECORD_") and split into
+    (ccvv, wordid_or_None).
+    """
+    rest = tag[len(prefix) :]  # e.g. "0816" or "0816_HVA"
+    ccvv = rest[:4]
+    if not ccvv.isdigit():
+        raise ValueError(f"Expected 4 digits after {prefix!r}, got {ccvv!r}")
+    if len(rest) > 4:
+        if rest[4] != "_":
+            raise ValueError(f"Expected '_' at position 4 in {rest!r}")
+        return ccvv, rest[5:]
+    return ccvv, None
+
+
+def _find_str_value(dict_node: ast.Dict, key_name: str) -> str | None:
+    """Return the string value for *key_name* if it is a literal key."""
+    for k, v in zip(dict_node.keys, dict_node.values):
+        if isinstance(k, ast.Constant) and k.value == key_name:
+            if isinstance(v, ast.Constant) and isinstance(v.value, str):
+                return v.value
+    return None
 
 
 if __name__ == "__main__":

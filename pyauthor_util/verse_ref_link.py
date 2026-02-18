@@ -27,18 +27,6 @@ def init_verse_links(enriched_quirkrecs):
     add_dollar_sub_entries(dollar_sub_extras())
 
 
-def _link_to_sid(cv, wordid):
-    """Build an <a> element linking to a specific multi-record row."""
-    ch, vs = cv.split(":")
-    sid = f"{int(ch):02d}{int(vs):02d}-{wordid}"
-    sids = _cv_to_sids.get(cv, [])
-    assert sid in sids, (
-        f"$link_{ch}_{vs}_{wordid} → SID {sid} "
-        f"not found in known SIDs for {cv}: {sids}"
-    )
-    return my_html.anchor_h(cv, d1d_detail_href(sid))
-
-
 def dollar_sub_extras():
     """Return extra $-dispatch entries for verse-ref linking.
 
@@ -69,3 +57,15 @@ def dollar_sub_extras():
     ]:
         entries[f"$link_{cv_under}_{wordid}"] = _link_to_sid(cv, wordid)
     return entries
+
+
+def _link_to_sid(cv, wordid):
+    """Build an <a> element linking to a specific multi-record row."""
+    ch, vs = cv.split(":")
+    sid = f"{int(ch):02d}{int(vs):02d}-{wordid}"
+    sids = _cv_to_sids.get(cv, [])
+    assert sid in sids, (
+        f"$link_{ch}_{vs}_{wordid} → SID {sid} "
+        f"not found in known SIDs for {cv}: {sids}"
+    )
+    return my_html.anchor_h(cv, d1d_detail_href(sid))
