@@ -14,9 +14,10 @@ from pyauthor import (
     job5_orphan_qere_points,
 )
 from pyauthor_util.all_quirks import AllQuirks
-from pyauthor_util.common_titles_etc import d2_anchor
+from pyauthor_util.common_titles_etc import d2_anchor, D1D_FNAME
 from pyauthor_util.job_ov_and_de import make_ov_and_de
 from pyauthor_util.get_qr_groups import get_qr_groups
+from pyauthor_util.verse_ref_link import init_verse_links
 import check_spelling_in_html
 
 __all__ = ["main"]
@@ -35,6 +36,7 @@ def main():
     tdm_ch = jobn_rel_top, css_href
     #
     eqrs = get_enriched_quirkrecs(jobn_rel_top, "./out")
+    init_verse_links(eqrs, D1D_FNAME)
     ov_and_de = make_ov_and_de(eqrs)
     qr_groups = get_qr_groups(eqrs)
     aq = AllQuirks(tdm_ch, ov_and_de, qr_groups)

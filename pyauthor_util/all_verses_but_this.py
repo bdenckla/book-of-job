@@ -4,17 +4,17 @@ from pyauthor_util.english_list import english_list
 _NO_DAG_AFTER_MAH_VERSES = [
     "16:6",
     "21:15",
-    "34:33",
+    "~34:33",
     "35:7",
 ]
 _PTX_IS_NOT_XTF_VERSES = [
     "9:35",
     "27:9",
-    "34:33",
+    "~34:33",
 ]
 _LEG_MISSING_BEFORE_G3YH_RBY3_VERSES = [
     "32:11",
-    "34:33",
+    "~34:33",
 ]
 
 
@@ -48,8 +48,12 @@ def leg_missing_before_g3yh_rby3(cv: str) -> list[str]:
 
 
 def _all_verses_but_this(verses: list[str], cv: str) -> str:
-    """Return an English-formatted list of verses, excluding cv."""
-    others = [v for v in verses if v != cv]
+    """Return an English-formatted list of verses, excluding cv.
+
+    Verses prefixed with ~ retain the prefix in the output
+    (to suppress verse-reference auto-linking).
+    """
+    others = [v for v in verses if v.lstrip("~") != cv]
     return english_list(others)
 
 

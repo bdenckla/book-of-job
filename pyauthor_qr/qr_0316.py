@@ -9,7 +9,7 @@ RECORD_0316 = {
     "qr-generic-comment": [
         "The יתיב accent doesn’t make sense here because"
         " this is in the poetic rather than prose section of Job",
-        [" ", author.paren(num_range("3:2", "42:6")), "."],
+        [" ", author.paren(num_range("~3:2", "~42:6")), "."],
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "398A", "column": 1, "line": 3},
