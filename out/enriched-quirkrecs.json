@@ -2040,7 +2040,27 @@
               "אלוה"
             ]
           },
-          " in 4:9 and 11:6. So, the position of the פתח is actually more consistent with the פתח belonging to the ח. (Or, if you prefer to think of furtive פתח in a different way, it belongs to the ר (being the second of two vowels belonging to the ר.)"
+          " in ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/0409.html"
+            },
+            "contents": [
+              "4:9"
+            ]
+          },
+          " and ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/1106.html"
+            },
+            "contents": [
+              "11:6"
+            ]
+          },
+          ". So, the position of the פתח is actually more consistent with the פתח belonging to the ח. (Or, if you prefer to think of furtive פתח in a different way, it belongs to the ר (being the second of two vowels belonging to the ר.)"
         ]
       }
     ],
@@ -2582,7 +2602,17 @@
               "נכר"
             ]
           },
-          " in 34:19 for further discussion."
+          " in ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/3419-NKR0.html"
+            },
+            "contents": [
+              "34:19"
+            ]
+          },
+          " for further discussion."
         ]
       }
     ],
@@ -3906,7 +3936,17 @@
       {
         "_htel_tag": "p",
         "contents": [
-          "The writing is not well preserved here: the letters have been re-inked, but among the points, only the דגש in the ד has been re-inked. So, a דגש in the ש could easily have been lost. But, because other similar words lack דגש in μL (e.g., 27:13, ",
+          "The writing is not well preserved here: the letters have been re-inked, but among the points, only the דגש in the ד has been re-inked. So, a דגש in the ש could easily have been lost. But, because other similar words lack דגש in μL (e.g., ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/2713.html"
+            },
+            "contents": [
+              "27:13"
+            ]
+          },
+          ", ",
           {
             "_htel_tag": "a",
             "attr": {
@@ -3922,7 +3962,17 @@
       {
         "_htel_tag": "p",
         "contents": [
-          "This case and that of 27:13 are raised in Viktor Golinets, “Dageš, Mappiq, Specks on Vellum, and Editing of the Codex Leningradensis”, ",
+          "This case and that of ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/2713.html"
+            },
+            "contents": [
+              "27:13"
+            ]
+          },
+          " are raised in Viktor Golinets, “Dageš, Mappiq, Specks on Vellum, and Editing of the Codex Leningradensis”, ",
           {
             "_htel_tag": "abbr",
             "attr": {
@@ -3932,7 +3982,17 @@
               "KUSATU"
             ]
           },
-          " 15/2013, p. 242 (2013). 21:15 seems possibly analogous, but not mentioned in Golinets."
+          " 15/2013, p. 242 (2013). ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/2115.html"
+            },
+            "contents": [
+              "21:15"
+            ]
+          },
+          " seems possibly analogous, but not mentioned in Golinets."
         ]
       },
       {
@@ -4095,7 +4155,17 @@
       {
         "_htel_tag": "p",
         "contents": [
-          "A דגש on a letter with רפה doesn’t make sense. The dot in question is suspiciously larger than nearby ones, and looks different from them in other ways. See 19:5."
+          "A דגש on a letter with רפה doesn’t make sense. The dot in question is suspiciously larger than nearby ones, and looks different from them in other ways. See ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/1905.html"
+            },
+            "contents": [
+              "19:5"
+            ]
+          },
+          "."
         ]
       }
     ],
@@ -6331,7 +6401,17 @@
               "נכר"
             ]
           },
-          " in 34:19 for further discussion."
+          " in ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/3419-NKR0.html"
+            },
+            "contents": [
+              "34:19"
+            ]
+          },
+          " for further discussion."
         ]
       }
     ],
@@ -6689,7 +6769,17 @@
               "BHS"
             ]
           },
-          ": it updates its marginal קרי note to reflect μL rather than the consensus, but it does not correspondingly update its bottom-of-page critical apparatus note. This is similar to what happened with 26:14."
+          ": it updates its marginal קרי note to reflect μL rather than the consensus, but it does not correspondingly update its bottom-of-page critical apparatus note. This is similar to what happened with ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/2614.html"
+            },
+            "contents": [
+              "26:14"
+            ]
+          },
+          "."
         ]
       }
     ],

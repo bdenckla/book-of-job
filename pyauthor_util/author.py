@@ -168,9 +168,6 @@ def dollar_sub(contents):
     return dollar_sub_g.dollar_sub_g(_DOLLAR_SUB_DISPATCH, contents)
 
 
-def add_dollar_sub_entries(extras):
-    """Merge extra $-dispatch entries (from verse_ref_link) at runtime."""
-    _DOLLAR_SUB_DISPATCH.update(extras)
 
 
 def std_table(
@@ -477,6 +474,13 @@ _ROMANIZED = {
 _UNICODE_NAME_SC = dv_map(_unicode_name_sc, _UNICODE_NAME_SC)
 _ABBR_SC = dv_map(_abbreviation_sc, _ABBR_SC)
 _ROMANIZED = dv_map(_romanized, _ROMANIZED)
+
+
+def _dlink(cv, sid):
+    """Build a detail-page <a> element for a quirkrec short ID."""
+    return my_html.anchor_h(cv, f"../jobn-details/{sid}.html")
+
+
 _DOLLAR_SUB_DISPATCH = {
     #
     # "$sub_qm": my_html.sub("?"),
@@ -530,47 +534,44 @@ _DOLLAR_SUB_DISPATCH = {
     "$plain_42_6": "42:6",
     "$plain_34_33": "34:33",
     #
-    # Verse-ref links: static plain-text fallbacks for $link_C_V tokens.
-    # init_verse_links() overwrites these with <a> elements at runtime,
-    # but some qr_*.py files call author.para() at import time (before
-    # init_verse_links runs), so plain-text fallbacks must exist here.
-    "$link_3_4": "3:4",
-    "$link_4_9": "4:9",
-    "$link_4_17": "4:17",
-    "$link_5_23": "5:23",
-    "$link_6_17": "6:17",
-    "$link_6_21": "6:21",
-    "$link_9_35": "9:35",
-    "$link_11_6": "11:6",
-    "$link_16_6": "16:6",
-    "$link_18_6": "18:6",
-    "$link_19_5": "19:5",
-    "$link_21_15": "21:15",
-    "$link_22_12": "22:12",
-    "$link_22_28": "22:28",
-    "$link_24_1": "24:1",
-    "$link_24_16": "24:16",
-    "$link_26_14": "26:14",
-    "$link_27_9": "27:9",
-    "$link_27_13": "27:13",
-    "$link_31_5": "31:5",
-    "$link_31_7": "31:7",
-    "$link_32_6": "32:6",
-    "$link_32_11": "32:11",
-    "$link_34_5": "34:5",
-    "$link_34_19": "34:19",
-    "$link_35_7": "35:7",
-    "$link_39_20": "39:20",
+    # Verse-ref links to single-record quirkrec detail pages
+    "$link_3_4": _dlink("3:4", "0304"),
+    "$link_4_9": _dlink("4:9", "0409"),
+    "$link_4_17": _dlink("4:17", "0417"),
+    "$link_5_23": _dlink("5:23", "0523"),
+    "$link_6_17": _dlink("6:17", "0617"),
+    "$link_6_21": _dlink("6:21", "0621"),
+    "$link_9_35": _dlink("9:35", "0935"),
+    "$link_11_6": _dlink("11:6", "1106"),
+    "$link_16_6": _dlink("16:6", "1606"),
+    "$link_18_6": _dlink("18:6", "1806"),
+    "$link_19_5": _dlink("19:5", "1905"),
+    "$link_21_15": _dlink("21:15", "2115"),
+    "$link_22_12": _dlink("22:12", "2212"),
+    "$link_22_28": _dlink("22:28", "2228"),
+    "$link_24_1": _dlink("24:1", "2401"),
+    "$link_24_16": _dlink("24:16", "2416"),
+    "$link_26_14": _dlink("26:14", "2614"),
+    "$link_27_9": _dlink("27:9", "2709"),
+    "$link_27_13": _dlink("27:13", "2713"),
+    "$link_31_5": _dlink("31:5", "3105"),
+    "$link_31_7": _dlink("31:7", "3107"),
+    "$link_32_6": _dlink("32:6", "3206"),
+    "$link_32_11": _dlink("32:11", "3211"),
+    "$link_34_5": _dlink("34:5", "3405"),
+    "$link_34_19": _dlink("34:19", "3419-NKR0"),
+    "$link_35_7": _dlink("35:7", "3507"),
+    "$link_39_20": _dlink("39:20", "3920"),
     #
-    # Multi-record verse-ref links (disambiguated by word ID)
-    "$link_18_4_HLM3N5_2_of_2_FTW": "18:4",
-    "$link_19_16_QRAFY": "19:16",
-    "$link_22_21_3MV": "22:21",
-    "$link_38_12_YD3F_HJXR": "38:12",
-    "$link_38_12_HMYMY5": "38:12",
-    "$link_34_33_VMH0YD3F": "34:33",
-    "$link_34_33_HM3M5": "34:33",
-    "$link_34_33_YJLMNH_2_of_2_FTW": "34:33",
+    # Verse-ref links to multi-record quirkrec detail pages (disambiguated)
+    "$link_18_4_HLM3N5_2_of_2_FTW": _dlink("18:4", "1804-HLM3N5_2_of_2_FTW"),
+    "$link_19_16_QRAFY": _dlink("19:16", "1916-QRAFY"),
+    "$link_22_21_3MV": _dlink("22:21", "2221-3MV"),
+    "$link_38_12_YD3F_HJXR": _dlink("38:12", "3812-YD3F_HJXR"),
+    "$link_38_12_HMYMY5": _dlink("38:12", "3812-HMYMY5"),
+    "$link_34_33_VMH0YD3F": _dlink("34:33", "3433-VMH0YD3F"),
+    "$link_34_33_HM3M5": _dlink("34:33", "3433-HM3M5"),
+    "$link_34_33_YJLMNH_2_of_2_FTW": _dlink("34:33", "3433-YJLMNH_2_of_2_FTW"),
 }
 
 
