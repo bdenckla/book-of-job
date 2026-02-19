@@ -83,13 +83,31 @@ This gives you the consonantal text with vowels and accents, minus any special m
 | `<letter-small>` | Small letter | Include child text |
 | `<letter-large>` | Large letter | Include child text |
 | `<letter-hung>` | Hung/suspended letter | Include child text |
-| `<kq>`, `<kq-k>`, `<kq-q>` | Ketiv/Qere | Complex; see handlers |
+| `<slh-word>` | Suspended-letter word | Use `slhw-desc-0` attribute for full word text |
+| `<kq>`, `<kq-k>`, `<kq-q>` | Ketiv/Qere | Complex; see below |
 | `<kq-trivial>` | Trivial Ketiv/Qere | Include child text |
 | `<cant-combined>` | Combined cantillation | Pass through children |
 | `<cant-all-three>` | All three cantillation systems | Pass through children |
 | `<shirah-space/>` | Shirah (song) spacing | Ignore or render as spaces |
 | `<good-ending>` | Alternative ending | Ignore |
 | `<scrdfftar>` | Scroll-difference-from-target | Use `<sdt-target>` child |
+
+### Ketiv/Qere elements
+
+`<kq>` contains a `<kq-k>` (ketiv) and `<kq-q>` (qere) child. Both `<kq-k>` and `<kq-q>` **usually** have a `text` attribute with the word text, but not always. A `<kq-k>` may instead contain an `<slh-word>` child (suspended-letter word), in which case the word text is in the `<slh-word>`’s `slhw-desc-0` attribute. Example (Job 7:5):
+
+```xml
+<kq>
+  <kq-k>
+    <slh-word slhw-desc-0="וגיש" ...>
+      <text text="ו"/><letter-small text="ג"/><text text="יש"/>
+    </slh-word>
+  </kq-k>
+  <kq-q text="וַגִּישָּׁ֔ה"/>
+</kq>
+```
+
+When extracting ketiv text, always try the `text` attribute first, then fall back to a child `<slh-word>`’s `slhw-desc-0`. Do not silently skip if neither is found.
 
 ## Verse Attributes
 
