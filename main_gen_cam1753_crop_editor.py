@@ -8,7 +8,8 @@ the Hebrew-metrics word-position estimate.  Adjust boxes with mouse handles
 or arrow keys, then Export JSON to clipboard for downstream processing.
 
 Usage:
-    .venv\\Scripts\\python.exe main_gen_cam1753_crop_editor.py           # example quirkrecs only
+    .venv\\Scripts\\python.exe main_gen_cam1753_crop_editor.py           # first 6 missing
+    .venv\\Scripts\\python.exe main_gen_cam1753_crop_editor.py --batch 10 # next 10 missing
     .venv\\Scripts\\python.exe main_gen_cam1753_crop_editor.py --all      # all missing cam1753 images
     .venv\\Scripts\\python.exe main_gen_cam1753_crop_editor.py 0119 0303  # specific SIDs
 """
@@ -592,8 +593,21 @@ updateStatus();
 
 def main():
     use_all = "--all" in sys.argv
+    # Parse --batch N
+    batch_size = None
+    args = sys.argv[1:]
+    i = 0
+    while i < len(args):
+        if args[i] == "--batch":
+            batch_size = int(args[i + 1]) if i + 1 < len(args) else 10
+            i += 2
+        else:
+            i += 1
     # Collect any positional args (SIDs) from command line
-    cli_sids = {a for a in sys.argv[1:] if not a.startswith("-")}
+    cli_sids = {a for a in args if not a.startswith("-") and not a.isdigit()}
+    # Remove batch size value from cli_sids if it leaked in
+    if batch_size is not None:
+        cli_sids.discard(str(batch_size))
 
     examples = []
     if use_all:
@@ -610,7 +624,8 @@ def main():
             if sid in cli_sids:
                 examples.append(eqr)
     else:
-        # Default: first few missing quirkrecs
+        # Default: first N missing quirkrecs
+        limit = batch_size if batch_size is not None else 6
         count = 0
         for eqr in EQRS:
             sid = short_id(eqr)
@@ -618,7 +633,7 @@ def main():
             if not os.path.exists(img_path):
                 examples.append(eqr)
                 count += 1
-                if count >= 6:
+                if count >= limit:
                     break
 
     print(f"Processing {len(examples)} quirkrecs...")
