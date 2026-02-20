@@ -606,10 +606,13 @@ def main():
         else:
             i += 1
     # Collect any positional args (SIDs) from command line
-    cli_sids = {a for a in args if not a.startswith("-") and not a.isdigit()}
-    # Remove batch size value from cli_sids if it leaked in
-    if batch_size is not None:
-        cli_sids.discard(str(batch_size))
+    cli_sids = set()
+    for a in args:
+        if a.startswith("-"):
+            continue
+        if batch_size is not None and a == str(batch_size):
+            continue
+        cli_sids.add(a)
 
     examples = []
     if use_all:
