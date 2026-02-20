@@ -43,13 +43,13 @@ python main_list_missing_aleppo_imgs.py -n 20    # first 20 missing
 A quirkrec counts as "done" if `docs/jobn/img/Aleppo/Aleppo-{sid}.png` exists
 or it already has a `qr-aleppo-img` key.
 
-### `main_gen_word_crop_editor.py`
+### `main_gen_aleppo_crop_editor.py`
 
 Generates an interactive HTML crop editor at `.novc/word_crop_editor.html`.
 
 ```
-python main_gen_word_crop_editor.py 0417 0505 0520    # specific SIDs
-python main_gen_word_crop_editor.py --all              # all missing
+python main_gen_aleppo_crop_editor.py 0417 0505 0520    # specific SIDs
+python main_gen_aleppo_crop_editor.py --all              # all missing
 ```
 
 The script:
@@ -129,7 +129,7 @@ Process quirkrecs in batches of ~5:
 
 2. **Generate crop editor:**
    ```
-   python main_gen_word_crop_editor.py SID1 SID2 SID3 SID4 SID5
+   python main_gen_aleppo_crop_editor.py SID1 SID2 SID3 SID4 SID5
    ```
    Then open `.novc/word_crop_editor.html` in the browser.
 

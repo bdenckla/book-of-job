@@ -8,8 +8,8 @@ the Hebrew-metrics word-position estimate.  Adjust boxes with mouse handles
 or arrow keys, then Export JSON to clipboard for downstream processing.
 
 Usage:
-    python main_gen_word_crop_editor.py           # example quirkrecs only
-    python main_gen_word_crop_editor.py --all      # all missing aleppo images
+    python main_gen_aleppo_crop_editor.py           # example quirkrecs only
+    python main_gen_aleppo_crop_editor.py --all      # all missing aleppo images
 """
 
 import json
