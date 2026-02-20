@@ -20,7 +20,7 @@
     },
     "qr-lc-img": "0119.png",
     "qr-aleppo-img": "Aleppo-0119.png",
-    "qr-cam1753-img": "Cam1753-0119.png",
+    "qr-cam1753-img": "cam1753-0119.png",
     "aleppo-img-intro": "page 270v, col 1, line 9, word 2",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -59,7 +59,7 @@
     "qr-noted-by": "nBHQ-nBHL-nDM-nWLC",
     "qr-lc-img": "0121.png",
     "qr-aleppo-img": "Aleppo-0121.png",
-    "qr-cam1753-img": "Cam1753-0121.png",
+    "qr-cam1753-img": "cam1753-0121.png",
     "aleppo-img-intro": "page 270v, col 1, line 13, word 3",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -94,7 +94,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "0303.png",
     "qr-aleppo-img": "Aleppo-0303.png",
-    "qr-cam1753-img": "Cam1753-0303.png",
+    "qr-cam1753-img": "cam1753-0303.png",
     "aleppo-img-intro": "page 270v, col 2, line 23, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -129,7 +129,7 @@
     },
     "qr-lc-img": "0304.png",
     "qr-aleppo-img": "Aleppo-0304.png",
-    "qr-cam1753-img": "Cam1753-0304.png",
+    "qr-cam1753-img": "cam1753-0304.png",
     "aleppo-img-intro": "page 270v, col 2, line 25, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -170,7 +170,7 @@
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "0316.png",
     "qr-aleppo-img": "Aleppo-0316.png",
-    "qr-cam1753-img": "Cam1753-0316.png",
+    "qr-cam1753-img": "cam1753-0316.png",
     "aleppo-img-intro": "page 271r, col 1, line 11, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -205,7 +205,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "0404.png",
     "qr-aleppo-img": "Aleppo-0404.png",
-    "qr-cam1753-img": "Cam1753-0404.png",
+    "qr-cam1753-img": "cam1753-0404.png",
     "aleppo-img-intro": "page 271r, col 1, line 25, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -243,7 +243,7 @@
     "qr-noted-by": "nBHQ-nBHL-nDM",
     "qr-lc-img": "0409.png",
     "qr-aleppo-img": "Aleppo-0409.png",
-    "qr-cam1753-img": "Cam1753-0409.png",
+    "qr-cam1753-img": "cam1753-0409.png",
     "aleppo-img-intro": "page 271r, col 2, line 2, word 2",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -281,7 +281,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "0417.png",
     "qr-aleppo-img": "Aleppo-0417.png",
-    "qr-cam1753-img": "Cam1753-0417.png",
+    "qr-cam1753-img": "cam1753-0417.png",
     "aleppo-img-intro": "page 271r, col 2, line 11, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -355,7 +355,7 @@
     "qr-noted-by": "nDM",
     "qr-lc-img": "0505.png",
     "qr-aleppo-img": "Aleppo-0505.png",
-    "qr-cam1753-img": "Cam1753-0505.png",
+    "qr-cam1753-img": "cam1753-0505.png",
     "aleppo-img-intro": "page 271r, col 2, line 23, word 2",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -390,7 +390,7 @@
     },
     "qr-lc-img": "0520.png",
     "qr-aleppo-img": "Aleppo-0520.png",
-    "qr-cam1753-img": "Cam1753-0520.png",
+    "qr-cam1753-img": "cam1753-0520.png",
     "aleppo-img-intro": "page 271v, col 1, line 12, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3563,7 +3563,7 @@
     },
     "qr-lc-img": "2221-3MV.png",
     "qr-aleppo-img": "Aleppo-2221-3MV.png",
-    "qr-cam1753-img": "Cam1753-2221-3MV.png",
+    "qr-cam1753-img": "cam1753-2221-3MV.png",
     "aleppo-img-intro": "page 276r, col 1, line 10, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -6283,7 +6283,7 @@
     ],
     "qr-lc-img": "3612.png",
     "qr-aleppo-img": "Aleppo-3612.png",
-    "qr-cam1753-img": "Cam1753-3612.png",
+    "qr-cam1753-img": "cam1753-3612.png",
     "aleppo-img-intro": "page 279v, col 1, line 22, word 2",
     "nbd": {
       "e:BHQ": "nBHQ",

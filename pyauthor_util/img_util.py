@@ -3,7 +3,7 @@ from pyauthor_util.short_id_etc import short_id
 
 _INFO_ABOUT_OPTIONAL_IMAGES = [
     ("qr-aleppo-img", "Aleppo-CCVV.png"),
-    ("qr-cam1753-img", "Cam1753-CCVV.png"),
+    ("qr-cam1753-img", "cam1753-CCVV.png"),
     ("qr-jc-img", "Jerusalem-Crown-CCVV.png"),
 ]
 
