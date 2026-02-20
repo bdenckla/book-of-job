@@ -8,7 +8,7 @@ Usage:
     python main_list_missing_aleppo_imgs.py -n 20     # show first 20 missing
 
 A quirkrec is considered "done" if:
-  - docs/jobn/img/Aleppo-{sid}.png exists, OR
+  - docs/jobn/img/Aleppo/Aleppo-{sid}.png exists, OR
   - the quirkrec already has a 'qr-aleppo-img' key
 """
 
@@ -21,7 +21,7 @@ from pyauthor_util.short_id_etc import short_id
 ROOT = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(ROOT, "out", "enriched-quirkrecs.json"), encoding="utf-8") as _f:
     EQRS = json.load(_f)
-IMG_DIR = os.path.join(ROOT, "docs", "jobn", "img")
+IMG_DIR = os.path.join(ROOT, "docs", "jobn", "img", "Aleppo")
 
 
 def get_done_and_missing():

@@ -315,7 +315,7 @@ def _check_orphan_images(
     """Find image files not referenced from any HTML."""
     issues = []
     for img_dir in _find_img_dirs(docs_dir):
-        for img_file in sorted(img_dir.iterdir()):
+        for img_file in sorted(img_dir.rglob("*")):
             if img_file.is_file() and img_file.resolve() not in referenced_images:
                 rel = img_file.relative_to(docs_dir)
                 issues.append(f"orphan image: {rel}")

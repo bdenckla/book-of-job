@@ -34,8 +34,8 @@ def _make_cbody():
         author.para(_KINGS_DISCUSSION_1),
         author.para(_KINGS_DISCUSSION_2),
         author.para(_KINGS_DISCUSSION_3),
-        _img("Aleppo-2Kings-c4v7.png"),
-        _img("2Kings-c4v7.png"),
+        _img("Aleppo/Aleppo-2Kings-c4v7.png"),
+        _img("Lenin/Lenin-2Kings-c4v7.png"),
         author.para(_KINGS_DISCUSSION_4),
         author.para(_KINGS_DISCUSSION_5),
         author.para(_KINGS_DISCUSSION_6),
@@ -49,7 +49,7 @@ def _make_cbody():
         author.heading_level_2("$2Samuel_18_20"),
         author.para(_SAMUEL_INTRO),
         author.para(_SAMUEL_DISCUSSION_1),
-        _img("2-Samuel-c18v20.png"),
+        _img("Lenin/Lenin-2-Samuel-c18v20.png"),
         author.para(_SAMUEL_DISCUSSION_2),
     ]
 

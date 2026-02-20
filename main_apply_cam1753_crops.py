@@ -4,7 +4,7 @@ Apply cam1753 word crops from exported editor JSON.
 
 Reads the bbox JSON exported by the cam1753 crop editor (from clipboard
 or .novc/cam1753_crops_export.json), crops each word from the full-resolution
-page image, and saves to docs/jobn/img/cam1753-{sid}.png.
+page image, and saves to docs/jobn/img/cam1753/cam1753-{sid}.png.
 
 Usage:
     .venv\\Scripts\\python.exe main_apply_cam1753_crops.py .novc/cam1753_crops_export.json
@@ -22,7 +22,7 @@ sys.path.insert(0, str(CAM1753_REPO))
 
 from py_cam1753_word_image.page import load_page_image
 
-OUT_DIR = ROOT / "docs" / "jobn" / "img"
+OUT_DIR = ROOT / "docs" / "jobn" / "img" / "cam1753"
 
 
 def main():

@@ -56,7 +56,7 @@ Find the most recent screenshot:
 Get-ChildItem "$env:USERPROFILE\OneDrive\Pictures\Screenshots" | Sort-Object LastWriteTime -Descending | Select-Object -First 3 Name, LastWriteTime
 ```
 
-Copy to `docs/jobn/img/` with the naming convention:
+Copy to `docs/jobn/img/Aleppo/` with the naming convention:
 - **One quirkrec for the verse**: `Aleppo-CCVV.png` (e.g. `Aleppo-3405.png`)
 - **Multiple quirkrecs for the verse**: `Aleppo-CCVV-WORDID.png` (e.g. `Aleppo-2230-YMLE.png`)
 
@@ -95,7 +95,7 @@ http://localhost:8932/jobn/job1_full_list_details.html#row-CCVV-WORDID
 After the user confirms it looks good:
 
 ```powershell
-git add docs/jobn/img/Aleppo-CCVV.png
+git add docs/jobn/img/Aleppo/Aleppo-CCVV.png
 git commit -m "Add μA image for CC:VV. Closes #<number>"
 git push
 ```

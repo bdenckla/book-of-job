@@ -28,7 +28,7 @@ When the user needs to crop a word from the Leningrad Codex (μL) Sefaria image:
 5. **User takes screenshots** of the relevant portions at the desired zoom.
 
 6. **Glue screenshots together** with Pillow at native resolution (no scaling)
-   and save to `docs/jobn/img/{SID}.png`, replacing the existing image.
+   and save to `docs/jobn/img/Lenin/Lenin-{SID}.png`, replacing the existing image.
    When the issue asks to include a word from a previous line, glue the
    screenshots **side-by-side** (not stacked vertically): the earlier word
    goes on the **right** and the main word on the **left**, so they read
