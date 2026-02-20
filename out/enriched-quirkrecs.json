@@ -430,6 +430,7 @@
     },
     "qr-lc-img": "Lenin/Lenin-0523.png",
     "qr-aleppo-img": "Aleppo/Aleppo-0523.png",
+    "qr-cam1753-img": "cam1753/cam1753-0523.png",
     "aleppo-img-intro": "page 271v, col 1, line 17, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -467,6 +468,7 @@
     },
     "qr-lc-img": "Lenin/Lenin-0524.png",
     "qr-aleppo-img": "Aleppo/Aleppo-0524.png",
+    "qr-cam1753-img": "cam1753/cam1753-0524.png",
     "aleppo-img-intro": "page 271v, col 1, line 18, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -503,7 +505,7 @@
       "line": 5,
       "word": 1
     },
-    "qr-bhq-comment": [
+    "qr-generic-comment": [
       {
         "_htel_tag": "p",
         "contents": [
@@ -552,6 +554,14 @@
           " in its modern Hebrew.)"
         ]
       },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "In μY, like μL, there is no מקף."
+        ]
+      }
+    ],
+    "qr-bhq-comment": [
       {
         "_htel_tag": "p",
         "contents": [
@@ -611,6 +621,7 @@
     ],
     "qr-lc-img": "Lenin/Lenin-0610.png",
     "qr-aleppo-img": "Aleppo/Aleppo-0610.png",
+    "qr-cam1753-img": "cam1753/cam1753-0610.png",
     "aleppo-img-intro": "page 271v, col 2, line 5, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -647,6 +658,7 @@
     },
     "qr-lc-img": "Lenin/Lenin-0617.png",
     "qr-aleppo-img": "Aleppo/Aleppo-0617.png",
+    "qr-cam1753-img": "cam1753/cam1753-0617.png",
     "aleppo-img-intro": "page 271v, col 2, line 13, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -749,6 +761,7 @@
     },
     "qr-lc-img": "Lenin/Lenin-0621.png",
     "qr-aleppo-img": "Aleppo/Aleppo-0621.png",
+    "qr-cam1753-img": "cam1753/cam1753-0621.png",
     "aleppo-img-intro": "page 271v, col 2, line 17, word 6",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -784,6 +797,7 @@
     },
     "qr-lc-img": "Lenin/Lenin-0627.png",
     "qr-aleppo-img": "Aleppo/Aleppo-0627.png",
+    "qr-cam1753-img": "cam1753/cam1753-0627.png",
     "aleppo-img-intro": "page 271v, col 2, line 25, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -822,6 +836,7 @@
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "Lenin/Lenin-0629.png",
     "qr-aleppo-img": "Aleppo/Aleppo-0629.png",
+    "qr-cam1753-img": "cam1753/cam1753-0629.png",
     "aleppo-img-intro": "page 271v, col 2, line 27, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -857,6 +872,7 @@
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-0701.png",
     "qr-aleppo-img": "Aleppo/Aleppo-0701.png",
+    "qr-cam1753-img": "cam1753/cam1753-0701.png",
     "aleppo-img-intro": "page 272r, col 1, line 1, word 6",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -891,6 +907,7 @@
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "Lenin/Lenin-0709.png",
     "qr-aleppo-img": "Aleppo/Aleppo-0709.png",
+    "qr-cam1753-img": "cam1753/cam1753-0709.png",
     "aleppo-img-intro": "page 272r, col 1, line 10, word 8",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -926,10 +943,11 @@
       "word": 4
     },
     "qr-generic-comment": [
-      "An argument could be made that it is μL not μA that represents the consensus here. For example, the Jerusalem Crown edition, despite normally staying quite close to μA, has עולה on א in its body text and only notes in an appendix that μA has עולה on ה."
+      "An argument could be made that it is μL not μA that represents the consensus here. For example, the Jerusalem Crown edition, despite normally staying quite close to μA, has עולה on א in its body text and only notes in an appendix that μA has עולה on ה. In μY, like μL, the עולה is on א, but it is early on א, perhaps pushed early by marks from the line above."
     ],
     "qr-lc-img": "Lenin/Lenin-0720.png",
     "qr-aleppo-img": "Aleppo/Aleppo-0720.png",
+    "qr-cam1753-img": "cam1753/cam1753-0720.png",
     "aleppo-img-intro": "page 272r, col 1, line 23, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",

@@ -33,6 +33,9 @@ _COMMENT_PARA3 = [
     [" the ", _COS_HEB_ANC, " in its modern Hebrew.)"],
 ]
 _COMMENT_PARA4 = [
+    "In μY, like μL, there is no מקף.",
+]
+_BHQ_COMMENT = [
     "The mark under the $vav of %ותהי was changed",
     " from מרכא to געיה in going from $BHS to $BHQ.",
     " This was a regression, in my opinion, since it leaves %ותהי with no accent, only געיה.",
@@ -48,10 +51,13 @@ RECORD_0610 = {
     "qr-highlight-consensus": [1, 5],
     "qr-lc-loc": {"page": "398B", "column": 2, "line": 7},
     "qr-ac-loc": {"page": "271v", "column": 2, "line": 5, "word": 1},
-    "qr-bhq-comment": [
+    "qr-generic-comment": [
         author.para(_COMMENT_PARA1),
         author.para(_COMMENT_PARA2),
         author.para(_COMMENT_PARA3),
         author.para(_COMMENT_PARA4),
+    ],
+    "qr-bhq-comment": [
+        author.para(_BHQ_COMMENT),
     ],
 }

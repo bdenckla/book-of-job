@@ -342,10 +342,11 @@ function drawBox(idx) {{
   let parts = [];
 
   // Rectangle
+  const dash = fineMode ? '' : ' stroke-dasharray="0.01 0.006"';
   parts.push(
     '<rect x="' + b.left + '" y="' + b.top + '" ' +
     'width="' + bw + '" height="' + bh + '" ' +
-    'fill="none" stroke="' + color + '" stroke-width="' + sw + '" />'
+    'fill="none" stroke="' + color + '" stroke-width="' + sw + '"' + dash + ' />'
   );
 
   // Side handles
@@ -383,6 +384,7 @@ function drawAll() {{
 function toggleFine() {{
   fineMode = !fineMode;
   document.getElementById('fine-btn').classList.toggle('active', fineMode);
+  drawAll();
   updateStatus();
 }}
 

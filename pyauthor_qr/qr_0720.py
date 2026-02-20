@@ -15,5 +15,7 @@ RECORD_0720 = {
         " For example, the Jerusalem Crown edition, despite normally staying quite close to μA,",
         " has עולה on א in its body text",
         " and only notes in an appendix that μA has עולה on ה.",
+        " In μY, like μL, the עולה is on א,"
+        " but it is early on א, perhaps pushed early by marks from the line above.",
     ],
 }
