@@ -292,7 +292,7 @@ body {{
 <body>
 
 <div id="toolbar">
-  <button id="fine-btn" class="active" onclick="toggleFine()">Fine</button>
+  <button id="fine-btn" class="active" onclick="toggleFine()">Fine [F]</button>
   <button onclick="resetActive()">Reset</button>
   <button onclick="exportJSON()">Export JSON</button>
   <span id="status">Click a handle to begin</span>
