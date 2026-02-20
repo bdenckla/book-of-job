@@ -2,8 +2,8 @@ from pyauthor_util.golinets import golinets_citation
 import pyauthor_util.author as author
 
 _COMPAR1 = [
-    "There is little or no evidence of a דגש in the צ,",
-    " and the consensus has no such דגש.",
+    "There is little or no evidence of a דגש in the צ in μL.",
+    " The consensus has this דגש.",
 ]
 _COMPAR2 = [
     "It is said (from direct inspection of μL in Russia) that there is",
@@ -23,9 +23,9 @@ _COMPAR4 = [
 
 RECORD_0505 = {
     "qr-cv": "5:5",
-    "qr-lc-proposed": "מִצִּנִּ֥ים",
-    "qr-what-is-weird": "צ has דגש",
-    "qr-consensus": "מִצִנִּ֥ים",
+    "qr-lc-proposed": "מִצִנִּ֥ים",
+    "qr-what-is-weird": "צ lacks דגש",
+    "qr-consensus": "מִצִּנִּ֥ים",
     "qr-highlight": 2,
     "qr-generic-comment": [
         author.para(_COMPAR1),
@@ -36,12 +36,8 @@ RECORD_0505 = {
     "qr-lc-loc": {"page": "398A", "column": 2, "line": 22},
     "qr-ac-loc": {"page": "271r", "column": 2, "line": 23, "word": 2},
     "qr-bhq-comment": [
-        "The proposed transcription",
-        " must either be a simple typo or",
-        " must spring from some source other than the color image of μL or the consensus.",
-        " Sometimes the black and white images of μL can be misleading,",
-        " particularly when they are presented with high contrast,",
-        " i.e. showing little or no “middle ground” of gray tones.",
+        "As is often the case, here $BHQ has the consensus",
+        " rather than the best guess as to the actual contents of μL.",
     ],
-    "qr-noted-by": "tBHQ-nDM",
+    "qr-noted-by": "nDM",
 }
