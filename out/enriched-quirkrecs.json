@@ -20,6 +20,7 @@
     },
     "qr-lc-img": "0119.png",
     "qr-aleppo-img": "Aleppo-0119.png",
+    "qr-cam1753-img": "Cam1753-0119.png",
     "aleppo-img-intro": "page 270v, col 1, line 9, word 2",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -58,6 +59,7 @@
     "qr-noted-by": "nBHQ-nBHL-nDM-nWLC",
     "qr-lc-img": "0121.png",
     "qr-aleppo-img": "Aleppo-0121.png",
+    "qr-cam1753-img": "Cam1753-0121.png",
     "aleppo-img-intro": "page 270v, col 1, line 13, word 3",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -92,6 +94,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "0303.png",
     "qr-aleppo-img": "Aleppo-0303.png",
+    "qr-cam1753-img": "Cam1753-0303.png",
     "aleppo-img-intro": "page 270v, col 2, line 23, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -126,6 +129,7 @@
     },
     "qr-lc-img": "0304.png",
     "qr-aleppo-img": "Aleppo-0304.png",
+    "qr-cam1753-img": "Cam1753-0304.png",
     "aleppo-img-intro": "page 270v, col 2, line 25, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -166,6 +170,7 @@
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "0316.png",
     "qr-aleppo-img": "Aleppo-0316.png",
+    "qr-cam1753-img": "Cam1753-0316.png",
     "aleppo-img-intro": "page 271r, col 1, line 11, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -200,6 +205,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "0404.png",
     "qr-aleppo-img": "Aleppo-0404.png",
+    "qr-cam1753-img": "Cam1753-0404.png",
     "aleppo-img-intro": "page 271r, col 1, line 25, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -237,6 +243,7 @@
     "qr-noted-by": "nBHQ-nBHL-nDM",
     "qr-lc-img": "0409.png",
     "qr-aleppo-img": "Aleppo-0409.png",
+    "qr-cam1753-img": "Cam1753-0409.png",
     "aleppo-img-intro": "page 271r, col 2, line 2, word 2",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -274,6 +281,7 @@
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "0417.png",
     "qr-aleppo-img": "Aleppo-0417.png",
+    "qr-cam1753-img": "Cam1753-0417.png",
     "aleppo-img-intro": "page 271r, col 2, line 11, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -290,15 +298,15 @@
   },
   {
     "qr-cv": "5:5",
-    "qr-lc-proposed": "מִצִּנִּ֥ים",
-    "qr-what-is-weird": "צ has דגש",
-    "qr-consensus": "מִצִנִּ֥ים",
+    "qr-lc-proposed": "מִצִנִּ֥ים",
+    "qr-what-is-weird": "צ lacks דגש",
+    "qr-consensus": "מִצִּנִּ֥ים",
     "qr-highlight": 2,
     "qr-generic-comment": [
       {
         "_htel_tag": "p",
         "contents": [
-          "There is little or no evidence of a דגש in the צ, and the consensus has no such דגש."
+          "There is little or no evidence of a דגש in the צ in μL. The consensus has this דגש."
         ]
       },
       {
@@ -342,23 +350,24 @@
       "word": 2
     },
     "qr-bhq-comment": [
-      "The proposed transcription must either be a simple typo or must spring from some source other than the color image of μL or the consensus. Sometimes the black and white images of μL can be misleading, particularly when they are presented with high contrast, i.e. showing little or no “middle ground” of gray tones."
+      "As is often the case, here $BHQ has the consensus rather than the best guess as to the actual contents of μL."
     ],
-    "qr-noted-by": "tBHQ-nDM",
+    "qr-noted-by": "nDM",
     "qr-lc-img": "0505.png",
     "qr-aleppo-img": "Aleppo-0505.png",
+    "qr-cam1753-img": "Cam1753-0505.png",
     "aleppo-img-intro": "page 271r, col 2, line 23, word 2",
     "nbd": {
-      "e:BHQ": "tBHQ",
+      "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
       "e:DM": "nDM",
       "e:WLC": "xWLC",
       "e:UXLC": "xUXLC"
     },
-    "pgroup": "g:tbhq_and_n3",
+    "pgroup": "g:xbhq_and_n3",
     "qr-auto-diff": [
-      "add dagesh/mapiq/shuruq-dot to tsadi",
-      "add non-varika"
+      "remove dagesh/mapiq/shuruq-dot from tsadi",
+      "remove"
     ]
   },
   {
@@ -381,6 +390,7 @@
     },
     "qr-lc-img": "0520.png",
     "qr-aleppo-img": "Aleppo-0520.png",
+    "qr-cam1753-img": "Cam1753-0520.png",
     "aleppo-img-intro": "page 271v, col 1, line 12, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
