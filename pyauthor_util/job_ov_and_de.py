@@ -188,8 +188,8 @@ def _els(quirkrec):
     return {}
 
 
-def _img(img, img_prefix="img"):
-    return author.para_for_img(img, "maxwidth50pc", img_prefix=img_prefix)
+def _img(img, img_prefix="img", scale=None):
+    return author.para_for_img(img, "maxwidth50pc", img_prefix=img_prefix, scale=scale)
 
 
 _MI_ARGS = {
@@ -314,10 +314,11 @@ def _maybe_g3yh_dontcare_message(quirkrec):
 
 
 def _make_details_html(quirkrec, img_prefix="img"):
+    lc_scale = 0.6 if quirkrec.get("qr-lc-img-too-tall") else None
     return [
         author.table_c(_make_overview_row(quirkrec)),
         *_maybe_bhq(quirkrec.get("qr-bhq")),
         _dpe(quirkrec),
-        _img(quirkrec["qr-lc-img"], img_prefix),
+        _img(quirkrec["qr-lc-img"], img_prefix, scale=lc_scale),
         *_maybe_imgs(quirkrec, img_prefix),
     ]

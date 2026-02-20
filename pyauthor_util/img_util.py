@@ -1,4 +1,5 @@
 import os
+from pyauthor_util.lenin_img_too_tall import LENIN_IMG_TOO_TALL
 from pyauthor_util.short_id_etc import short_id
 
 _INFO_ABOUT_OPTIONAL_IMAGES = [
@@ -23,6 +24,8 @@ def get_auto_imgs(jobn_rel_top, quirkrec):
     out = {}
     sid = short_id(quirkrec)
     out["qr-lc-img"] = f"Lenin/Lenin-{sid}.png"
+    if sid in LENIN_IMG_TOO_TALL:
+        out["qr-lc-img-too-tall"] = True
     # Auto-detect Aleppo, cam1753, and other optional images
     for field, example_filename in _INFO_ABOUT_OPTIONAL_IMAGES:
         auto_img = example_filename.replace("-CCVV.png", f"-{sid}.png")

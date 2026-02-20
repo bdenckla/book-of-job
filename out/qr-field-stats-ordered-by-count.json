@@ -107,6 +107,10 @@
       "count": 138
     },
     {
+      "field": "qr-lc-img-too-tall",
+      "count": 131
+    },
+    {
       "field": "qr-generic-comment",
       "count": 89
     },
@@ -116,7 +120,7 @@
     },
     {
       "field": "qr-cam1753-img",
-      "count": 22
+      "count": 32
     },
     {
       "field": "qr-word-id",
