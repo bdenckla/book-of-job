@@ -314,7 +314,7 @@ def _maybe_g3yh_dontcare_message(quirkrec):
 
 
 def _make_details_html(quirkrec, img_prefix="img"):
-    lc_scale = 0.6 if quirkrec.get("qr-lc-img-too-tall") else None
+    lc_scale = quirkrec.get("qr-lc-img-scale")
     return [
         author.table_c(_make_overview_row(quirkrec)),
         *_maybe_bhq(quirkrec.get("qr-bhq")),
