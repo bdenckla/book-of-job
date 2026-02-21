@@ -38,6 +38,7 @@ RECORD_3410 = {
         author.para(_COMMENT_PARA1),
         author.para(_COMMENT_PARA2),
         author.para(_COMMENT_PARA3),
+        "In μY, the mark in question is absent: the א just has פתח.",
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "406B", "column": 2, "line": 14},
