@@ -14,6 +14,6 @@ RECORD_0523 = {
         " but it could easily be either not ink, or not intentional ink.",
         " Aside: the קמץ under ה is קטן.",
     ],
-    "qr-lc-loc": {"page": "398B", "column": 1, "line": 17},
+    "qr-lc-loc": {"page": "398B", "column": 1, "line": 17, "line2": 18},
     "qr-ac-loc": {"page": "271v", "column": 1, "line": 17, "word": 1},
 }

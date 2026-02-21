@@ -470,7 +470,8 @@
     "qr-lc-loc": {
       "page": "398B",
       "column": 1,
-      "line": 17
+      "line": 17,
+      "line2": 18
     },
     "qr-ac-loc": {
       "page": "271v",
@@ -2699,7 +2700,8 @@
     "qr-lc-loc": {
       "page": "401B",
       "column": 2,
-      "line": 7
+      "line": 7,
+      "line2": 8
     },
     "qr-ac-loc": {
       "page": "274r",
@@ -3700,14 +3702,15 @@
   },
   {
     "qr-cv": "20:23",
-    "qr-lc-proposed": "בּ֖וֹ",
+    "qr-lc-proposed": "יְֽשַׁלַּח־בּ֖וֹ",
     "qr-what-is-weird": "טרחא not דחי",
-    "qr-consensus": "בּ֭וֹ",
-    "qr-highlight": 1,
+    "qr-consensus": "יְֽשַׁלַּח־בּ֭וֹ",
+    "qr-highlight": 6,
     "qr-lc-loc": {
       "page": "402B",
       "column": 2,
-      "line": 26
+      "line": 26,
+      "line2": 27
     },
     "qr-ac-loc": {
       "page": "275r",
@@ -5408,14 +5411,15 @@
   },
   {
     "qr-cv": "30:22",
-    "qr-lc-proposed": "ר֖וּחַ",
+    "qr-lc-proposed": "אֶל־ר֖וּחַ",
     "qr-what-is-weird": "טרחא not דחי",
-    "qr-consensus": "ר֭וּחַ",
-    "qr-highlight": 1,
+    "qr-consensus": "אֶל־ר֭וּחַ",
+    "qr-highlight": 4,
     "qr-lc-loc": {
       "page": "405B",
       "column": 1,
-      "line": 3
+      "line": 3,
+      "line2": 4
     },
     "qr-ac-loc": {
       "page": "277v",
@@ -6601,7 +6605,8 @@
     "qr-lc-loc": {
       "page": "407A",
       "column": 1,
-      "line": 18
+      "line": 18,
+      "line2": 19
     },
     "qr-ac-loc": {
       "page": "279r",
@@ -7411,7 +7416,7 @@
     ],
     "qr-noted-by": "nWLC",
     "qr-lc-img": "Lenin/Lenin-3812-YD3F_HJXR.png",
-    "qr-lc-img-scale": 0.564,
+    "qr-lc-img-scale": 0.4,
     "qr-aleppo-img": "Aleppo/Aleppo-3812-YD3F_HJXR.png",
     "qr-jc-img": "Jerusalem-Crown-3812-YD3F_HJXR.png",
     "nbd": {

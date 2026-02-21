@@ -175,6 +175,10 @@
       "count": 160
     },
     {
+      "field": "qr-lc-loc.line2",
+      "count": 5
+    },
+    {
       "field": "qr-lc-loc.page",
       "count": 160
     },

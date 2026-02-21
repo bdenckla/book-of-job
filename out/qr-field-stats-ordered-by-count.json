@@ -171,6 +171,10 @@
       "count": 5
     },
     {
+      "field": "qr-lc-loc.line2",
+      "count": 5
+    },
+    {
       "field": "qr-uxlc-position-within-verse",
       "count": 5
     },
