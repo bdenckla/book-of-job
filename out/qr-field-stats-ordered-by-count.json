@@ -112,14 +112,14 @@
     },
     {
       "field": "qr-generic-comment",
-      "count": 89
-    },
-    {
-      "field": "qr-bhq-comment",
-      "count": 62
+      "count": 90
     },
     {
       "field": "qr-cam1753-img",
+      "count": 71
+    },
+    {
+      "field": "qr-bhq-comment",
       "count": 62
     },
     {
@@ -193,10 +193,6 @@
     {
       "field": "qr-highlight-ac-proposed",
       "count": 2
-    },
-    {
-      "field": "qr-cam1753-img-intro",
-      "count": 1
     },
     {
       "field": "qr-ignore-g3yh-diff-in-consensus",

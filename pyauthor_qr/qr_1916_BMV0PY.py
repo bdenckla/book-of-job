@@ -14,6 +14,16 @@ _GENCOM_PARA_2 = [
     " which could, perhaps, be a misplaced רביע,",
     " but I find this unlikely.",
 ]
+_GENCOM_PARA_3 = [
+    "Here μY matches μL,",
+    " with the exception of two dots roughly between the ב and the מ.",
+    " These dots are of unequal size, which is odd.",
+    " They are likely a Masorah parva \u201Ccallout\u201D\u2014note that",
+    " instead of a masorah circle,",
+    " μY uses a pair of above-dots",
+    " as a \u201Ccallout\u201D for a Masorah parva note.",
+    " See $link_22_21_3MV for another example of this two-dot callout notation.",
+]
 RECORD_1916_BMV0PY = {
     "qr-noted-by-mam": True,
     "qr-noted-by": "aDM",
@@ -29,5 +39,6 @@ RECORD_1916_BMV0PY = {
     "qr-generic-comment": [
         author.para(_GENCOM_PARA_1),
         author.para(_GENCOM_PARA_2),
+        author.para(_GENCOM_PARA_3),
     ],
 }

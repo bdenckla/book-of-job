@@ -16,6 +16,7 @@ _BHQCOM_PART_2 = [
     " despite the general policy of $BHQ to ignore רפה marks in μL.",
     " In such a confusing word, the reader needs all the detail and context possible,",
     " such as this רפה mark.",
+    " See also $link_19_2 for another case where רפה is important.",
 ]
 _BHQCOM_PART_3 = [
     "$BHQ notes that here μL disagrees with μA and μY.",

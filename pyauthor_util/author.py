@@ -560,6 +560,7 @@ _DOLLAR_SUB_DISPATCH = {
     "$link_11_6": _dlink("11:6", "1106"),
     "$link_16_6": _dlink("16:6", "1606"),
     "$link_18_6": _dlink("18:6", "1806"),
+    "$link_19_2": _dlink("19:2", "1902"),
     "$link_19_5": _dlink("19:5", "1905"),
     "$link_21_15": _dlink("21:15", "2115"),
     "$link_22_12": _dlink("22:12", "2212"),
@@ -581,6 +582,7 @@ _DOLLAR_SUB_DISPATCH = {
     # Verse-ref links to multi-record quirkrec detail pages (disambiguated)
     "$link_18_4_HLM3N5_2_of_2_FTW": _dlink("18:4", "1804-HLM3N5_2_of_2_FTW"),
     "$link_19_16_QRAFY": _dlink("19:16", "1916-QRAFY"),
+    "$link_19_16_BMV0PY": _dlink("19:16", "1916-BMV0PY"),
     "$link_22_21_3MV": _dlink("22:21", "2221-3MV"),
     "$link_38_12_YD3F_HJXR": _dlink("38:12", "3812-YD3F_HJXR"),
     "$link_38_12_HMYMY5": _dlink("38:12", "3812-HMYMY5"),

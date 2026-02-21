@@ -3019,11 +3019,58 @@
   },
   {
     "qr-cv": "19:2",
-    "qr-lc-proposed": "וּֽתְדַכְּאוּנַ֥נִי",
+    "qr-lc-proposed": "וּֽתְדַכְּאוּנַ֥נִי",
     "qr-what-is-weird": "כ has שווא",
     "qr-consensus": "וּֽתְדַכּאוּנַ֥נִי",
     "qr-generic-comment": [
-      "As $UXLC notes, an erasure under the כ is apparent."
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "As ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "UXLC"
+            ]
+          },
+          " notes, an erasure under the כ is apparent."
+        ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "The שווא in question is present in μY. Relatedly, and importantly, μY has no רפה above its א. (The ink roughly between the כ and the א is the pair of above-dots that is μY’s equivalent of a masorah circle.) Thus, though μY presents a different word than the μL/μA word, it is still a valid word, i.e. the word makes sense according to the syllabic grammar of Biblical Hebrew."
+        ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "In contrast, transcription in ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHQ"
+            ]
+          },
+          " results in a word that does not make sense, if it were supplemented with the רפה that is clearly present in μL. This is one of several cases we’ve seen where רפה, though generally safe to ignore (and discard), is not always safe to ignore (and discard). See also ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/3107.html"
+            },
+            "contents": [
+              "31:7"
+            ]
+          },
+          "."
+        ]
+      }
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {
@@ -3042,6 +3089,7 @@
     "qr-lc-img": "Lenin/Lenin-1902.png",
     "qr-lc-img-scale": 0.816,
     "qr-aleppo-img": "Aleppo/Aleppo-1902.png",
+    "qr-cam1753-img": "cam1753/cam1753-1902.png",
     "aleppo-img-intro": "page 274v, col 2, line 24, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3183,6 +3231,7 @@
     "qr-lc-img": "Lenin/Lenin-1905.png",
     "qr-lc-img-scale": 0.462,
     "qr-aleppo-img": "Aleppo/Aleppo-1905.png",
+    "qr-cam1753-img": "cam1753/cam1753-1905.png",
     "aleppo-img-intro": "page 274v, col 2, line 27, word 7",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -3224,6 +3273,7 @@
     "qr-lc-img": "Lenin/Lenin-1916-QRAFY.png",
     "qr-lc-img-scale": 0.534,
     "qr-aleppo-img": "Aleppo/Aleppo-1916-QRAFY.png",
+    "qr-cam1753-img": "cam1753/cam1753-1916-QRAFY.png",
     "aleppo-img-intro": "page 275r, col 1, line 11, word 4",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -3274,11 +3324,28 @@
         "contents": [
           "In μL, there is some extra ink on the right side of the גרש מוקדם, which could, perhaps, be a misplaced רביע, but I find this unlikely."
         ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "Here μY matches μL, with the exception of two dots roughly between the ב and the מ. These dots are of unequal size, which is odd. They are likely a Masorah parva “callout”—note that instead of a masorah circle, μY uses a pair of above-dots as a “callout” for a Masorah parva note. See ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/2221-3MV.html"
+            },
+            "contents": [
+              "22:21"
+            ]
+          },
+          " for another example of this two-dot callout notation."
+        ]
       }
     ],
     "qr-lc-img": "Lenin/Lenin-1916-BMV0PY.png",
     "qr-lc-img-scale": 0.525,
     "qr-aleppo-img": "Aleppo/Aleppo-1916-BMV0PY.png",
+    "qr-cam1753-img": "cam1753/cam1753-1916-BMV0PY.png",
     "aleppo-img-intro": "page 275r, col 1, line 12, word 2",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -3314,6 +3381,7 @@
     "qr-lc-img": "Lenin/Lenin-1928.png",
     "qr-lc-img-scale": 0.512,
     "qr-aleppo-img": "Aleppo/Aleppo-1928.png",
+    "qr-cam1753-img": "cam1753/cam1753-1928.png",
     "aleppo-img-intro": "page 275r, col 1, line 24, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3347,9 +3415,11 @@
       "line": 27,
       "word": 3
     },
+    "qr-generic-comment": "In μY, the געיה appears to the right of the פתח of the ה, i.e. it is an “early” געיה.",
     "qr-lc-img": "Lenin/Lenin-2001.png",
     "qr-lc-img-scale": 0.534,
     "qr-aleppo-img": "Aleppo/Aleppo-2001.png",
+    "qr-cam1753-img": "cam1753/cam1753-2001.png",
     "aleppo-img-intro": "page 275r, col 1, line 27, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3384,6 +3454,7 @@
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-2023.png",
     "qr-aleppo-img": "Aleppo/Aleppo-2023.png",
+    "qr-cam1753-img": "cam1753/cam1753-2023.png",
     "aleppo-img-intro": "page 275r, col 2, line 23, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3420,6 +3491,7 @@
     "qr-lc-img": "Lenin/Lenin-2107.png",
     "qr-lc-img-scale": 0.569,
     "qr-aleppo-img": "Aleppo/Aleppo-2107.png",
+    "qr-cam1753-img": "cam1753/cam1753-2107.png",
     "aleppo-img-intro": "page 275v, col 1, line 10, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3499,6 +3571,7 @@
     "qr-lc-img": "Lenin/Lenin-2125.png",
     "qr-lc-img-scale": 0.561,
     "qr-aleppo-img": "Aleppo/Aleppo-2125.png",
+    "qr-cam1753-img": "cam1753/cam1753-2125.png",
     "aleppo-img-intro": "page 275v, col 2, line 3, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -3674,7 +3747,58 @@
     "qr-what-is-weird": "אתנח not מונח",
     "qr-consensus": "עִמּ֣וֹ",
     "qr-generic-comment": [
-      "A dot under the מ of %עמו is fairly clear. It is (charitably) not transcribed by $BHL_A, presumably based on the consensus expectation that it is absent."
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "A dot under the מ of ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh"
+            },
+            "contents": [
+              "עמו"
+            ]
+          },
+          " is fairly clear. It is (charitably) not transcribed by ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHL-A"
+            ]
+          },
+          ", presumably based on the consensus expectation that it is absent."
+        ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "Note that instead of a masorah circle, μY uses a pair of above-dots as a “callout” for a Masorah parva note; hence the pair of above-dots above ל in ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh"
+            },
+            "contents": [
+              "ושלם"
+            ]
+          },
+          ". See ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/1916-BMV0PY.html"
+            },
+            "contents": [
+              "19:16"
+            ]
+          },
+          " for another example of this two-dot callout notation."
+        ]
+      }
     ],
     "qr-highlight": 2,
     "qr-bhq-comment": [
@@ -3682,11 +3806,6 @@
     ],
     "qr-noted-by": "tBHQ-nBHL-nWLC",
     "qr-cam1753-page-url": "https://archive.org/details/ketuvim-cambridge-ms-add-1753-images/page/n83/mode/1up",
-    "qr-cam1753-img-intro": [
-      "note that instead of a masorah circle, μY uses a pair of above-dots",
-      " as a “callout” for a Masorah parva note;",
-      " hence the pair of above-dots above ל in %ושלם."
-    ],
     "qr-ac-loc": {
       "page": "276r",
       "column": 1,
@@ -5220,7 +5339,17 @@
               "BHQ"
             ]
           },
-          " to ignore רפה marks in μL. In such a confusing word, the reader needs all the detail and context possible, such as this רפה mark."
+          " to ignore רפה marks in μL. In such a confusing word, the reader needs all the detail and context possible, such as this רפה mark. See also ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/1902.html"
+            },
+            "contents": [
+              "19:2"
+            ]
+          },
+          " for another case where רפה is important."
         ]
       },
       {
