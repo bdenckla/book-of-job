@@ -225,7 +225,8 @@ def _ac_loc_intro(ac_loc):
 
 def _cam1753_loc_intro(loc):
     """Format qr-cam1753-loc dict as a location string."""
-    text = f"page {loc['page']}, col {loc['column']}, " f"line {loc['line']}"
+    page = loc["page"].lstrip("0")
+    text = f"page {page}, col {loc['column']}, " f"line {loc['line']}"
     if "line2" in loc:
         text += f" and line {loc['line2']}"
     return text

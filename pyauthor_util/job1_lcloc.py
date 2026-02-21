@@ -12,16 +12,16 @@ def lcloc(lcloc):
     abs_line, m_sp_cfb = _maybe_sp_cfb(line)
     m_sp_ibl = _maybe_sp_ibl(lcloc)
     return [
-        "page ",
-        _lc_full_page_anc(page),
-        f", col {column}, line {abs_line}{m_sp_cfb}{m_sp_ibl}",
+        "μL (",
+        _lc_page_anchor(page),
+        f" {page}, col {column}, line {abs_line}{m_sp_cfb}{m_sp_ibl}):",
     ]
 
 
-def _lc_full_page_anc(page):
+def _lc_page_anchor(page):
     # E.g. page == "397B"
     href = f"https://manuscripts.sefaria.org/leningrad-color/BIB_LENCDX_F{page}.jpg"
-    return my_html.anchor_h(page, href)
+    return my_html.anchor_h("page", href)
 
 
 def _maybe_sp_ibl(lcloc):
