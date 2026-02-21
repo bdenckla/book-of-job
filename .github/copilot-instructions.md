@@ -140,13 +140,10 @@ The following workflow docs are available via `#file` when needed:
 | Crop a word from the Leningrad Codex (μL) | `copilot-instructions-leningrad-crops.md` |
 | Scale a Leningrad image to match Aleppo height | `copilot-instructions-leningrad-scaling.md` |
 | Add/update quirkrec comments | `copilot-instructions-quirkrec-comments.md` |
-| Edit Aleppo line breaks | `copilot-instructions-aleppo-line-breaks.md` |
-| Edit Aleppo column coordinates | `copilot-instructions-column-coordinates.md` |
 | Open HTML files / fragment anchors / caching | `copilot-instructions-opening-html.md` |
 | View image metadata (XnView MP) | `copilot-instructions-image-metadata.md` |
 | Image crop reproducibility rules | `copilot-instructions-image-crop-reproducibility.md` |
-| Look up mgketer.org Aleppo Codex URLs | `copilot-instructions-mgketer-images.md` |
 | Work with MAM-XML files | `copilot-instructions-mam-xml.md` |
 | Work with MAM parsed data | `copilot-instructions-mam-parsed.md` |
 
-All files are in `.github/`. The old crop workflow file `copilot-instructions-aleppo-word-crop-old.md` is superseded by `copilot-instructions-aleppo-word-crops.md`.
+All files are in `.github/`.
