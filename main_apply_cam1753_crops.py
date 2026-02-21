@@ -6,6 +6,10 @@ Reads the bbox JSON exported by the cam1753 crop editor (from clipboard
 or .novc/cam1753_crops_export.json), crops each word from the full-resolution
 page image, and saves to docs/jobn/img/cam1753/cam1753-{sid}.png.
 
+Each output PNG includes tEXt metadata:
+  - ``cam1753-source``: JSON from the source JPEG EXIF (spread info)
+  - ``cam1753-crop``: JSON with the crop editor export fields
+
 Usage:
     .venv\\Scripts\\python.exe main_apply_cam1753_crops.py .novc/cam1753_crops_export.json
 """
@@ -13,6 +17,8 @@ Usage:
 import json
 import sys
 from pathlib import Path
+
+from PIL.PngImagePlugin import PngInfo
 
 ROOT = Path(__file__).resolve().parent
 
@@ -23,6 +29,19 @@ sys.path.insert(0, str(CAM1753_REPO))
 from py_cam1753_word_image.page import load_page_image
 
 OUT_DIR = ROOT / "docs" / "jobn" / "img" / "cam1753"
+
+
+def _get_source_metadata(img):
+    """Extract the JSON string from EXIF tag 270 (ImageDescription)."""
+    exif_bytes = img.info.get("exif")
+    if not exif_bytes:
+        return None
+    try:
+        from PIL.ExifTags import Base as ExifBase
+        exif_data = img.getexif()
+        return exif_data.get(ExifBase.ImageDescription)
+    except Exception:
+        return None
 
 
 def main():
@@ -39,8 +58,9 @@ def main():
     crops = json.loads(json_path.read_text("utf-8"))
     print(f"Applying {len(crops)} crops...")
 
-    # Cache page images (they can be large)
+    # Cache page images and their source metadata
     page_cache = {}
+    source_meta_cache = {}
     saved = 0
     for crop in crops:
         sid = crop["sid"]
@@ -51,12 +71,25 @@ def main():
         if page_id not in page_cache:
             print(f"  Loading page {page_id}...")
             page_cache[page_id] = load_page_image(page_id)
+            source_meta_cache[page_id] = _get_source_metadata(
+                page_cache[page_id]
+            )
 
         img = page_cache[page_id]
         cropped = img.crop((x, y, x + w, y + h))
 
+        # Build PNG metadata
+        png_info = PngInfo()
+        source_meta = source_meta_cache[page_id]
+        if source_meta:
+            png_info.add_text("cam1753-source", source_meta)
+        crop_meta = {
+            k: v for k, v in crop.items() if k != "sid"
+        }
+        png_info.add_text("cam1753-crop", json.dumps(crop_meta))
+
         out_path = OUT_DIR / f"cam1753-{sid}.png"
-        cropped.save(out_path)
+        cropped.save(out_path, pnginfo=png_info)
         print(f"  {out_path.name}: {cropped.size[0]}\u00d7{cropped.size[1]}")
         saved += 1
 
