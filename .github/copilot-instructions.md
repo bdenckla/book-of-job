@@ -98,16 +98,6 @@ Both approaches guarantee syntactically valid output. Avoid fragile regex-based 
 python main_gen_misc_authored_english_documents.py
 ```
 
-## mgketer.org Aleppo Codex Images
-
-To view an Aleppo Codex (μA) image for a given chapter on mgketer.org, use:
-
-```
-https://www.mgketer.org/mikra/{bknu}/{chnu}/1/mg/106
-```
-
-where `bknu` is the 1-based book number and `chnu` is the chapter number. The book number can be looked up via `pycmn.bib_locales.get_bknu(bk39id)`. For reference, Job = 29.
-
 ## Screenshots
 
 When the user refers to "the most recent screenshot" or similar, this means the most recent file (by last-write time) in:
@@ -124,105 +114,6 @@ After making changes to Python source files, verify the HTML output is unchanged
 2. Check: `git status --porcelain docs/`
 3. If any files in `docs/` are modified, investigate and fix the differences before considering the task complete
 
-## Column Coordinate Editing Workflow
-
-To measure column positions on an Aleppo Codex page image:
-
-1. **Generate the interactive HTML editor:**
-   ```
-   python py_ac_loc/gen_col_location_editor.py <page_id>
-   ```
-   This opens a browser editor with draggable side-midpoint handles and skew (rotation) controls for two columns of 28 lines each. If a coordinate file already exists for that page, it loads those values as defaults.
-
-2. **Adjust columns** using handles, skew buttons (rotate ↶/↷), and fine mode. The "skew" label on the image shows which edge angle is being adjusted.
-
-3. **Export JSON** by clicking the Export button (copies to clipboard).
-
-4. **Paste the JSON into the chat.** The assistant saves it to `py_ac_loc/column-coordinates/<page_id>.json`.
-
-5. **Pages for Book of Job:** 270r through 281v (24 pages total). Check which are done by listing `py_ac_loc/column-coordinates/`.
-
-## Line Break Editing Workflow
-
-To add line-break markers for an Aleppo Codex page:
-
-1. **Generate the flat-stream JSON** (if it doesn't already exist in `py_ac_loc/line-breaks/`):
-   ```
-   python py_ac_loc/gen_lb_flat_stream.py <page_id>
-   ```
-
-2. **Generate the interactive HTML editor:**
-   ```
-   python py_ac_loc/gen_line_break_editor.py <page_id> <col>
-   ```
-   where col 1 = right column, col 2 = left column. This opens a browser
-   editor with skinny/wide image crop toggle and a col 1/col 2 toggle,
-   so both columns can be done in one session.
-
-3. **Mark line breaks** in the editor by clicking the last word of each line, then click **Export**.
-
-4. **Paste directly** into `py_ac_loc/line-breaks/<page_id>.json`, replacing its entire contents.
-
-**Do NOT** paste the exported JSON into the chat window — that causes Unicode NFC normalization of Hebrew text. Pasting directly into the file preserves the original byte sequences and avoids the need for `merge_line_markers.py`.
-
-## Aleppo Word Crop Workflow
-
-To supply Aleppo Codex (μA) word-level image crops for quirkrecs that lack them,
-see `.github/copilot-instructions-aleppo-word-crops.md`.
-
-## Cambridge 1753 Word Crop Workflow
-
-To supply Cambridge MS Add. 1753 (μC) word-level image crops for quirkrecs that lack them,
-see `.github/copilot-instructions-cam1753-crops.md`.
-
-## Adding or Updating Quirkrec Comments
-
-To add or modify comments on quirkrec entries (e.g., noting μA/μL observations),
-see `.github/copilot-instructions-quirkrec-comments.md`.
-
-## μL (Leningrad) Cropping Help
-
-When the user needs to crop a word from the Leningrad Codex (μL) Sefaria image,
-see `.github/copilot-instructions-leningrad-crops.md`.
-
-## μL (Leningrad) Image Scaling
-
-To scale a Leningrad image so its displayed height matches the Aleppo image,
-see `.github/copilot-instructions-leningrad-scaling.md`.
-
-## Opening HTML Files
-
-When displaying an HTML file that only uses local/relative resources (images, CSS, etc.), open it directly as a file (`Start-Process "path/to/file.html"`) rather than starting a local HTTP server. Only use a server when the page requires it (e.g., fetching from external APIs with CORS restrictions, or serving content that browsers block via `file://`).
-
-**Fragment anchors (`#id`):** `file:///` URIs with `#fragment` do NOT reliably scroll to the anchor — the browser drops the fragment. Use a local HTTP server instead:
-
-```powershell
-# Start server (background):
-python -m http.server 8471 --directory docs
-
-# Open anchored URLs:
-$sids = @("SID1","SID2","SID3")
-foreach ($s in $sids) { Start-Process "http://localhost:8471/jobn/job1_full_list_details.html#row-$s"; Start-Sleep -Milliseconds 500 }
-```
-
-The 500 ms delay prevents tabs from being dropped.
-
-**Browser caching:** When verifying updated images served via localhost, the browser may show stale cached versions. Use Edge in InPrivate mode to guarantee a fresh load:
-
-```powershell
-Start-Process "msedge" "--inprivate http://localhost:8471/jobn/job1_full_list_details.html#row-SID"
-```
-
-## Viewing Image Metadata
-
-To inspect embedded PNG tEXt chunks or other image metadata, use **XnView MP** (installed via winget as `XnSoft.XnViewMP`):
-
-```powershell
-Start-Process "C:\Program Files\XnViewMP\xnviewmp.exe" "path\to\image.png"
-```
-
-In XnView MP, press **Ctrl+I** (or **Edit → Metadata → Edit IPTC/XMP…**) to view properties including embedded text metadata.
-
 ## Authorship Marking
 
 When generating a new version-controlled file (Python script, Markdown doc, etc.), include an authorship comment as the **first line**:
@@ -232,20 +123,30 @@ When generating a new version-controlled file (Python script, Markdown doc, etc.
 
 This does not apply to throwaway files in `.novc/`.
 
-## Image Crop Reproducibility
-
-All image-cropping operations (spread-to-page splits, word-level crops, etc.) must record enough data to **reproduce the crop programmatically at any image resolution**.
-
-1. **Dual storage.** Crop coordinates are stored both (a) as metadata embedded in the output image file (PNG tEXt chunks or JPEG EXIF) and (b) in an independent JSON file (`out/cam1753-crops.json` for word crops). Either copy is authoritative on its own.
-
-2. **Absolute coordinates with source dimensions.** Always record pixel-level absolute coordinates together with the source image dimensions they were measured against (e.g. `bbox_abs` + `page_size`). This makes the data resolution-independent without requiring separate relative coordinates: `frac = abs_coord / source_dim`, then `new_coord = frac * new_source_dim`.
-
-3. **Relative coordinates are redundant but welcome.** When a crop editor produces relative coordinates (e.g. `bbox_rel`), store them alongside the absolute ones. The redundancy serves as a cross-check and may be convenient for editor state restoration, but the absolute coordinates plus source dimensions are the primary record.
-
-4. **Overwrite-on-re-crop.** The persistent JSON uses SID as key. Re-cropping an image overwrites the previous entry; git history preserves the full edit trail if needed.
-
 ## Git Discipline
 
 - **Never auto-commit.** Only commit when the user explicitly asks.
 - **Before discarding work** (`git reset`, `git checkout -- .`, `git stash drop`, etc.): always run `git status` and `git diff --stat` first. If there are uncommitted changes beyond the current experiment, alert the user and ask them to commit or stash before proceeding.
 - **Before a series of experiments** that might need to be thrown away: ask the user to commit the current clean state first, so there is a safe baseline to return to.
+
+## Workflow Reference
+
+The following workflow docs are available via `#file` when needed:
+
+| When you need to… | Attach this file |
+|---|---|
+| Crop a word from the Aleppo Codex (μA) | `copilot-instructions-aleppo-word-crops.md` |
+| Crop a word from Cambridge MS Add. 1753 (μC) | `copilot-instructions-cam1753-crops.md` |
+| Crop a word from the Leningrad Codex (μL) | `copilot-instructions-leningrad-crops.md` |
+| Scale a Leningrad image to match Aleppo height | `copilot-instructions-leningrad-scaling.md` |
+| Add/update quirkrec comments | `copilot-instructions-quirkrec-comments.md` |
+| Edit Aleppo line breaks | `copilot-instructions-aleppo-line-breaks.md` |
+| Edit Aleppo column coordinates | `copilot-instructions-column-coordinates.md` |
+| Open HTML files / fragment anchors / caching | `copilot-instructions-opening-html.md` |
+| View image metadata (XnView MP) | `copilot-instructions-image-metadata.md` |
+| Image crop reproducibility rules | `copilot-instructions-image-crop-reproducibility.md` |
+| Look up mgketer.org Aleppo Codex URLs | `copilot-instructions-mgketer-images.md` |
+| Work with MAM-XML files | `copilot-instructions-mam-xml.md` |
+| Work with MAM parsed data | `copilot-instructions-mam-parsed.md` |
+
+All files are in `.github/`. The old crop workflow file `copilot-instructions-aleppo-word-crop-old.md` is superseded by `copilot-instructions-aleppo-word-crops.md`.
