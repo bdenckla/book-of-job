@@ -83,7 +83,12 @@ def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, cam1753_crops, pe_quirkrec
 
 
 def _enrich_one_qr_by_adding_cam1753_loc(cam1753_crops, quirkrec):
-    """Add qr-cam1753-loc from cam1753-crops.json if available."""
+    """Add qr-cam1753-loc from cam1753-crops.json if available.
+
+    Note the architectural inconsistency: qr-lc-loc and qr-ac-loc are
+    hand-authored in each qr_*.py source file, but qr-cam1753-loc is
+    computed here from an external JSON file (cam1753-crops.json).
+    """
     sid = short_id(quirkrec)
     crop = cam1753_crops.get(sid)
     if crop is None:
@@ -139,6 +144,9 @@ def _assert_lc_img_fields_filled(qr):
 
 
 # Image key → location key, for each manuscript.
+# Note: qr-lc-loc and qr-ac-loc are hand-authored in qr_*.py files and
+# pass through enrichment unchanged; qr-cam1753-loc is the odd one out,
+# computed during enrichment from cam1753-crops.json (see above).
 _IMG_LOC_PAIRS = [
     ("qr-lc-img", "qr-lc-loc"),
     ("qr-aleppo-img", "qr-ac-loc"),

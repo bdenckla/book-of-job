@@ -215,6 +215,9 @@ _MI_ARGS = {
 }
 
 
+# Note: despite the parallel structure here, these location dicts have
+# different origins. qr-ac-loc is hand-authored in each qr_*.py file;
+# qr-cam1753-loc is computed during enrichment from cam1753-crops.json.
 def _ac_loc_intro(ac_loc):
     """Format qr-ac-loc dict as a location string."""
     return (
