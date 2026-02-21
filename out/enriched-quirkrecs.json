@@ -3538,6 +3538,7 @@
     "qr-lc-img": "Lenin/Lenin-2134.png",
     "qr-lc-img-scale": 0.864,
     "qr-aleppo-img": "Aleppo/Aleppo-2134.png",
+    "qr-cam1753-img": "cam1753/cam1753-2134.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3576,6 +3577,7 @@
     "qr-lc-img": "Lenin/Lenin-2210.png",
     "qr-lc-img-scale": 0.514,
     "qr-aleppo-img": "Aleppo/Aleppo-2210.png",
+    "qr-cam1753-img": "cam1753/cam1753-2210.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3613,6 +3615,7 @@
     "qr-lc-img": "Lenin/Lenin-2212.png",
     "qr-lc-img-scale": 0.565,
     "qr-aleppo-img": "Aleppo/Aleppo-2212.png",
+    "qr-cam1753-img": "cam1753/cam1753-2212.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3647,6 +3650,7 @@
     "qr-lc-img": "Lenin/Lenin-2214.png",
     "qr-lc-img-scale": 0.477,
     "qr-aleppo-img": "Aleppo/Aleppo-2214.png",
+    "qr-cam1753-img": "cam1753/cam1753-2214.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3783,6 +3787,7 @@
     "qr-lc-img": "Lenin/Lenin-2221-VJL6.png",
     "qr-lc-img-scale": 0.533,
     "qr-aleppo-img": "Aleppo/Aleppo-2221-VJL6.png",
+    "qr-cam1753-img": "cam1753/cam1753-2221-VJL6.png",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -3823,6 +3828,7 @@
     "qr-lc-img": "Lenin/Lenin-2224.png",
     "qr-lc-img-scale": 0.556,
     "qr-aleppo-img": "Aleppo/Aleppo-2224.png",
+    "qr-cam1753-img": "cam1753/cam1753-2224.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -3918,6 +3924,7 @@
     "qr-lc-img": "Lenin/Lenin-2228.png",
     "qr-lc-img-scale": 0.489,
     "qr-aleppo-img": "Aleppo/Aleppo-2228.png",
+    "qr-cam1753-img": "cam1753/cam1753-2228.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -3961,6 +3968,7 @@
     "qr-lc-img": "Lenin/Lenin-2230-YMLE.png",
     "qr-lc-img-scale": 0.585,
     "qr-aleppo-img": "Aleppo/Aleppo-2230-YMLE.png",
+    "qr-cam1753-img": "cam1753/cam1753-2230-YMLE.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4002,6 +4010,7 @@
     "qr-lc-img": "Lenin/Lenin-2230-VNMLE.png",
     "qr-lc-img-scale": 0.607,
     "qr-aleppo-img": "Aleppo/Aleppo-2230-VNMLE.png",
+    "qr-cam1753-img": "cam1753/cam1753-2230-VNMLE.png",
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
