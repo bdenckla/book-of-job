@@ -54,25 +54,12 @@ def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, pe_quirkrec):
             for multi-record verses, hard-coded in the source file).
     """
     result = _enrich_one_qr_by_adding_auto_imgs(jobn_rel_top, pe_quirkrec)
-    result = _enrich_one_qr_by_adding_aleppo_intro(result)
     result = _enrich_one_qr_by_adding_nbd(result)
     result = _enrich_one_qr_by_adding_pgroup(result)
     result = _enrich_one_qr_by_adding_auto_diff(result)
     result = _enrich_one_qr_by_flattening_strs(result)
     _assert_lc_img_fields_filled(result)
     return result
-
-
-def _enrich_one_qr_by_adding_aleppo_intro(quirkrec):
-    """Add aleppo-img-intro from the static qr-ac-loc field, if present."""
-    ac_loc = quirkrec.get("qr-ac-loc")
-    if ac_loc is None:
-        return quirkrec
-    intro = (
-        f"page {ac_loc['page']}, col {ac_loc['column']}, "
-        f"line {ac_loc['line']}, word {ac_loc['word']}"
-    )
-    return {**quirkrec, "aleppo-img-intro": intro}
 
 
 def _enrich_one_qr_by_adding_nbd(quirkrec):

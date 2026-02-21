@@ -199,7 +199,7 @@ def _img(img, img_prefix="img", scale=None):
 _MI_ARGS = {
     "mi-args-aleppo": [
         "μA (Aleppo)",
-        "aleppo-img-intro",
+        "qr-ac-loc",
         "qr-aleppo-img",
     ],
     "mi-args-cam1753": [
@@ -215,12 +215,23 @@ _MI_ARGS = {
 }
 
 
+def _ac_loc_intro(ac_loc):
+    """Format qr-ac-loc dict as a location string."""
+    return (
+        f"page {ac_loc['page']}, col {ac_loc['column']}, "
+        f"line {ac_loc['line']}, word {ac_loc['word']}"
+    )
+
+
 def _maybe_one_img(quirkrec, mi_args_key, img_prefix="img"):
     ms_name, iikey, ipkey = _MI_ARGS[mi_args_key]
     maybe_img_path = quirkrec.get(ipkey)
     if maybe_img_path is None:
         return []
-    if maybe_img_intro := quirkrec.get(iikey):
+    maybe_img_intro = quirkrec.get(iikey)
+    if iikey == "qr-ac-loc" and maybe_img_intro is not None:
+        maybe_img_intro = _ac_loc_intro(maybe_img_intro)
+    if maybe_img_intro:
         intro = [" (", maybe_img_intro, ")"]
     else:
         intro = []
