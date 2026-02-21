@@ -12,10 +12,10 @@ _BHQ_COMMENT_2614 = [
 
 _GENCOM_PART1 = [
     "The consensus is that חולם stays חסר in the קרי, i.e. ",
-    [suffix("רתו"), " in the כתיב merely expands to "],
+    ["the ", suffix("רתו"), " ending in the כתיב merely expands to "],
     [suffix("רתיו"), " in the קרי."],
     " In contrast to the consensus, in μL, ",
-    [suffix("רתו"), " in the כתיב expands all the way to "],
+    ["the ", suffix("רתו"), " ending in the כתיב expands all the way to "],
     [suffix("רותיב"), " in the קרי."],
     " The marginal קרי note in μL is a little hard to parse until you realize",
     " that it is “invaded” from above by the descender of a big dotted ק.",
@@ -30,8 +30,7 @@ RECORD_2614 = {
     "qr-cv": "26:14",
     "qr-lc-proposed": "גְּ֝בוּרוֹתָ֗יו",
     "qr-what-is-weird": "חולם becomes מלא in קרי",
-    "qr-consensus": "גְּ֝בוּרֹתָ֗יו",
-    "qr-ac-loc": {"page": "276v", "column": 2, "line": 9, "word": 4},
+    "qr-consensus": "גְּ֝בוּרֹתָ֗יו",    "qr-consensus-ketiv": "גְּ֝בוּרֹתָ֗ו",    "qr-ac-loc": {"page": "276v", "column": 2, "line": 9, "word": 4},
     "qr-generic-comment": [
         author.para(_GENCOM_PART1),
         author.para(_GENCOM_PART2),

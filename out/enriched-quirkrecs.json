@@ -4488,6 +4488,12 @@
     "qr-lc-img": "Lenin/Lenin-2305.png",
     "qr-lc-img-scale": 0.461,
     "qr-aleppo-img": "Aleppo/Aleppo-2305.png",
+    "qr-cam1753-img": "cam1753/cam1753-2305.png",
+    "qr-cam1753-loc": {
+      "page": "0079A",
+      "column": 2,
+      "line": 17
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -4932,6 +4938,7 @@
     "qr-lc-proposed": "גְּ֝בוּרוֹתָ֗יו",
     "qr-what-is-weird": "חולם becomes מלא in קרי",
     "qr-consensus": "גְּ֝בוּרֹתָ֗יו",
+    "qr-consensus-ketiv": "גְּ֝בוּרֹתָ֗ו",
     "qr-ac-loc": {
       "page": "276v",
       "column": 2,
@@ -4942,48 +4949,80 @@
       {
         "_htel_tag": "p",
         "contents": [
-          "The consensus is that חולם stays חסר in the קרי, i.e. ",
+          "The consensus is that חולם stays חסר in the קרי, i.e. the ",
           {
             "_htel_tag": "span",
             "attr": {
-              "class": "unpointed-tanakh",
-              "dir": "rtl"
+              "style": "white-space:nowrap"
             },
             "contents": [
-              "– רתו"
+              {
+                "_htel_tag": "span",
+                "attr": {
+                  "class": "unpointed-tanakh",
+                  "dir": "rtl"
+                },
+                "contents": [
+                  "– רתו"
+                ]
+              }
             ]
           },
-          " in the כתיב merely expands to ",
+          " ending in the כתיב merely expands to ",
           {
             "_htel_tag": "span",
             "attr": {
-              "class": "unpointed-tanakh",
-              "dir": "rtl"
+              "style": "white-space:nowrap"
             },
             "contents": [
-              "– רתיו"
+              {
+                "_htel_tag": "span",
+                "attr": {
+                  "class": "unpointed-tanakh",
+                  "dir": "rtl"
+                },
+                "contents": [
+                  "– רתיו"
+                ]
+              }
             ]
           },
-          " in the קרי. In contrast to the consensus, in μL, ",
+          " in the קרי. In contrast to the consensus, in μL, the ",
           {
             "_htel_tag": "span",
             "attr": {
-              "class": "unpointed-tanakh",
-              "dir": "rtl"
+              "style": "white-space:nowrap"
             },
             "contents": [
-              "– רתו"
+              {
+                "_htel_tag": "span",
+                "attr": {
+                  "class": "unpointed-tanakh",
+                  "dir": "rtl"
+                },
+                "contents": [
+                  "– רתו"
+                ]
+              }
             ]
           },
-          " in the כתיב expands all the way to ",
+          " ending in the כתיב expands all the way to ",
           {
             "_htel_tag": "span",
             "attr": {
-              "class": "unpointed-tanakh",
-              "dir": "rtl"
+              "style": "white-space:nowrap"
             },
             "contents": [
-              "– רותיב"
+              {
+                "_htel_tag": "span",
+                "attr": {
+                  "class": "unpointed-tanakh",
+                  "dir": "rtl"
+                },
+                "contents": [
+                  "– רותיב"
+                ]
+              }
             ]
           },
           " in the קרי. The marginal קרי note in μL is a little hard to parse until you realize that it is “invaded” from above by the descender of a big dotted ק."
@@ -5029,6 +5068,12 @@
     "qr-lc-img": "Lenin/Lenin-2614.png",
     "qr-lc-img-scale": 0.541,
     "qr-aleppo-img": "Aleppo/Aleppo-2614.png",
+    "qr-cam1753-img": "cam1753/cam1753-2614.png",
+    "qr-cam1753-loc": {
+      "page": "0080A",
+      "column": 1,
+      "line": 6
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",

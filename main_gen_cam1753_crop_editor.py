@@ -48,6 +48,23 @@ with open(ROOT / "out" / "enriched-quirkrecs.json", encoding="utf-8") as _f:
     EQRS = json.load(_f)
 
 
+# ── Helpers ────────────────────────────────────────────────────────────
+
+MAQAF = "\u05be"
+
+
+def _count_consensus_atoms(consensus):
+    """Count the number of line-break tokens a consensus word spans.
+
+    Each maqaf-separated segment and each space-separated word counts as
+    one atom.  E.g. "מַה־יֹּ֥אמַר לִֽי׃" → 3 atoms (מַה־ | יֹּ֥אמַר | לִֽי׃).
+    """
+    atoms = 0
+    for part in consensus.split(" "):
+        atoms += len([s for s in part.split(MAQAF) if s])
+    return atoms
+
+
 # ── Process a single quirkrec ──────────────────────────────────────────
 
 
@@ -170,14 +187,20 @@ def _make_editor_item(
     matched_word = line_words[word_idx] if word_idx < len(line_words) else consensus
     after = line_words[word_idx + 1 :] if word_idx + 1 < len(line_words) else []
 
-    # Multi-word consensus (space-separated, no maqaf): include the
-    # additional words of the phrase in the matched display so they are
-    # all shown highlighted in the context line.
-    if " " in consensus and "\u05be" not in consensus:
-        extra_count = consensus.count(" ")  # number of additional words
-        for _ in range(extra_count):
+    # Multi-atom consensus: include all atoms in the matched display so
+    # they are all shown highlighted in the context line.  An "atom" is
+    # one line-break token — maqaf-ending words and space-separated words
+    # each count as separate atoms.
+    total_atoms = _count_consensus_atoms(consensus)
+    if total_atoms > 1:
+        for _ in range(total_atoms - 1):  # first atom already in matched_word
             if after:
-                matched_word += " " + after.pop(0)
+                next_atom = after.pop(0)
+                # Maqaf-ending atoms bind tightly to the next atom (no space)
+                if matched_word.endswith(MAQAF):
+                    matched_word += next_atom
+                else:
+                    matched_word += " " + next_atom
 
     return {
         "sid": sid,

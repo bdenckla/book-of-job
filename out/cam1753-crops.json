@@ -1401,6 +1401,42 @@
       ]
     }
   },
+  "2305": {
+    "cv": "23:5",
+    "page": "0079A",
+    "col": 2,
+    "line_num": 17,
+    "page_size": [
+      2296,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 991,
+      "y": 1548,
+      "w": 248,
+      "h": 149
+    },
+    "bbox_rel": {
+      "left": 0.6232,
+      "top": 0.2953,
+      "right": 0.923,
+      "bottom": 0.6813
+    },
+    "source": {
+      "source_spread": "cam1753-page-0083.jpg",
+      "archive_page": 83,
+      "spread_width": 4496,
+      "spread_height": 3072,
+      "gutter_x": 2296,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2296,
+        3072
+      ]
+    }
+  },
   "2306": {
     "cv": "23:6",
     "page": "0079A",
@@ -1649,6 +1685,42 @@
         2268,
         0,
         4496,
+        3072
+      ]
+    }
+  },
+  "2614": {
+    "cv": "26:14",
+    "page": "0080A",
+    "col": 1,
+    "line_num": 6,
+    "page_size": [
+      2268,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 1674,
+      "y": 788,
+      "w": 151,
+      "h": 147
+    },
+    "bbox_rel": {
+      "left": 0.4003,
+      "top": 0.3729,
+      "right": 0.5959,
+      "bottom": 0.7589
+    },
+    "source": {
+      "source_spread": "cam1753-page-0084.jpg",
+      "archive_page": 84,
+      "spread_width": 4496,
+      "spread_height": 3072,
+      "gutter_x": 2268,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2268,
         3072
       ]
     }

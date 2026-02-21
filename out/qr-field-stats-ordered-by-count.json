@@ -107,28 +107,28 @@
       "count": 138
     },
     {
-      "field": "qr-generic-comment",
-      "count": 90
-    },
-    {
       "field": "qr-cam1753-img",
-      "count": 89
+      "count": 91
     },
     {
       "field": "qr-cam1753-loc",
-      "count": 89
+      "count": 91
     },
     {
       "field": "qr-cam1753-loc.column",
-      "count": 89
+      "count": 91
     },
     {
       "field": "qr-cam1753-loc.line",
-      "count": 89
+      "count": 91
     },
     {
       "field": "qr-cam1753-loc.page",
-      "count": 89
+      "count": 91
+    },
+    {
+      "field": "qr-generic-comment",
+      "count": 90
     },
     {
       "field": "qr-bhq-comment",
@@ -179,6 +179,10 @@
       "count": 5
     },
     {
+      "field": "qr-consensus-ketiv",
+      "count": 4
+    },
+    {
       "field": "qr-ignore-g3yh-diff",
       "count": 4
     },
@@ -188,10 +192,6 @@
     },
     {
       "field": "qr-bhq",
-      "count": 3
-    },
-    {
-      "field": "qr-consensus-ketiv",
       "count": 3
     },
     {
