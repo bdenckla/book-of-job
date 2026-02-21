@@ -115,7 +115,7 @@ def process_quirkrec(qr):
         )
 
     # ── Normal (non-split) word ───────────────────────────────────
-    print(f"  Location: page {page_id}, col {col}, line {line_num}, word {word_idx}")
+    print(f"  Location: page {page_id}, col {col}, line {line_num}, word {word_idx + 1}")
     return _make_editor_item(
         sid,
         cv,
@@ -267,11 +267,11 @@ def _process_split(
 
     print(
         f"  Part A: page {page_id}, col {prev_col}, "
-        f"line {prev_line}, word {prev_word_idx} ({prev_frag})"
+        f"line {prev_line}, word {prev_word_idx + 1} ({prev_frag})"
     )
     print(
         f"  Part B: page {page_id}, col {col}, "
-        f"line {curr_line}, word {curr_word_idx} ({curr_frag})"
+        f"line {curr_line}, word {curr_word_idx + 1} ({curr_frag})"
     )
 
     part_a = _make_editor_item(
