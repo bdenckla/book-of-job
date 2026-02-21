@@ -33,7 +33,7 @@ sys.path.insert(0, str(CAM1753_REPO))
 from py_cam1753_word_image.page import load_page_image
 
 OUT_DIR = ROOT / "docs" / "jobn" / "img" / "cam1753"
-CROPS_JSON = OUT_DIR / "cam1753-crops.json"
+CROPS_JSON = ROOT / "out" / "cam1753-crops.json"
 
 
 def _get_source_metadata(img):
