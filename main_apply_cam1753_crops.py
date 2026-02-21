@@ -10,6 +10,10 @@ Each output PNG includes tEXt metadata:
   - ``cam1753-source``: JSON from the source JPEG EXIF (spread info)
   - ``cam1753-crop``: JSON with the crop editor export fields
 
+Each batch is also appended to ``docs/jobn/img/cam1753/cam1753-crops.json``,
+a persistent record of all crop coordinates keyed by SID. This file stores
+enough data to reproduce crops programmatically at any image resolution.
+
 Usage:
     .venv\\Scripts\\python.exe main_apply_cam1753_crops.py .novc/cam1753_crops_export.json
 """
@@ -29,6 +33,7 @@ sys.path.insert(0, str(CAM1753_REPO))
 from py_cam1753_word_image.page import load_page_image
 
 OUT_DIR = ROOT / "docs" / "jobn" / "img" / "cam1753"
+CROPS_JSON = OUT_DIR / "cam1753-crops.json"
 
 
 def _get_source_metadata(img):
@@ -44,6 +49,22 @@ def _get_source_metadata(img):
         return None
 
 
+def _load_crops_json():
+    """Load the persistent crops JSON (keyed by SID), or empty dict."""
+    if CROPS_JSON.exists():
+        return json.loads(CROPS_JSON.read_text("utf-8"))
+    return {}
+
+
+def _save_crops_json(data):
+    """Write the persistent crops JSON, sorted by SID."""
+    sorted_data = dict(sorted(data.items()))
+    CROPS_JSON.write_text(
+        json.dumps(sorted_data, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: main_apply_cam1753_crops.py <json_file>")
@@ -57,6 +78,9 @@ def main():
 
     crops = json.loads(json_path.read_text("utf-8"))
     print(f"Applying {len(crops)} crops...")
+
+    # Load persistent crop data
+    persistent = _load_crops_json()
 
     # Cache page images and their source metadata
     page_cache = {}
@@ -76,13 +100,14 @@ def main():
             )
 
         img = page_cache[page_id]
+        page_w, page_h = img.size
         cropped = img.crop((x, y, x + w, y + h))
 
         # Build PNG metadata
         png_info = PngInfo()
-        source_meta = source_meta_cache[page_id]
-        if source_meta:
-            png_info.add_text("cam1753-source", source_meta)
+        source_meta_str = source_meta_cache[page_id]
+        if source_meta_str:
+            png_info.add_text("cam1753-source", source_meta_str)
         crop_meta = {
             k: v for k, v in crop.items() if k != "sid"
         }
@@ -93,7 +118,25 @@ def main():
         print(f"  {out_path.name}: {cropped.size[0]}\u00d7{cropped.size[1]}")
         saved += 1
 
+        # Build persistent record
+        source_meta = (
+            json.loads(source_meta_str) if source_meta_str else None
+        )
+        persistent[sid] = {
+            "cv": crop["cv"],
+            "page": page_id,
+            "col": crop["col"],
+            "line_num": crop["line_num"],
+            "page_size": [page_w, page_h],
+            "bbox_abs": crop["bbox_abs"],
+            "bbox_rel": crop["bbox_rel"],
+        }
+        if source_meta:
+            persistent[sid]["source"] = source_meta
+
+    _save_crops_json(persistent)
     print(f"Done. {saved} images saved to {OUT_DIR}")
+    print(f"Persistent crop data: {CROPS_JSON} ({len(persistent)} entries)")
 
 
 if __name__ == "__main__":
