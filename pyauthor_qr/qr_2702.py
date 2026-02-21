@@ -3,6 +3,7 @@ _COMMENT_2702 = [
     " that was ignored during re-inking,",
     " leaving only some very faint evidence of this מקף.",
     " In μA, as in μL, evidence of מקף is minimal.",
+    " In μY, the מקף is clear.",
     " By the way, in μL, the evidence for the דחי",
     " on the א of the next word is very faint.",
 ]

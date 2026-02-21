@@ -170,6 +170,15 @@ def _make_editor_item(
     matched_word = line_words[word_idx] if word_idx < len(line_words) else consensus
     after = line_words[word_idx + 1 :] if word_idx + 1 < len(line_words) else []
 
+    # Multi-word consensus (space-separated, no maqaf): include the
+    # additional words of the phrase in the matched display so they are
+    # all shown highlighted in the context line.
+    if " " in consensus and "\u05be" not in consensus:
+        extra_count = consensus.count(" ")  # number of additional words
+        for _ in range(extra_count):
+            if after:
+                matched_word += " " + after.pop(0)
+
     return {
         "sid": sid,
         "cv": cv,

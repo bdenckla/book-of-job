@@ -4503,10 +4503,10 @@
   },
   {
     "qr-cv": "23:6",
-    "qr-lc-proposed": "כֹּ֖חַ",
+    "qr-lc-proposed": "הַבְּרׇב־כֹּ֖חַ",
     "qr-what-is-weird": "טרחא not דחי",
-    "qr-consensus": "כֹּ֭חַ",
-    "qr-highlight": 1,
+    "qr-consensus": "הַבְּרׇב־כֹּ֭חַ",
+    "qr-highlight": 6,
     "qr-lc-loc": {
       "page": "403B",
       "column": 2,
@@ -4520,8 +4520,14 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-2306.png",
-    "qr-lc-img-scale": 0.512,
+    "qr-lc-img-scale": 0.6186,
     "qr-aleppo-img": "Aleppo/Aleppo-2306.png",
+    "qr-cam1753-img": "cam1753/cam1753-2306.png",
+    "qr-cam1753-loc": {
+      "page": "0079A",
+      "column": 2,
+      "line": 17
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4637,6 +4643,12 @@
     "qr-lc-img": "Lenin/Lenin-2401.png",
     "qr-lc-img-scale": 0.864,
     "qr-aleppo-img": "Aleppo/Aleppo-2401.png",
+    "qr-cam1753-img": "cam1753/cam1753-2401.png",
+    "qr-cam1753-loc": {
+      "page": "0079B",
+      "column": 1,
+      "line": 4
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -4672,6 +4684,12 @@
     "qr-lc-img": "Lenin/Lenin-2405.png",
     "qr-lc-img-scale": 0.856,
     "qr-aleppo-img": "Aleppo/Aleppo-2405.png",
+    "qr-cam1753-img": "cam1753/cam1753-2405.png",
+    "qr-cam1753-loc": {
+      "page": "0079B",
+      "column": 1,
+      "line": 8
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4708,6 +4726,12 @@
     "qr-lc-img": "Lenin/Lenin-2413.png",
     "qr-lc-img-scale": 0.52,
     "qr-aleppo-img": "Aleppo/Aleppo-2413.png",
+    "qr-cam1753-img": "cam1753/cam1753-2413.png",
+    "qr-cam1753-loc": {
+      "page": "0079B",
+      "column": 1,
+      "line": 18
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4797,6 +4821,12 @@
     "qr-lc-img": "Lenin/Lenin-2416.png",
     "qr-lc-img-scale": 0.589,
     "qr-aleppo-img": "Aleppo/Aleppo-2416.png",
+    "qr-cam1753-img": "cam1753/cam1753-2416.png",
+    "qr-cam1753-loc": {
+      "page": "0079B",
+      "column": 1,
+      "line": 23
+    },
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -4831,6 +4861,12 @@
     "qr-lc-img": "Lenin/Lenin-2418.png",
     "qr-lc-img-scale": 0.545,
     "qr-aleppo-img": "Aleppo/Aleppo-2418.png",
+    "qr-cam1753-img": "cam1753/cam1753-2418.png",
+    "qr-cam1753-loc": {
+      "page": "0079B",
+      "column": 1,
+      "line": 26
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -4872,6 +4908,12 @@
     "qr-lc-img": "Lenin/Lenin-2421.png",
     "qr-lc-img-scale": 0.488,
     "qr-aleppo-img": "Aleppo/Aleppo-2421.png",
+    "qr-cam1753-img": "cam1753/cam1753-2421.png",
+    "qr-cam1753-loc": {
+      "page": "0079B",
+      "column": 2,
+      "line": 4
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -5006,7 +5048,7 @@
     "qr-what-is-weird": "מקף is absent",
     "qr-consensus": "חַי־",
     "qr-generic-comment": [
-      "Perhaps there was a מקף that was ignored during re-inking, leaving only some very faint evidence of this מקף. In μA, as in μL, evidence of מקף is minimal. By the way, in μL, the evidence for the דחי on the א of the next word is very faint."
+      "Perhaps there was a מקף that was ignored during re-inking, leaving only some very faint evidence of this מקף. In μA, as in μL, evidence of מקף is minimal. In μY, the מקף is clear. By the way, in μL, the evidence for the דחי on the א of the next word is very faint."
     ],
     "qr-highlight-consensus": 3,
     "qr-lc-loc": {
@@ -5027,6 +5069,12 @@
     "qr-lc-img": "Lenin/Lenin-2702.png",
     "qr-lc-img-scale": 0.465,
     "qr-aleppo-img": "Aleppo/Aleppo-2702.png",
+    "qr-cam1753-img": "cam1753/cam1753-2702.png",
+    "qr-cam1753-loc": {
+      "page": "0080A",
+      "column": 1,
+      "line": 8
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
