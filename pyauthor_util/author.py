@@ -122,7 +122,7 @@ def hbo_big_es(contents, attr=None):
 
 def para_for_img(img_path, widthclass=None, img_prefix="img", scale=None):
     img_attr = {"src": f"{img_prefix}/{img_path}"}
-    if widthclass is not None:
+    if widthclass is not None and scale is None:
         img_attr["class"] = widthclass
     if scale is not None:
         # Read natural image dimensions and compute scaled pixel sizes.
