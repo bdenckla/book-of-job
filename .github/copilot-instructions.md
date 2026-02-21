@@ -170,6 +170,11 @@ To add line-break markers for an Aleppo Codex page:
 To supply Aleppo Codex (μA) word-level image crops for quirkrecs that lack them,
 see `.github/copilot-instructions-aleppo-word-crops.md`.
 
+## Cambridge 1753 Word Crop Workflow
+
+To supply Cambridge MS Add. 1753 (μC) word-level image crops for quirkrecs that lack them,
+see `.github/copilot-instructions-cam1753-crops.md`.
+
 ## Adding or Updating Quirkrec Comments
 
 To add or modify comments on quirkrec entries (e.g., noting μA/μL observations),
@@ -202,6 +207,16 @@ The 500 ms delay prevents tabs from being dropped.
 ```powershell
 Start-Process "msedge" "--inprivate http://localhost:8471/jobn/job1_full_list_details.html#row-SID"
 ```
+
+## Viewing Image Metadata
+
+To inspect embedded PNG tEXt chunks or other image metadata, use **XnView MP** (installed via winget as `XnSoft.XnViewMP`):
+
+```powershell
+Start-Process "C:\Program Files\XnViewMP\xnviewmp.exe" "path\to\image.png"
+```
+
+In XnView MP, press **Ctrl+I** (or **Edit → Metadata → Edit IPTC/XMP…**) to view properties including embedded text metadata.
 
 ## Authorship Marking
 
