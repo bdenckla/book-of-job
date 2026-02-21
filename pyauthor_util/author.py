@@ -125,8 +125,18 @@ def para_for_img(img_path, widthclass=None, img_prefix="img", scale=None):
     if widthclass is not None:
         img_attr["class"] = widthclass
     if scale is not None:
-        pct = f"{scale * 100:.0f}%"
-        img_attr["style"] = f"width:{pct};height:{pct}"
+        # Read natural image dimensions and compute scaled pixel sizes.
+        # This avoids CSS percentage pitfalls (percentages are relative
+        # to the containing block, not the image's intrinsic size).
+        from PIL import Image as _PILImage
+        from pathlib import Path as _Path
+
+        img_file = _Path("docs") / "jobn" / img_prefix / img_path
+        with _PILImage.open(img_file) as im:
+            nat_w, nat_h = im.size
+        w = round(nat_w * scale)
+        h = round(nat_h * scale)
+        img_attr["style"] = f"width:{w}px;height:{h}px"
     img_element = my_html.img(img_attr)
     return my_html.para(img_element, {"class": "center"})
 
