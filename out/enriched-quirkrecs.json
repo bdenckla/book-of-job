@@ -19,7 +19,7 @@
       "word": 2
     },
     "qr-lc-img": "Lenin/Lenin-0119.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0119.png",
     "qr-cam1753-img": "cam1753/cam1753-0119.png",
     "aleppo-img-intro": "page 270v, col 1, line 9, word 2",
@@ -59,7 +59,7 @@
     ],
     "qr-noted-by": "nBHQ-nBHL-nDM-nWLC",
     "qr-lc-img": "Lenin/Lenin-0121.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0121.png",
     "qr-cam1753-img": "cam1753/cam1753-0121.png",
     "aleppo-img-intro": "page 270v, col 1, line 13, word 3",
@@ -95,7 +95,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-0303.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0303.png",
     "qr-cam1753-img": "cam1753/cam1753-0303.png",
     "aleppo-img-intro": "page 270v, col 2, line 23, word 2",
@@ -131,7 +131,7 @@
       "word": 1
     },
     "qr-lc-img": "Lenin/Lenin-0304.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0304.png",
     "qr-cam1753-img": "cam1753/cam1753-0304.png",
     "aleppo-img-intro": "page 270v, col 2, line 25, word 1",
@@ -173,7 +173,7 @@
     ],
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "Lenin/Lenin-0316.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0316.png",
     "qr-cam1753-img": "cam1753/cam1753-0316.png",
     "aleppo-img-intro": "page 271r, col 1, line 11, word 1",
@@ -209,7 +209,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-0404.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0404.png",
     "qr-cam1753-img": "cam1753/cam1753-0404.png",
     "aleppo-img-intro": "page 271r, col 1, line 25, word 1",
@@ -248,7 +248,7 @@
     ],
     "qr-noted-by": "nBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-0409.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0409.png",
     "qr-cam1753-img": "cam1753/cam1753-0409.png",
     "aleppo-img-intro": "page 271r, col 2, line 2, word 2",
@@ -287,7 +287,7 @@
     ],
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-0417.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0417.png",
     "qr-cam1753-img": "cam1753/cam1753-0417.png",
     "aleppo-img-intro": "page 271r, col 2, line 11, word 4",
@@ -398,7 +398,7 @@
       "word": 6
     },
     "qr-lc-img": "Lenin/Lenin-0520.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0520.png",
     "qr-cam1753-img": "cam1753/cam1753-0520.png",
     "aleppo-img-intro": "page 271v, col 1, line 12, word 6",
@@ -438,7 +438,7 @@
       "word": 1
     },
     "qr-lc-img": "Lenin/Lenin-0523.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0523.png",
     "qr-cam1753-img": "cam1753/cam1753-0523.png",
     "aleppo-img-intro": "page 271v, col 1, line 17, word 1",
@@ -477,7 +477,7 @@
       "word": 2
     },
     "qr-lc-img": "Lenin/Lenin-0524.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0524.png",
     "qr-cam1753-img": "cam1753/cam1753-0524.png",
     "aleppo-img-intro": "page 271v, col 1, line 18, word 2",
@@ -631,7 +631,7 @@
       }
     ],
     "qr-lc-img": "Lenin/Lenin-0610.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0610.png",
     "qr-cam1753-img": "cam1753/cam1753-0610.png",
     "aleppo-img-intro": "page 271v, col 2, line 5, word 1",
@@ -772,7 +772,7 @@
       "word": 6
     },
     "qr-lc-img": "Lenin/Lenin-0621.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0621.png",
     "qr-cam1753-img": "cam1753/cam1753-0621.png",
     "aleppo-img-intro": "page 271v, col 2, line 17, word 6",
@@ -848,7 +848,7 @@
     },
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "Lenin/Lenin-0629.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0629.png",
     "qr-cam1753-img": "cam1753/cam1753-0629.png",
     "aleppo-img-intro": "page 271v, col 2, line 27, word 4",
@@ -885,7 +885,7 @@
     "qr-bhq-comment": "$BHQ silently ignores the possible רביע.",
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-0701.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0701.png",
     "qr-cam1753-img": "cam1753/cam1753-0701.png",
     "aleppo-img-intro": "page 272r, col 1, line 1, word 6",
@@ -921,7 +921,7 @@
     },
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "Lenin/Lenin-0709.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0709.png",
     "qr-cam1753-img": "cam1753/cam1753-0709.png",
     "aleppo-img-intro": "page 272r, col 1, line 10, word 8",
@@ -962,7 +962,7 @@
       "An argument could be made that it is μL not μA that represents the consensus here. For example, the Jerusalem Crown edition, despite normally staying quite close to μA, has עולה on א in its body text and only notes in an appendix that μA has עולה on ה. In μY, like μL, the עולה is on א, but it is early on א, perhaps pushed early by marks from the line above."
     ],
     "qr-lc-img": "Lenin/Lenin-0720.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0720.png",
     "qr-cam1753-img": "cam1753/cam1753-0720.png",
     "aleppo-img-intro": "page 272r, col 1, line 23, word 4",
@@ -1001,7 +1001,7 @@
     },
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-0721.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0721.png",
     "qr-cam1753-img": "cam1753/cam1753-0721.png",
     "aleppo-img-intro": "page 272r, col 1, line 26, word 3",
@@ -1039,7 +1039,7 @@
     "qr-bhq-comment": "This quirk is noted in $BHQ.",
     "qr-noted-by": "nBHQ-nBHL-nWLC",
     "qr-lc-img": "Lenin/Lenin-0801.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0801.png",
     "qr-cam1753-img": "cam1753/cam1753-0801.png",
     "aleppo-img-intro": "page 272r, col 1, line 27, word 4",
@@ -1075,7 +1075,7 @@
       "word": 6
     },
     "qr-lc-img": "Lenin/Lenin-0802.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0802.png",
     "qr-cam1753-img": "cam1753/cam1753-0802.png",
     "aleppo-img-intro": "page 272r, col 1, line 28, word 6",
@@ -1114,7 +1114,7 @@
     "qr-bhq-comment": "$BHQ silently ignores the possible שורוק dot.",
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-0807.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0807.png",
     "qr-cam1753-img": "cam1753/cam1753-0807.png",
     "aleppo-img-intro": "page 272r, col 2, line 7, word 1",
@@ -1190,7 +1190,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-0816-HVA.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0816-HVA.png",
     "qr-cam1753-img": "cam1753/cam1753-0816-HVA.png",
     "aleppo-img-intro": "page 272r, col 2, line 16, word 6",
@@ -1230,7 +1230,7 @@
     },
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "Lenin/Lenin-0816-YNQFV.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0816-YNQFV.png",
     "qr-cam1753-img": "cam1753/cam1753-0816-YNQFV.png",
     "aleppo-img-intro": "page 272r, col 2, line 17, word 3",
@@ -1352,7 +1352,7 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-0914.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0914.png",
     "qr-cam1753-img": "cam1753/cam1753-0914.png",
     "aleppo-img-intro": "page 272v, col 1, line 11, word 2",
@@ -1392,8 +1392,9 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-0930.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0930.png",
+    "qr-cam1753-img": "cam1753/cam1753-0930.png",
     "aleppo-img-intro": "page 272v, col 2, line 1, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -1430,8 +1431,9 @@
       "As $DM footnote 20 mentions, this is one of three such cases, the other two being $link_27_9 and $link_34_33_HM3M5. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
     ],
     "qr-lc-img": "Lenin/Lenin-0935.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-0935.png",
+    "qr-cam1753-img": "cam1753/cam1753-0935.png",
     "aleppo-img-intro": "page 272v, col 2, line 5, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1466,8 +1468,9 @@
     },
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "Lenin/Lenin-1001.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1001.png",
+    "qr-cam1753-img": "cam1753/cam1753-1001.png",
     "aleppo-img-intro": "page 272v, col 2, line 7, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1655,6 +1658,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-9",
     "qr-lc-img": "Lenin/Lenin-1006.png",
     "qr-aleppo-img": "Aleppo/Aleppo-1006.png",
+    "qr-cam1753-img": "cam1753/cam1753-1006.png",
     "aleppo-img-intro": "page 272v, col 2, line 13, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1691,8 +1695,9 @@
     },
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "Lenin/Lenin-1015.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1015.png",
+    "qr-cam1753-img": "cam1753/cam1753-1015.png",
     "aleppo-img-intro": "page 272v, col 2, line 23, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1726,8 +1731,9 @@
     },
     "qr-noted-by": "tBHQ-nBHL-nWLC",
     "qr-lc-img": "Lenin/Lenin-1103.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1103.png",
+    "qr-cam1753-img": "cam1753/cam1753-1103.png",
     "aleppo-img-intro": "page 273r, col 1, line 6, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1765,8 +1771,9 @@
     ],
     "qr-noted-by": "nBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-1106.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1106.png",
+    "qr-cam1753-img": "cam1753/cam1753-1106.png",
     "aleppo-img-intro": "page 273r, col 1, line 10, word 5",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -1803,8 +1810,9 @@
     ],
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-1107.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1107.png",
+    "qr-cam1753-img": "cam1753/cam1753-1107.png",
     "aleppo-img-intro": "page 273r, col 1, line 11, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1840,8 +1848,9 @@
     "qr-noted-by-mam": true,
     "qr-noted-by-uxlc": true,
     "qr-lc-img": "Lenin/Lenin-1113.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1113.png",
+    "qr-cam1753-img": "cam1753/cam1753-1113.png",
     "aleppo-img-intro": "page 273r, col 1, line 17, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1878,8 +1887,9 @@
     ],
     "qr-noted-by": "nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-1203.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1203.png",
+    "qr-cam1753-img": "cam1753/cam1753-1203.png",
     "aleppo-img-intro": "page 273r, col 2, line 1, word 1",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -1917,8 +1927,9 @@
       "The חולם חסר dot’s absence from μL is not important to us here."
     ],
     "qr-lc-img": "Lenin/Lenin-1209.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1209.png",
+    "qr-cam1753-img": "cam1753/cam1753-1209.png",
     "aleppo-img-intro": "page 273r, col 2, line 9, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1959,8 +1970,9 @@
     },
     "qr-noted-by": "tBHQ-nWLC",
     "qr-lc-img": "Lenin/Lenin-1216.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1216.png",
+    "qr-cam1753-img": "cam1753/cam1753-1216.png",
     "aleppo-img-intro": "page 273r, col 2, line 16, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1997,6 +2009,7 @@
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-12",
     "qr-lc-img": "Lenin/Lenin-1219.png",
     "qr-aleppo-img": "Aleppo/Aleppo-1219.png",
+    "qr-cam1753-img": "cam1753/cam1753-1219.png",
     "aleppo-img-intro": "page 273r, col 2, line 20, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2143,8 +2156,9 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-1409.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1409.png",
+    "qr-cam1753-img": "cam1753/cam1753-1409.png",
     "aleppo-img-intro": "page 273v, col 2, line 11, word 4",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2290,8 +2304,9 @@
     ],
     "qr-noted-by": "nWLC",
     "qr-lc-img": "Lenin/Lenin-1413.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1413.png",
+    "qr-cam1753-img": "cam1753/cam1753-1413.png",
     "aleppo-img-intro": "page 273v, col 2, line 17, word 5",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2328,8 +2343,9 @@
     ],
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-1508.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1508.png",
+    "qr-cam1753-img": "cam1753/cam1753-1508.png",
     "aleppo-img-intro": "page 274r, col 1, line 9, word 2",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2364,8 +2380,9 @@
     "qr-bhq-comment": "$BHQ silently ignores the possible מרכא.",
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-1534.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1534.png",
+    "qr-cam1753-img": "cam1753/cam1753-1534.png",
     "aleppo-img-intro": "page 274r, col 2, line 11, word 4",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2409,8 +2426,9 @@
     },
     "qr-noted-by": "tBHQ-nDM",
     "qr-lc-img": "Lenin/Lenin-1535.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1535.png",
+    "qr-cam1753-img": "cam1753/cam1753-1535.png",
     "aleppo-img-intro": "page 274r, col 2, line 12, word 1",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2450,8 +2468,9 @@
     ],
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "Lenin/Lenin-1604.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1604.png",
+    "qr-cam1753-img": "cam1753/cam1753-1604.png",
     "aleppo-img-intro": "page 274r, col 2, line 16, word 5",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2488,8 +2507,9 @@
       "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See $link_21_15, $link_34_33_VMH0YD3F, and $link_35_7."
     ],
     "qr-lc-img": "Lenin/Lenin-1606.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1606.png",
+    "qr-cam1753-img": "cam1753/cam1753-1606.png",
     "aleppo-img-intro": "page 274r, col 2, line 20, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2524,8 +2544,9 @@
     },
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-1613.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1613.png",
+    "qr-cam1753-img": "cam1753/cam1753-1613.png",
     "aleppo-img-intro": "page 274v, col 1, line 2, word 3",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2562,8 +2583,9 @@
     ],
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-1620.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1620.png",
+    "qr-cam1753-img": "cam1753/cam1753-1620.png",
     "aleppo-img-intro": "page 274v, col 1, line 9, word 4",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2600,8 +2622,9 @@
       "word": 3
     },
     "qr-lc-img": "Lenin/Lenin-1703.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1703.png",
+    "qr-cam1753-img": "cam1753/cam1753-1703.png",
     "aleppo-img-intro": "page 274v, col 1, line 14, word 3",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2708,8 +2731,9 @@
       " the uncertainty in transcription."
     ],
     "qr-lc-img": "Lenin/Lenin-1704.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1704.png",
+    "qr-cam1753-img": "cam1753/cam1753-1704.png",
     "aleppo-img-intro": "page 274v, col 1, line 15, word 4",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2747,8 +2771,9 @@
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "Lenin/Lenin-1706.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1706.png",
+    "qr-cam1753-img": "cam1753/cam1753-1706.png",
     "aleppo-img-intro": "page 274v, col 1, line 17, word 4",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -2783,8 +2808,9 @@
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "Lenin/Lenin-1711.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1711.png",
+    "qr-cam1753-img": "cam1753/cam1753-1711.png",
     "aleppo-img-intro": "page 274v, col 1, line 22, word 8",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -2832,8 +2858,9 @@
       "word": 4
     },
     "qr-lc-img": "Lenin/Lenin-1804-HLM3N5_1_of_2_FTW.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1804-HLM3N5_1_of_2_FTW.png",
+    "qr-cam1753-img": "cam1753/cam1753-1804-HLM3N5_1_of_2_FTW.png",
     "aleppo-img-intro": "page 274v, col 2, line 3, word 4",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2882,6 +2909,7 @@
     },
     "qr-lc-img": "Lenin/Lenin-1804-HLM3N5_2_of_2_FTW.png",
     "qr-aleppo-img": "Aleppo/Aleppo-1804-HLM3N5_2_of_2_FTW.png",
+    "qr-cam1753-img": "cam1753/cam1753-1804-HLM3N5_2_of_2_FTW.png",
     "aleppo-img-intro": "page 274v, col 2, line 3, word 4",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -2919,8 +2947,9 @@
     ],
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "Lenin/Lenin-1806.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1806.png",
+    "qr-cam1753-img": "cam1753/cam1753-1806.png",
     "aleppo-img-intro": "page 274v, col 2, line 5, word 6",
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2962,8 +2991,9 @@
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "Lenin/Lenin-1809.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1809.png",
+    "qr-cam1753-img": "cam1753/cam1753-1809.png",
     "aleppo-img-intro": "page 274v, col 2, line 8, word 5",
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -3141,7 +3171,7 @@
     ],
     "qr-noted-by": "nBHL-nWLC",
     "qr-lc-img": "Lenin/Lenin-1905.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1905.png",
     "aleppo-img-intro": "page 274v, col 2, line 27, word 7",
     "nbd": {
@@ -3182,7 +3212,7 @@
     ],
     "qr-noted-by": "nBHQ-nBHL",
     "qr-lc-img": "Lenin/Lenin-1916-QRAFY.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1916-QRAFY.png",
     "aleppo-img-intro": "page 275r, col 1, line 11, word 4",
     "nbd": {
@@ -3271,7 +3301,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-1928.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-1928.png",
     "aleppo-img-intro": "page 275r, col 1, line 24, word 5",
     "nbd": {
@@ -3307,7 +3337,7 @@
       "word": 3
     },
     "qr-lc-img": "Lenin/Lenin-2001.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2001.png",
     "aleppo-img-intro": "page 275r, col 1, line 27, word 3",
     "nbd": {
@@ -3377,7 +3407,7 @@
       "word": 4
     },
     "qr-lc-img": "Lenin/Lenin-2107.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2107.png",
     "aleppo-img-intro": "page 275v, col 1, line 10, word 4",
     "nbd": {
@@ -3415,7 +3445,7 @@
       "word": 1
     },
     "qr-lc-img": "Lenin/Lenin-2115.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2115.png",
     "aleppo-img-intro": "page 275v, col 1, line 20, word 1",
     "nbd": {
@@ -3456,7 +3486,7 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-2125.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2125.png",
     "aleppo-img-intro": "page 275v, col 2, line 3, word 5",
     "nbd": {
@@ -3530,7 +3560,7 @@
       "word": 2
     },
     "qr-lc-img": "Lenin/Lenin-2210.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2210.png",
     "aleppo-img-intro": "page 275v, col 2, line 25, word 2",
     "nbd": {
@@ -3568,7 +3598,7 @@
     ],
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "Lenin/Lenin-2212.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2212.png",
     "aleppo-img-intro": "page 275v, col 2, line 27, word 6",
     "nbd": {
@@ -3603,7 +3633,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-2214.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2214.png",
     "aleppo-img-intro": "page 276r, col 1, line 1, word 6",
     "nbd": {
@@ -3694,7 +3724,7 @@
     ],
     "qr-noted-by": "nBHQ-nWLC",
     "qr-lc-img": "Lenin/Lenin-2221-VJL6.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2221-VJL6.png",
     "aleppo-img-intro": "page 276r, col 1, line 10, word 4",
     "nbd": {
@@ -3735,7 +3765,7 @@
       "Although my focus is pointing rather than spelling, I am interested in a spelling difference like this, since it is not just a מלא/חסר difference."
     ],
     "qr-lc-img": "Lenin/Lenin-2224.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2224.png",
     "aleppo-img-intro": "page 276r, col 1, line 14, word 1",
     "nbd": {
@@ -3831,7 +3861,7 @@
     ],
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "Lenin/Lenin-2228.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2228.png",
     "aleppo-img-intro": "page 276r, col 1, line 17, word 5",
     "nbd": {
@@ -3916,7 +3946,7 @@
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "Lenin/Lenin-2230-VNMLE.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2230-VNMLE.png",
     "aleppo-img-intro": "page 276r, col 1, line 20, word 5",
     "nbd": {
@@ -4016,7 +4046,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-2306.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2306.png",
     "aleppo-img-intro": "page 276r, col 1, line 26, word 2",
     "nbd": {
@@ -4203,7 +4233,7 @@
       "word": 1
     },
     "qr-lc-img": "Lenin/Lenin-2413.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2413.png",
     "aleppo-img-intro": "page 276r, col 2, line 26, word 1",
     "nbd": {
@@ -4293,7 +4323,7 @@
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "Lenin/Lenin-2416.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2416.png",
     "aleppo-img-intro": "page 276v, col 1, line 3, word 5",
     "nbd": {
@@ -4328,7 +4358,7 @@
       "word": 2
     },
     "qr-lc-img": "Lenin/Lenin-2418.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2418.png",
     "aleppo-img-intro": "page 276v, col 1, line 6, word 2",
     "nbd": {
@@ -4370,7 +4400,7 @@
     ],
     "qr-noted-by": "nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-2421.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2421.png",
     "aleppo-img-intro": "page 276v, col 1, line 10, word 1",
     "nbd": {
@@ -4519,7 +4549,7 @@
     ],
     "qr-noted-by": "nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-2702.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2702.png",
     "aleppo-img-intro": "page 276v, col 2, line 11, word 1",
     "nbd": {
@@ -4557,7 +4587,7 @@
       "As $DM footnote 20 mentions, this is one of three such cases, the other two being $link_9_35 and $link_34_33_HM3M5. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
     ],
     "qr-lc-img": "Lenin/Lenin-2709.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2709.png",
     "aleppo-img-intro": "page 276v, col 2, line 20, word 1",
     "nbd": {
@@ -4635,7 +4665,7 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-2808.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2808.png",
     "aleppo-img-intro": "page 277r, col 1, line 17, word 2",
     "nbd": {
@@ -4670,7 +4700,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-2824.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2824.png",
     "aleppo-img-intro": "page 277r, col 2, line 8, word 2",
     "nbd": {
@@ -4711,7 +4741,7 @@
     ],
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "Lenin/Lenin-2826.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2826.png",
     "aleppo-img-intro": "page 277r, col 2, line 10, word 4",
     "nbd": {
@@ -4746,7 +4776,7 @@
       "word": 5
     },
     "qr-lc-img": "Lenin/Lenin-2903.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2903.png",
     "aleppo-img-intro": "page 277r, col 2, line 16, word 5",
     "nbd": {
@@ -4823,7 +4853,7 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-2911.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2911.png",
     "aleppo-img-intro": "page 277r, col 2, line 25, word 5",
     "nbd": {
@@ -4861,7 +4891,7 @@
     },
     "qr-noted-by": "tBHQ-nBHL",
     "qr-lc-img": "Lenin/Lenin-2919.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-2919.png",
     "aleppo-img-intro": "page 277v, col 1, line 6, word 7",
     "nbd": {
@@ -4896,7 +4926,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3018.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3018.png",
     "aleppo-img-intro": "page 277v, col 2, line 7, word 2",
     "nbd": {
@@ -4965,7 +4995,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3030.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3030.png",
     "aleppo-img-intro": "page 277v, col 2, line 21, word 1",
     "nbd": {
@@ -5004,7 +5034,7 @@
       "An argument could be made that it is μL not μA that represents the consensus here. For example, the Jerusalem Crown edition, despite normally staying quite close to μA, has לגרמיה in its body text and only notes in an appendix that μA has no לגרמיה. See the $MAM documentation for this word for a list of where various manuscripts fall on this issue."
     ],
     "qr-lc-img": "Lenin/Lenin-3102.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3102.png",
     "aleppo-img-intro": "page 277v, col 2, line 24, word 1",
     "nbd": {
@@ -5039,7 +5069,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3104.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3104.png",
     "aleppo-img-intro": "page 277v, col 2, line 26, word 2",
     "nbd": {
@@ -5079,7 +5109,7 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-3105.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3105.png",
     "aleppo-img-intro": "page 277v, col 2, line 27, word 8",
     "nbd": {
@@ -5202,7 +5232,7 @@
     "qr-bhq": "מֻאֽוּם׃",
     "qr-noted-by": "nBHL-nDM-nWLC",
     "qr-lc-img": "Lenin/Lenin-3107.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3107.png",
     "aleppo-img-intro": "page 278r, col 1, line 2, word 5",
     "nbd": {
@@ -5244,7 +5274,7 @@
       "$BHQ has wisely removed the גרש מוקדם that $BHS had here. Unfortunately, as always, $BHQ has not documented this change, leaving it as a painful “exercise left to the reader” to discover such changes."
     ],
     "qr-lc-img": "Lenin/Lenin-3115.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3115.png",
     "aleppo-img-intro": "page 278r, col 1, line 11, word 1",
     "nbd": {
@@ -5279,7 +5309,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3119.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3119.png",
     "aleppo-img-intro": "page 278r, col 1, line 15, word 3",
     "nbd": {
@@ -5314,7 +5344,7 @@
       "word": 2
     },
     "qr-lc-img": "Lenin/Lenin-3120.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3120.png",
     "aleppo-img-intro": "page 278r, col 1, line 17, word 2",
     "nbd": {
@@ -5349,7 +5379,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3128.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3128.png",
     "aleppo-img-intro": "page 278r, col 1, line 25, word 5",
     "nbd": {
@@ -5385,7 +5415,7 @@
     },
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-3133.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3133.png",
     "aleppo-img-intro": "page 278r, col 2, line 4, word 3",
     "nbd": {
@@ -5420,7 +5450,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3139.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3139.png",
     "aleppo-img-intro": "page 278r, col 2, line 11, word 2",
     "nbd": {
@@ -5459,7 +5489,7 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-3206.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3206.png",
     "aleppo-img-intro": "page 278r, col 2, line 26, word 5",
     "nbd": {
@@ -5535,7 +5565,7 @@
       "As $DM footnote 32 mentions, in two cases in Job, μL omits the לגרמיה stroke before a word with געיה and רביע. The other such case is $link_34_33_YJLMNH_2_of_2_FTW. In both cases, it looks like there may have been an erasure in between the words, where one would expect a לגרמיה to have been, if one was originally present in μL."
     ],
     "qr-lc-img": "Lenin/Lenin-3211.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3211.png",
     "aleppo-img-intro": "page 278v, col 1, line 4, word 2",
     "nbd": {
@@ -5573,7 +5603,7 @@
     ],
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-3312.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3312.png",
     "aleppo-img-intro": "page 278v, col 2, line 2, word 1",
     "nbd": {
@@ -5612,7 +5642,7 @@
       "Note that above we only show (and are only concerned with) the קרי form."
     ],
     "qr-lc-img": "Lenin/Lenin-3328.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3328.png",
     "aleppo-img-intro": "page 278v, col 2, line 21, word 5",
     "nbd": {
@@ -5652,7 +5682,7 @@
     ],
     "qr-noted-by": "nBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-3330.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3330.png",
     "aleppo-img-intro": "page 278v, col 2, line 24, word 5",
     "nbd": {
@@ -5773,7 +5803,7 @@
     },
     "qr-noted-by": "tBHQ-zmiscWLC",
     "qr-lc-img": "Lenin/Lenin-3410.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3410.png",
     "aleppo-img-intro": "page 279r, col 1, line 10, word 5",
     "nbd": {
@@ -5901,7 +5931,7 @@
     ],
     "qr-noted-by": "nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-3419-NKR0.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3419-NKR0.png",
     "aleppo-img-intro": "page 279r, col 1, line 22, word 7",
     "nbd": {
@@ -5937,7 +5967,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3419-JV3.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3419-JV3.png",
     "aleppo-img-intro": "page 279r, col 1, line 22, word 8",
     "nbd": {
@@ -5972,7 +6002,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3422.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3422.png",
     "aleppo-img-intro": "page 279r, col 1, line 26, word 6",
     "nbd": {
@@ -6011,7 +6041,7 @@
       "As $DM footnote 20 mentions, this is one of three such cases, the other two being $link_9_35 and $link_27_9. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
     ],
     "qr-lc-img": "Lenin/Lenin-3433-HM3M5.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3433-HM3M5.png",
     "aleppo-img-intro": "page 279r, col 2, line 11, word 6",
     "nbd": {
@@ -6051,7 +6081,7 @@
       "word": 7
     },
     "qr-lc-img": "Lenin/Lenin-3433-YJLMNH_1_of_2_FTW.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3433-YJLMNH_1_of_2_FTW.png",
     "aleppo-img-intro": "page 279r, col 2, line 11, word 7",
     "nbd": {
@@ -6094,7 +6124,7 @@
       "As $DM footnote 32 mentions, in two cases in Job, μL omits the לגרמיה stroke before a word with געיה and רביע. The other such case is $link_32_11. In both cases, it looks like there may have been an erasure in between the words, where one would expect a לגרמיה to have been, if one was originally present in μL. In this case here in $plain_34_33, there is an additional mark after the possible erasure. This mark is hard to interpret."
     ],
     "qr-lc-img": "Lenin/Lenin-3433-YJLMNH_2_of_2_FTW.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3433-YJLMNH_2_of_2_FTW.png",
     "aleppo-img-intro": "page 279r, col 2, line 11, word 7",
     "nbd": {
@@ -6133,7 +6163,7 @@
       "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See $link_16_6, $link_21_15, and $link_35_7."
     ],
     "qr-lc-img": "Lenin/Lenin-3433-VMH0YD3F.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3433-VMH0YD3F.png",
     "aleppo-img-intro": "page 279r, col 2, line 13, word 1",
     "nbd": {
@@ -6208,7 +6238,7 @@
       "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See $link_16_6, $link_21_15, and $link_34_33_VMH0YD3F."
     ],
     "qr-lc-img": "Lenin/Lenin-3507.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3507.png",
     "aleppo-img-intro": "page 279r, col 2, line 26, word 2",
     "nbd": {
@@ -6243,7 +6273,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3514.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3514.png",
     "aleppo-img-intro": "page 279v, col 1, line 5, word 3",
     "nbd": {
@@ -6461,7 +6491,7 @@
       " to transcribe the similarly faint blob (an erasure?) right next to it under the ש."
     ],
     "qr-lc-img": "Lenin/Lenin-3619.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3619.png",
     "aleppo-img-intro": "page 279v, col 2, line 1, word 7",
     "nbd": {
@@ -6562,7 +6592,7 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-3629.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3629.png",
     "aleppo-img-intro": "page 279v, col 2, line 13, word 4",
     "nbd": {
@@ -6597,7 +6627,7 @@
     },
     "qr-noted-by": "tBHQ-nBHL-nWLC",
     "qr-lc-img": "Lenin/Lenin-3706.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3706.png",
     "aleppo-img-intro": "page 279v, col 2, line 24, word 6",
     "nbd": {
@@ -6636,7 +6666,7 @@
       "The pointing of this word must, by necessity, be transcribed with much charity. Nonetheless, the mark in question here is fairly clearly positioned as a דחי not a טרחא, though it is, unfortunately, attached to the right leg of the ה. (At least, it is attached to the right leg of the re-inked ה.)"
     ],
     "qr-lc-img": "Lenin/Lenin-3719-HVDY3NV.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3719-HVDY3NV.png",
     "aleppo-img-intro": "page 280r, col 1, line 13, word 1",
     "nbd": {
@@ -6710,7 +6740,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3720.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3720.png",
     "aleppo-img-intro": "page 280r, col 1, line 14, word 2",
     "nbd": {
@@ -6750,7 +6780,7 @@
     ],
     "qr-noted-by": "nBHQ-nBHL-nDM-nWLC",
     "qr-lc-img": "Lenin/Lenin-3812-HMYMY5.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3812-HMYMY5.png",
     "aleppo-img-intro": "page 280r, col 2, line 6, word 5",
     "nbd": {
@@ -6935,7 +6965,7 @@
     ],
     "qr-noted-by": "nWLC",
     "qr-lc-img": "Lenin/Lenin-3812-YD3F_HJXR.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3812-YD3F_HJXR.png",
     "qr-jc-img": "Jerusalem-Crown-3812-YD3F_HJXR.png",
     "aleppo-img-intro": "page 280r, col 2, line 7, word 3",
@@ -6972,7 +7002,7 @@
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "Lenin/Lenin-3817.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3817.png",
     "aleppo-img-intro": "page 280r, col 2, line 12, word 6",
     "nbd": {
@@ -7010,7 +7040,7 @@
     },
     "qr-noted-by": "nDM",
     "qr-lc-img": "Lenin/Lenin-3820.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3820.png",
     "aleppo-img-intro": "page 280r, col 2, line 16, word 4",
     "nbd": {
@@ -7045,7 +7075,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3827.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3827.png",
     "aleppo-img-intro": "page 280r, col 2, line 24, word 5",
     "nbd": {
@@ -7083,7 +7113,7 @@
       "word": 6
     },
     "qr-lc-img": "Lenin/Lenin-3829.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3829.png",
     "aleppo-img-intro": "page 280r, col 2, line 27, word 6",
     "nbd": {
@@ -7203,7 +7233,7 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-3902.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3902.png",
     "aleppo-img-intro": "page 280v, col 1, line 16, word 1",
     "nbd": {
@@ -7239,7 +7269,7 @@
     },
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-3906.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3906.png",
     "aleppo-img-intro": "page 280v, col 1, line 20, word 6",
     "nbd": {
@@ -7274,7 +7304,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3911.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3911.png",
     "aleppo-img-intro": "page 280v, col 1, line 26, word 2",
     "nbd": {
@@ -7309,7 +7339,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-3912.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3912.png",
     "aleppo-img-intro": "page 280v, col 1, line 27, word 2",
     "nbd": {
@@ -7351,7 +7381,7 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-3913.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3913.png",
     "aleppo-img-intro": "page 280v, col 1, line 28, word 5",
     "nbd": {
@@ -7386,7 +7416,7 @@
       "word": 7
     },
     "qr-lc-img": "Lenin/Lenin-3915.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3915.png",
     "aleppo-img-intro": "page 280v, col 2, line 2, word 7",
     "nbd": {
@@ -7422,7 +7452,7 @@
     },
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-3920.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3920.png",
     "aleppo-img-intro": "page 280v, col 2, line 9, word 2",
     "nbd": {
@@ -7460,7 +7490,7 @@
       "word": 5
     },
     "qr-lc-img": "Lenin/Lenin-3925.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-3925.png",
     "aleppo-img-intro": "page 280v, col 2, line 16, word 5",
     "nbd": {
@@ -7497,7 +7527,7 @@
     },
     "qr-noted-by": "tBHQ-nBHL-nWLC",
     "qr-lc-img": "Lenin/Lenin-4010.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-4010.png",
     "aleppo-img-intro": "page 281r, col 1, line 6, word 3",
     "nbd": {
@@ -7533,7 +7563,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-4019-HVA.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-4019-HVA.png",
     "aleppo-img-intro": "page 281r, col 1, line 16, word 1",
     "nbd": {
@@ -7572,7 +7602,7 @@
       "There is a confusing constellation of three dots surrounding the ש in μL, but only one of those dots, a $sin dot, belongs to the ש. Working backwards (to the right) from that $sin dot, the next dot is a “קמץ dot” belonging to the מ of %גרמיו on the line above. The next dot is a חולם חסר dot belonging to the ע. (Or, if you prefer an alternative interpretation of חולם חסר dots in general, the חולם חסר dot belongs to an implicit $vav between the ע and ש.) The issue at hand is there is no fourth dot that could be interpreted as a רביע above the ש."
     ],
     "qr-lc-img": "Lenin/Lenin-4019-H3JV.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-4019-H3JV.png",
     "aleppo-img-intro": "page 281r, col 1, line 16, word 5",
     "nbd": {
@@ -7608,7 +7638,7 @@
     },
     "qr-noted-by": "tBHQ-nBHL-nDM",
     "qr-lc-img": "Lenin/Lenin-4026.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-4026.png",
     "aleppo-img-intro": "page 281r, col 1, line 25, word 3",
     "nbd": {
@@ -7643,7 +7673,7 @@
     },
     "qr-noted-by": "tBHQ-zdexiWLC",
     "qr-lc-img": "Lenin/Lenin-4029.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-4029.png",
     "aleppo-img-intro": "page 281r, col 1, line 27, word 5",
     "nbd": {
@@ -7681,7 +7711,7 @@
     ],
     "qr-noted-by": "nBHL",
     "qr-lc-img": "Lenin/Lenin-4125.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-4125.png",
     "aleppo-img-intro": "page 281v, col 1, line 3, word 6",
     "nbd": {
@@ -7758,7 +7788,7 @@
     "qr-noted-by": "nBHQ",
     "qr-uxlc-needs-fix": true,
     "qr-lc-img": "Lenin/Lenin-4213.png",
-    "qr-lc-img-too-tall": true,
+    "qr-lc-img-scale": 0.6,
     "qr-aleppo-img": "Aleppo/Aleppo-4213.png",
     "aleppo-img-intro": "page 281v, col 2, line 9, word 3",
     "nbd": {

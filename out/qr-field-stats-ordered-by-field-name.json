@@ -76,7 +76,7 @@
     },
     {
       "field": "qr-cam1753-img",
-      "count": 32
+      "count": 62
     },
     {
       "field": "qr-cam1753-img-intro",
@@ -143,7 +143,7 @@
       "count": 160
     },
     {
-      "field": "qr-lc-img-too-tall",
+      "field": "qr-lc-img-scale",
       "count": 131
     },
     {

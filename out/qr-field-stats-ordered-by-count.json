@@ -107,7 +107,7 @@
       "count": 138
     },
     {
-      "field": "qr-lc-img-too-tall",
+      "field": "qr-lc-img-scale",
       "count": 131
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "field": "qr-cam1753-img",
-      "count": 32
+      "count": 62
     },
     {
       "field": "qr-word-id",
