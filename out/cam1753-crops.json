@@ -2121,6 +2121,366 @@
       ]
     }
   },
+  "3022": {
+    "cv": "30:22",
+    "page": "0081A",
+    "col": 1,
+    "line_num": 17,
+    "page_size": [
+      2274,
+      3088
+    ],
+    "bbox_abs": {
+      "x": 1408,
+      "y": 1582,
+      "w": 163,
+      "h": 141
+    },
+    "bbox_rel": {
+      "left": 0.0775,
+      "top": 0.3065,
+      "right": 0.2906,
+      "bottom": 0.6932
+    },
+    "source": {
+      "source_spread": "cam1753-page-0085.jpg",
+      "archive_page": 85,
+      "spread_width": 4544,
+      "spread_height": 3088,
+      "gutter_x": 2274,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2274,
+        3088
+      ]
+    }
+  },
+  "3030": {
+    "cv": "30:30",
+    "page": "0081A",
+    "col": 1,
+    "line_num": 26,
+    "page_size": [
+      2274,
+      3088
+    ],
+    "bbox_abs": {
+      "x": 1653,
+      "y": 2217,
+      "w": 129,
+      "h": 128
+    },
+    "bbox_rel": {
+      "left": 0.3982,
+      "top": 0.2654,
+      "right": 0.5674,
+      "bottom": 0.6021
+    },
+    "source": {
+      "source_spread": "cam1753-page-0085.jpg",
+      "archive_page": 85,
+      "spread_width": 4544,
+      "spread_height": 3088,
+      "gutter_x": 2274,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2274,
+        3088
+      ]
+    }
+  },
+  "3102": {
+    "cv": "31:2",
+    "page": "0081A",
+    "col": 2,
+    "line_num": 3,
+    "page_size": [
+      2274,
+      3088
+    ],
+    "bbox_abs": {
+      "x": 677,
+      "y": 573,
+      "w": 128,
+      "h": 151
+    },
+    "bbox_rel": {
+      "left": 0.2494,
+      "top": 0.3576,
+      "right": 0.4059,
+      "bottom": 0.7518
+    },
+    "source": {
+      "source_spread": "cam1753-page-0085.jpg",
+      "archive_page": 85,
+      "spread_width": 4544,
+      "spread_height": 3088,
+      "gutter_x": 2274,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2274,
+        3088
+      ]
+    }
+  },
+  "3104": {
+    "cv": "31:4",
+    "page": "0081A",
+    "col": 2,
+    "line_num": 6,
+    "page_size": [
+      2274,
+      3088
+    ],
+    "bbox_abs": {
+      "x": 1135,
+      "y": 804,
+      "w": 111,
+      "h": 151
+    },
+    "bbox_rel": {
+      "left": 0.811,
+      "top": 0.3843,
+      "right": 0.9467,
+      "bottom": 0.7837
+    },
+    "source": {
+      "source_spread": "cam1753-page-0085.jpg",
+      "archive_page": 85,
+      "spread_width": 4544,
+      "spread_height": 3088,
+      "gutter_x": 2274,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2274,
+        3088
+      ]
+    }
+  },
+  "3105": {
+    "cv": "31:5",
+    "page": "0081A",
+    "col": 2,
+    "line_num": 8,
+    "page_size": [
+      2274,
+      3088
+    ],
+    "bbox_abs": {
+      "x": 1110,
+      "y": 953,
+      "w": 137,
+      "h": 136
+    },
+    "bbox_rel": {
+      "left": 0.7802,
+      "top": 0.3887,
+      "right": 0.9482,
+      "bottom": 0.7491
+    },
+    "source": {
+      "source_spread": "cam1753-page-0085.jpg",
+      "archive_page": 85,
+      "spread_width": 4544,
+      "spread_height": 3088,
+      "gutter_x": 2274,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2274,
+        3088
+      ]
+    }
+  },
+  "3107": {
+    "cv": "31:7",
+    "page": "0081A",
+    "col": 2,
+    "line_num": 11,
+    "page_size": [
+      2274,
+      3088
+    ],
+    "bbox_abs": {
+      "x": 1074,
+      "y": 1157,
+      "w": 169,
+      "h": 145
+    },
+    "bbox_rel": {
+      "left": 0.7367,
+      "top": 0.3466,
+      "right": 0.9438,
+      "bottom": 0.7328
+    },
+    "source": {
+      "source_spread": "cam1753-page-0085.jpg",
+      "archive_page": 85,
+      "spread_width": 4544,
+      "spread_height": 3088,
+      "gutter_x": 2274,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2274,
+        3088
+      ]
+    }
+  },
+  "3115": {
+    "cv": "31:15",
+    "page": "0081A",
+    "col": 2,
+    "line_num": 19,
+    "page_size": [
+      2274,
+      3088
+    ],
+    "bbox_abs": {
+      "x": 874,
+      "y": 1729,
+      "w": 216,
+      "h": 141
+    },
+    "bbox_rel": {
+      "left": 0.4914,
+      "top": 0.3,
+      "right": 0.7565,
+      "bottom": 0.6815
+    },
+    "source": {
+      "source_spread": "cam1753-page-0085.jpg",
+      "archive_page": 85,
+      "spread_width": 4544,
+      "spread_height": 3088,
+      "gutter_x": 2274,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2274,
+        3088
+      ]
+    }
+  },
+  "3119": {
+    "cv": "31:19",
+    "page": "0081A",
+    "col": 2,
+    "line_num": 24,
+    "page_size": [
+      2274,
+      3088
+    ],
+    "bbox_abs": {
+      "x": 1101,
+      "y": 2077,
+      "w": 137,
+      "h": 142
+    },
+    "bbox_rel": {
+      "left": 0.7694,
+      "top": 0.2446,
+      "right": 0.9374,
+      "bottom": 0.6274
+    },
+    "source": {
+      "source_spread": "cam1753-page-0085.jpg",
+      "archive_page": 85,
+      "spread_width": 4544,
+      "spread_height": 3088,
+      "gutter_x": 2274,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2274,
+        3088
+      ]
+    }
+  },
+  "3120": {
+    "cv": "31:20",
+    "page": "0081A",
+    "col": 2,
+    "line_num": 25,
+    "page_size": [
+      2274,
+      3088
+    ],
+    "bbox_abs": {
+      "x": 671,
+      "y": 2152,
+      "w": 125,
+      "h": 143
+    },
+    "bbox_rel": {
+      "left": 0.2423,
+      "top": 0.2496,
+      "right": 0.3956,
+      "bottom": 0.6351
+    },
+    "source": {
+      "source_spread": "cam1753-page-0085.jpg",
+      "archive_page": 85,
+      "spread_width": 4544,
+      "spread_height": 3088,
+      "gutter_x": 2274,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2274,
+        3088
+      ]
+    }
+  },
+  "3128": {
+    "cv": "31:28",
+    "page": "0081B",
+    "col": 1,
+    "line_num": 7,
+    "page_size": [
+      2240,
+      3088
+    ],
+    "bbox_abs": {
+      "x": 1014,
+      "y": 883,
+      "w": 136,
+      "h": 144
+    },
+    "bbox_rel": {
+      "left": 0.0548,
+      "top": 0.4063,
+      "right": 0.2294,
+      "bottom": 0.7884
+    },
+    "source": {
+      "source_spread": "cam1753-page-0086.jpg",
+      "archive_page": 86,
+      "spread_width": 4496,
+      "spread_height": 3088,
+      "gutter_x": 2256,
+      "crop": "right",
+      "crop_box": [
+        2256,
+        0,
+        4496,
+        3088
+      ]
+    }
+  },
   "3612": {
     "cv": "36:12",
     "page": "0083A",

@@ -72,19 +72,19 @@
     },
     {
       "field": "qr-cam1753-img",
-      "count": 101
+      "count": 111
     },
     {
       "field": "qr-cam1753-loc",
-      "count": 101
+      "count": 111
     },
     {
       "field": "qr-cam1753-loc.column",
-      "count": 101
+      "count": 111
     },
     {
       "field": "qr-cam1753-loc.line",
-      "count": 101
+      "count": 111
     },
     {
       "field": "qr-cam1753-loc.line2",
@@ -92,7 +92,7 @@
     },
     {
       "field": "qr-cam1753-loc.page",
-      "count": 101
+      "count": 111
     },
     {
       "field": "qr-cam1753-page-url",
@@ -120,7 +120,7 @@
     },
     {
       "field": "qr-highlight",
-      "count": 138
+      "count": 137
     },
     {
       "field": "qr-highlight-ac-proposed",
@@ -132,7 +132,7 @@
     },
     {
       "field": "qr-highlight-lc-proposed",
-      "count": 17
+      "count": 18
     },
     {
       "field": "qr-ignore-g3yh-diff",

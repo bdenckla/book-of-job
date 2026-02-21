@@ -16,7 +16,7 @@ def highlight(quirkrec, key):
     """
     zbhls = _zb_highlights(quirkrec, key)  # zero-based highlights
     rk = quirkrec[key]
-    clusters = re.findall(r"[א-ת־ ][^א-ת־ ]*", rk)
+    clusters = re.findall(r"[א-ת־ ׀][^א-ת־ ׀]*", rk)
     jc = "".join(clusters)
     assert jc == rk
     out = [cl if i not in zbhls else color(cl, key) for i, cl in enumerate(clusters)]

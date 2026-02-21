@@ -5,7 +5,7 @@ RECORD_3102 = {
     "qr-consensus": "וּמֶ֤ה",
     "qr-lc-proposed": "וּמֶ֤ה׀",
     "qr-what-is-weird": "לגרמיה is present",
-    "qr-highlight": 4,
+    "qr-highlight-lc-proposed": 4,
     "qr-lc-loc": {"page": "405B", "column": 1, "line": 15},
     "qr-ac-loc": {"page": "277v", "column": 2, "line": 24, "word": 1},
     "qr-generic-comment": [

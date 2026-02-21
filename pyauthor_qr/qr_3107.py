@@ -1,6 +1,11 @@
 from pyauthor_util.author import yyy_dash_nothing
 from pyauthor_util import author
 
+_GENCOM_PARA_2 = [
+    "The two dots above the מ in the μY image are",
+    " the pair of above-dots that is μY\u2019s equivalent of a masorah circle.",
+    " See $link_19_16_BMV0PY for another example of this two-dot callout notation.",
+]
 _BHQCOM_PART_1 = [
     "$BHQ reflects neither μL nor the consensus expectation here.",
     " It reflects μL except it places the סילוק under the א instead of the $vav.",
@@ -33,7 +38,8 @@ RECORD_3107 = {
     "qr-lc-loc": {"page": "405B", "column": 1, "line": -6, "including-blank-lines": 1},
     "qr-ac-loc": {"page": "278r", "column": 1, "line": 2, "word": 5},
     "qr-generic-comment": [
-        "The consensus has סילוק under מ and nothing (אפס (zero)) under $vav."
+        "The consensus has סילוק under מ and nothing (אפס (zero)) under $vav.",
+        author.para(_GENCOM_PARA_2),
     ],
     "qr-bhq-comment": [
         author.para(_BHQCOM_PART_1),

@@ -1,12 +1,12 @@
 {
     "words": {
         "ascenders": 1,
-        "callout": 5,
+        "callout": 6,
         "cantillation": 9,
         "doesn't": 9,
         "khaf": 3,
         "magna": 2,
-        "masorah": 16,
+        "masorah": 17,
         "niqqud": 1,
         "parva": 5,
         "prev": 159,
@@ -39,8 +39,8 @@
         "μA's": 3,
         "μL": 618,
         "μL's": 2,
-        "μY": 130,
-        "μY's": 2
+        "μY": 141,
+        "μY's": 3
     },
     "phrases": {
         "Da-at Miqra": 1,
@@ -111,7 +111,7 @@
         "ך": 2,
         "כ": 11,
         "ל": 24,
-        "מ": 22,
+        "מ": 23,
         "נ": 9,
         "ס": 2,
         "ע": 11,
