@@ -747,8 +747,7 @@ function exportJSON() {{
         if (ITEMS[j].splitGroup === it.splitGroup) {{
           processed.add(j);
           parts.push({{
-            line_num:  ITEMS[j].lineNum,
-            label:     ITEMS[j].splitLabel,
+            line_num:  ITEMS[j].lineNum,            word_idx:  ITEMS[j].wordIdx,            label:     ITEMS[j].splitLabel,
             bbox_abs:  _absBox(ITEMS[j], boxes[j]),
             bbox_rel:  _relBox(boxes[j]),
             crop_left_px: ITEMS[j].cropLeftPx,
@@ -774,8 +773,7 @@ function exportJSON() {{
         cv:       it.cv,
         page:     it.page,
         col:      it.col,
-        line_num: it.lineNum,
-        bbox_abs: _absBox(it, b),
+        line_num: it.lineNum,        word_idx: it.wordIdx,        bbox_abs: _absBox(it, b),
         bbox_rel: _relBox(b),
       }});
     }}

@@ -229,6 +229,8 @@ def _cam1753_loc_intro(loc):
     text = f"page {page}, col {loc['column']}, " f"line {loc['line']}"
     if "line2" in loc:
         text += f" and line {loc['line2']}"
+    if "word" in loc:
+        text += f", word {loc['word']}"
     return text
 
 

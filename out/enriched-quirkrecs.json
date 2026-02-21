@@ -25,7 +25,8 @@
     "qr-cam1753-loc": {
       "page": "0073A",
       "column": 1,
-      "line": 8
+      "line": 8,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -69,7 +70,8 @@
     "qr-cam1753-loc": {
       "page": "0073A",
       "column": 1,
-      "line": 12
+      "line": 12,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -109,7 +111,8 @@
     "qr-cam1753-loc": {
       "page": "0073A",
       "column": 2,
-      "line": 23
+      "line": 23,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -149,7 +152,8 @@
     "qr-cam1753-loc": {
       "page": "0073A",
       "column": 2,
-      "line": 25
+      "line": 25,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -195,7 +199,8 @@
     "qr-cam1753-loc": {
       "page": "0073B",
       "column": 1,
-      "line": 13
+      "line": 13,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -235,7 +240,8 @@
     "qr-cam1753-loc": {
       "page": "0073B",
       "column": 2,
-      "line": 3
+      "line": 3,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -278,7 +284,8 @@
     "qr-cam1753-loc": {
       "page": "0073B",
       "column": 2,
-      "line": 9
+      "line": 9,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -321,7 +328,8 @@
     "qr-cam1753-loc": {
       "page": "0073B",
       "column": 2,
-      "line": 18
+      "line": 18,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -400,7 +408,8 @@
     "qr-cam1753-loc": {
       "page": "0074A",
       "column": 1,
-      "line": 4
+      "line": 4,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -441,7 +450,8 @@
     "qr-cam1753-loc": {
       "page": "0074A",
       "column": 1,
-      "line": 24
+      "line": 24,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -486,7 +496,8 @@
     "qr-cam1753-loc": {
       "page": "0074A",
       "column": 2,
-      "line": 2
+      "line": 2,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -529,7 +540,8 @@
     "qr-cam1753-loc": {
       "page": "0074A",
       "column": 2,
-      "line": 3
+      "line": 3,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -687,7 +699,8 @@
     "qr-cam1753-loc": {
       "page": "0074A",
       "column": 2,
-      "line": 19
+      "line": 19,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -729,7 +742,8 @@
     "qr-cam1753-loc": {
       "page": "0074B",
       "column": 1,
-      "line": 2
+      "line": 2,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -837,7 +851,8 @@
     "qr-cam1753-loc": {
       "page": "0074B",
       "column": 1,
-      "line": 6
+      "line": 6,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -878,7 +893,8 @@
     "qr-cam1753-loc": {
       "page": "0074B",
       "column": 1,
-      "line": 14
+      "line": 14,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -922,7 +938,8 @@
     "qr-cam1753-loc": {
       "page": "0074B",
       "column": 1,
-      "line": 16
+      "line": 16,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -963,7 +980,8 @@
     "qr-cam1753-loc": {
       "page": "0074B",
       "column": 1,
-      "line": 18
+      "line": 18,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -1003,7 +1021,8 @@
     "qr-cam1753-loc": {
       "page": "0074B",
       "column": 2,
-      "line": 2
+      "line": 2,
+      "word": 7
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1048,7 +1067,8 @@
     "qr-cam1753-loc": {
       "page": "0074B",
       "column": 2,
-      "line": 16
+      "line": 16,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1091,7 +1111,8 @@
     "qr-cam1753-loc": {
       "page": "0074B",
       "column": 2,
-      "line": 19
+      "line": 19,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1133,7 +1154,8 @@
     "qr-cam1753-loc": {
       "page": "0074B",
       "column": 2,
-      "line": 20
+      "line": 20,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -1173,7 +1195,8 @@
     "qr-cam1753-loc": {
       "page": "0074B",
       "column": 2,
-      "line": 21
+      "line": 21,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1216,7 +1239,8 @@
     "qr-cam1753-loc": {
       "page": "0075A",
       "column": 1,
-      "line": 2
+      "line": 2,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -1260,7 +1284,8 @@
     "qr-cam1753-loc": {
       "page": "0075A",
       "column": 1,
-      "line": 10
+      "line": 10,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -1301,7 +1326,8 @@
     "qr-cam1753-loc": {
       "page": "0075A",
       "column": 1,
-      "line": 12
+      "line": 12,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1345,7 +1371,8 @@
     "qr-cam1753-loc": {
       "page": "0075A",
       "column": 1,
-      "line": 13
+      "line": 13,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1389,7 +1416,8 @@
     "qr-cam1753-loc": {
       "page": "0075A",
       "column": 1,
-      "line": 26
+      "line": 26,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1436,7 +1464,8 @@
     "qr-cam1753-loc": {
       "page": "0075A",
       "column": 2,
-      "line": 4
+      "line": 4,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1481,7 +1510,8 @@
     "qr-cam1753-loc": {
       "page": "0075A",
       "column": 2,
-      "line": 9
+      "line": 9,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -1525,7 +1555,8 @@
     "qr-cam1753-loc": {
       "page": "0075A",
       "column": 2,
-      "line": 26
+      "line": 26,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -1568,7 +1599,8 @@
     "qr-cam1753-loc": {
       "page": "0075B",
       "column": 1,
-      "line": 5
+      "line": 5,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1609,7 +1641,8 @@
     "qr-cam1753-loc": {
       "page": "0075B",
       "column": 1,
-      "line": 7
+      "line": 7,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1802,7 +1835,8 @@
     "qr-cam1753-loc": {
       "page": "0075B",
       "column": 1,
-      "line": 13
+      "line": 13,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1845,7 +1879,8 @@
     "qr-cam1753-loc": {
       "page": "0075B",
       "column": 1,
-      "line": 23
+      "line": 23,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1885,7 +1920,8 @@
     "qr-cam1753-loc": {
       "page": "0075B",
       "column": 2,
-      "line": 9
+      "line": 9,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -1929,7 +1965,8 @@
     "qr-cam1753-loc": {
       "page": "0075B",
       "column": 2,
-      "line": 13
+      "line": 13,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -1972,7 +2009,8 @@
     "qr-cam1753-loc": {
       "page": "0075B",
       "column": 2,
-      "line": 14
+      "line": 14,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2014,7 +2052,8 @@
     "qr-cam1753-loc": {
       "page": "0075B",
       "column": 2,
-      "line": 20
+      "line": 20,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2057,7 +2096,8 @@
     "qr-cam1753-loc": {
       "page": "0076A",
       "column": 1,
-      "line": 7
+      "line": 7,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2101,7 +2141,8 @@
     "qr-cam1753-loc": {
       "page": "0076A",
       "column": 1,
-      "line": 15
+      "line": 15,
+      "word": 8
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2148,7 +2189,8 @@
     "qr-cam1753-loc": {
       "page": "0076A",
       "column": 1,
-      "line": 23
+      "line": 23,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2190,7 +2232,8 @@
     "qr-cam1753-loc": {
       "page": "0076A",
       "column": 1,
-      "line": 26
+      "line": 26,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2343,7 +2386,8 @@
     "qr-cam1753-loc": {
       "page": "0076B",
       "column": 1,
-      "line": 24
+      "line": 24,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2495,7 +2539,8 @@
     "qr-cam1753-loc": {
       "page": "0076B",
       "column": 2,
-      "line": 4
+      "line": 4,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2538,7 +2583,8 @@
     "qr-cam1753-loc": {
       "page": "0076B",
       "column": 2,
-      "line": 25
+      "line": 25,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2579,7 +2625,8 @@
     "qr-cam1753-loc": {
       "page": "0077A",
       "column": 2,
-      "line": 4
+      "line": 4,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2629,7 +2676,8 @@
     "qr-cam1753-loc": {
       "page": "0077A",
       "column": 2,
-      "line": 4
+      "line": 4,
+      "word": 7
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2675,7 +2723,8 @@
     "qr-cam1753-loc": {
       "page": "0077A",
       "column": 2,
-      "line": 9
+      "line": 9,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2719,7 +2768,8 @@
     "qr-cam1753-loc": {
       "page": "0077A",
       "column": 2,
-      "line": 14
+      "line": 14,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2760,7 +2810,8 @@
     "qr-cam1753-loc": {
       "page": "0077A",
       "column": 2,
-      "line": 23
+      "line": 23,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2803,7 +2854,8 @@
     "qr-cam1753-loc": {
       "page": "0077B",
       "column": 1,
-      "line": 4
+      "line": 4,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -2846,7 +2898,8 @@
     "qr-cam1753-loc": {
       "page": "0077B",
       "column": 1,
-      "line": 9
+      "line": 9,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -2959,7 +3012,8 @@
     "qr-cam1753-loc": {
       "page": "0077B",
       "column": 1,
-      "line": 11
+      "line": 11,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -3003,7 +3057,8 @@
     "qr-cam1753-loc": {
       "page": "0077B",
       "column": 1,
-      "line": 13
+      "line": 13,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -3044,7 +3099,8 @@
     "qr-cam1753-loc": {
       "page": "0077B",
       "column": 1,
-      "line": 19
+      "line": 19,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -3098,7 +3154,8 @@
     "qr-cam1753-loc": {
       "page": "0077B",
       "column": 2,
-      "line": 4
+      "line": 4,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -3152,7 +3209,8 @@
     "qr-cam1753-loc": {
       "page": "0077B",
       "column": 2,
-      "line": 4
+      "line": 4,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -3196,7 +3254,8 @@
     "qr-cam1753-loc": {
       "page": "0077B",
       "column": 2,
-      "line": 6
+      "line": 6,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3244,7 +3303,8 @@
     "qr-cam1753-loc": {
       "page": "0077B",
       "column": 2,
-      "line": 9
+      "line": 9,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -3335,7 +3395,8 @@
     "qr-cam1753-loc": {
       "page": "0077B",
       "column": 2,
-      "line": 26
+      "line": 26,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3481,7 +3542,8 @@
     "qr-cam1753-loc": {
       "page": "0078A",
       "column": 1,
-      "line": 4
+      "line": 4,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -3527,7 +3589,8 @@
     "qr-cam1753-loc": {
       "page": "0078A",
       "column": 1,
-      "line": 16
+      "line": 16,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -3603,7 +3666,8 @@
     "qr-cam1753-loc": {
       "page": "0078A",
       "column": 1,
-      "line": 17
+      "line": 17,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -3643,7 +3707,8 @@
     "qr-cam1753-loc": {
       "page": "0078A",
       "column": 2,
-      "line": 4
+      "line": 4,
+      "word": 8
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3685,7 +3750,8 @@
     "qr-cam1753-loc": {
       "page": "0078A",
       "column": 2,
-      "line": 8
+      "line": 8,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3725,7 +3791,8 @@
     "qr-cam1753-loc": {
       "page": "0078B",
       "column": 1,
-      "line": 7
+      "line": 7,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3766,7 +3833,8 @@
     "qr-cam1753-loc": {
       "page": "0078B",
       "column": 1,
-      "line": 22
+      "line": 22,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3856,7 +3924,8 @@
     "qr-cam1753-loc": {
       "page": "0078B",
       "column": 2,
-      "line": 18
+      "line": 18,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -3897,7 +3966,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 1,
-      "line": 3
+      "line": 3,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3941,7 +4011,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 1,
-      "line": 15
+      "line": 15,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -3984,7 +4055,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 1,
-      "line": 18
+      "line": 18,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4024,7 +4096,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 1,
-      "line": 19
+      "line": 19,
+      "word": 7
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4124,7 +4197,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 2,
-      "line": 1
+      "line": 1,
+      "word": 7
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4171,7 +4245,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 2,
-      "line": 2
+      "line": 2,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -4217,7 +4292,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 2,
-      "line": 5
+      "line": 5,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4318,7 +4394,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 2,
-      "line": 9
+      "line": 9,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4367,7 +4444,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 2,
-      "line": 11
+      "line": 11,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4414,7 +4492,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 2,
-      "line": 11
+      "line": 11,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -4492,7 +4571,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 2,
-      "line": 17
+      "line": 17,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -4532,7 +4612,8 @@
     "qr-cam1753-loc": {
       "page": "0079A",
       "column": 2,
-      "line": 17
+      "line": 17,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4653,7 +4734,8 @@
     "qr-cam1753-loc": {
       "page": "0079B",
       "column": 1,
-      "line": 4
+      "line": 4,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -4694,7 +4776,8 @@
     "qr-cam1753-loc": {
       "page": "0079B",
       "column": 1,
-      "line": 8
+      "line": 8,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4736,7 +4819,8 @@
     "qr-cam1753-loc": {
       "page": "0079B",
       "column": 1,
-      "line": 18
+      "line": 18,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4831,7 +4915,8 @@
     "qr-cam1753-loc": {
       "page": "0079B",
       "column": 1,
-      "line": 23
+      "line": 23,
+      "word": 7
     },
     "nbd": {
       "e:BHQ": "nBHQ",
@@ -4871,7 +4956,8 @@
     "qr-cam1753-loc": {
       "page": "0079B",
       "column": 1,
-      "line": 26
+      "line": 26,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -4918,7 +5004,8 @@
     "qr-cam1753-loc": {
       "page": "0079B",
       "column": 2,
-      "line": 4
+      "line": 4,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -5072,7 +5159,8 @@
     "qr-cam1753-loc": {
       "page": "0080A",
       "column": 1,
-      "line": 6
+      "line": 6,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -5118,7 +5206,8 @@
     "qr-cam1753-loc": {
       "page": "0080A",
       "column": 1,
-      "line": 8
+      "line": 8,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -5161,7 +5250,8 @@
     "qr-cam1753-loc": {
       "page": "0080A",
       "column": 1,
-      "line": 16
+      "line": 16,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5205,7 +5295,8 @@
     "qr-cam1753-loc": {
       "page": "0080A",
       "column": 1,
-      "line": 22
+      "line": 22,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -5250,7 +5341,8 @@
     "qr-cam1753-loc": {
       "page": "0080A",
       "column": 2,
-      "line": 16
+      "line": 16,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -5290,7 +5382,8 @@
     "qr-cam1753-loc": {
       "page": "0080B",
       "column": 1,
-      "line": 9
+      "line": 9,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5336,7 +5429,8 @@
     "qr-cam1753-loc": {
       "page": "0080B",
       "column": 1,
-      "line": 11
+      "line": 11,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5376,7 +5470,8 @@
     "qr-cam1753-loc": {
       "page": "0080B",
       "column": 1,
-      "line": 18
+      "line": 18,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5420,7 +5515,8 @@
     "qr-cam1753-loc": {
       "page": "0080B",
       "column": 1,
-      "line": 24
+      "line": 24,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5464,7 +5560,8 @@
     "qr-cam1753-loc": {
       "page": "0080B",
       "column": 2,
-      "line": 1
+      "line": 1,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -5507,7 +5604,8 @@
     "qr-cam1753-loc": {
       "page": "0080B",
       "column": 2,
-      "line": 11
+      "line": 11,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5547,7 +5645,8 @@
     "qr-cam1753-loc": {
       "page": "0081A",
       "column": 1,
-      "line": 13
+      "line": 13,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5587,7 +5686,8 @@
     "qr-cam1753-loc": {
       "page": "0081A",
       "column": 1,
-      "line": 17
+      "line": 17,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5627,7 +5727,8 @@
     "qr-cam1753-loc": {
       "page": "0081A",
       "column": 1,
-      "line": 26
+      "line": 26,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5671,7 +5772,8 @@
     "qr-cam1753-loc": {
       "page": "0081A",
       "column": 2,
-      "line": 3
+      "line": 3,
+      "word": 5
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5711,7 +5813,8 @@
     "qr-cam1753-loc": {
       "page": "0081A",
       "column": 2,
-      "line": 6
+      "line": 6,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -5756,7 +5859,8 @@
     "qr-cam1753-loc": {
       "page": "0081A",
       "column": 2,
-      "line": 8
+      "line": 8,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -5910,7 +6014,8 @@
     "qr-cam1753-loc": {
       "page": "0081A",
       "column": 2,
-      "line": 11
+      "line": 11,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -5957,7 +6062,8 @@
     "qr-cam1753-loc": {
       "page": "0081A",
       "column": 2,
-      "line": 19
+      "line": 19,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -5997,7 +6103,8 @@
     "qr-cam1753-loc": {
       "page": "0081A",
       "column": 2,
-      "line": 24
+      "line": 24,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -6037,7 +6144,8 @@
     "qr-cam1753-loc": {
       "page": "0081A",
       "column": 2,
-      "line": 25
+      "line": 25,
+      "word": 6
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -6077,7 +6185,8 @@
     "qr-cam1753-loc": {
       "page": "0081B",
       "column": 1,
-      "line": 7
+      "line": 7,
+      "word": 8
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -7133,7 +7242,8 @@
     "qr-cam1753-loc": {
       "page": "0083A",
       "column": 1,
-      "line": 21
+      "line": 21,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "nBHQ",

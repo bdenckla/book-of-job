@@ -106,6 +106,7 @@ def _apply_normal_crop(crop, page_cache, source_meta_cache, persistent):
         "page": page_id,
         "col": crop["col"],
         "line_num": crop["line_num"],
+        "word_idx": crop.get("word_idx"),
         "page_size": [page_w, page_h],
         "bbox_abs": crop["bbox_abs"],
         "bbox_rel": crop["bbox_rel"],
@@ -177,6 +178,7 @@ def _apply_split_crop(crop, page_cache, source_meta_cache, persistent):
         "parts": [
             {
                 "line_num": p["line_num"],
+                "word_idx": p.get("word_idx"),
                 "label": p["label"],
                 "bbox_abs": p["bbox_abs"],
                 "bbox_rel": p["bbox_rel"],

@@ -98,6 +98,8 @@ def _enrich_one_qr_by_adding_cam1753_loc(cam1753_crops, quirkrec):
         loc["line2"] = parts[1]["line_num"]
     else:
         loc["line"] = crop["line_num"]
+        if crop.get("word_idx") is not None:
+            loc["word"] = crop["word_idx"] + 1  # 1-based for display
     return {**quirkrec, "qr-cam1753-loc": loc}
 
 
