@@ -683,6 +683,64 @@
       ]
     }
   },
+  "2115": {
+    "cv": "21:15",
+    "page": "0078B",
+    "col": 2,
+    "split": true,
+    "parts": [
+      {
+        "line_num": 5,
+        "label": "מַה־",
+        "bbox_abs": {
+          "x": 176,
+          "y": 669,
+          "w": 174,
+          "h": 155
+        },
+        "bbox_rel": {
+          "left": 0.0612,
+          "top": 0.3619,
+          "right": 0.2889,
+          "bottom": 0.7609
+        }
+      },
+      {
+        "line_num": 6,
+        "label": "שַּׁדַּ֥י",
+        "bbox_abs": {
+          "x": 742,
+          "y": 762,
+          "w": 119,
+          "h": 153
+        },
+        "bbox_rel": {
+          "left": 0.8039,
+          "top": 0.4031,
+          "right": 0.9603,
+          "bottom": 0.7954
+        }
+      }
+    ],
+    "page_size": [
+      2200,
+      3072
+    ],
+    "source": {
+      "source_spread": "cam1753-page-0083.jpg",
+      "archive_page": 83,
+      "spread_width": 4496,
+      "spread_height": 3072,
+      "gutter_x": 2296,
+      "crop": "right",
+      "crop_box": [
+        2296,
+        0,
+        4496,
+        3072
+      ]
+    }
+  },
   "2125": {
     "cv": "21:25",
     "page": "0078B",
@@ -729,16 +787,16 @@
       3072
     ],
     "bbox_abs": {
-      "x": 1448,
-      "y": 530,
-      "w": 212,
-      "h": 130
+      "x": 1361,
+      "y": 492,
+      "w": 356,
+      "h": 149
     },
     "bbox_rel": {
-      "left": 0.1115,
-      "top": 0.3788,
-      "right": 0.3832,
-      "bottom": 0.7058
+      "left": 0,
+      "top": 0.2839,
+      "right": 0.4552,
+      "bottom": 0.6583
     },
     "source": {
       "source_spread": "cam1753-page-0083.jpg",

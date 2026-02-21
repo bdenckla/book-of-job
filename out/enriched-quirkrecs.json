@@ -3445,7 +3445,7 @@
     "qr-lc-proposed": "מַה־שַׁדַּ֥י",
     "qr-what-is-weird": "ש lacks דגש",
     "qr-generic-comment": [
-      "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See $link_16_6, $link_34_33_VMH0YD3F, and $link_35_7. Aside: μA lacks the מקף."
+      "As $DM footnote 25 mentions, the omission of דגש after %מה־ is common in μL. See $link_16_6, $link_34_33_VMH0YD3F, and $link_35_7. Aside: μA lacks the מקף. Our best guess is that μY has the consensus דגש but it is only visible as a small bump on the right of the center arm of the three arms of the שׁ."
     ],
     "qr-highlight": 4,
     "qr-lc-loc": {
@@ -3462,6 +3462,7 @@
     "qr-lc-img": "Lenin/Lenin-2115.png",
     "qr-lc-img-scale": 0.523,
     "qr-aleppo-img": "Aleppo/Aleppo-2115.png",
+    "qr-cam1753-img": "cam1753/cam1753-2115.png",
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",

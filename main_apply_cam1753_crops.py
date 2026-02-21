@@ -22,6 +22,7 @@ import json
 import sys
 from pathlib import Path
 
+from PIL import Image
 from PIL.PngImagePlugin import PngInfo
 
 ROOT = Path(__file__).resolve().parent
@@ -65,6 +66,127 @@ def _save_crops_json(data):
     )
 
 
+def _ensure_page(page_id, page_cache, source_meta_cache):
+    """Load and cache a page image if not already loaded."""
+    if page_id not in page_cache:
+        print(f"  Loading page {page_id}...")
+        page_cache[page_id] = load_page_image(page_id)
+        source_meta_cache[page_id] = _get_source_metadata(page_cache[page_id])
+
+
+def _apply_normal_crop(crop, page_cache, source_meta_cache, persistent):
+    """Crop a single (non-split) word and save the PNG."""
+    sid = crop["sid"]
+    page_id = crop["page"]
+    bb = crop["bbox_abs"]
+    x, y, w, h = bb["x"], bb["y"], bb["w"], bb["h"]
+
+    _ensure_page(page_id, page_cache, source_meta_cache)
+    img = page_cache[page_id]
+    page_w, page_h = img.size
+    cropped = img.crop((x, y, x + w, y + h))
+
+    # Build PNG metadata
+    png_info = PngInfo()
+    source_meta_str = source_meta_cache[page_id]
+    if source_meta_str:
+        png_info.add_text("cam1753-source", source_meta_str)
+    crop_meta = {k: v for k, v in crop.items() if k != "sid"}
+    png_info.add_text("cam1753-crop", json.dumps(crop_meta))
+
+    out_path = OUT_DIR / f"cam1753-{sid}.png"
+    cropped.save(out_path, pnginfo=png_info)
+    print(f"  {out_path.name}: {cropped.size[0]}\u00d7{cropped.size[1]}")
+
+    # Persistent record
+    source_meta = json.loads(source_meta_str) if source_meta_str else None
+    persistent[sid] = {
+        "cv": crop["cv"],
+        "page": page_id,
+        "col": crop["col"],
+        "line_num": crop["line_num"],
+        "page_size": [page_w, page_h],
+        "bbox_abs": crop["bbox_abs"],
+        "bbox_rel": crop["bbox_rel"],
+    }
+    if source_meta:
+        persistent[sid]["source"] = source_meta
+    return 1
+
+
+def _apply_split_crop(crop, page_cache, source_meta_cache, persistent):
+    """Crop a cross-line maqaf split word (two parts) and combine into one PNG.
+
+    Hebrew is RTL, so the combined image places part A (the leading maqaf
+    fragment from the end of the previous line) on the *right*, and part B
+    (the trailing fragment from the start of the next line) on the *left*.
+    """
+    sid = crop["sid"]
+    page_id = crop["page"]
+    parts = crop["parts"]
+
+    _ensure_page(page_id, page_cache, source_meta_cache)
+    img = page_cache[page_id]
+    page_w, page_h = img.size
+
+    # Crop each part
+    part_images = []
+    for p in parts:
+        bb = p["bbox_abs"]
+        x, y, w, h = bb["x"], bb["y"], bb["w"], bb["h"]
+        part_img = img.crop((x, y, x + w, y + h))
+        part_images.append(part_img)
+
+    # Combine: part A (idx 0, maqaf-ending) on right, part B (idx 1) on left
+    img_a, img_b = part_images[0], part_images[1]
+    gap = 4  # small gap between parts
+    combined_w = img_a.width + gap + img_b.width
+    combined_h = max(img_a.height, img_b.height)
+    combined = Image.new("RGB", (combined_w, combined_h), (255, 255, 255))
+    # Part B on the left
+    y_off_b = (combined_h - img_b.height) // 2
+    combined.paste(img_b, (0, y_off_b))
+    # Part A on the right
+    y_off_a = (combined_h - img_a.height) // 2
+    combined.paste(img_a, (img_b.width + gap, y_off_a))
+
+    # Build PNG metadata
+    png_info = PngInfo()
+    source_meta_str = source_meta_cache[page_id]
+    if source_meta_str:
+        png_info.add_text("cam1753-source", source_meta_str)
+    crop_meta = {k: v for k, v in crop.items() if k != "sid"}
+    png_info.add_text("cam1753-crop", json.dumps(crop_meta))
+
+    out_path = OUT_DIR / f"cam1753-{sid}.png"
+    combined.save(out_path, pnginfo=png_info)
+    print(f"  {out_path.name}: {combined.size[0]}\u00d7{combined.size[1]} "
+          f"(split: {img_a.size[0]}\u00d7{img_a.size[1]} + "
+          f"{img_b.size[0]}\u00d7{img_b.size[1]})")
+
+    # Persistent record
+    source_meta = json.loads(source_meta_str) if source_meta_str else None
+    persistent[sid] = {
+        "cv": crop["cv"],
+        "page": page_id,
+        "col": crop["col"],
+        "split": True,
+        "parts": [
+            {
+                "line_num": p["line_num"],
+                "label": p["label"],
+                "bbox_abs": p["bbox_abs"],
+                "bbox_rel": p["bbox_rel"],
+            }
+            for p in parts
+        ],
+        "page_size": [page_w, page_h],
+    }
+    if source_meta:
+        persistent[sid]["source"] = source_meta
+    return 1
+
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: main_apply_cam1753_crops.py <json_file>")
@@ -79,60 +201,16 @@ def main():
     crops = json.loads(json_path.read_text("utf-8"))
     print(f"Applying {len(crops)} crops...")
 
-    # Load persistent crop data
     persistent = _load_crops_json()
-
-    # Cache page images and their source metadata
     page_cache = {}
     source_meta_cache = {}
     saved = 0
+
     for crop in crops:
-        sid = crop["sid"]
-        page_id = crop["page"]
-        bb = crop["bbox_abs"]
-        x, y, w, h = bb["x"], bb["y"], bb["w"], bb["h"]
-
-        if page_id not in page_cache:
-            print(f"  Loading page {page_id}...")
-            page_cache[page_id] = load_page_image(page_id)
-            source_meta_cache[page_id] = _get_source_metadata(
-                page_cache[page_id]
-            )
-
-        img = page_cache[page_id]
-        page_w, page_h = img.size
-        cropped = img.crop((x, y, x + w, y + h))
-
-        # Build PNG metadata
-        png_info = PngInfo()
-        source_meta_str = source_meta_cache[page_id]
-        if source_meta_str:
-            png_info.add_text("cam1753-source", source_meta_str)
-        crop_meta = {
-            k: v for k, v in crop.items() if k != "sid"
-        }
-        png_info.add_text("cam1753-crop", json.dumps(crop_meta))
-
-        out_path = OUT_DIR / f"cam1753-{sid}.png"
-        cropped.save(out_path, pnginfo=png_info)
-        print(f"  {out_path.name}: {cropped.size[0]}\u00d7{cropped.size[1]}")
-        saved += 1
-
-        # Build persistent record
-        source_meta = (
-            json.loads(source_meta_str) if source_meta_str else None
-        )
-        persistent[sid] = {
-            "cv": crop["cv"],
-            "page": page_id,
-            "col": crop["col"],
-            "line_num": crop["line_num"],
-            "page_size": [page_w, page_h],
-            "bbox_abs": crop["bbox_abs"],
-            "bbox_rel": crop["bbox_rel"],
-        }
-        if source_meta:
-            persistent[sid]["source"] = source_meta
+        if crop.get("split"):
+            saved += _apply_split_crop(crop, page_cache, source_meta_cache, persistent)
+        else:
+            saved += _apply_normal_crop(crop, page_cache, source_meta_cache, persistent)
 
     _save_crops_json(persistent)
     print(f"Done. {saved} images saved to {OUT_DIR}")
