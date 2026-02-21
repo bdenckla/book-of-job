@@ -362,6 +362,7 @@
     ],
     "qr-noted-by": "nDM",
     "qr-lc-img": "Lenin/Lenin-0505.png",
+    "qr-lc-img-scale": 0.872,
     "qr-aleppo-img": "Aleppo/Aleppo-0505.png",
     "qr-cam1753-img": "cam1753/cam1753-0505.png",
     "aleppo-img-intro": "page 271r, col 2, line 23, word 2",
@@ -810,6 +811,7 @@
       "word": 3
     },
     "qr-lc-img": "Lenin/Lenin-0627.png",
+    "qr-lc-img-scale": 0.851,
     "qr-aleppo-img": "Aleppo/Aleppo-0627.png",
     "qr-cam1753-img": "cam1753/cam1753-0627.png",
     "aleppo-img-intro": "page 271v, col 2, line 25, word 3",
@@ -1155,6 +1157,7 @@
     },
     "qr-noted-by": "nDM-nWLC",
     "qr-lc-img": "Lenin/Lenin-0814.png",
+    "qr-lc-img-scale": 0.864,
     "qr-aleppo-img": "Aleppo/Aleppo-0814.png",
     "qr-cam1753-img": "cam1753/cam1753-0814.png",
     "aleppo-img-intro": "page 272r, col 2, line 14, word 5",
@@ -1271,6 +1274,7 @@
     },
     "qr-noted-by": "tBHQ-nWLC",
     "qr-lc-img": "Lenin/Lenin-0906.png",
+    "qr-lc-img-scale": 0.677,
     "qr-aleppo-img": "Aleppo/Aleppo-0906.png",
     "qr-cam1753-img": "cam1753/cam1753-0906.png",
     "aleppo-img-intro": "page 272v, col 1, line 2, word 2",
@@ -1313,6 +1317,7 @@
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2022.10.19%20-%20Changes/2022.10.19%20-%20Changes.xml?2022.07.05-3",
     "qr-lc-img": "Lenin/Lenin-0910.png",
+    "qr-lc-img-scale": 0.824,
     "qr-aleppo-img": "Aleppo/Aleppo-0910.png",
     "qr-cam1753-img": "cam1753/cam1753-0910.png",
     "aleppo-img-intro": "page 272v, col 1, line 6, word 1",
@@ -1658,6 +1663,7 @@
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-9",
     "qr-lc-img": "Lenin/Lenin-1006.png",
+    "qr-lc-img-scale": 0.904,
     "qr-aleppo-img": "Aleppo/Aleppo-1006.png",
     "qr-cam1753-img": "cam1753/cam1753-1006.png",
     "aleppo-img-intro": "page 272v, col 2, line 13, word 4",
@@ -2009,6 +2015,7 @@
     "qr-noted-by-mam": true,
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-12",
     "qr-lc-img": "Lenin/Lenin-1219.png",
+    "qr-lc-img-scale": 0.872,
     "qr-aleppo-img": "Aleppo/Aleppo-1219.png",
     "qr-cam1753-img": "cam1753/cam1753-1219.png",
     "aleppo-img-intro": "page 273r, col 2, line 20, word 1",
@@ -2909,6 +2916,7 @@
       "word": 4
     },
     "qr-lc-img": "Lenin/Lenin-1804-HLM3N5_2_of_2_FTW.png",
+    "qr-lc-img-scale": 0.525,
     "qr-aleppo-img": "Aleppo/Aleppo-1804-HLM3N5_2_of_2_FTW.png",
     "qr-cam1753-img": "cam1753/cam1753-1804-HLM3N5_2_of_2_FTW.png",
     "aleppo-img-intro": "page 274v, col 2, line 3, word 4",
@@ -3032,6 +3040,7 @@
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-19",
     "qr-lc-img": "Lenin/Lenin-1902.png",
+    "qr-lc-img-scale": 0.816,
     "qr-aleppo-img": "Aleppo/Aleppo-1902.png",
     "aleppo-img-intro": "page 274v, col 2, line 24, word 5",
     "nbd": {
@@ -3268,6 +3277,7 @@
       }
     ],
     "qr-lc-img": "Lenin/Lenin-1916-BMV0PY.png",
+    "qr-lc-img-scale": 0.525,
     "qr-aleppo-img": "Aleppo/Aleppo-1916-BMV0PY.png",
     "aleppo-img-intro": "page 275r, col 1, line 12, word 2",
     "nbd": {
@@ -3523,6 +3533,7 @@
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-24",
     "qr-lc-img": "Lenin/Lenin-2134.png",
+    "qr-lc-img-scale": 0.864,
     "qr-aleppo-img": "Aleppo/Aleppo-2134.png",
     "aleppo-img-intro": "page 275v, col 2, line 14, word 4",
     "nbd": {
@@ -3683,6 +3694,7 @@
       "word": 3
     },
     "qr-lc-img": "Lenin/Lenin-2221-3MV.png",
+    "qr-lc-img-scale": 0.541,
     "qr-aleppo-img": "Aleppo/Aleppo-2221-3MV.png",
     "qr-cam1753-img": "cam1753/cam1753-2221-3MV.png",
     "aleppo-img-intro": "page 276r, col 1, line 10, word 3",
@@ -3906,6 +3918,7 @@
     "qr-noted-by": "tBHQ-nWLC",
     "qr-uxlc-needs-fix": "add t-note (transcription uncertain)",
     "qr-lc-img": "Lenin/Lenin-2230-YMLE.png",
+    "qr-lc-img-scale": 0.585,
     "qr-aleppo-img": "Aleppo/Aleppo-2230-YMLE.png",
     "aleppo-img-intro": "page 276r, col 1, line 20, word 2",
     "nbd": {
@@ -4014,6 +4027,7 @@
       "line": 11
     },
     "qr-lc-img": "Lenin/Lenin-2305.png",
+    "qr-lc-img-scale": 0.461,
     "qr-aleppo-img": "Aleppo/Aleppo-2305.png",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -4163,6 +4177,7 @@
     "qr-noted-by": "nUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2022.04.01%20-%20Changes/2022.04.01%20-%20Changes.xml?2022.02.17-2",
     "qr-lc-img": "Lenin/Lenin-2401.png",
+    "qr-lc-img-scale": 0.864,
     "qr-aleppo-img": "Aleppo/Aleppo-2401.png",
     "aleppo-img-intro": "page 276r, col 2, line 11, word 6",
     "nbd": {
@@ -4198,6 +4213,7 @@
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-31",
     "qr-lc-img": "Lenin/Lenin-2405.png",
+    "qr-lc-img-scale": 0.856,
     "qr-aleppo-img": "Aleppo/Aleppo-2405.png",
     "aleppo-img-intro": "page 276r, col 2, line 16, word 3",
     "nbd": {
@@ -4511,6 +4527,7 @@
     ],
     "qr-noted-by": "nWLC",
     "qr-lc-img": "Lenin/Lenin-2614.png",
+    "qr-lc-img-scale": 0.541,
     "qr-aleppo-img": "Aleppo/Aleppo-2614.png",
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -4627,6 +4644,7 @@
     "qr-noted-by": "nUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2022.04.01%20-%20Changes/2022.04.01%20-%20Changes.xml?2022.02.17-3",
     "qr-lc-img": "Lenin/Lenin-2713.png",
+    "qr-lc-img-scale": 0.824,
     "qr-aleppo-img": "Aleppo/Aleppo-2713.png",
     "aleppo-img-intro": "page 276v, col 2, line 25, word 6",
     "nbd": {
@@ -4816,6 +4834,7 @@
     ],
     "qr-ignore-g3yh-diff": true,
     "qr-lc-img": "Lenin/Lenin-2908.png",
+    "qr-lc-img-scale": 0.514,
     "qr-aleppo-img": "Aleppo/Aleppo-2908.png",
     "aleppo-img-intro": "page 277r, col 2, line 22, word 2",
     "nbd": {
@@ -5529,6 +5548,7 @@
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-40",
     "qr-lc-img": "Lenin/Lenin-3210.png",
+    "qr-lc-img-scale": 0.864,
     "qr-aleppo-img": "Aleppo/Aleppo-3210.png",
     "aleppo-img-intro": "page 278v, col 1, line 3, word 6",
     "nbd": {
@@ -5720,6 +5740,7 @@
       "word": 1
     },
     "qr-lc-img": "Lenin/Lenin-3405.png",
+    "qr-lc-img-scale": 0.529,
     "qr-aleppo-img": "Aleppo/Aleppo-3405.png",
     "aleppo-img-intro": "page 279r, col 1, line 5, word 1",
     "nbd": {
@@ -6202,6 +6223,7 @@
       "Although my focus is pointing rather than spelling, I am interested in a spelling difference like this, since it is not just a מלא/חסר difference."
     ],
     "qr-lc-img": "Lenin/Lenin-3437.png",
+    "qr-lc-img-scale": 0.555,
     "qr-aleppo-img": "Aleppo/Aleppo-3437.png",
     "aleppo-img-intro": "page 279r, col 2, line 18, word 2",
     "nbd": {
@@ -6323,6 +6345,7 @@
     },
     "qr-noted-by": "nDM",
     "qr-lc-img": "Lenin/Lenin-3611.png",
+    "qr-lc-img-scale": 0.856,
     "qr-aleppo-img": "Aleppo/Aleppo-3611.png",
     "aleppo-img-intro": "page 279v, col 1, line 20, word 1",
     "nbd": {
@@ -6447,6 +6470,7 @@
       " but should note the divergence from consensus"
     ],
     "qr-lc-img": "Lenin/Lenin-3612.png",
+    "qr-lc-img-scale": 0.512,
     "qr-aleppo-img": "Aleppo/Aleppo-3612.png",
     "qr-cam1753-img": "cam1753/cam1753-3612.png",
     "aleppo-img-intro": "page 279v, col 1, line 22, word 2",
@@ -6707,6 +6731,7 @@
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-43",
     "qr-lc-img": "Lenin/Lenin-3719-LA0.png",
+    "qr-lc-img-scale": 0.84,
     "qr-aleppo-img": "Aleppo/Aleppo-3719-LA0.png",
     "aleppo-img-intro": "page 280r, col 1, line 13, word 5",
     "nbd": {
@@ -7753,6 +7778,7 @@
     "qr-noted-by": "tBHQ-zUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2023.10.19%20-%20Changes/2023.10.19%20-%20Changes.xml?2023.06.10-48",
     "qr-lc-img": "Lenin/Lenin-4210.png",
+    "qr-lc-img-scale": 0.852,
     "qr-aleppo-img": "Aleppo/Aleppo-4210.png",
     "aleppo-img-intro": "page 281v, col 1, line 28, word 1",
     "nbd": {
