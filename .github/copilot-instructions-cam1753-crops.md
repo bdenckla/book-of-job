@@ -5,6 +5,50 @@ This describes the workflow for supplying μC (Cambridge MS Add. 1753)
 word-level image crops to quirkrecs that lack them. It uses page images
 and line-break data from the sibling `codex-index-cam1753` repo.
 
+## Copilot quick-start
+
+When the user says **"let\u2019s do the next batch of Cambridge crops"**
+(or similar), follow this exact sequence. Do NOT manually query
+`enriched-quirkrecs.json` or try to compute missing SIDs yourself —
+the scripts handle that automatically.
+
+1. **Check progress** (optional, if user asks how much is left):
+   ```powershell
+   .venv\Scripts\python.exe main_gen_cam1753_crop_editor.py --status
+   ```
+2. **Generate crop editor** (picks the next N missing SIDs automatically):
+   ```powershell
+   .venv\Scripts\python.exe main_gen_cam1753_crop_editor.py --batch 10
+   ```
+   The script prints which SIDs it selected. The editor HTML opens
+   automatically in the browser.
+3. **Tell the user** which SIDs/verses are in the batch (from the
+   script output) and ask them to adjust bounding boxes and paste the
+   Export JSON.
+4. **When user pastes JSON**, save to `.novc/cam1753_crops_export.json`
+   and run:
+   ```powershell
+   .venv\Scripts\python.exe main_apply_cam1753_crops.py .novc\cam1753_crops_export.json
+   ```
+5. **Rebuild HTML:**
+   ```powershell
+   .venv\Scripts\python.exe main_gen_misc_authored_english_documents.py
+   ```
+6. **Open detail pages** for visual confirmation:
+   ```powershell
+   $sids = @("SID1","SID2","SID3")   # from step 2 output
+   foreach ($s in $sids) {
+       Start-Process "C:\Users\BenDe\GitRepos\book-of-job\docs\jobn-details\$s.html"
+       Start-Sleep -Milliseconds 500
+   }
+   ```
+7. **Clean `.novc/`** after user confirms:
+   ```powershell
+   Get-ChildItem ".novc" -File | Remove-Item -Force
+   ```
+
+**That\u2019s it.** Steps 2-3 are all that\u2019s needed to start a batch.
+
 ## Overview
 
 Each quirkrec that is missing a cam1753 image needs a cropped PNG of the
@@ -26,6 +70,7 @@ relevant word from the Cambridge manuscript. The workflow is:
 Generates an interactive HTML crop editor at `.novc/cam1753_crop_editor.html`.
 
 ```powershell
+.venv\Scripts\python.exe main_gen_cam1753_crop_editor.py --status       # progress summary
 .venv\Scripts\python.exe main_gen_cam1753_crop_editor.py                # first 6 missing
 .venv\Scripts\python.exe main_gen_cam1753_crop_editor.py --batch 10     # next 10 missing
 .venv\Scripts\python.exe main_gen_cam1753_crop_editor.py --all          # all missing

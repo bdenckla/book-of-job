@@ -6,7 +6,7 @@ RECORD_2808 = {
     "qr-what-is-weird": "ר lacks חיריק",
     "qr-consensus": "הִדְרִיכ֥וּהוּ",
     "qr-intermediate": "הִדְרִיכֻ֥הוּ",
-    "qr-generic-comment": "The מלא/חסר spelling difference is not important to us here.",
+    "qr-generic-comment": "The מלא/חסר spelling difference is not important to us here. In μA, the חיריק in question is present, but oddly early (oddly far to the right).",
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "404B", "column": 2, "line": 5},
     "qr-ac-loc": {"page": "277r", "column": 1, "line": 17, "word": 2},

@@ -5152,11 +5152,17 @@
       "word": 1
     },
     "qr-generic-comment": [
-      "As $DM footnote 20 mentions, this is one of three such cases, the other two being $link_9_35 and $link_34_33_HM3M5. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
+      "As $DM footnote 20 mentions, this is one of three such cases, the other two being $link_9_35 and $link_34_33_HM3M5. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא. In μA it is difficult to tell whether the פתח is חטף, but my guess is that it is not, i.e. my guess is that it matches μL in this respect."
     ],
     "qr-lc-img": "Lenin/Lenin-2709.png",
     "qr-lc-img-scale": 0.487,
     "qr-aleppo-img": "Aleppo/Aleppo-2709.png",
+    "qr-cam1753-img": "cam1753/cam1753-2709.png",
+    "qr-cam1753-loc": {
+      "page": "0080A",
+      "column": 1,
+      "line": 16
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5176,7 +5182,7 @@
     "qr-what-is-weird": "ש lacks דגש",
     "qr-consensus": "מִשַּׁדַּ֥י",
     "qr-generic-comment": [
-      "See $link_24_1 for discussion of the דגש in ש in %שדי."
+      "See $link_24_1 for discussion of the דגש in ש in %שדי. In μA, the center of the ש in question is such a blur that it is impossible to say whether a דגש is there or not."
     ],
     "qr-highlight": 2,
     "qr-lc-loc": {
@@ -5193,8 +5199,14 @@
     "qr-noted-by": "nUXLC",
     "qr-uxlc-change-url": "https://tanach.us/Changes/2022.04.01%20-%20Changes/2022.04.01%20-%20Changes.xml?2022.02.17-3",
     "qr-lc-img": "Lenin/Lenin-2713.png",
-    "qr-lc-img-scale": 0.824,
+    "qr-lc-img-scale": 0.412,
     "qr-aleppo-img": "Aleppo/Aleppo-2713.png",
+    "qr-cam1753-img": "cam1753/cam1753-2713.png",
+    "qr-cam1753-loc": {
+      "page": "0080A",
+      "column": 1,
+      "line": 22
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -5214,7 +5226,7 @@
     "qr-what-is-weird": "ר lacks חיריק",
     "qr-consensus": "הִדְרִיכ֥וּהוּ",
     "qr-intermediate": "הִדְרִיכֻ֥הוּ",
-    "qr-generic-comment": "The מלא/חסר spelling difference is not important to us here.",
+    "qr-generic-comment": "The מלא/חסר spelling difference is not important to us here. In μA, the חיריק in question is present, but oddly early (oddly far to the right).",
     "qr-highlight": 3,
     "qr-lc-loc": {
       "page": "404B",
@@ -5234,6 +5246,12 @@
     "qr-lc-img": "Lenin/Lenin-2808.png",
     "qr-lc-img-scale": 0.528,
     "qr-aleppo-img": "Aleppo/Aleppo-2808.png",
+    "qr-cam1753-img": "cam1753/cam1753-2808.png",
+    "qr-cam1753-loc": {
+      "page": "0080A",
+      "column": 2,
+      "line": 16
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -5268,6 +5286,12 @@
     "qr-lc-img": "Lenin/Lenin-2824.png",
     "qr-lc-img-scale": 0.533,
     "qr-aleppo-img": "Aleppo/Aleppo-2824.png",
+    "qr-cam1753-img": "cam1753/cam1753-2824.png",
+    "qr-cam1753-loc": {
+      "page": "0080B",
+      "column": 1,
+      "line": 9
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5308,6 +5332,12 @@
     "qr-lc-img": "Lenin/Lenin-2826.png",
     "qr-lc-img-scale": 0.577,
     "qr-aleppo-img": "Aleppo/Aleppo-2826.png",
+    "qr-cam1753-img": "cam1753/cam1753-2826.png",
+    "qr-cam1753-loc": {
+      "page": "0080B",
+      "column": 1,
+      "line": 11
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5342,6 +5372,12 @@
     "qr-lc-img": "Lenin/Lenin-2903.png",
     "qr-lc-img-scale": 0.536,
     "qr-aleppo-img": "Aleppo/Aleppo-2903.png",
+    "qr-cam1753-img": "cam1753/cam1753-2903.png",
+    "qr-cam1753-loc": {
+      "page": "0080B",
+      "column": 1,
+      "line": 18
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5380,6 +5416,12 @@
     "qr-lc-img": "Lenin/Lenin-2908.png",
     "qr-lc-img-scale": 0.514,
     "qr-aleppo-img": "Aleppo/Aleppo-2908.png",
+    "qr-cam1753-img": "cam1753/cam1753-2908.png",
+    "qr-cam1753-loc": {
+      "page": "0080B",
+      "column": 1,
+      "line": 24
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -5418,6 +5460,12 @@
     "qr-lc-img": "Lenin/Lenin-2911.png",
     "qr-lc-img-scale": 0.525,
     "qr-aleppo-img": "Aleppo/Aleppo-2911.png",
+    "qr-cam1753-img": "cam1753/cam1753-2911.png",
+    "qr-cam1753-loc": {
+      "page": "0080B",
+      "column": 2,
+      "line": 1
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -5455,6 +5503,12 @@
     "qr-lc-img": "Lenin/Lenin-2919.png",
     "qr-lc-img-scale": 0.542,
     "qr-aleppo-img": "Aleppo/Aleppo-2919.png",
+    "qr-cam1753-img": "cam1753/cam1753-2919.png",
+    "qr-cam1753-loc": {
+      "page": "0080B",
+      "column": 2,
+      "line": 11
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -5489,6 +5543,12 @@
     "qr-lc-img": "Lenin/Lenin-3018.png",
     "qr-lc-img-scale": 0.522,
     "qr-aleppo-img": "Aleppo/Aleppo-3018.png",
+    "qr-cam1753-img": "cam1753/cam1753-3018.png",
+    "qr-cam1753-loc": {
+      "page": "0081A",
+      "column": 1,
+      "line": 13
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",

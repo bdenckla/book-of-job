@@ -807,7 +807,32 @@ updateStatus();
 # ── Main ───────────────────────────────────────────────────────────────
 
 
+def print_status():
+    """Print progress summary: how many crops done vs total."""
+    total = len(EQRS)
+    done = 0
+    missing_sids = []
+    for eqr in EQRS:
+        sid = short_id(eqr)
+        img_path = ROOT / "docs" / "jobn" / "img" / "cam1753" / f"cam1753-{sid}.png"
+        if os.path.exists(img_path):
+            done += 1
+        else:
+            missing_sids.append((sid, eqr.get("qr-cv", "?")))
+    remaining = total - done
+    pct = done * 100 // total if total else 0
+    print(f"Cambridge 1753 crop progress: {done}/{total} ({pct}%) done, {remaining} remaining")
+    if missing_sids:
+        print(f"Next 10 missing: {', '.join(f'{s} ({cv})' for s, cv in missing_sids[:10])}")
+        batches_left = (remaining + 9) // 10
+        print(f"~{batches_left} batch(es) of 10 remaining")
+
+
 def main():
+    if "--status" in sys.argv:
+        print_status()
+        return
+
     use_all = "--all" in sys.argv
     # Parse --batch N
     batch_size = None
