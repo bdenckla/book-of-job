@@ -137,16 +137,20 @@ def _lcp_and_con(quirkrec):
     return pro_lb_con
 
 
-def _make_overview_row(quirkrec):
+def _make_overview_row(quirkrec, *, include_hash_link=True):
     hbo_rtl = {"lang": "hbo", "dir": "rtl"}
     nowrap = {"style": "text-wrap: nowrap"}
     td1_attrs = {**hbo_rtl, **nowrap, **_els(quirkrec)}
     the_row_id = row_id(quirkrec)
     sid = short_id(quirkrec)
-    anc = my_html.anchor_h("#", d1d_detail_href(sid))
+    if include_hash_link:
+        anc = my_html.anchor_h("#", d1d_detail_href(sid))
+        cv_contents = [anc, " ", quirkrec["qr-cv"]]
+    else:
+        cv_contents = quirkrec["qr-cv"]
     tr_contents = [
         my_html.table_datum(_lcp_and_con(quirkrec), td1_attrs),
-        my_html.table_datum([anc, " ", quirkrec["qr-cv"]]),
+        my_html.table_datum(cv_contents),
         author.table_datum(_what_is_weird(quirkrec)),
     ]
     tr_attrs = {"id": the_row_id}
@@ -316,7 +320,7 @@ def _maybe_g3yh_dontcare_message(quirkrec):
 def _make_details_html(quirkrec, img_prefix="img"):
     lc_scale = quirkrec.get("qr-lc-img-scale")
     return [
-        author.table_c(_make_overview_row(quirkrec)),
+        author.table_c(_make_overview_row(quirkrec, include_hash_link=False)),
         *_maybe_bhq(quirkrec.get("qr-bhq")),
         _dpe(quirkrec),
         _img(quirkrec["qr-lc-img"], img_prefix, scale=lc_scale),
