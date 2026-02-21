@@ -22,9 +22,7 @@ def gen_html_files(ov_and_de):
         title = f"Job {cv}"
         prev_sid = items[idx - 1][0].removeprefix("row-") if idx > 0 else None
         next_sid = (
-            items[idx + 1][0].removeprefix("row-")
-            if idx < len(items) - 1
-            else None
+            items[idx + 1][0].removeprefix("row-") if idx < len(items) - 1 else None
         )
         nav = _nav_bar(prev_sid, next_sid)
         body = [*od["od-details"], nav, _nav_key_script(prev_sid, next_sid)]
@@ -57,8 +55,6 @@ def _nav_key_script(prev_sid, next_sid):
         '"keydown", e => {'
         "if (e.target.tagName === "
         '"INPUT" || e.target.tagName === "TEXTAREA") return; '
-        "switch (e.key) {"
-        + " ".join(cases)
-        + "}})"
+        "switch (e.key) {" + " ".join(cases) + "}})"
     )
     return my_html.htel_mk("script", flex_contents=(js,))

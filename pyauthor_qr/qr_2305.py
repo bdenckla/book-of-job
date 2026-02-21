@@ -22,6 +22,7 @@ RECORD_2305 = {
     "qr-cv": "23:5",
     "qr-ac-proposed": "מַה־יֹּֽאמַר־לִֽי׃",
     "qr-consensus": "מַה־יֹּ֥אמַר לִֽי׃",
+    "qr-ac-loc": {"page": "276r", "column": 1, "line": 25, "word": 5},
     "qr-what-is-weird": "געיה-מקף not מרכא",
     "qr-highlight-ac-proposed": 8,
     "qr-generic-comment": [

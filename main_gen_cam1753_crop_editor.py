@@ -34,7 +34,12 @@ sys.path.insert(0, str(CAM1753_REPO))
 from py_cam1753_word_image.crop import compute_fade_overlay, estimate_word_position
 from py_cam1753_word_image.hebrew_metrics import SPACE_WIDTH, join_maqaf
 from py_cam1753_word_image.linebreak_search import find_word_in_linebreaks
-from py_cam1753_word_image.page import LB_DIR, find_page_for_verse, get_line_bbox, load_page_image
+from py_cam1753_word_image.page import (
+    LB_DIR,
+    find_page_for_verse,
+    get_line_bbox,
+    load_page_image,
+)
 
 sys.path.insert(0, str(ROOT))
 from pyauthor_util.short_id_etc import short_id
@@ -75,26 +80,51 @@ def process_quirkrec(qr):
 
     # ── Cross-line maqaf split: produce two editor items ──────────
     if split_info is not None:
-        print(f"  Cross-line split detected: "
-              f"{split_info['prev_fragment']!r} (line {split_info['prev_line']}) + "
-              f"{split_info['curr_fragment']!r} (line {line_num})")
+        print(
+            f"  Cross-line split detected: "
+            f"{split_info['prev_fragment']!r} (line {split_info['prev_line']}) + "
+            f"{split_info['curr_fragment']!r} (line {line_num})"
+        )
         return _process_split(
-            sid, cv, consensus, page_id, col,
-            line_num, word_idx, line_words,
+            sid,
+            cv,
+            consensus,
+            page_id,
+            col,
+            line_num,
+            word_idx,
+            line_words,
             split_info,
         )
 
     # ── Normal (non-split) word ───────────────────────────────────
     print(f"  Location: page {page_id}, col {col}, line {line_num}, word {word_idx}")
     return _make_editor_item(
-        sid, cv, consensus, page_id, col,
-        line_num, word_idx, line_words,
+        sid,
+        cv,
+        consensus,
+        page_id,
+        col,
+        line_num,
+        word_idx,
+        line_words,
     )
 
 
-def _make_editor_item(sid, cv, consensus, page_id, col,
-                      line_num, word_idx, line_words,
-                      *, split_group=None, split_part=None, split_label=None):
+def _make_editor_item(
+    sid,
+    cv,
+    consensus,
+    page_id,
+    col,
+    line_num,
+    word_idx,
+    line_words,
+    *,
+    split_group=None,
+    split_part=None,
+    split_label=None,
+):
     """Build one editor-item dict (shared by normal and split paths)."""
     crop_left, crop_top, crop_right, crop_bot, target_offset, ls = get_line_bbox(
         page_id, col, line_num
@@ -119,9 +149,12 @@ def _make_editor_item(sid, cv, consensus, page_id, col,
     box_bot = min(crop_h - 1, highlight_bot + half_ls)
 
     overlay = compute_fade_overlay(
-        crop_w, crop_h,
-        highlight_left, highlight_right,
-        highlight_top, highlight_bot,
+        crop_w,
+        crop_h,
+        highlight_left,
+        highlight_right,
+        highlight_top,
+        highlight_bot,
     )
     crop = Image.alpha_composite(crop, overlay)
 
@@ -135,7 +168,7 @@ def _make_editor_item(sid, cv, consensus, page_id, col,
 
     before = line_words[:word_idx]
     matched_word = line_words[word_idx] if word_idx < len(line_words) else consensus
-    after = line_words[word_idx + 1:] if word_idx + 1 < len(line_words) else []
+    after = line_words[word_idx + 1 :] if word_idx + 1 < len(line_words) else []
 
     return {
         "sid": sid,
@@ -164,9 +197,17 @@ def _make_editor_item(sid, cv, consensus, page_id, col,
     }
 
 
-def _process_split(sid, cv, consensus, page_id, col,
-                   curr_line, curr_word_idx, curr_line_words,
-                   split_info):
+def _process_split(
+    sid,
+    cv,
+    consensus,
+    page_id,
+    col,
+    curr_line,
+    curr_word_idx,
+    curr_line_words,
+    split_info,
+):
     """Handle a cross-line maqaf split → return [part_A, part_B]."""
     prev_col = split_info["prev_col"]
     prev_line = split_info["prev_line"]
@@ -176,28 +217,56 @@ def _process_split(sid, cv, consensus, page_id, col,
     curr_frag = split_info["curr_fragment"]
 
     if prev_word_idx is None:
-        print(f"  WARNING: could not locate prev fragment {prev_frag!r} on "
-              f"line {prev_line}; skipping split part A")
+        print(
+            f"  WARNING: could not locate prev fragment {prev_frag!r} on "
+            f"line {prev_line}; skipping split part A"
+        )
         # Fall back to just the current line (part B only)
         return _make_editor_item(
-            sid, cv, consensus, page_id, col,
-            curr_line, curr_word_idx, curr_line_words,
+            sid,
+            cv,
+            consensus,
+            page_id,
+            col,
+            curr_line,
+            curr_word_idx,
+            curr_line_words,
         )
 
-    print(f"  Part A: page {page_id}, col {prev_col}, "
-          f"line {prev_line}, word {prev_word_idx} ({prev_frag})")
-    print(f"  Part B: page {page_id}, col {col}, "
-          f"line {curr_line}, word {curr_word_idx} ({curr_frag})")
+    print(
+        f"  Part A: page {page_id}, col {prev_col}, "
+        f"line {prev_line}, word {prev_word_idx} ({prev_frag})"
+    )
+    print(
+        f"  Part B: page {page_id}, col {col}, "
+        f"line {curr_line}, word {curr_word_idx} ({curr_frag})"
+    )
 
     part_a = _make_editor_item(
-        sid, cv, consensus, page_id, prev_col,
-        prev_line, prev_word_idx, prev_line_words,
-        split_group=sid, split_part=0, split_label=prev_frag,
+        sid,
+        cv,
+        consensus,
+        page_id,
+        prev_col,
+        prev_line,
+        prev_word_idx,
+        prev_line_words,
+        split_group=sid,
+        split_part=0,
+        split_label=prev_frag,
     )
     part_b = _make_editor_item(
-        sid, cv, consensus, page_id, col,
-        curr_line, curr_word_idx, curr_line_words,
-        split_group=sid, split_part=1, split_label=curr_frag,
+        sid,
+        cv,
+        consensus,
+        page_id,
+        col,
+        curr_line,
+        curr_word_idx,
+        curr_line_words,
+        split_group=sid,
+        split_part=1,
+        split_label=curr_frag,
     )
     return [part_a, part_b]
 

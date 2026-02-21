@@ -87,13 +87,11 @@ def check_file(filepath: Path) -> list[str]:
     dict_wordid = _find_str_value(rec_dict, "qr-word-id")
     if fn_wordid is not None and dict_wordid is None:
         violations.append(
-            f"  Filename has WORDID {fn_wordid!r} "
-            f"but dict lacks 'qr-word-id'"
+            f"  Filename has WORDID {fn_wordid!r} " f"but dict lacks 'qr-word-id'"
         )
     elif fn_wordid is None and dict_wordid is not None:
         violations.append(
-            f"  Filename has no WORDID "
-            f"but dict has 'qr-word-id': {dict_wordid!r}"
+            f"  Filename has no WORDID " f"but dict has 'qr-word-id': {dict_wordid!r}"
         )
     elif fn_wordid is not None and dict_wordid is not None:
         if fn_wordid != dict_wordid:

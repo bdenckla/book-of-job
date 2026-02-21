@@ -697,7 +697,9 @@ def main():
         if len(examples) < 4:
             for eqr in EQRS:
                 sid = short_id(eqr)
-                img_path = ROOT / "docs" / "jobn" / "img" / "Aleppo" / f"Aleppo-{sid}.png"
+                img_path = (
+                    ROOT / "docs" / "jobn" / "img" / "Aleppo" / f"Aleppo-{sid}.png"
+                )
                 if not os.path.exists(img_path) and eqr not in examples:
                     examples.append(eqr)
                     if len(examples) >= 6:

@@ -1,5 +1,7 @@
+import json
 import os
 from collections import Counter
+from pathlib import Path
 from pyauthor_util.add_auto_diff import _enrich_one_qr_by_adding_auto_diff
 from pyauthor_util.flatten_qrs import _enrich_one_qr_by_flattening_strs
 from pyauthor_util.author import consensus_to_ascii
@@ -13,6 +15,17 @@ from pyauthor_util.qr_make_json_outputs import (
     write_enriched_quirkrecs_json,
 )
 from pycmn.my_utils import sl_map
+
+_CAM1753_CROPS_PATH = (
+    Path(__file__).resolve().parent.parent / "out" / "cam1753-crops.json"
+)
+
+
+def _load_cam1753_crops():
+    """Load cam1753-crops.json if it exists, return dict keyed by SID."""
+    if _CAM1753_CROPS_PATH.exists():
+        return json.loads(_CAM1753_CROPS_PATH.read_text("utf-8"))
+    return {}
 
 
 def get_enriched_quirkrecs(jobn_rel_top, json_outdir):
@@ -40,26 +53,52 @@ def get_enriched_quirkrecs(jobn_rel_top, json_outdir):
 def _enrich_quirkrecs(jobn_rel_top):
     _assert_cv_ordering(RAW_QUIRKRECS)
     _assert_word_ids(RAW_QUIRKRECS)
-    result = sl_map((_do_pointwise_enrichments_of_one_qr, jobn_rel_top), RAW_QUIRKRECS)
+    cam1753_crops = _load_cam1753_crops()
+    result = sl_map(
+        (_do_pointwise_enrichments_of_one_qr, jobn_rel_top, cam1753_crops),
+        RAW_QUIRKRECS,
+    )
     return result
 
 
-def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, pe_quirkrec):
+def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, cam1753_crops, pe_quirkrec):
     """Apply all per-quirkrec enrichments that don't need cross-quirkrec context.
 
     Args:
         jobn_rel_top: path to the jobn directory, relative to repo root
             (used to locate image files on disk).
+        cam1753_crops: dict from cam1753-crops.json keyed by SID.
         pe_quirkrec: raw quirkrec dict (qr-word-id is already present
             for multi-record verses, hard-coded in the source file).
     """
     result = _enrich_one_qr_by_adding_auto_imgs(jobn_rel_top, pe_quirkrec)
+    result = _enrich_one_qr_by_adding_cam1753_loc(cam1753_crops, result)
     result = _enrich_one_qr_by_adding_nbd(result)
     result = _enrich_one_qr_by_adding_pgroup(result)
     result = _enrich_one_qr_by_adding_auto_diff(result)
     result = _enrich_one_qr_by_flattening_strs(result)
     _assert_lc_img_fields_filled(result)
+    _assert_img_implies_loc(result)
     return result
+
+
+def _enrich_one_qr_by_adding_cam1753_loc(cam1753_crops, quirkrec):
+    """Add qr-cam1753-loc from cam1753-crops.json if available."""
+    sid = short_id(quirkrec)
+    crop = cam1753_crops.get(sid)
+    if crop is None:
+        return quirkrec
+    loc = {
+        "page": crop["page"],
+        "column": crop["col"],
+    }
+    if crop.get("split"):
+        parts = crop["parts"]
+        loc["line"] = parts[0]["line_num"]
+        loc["line2"] = parts[1]["line_num"]
+    else:
+        loc["line"] = crop["line_num"]
+    return {**quirkrec, "qr-cam1753-loc": loc}
 
 
 def _enrich_one_qr_by_adding_nbd(quirkrec):
@@ -97,6 +136,22 @@ def _assert_lc_img_fields_filled(qr):
     assert qr.get("qr-lc-img"), f"Missing qr-lc-img for {short_id(qr)}"
 
 
+# Image key → location key, for each manuscript.
+_IMG_LOC_PAIRS = [
+    ("qr-lc-img", "qr-lc-loc"),
+    ("qr-aleppo-img", "qr-ac-loc"),
+    ("qr-cam1753-img", "qr-cam1753-loc"),
+]
+
+
+def _assert_img_implies_loc(qr):
+    """Assert that every manuscript image has a corresponding location."""
+    sid = short_id(qr)
+    for img_key, loc_key in _IMG_LOC_PAIRS:
+        if qr.get(img_key) and not qr.get(loc_key):
+            raise AssertionError(f"{sid}: has {img_key} but missing {loc_key}")
+
+
 def _assert_word_ids(raw_quirkrecs):
     """Assert that hard-coded qr-word-id values match what would be computed.
 
@@ -109,9 +164,9 @@ def _assert_word_ids(raw_quirkrecs):
         by_cv.setdefault(qr["qr-cv"], []).append(qr)
     for cv, group in by_cv.items():
         if len(group) == 1:
-            assert "qr-word-id" not in group[0], (
-                f"{cv}: single-record verse should not have qr-word-id"
-            )
+            assert (
+                "qr-word-id" not in group[0]
+            ), f"{cv}: single-record verse should not have qr-word-id"
             continue
         base_wids = [consensus_to_ascii(qr["qr-consensus"]) for qr in group]
         wid_counts = Counter(base_wids)

@@ -31,6 +31,26 @@
       "count": 160
     },
     {
+      "field": "qr-ac-loc",
+      "count": 160
+    },
+    {
+      "field": "qr-ac-loc.column",
+      "count": 160
+    },
+    {
+      "field": "qr-ac-loc.line",
+      "count": 160
+    },
+    {
+      "field": "qr-ac-loc.page",
+      "count": 160
+    },
+    {
+      "field": "qr-ac-loc.word",
+      "count": 160
+    },
+    {
       "field": "qr-aleppo-img",
       "count": 160
     },
@@ -75,26 +95,6 @@
       "count": 160
     },
     {
-      "field": "qr-ac-loc",
-      "count": 158
-    },
-    {
-      "field": "qr-ac-loc.column",
-      "count": 158
-    },
-    {
-      "field": "qr-ac-loc.line",
-      "count": 158
-    },
-    {
-      "field": "qr-ac-loc.page",
-      "count": 158
-    },
-    {
-      "field": "qr-ac-loc.word",
-      "count": 158
-    },
-    {
       "field": "qr-lc-img-scale",
       "count": 158
     },
@@ -112,6 +112,22 @@
     },
     {
       "field": "qr-cam1753-img",
+      "count": 81
+    },
+    {
+      "field": "qr-cam1753-loc",
+      "count": 81
+    },
+    {
+      "field": "qr-cam1753-loc.column",
+      "count": 81
+    },
+    {
+      "field": "qr-cam1753-loc.line",
+      "count": 81
+    },
+    {
+      "field": "qr-cam1753-loc.page",
       "count": 81
     },
     {
@@ -189,6 +205,10 @@
     {
       "field": "qr-highlight-ac-proposed",
       "count": 2
+    },
+    {
+      "field": "qr-cam1753-loc.line2",
+      "count": 1
     },
     {
       "field": "qr-ignore-g3yh-diff-in-consensus",

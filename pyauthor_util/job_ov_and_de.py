@@ -204,7 +204,7 @@ _MI_ARGS = {
     ],
     "mi-args-cam1753": [
         "μY (Cambridge 1753)",
-        "qr-cam1753-img-intro",
+        "qr-cam1753-loc",
         "qr-cam1753-img",
     ],
     "mi-args-jc": [
@@ -223,6 +223,14 @@ def _ac_loc_intro(ac_loc):
     )
 
 
+def _cam1753_loc_intro(loc):
+    """Format qr-cam1753-loc dict as a location string."""
+    text = f"page {loc['page']}, col {loc['column']}, " f"line {loc['line']}"
+    if "line2" in loc:
+        text += f" and line {loc['line2']}"
+    return text
+
+
 def _maybe_one_img(quirkrec, mi_args_key, img_prefix="img"):
     ms_name, iikey, ipkey = _MI_ARGS[mi_args_key]
     maybe_img_path = quirkrec.get(ipkey)
@@ -231,6 +239,8 @@ def _maybe_one_img(quirkrec, mi_args_key, img_prefix="img"):
     maybe_img_intro = quirkrec.get(iikey)
     if iikey == "qr-ac-loc" and maybe_img_intro is not None:
         maybe_img_intro = _ac_loc_intro(maybe_img_intro)
+    elif iikey == "qr-cam1753-loc" and maybe_img_intro is not None:
+        maybe_img_intro = _cam1753_loc_intro(maybe_img_intro)
     if maybe_img_intro:
         intro = [" (", maybe_img_intro, ")"]
     else:

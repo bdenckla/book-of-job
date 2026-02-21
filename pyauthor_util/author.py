@@ -183,8 +183,6 @@ def dollar_sub(contents):
     return dollar_sub_g.dollar_sub_g(_DOLLAR_SUB_DISPATCH, contents)
 
 
-
-
 def std_table(
     table_data,
     coldirs=None,

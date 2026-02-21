@@ -44,6 +44,7 @@ def _get_source_metadata(img):
         return None
     try:
         from PIL.ExifTags import Base as ExifBase
+
         exif_data = img.getexif()
         return exif_data.get(ExifBase.ImageDescription)
     except Exception:
@@ -160,9 +161,11 @@ def _apply_split_crop(crop, page_cache, source_meta_cache, persistent):
 
     out_path = OUT_DIR / f"cam1753-{sid}.png"
     combined.save(out_path, pnginfo=png_info)
-    print(f"  {out_path.name}: {combined.size[0]}\u00d7{combined.size[1]} "
-          f"(split: {img_a.size[0]}\u00d7{img_a.size[1]} + "
-          f"{img_b.size[0]}\u00d7{img_b.size[1]})")
+    print(
+        f"  {out_path.name}: {combined.size[0]}\u00d7{combined.size[1]} "
+        f"(split: {img_a.size[0]}\u00d7{img_a.size[1]} + "
+        f"{img_b.size[0]}\u00d7{img_b.size[1]})"
+    )
 
     # Persistent record
     source_meta = json.loads(source_meta_str) if source_meta_str else None
