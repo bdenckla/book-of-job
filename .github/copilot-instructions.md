@@ -185,6 +185,11 @@ see `.github/copilot-instructions-quirkrec-comments.md`.
 When the user needs to crop a word from the Leningrad Codex (μL) Sefaria image,
 see `.github/copilot-instructions-leningrad-crops.md`.
 
+## μL (Leningrad) Image Scaling
+
+To scale a Leningrad image so its displayed height matches the Aleppo image,
+see `.github/copilot-instructions-leningrad-scaling.md`.
+
 ## Opening HTML Files
 
 When displaying an HTML file that only uses local/relative resources (images, CSS, etc.), open it directly as a file (`Start-Process "path/to/file.html"`) rather than starting a local HTTP server. Only use a server when the page requires it (e.g., fetching from external APIs with CORS restrictions, or serving content that browsers block via `file://`).
