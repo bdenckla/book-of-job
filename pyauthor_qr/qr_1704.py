@@ -17,6 +17,8 @@ RECORD_1704 = {
         "The color image of μL reveals this דגש to be unlikely.",
         " Surprisingly, $BHL includes this דגש in its body text",
         " rather than noting it in $BHL_A.",
+        " In μY, the center of the מ in question is such a blur",
+        " that it is impossible to say whether a דגש is there or not.",
     ],
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "402A", "column": 1, "line": 5},
