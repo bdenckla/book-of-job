@@ -600,7 +600,7 @@ def main():
         # Every quirkrec missing a cam1753 image
         for eqr in EQRS:
             sid = short_id(eqr)
-            img_path = ROOT / "docs" / "jobn" / "img" / f"cam1753-{sid}.png"
+            img_path = ROOT / "docs" / "jobn" / "img" / "cam1753" / f"cam1753-{sid}.png"
             if not os.path.exists(img_path):
                 examples.append(eqr)
     elif cli_sids:
@@ -614,7 +614,7 @@ def main():
         count = 0
         for eqr in EQRS:
             sid = short_id(eqr)
-            img_path = ROOT / "docs" / "jobn" / "img" / f"cam1753-{sid}.png"
+            img_path = ROOT / "docs" / "jobn" / "img" / "cam1753" / f"cam1753-{sid}.png"
             if not os.path.exists(img_path):
                 examples.append(eqr)
                 count += 1

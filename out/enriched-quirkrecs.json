@@ -8728,6 +8728,12 @@
     "qr-lc-img": "Lenin/Lenin-3925.png",
     "qr-lc-img-scale": 0.481,
     "qr-aleppo-img": "Aleppo/Aleppo-3925.png",
+    "qr-cam1753-img": "cam1753/cam1753-3925.png",
+    "qr-cam1753-loc": {
+      "page": "0084A",
+      "column": 2,
+      "line": 25
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -8764,6 +8770,12 @@
     "qr-lc-img": "Lenin/Lenin-4010.png",
     "qr-lc-img-scale": 0.564,
     "qr-aleppo-img": "Aleppo/Aleppo-4010.png",
+    "qr-cam1753-img": "cam1753/cam1753-4010.png",
+    "qr-cam1753-loc": {
+      "page": "0084B",
+      "column": 1,
+      "line": 17
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -8799,6 +8811,12 @@
     "qr-lc-img": "Lenin/Lenin-4019-HVA.png",
     "qr-lc-img-scale": 0.624,
     "qr-aleppo-img": "Aleppo/Aleppo-4019-HVA.png",
+    "qr-cam1753-img": "cam1753/cam1753-4019-HVA.png",
+    "qr-cam1753-loc": {
+      "page": "0084B",
+      "column": 2,
+      "line": 1
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -8837,6 +8855,12 @@
     "qr-lc-img": "Lenin/Lenin-4019-H3JV.png",
     "qr-lc-img-scale": 0.537,
     "qr-aleppo-img": "Aleppo/Aleppo-4019-H3JV.png",
+    "qr-cam1753-img": "cam1753/cam1753-4019-H3JV.png",
+    "qr-cam1753-loc": {
+      "page": "0084B",
+      "column": 2,
+      "line": 2
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -8872,6 +8896,12 @@
     "qr-lc-img": "Lenin/Lenin-4026.png",
     "qr-lc-img-scale": 0.524,
     "qr-aleppo-img": "Aleppo/Aleppo-4026.png",
+    "qr-cam1753-img": "cam1753/cam1753-4026.png",
+    "qr-cam1753-loc": {
+      "page": "0084B",
+      "column": 2,
+      "line": 10
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -8890,6 +8920,50 @@
     "qr-lc-proposed": "בּ֖וֹ",
     "qr-what-is-weird": "טרחא not דחי",
     "qr-consensus": "בּ֭וֹ",
+    "qr-generic-comment": [
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "In μY, the mark we would charitably transcribe as דחי appears far to the left of where we would expect it, i.e. far “later” than we would expect it. Possibly the ל ascender from the line below encroached on the area where the ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "romanized"
+            },
+            "contents": [
+              "naqdan"
+            ]
+          },
+          " would normally put a דחי; possibly the descender of the preceding ק was in the way, too. See ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/3514.html"
+            },
+            "contents": [
+              "35:14"
+            ]
+          },
+          " for an analogous case and some further discussion of this phenomenon of “late” דחי in general."
+        ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "More significant than the “lateness” of the דחי in μY is its use of מונח rather than מקף on the previous atom, i.e. on ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "unpointed-tanakh"
+            },
+            "contents": [
+              "התשחק"
+            ]
+          },
+          "."
+        ]
+      }
+    ],
     "qr-highlight": 1,
     "qr-lc-loc": {
       "page": "409A",
@@ -8906,6 +8980,12 @@
     "qr-lc-img": "Lenin/Lenin-4029.png",
     "qr-lc-img-scale": 0.531,
     "qr-aleppo-img": "Aleppo/Aleppo-4029.png",
+    "qr-cam1753-img": "cam1753/cam1753-4029.png",
+    "qr-cam1753-loc": {
+      "page": "0084B",
+      "column": 2,
+      "line": 13
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",

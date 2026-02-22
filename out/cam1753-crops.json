@@ -4101,5 +4101,227 @@
         3072
       ]
     }
+  },
+  "3925": {
+    "cv": "39:25",
+    "page": "0084A",
+    "col": 2,
+    "line_num": 25,
+    "word_idx": null,
+    "page_size": [
+      2226,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 724,
+      "y": 2152,
+      "w": 132,
+      "h": 159
+    },
+    "bbox_rel": {
+      "left": 0.4239,
+      "top": 0.2417,
+      "right": 0.5854,
+      "bottom": 0.6547
+    },
+    "source": {
+      "source_spread": "cam1753-page-0088.jpg",
+      "archive_page": 88,
+      "spread_width": 4432,
+      "spread_height": 3072,
+      "gutter_x": 2226,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2226,
+        3072
+      ]
+    }
+  },
+  "4010": {
+    "cv": "40:10",
+    "page": "0084B",
+    "col": 1,
+    "line_num": 17,
+    "word_idx": null,
+    "page_size": [
+      2259,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 1363,
+      "y": 1599,
+      "w": 118,
+      "h": 154
+    },
+    "bbox_rel": {
+      "left": 0.4679,
+      "top": 0.281,
+      "right": 0.6178,
+      "bottom": 0.6785
+    },
+    "source": {
+      "source_spread": "cam1753-page-0089.jpg",
+      "archive_page": 89,
+      "spread_width": 4448,
+      "spread_height": 3072,
+      "gutter_x": 2189,
+      "crop": "right",
+      "crop_box": [
+        2189,
+        0,
+        4448,
+        3072
+      ]
+    }
+  },
+  "4019-H3JV": {
+    "cv": "40:19",
+    "page": "0084B",
+    "col": 2,
+    "line_num": 2,
+    "word_idx": null,
+    "page_size": [
+      2259,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 740,
+      "y": 478,
+      "w": 156,
+      "h": 147
+    },
+    "bbox_rel": {
+      "left": 0.7739,
+      "top": 0.4196,
+      "right": 0.9732,
+      "bottom": 0.7919
+    },
+    "source": {
+      "source_spread": "cam1753-page-0089.jpg",
+      "archive_page": 89,
+      "spread_width": 4448,
+      "spread_height": 3072,
+      "gutter_x": 2189,
+      "crop": "right",
+      "crop_box": [
+        2189,
+        0,
+        4448,
+        3072
+      ]
+    }
+  },
+  "4019-HVA": {
+    "cv": "40:19",
+    "page": "0084B",
+    "col": 2,
+    "line_num": 1,
+    "word_idx": null,
+    "page_size": [
+      2259,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 507,
+      "y": 423,
+      "w": 118,
+      "h": 117
+    },
+    "bbox_rel": {
+      "left": 0.4756,
+      "top": 0.4778,
+      "right": 0.6271,
+      "bottom": 0.7736
+    },
+    "source": {
+      "source_spread": "cam1753-page-0089.jpg",
+      "archive_page": 89,
+      "spread_width": 4448,
+      "spread_height": 3072,
+      "gutter_x": 2189,
+      "crop": "right",
+      "crop_box": [
+        2189,
+        0,
+        4448,
+        3072
+      ]
+    }
+  },
+  "4026": {
+    "cv": "40:26",
+    "page": "0084B",
+    "col": 2,
+    "line_num": 10,
+    "word_idx": null,
+    "page_size": [
+      2259,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 408,
+      "y": 1079,
+      "w": 132,
+      "h": 146
+    },
+    "bbox_rel": {
+      "left": 0.3484,
+      "top": 0.3699,
+      "right": 0.5178,
+      "bottom": 0.741
+    },
+    "source": {
+      "source_spread": "cam1753-page-0089.jpg",
+      "archive_page": 89,
+      "spread_width": 4448,
+      "spread_height": 3072,
+      "gutter_x": 2189,
+      "crop": "right",
+      "crop_box": [
+        2189,
+        0,
+        4448,
+        3072
+      ]
+    }
+  },
+  "4029": {
+    "cv": "40:29",
+    "page": "0084B",
+    "col": 2,
+    "line_num": 13,
+    "word_idx": null,
+    "page_size": [
+      2259,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 639,
+      "y": 1300,
+      "w": 245,
+      "h": 151
+    },
+    "bbox_rel": {
+      "left": 0.6442,
+      "top": 0.3386,
+      "right": 0.9573,
+      "bottom": 0.7244
+    },
+    "source": {
+      "source_spread": "cam1753-page-0089.jpg",
+      "archive_page": 89,
+      "spread_width": 4448,
+      "spread_height": 3072,
+      "gutter_x": 2189,
+      "crop": "right",
+      "crop_box": [
+        2189,
+        0,
+        4448,
+        3072
+      ]
+    }
   }
 }

@@ -576,6 +576,7 @@ _DOLLAR_SUB_DISPATCH = {
     "$link_34_5": _dlink("34:5", "3405"),
     "$link_34_19": _dlink("34:19", "3419-NKR0"),
     "$link_35_7": _dlink("35:7", "3507"),
+    "$link_35_14": _dlink("35:14", "3514"),
     "$link_39_20": _dlink("39:20", "3920"),
     #
     # Verse-ref links to multi-record quirkrec detail pages (disambiguated)
