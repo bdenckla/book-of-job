@@ -63,9 +63,9 @@ _CBODY = ["This repository hosts:"]
 
 _FIRST_DETAIL_ANCHOR = my_html.anchor_h("Job 1:19", f"./{D1D_DIR}/0119.html")
 
-_LIST_ITEM_1 = ["Primarily, ", d2_anchor("./jobn")]
+_LIST_ITEM_1 = ["A ", d2_anchor("./jobn")]
 _LIST_ITEM_2 = [
-    "Secondarily, a series of details pages used by that document, starting with",
+    "A series of details pages used by that document, starting with",
     [" ",_FIRST_DETAIL_ANCHOR, "."],
     " While most readers will only be interested in those details as presented inside the main document,",
     " some may want to peruse the details pages directly.",
