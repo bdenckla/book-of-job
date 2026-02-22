@@ -8,8 +8,7 @@ the Hebrew-metrics word-position estimate.  Adjust boxes with mouse handles
 or arrow keys, then Export JSON to clipboard for downstream processing.
 
 Usage:
-    .venv\\Scripts\\python.exe main_gen_cam1753_crop_editor.py           # first 6 missing
-    .venv\\Scripts\\python.exe main_gen_cam1753_crop_editor.py --batch 10 # next 10 missing
+    .venv\\Scripts\\python.exe main_gen_cam1753_crop_editor.py           # example quirkrecs only
     .venv\\Scripts\\python.exe main_gen_cam1753_crop_editor.py --all      # all missing cam1753 images
     .venv\\Scripts\\python.exe main_gen_cam1753_crop_editor.py 0119 0303  # specific SIDs
 """
@@ -34,12 +33,7 @@ sys.path.insert(0, str(CAM1753_REPO))
 from py_cam1753_word_image.crop import compute_fade_overlay, estimate_word_position
 from py_cam1753_word_image.hebrew_metrics import SPACE_WIDTH, join_maqaf
 from py_cam1753_word_image.linebreak_search import find_word_in_linebreaks
-from py_cam1753_word_image.page import (
-    LB_DIR,
-    find_page_for_verse,
-    get_line_bbox,
-    load_page_image,
-)
+from py_cam1753_word_image.page import LB_DIR, find_page_for_verse, get_line_bbox, load_page_image
 
 sys.path.insert(0, str(ROOT))
 from pyauthor_util.short_id_etc import short_id
@@ -48,32 +42,11 @@ with open(ROOT / "out" / "enriched-quirkrecs.json", encoding="utf-8") as _f:
     EQRS = json.load(_f)
 
 
-# ── Helpers ────────────────────────────────────────────────────────────
-
-MAQAF = "\u05be"
-
-
-def _count_consensus_atoms(consensus):
-    """Count the number of line-break tokens a consensus word spans.
-
-    Each maqaf-separated segment and each space-separated word counts as
-    one atom.  E.g. "מַה־יֹּ֥אמַר לִֽי׃" → 3 atoms (מַה־ | יֹּ֥אמַר | לִֽי׃).
-    """
-    atoms = 0
-    for part in consensus.split(" "):
-        atoms += len([s for s in part.split(MAQAF) if s])
-    return atoms
-
-
 # ── Process a single quirkrec ──────────────────────────────────────────
 
 
 def process_quirkrec(qr):
-    """Generate a crop image and return metadata with initial bbox.
-
-    For cross-line maqaf splits, returns a *list* of two result dicts
-    (one per line fragment).  For normal words, returns a single dict.
-    """
+    """Generate a crop image and return metadata with initial bbox."""
     sid = short_id(qr)
     cv = qr["qr-cv"]
     consensus = qr["qr-consensus"]
@@ -87,68 +60,23 @@ def process_quirkrec(qr):
         print(f"  ERROR: Could not find page for Job {cv}")
         return None
 
-    col, line_num, word_idx, line_words, split_info = find_word_in_linebreaks(
+    col, line_num, word_idx, line_words = find_word_in_linebreaks(
         LB_DIR, page_id, "Job", ch, v, lb_word
     )
     if col is None:
         print("  ERROR: Could not find word in line-break data")
         return None
     assert line_num is not None and word_idx is not None
+    print(f"  Location: page {page_id}, col {col}, line {line_num}, word {word_idx}")
 
-    # ── Cross-line maqaf split: produce two editor items ──────────
-    if split_info is not None:
-        print(
-            f"  Cross-line split detected: "
-            f"{split_info['prev_fragment']!r} (line {split_info['prev_line']}) + "
-            f"{split_info['curr_fragment']!r} (line {line_num})"
-        )
-        return _process_split(
-            sid,
-            cv,
-            consensus,
-            page_id,
-            col,
-            line_num,
-            word_idx,
-            line_words,
-            split_info,
-        )
-
-    # ── Normal (non-split) word ───────────────────────────────────
-    print(
-        f"  Location: page {page_id}, col {col}, line {line_num}, word {word_idx + 1}"
-    )
-    return _make_editor_item(
-        sid,
-        cv,
-        consensus,
-        page_id,
-        col,
-        line_num,
-        word_idx,
-        line_words,
-    )
-
-
-def _make_editor_item(
-    sid,
-    cv,
-    consensus,
-    page_id,
-    col,
-    line_num,
-    word_idx,
-    line_words,
-    *,
-    split_group=None,
-    split_part=None,
-    split_label=None,
-):
-    """Build one editor-item dict (shared by normal and split paths)."""
+    # Crop coordinates
     crop_left, crop_top, crop_right, crop_bot, target_offset, ls = get_line_bbox(
         page_id, col, line_num
     )
+
+    # Load page image
     img = load_page_image(page_id)
+
     cl, ct, cr, cb = int(crop_left), int(crop_top), int(crop_right), int(crop_bot)
     tgt_y = target_offset
     tgt_ls = ls
@@ -156,53 +84,38 @@ def _make_editor_item(
     crop = img.crop((cl, ct, cr, cb)).convert("RGBA")
     crop_w, crop_h = crop.size
 
+    # Target line band
     highlight_top = tgt_y
     highlight_bot = tgt_y + tgt_ls
 
+    # Horizontal word-position estimate
     highlight_left, highlight_right = estimate_word_position(
         line_words, word_idx, crop_w
     )
 
+    # Initial bounding box (red-line region)
     half_ls = tgt_ls // 2
     box_top = max(0, highlight_top - half_ls)
     box_bot = min(crop_h - 1, highlight_bot + half_ls)
 
+    # Fade overlay
     overlay = compute_fade_overlay(
-        crop_w,
-        crop_h,
-        highlight_left,
-        highlight_right,
-        highlight_top,
-        highlight_bot,
+        crop_w, crop_h,
+        highlight_left, highlight_right,
+        highlight_top, highlight_bot,
     )
     crop = Image.alpha_composite(crop, overlay)
 
-    # Image filename — append part suffix for splits
-    suffix = "" if split_part is None else f"_{chr(ord('A') + split_part)}"
-    img_name = f"cam1753_crop_{sid}{suffix}.png"
+    # Save
     OUT_DIR.mkdir(exist_ok=True)
-    out_path = OUT_DIR / img_name
+    out_path = OUT_DIR / f"cam1753_crop_{sid}.png"
     crop.save(out_path)
     print(f"  Saved: {out_path.name} ({crop_w}\u00d7{crop_h})")
 
+    # Context words
     before = line_words[:word_idx]
     matched_word = line_words[word_idx] if word_idx < len(line_words) else consensus
-    after = line_words[word_idx + 1 :] if word_idx + 1 < len(line_words) else []
-
-    # Multi-atom consensus: include all atoms in the matched display so
-    # they are all shown highlighted in the context line.  An "atom" is
-    # one line-break token — maqaf-ending words and space-separated words
-    # each count as separate atoms.
-    total_atoms = _count_consensus_atoms(consensus)
-    if total_atoms > 1:
-        for _ in range(total_atoms - 1):  # first atom already in matched_word
-            if after:
-                next_atom = after.pop(0)
-                # Maqaf-ending atoms bind tightly to the next atom (no space)
-                if matched_word.endswith(MAQAF):
-                    matched_word += next_atom
-                else:
-                    matched_word += " " + next_atom
+    after = line_words[word_idx + 1:] if word_idx + 1 < len(line_words) else []
 
     return {
         "sid": sid,
@@ -215,94 +128,18 @@ def _make_editor_item(
         "before": before,
         "matched_word": matched_word,
         "after": after,
-        "img_file": img_name,
+        "img_file": f"cam1753_crop_{sid}.png",
         "crop_w": crop_w,
         "crop_h": crop_h,
+        # Initial bounding box in crop-image relative coords (0\u20131)
         "box_left": round(highlight_left / crop_w, 4),
         "box_right": round(highlight_right / crop_w, 4),
         "box_top": round(box_top / crop_h, 4),
         "box_bot": round(box_bot / crop_h, 4),
+        # For converting back to page coordinates
         "crop_left_px": cl,
         "crop_top_px": ct,
-        # Split metadata (None for normal items)
-        "split_group": split_group,
-        "split_part": split_part,
-        "split_label": split_label,
     }
-
-
-def _process_split(
-    sid,
-    cv,
-    consensus,
-    page_id,
-    col,
-    curr_line,
-    curr_word_idx,
-    curr_line_words,
-    split_info,
-):
-    """Handle a cross-line maqaf split → return [part_A, part_B]."""
-    prev_col = split_info["prev_col"]
-    prev_line = split_info["prev_line"]
-    prev_word_idx = split_info["prev_word_idx"]
-    prev_line_words = split_info["prev_line_words"]
-    prev_frag = split_info["prev_fragment"]
-    curr_frag = split_info["curr_fragment"]
-
-    if prev_word_idx is None:
-        print(
-            f"  WARNING: could not locate prev fragment {prev_frag!r} on "
-            f"line {prev_line}; skipping split part A"
-        )
-        # Fall back to just the current line (part B only)
-        return _make_editor_item(
-            sid,
-            cv,
-            consensus,
-            page_id,
-            col,
-            curr_line,
-            curr_word_idx,
-            curr_line_words,
-        )
-
-    print(
-        f"  Part A: page {page_id}, col {prev_col}, "
-        f"line {prev_line}, word {prev_word_idx + 1} ({prev_frag})"
-    )
-    print(
-        f"  Part B: page {page_id}, col {col}, "
-        f"line {curr_line}, word {curr_word_idx + 1} ({curr_frag})"
-    )
-
-    part_a = _make_editor_item(
-        sid,
-        cv,
-        consensus,
-        page_id,
-        prev_col,
-        prev_line,
-        prev_word_idx,
-        prev_line_words,
-        split_group=sid,
-        split_part=0,
-        split_label=prev_frag,
-    )
-    part_b = _make_editor_item(
-        sid,
-        cv,
-        consensus,
-        page_id,
-        col,
-        curr_line,
-        curr_word_idx,
-        curr_line_words,
-        split_group=sid,
-        split_part=1,
-        split_label=curr_frag,
-    )
-    return [part_a, part_b]
 
 
 # ── Generate interactive HTML ──────────────────────────────────────────
@@ -313,30 +150,28 @@ def generate_html(results):
     # JS-embeddable items data
     items_data = []
     for r in results:
-        item = {
-            "sid": r["sid"],
-            "cv": r["cv"],
-            "consensus": r["consensus"],
-            "page": r["page"],
-            "col": r["col"],
-            "lineNum": r["line_num"],
-            "wordIdx": r["word_idx"],
-            "imgFile": r["img_file"],
-            "cropW": r["crop_w"],
-            "cropH": r["crop_h"],
-            "box": {
-                "left": r["box_left"],
-                "top": r["box_top"],
-                "right": r["box_right"],
-                "bottom": r["box_bot"],
-            },
-            "cropLeftPx": r["crop_left_px"],
-            "cropTopPx": r["crop_top_px"],
-            "splitGroup": r["split_group"],
-            "splitPart": r["split_part"],
-            "splitLabel": r["split_label"],
-        }
-        items_data.append(item)
+        items_data.append(
+            {
+                "sid": r["sid"],
+                "cv": r["cv"],
+                "consensus": r["consensus"],
+                "page": r["page"],
+                "col": r["col"],
+                "lineNum": r["line_num"],
+                "wordIdx": r["word_idx"],
+                "imgFile": r["img_file"],
+                "cropW": r["crop_w"],
+                "cropH": r["crop_h"],
+                "box": {
+                    "left": r["box_left"],
+                    "top": r["box_top"],
+                    "right": r["box_right"],
+                    "bottom": r["box_bot"],
+                },
+                "cropLeftPx": r["crop_left_px"],
+                "cropTopPx": r["crop_top_px"],
+            }
+        )
 
     items_json = json.dumps(items_data, ensure_ascii=False)
 
@@ -353,23 +188,11 @@ def generate_html(results):
         before_html = " ".join(before_joined)
         after_html = " ".join(after_joined)
 
-        # Heading: add split-part label if applicable
-        if r["split_group"] is not None:
-            part_letter = chr(ord("A") + r["split_part"])
-            heading = (
-                f"{r['sid']} (part {part_letter}) \u2014 Job {r['cv']} "
-                f"\u2014 {r['split_label']}"
-            )
-            meta_extra = " \u2014 cross-line split"
-        else:
-            heading = f"{r['sid']} \u2014 Job {r['cv']} \u2014 {r['consensus']}"
-            meta_extra = ""
-
         items_html_parts.append(
             f'<div class="editor-item" data-idx="{i}">\n'
-            f"  <h2>{heading}</h2>\n"
+            f"  <h2>{r['sid']} \u2014 Job {r['cv']} \u2014 {r['consensus']}</h2>\n"
             f"  <p class=\"meta\">Page {r['page']}, col {r['col']}, "
-            f"line {r['line_num']}, word {r['word_idx']}{meta_extra}</p>\n"
+            f"line {r['line_num']}, word {r['word_idx']}</p>\n"
             f'  <div class="crop-box">\n'
             f'    <p class="context">'
             f'<span class="before">{before_html}</span> '
@@ -468,7 +291,7 @@ body {{
 <body>
 
 <div id="toolbar">
-  <button id="fine-btn" class="active" onclick="toggleFine()">Fine [F]</button>
+  <button id="fine-btn" class="active" onclick="toggleFine()">Fine</button>
   <button onclick="resetActive()">Reset</button>
   <button onclick="exportJSON()">Export JSON</button>
   <span id="status">Click a handle to begin</span>
@@ -518,11 +341,10 @@ function drawBox(idx) {{
   let parts = [];
 
   // Rectangle
-  const dash = fineMode ? '' : ' stroke-dasharray="0.01 0.006"';
   parts.push(
     '<rect x="' + b.left + '" y="' + b.top + '" ' +
     'width="' + bw + '" height="' + bh + '" ' +
-    'fill="none" stroke="' + color + '" stroke-width="' + sw + '"' + dash + ' />'
+    'fill="none" stroke="' + color + '" stroke-width="' + sw + '" />'
   );
 
   // Side handles
@@ -560,7 +382,6 @@ function drawAll() {{
 function toggleFine() {{
   fineMode = !fineMode;
   document.getElementById('fine-btn').classList.toggle('active', fineMode);
-  drawAll();
   updateStatus();
 }}
 
@@ -715,76 +536,38 @@ function resetActive() {{
 
 function r4(v) {{ return Math.round(v * 10000) / 10000; }}
 
-function _absBox(it, b) {{
-  return {{
-    x: Math.round(it.cropLeftPx + b.left * it.cropW),
-    y: Math.round(it.cropTopPx  + b.top  * it.cropH),
-    w: Math.round((b.right - b.left) * it.cropW),
-    h: Math.round((b.bottom - b.top) * it.cropH),
-  }};
-}}
-
-function _relBox(b) {{
-  return {{
-    left:   r4(b.left),
-    top:    r4(b.top),
-    right:  r4(b.right),
-    bottom: r4(b.bottom),
-  }};
-}}
-
 function exportJSON() {{
   const output = [];
-  const processed = new Set();
-
   for (let i = 0; i < N; i++) {{
-    if (processed.has(i)) continue;
     const it = ITEMS[i];
     const b  = boxes[i];
 
-    if (it.splitGroup) {{
-      // Collect all parts of this split group
-      const parts = [];
-      for (let j = 0; j < N; j++) {{
-        if (ITEMS[j].splitGroup === it.splitGroup) {{
-          processed.add(j);
-          parts.push({{
-            line_num:  ITEMS[j].lineNum,            word_idx:  ITEMS[j].wordIdx,            label:     ITEMS[j].splitLabel,
-            bbox_abs:  _absBox(ITEMS[j], boxes[j]),
-            bbox_rel:  _relBox(boxes[j]),
-            crop_left_px: ITEMS[j].cropLeftPx,
-            crop_top_px:  ITEMS[j].cropTopPx,
-            crop_w:    ITEMS[j].cropW,
-            crop_h:    ITEMS[j].cropH,
-          }});
-        }}
-      }}
-      output.push({{
-        sid:   it.splitGroup,
-        cv:    it.cv,
-        page:  it.page,
-        col:   it.col,
-        split: true,
-        parts: parts,
-      }});
-    }} else {{
-      // Normal (non-split) item
-      processed.add(i);
-      output.push({{
-        sid:      it.sid,
-        cv:       it.cv,
-        page:     it.page,
-        col:      it.col,
-        line_num: it.lineNum,        word_idx: it.wordIdx,        bbox_abs: _absBox(it, b),
-        bbox_rel: _relBox(b),
-      }});
-    }}
+    // Convert relative crop coords to page-absolute pixels.
+    const absX = Math.round(it.cropLeftPx + b.left * it.cropW);
+    const absY = Math.round(it.cropTopPx  + b.top  * it.cropH);
+    const absW = Math.round((b.right - b.left) * it.cropW);
+    const absH = Math.round((b.bottom - b.top) * it.cropH);
+
+    output.push({{
+      sid:      it.sid,
+      cv:       it.cv,
+      page:     it.page,
+      col:      it.col,
+      line_num: it.lineNum,
+      bbox_abs: {{ x: absX, y: absY, w: absW, h: absH }},
+      bbox_rel: {{
+        left:   r4(b.left),
+        top:    r4(b.top),
+        right:  r4(b.right),
+        bottom: r4(b.bottom),
+      }},
+    }});
   }}
 
   const jsonStr = JSON.stringify(output, null, 2);
   navigator.clipboard.writeText(jsonStr).then(() => {{
     document.getElementById('status').textContent =
-      'Exported ' + output.length + ' items to clipboard!';
+      'Exported ' + N + ' items to clipboard!';
     setTimeout(updateStatus, 2000);
   }});
 }}
@@ -807,62 +590,17 @@ updateStatus();
 # ── Main ───────────────────────────────────────────────────────────────
 
 
-def print_status():
-    """Print progress summary: how many crops done vs total."""
-    total = len(EQRS)
-    done = 0
-    missing_sids = []
-    for eqr in EQRS:
-        sid = short_id(eqr)
-        img_path = ROOT / "docs" / "jobn" / "img" / "cam1753" / f"cam1753-{sid}.png"
-        if os.path.exists(img_path):
-            done += 1
-        else:
-            missing_sids.append((sid, eqr.get("qr-cv", "?")))
-    remaining = total - done
-    pct = done * 100 // total if total else 0
-    print(
-        f"Cambridge 1753 crop progress: {done}/{total} ({pct}%) done, {remaining} remaining"
-    )
-    if missing_sids:
-        print(
-            f"Next 10 missing: {', '.join(f'{s} ({cv})' for s, cv in missing_sids[:10])}"
-        )
-        batches_left = (remaining + 9) // 10
-        print(f"~{batches_left} batch(es) of 10 remaining")
-
-
 def main():
-    if "--status" in sys.argv:
-        print_status()
-        return
-
     use_all = "--all" in sys.argv
-    # Parse --batch N
-    batch_size = None
-    args = sys.argv[1:]
-    i = 0
-    while i < len(args):
-        if args[i] == "--batch":
-            batch_size = int(args[i + 1]) if i + 1 < len(args) else 10
-            i += 2
-        else:
-            i += 1
     # Collect any positional args (SIDs) from command line
-    cli_sids = set()
-    for a in args:
-        if a.startswith("-"):
-            continue
-        if batch_size is not None and a == str(batch_size):
-            continue
-        cli_sids.add(a)
+    cli_sids = {a for a in sys.argv[1:] if not a.startswith("-")}
 
     examples = []
     if use_all:
         # Every quirkrec missing a cam1753 image
         for eqr in EQRS:
             sid = short_id(eqr)
-            img_path = ROOT / "docs" / "jobn" / "img" / "cam1753" / f"cam1753-{sid}.png"
+            img_path = ROOT / "docs" / "jobn" / "img" / f"cam1753-{sid}.png"
             if not os.path.exists(img_path):
                 examples.append(eqr)
     elif cli_sids:
@@ -872,16 +610,15 @@ def main():
             if sid in cli_sids:
                 examples.append(eqr)
     else:
-        # Default: first N missing quirkrecs
-        limit = batch_size if batch_size is not None else 6
+        # Default: first few missing quirkrecs
         count = 0
         for eqr in EQRS:
             sid = short_id(eqr)
-            img_path = ROOT / "docs" / "jobn" / "img" / "cam1753" / f"cam1753-{sid}.png"
+            img_path = ROOT / "docs" / "jobn" / "img" / f"cam1753-{sid}.png"
             if not os.path.exists(img_path):
                 examples.append(eqr)
                 count += 1
-                if count >= limit:
+                if count >= 6:
                     break
 
     print(f"Processing {len(examples)} quirkrecs...")
@@ -890,10 +627,7 @@ def main():
         try:
             result = process_quirkrec(qr)
             if result:
-                if isinstance(result, list):
-                    results.extend(result)
-                else:
-                    results.append(result)
+                results.append(result)
         except Exception as e:
             sid = short_id(qr)
             print(f"  ERROR ({sid}): {e}")
