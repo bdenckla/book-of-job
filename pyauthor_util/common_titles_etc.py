@@ -23,6 +23,16 @@ def d5_anchor(jobn_dir="."):
     return author.std_anchor(anc, D5_H1_CONTENTS)
 
 
+D6_TITLE = "Details pages mentioning μY"
+D6_H1_CONTENTS = D6_TITLE
+D6_FNAME = "job6_cam1753_mentions.html"
+
+
+def d6_anchor(jobn_dir="."):
+    anc = my_html.anchor_h("document", f"{jobn_dir}/{D6_FNAME}")
+    return author.std_anchor(anc, D6_H1_CONTENTS)
+
+
 def d4_anchor(jobn_dir="."):
     anc = my_html.anchor_h("document", f"{jobn_dir}/{D4_FNAME}")
     return author.std_anchor(anc, D4_H1_CONTENTS)

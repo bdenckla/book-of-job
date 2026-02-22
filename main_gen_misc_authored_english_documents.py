@@ -12,9 +12,10 @@ from pyauthor import (
     job3_uxlc,
     job4_quirks_in_mu_a,
     job5_orphan_qere_points,
+    job6_cam1753_mentions,
 )
 from pyauthor_util.all_quirks import AllQuirks
-from pyauthor_util.common_titles_etc import d2_anchor, D1D_DIR
+from pyauthor_util.common_titles_etc import d2_anchor, d6_anchor, D1D_DIR
 from pyauthor_util.job_ov_and_de import make_ov_and_de
 from pyauthor_util.get_qr_groups import get_qr_groups
 import check_spelling_in_html
@@ -44,6 +45,7 @@ def main():
     job3_uxlc.gen_html_file(aq)
     job4_quirks_in_mu_a.gen_html_file(aq)
     job5_orphan_qere_points.gen_html_file(tdm_ch)
+    job6_cam1753_mentions.gen_html_file(tdm_ch, eqrs)
     _write_index_dot_html((css_href,), "docs/index.html")
     check_spelling_in_html.main()
 
@@ -72,9 +74,15 @@ _LIST_ITEM_2 = [
     " (They can be navigated in reading order.)",
 ]
     
+_LIST_ITEM_3 = [
+    "A ",
+    d6_anchor("./jobn"),
+]
+
 _CBODY_LIST = [
     _LIST_ITEM_1,
     _LIST_ITEM_2,
+    _LIST_ITEM_3,
 ]
 
 
