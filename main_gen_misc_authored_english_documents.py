@@ -50,7 +50,7 @@ def main():
 
 def _write_index_dot_html(css_hrefs, out_path):
     write_ctx = my_html.WriteCtx("Job Documents", out_path, css_hrefs=css_hrefs)
-    my_html.write_html_to_file(author.para(_CBODY), write_ctx)
+    my_html.write_html_to_file(author.para_ul(_CBODY, _CBODY_LIST), write_ctx)
 
 
 def _delete_files(directory, patterns):
@@ -59,9 +59,22 @@ def _delete_files(directory, patterns):
             os.remove(file_path)
 
 
-_CBODY = [
-    ["Currently this repository hosts only one"],
-    [" ", d2_anchor("./jobn")],
+_CBODY = ["This repository hosts:"]
+
+_FIRST_DETAIL_ANCHOR = my_html.anchor_h("Job 1:19", f"./{D1D_DIR}/0119.html")
+
+_LIST_ITEM_1 = ["Primarily, ", d2_anchor("./jobn")]
+_LIST_ITEM_2 = [
+    "Secondarily, a series of details pages used by that document, starting with",
+    [" ",_FIRST_DETAIL_ANCHOR, "."],
+    " While most readers will only be interested in those details as presented inside the main document,",
+    " some may want to peruse the details pages directly.",
+    " (They can be navigated in reading order.)",
+]
+    
+_CBODY_LIST = [
+    _LIST_ITEM_1,
+    _LIST_ITEM_2,
 ]
 
 
