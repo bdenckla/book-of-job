@@ -30,7 +30,9 @@ RECORD_2614 = {
     "qr-cv": "26:14",
     "qr-lc-proposed": "גְּ֝בוּרוֹתָ֗יו",
     "qr-what-is-weird": "חולם becomes מלא in קרי",
-    "qr-consensus": "גְּ֝בוּרֹתָ֗יו",    "qr-consensus-ketiv": "גְּ֝בוּרֹתָ֗ו",    "qr-ac-loc": {"page": "276v", "column": 2, "line": 9, "word": 4},
+    "qr-consensus": "גְּ֝בוּרֹתָ֗יו",
+    "qr-consensus-ketiv": "גְּ֝בוּרֹתָ֗ו",
+    "qr-ac-loc": {"page": "276v", "column": 2, "line": 9, "word": 4},
     "qr-generic-comment": [
         author.para(_GENCOM_PART1),
         author.para(_GENCOM_PART2),

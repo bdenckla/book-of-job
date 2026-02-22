@@ -6855,6 +6855,13 @@
     "qr-lc-img": "Lenin/Lenin-3419-NKR0.png",
     "qr-lc-img-scale": 0.49,
     "qr-aleppo-img": "Aleppo/Aleppo-3419-NKR0.png",
+    "qr-cam1753-img": "cam1753/cam1753-3419-NKR0.png",
+    "qr-cam1753-loc": {
+      "page": "0082B",
+      "column": 1,
+      "line": 15,
+      "word": 7
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -6890,6 +6897,13 @@
     "qr-lc-img": "Lenin/Lenin-3419-JV3.png",
     "qr-lc-img-scale": 0.507,
     "qr-aleppo-img": "Aleppo/Aleppo-3419-JV3.png",
+    "qr-cam1753-img": "cam1753/cam1753-3419-JV3.png",
+    "qr-cam1753-loc": {
+      "page": "0082B",
+      "column": 1,
+      "line": 15,
+      "word": 8
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -6905,9 +6919,12 @@
   },
   {
     "qr-cv": "34:22",
-    "qr-lc-proposed": "חֹ֖שֶׁךְ",
+    "qr-lc-proposed": "חֹ֖שֶׁךְ",
     "qr-what-is-weird": "טרחא not דחי",
-    "qr-consensus": "חֹ֭שֶׁךְ",
+    "qr-consensus": "חֹ֭שֶׁךְ",
+    "qr-generic-comment": [
+      "In μY, the mark we would charitably interpret as דחי appears more or less centered on the ח and touches (collides with) an encroaching ל ascender. Possibly this ascender prevented the דחי from assuming its expected prepositive position. And possibly the preceding final נ contributed to the crowding that forced the דחי forward. And/or possibly the prepositive position of דחי, though viewed as a goal by the $naqdan of μY, was not such a high priority as we would view it as today."
+    ],
     "qr-highlight": 1,
     "qr-lc-loc": {
       "page": "407A",
@@ -6924,6 +6941,13 @@
     "qr-lc-img": "Lenin/Lenin-3422.png",
     "qr-lc-img-scale": 0.505,
     "qr-aleppo-img": "Aleppo/Aleppo-3422.png",
+    "qr-cam1753-img": "cam1753/cam1753-3422.png",
+    "qr-cam1753-loc": {
+      "page": "0082B",
+      "column": 1,
+      "line": 19,
+      "word": 6
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -6941,8 +6965,8 @@
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "34:33",
     "qr-word-id": "HM3M5",
-    "qr-consensus": "הֲֽמֵעִמְּךָ֬",
-    "qr-lc-proposed": "הַֽמֵעִמְּךָ֬",
+    "qr-consensus": "הֲֽמֵעִמְּךָ֬",
+    "qr-lc-proposed": "הַֽמֵעִמְּךָ֬",
     "qr-what-is-weird": "פתח on ה is not חטף",
     "qr-highlight": 1,
     "qr-lc-loc": {
@@ -6957,11 +6981,105 @@
       "word": 6
     },
     "qr-generic-comment": [
-      "As $DM footnote 20 mentions, this is one of three such cases, the other two being $link_9_35 and $link_27_9. In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "As ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "DM"
+            ]
+          },
+          " footnote 20 mentions, this is one of three such cases, the other two being ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/0935.html"
+            },
+            "contents": [
+              "9:35"
+            ]
+          },
+          " and ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/2709.html"
+            },
+            "contents": [
+              "27:9"
+            ]
+          },
+          ". In all three cases, the consensus has געיה on an initial vocal שווא notated as a חטף פתח. In μL, the געיה is on an initial פתח, a full (albeit short) syllable rather than a שווא."
+        ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "In this case, μY agrees with μL against μA: the פתח in μY is a full פתח, not a חטף פתח. As for the two other similar cases, note that μY also agrees with μL against μA in ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/2709.html"
+            },
+            "contents": [
+              "27:9"
+            ]
+          },
+          " (to the extent that the μY image permits such a judgement) but μY agrees with μA against μL in ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/0935.html"
+            },
+            "contents": [
+              "9:35"
+            ]
+          },
+          "."
+        ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "It is perhaps significant that the cases here and in ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/2709.html"
+            },
+            "contents": [
+              "27:9"
+            ]
+          },
+          ", the cases of likely μY/μL agreement, concern an initial ה whereas ",
+          {
+            "_htel_tag": "a",
+            "attr": {
+              "href": "../jobn-details/0935.html"
+            },
+            "contents": [
+              "9:35"
+            ]
+          },
+          " concerns an initial א. Although for many purposes all four gutturals behave the same, this may be one of those cases where this is not true."
+        ]
+      }
     ],
     "qr-lc-img": "Lenin/Lenin-3433-HM3M5.png",
     "qr-lc-img-scale": 0.539,
     "qr-aleppo-img": "Aleppo/Aleppo-3433-HM3M5.png",
+    "qr-cam1753-img": "cam1753/cam1753-3433-HM3M5.png",
+    "qr-cam1753-loc": {
+      "page": "0082B",
+      "column": 2,
+      "line": 7,
+      "word": 4
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -7001,6 +7119,13 @@
     "qr-lc-img": "Lenin/Lenin-3433-YJLMNH_1_of_2_FTW.png",
     "qr-lc-img-scale": 0.493,
     "qr-aleppo-img": "Aleppo/Aleppo-3433-YJLMNH_1_of_2_FTW.png",
+    "qr-cam1753-img": "cam1753/cam1753-3433-YJLMNH_1_of_2_FTW.png",
+    "qr-cam1753-loc": {
+      "page": "0082B",
+      "column": 2,
+      "line": 7,
+      "word": 5
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -7043,6 +7168,13 @@
     "qr-lc-img": "Lenin/Lenin-3433-YJLMNH_2_of_2_FTW.png",
     "qr-lc-img-scale": 0.498,
     "qr-aleppo-img": "Aleppo/Aleppo-3433-YJLMNH_2_of_2_FTW.png",
+    "qr-cam1753-img": "cam1753/cam1753-3433-YJLMNH_2_of_2_FTW.png",
+    "qr-cam1753-loc": {
+      "page": "0082B",
+      "column": 2,
+      "line": 7,
+      "word": 5
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -7082,6 +7214,13 @@
     "qr-lc-img": "Lenin/Lenin-3433-VMH0YD3F.png",
     "qr-lc-img-scale": 0.506,
     "qr-aleppo-img": "Aleppo/Aleppo-3433-VMH0YD3F.png",
+    "qr-cam1753-img": "cam1753/cam1753-3433-VMH0YD3F.png",
+    "qr-cam1753-loc": {
+      "page": "0082B",
+      "column": 2,
+      "line": 8,
+      "line2": 9
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -7119,6 +7258,13 @@
     "qr-lc-img": "Lenin/Lenin-3437.png",
     "qr-lc-img-scale": 0.555,
     "qr-aleppo-img": "Aleppo/Aleppo-3437.png",
+    "qr-cam1753-img": "cam1753/cam1753-3437.png",
+    "qr-cam1753-loc": {
+      "page": "0082B",
+      "column": 2,
+      "line": 13,
+      "word": 7
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -7156,6 +7302,13 @@
     "qr-lc-img": "Lenin/Lenin-3507.png",
     "qr-lc-img-scale": 0.478,
     "qr-aleppo-img": "Aleppo/Aleppo-3507.png",
+    "qr-cam1753-img": "cam1753/cam1753-3507.png",
+    "qr-cam1753-loc": {
+      "page": "0082B",
+      "column": 2,
+      "line": 22,
+      "word": 5
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -7174,6 +7327,40 @@
     "qr-lc-proposed": "תֹ֖אמַר",
     "qr-what-is-weird": "טרחא not דחי",
     "qr-consensus": "תֹ֭אמַר",
+    "qr-generic-comment": [
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "In μY, the mark we would charitably interpret as דחי is very far forward: it is even a bit left of center. As is often the case, this displacement from the expected location can perhaps be blamed on a ל ascender encroaching from the line below. In μL and μA, the same ל encroachment occurs, but by mere chance leaves space for דחי in the expected prepositive location."
+        ]
+      },
+      {
+        "_htel_tag": "p",
+        "contents": [
+          "It is challenging for us moderns to distinguish, in transcription, between the דחי, the טרחא, the געיה, and the מרכא. One wonders whether this would have seemed challenging to the Tiberian Masoretes or even the later carriers of their tradition such as the ",
+          {
+            "_htel_tag": "span",
+            "attr": {
+              "class": "romanized"
+            },
+            "contents": [
+              "naqdan"
+            ]
+          },
+          " of μY. Although the Masoretes are characterized by (indeed famous for) a punctilious concern for explicitness, it may be that they had something of a blind spot when it came to distinctions that seemed obvious to them from context but are no longer obvious to us, particularly as understanding of the poetic cantillation system has retracted down to a very few experts, none of whom seem to have been consulted in the production of ",
+          {
+            "_htel_tag": "abbr",
+            "attr": {
+              "class": "small-caps"
+            },
+            "contents": [
+              "BHQ"
+            ]
+          },
+          " Job."
+        ]
+      }
+    ],
     "qr-highlight": 1,
     "qr-lc-loc": {
       "page": "407A",
@@ -7190,6 +7377,13 @@
     "qr-lc-img": "Lenin/Lenin-3514.png",
     "qr-lc-img-scale": 0.515,
     "qr-aleppo-img": "Aleppo/Aleppo-3514.png",
+    "qr-cam1753-img": "cam1753/cam1753-3514.png",
+    "qr-cam1753-loc": {
+      "page": "0083A",
+      "column": 1,
+      "line": 3,
+      "word": 7
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",

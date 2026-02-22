@@ -115,7 +115,9 @@ def process_quirkrec(qr):
         )
 
     # ── Normal (non-split) word ───────────────────────────────────
-    print(f"  Location: page {page_id}, col {col}, line {line_num}, word {word_idx + 1}")
+    print(
+        f"  Location: page {page_id}, col {col}, line {line_num}, word {word_idx + 1}"
+    )
     return _make_editor_item(
         sid,
         cv,
@@ -819,9 +821,13 @@ def print_status():
             missing_sids.append((sid, eqr.get("qr-cv", "?")))
     remaining = total - done
     pct = done * 100 // total if total else 0
-    print(f"Cambridge 1753 crop progress: {done}/{total} ({pct}%) done, {remaining} remaining")
+    print(
+        f"Cambridge 1753 crop progress: {done}/{total} ({pct}%) done, {remaining} remaining"
+    )
     if missing_sids:
-        print(f"Next 10 missing: {', '.join(f'{s} ({cv})' for s, cv in missing_sids[:10])}")
+        print(
+            f"Next 10 missing: {', '.join(f'{s} ({cv})' for s, cv in missing_sids[:10])}"
+        )
         batches_left = (remaining + 9) // 10
         print(f"~{batches_left} batch(es) of 10 remaining")
 

@@ -108,31 +108,31 @@
     },
     {
       "field": "qr-cam1753-img",
-      "count": 121
+      "count": 131
     },
     {
       "field": "qr-cam1753-loc",
-      "count": 121
+      "count": 131
     },
     {
       "field": "qr-cam1753-loc.column",
-      "count": 121
+      "count": 131
     },
     {
       "field": "qr-cam1753-loc.line",
-      "count": 121
+      "count": 131
     },
     {
       "field": "qr-cam1753-loc.page",
-      "count": 121
+      "count": 131
     },
     {
       "field": "qr-cam1753-loc.word",
-      "count": 120
+      "count": 129
     },
     {
       "field": "qr-generic-comment",
-      "count": 90
+      "count": 92
     },
     {
       "field": "qr-bhq-comment",
@@ -203,6 +203,10 @@
       "count": 2
     },
     {
+      "field": "qr-cam1753-loc.line2",
+      "count": 2
+    },
+    {
       "field": "qr-cam1753-page-url",
       "count": 2
     },
@@ -213,10 +217,6 @@
     {
       "field": "qr-highlight-ac-proposed",
       "count": 2
-    },
-    {
-      "field": "qr-cam1753-loc.line2",
-      "count": 1
     },
     {
       "field": "qr-ignore-g3yh-diff-in-consensus",

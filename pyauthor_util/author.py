@@ -464,6 +464,7 @@ _ROMANIZED = {
     "$pasoleg": "paseq/legarmeh",
     "$maqaf": "maqaf",
     "$munax": "munaḥ",
+    "$naqdan": "naqdan",
     "$azla": "azla",
     "$legarmeh": "legarmeh",
     "$legarmeh_leg": "leg.",
