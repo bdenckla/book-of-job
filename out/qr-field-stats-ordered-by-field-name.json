@@ -72,19 +72,19 @@
     },
     {
       "field": "qr-cam1753-img",
-      "count": 131
+      "count": 151
     },
     {
       "field": "qr-cam1753-loc",
-      "count": 131
+      "count": 151
     },
     {
       "field": "qr-cam1753-loc.column",
-      "count": 131
+      "count": 151
     },
     {
       "field": "qr-cam1753-loc.line",
-      "count": 131
+      "count": 151
     },
     {
       "field": "qr-cam1753-loc.line2",
@@ -92,11 +92,11 @@
     },
     {
       "field": "qr-cam1753-loc.page",
-      "count": 131
+      "count": 151
     },
     {
       "field": "qr-cam1753-loc.word",
-      "count": 129
+      "count": 149
     },
     {
       "field": "qr-cam1753-page-url",

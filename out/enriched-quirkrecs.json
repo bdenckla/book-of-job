@@ -6919,9 +6919,9 @@
   },
   {
     "qr-cv": "34:22",
-    "qr-lc-proposed": "חֹ֖שֶׁךְ",
+    "qr-lc-proposed": "חֹ֖שֶׁךְ",
     "qr-what-is-weird": "טרחא not דחי",
-    "qr-consensus": "חֹ֭שֶׁךְ",
+    "qr-consensus": "חֹ֭שֶׁךְ",
     "qr-generic-comment": [
       "In μY, the mark we would charitably interpret as דחי appears more or less centered on the ח and touches (collides with) an encroaching ל ascender. Possibly this ascender prevented the דחי from assuming its expected prepositive position. And possibly the preceding final נ contributed to the crowding that forced the דחי forward. And/or possibly the prepositive position of דחי, though viewed as a goal by the $naqdan of μY, was not such a high priority as we would view it as today."
     ],
@@ -6965,8 +6965,8 @@
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "34:33",
     "qr-word-id": "HM3M5",
-    "qr-consensus": "הֲֽמֵעִמְּךָ֬",
-    "qr-lc-proposed": "הַֽמֵעִמְּךָ֬",
+    "qr-consensus": "הֲֽמֵעִמְּךָ֬",
+    "qr-lc-proposed": "הַֽמֵעִמְּךָ֬",
     "qr-what-is-weird": "פתח on ה is not חטף",
     "qr-highlight": 1,
     "qr-lc-loc": {
@@ -7432,6 +7432,13 @@
     "qr-lc-img": "Lenin/Lenin-3611.png",
     "qr-lc-img-scale": 0.856,
     "qr-aleppo-img": "Aleppo/Aleppo-3611.png",
+    "qr-cam1753-img": "cam1753/cam1753-3611.png",
+    "qr-cam1753-loc": {
+      "page": "0083A",
+      "column": 1,
+      "line": 19,
+      "word": 3
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -7607,6 +7614,13 @@
     "qr-lc-img": "Lenin/Lenin-3619.png",
     "qr-lc-img-scale": 0.49,
     "qr-aleppo-img": "Aleppo/Aleppo-3619.png",
+    "qr-cam1753-img": "cam1753/cam1753-3619.png",
+    "qr-cam1753-loc": {
+      "page": "0083A",
+      "column": 2,
+      "line": 3,
+      "word": 7
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -7707,6 +7721,13 @@
     "qr-lc-img": "Lenin/Lenin-3629.png",
     "qr-lc-img-scale": 0.498,
     "qr-aleppo-img": "Aleppo/Aleppo-3629.png",
+    "qr-cam1753-img": "cam1753/cam1753-3629.png",
+    "qr-cam1753-loc": {
+      "page": "0083A",
+      "column": 2,
+      "line": 15,
+      "word": 2
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -7741,6 +7762,13 @@
     "qr-lc-img": "Lenin/Lenin-3706.png",
     "qr-lc-img-scale": 0.503,
     "qr-aleppo-img": "Aleppo/Aleppo-3706.png",
+    "qr-cam1753-img": "cam1753/cam1753-3706.png",
+    "qr-cam1753-loc": {
+      "page": "0083A",
+      "column": 2,
+      "line": 26,
+      "word": 3
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -7779,6 +7807,13 @@
     "qr-lc-img": "Lenin/Lenin-3719-HVDY3NV.png",
     "qr-lc-img-scale": 0.517,
     "qr-aleppo-img": "Aleppo/Aleppo-3719-HVDY3NV.png",
+    "qr-cam1753-img": "cam1753/cam1753-3719-HVDY3NV.png",
+    "qr-cam1753-loc": {
+      "page": "0083B",
+      "column": 1,
+      "line": 16,
+      "word": 1
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -7818,6 +7853,13 @@
     "qr-lc-img": "Lenin/Lenin-3719-LA0.png",
     "qr-lc-img-scale": 0.84,
     "qr-aleppo-img": "Aleppo/Aleppo-3719-LA0.png",
+    "qr-cam1753-img": "cam1753/cam1753-3719-LA0.png",
+    "qr-cam1753-loc": {
+      "page": "0083B",
+      "column": 1,
+      "line": 16,
+      "word": 5
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -7852,6 +7894,13 @@
     "qr-lc-img": "Lenin/Lenin-3720.png",
     "qr-lc-img-scale": 0.515,
     "qr-aleppo-img": "Aleppo/Aleppo-3720.png",
+    "qr-cam1753-img": "cam1753/cam1753-3720.png",
+    "qr-cam1753-loc": {
+      "page": "0083B",
+      "column": 1,
+      "line": 17,
+      "word": 3
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -7891,6 +7940,13 @@
     "qr-lc-img": "Lenin/Lenin-3812-HMYMY5.png",
     "qr-lc-img-scale": 0.604,
     "qr-aleppo-img": "Aleppo/Aleppo-3812-HMYMY5.png",
+    "qr-cam1753-img": "cam1753/cam1753-3812-HMYMY5.png",
+    "qr-cam1753-loc": {
+      "page": "0083B",
+      "column": 2,
+      "line": 11,
+      "word": 4
+    },
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "nBHL",
@@ -8075,7 +8131,14 @@
     "qr-lc-img": "Lenin/Lenin-3812-YD3F_HJXR.png",
     "qr-lc-img-scale": 0.4,
     "qr-aleppo-img": "Aleppo/Aleppo-3812-YD3F_HJXR.png",
+    "qr-cam1753-img": "cam1753/cam1753-3812-YD3F_HJXR.png",
     "qr-jc-img": "Jerusalem-Crown-3812-YD3F_HJXR.png",
+    "qr-cam1753-loc": {
+      "page": "0083B",
+      "column": 2,
+      "line": 12,
+      "word": 1
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -8111,6 +8174,13 @@
     "qr-lc-img": "Lenin/Lenin-3817.png",
     "qr-lc-img-scale": 0.507,
     "qr-aleppo-img": "Aleppo/Aleppo-3817.png",
+    "qr-cam1753-img": "cam1753/cam1753-3817.png",
+    "qr-cam1753-loc": {
+      "page": "0083B",
+      "column": 2,
+      "line": 17,
+      "word": 6
+    },
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
@@ -8148,6 +8218,13 @@
     "qr-lc-img": "Lenin/Lenin-3820.png",
     "qr-lc-img-scale": 0.441,
     "qr-aleppo-img": "Aleppo/Aleppo-3820.png",
+    "qr-cam1753-img": "cam1753/cam1753-3820.png",
+    "qr-cam1753-loc": {
+      "page": "0083B",
+      "column": 2,
+      "line": 21,
+      "word": 4
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -8182,6 +8259,13 @@
     "qr-lc-img": "Lenin/Lenin-3827.png",
     "qr-lc-img-scale": 0.468,
     "qr-aleppo-img": "Aleppo/Aleppo-3827.png",
+    "qr-cam1753-img": "cam1753/cam1753-3827.png",
+    "qr-cam1753-loc": {
+      "page": "0084A",
+      "column": 1,
+      "line": 3,
+      "word": 2
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -8219,6 +8303,13 @@
     "qr-lc-img": "Lenin/Lenin-3829.png",
     "qr-lc-img-scale": 0.512,
     "qr-aleppo-img": "Aleppo/Aleppo-3829.png",
+    "qr-cam1753-img": "cam1753/cam1753-3829.png",
+    "qr-cam1753-loc": {
+      "page": "0084A",
+      "column": 1,
+      "line": 6,
+      "word": 3
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "xBHL",
@@ -8338,6 +8429,13 @@
     "qr-lc-img": "Lenin/Lenin-3902.png",
     "qr-lc-img-scale": 0.525,
     "qr-aleppo-img": "Aleppo/Aleppo-3902.png",
+    "qr-cam1753-img": "cam1753/cam1753-3902.png",
+    "qr-cam1753-loc": {
+      "page": "0084A",
+      "column": 1,
+      "line": 24,
+      "word": 1
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -8373,6 +8471,13 @@
     "qr-lc-img": "Lenin/Lenin-3906.png",
     "qr-lc-img-scale": 0.445,
     "qr-aleppo-img": "Aleppo/Aleppo-3906.png",
+    "qr-cam1753-img": "cam1753/cam1753-3906.png",
+    "qr-cam1753-loc": {
+      "page": "0084A",
+      "column": 2,
+      "line": 3,
+      "word": 2
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
@@ -8407,6 +8512,13 @@
     "qr-lc-img": "Lenin/Lenin-3911.png",
     "qr-lc-img-scale": 0.538,
     "qr-aleppo-img": "Aleppo/Aleppo-3911.png",
+    "qr-cam1753-img": "cam1753/cam1753-3911.png",
+    "qr-cam1753-loc": {
+      "page": "0084A",
+      "column": 2,
+      "line": 8,
+      "word": 2
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -8441,6 +8553,13 @@
     "qr-lc-img": "Lenin/Lenin-3912.png",
     "qr-lc-img-scale": 0.531,
     "qr-aleppo-img": "Aleppo/Aleppo-3912.png",
+    "qr-cam1753-img": "cam1753/cam1753-3912.png",
+    "qr-cam1753-loc": {
+      "page": "0084A",
+      "column": 2,
+      "line": 9,
+      "word": 2
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -8482,6 +8601,13 @@
     "qr-lc-img": "Lenin/Lenin-3913.png",
     "qr-lc-img-scale": 0.484,
     "qr-aleppo-img": "Aleppo/Aleppo-3913.png",
+    "qr-cam1753-img": "cam1753/cam1753-3913.png",
+    "qr-cam1753-loc": {
+      "page": "0084A",
+      "column": 2,
+      "line": 10,
+      "word": 4
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -8516,6 +8642,13 @@
     "qr-lc-img": "Lenin/Lenin-3915.png",
     "qr-lc-img-scale": 0.53,
     "qr-aleppo-img": "Aleppo/Aleppo-3915.png",
+    "qr-cam1753-img": "cam1753/cam1753-3915.png",
+    "qr-cam1753-loc": {
+      "page": "0084A",
+      "column": 2,
+      "line": 12,
+      "word": 6
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
@@ -8551,6 +8684,13 @@
     "qr-lc-img": "Lenin/Lenin-3920.png",
     "qr-lc-img-scale": 0.527,
     "qr-aleppo-img": "Aleppo/Aleppo-3920.png",
+    "qr-cam1753-img": "cam1753/cam1753-3920.png",
+    "qr-cam1753-loc": {
+      "page": "0084A",
+      "column": 2,
+      "line": 18,
+      "word": 2
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "nBHL",
