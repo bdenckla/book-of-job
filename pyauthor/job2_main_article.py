@@ -72,7 +72,6 @@ def _make_cbody(aq: AllQuirks):
         para_and_table(
             aq, _bad_news_1, xbhq_and_n3_group_info(the_lens["g:xbhq_and_n3"])
         ),
-        author.para(_AFTER_BAD_NEWS_1_PART_1),
         author.para(_after_bad_news_1_part_2(len(aq.qr_groups["g:nbhq_and_n3"]))),
         author.para(_AFTER_BAD_NEWS_1_PART_3),
         author.para(bad_news_2(len_wlc_dexi, len_wlc_misc)),
@@ -241,7 +240,7 @@ _JUDGES = [
     #
     " (Although cantillation quirks are common in μL,",
     " it is unlikely that any of them",
-    " cause (or resolve) some problem of translation or exegesis.)",
+    " cause (or solve) some problem of translation or exegesis.)",
 ]
 _WLC_PREDATES = [
     "$WLC has had various releases over its decades, many predating $BHQ Megilloth.",
@@ -368,21 +367,13 @@ def _bad_news_1(the_len):
     ]
 
 
-_AFTER_BAD_NEWS_1_PART_1 = [
-    "I would not expect $BHQ to transcribe all the above quirks.",
-    #
-    " For example it would be reasonable for the $BHQ editors",
-    " to find some of them unlikely to have been the scribe’s intention,",
-    " for example finding some of them more likely to have been",
-    " an ink-mark made accidentally, or a mark not made by ink at all.",
-]
-
-
 def _after_bad_news_1_part_2(len_of_nbhq_and_n3):
     foo = len_of_nbhq_and_n3 - _COUNT_OF_RNTQ
     bar = len_of_nbhq_and_n3
     return [
-        "Nonetheless, the quirks not transcribed by $BHQ",
+        "As I said above, not all such missing transcriptions are a bad thing.",
+        #
+        " But the quirks not transcribed by $BHQ",
         " are of high quantity and high average quality.",
         #
         " This strongly suggests that $BHQ’s editors were either",
