@@ -4397,5 +4397,42 @@
         3072
       ]
     }
+  },
+  "4213": {
+    "cv": "42:13",
+    "page": "0085B",
+    "col": 1,
+    "line_num": 1,
+    "word_idx": 1,
+    "page_size": [
+      2234,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 1525,
+      "y": 453,
+      "w": 123,
+      "h": 114
+    },
+    "bbox_rel": {
+      "left": 0.6573,
+      "top": 0.4793,
+      "right": 0.8112,
+      "bottom": 0.769
+    },
+    "source": {
+      "source_spread": "cam1753-page-0090.jpg",
+      "archive_page": 90,
+      "spread_width": 4416,
+      "spread_height": 3072,
+      "gutter_x": 2182,
+      "crop": "right",
+      "crop_box": [
+        2182,
+        0,
+        4416,
+        3072
+      ]
+    }
   }
 }

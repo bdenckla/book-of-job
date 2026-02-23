@@ -59,6 +59,30 @@
       "count": 160
     },
     {
+      "field": "qr-cam1753-img",
+      "count": 160
+    },
+    {
+      "field": "qr-cam1753-loc",
+      "count": 160
+    },
+    {
+      "field": "qr-cam1753-loc.column",
+      "count": 160
+    },
+    {
+      "field": "qr-cam1753-loc.line",
+      "count": 160
+    },
+    {
+      "field": "qr-cam1753-loc.page",
+      "count": 160
+    },
+    {
+      "field": "qr-cam1753-loc.word",
+      "count": 160
+    },
+    {
       "field": "qr-consensus",
       "count": 160
     },
@@ -93,30 +117,6 @@
     {
       "field": "qr-what-is-weird",
       "count": 160
-    },
-    {
-      "field": "qr-cam1753-img",
-      "count": 159
-    },
-    {
-      "field": "qr-cam1753-loc",
-      "count": 159
-    },
-    {
-      "field": "qr-cam1753-loc.column",
-      "count": 159
-    },
-    {
-      "field": "qr-cam1753-loc.line",
-      "count": 159
-    },
-    {
-      "field": "qr-cam1753-loc.page",
-      "count": 159
-    },
-    {
-      "field": "qr-cam1753-loc.word",
-      "count": 159
     },
     {
       "field": "qr-lc-img-scale",

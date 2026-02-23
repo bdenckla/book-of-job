@@ -9123,6 +9123,13 @@
     "qr-lc-img": "Lenin/Lenin-4213.png",
     "qr-lc-img-scale": 0.512,
     "qr-aleppo-img": "Aleppo/Aleppo-4213.png",
+    "qr-cam1753-img": "cam1753/cam1753-4213.png",
+    "qr-cam1753-loc": {
+      "page": "0085B",
+      "column": 1,
+      "line": 1,
+      "word": 2
+    },
     "nbd": {
       "e:BHQ": "nBHQ",
       "e:BHL": "xBHL",
