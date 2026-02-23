@@ -31,9 +31,9 @@ CAM1753_REPO = ROOT.parent / "codex-index-cam1753"
 sys.path.insert(0, str(CAM1753_REPO))
 
 from py_cam1753_word_image.crop import compute_fade_overlay, estimate_word_position
-from py_cam1753_word_image.hebrew_metrics import join_maqaf
+from py_cam1753_word_image.hebrew_metrics import SPACE_WIDTH, join_maqaf
 from py_cam1753_word_image.linebreak_search import find_word_in_linebreaks
-from py_cam1753_word_image.page import LB_DIR, find_pages_for_verse, get_line_bbox, load_page_image
+from py_cam1753_word_image.page import LB_DIR, find_page_for_verse, get_line_bbox, load_page_image
 
 sys.path.insert(0, str(ROOT))
 from pyauthor_util.short_id_etc import short_id
@@ -55,22 +55,14 @@ def process_quirkrec(qr):
 
     print(f"\n=== {sid} (Job {cv}): {consensus} ===")
 
-    page_ids = find_pages_for_verse("Job", ch, v)
-    if not page_ids:
+    page_id = find_page_for_verse("Job", ch, v)
+    if not page_id:
         print(f"  ERROR: Could not find page for Job {cv}")
         return None
 
-    # Search each page for the word (handles verses spanning page boundaries)
-    page_id = None
-    col = line_num = word_idx = None
-    line_words = []
-    for pid in page_ids:
-        col, line_num, word_idx, line_words = find_word_in_linebreaks(
-            LB_DIR, pid, "Job", ch, v, lb_word
-        )
-        if col is not None:
-            page_id = pid
-            break
+    col, line_num, word_idx, line_words, _match_method = find_word_in_linebreaks(
+        LB_DIR, page_id, "Job", ch, v, lb_word
+    )
     if col is None:
         print("  ERROR: Could not find word in line-break data")
         return None
@@ -608,7 +600,7 @@ def main():
         # Every quirkrec missing a cam1753 image
         for eqr in EQRS:
             sid = short_id(eqr)
-            img_path = ROOT / "docs" / "jobn" / "img" / "cam1753" / f"cam1753-{sid}.png"
+            img_path = ROOT / "docs" / "jobn" / "img" / f"cam1753-{sid}.png"
             if not os.path.exists(img_path):
                 examples.append(eqr)
     elif cli_sids:
@@ -622,7 +614,7 @@ def main():
         count = 0
         for eqr in EQRS:
             sid = short_id(eqr)
-            img_path = ROOT / "docs" / "jobn" / "img" / "cam1753" / f"cam1753-{sid}.png"
+            img_path = ROOT / "docs" / "jobn" / "img" / f"cam1753-{sid}.png"
             if not os.path.exists(img_path):
                 examples.append(eqr)
                 count += 1
