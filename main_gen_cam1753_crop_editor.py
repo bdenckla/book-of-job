@@ -31,7 +31,7 @@ CAM1753_REPO = ROOT.parent / "codex-index-cam1753"
 sys.path.insert(0, str(CAM1753_REPO))
 
 from py_cam1753_word_image.crop import compute_fade_overlay, estimate_word_position
-from py_cam1753_word_image.hebrew_metrics import SPACE_WIDTH, join_maqaf
+from py_cam1753_word_image.hebrew_metrics import join_maqaf
 from py_cam1753_word_image.linebreak_search import find_word_in_linebreaks
 from py_cam1753_word_image.page import LB_DIR, find_pages_for_verse, get_line_bbox, load_page_image
 
