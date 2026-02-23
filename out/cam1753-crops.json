@@ -4107,7 +4107,7 @@
     "page": "0084A",
     "col": 2,
     "line_num": 25,
-    "word_idx": null,
+    "word_idx": 2,
     "page_size": [
       2226,
       3072
@@ -4144,7 +4144,7 @@
     "page": "0084B",
     "col": 1,
     "line_num": 17,
-    "word_idx": null,
+    "word_idx": 3,
     "page_size": [
       2259,
       3072
@@ -4181,7 +4181,7 @@
     "page": "0084B",
     "col": 2,
     "line_num": 2,
-    "word_idx": null,
+    "word_idx": 0,
     "page_size": [
       2259,
       3072
@@ -4218,7 +4218,7 @@
     "page": "0084B",
     "col": 2,
     "line_num": 1,
-    "word_idx": null,
+    "word_idx": 2,
     "page_size": [
       2259,
       3072
@@ -4255,7 +4255,7 @@
     "page": "0084B",
     "col": 2,
     "line_num": 10,
-    "word_idx": null,
+    "word_idx": 3,
     "page_size": [
       2259,
       3072
@@ -4292,7 +4292,7 @@
     "page": "0084B",
     "col": 2,
     "line_num": 13,
-    "word_idx": null,
+    "word_idx": 1,
     "page_size": [
       2259,
       3072
@@ -4320,6 +4320,80 @@
         2189,
         0,
         4448,
+        3072
+      ]
+    }
+  },
+  "4125": {
+    "cv": "41:25",
+    "page": "0085A",
+    "col": 1,
+    "line_num": 19,
+    "word_idx": 1,
+    "page_size": [
+      2189,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 1657,
+      "y": 1732,
+      "w": 195,
+      "h": 147
+    },
+    "bbox_rel": {
+      "left": 0.5239,
+      "top": 0.2977,
+      "right": 0.7684,
+      "bottom": 0.6808
+    },
+    "source": {
+      "source_spread": "cam1753-page-0089.jpg",
+      "archive_page": 89,
+      "spread_width": 4448,
+      "spread_height": 3072,
+      "gutter_x": 2189,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2189,
+        3072
+      ]
+    }
+  },
+  "4210": {
+    "cv": "42:10",
+    "page": "0085A",
+    "col": 2,
+    "line_num": 17,
+    "word_idx": 3,
+    "page_size": [
+      2189,
+      3072
+    ],
+    "bbox_abs": {
+      "x": 627,
+      "y": 1566,
+      "w": 119,
+      "h": 150
+    },
+    "bbox_rel": {
+      "left": 0.3257,
+      "top": 0.2673,
+      "right": 0.4695,
+      "bottom": 0.652
+    },
+    "source": {
+      "source_spread": "cam1753-page-0089.jpg",
+      "archive_page": 89,
+      "spread_width": 4448,
+      "spread_height": 3072,
+      "gutter_x": 2189,
+      "crop": "left",
+      "crop_box": [
+        0,
+        0,
+        2189,
         3072
       ]
     }

@@ -3878,7 +3878,9 @@
       "page": "0078B",
       "column": 2,
       "line": 5,
-      "line2": 6
+      "line2": 6,
+      "word": 6,
+      "word2": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -7219,7 +7221,9 @@
       "page": "0082B",
       "column": 2,
       "line": 8,
-      "line2": 9
+      "line2": 9,
+      "word": 8,
+      "word2": 1
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -8732,7 +8736,8 @@
     "qr-cam1753-loc": {
       "page": "0084A",
       "column": 2,
-      "line": 25
+      "line": 25,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -8774,7 +8779,8 @@
     "qr-cam1753-loc": {
       "page": "0084B",
       "column": 1,
-      "line": 17
+      "line": 17,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -8815,7 +8821,8 @@
     "qr-cam1753-loc": {
       "page": "0084B",
       "column": 2,
-      "line": 1
+      "line": 1,
+      "word": 3
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -8859,7 +8866,8 @@
     "qr-cam1753-loc": {
       "page": "0084B",
       "column": 2,
-      "line": 2
+      "line": 2,
+      "word": 1
     },
     "nbd": {
       "e:BHQ": "xBHQ",
@@ -8900,7 +8908,8 @@
     "qr-cam1753-loc": {
       "page": "0084B",
       "column": 2,
-      "line": 10
+      "line": 10,
+      "word": 4
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -8984,7 +8993,8 @@
     "qr-cam1753-loc": {
       "page": "0084B",
       "column": 2,
-      "line": 13
+      "line": 13,
+      "word": 2
     },
     "nbd": {
       "e:BHQ": "tBHQ",
@@ -9023,6 +9033,13 @@
     "qr-lc-img": "Lenin/Lenin-4125.png",
     "qr-lc-img-scale": 0.536,
     "qr-aleppo-img": "Aleppo/Aleppo-4125.png",
+    "qr-cam1753-img": "cam1753/cam1753-4125.png",
+    "qr-cam1753-loc": {
+      "page": "0085A",
+      "column": 1,
+      "line": 19,
+      "word": 2
+    },
     "nbd": {
       "e:BHQ": "xBHQ",
       "e:BHL": "nBHL",
@@ -9063,6 +9080,13 @@
     "qr-lc-img": "Lenin/Lenin-4210.png",
     "qr-lc-img-scale": 0.852,
     "qr-aleppo-img": "Aleppo/Aleppo-4210.png",
+    "qr-cam1753-img": "cam1753/cam1753-4210.png",
+    "qr-cam1753-loc": {
+      "page": "0085A",
+      "column": 2,
+      "line": 17,
+      "word": 4
+    },
     "nbd": {
       "e:BHQ": "tBHQ",
       "e:BHL": "xBHL",
