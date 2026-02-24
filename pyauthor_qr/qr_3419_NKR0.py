@@ -1,4 +1,3 @@
-from pyauthor_util import author
 from pyauthor_util.job_common import correctly_ignores
 
 RECORD_3419_NKR0 = {

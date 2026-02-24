@@ -1,5 +1,3 @@
-from pyauthor_util import author
-
 _COMMENT_PARA1 = [
     "In μY, the mark we would charitably interpret as דחי",
     " appears more or less centered on the ח",

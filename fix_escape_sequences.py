@@ -15,7 +15,6 @@ Exit codes:
     1 – Changes needed but --apply not given
 """
 
-import re
 import sys
 from pathlib import Path
 

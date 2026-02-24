@@ -68,9 +68,7 @@ def _check_file(path, root):
                 continue
             fixed = give_std_mark_order(word)
             if fixed != word:
-                violations.append(
-                    (str(path.relative_to(root)), line_no, word, fixed)
-                )
+                violations.append((str(path.relative_to(root)), line_no, word, fixed))
     return violations
 
 
@@ -83,9 +81,7 @@ def main():
         all_violations.extend(_check_file(path, root))
 
     if all_violations:
-        print(
-            f"FAIL: {len(all_violations)} word(s) with non-standard mark order:\n"
-        )
+        print(f"FAIL: {len(all_violations)} word(s) with non-standard mark order:\n")
         for rel, line_no, orig, fixed in all_violations:
             # Show codepoint sequences for clarity.
             orig_cp = " ".join(f"U+{ord(c):04X}" for c in orig)

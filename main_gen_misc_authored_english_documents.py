@@ -68,12 +68,12 @@ _FIRST_DETAIL_ANCHOR = my_html.anchor_h("Job 1:19", f"./{D1D_DIR}/0119.html")
 _LIST_ITEM_1 = ["A ", d2_anchor("./jobn")]
 _LIST_ITEM_2 = [
     "A series of details pages used by that document, starting with",
-    [" ",_FIRST_DETAIL_ANCHOR, "."],
+    [" ", _FIRST_DETAIL_ANCHOR, "."],
     " While most readers will only be interested in those details as presented inside the main document,",
     " some may want to peruse the details pages directly.",
     " (They can be navigated in reading order.)",
 ]
-    
+
 _LIST_ITEM_3 = [
     "A ",
     d6_anchor("./jobn"),

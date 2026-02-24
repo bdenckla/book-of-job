@@ -31,9 +31,14 @@ CAM1753_REPO = ROOT.parent / "codex-index-cam1753"
 sys.path.insert(0, str(CAM1753_REPO))
 
 from py_cam1753_word_image.crop import compute_fade_overlay, estimate_word_position
-from py_cam1753_word_image.hebrew_metrics import SPACE_WIDTH, join_maqaf
+from py_cam1753_word_image.hebrew_metrics import join_maqaf
 from py_cam1753_word_image.linebreak_search import find_word_in_linebreaks
-from py_cam1753_word_image.page import LB_DIR, find_page_for_verse, get_line_bbox, load_page_image
+from py_cam1753_word_image.page import (
+    LB_DIR,
+    find_page_for_verse,
+    get_line_bbox,
+    load_page_image,
+)
 
 sys.path.insert(0, str(ROOT))
 from pyauthor_util.short_id_etc import short_id
@@ -100,9 +105,12 @@ def process_quirkrec(qr):
 
     # Fade overlay
     overlay = compute_fade_overlay(
-        crop_w, crop_h,
-        highlight_left, highlight_right,
-        highlight_top, highlight_bot,
+        crop_w,
+        crop_h,
+        highlight_left,
+        highlight_right,
+        highlight_top,
+        highlight_bot,
     )
     crop = Image.alpha_composite(crop, overlay)
 
@@ -115,7 +123,7 @@ def process_quirkrec(qr):
     # Context words
     before = line_words[:word_idx]
     matched_word = line_words[word_idx] if word_idx < len(line_words) else consensus
-    after = line_words[word_idx + 1:] if word_idx + 1 < len(line_words) else []
+    after = line_words[word_idx + 1 :] if word_idx + 1 < len(line_words) else []
 
     return {
         "sid": sid,

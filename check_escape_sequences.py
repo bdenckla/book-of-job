@@ -173,9 +173,7 @@ def _check_file(path, root):
 
             cp = int(m.group(1), 16)
             if _should_be_literal(cp):
-                violations.append(
-                    (str(path.relative_to(root)), line_no, m.group(), cp)
-                )
+                violations.append((str(path.relative_to(root)), line_no, m.group(), cp))
     return violations
 
 
@@ -188,9 +186,7 @@ def main():
         all_violations.extend(_check_file(path, root))
 
     if all_violations:
-        print(
-            f"FAIL: {len(all_violations)} unnecessary \\uXXXX escape(s) found:\n"
-        )
+        print(f"FAIL: {len(all_violations)} unnecessary \\uXXXX escape(s) found:\n")
         for rel, line_no, esc, cp in all_violations:
             name = unicodedata.name(chr(cp), "?")
             print(f"  {rel}:{line_no}:  {esc}  →  {chr(cp)}  ({name})")

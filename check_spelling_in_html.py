@@ -281,9 +281,7 @@ def main(*, verbose=False):
 
     apos_issues = check_straight_apostrophes(html_files)
     if apos_issues:
-        print(
-            f"\nFound {len(apos_issues)} straight-apostrophe issues (use ’ not '):\n"
-        )
+        print(f"\nFound {len(apos_issues)} straight-apostrophe issues (use ’ not '):\n")
         for issue in apos_issues:
             print(f"  [{issue['file']}]: ...{issue['context']}...")
 
