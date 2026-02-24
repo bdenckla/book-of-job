@@ -1,4 +1,4 @@
-_BHQ_COMMENT_1806 = [
+_BHQ_COMMENT = [
     "$BHQ positions the mark ambiguously.",
     " The mark is a little to the right of center.",
     " So it is not centered, as one would expect a טרחא to be,",
@@ -13,6 +13,6 @@ RECORD_1806 = {
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "402A", "column": 1, "line": -2},
     "qr-ac-loc": {"page": "274v", "column": 2, "line": 5, "word": 6},
-    "qr-bhq-comment": _BHQ_COMMENT_1806,
+    "qr-bhq-comment": _BHQ_COMMENT,
     "qr-noted-by": "tBHQ-nBHL",
 }

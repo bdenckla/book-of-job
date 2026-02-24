@@ -1,4 +1,4 @@
-_COMMENT_3913 = [
+_COMMENT = [
     "A more charitable interpretation of the image is that the רביע is present",
     " but is merged with the masorah circle.",
     " (It is fairly clear that a masorah circle is present.)",
@@ -10,7 +10,7 @@ RECORD_3913 = {
     "qr-lc-proposed": "אֶ֝בְרָה",
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-consensus": "אֶ֝בְרָ֗ה",
-    "qr-generic-comment": _COMMENT_3913,
+    "qr-generic-comment": _COMMENT,
     "qr-highlight": 3,
     "qr-lc-loc": {"page": "408B", "column": 1, "line": 11},
     "qr-ac-loc": {"page": "280v", "column": 1, "line": 28, "word": 5},

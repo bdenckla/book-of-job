@@ -3,7 +3,7 @@ from pyauthor_util.golinets import golinets_citation
 from pyauthor_util import author
 
 _UXLC_CHANGE_2022_02_17_1 = uxlc_change("2022.04.01", "2022.02.17-1")
-_ISAIAH_1306 = author.anc_h("$Isaiah_13_6", _UXLC_CHANGE_2022_02_17_1)
+_ISAIAH = author.anc_h("$Isaiah_13_6", _UXLC_CHANGE_2022_02_17_1)
 
 
 _COMMENT_PARA_1 = [
@@ -12,7 +12,7 @@ _COMMENT_PARA_1 = [
     " but among the points, only the דגש in the ד has been re-inked.",
     " So, a דגש in the ש could easily have been lost.",
     " But, because other similar words lack דגש in μL",
-    [" (e.g., $link_27_13, ", _ISAIAH_1306, ", $Joel_1_15),"],
+    [" (e.g., $link_27_13, ", _ISAIAH, ", $Joel_1_15),"],
     " it seems likely that there was never a דגש in the ש to begin with.",
 ]
 _COMMENT_PARA_2 = [

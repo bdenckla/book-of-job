@@ -1,6 +1,6 @@
 from pyauthor_util import author
 
-_BHQ_COMMENT_2228 = [
+_BHQ_COMMENT = [
     "$BHQ places the mark a little left of center.",
     #
     " Though this placement is odd,",
@@ -27,6 +27,6 @@ RECORD_2228 = {
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "403B", "column": 2, "line": 2},
     "qr-ac-loc": {"page": "276r", "column": 1, "line": 17, "word": 5},
-    "qr-bhq-comment": [author.para(_BHQ_COMMENT_2228)],
+    "qr-bhq-comment": [author.para(_BHQ_COMMENT)],
     "qr-noted-by": "tBHQ-nBHL",
 }

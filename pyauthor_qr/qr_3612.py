@@ -2,7 +2,7 @@ from py import my_html
 from pyauthor_util import author
 from pyauthor_util.job_common import CAM1753_PAGE_URL_BASE
 
-_BHQ_COMMENT_3612 = [
+_BHQ_COMMENT = [
     "Here $BHQ has a typo:",
     [" it has ", author.hbo("בִּבְלִ־"), " rather than ", author.hbo("בִּבְלִי־")],
     " in the word it reports for μA and μY.",
@@ -29,7 +29,7 @@ RECORD_3612 = {
     "qr-highlight": 1,
     "qr-lc-loc": {"page": "407B", "column": 1, "line": 4},
     "qr-ac-loc": {"page": "279v", "column": 1, "line": 22, "word": 2},
-    "qr-bhq-comment": [author.para(_BHQ_COMMENT_3612)],
+    "qr-bhq-comment": [author.para(_BHQ_COMMENT)],
     "qr-noted-by": "nBHQ-nDM-nWLC",
     "qr-cam1753-page-url": f"{CAM1753_PAGE_URL_BASE}/n87/mode/1up",
     "qr-uxlc-needs-fix": [

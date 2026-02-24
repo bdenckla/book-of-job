@@ -1,7 +1,7 @@
 from pyauthor_util import author
 from pyauthor_util.job_common import suffix
 
-_BHQ_COMMENT_2614 = [
+_BHQ_COMMENT = [
     "$BHS does not catch this quirk in μL: it reflects the consensus rather than μL.",
     " $BHQ half-fixes the error in $BHS:",
     " it updates its marginal קרי note to reflect μL rather than the consensus,",
@@ -39,6 +39,6 @@ RECORD_2614 = {
     ],
     "qr-highlight-lc-proposed": 5,
     "qr-lc-loc": {"page": "404A", "column": 2, "line": -5},
-    "qr-bhq-comment": _BHQ_COMMENT_2614,
+    "qr-bhq-comment": _BHQ_COMMENT,
     "qr-noted-by": "nWLC",
 }
