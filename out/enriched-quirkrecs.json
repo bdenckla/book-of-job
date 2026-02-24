@@ -3321,7 +3321,7 @@
   },
   {
     "qr-cv": "19:2",
-    "qr-lc-proposed": "וּֽתְדַכְּאוּנַ֥נִי",
+    "qr-lc-proposed": "וּֽתְדַכְּאוּנַ֥נִי",
     "qr-what-is-weird": "כ has שווא",
     "qr-consensus": "וּֽתְדַכּאוּנַ֥נִי",
     "qr-generic-comment": [
@@ -3768,9 +3768,9 @@
   },
   {
     "qr-cv": "20:23",
-    "qr-lc-proposed": "יְֽשַׁלַּח־בּ֖וֹ",
+    "qr-lc-proposed": "יְֽשַׁלַּח־בּ֖וֹ",
     "qr-what-is-weird": "טרחא not דחי",
-    "qr-consensus": "יְֽשַׁלַּח־בּ֭וֹ",
+    "qr-consensus": "יְֽשַׁלַּח־בּ֭וֹ",
     "qr-highlight": 6,
     "qr-lc-loc": {
       "page": "402B",
@@ -4591,9 +4591,9 @@
   },
   {
     "qr-cv": "23:6",
-    "qr-lc-proposed": "הַבְּרׇב־כֹּ֖חַ",
+    "qr-lc-proposed": "הַבְּרׇב־כֹּ֖חַ",
     "qr-what-is-weird": "טרחא not דחי",
-    "qr-consensus": "הַבְּרׇב־כֹּ֭חַ",
+    "qr-consensus": "הַבְּרׇב־כֹּ֭חַ",
     "qr-highlight": 6,
     "qr-lc-loc": {
       "page": "403B",
@@ -5027,7 +5027,7 @@
     "qr-lc-proposed": "גְּ֝בוּרוֹתָ֗יו",
     "qr-what-is-weird": "חולם becomes מלא in קרי",
     "qr-consensus": "גְּ֝בוּרֹתָ֗יו",
-    "qr-consensus-ketiv": "גְּ֝בוּרֹתָ֗ו",
+    "qr-consensus-ketiv": "גְּ֝בוּרֹתָ֗ו",
     "qr-ac-loc": {
       "page": "276v",
       "column": 2,
@@ -6035,8 +6035,8 @@
   {
     "qr-noted-by": "tWLC",
     "qr-cv": "31:15",
-    "qr-consensus": "הֲ‍ֽלֹא־בַ֭בֶּטֶן",
-    "qr-lc-proposed": "הֲ‍ֽ֝לֹא־בַ֭בֶּטֶן",
+    "qr-consensus": "הֲ‍ֽלֹא־בַ֭בֶּטֶן",
+    "qr-lc-proposed": "הֲ‍ֽ֝לֹא־בַ֭בֶּטֶן",
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "גרש מוקדם fights דחי",
     "qr-highlight": 1,
@@ -6467,9 +6467,9 @@
   {
     "qr-noted-by": "tBHQ-nDM",
     "qr-cv": "33:28",
-    "qr-consensus": "וְ֝חַיָּת֗וֹ",
+    "qr-consensus": "וְ֝חַיָּת֗וֹ",
     "qr-consensus-ketiv": "וחיתי",
-    "qr-lc-proposed": "וְ֝חַיָּתוֹ",
+    "qr-lc-proposed": "וְ֝חַיָּתוֹ",
     "qr-what-is-weird": "רביע of רביע מוגרש is absent",
     "qr-highlight": 4,
     "qr-lc-loc": {

@@ -23,13 +23,23 @@ This project uses typographically correct Unicode characters. **Never convert th
 
 ### Hebrew Unicode ordering:
 
-When working with Hebrew text, maintain proper Unicode normalization order:
-- Shin/sin dots (U+05C1, U+05C2) should come immediately after the shin letter
-- Dagesh (U+05BC) should come after shin/sin dot but before rafeh
-- Rafeh (U+05BF) should come after dagesh but before vowel points
-- **Accents (cantillation marks) almost always come AFTER vowels**, not before them, when both appear on the same letter
+When working with Hebrew text, maintain the project\u2019s standard combining-mark
+order within each base-letter cluster.  The authoritative implementation is
+`pycmn/uni_denorm.py` (`give_std_mark_order`), and the CI-style checker is
+`check_mark_order.py` (also wired into `check_all.py`).
 
-Full order: **base letter → shin/sin dot → dagesh → rafeh → vowels → meteg → accents**
+The standard order places these four marks first (in this order), followed by
+all other marks in their original relative order:
+
+1. Shin dot (U+05C1)
+2. Sin dot (U+05C2)
+3. Dagesh / mapiq / shuruq dot (U+05BC)
+4. Rafeh (U+05BF)
+
+In practice this means: **base letter \u2192 shin/sin dot \u2192 dagesh \u2192 rafeh \u2192 vowels / meteg / accents** (the remaining marks keep whatever mutual order they already had).
+
+When in doubt, pass the text through `give_std_mark_order` rather than
+hand-ordering codepoints.
 
 ## Temporary Generated Files
 

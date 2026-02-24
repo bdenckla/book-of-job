@@ -23,7 +23,7 @@ _GENCOM_PARA_3 = [
 ]
 RECORD_1902 = {
     "qr-cv": "19:2",
-    "qr-lc-proposed": "וּֽתְדַכְּאוּנַ֥נִי",
+    "qr-lc-proposed": "וּֽתְדַכְּאוּנַ֥נִי",
     "qr-what-is-weird": "כ has שווא",
     "qr-consensus": "וּֽתְדַכּאוּנַ֥נִי",
     "qr-generic-comment": [

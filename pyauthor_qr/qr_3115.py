@@ -1,8 +1,8 @@
 RECORD_3115 = {
     "qr-noted-by": "tWLC",
     "qr-cv": "31:15",
-    "qr-consensus": "הֲ‍ֽלֹא־בַ֭בֶּטֶן",
-    "qr-lc-proposed": "הֲ‍ֽ֝לֹא־בַ֭בֶּטֶן",
+    "qr-consensus": "הֲ‍ֽלֹא־בַ֭בֶּטֶן",
+    "qr-lc-proposed": "הֲ‍ֽ֝לֹא־בַ֭בֶּטֶן",
     "qr-lc-q": "(?)",
     "qr-what-is-weird": "גרש מוקדם fights דחי",
     "qr-highlight": 1,

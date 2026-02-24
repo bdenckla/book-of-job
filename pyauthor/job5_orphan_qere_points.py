@@ -149,7 +149,7 @@ _LAMENTATIONS_DISCUSSION_2 = [
 
 _SAMUEL_INTRO = [
     ["$2Samuel_18_20 (", *_links_to_u_and_m(tbn.BK_SND_SAM, 18, 20), ")"],
-    [" is a קרי ולא כתיב: the word ", author.hbo("כֵּ֥ן")],
+    [" is a קרי ולא כתיב: the word ", author.hbo("כֵּ֥ן")],
     " is read but not written, where by “not written” we mean not written in formal texts.",
     #
     " Such formal texts include the main columns of a Tiberian manuscript",
