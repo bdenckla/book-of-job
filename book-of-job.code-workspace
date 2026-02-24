@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../codex-index-aleppo"
+		},
+		{
+			"path": "../codex-index-cam1753"
 		}
 	],
 	"settings": {
