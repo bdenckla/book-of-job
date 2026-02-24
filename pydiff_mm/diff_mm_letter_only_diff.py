@@ -19,7 +19,7 @@ def letter_only_diff(str1, str2):
             swaps.append((_letter_unit_name(u1), _letter_unit_name(u2)))
     if not swaps:
         return None
-    parts = [f"{old} \u2192 {new}" for old, new in swaps]
+    parts = [f"{old} → {new}" for old, new in swaps]
     detail = "replace letter: " + ", ".join(parts)
     return detail, "letter swap"
 
@@ -32,7 +32,7 @@ def _neutralize_letters(string):
     """Replace Hebrew letters and shin/sin dots with a common placeholder.
     Shin/sin dots are part of the letter's identity, so they are stripped too."""
     string = string.replace("\u05c1", "").replace("\u05c2", "")
-    return _LETTER_RE.sub("\u05d0", string)
+    return _LETTER_RE.sub("א", string)
 
 
 def _extract_letter_units(string):

@@ -29,7 +29,7 @@ def find_word_in_linebreaks(page_id, ch, v, consensus):
     consensus_stripped = strip_heb(consensus)
 
     # Check if consensus contains maqaf (multi-token in line-break data)
-    MAQAF = "\u05be"
+    MAQAF = "־"
     consensus_has_maqaf = MAQAF in consensus
     # Check if consensus contains a space (multi-word in line-break data)
     consensus_has_space = " " in consensus

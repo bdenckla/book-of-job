@@ -8,7 +8,7 @@ _GENCOM_PARA_2 = [
     "The שווא in question is present in μY.",
     " Relatedly, and importantly, μY has no רפה above its א.",
     " (The ink roughly between the כ and the א is the pair of above-dots",
-    " that is μY\u2019s equivalent of a masorah circle.)",
+    " that is μY’s equivalent of a masorah circle.)",
     " Thus, though μY presents a different word than the μL/μA word,",
     " it is still a valid word,",
     " i.e. the word makes sense according to the syllabic grammar of Biblical Hebrew.",
@@ -16,7 +16,7 @@ _GENCOM_PARA_2 = [
 _GENCOM_PARA_3 = [
     "In contrast, transcription in $BHQ results in a word that does not make sense,",
     " if it were supplemented with the רפה that is clearly present in μL.",
-    " This is one of several cases we\u2019ve seen where רפה,",
+    " This is one of several cases we’ve seen where רפה,",
     " though generally safe to ignore (and discard),",
     " is not always safe to ignore (and discard).",
     " See also $link_31_7.",

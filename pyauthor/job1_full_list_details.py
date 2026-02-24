@@ -36,11 +36,11 @@ def _nav_bar(prev_sid, next_sid):
     parts = []
     if prev_sid is not None:
         parts.append("[p] ")
-        parts.append(my_html.anchor_h("\u2190 prev", f"{prev_sid}.html"))
+        parts.append(my_html.anchor_h("← prev", f"{prev_sid}.html"))
     if prev_sid is not None and next_sid is not None:
         parts.append(" \u2003 ")
     if next_sid is not None:
-        parts.append(my_html.anchor_h("next \u2192", f"{next_sid}.html"))
+        parts.append(my_html.anchor_h("next →", f"{next_sid}.html"))
         parts.append(" [n]")
     return my_html.para(parts, {"class": "center", "style": "margin-top: 2em"})
 

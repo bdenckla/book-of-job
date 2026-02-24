@@ -32,7 +32,7 @@ def _list_item(eqr):
     wiw = eqr["qr-what-is-weird"]
     wiw_text = _extract_text(wiw)
     link = my_html.anchor_h(f"Job {cv}", d1d_detail_href(sid))
-    return [link, f" \u2014 {wiw_text}"]
+    return [link, f" — {wiw_text}"]
 
 
 def _comments_mention_mu_y(eqr):
@@ -45,7 +45,7 @@ def _field_mentions_mu_y(eqr, field):
     value = eqr.get(field)
     if value is None:
         return False
-    return "\u03bcY" in _extract_text(value)
+    return "μY" in _extract_text(value)
 
 
 def _extract_text(obj):

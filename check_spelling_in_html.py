@@ -37,10 +37,10 @@ def load_custom_dictionary(
         data = json.loads(dict_path.read_text(encoding="utf-8"))
         for word in data.get("words", []):
             # Normalize curly apostrophes to straight for lookup
-            words_ci.add(word.replace("\u2019", "'").lower())
+            words_ci.add(word.replace("’", "'").lower())
         for word in data.get("words_exact", []):
             # Normalize curly apostrophes but preserve case
-            words_exact.add(word.replace("\u2019", "'"))
+            words_exact.add(word.replace("’", "'"))
         phrases = data.get("phrases", [])
         phrases_hebrew = data.get("phrases_hebrew", [])
         for word in data.get("words_hebrew", []):
@@ -64,7 +64,7 @@ def extract_english_words(text: str) -> list[str]:
     # Remove $-prefixed sigla ($BHQ, $yod, $BHL_A, etc.)
     text = re.sub(r"\$[A-Za-z_]+", " ", text)
     # Extract words (letters including scholarly transliteration chars like š, ṣ, ḥ)
-    # Include curly apostrophe (\u2019) as part of contractions (e.g. doesn\u2019t)
+    # Include curly apostrophe (’) as part of contractions (e.g. doesn’t)
     # Include μ for sigla like μL, μA
     words = re.findall(r"[a-zA-ZšṣḥŠṢḤμ]+(?:\u2019[a-zA-Z]+)*", text)
     return words
@@ -134,7 +134,7 @@ class _TextExtractor(HTMLParser):
 
 
 def check_straight_apostrophes(html_files: list[Path]):
-    """Check for straight apostrophes (U+0027) in HTML text; curly (\u2019) should be used."""
+    """Check for straight apostrophes (U+0027) in HTML text; curly (’) should be used."""
     issues = []
     for html_path in html_files:
         text, _ = _extract_text_from_html(html_path)
@@ -213,7 +213,7 @@ def check_spelling(html_files: list[Path], custom_dict_path: Path):
         words = extract_english_words(cleaned)
         for word in words:
             # Normalize curly apostrophe to straight for lookups
-            normalized = word.replace("\u2019", "'")
+            normalized = word.replace("’", "'")
             lookup_lower = normalized.lower()
             if normalized in words_exact:
                 word_exact_freq[normalized] += 1
@@ -282,7 +282,7 @@ def main(*, verbose=False):
     apos_issues = check_straight_apostrophes(html_files)
     if apos_issues:
         print(
-            f"\nFound {len(apos_issues)} straight-apostrophe issues (use \u2019 not '):\n"
+            f"\nFound {len(apos_issues)} straight-apostrophe issues (use ’ not '):\n"
         )
         for issue in apos_issues:
             print(f"  [{issue['file']}]: ...{issue['context']}...")

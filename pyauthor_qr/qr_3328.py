@@ -9,7 +9,7 @@ _COMMENT_PARA2 = [
     " perhaps because it was done in an ink that aged better.",
     " Fortunately it is the pointing, not the letters,",
     " that are at issue here, and in any case,",
-    " the pointing allows us to \u201cback-decipher\u201d the letters",
+    " the pointing allows us to “back-decipher” the letters",
     " and see that the רביע dot in question is indeed present",
     " on top of the (faint) ת.",
 ]

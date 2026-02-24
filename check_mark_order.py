@@ -5,7 +5,8 @@ project’s standard combining-mark order (SBL2):
 
     base letter → shin/sin dot → dagesh → rafeh → (everything else unchanged)
 
-Uses ``give_std_mark_order`` from ``pycmn.uni_denorm``.
+The canonical reordering function is ``give_std_mark_order`` from
+pycmn.uni_denorm.
 
 A “Hebrew word” is any maximal run matched by the regex:
 
@@ -26,7 +27,7 @@ from pathlib import Path
 
 from pycmn.uni_denorm import give_std_mark_order
 
-# \u2500\u2500 regex definitions \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+# ── regex definitions ────────────────────────────────────────────────────────────────────
 
 # A “Hebrew word”: maximal run of Hebrew-block chars + CGJ + Varika.
 WORD_RE = re.compile(r"[\u0590-\u05FF\u034F\uFB1E]+")
@@ -34,7 +35,7 @@ WORD_RE = re.compile(r"[\u0590-\u05FF\u034F\uFB1E]+")
 # At least one Hebrew letter (alef through tav).
 HAS_LETTER_RE = re.compile(r"[\u05D0-\u05EA]")
 
-# \u2500\u2500 file discovery \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+# ── file discovery ──────────────────────────────────────────────────────────────────────
 
 _SKIP_DIRS = {".venv", "__pycache__", ".novc", ".git", "node_modules"}
 
@@ -48,7 +49,7 @@ def _tracked_files(root):
             yield p
 
 
-# \u2500\u2500 checking logic \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+# ── checking logic ──────────────────────────────────────────────────────────────────────
 
 
 def _check_file(path, root):

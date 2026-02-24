@@ -169,7 +169,7 @@ def process_quirkrec(qr, pages, scale=2):
     # Save
     out_path = OUT_DIR / f"crop_edit_{sid}.png"
     crop.save(out_path)
-    print(f"  Saved: {out_path.name} ({crop_w}\u00d7{crop_h})")
+    print(f"  Saved: {out_path.name} ({crop_w}×{crop_h})")
 
     # Context words
     before = line_words[:word_idx]
@@ -190,7 +190,7 @@ def process_quirkrec(qr, pages, scale=2):
         "img_file": f"crop_edit_{sid}.png",
         "crop_w": crop_w,
         "crop_h": crop_h,
-        # Initial bounding box in crop-image relative coords (0\u20131)
+        # Initial bounding box in crop-image relative coords (0–1)
         "box_left": round(highlight_left / crop_w, 4),
         "box_right": round(highlight_right / crop_w, 4),
         "box_top": round(box_top / crop_h, 4),
@@ -246,16 +246,16 @@ def generate_html(results):
         before_joined = join_maqaf(list(r["before"]))
         after_joined = join_maqaf(list(r["after"]))
         target_display = r["matched_word"]
-        if before_joined and before_joined[-1].endswith("\u05be"):
+        if before_joined and before_joined[-1].endswith("־"):
             target_display = before_joined.pop() + target_display
-        if target_display.endswith("\u05be") and after_joined:
+        if target_display.endswith("־") and after_joined:
             target_display = target_display + after_joined.pop(0)
         before_html = " ".join(before_joined)
         after_html = " ".join(after_joined)
 
         items_html_parts.append(
             f'<div class="editor-item" data-idx="{i}">\n'
-            f'  <h2>{r["sid"]} \u2014 Job {r["cv"]} \u2014 {r["consensus"]}</h2>\n'
+            f'  <h2>{r["sid"]} — Job {r["cv"]} — {r["consensus"]}</h2>\n'
             f'  <p class="meta">Page {r["page"]}, col {r["col"]}, '
             f'line {r["line_num"]}, word {r["word_idx"]}</p>\n'
             f'  <div class="crop-box">\n'
@@ -371,7 +371,7 @@ const N = ITEMS.length;
 const FINE_SCALE = 0.2;
 let fineMode = true;
 
-// Current box state for each item (0\u20131 relative coords)
+// Current box state for each item (0–1 relative coords)
 const boxes = ITEMS.map(it => ({{
   left:   it.box.left,
   top:    it.box.top,
@@ -607,7 +607,7 @@ function exportJSON() {{
     const it = ITEMS[i];
     const b  = boxes[i];
 
-    // Convert relative crop coords \u2192 page-reference absolute pixels.
+    // Convert relative crop coords → page-reference absolute pixels.
     // scaledCropLeft/Top are pixel offsets in the downloaded (scaled) image.
     // Divide by sx/sy to get reference-resolution coordinates.
     const refX = Math.round((it.scaledCropLeft + b.left   * it.cropW) / it.sx);

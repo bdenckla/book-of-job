@@ -3,7 +3,7 @@ from pyauthor_util import author
 
 _GENCOM_PARA_2 = [
     "The two dots above the מ in the μY image are",
-    " the pair of above-dots that is μY\u2019s equivalent of a masorah circle.",
+    " the pair of above-dots that is μY’s equivalent of a masorah circle.",
     " See $link_19_16_BMV0PY for another example of this two-dot callout notation.",
 ]
 _BHQCOM_PART_1 = [

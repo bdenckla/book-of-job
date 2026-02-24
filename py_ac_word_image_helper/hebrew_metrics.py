@@ -20,7 +20,7 @@ def join_maqaf(words):
     """Join maqaf-ending words with the following word. Returns new list."""
     result = []
     for w in words:
-        if result and result[-1].endswith("\u05be"):
+        if result and result[-1].endswith("־"):
             result[-1] = result[-1] + w
         else:
             result.append(w)
@@ -32,41 +32,41 @@ def join_maqaf(words):
 # Values are relative to an "average" letter width of 1.0.
 HEB_WIDTHS = {
     # Very narrow
-    "\u05d9": 0.4,  # yod
-    "\u05d5": 0.5,  # vav
-    "\u05df": 0.5,  # nun sofit
+    "י": 0.4,  # yod
+    "ו": 0.5,  # vav
+    "ן": 0.5,  # nun sofit
     # Narrow
-    "\u05d6": 0.6,  # zayin
-    "\u05d2": 0.7,  # gimel
-    "\u05e8": 0.7,  # resh
-    "\u05da": 0.7,  # kaf sofit
-    "\u05e3": 0.7,  # pe sofit
+    "ז": 0.6,  # zayin
+    "ג": 0.7,  # gimel
+    "ר": 0.7,  # resh
+    "ך": 0.7,  # kaf sofit
+    "ף": 0.7,  # pe sofit
     # Medium
-    "\u05d1": 0.85,  # bet
-    "\u05d3": 0.85,  # dalet
-    "\u05d4": 0.9,  # he
-    "\u05db": 0.85,  # kaf
-    "\u05dc": 0.7,  # lamed
-    "\u05e0": 0.7,  # nun
-    "\u05e2": 0.9,  # ayin
-    "\u05e4": 0.9,  # pe
-    "\u05e5": 0.8,  # tsade sofit
-    "\u05e6": 0.8,  # tsade
-    "\u05e7": 0.9,  # qof
-    "\u05ea": 0.9,  # tav
+    "ב": 0.85,  # bet
+    "ד": 0.85,  # dalet
+    "ה": 0.9,  # he
+    "כ": 0.85,  # kaf
+    "ל": 0.7,  # lamed
+    "נ": 0.7,  # nun
+    "ע": 0.9,  # ayin
+    "פ": 0.9,  # pe
+    "ץ": 0.8,  # tsade sofit
+    "צ": 0.8,  # tsade
+    "ק": 0.9,  # qof
+    "ת": 0.9,  # tav
     # Wide
-    "\u05d0": 1.0,  # alef
-    "\u05d7": 1.0,  # chet
-    "\u05d8": 1.0,  # tet
-    "\u05de": 1.0,  # mem
-    "\u05e1": 1.0,  # samekh
-    "\u05e9": 1.1,  # shin
+    "א": 1.0,  # alef
+    "ח": 1.0,  # chet
+    "ט": 1.0,  # tet
+    "מ": 1.0,  # mem
+    "ס": 1.0,  # samekh
+    "ש": 1.1,  # shin
     # Very wide
-    "\u05dd": 1.1,  # mem sofit
+    "ם": 1.1,  # mem sofit
     # Punctuation
-    "\u05be": 0.6,  # maqaf
-    "\u05c0": 0.3,  # paseq
-    "\u05c3": 0.3,  # sof pasuq
+    "־": 0.6,  # maqaf
+    "׀": 0.3,  # paseq
+    "׃": 0.3,  # sof pasuq
     "\u003a": 0.3,  # colon (sometimes used for sof pasuq in data)
 }
 

@@ -97,7 +97,7 @@ def _apply_normal_crop(crop, page_cache, source_meta_cache, persistent):
 
     out_path = OUT_DIR / f"cam1753-{sid}.png"
     cropped.save(out_path, pnginfo=png_info)
-    print(f"  {out_path.name}: {cropped.size[0]}\u00d7{cropped.size[1]}")
+    print(f"  {out_path.name}: {cropped.size[0]}×{cropped.size[1]}")
 
     # Persistent record
     source_meta = json.loads(source_meta_str) if source_meta_str else None
@@ -163,9 +163,9 @@ def _apply_split_crop(crop, page_cache, source_meta_cache, persistent):
     out_path = OUT_DIR / f"cam1753-{sid}.png"
     combined.save(out_path, pnginfo=png_info)
     print(
-        f"  {out_path.name}: {combined.size[0]}\u00d7{combined.size[1]} "
-        f"(split: {img_a.size[0]}\u00d7{img_a.size[1]} + "
-        f"{img_b.size[0]}\u00d7{img_b.size[1]})"
+        f"  {out_path.name}: {combined.size[0]}×{combined.size[1]} "
+        f"(split: {img_a.size[0]}×{img_a.size[1]} + "
+        f"{img_b.size[0]}×{img_b.size[1]})"
     )
 
     # Persistent record

@@ -18,10 +18,10 @@ _GENCOM_PARA_3 = [
     "Here μY matches μL,",
     " with the exception of two dots roughly between the ב and the מ.",
     " These dots are of unequal size, which is odd.",
-    " They are likely a Masorah parva \u201ccallout\u201d\u2014note that",
+    " They are likely a Masorah parva “callout”—note that",
     " instead of a masorah circle,",
     " μY uses a pair of above-dots",
-    " as a \u201ccallout\u201d for a Masorah parva note.",
+    " as a “callout” for a Masorah parva note.",
     " See $link_22_21_3MV for another example of this two-dot callout notation.",
 ]
 RECORD_1916_BMV0PY = {
