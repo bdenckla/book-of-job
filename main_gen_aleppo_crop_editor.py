@@ -19,26 +19,29 @@ import traceback
 import webbrowser
 from pathlib import Path
 
-import numpy as np
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent
 OUT_DIR = ROOT / ".novc"
 
-sys.path.insert(0, str(ROOT))
+
+# Add sibling repo to sys.path so we can import the shared Aleppo package
+ALEPPO_REPO = ROOT.parent / "codex-index-aleppo"
+sys.path.insert(0, str(ALEPPO_REPO))
+
 from py_ac_word_image_helper.codex_page import (
     CC_DIR,
-    download_page,
+    LB_DIR,
     find_page_for_verse,
     get_line_bbox,
     load_index,
+    load_page_image,
 )
-from py_ac_word_image_helper.hebrew_metrics import (
-    SPACE_WIDTH,
-    join_maqaf,
-    line_widths,
-)
+from py_ac_word_image_helper.crop import compute_fade_overlay, estimate_word_position
+from py_ac_word_image_helper.hebrew_metrics import join_maqaf
 from py_ac_word_image_helper.linebreak_search import find_word_in_linebreaks
+
+sys.path.insert(0, str(ROOT))
 from pyauthor_util.short_id_etc import short_id
 
 with open(ROOT / "out" / "enriched-quirkrecs.json", encoding="utf-8") as _f:
@@ -48,7 +51,7 @@ with open(ROOT / "out" / "enriched-quirkrecs.json", encoding="utf-8") as _f:
 # ── Process a single quirkrec ──────────────────────────────────────────
 
 
-def process_quirkrec(qr, pages, scale=2):
+def process_quirkrec(qr, pages):
     """Generate a crop image and return metadata with initial bbox."""
     sid = short_id(qr)
     cv = qr["qr-cv"]
@@ -63,8 +66,8 @@ def process_quirkrec(qr, pages, scale=2):
         print(f"  ERROR: Could not find page for Job {cv}")
         return None
 
-    col, line_num, word_idx, line_words = find_word_in_linebreaks(
-        page_id, ch, v, lb_word
+    col, line_num, word_idx, line_words, _match_method = find_word_in_linebreaks(
+        LB_DIR, page_id, "Job", ch, v, lb_word
     )
     if col is None:
         print("  ERROR: Could not find word in line-break data")
@@ -77,8 +80,8 @@ def process_quirkrec(qr, pages, scale=2):
         page_id, col, line_num
     )
 
-    # Download page
-    img = download_page(page_id, scale=scale)
+    # Load page image from local files
+    img = load_page_image(page_id)
     actual_w, actual_h = img.size
 
     # Scale factor: reference ↔ actual
@@ -106,64 +109,19 @@ def process_quirkrec(qr, pages, scale=2):
     highlight_bot = tgt_y + tgt_ls
 
     # Horizontal word-position estimate (RTL)
-    word_ws, total_width = line_widths(line_words)
-    if total_width > 0:
-        width_before = sum(word_ws[:word_idx]) + SPACE_WIDTH * word_idx
-        width_target = word_ws[word_idx] if word_idx < len(word_ws) else 0
-        frac_start = width_before / total_width
-        frac_end = (width_before + width_target) / total_width
-        buffer = 0.15
-        frac_left = max(0, frac_start - buffer)
-        frac_right = min(1, frac_end + buffer)
-        highlight_right = int(crop_w * (1 - frac_left))
-        highlight_left = int(crop_w * (1 - frac_right))
-    else:
-        highlight_left = 0
-        highlight_right = crop_w
+    highlight_left, highlight_right = estimate_word_position(
+        line_words, word_idx, crop_w
+    )
 
     # Initial bounding box (red-line region)
     half_ls = tgt_ls // 2
     box_top = max(0, highlight_top - half_ls)
     box_bot = min(crop_h - 1, highlight_bot + half_ls)
 
-    # ── Fade overlay (visual guide) ────────
-    h, w = crop_h, crop_w
-    fade_color = (200, 180, 60)
-    max_alpha = 200
-
-    vert_fade = np.zeros(h, dtype=np.float64)
-    for y in range(h):
-        if y < highlight_top:
-            dist = highlight_top - y
-            fade_range = max(highlight_top, 1)
-            vert_fade[y] = (dist / fade_range) ** 0.6
-        elif y > highlight_bot:
-            dist = y - highlight_bot
-            fade_range = max(h - highlight_bot, 1)
-            vert_fade[y] = (dist / fade_range) ** 0.6
-
-    horiz_fade = np.zeros(w, dtype=np.float64)
-    for x in range(w):
-        if x < highlight_left:
-            dist = highlight_left - x
-            fade_range = max(highlight_left, 1)
-            horiz_fade[x] = (dist / fade_range) ** 0.6
-        elif x > highlight_right:
-            dist = x - highlight_right
-            fade_range = max(w - highlight_right, 1)
-            horiz_fade[x] = (dist / fade_range) ** 0.6
-
-    vert_2d = vert_fade[:, np.newaxis]
-    horiz_2d = horiz_fade[np.newaxis, :]
-    combined = np.maximum(vert_2d, horiz_2d)
-    alpha_arr = (combined * max_alpha).clip(0, 255).astype(np.uint8)
-
-    overlay_arr = np.zeros((h, w, 4), dtype=np.uint8)
-    overlay_arr[:, :, 0] = fade_color[0]
-    overlay_arr[:, :, 1] = fade_color[1]
-    overlay_arr[:, :, 2] = fade_color[2]
-    overlay_arr[:, :, 3] = alpha_arr
-    overlay = Image.fromarray(overlay_arr, "RGBA")
+    # Fade overlay (visual guide)
+    overlay = compute_fade_overlay(
+        crop_w, crop_h, highlight_left, highlight_right, highlight_top, highlight_bot
+    )
     crop = Image.alpha_composite(crop, overlay)
 
     # Save

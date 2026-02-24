@@ -63,6 +63,14 @@ Black respects `.gitignore` by default, so this covers all tracked Python files 
 
 **Never install packages to the system Python.** Always install into the project venv using `.venv\Scripts\pip.exe install <package>` (or ensure the venv is activated first). Add new dependencies to `requirements.txt` at the top level.
 
+## Python Package `__init__.py` Style
+
+Keep `__init__.py` files **minimal** — they exist only as package markers so that explicit submodule imports work (e.g. `from py_ac_word_image_helper.codex_page import ...`). Do **not** add re-exports to `__init__.py`; always import directly from the submodule that defines the symbol.
+
+## Global Variables
+
+Avoid the `global` keyword and avoid mutating module-level variables. If a function needs shared state, pass it as a parameter or return it. Module-level constants (ALL_CAPS) are fine as long as they remain immutable after definition.
+
 ## Reading and Writing Python Files
 
 When reading or modifying Python source files in this project:
@@ -136,8 +144,16 @@ This does not apply to throwaway files in `.novc/`.
 ## Git Discipline
 
 - **Never auto-commit.** Only commit when the user explicitly asks.
+- **Always use fresh commits.** Never use `git commit --amend` unless the user explicitly requests it.
 - **Before discarding work** (`git reset`, `git checkout -- .`, `git stash drop`, etc.): always run `git status` and `git diff --stat` first. If there are uncommitted changes beyond the current experiment, alert the user and ask them to commit or stash before proceeding.
 - **Before a series of experiments** that might need to be thrown away: ask the user to commit the current clean state first, so there is a safe baseline to return to.
+
+## Markdown formatting
+
+- **Avoid strikethrough:** Do not use bare tildes (`~`) as an
+  abbreviation for “approximately.” Markdown renderers interpret text
+  between two `~` characters as strikethrough. Instead, write out
+  “approx.” or “approximately,” or escape the tilde (`\~`).
 
 ## Workflow Reference
 

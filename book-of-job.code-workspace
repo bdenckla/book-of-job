@@ -14,6 +14,20 @@
 		"python.analysis.diagnosticSeverityOverrides": {
 			"reportUnusedImport": "warning",
 			"reportUnusedVariable": "error"
+		},
+		"chat.tools.terminal.autoApprove": {
+			".venv\\Scripts\\pip.exe": true,
+			".venv\\Scripts\\python.exe": true,
+			"ConvertFrom-Json": true,
+			"ForEach-Object": true,
+			"Get-FileHash": true,
+			"git add": true,
+			"git commit": true,
+			"git mv": true,
+			"git push": true,
+			"git remote": true,
+			"git rm": true,
+			"Test-Path": true
 		}
 	},
 	"launch": {
