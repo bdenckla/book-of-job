@@ -169,7 +169,7 @@ The following workflow docs are available via `#file` when needed:
 | Open HTML files / fragment anchors / caching | `copilot-instructions-opening-html.md` |
 | View image metadata (XnView MP) | `copilot-instructions-image-metadata.md` |
 | Image crop reproducibility rules | `copilot-instructions-image-crop-reproducibility.md` |
-| Work with MAM-XML files | `copilot-instructions-mam-xml.md` |
+| Work with MAM-simple files | `copilot-instructions-mam-simple.md` |
 | Work with MAM parsed data | `copilot-instructions-mam-parsed.md` |
 
 All files are in `.github/`.
