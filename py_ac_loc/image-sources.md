@@ -32,6 +32,23 @@ page_index = (leaf_number - 1) * 2 + 2 + (0 if recto else 1)
 
 Examples: `270r` → `(270-1)*2+2+0` = `540`, `270v` → `541`.
 
+### Note: formula may not be uniform across the codex
+
+The formula above is verified for leaves 270–281 (Book of Job). However,
+it does not hold in at least one other area: leaf `148r` (Jeremiah) maps
+to page index `0294`, not `0296` as the formula would predict. In that
+area the formula appears to be:
+
+```
+page_index = (leaf_number - 1) * 2 + (0 if recto else 1)
+```
+
+i.e. without the `+2` offset. The offset likely shifts somewhere between
+leaf 148 and leaf 270, possibly due to extra page images (e.g. blank
+placeholders for the two completely missing Jeremiah leaves) inserted
+into the archive scan. The exact point where the offset changes has not
+been determined.
+
 ## Pages used (270r–281v)
 
 | Leaf  | Page index | `{NNNN}` |
