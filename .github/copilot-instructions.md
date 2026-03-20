@@ -41,6 +41,23 @@ In practice this means: **base letter \u2192 shin/sin dot \u2192 dagesh \u2192 r
 When in doubt, pass the text through `give_std_mark_order` rather than
 hand-ordering codepoints.
 
+### Literal UTF-8 in Python source — no unnecessary `\uXXXX` escapes
+
+Write Hebrew letters, punctuation (maqaf, gershayim, sof pasuq, nun hafukha), em dashes, en dashes, curly quotes, and other **displayable** characters as literal UTF-8 in Python source code. Do **not** use `\uXXXX` escape sequences for them. Pointed Hebrew (e.g. `בְּרֵאשִׁית`) should also appear as literal UTF-8 — combining marks are perfectly readable when attached to their base letters.
+
+**When a character cannot be literal** (e.g. zero-width characters like ZWJ, ZWNJ, CGJ; invisible whitespace like NBSP, thin space, hair space), prefer `\N{...}` named escapes over `\uXXXX`:
+
+```python
+_NDASH = "\N{EN DASH}"
+_ZWJ = "\N{ZERO WIDTH JOINER}"
+```
+
+`\N{...}` is self-documenting — a reader sees the character's identity without looking up a hex code. Use `\uXXXX` only as a last resort (e.g. when there is no Unicode name, or inside a regex character class range). It is rare to find a case where `\uXXXX` is the right choice.
+
+**When a string does use escapes**, add a comment showing the string in literal UTF-8 so a reader can see what it says.
+
+This policy is enforced by `check_escape_sequences.py` and violations can be auto-fixed with `fix_escape_sequences.py` (both wired into `check_all.py`).
+
 ## Temporary Generated Files
 
 Place any temporary generated files (scripts, HTML reports, debugging output, etc.) into the `.novc/` folder. This folder is excluded from version control.
