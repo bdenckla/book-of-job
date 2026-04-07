@@ -70,7 +70,13 @@ Place any temporary generated files (scripts, HTML reports, debugging output, et
 
 **Never run Python one-liners via `python -c "..."` in the terminal.** These invariably fail due to character encoding and/or shell escaping issues, especially with Hebrew text. Instead, always create an actual `.py` file in `.novc/` and run it with `.venv\Scripts\python.exe .novc/<filename>.py`.
 
-**Always set `$env:PYTHONIOENCODING="utf-8"` before running any Python command in PowerShell.** The Windows console defaults to cp1252, which cannot encode Hebrew characters and causes `UnicodeEncodeError` on any `print()` that includes Hebrew text. Set the variable once per terminal session before the first Python invocation.
+**For scripts that print Hebrew to stdout/stderr:** prefer writing output to a file instead. When stdout output is necessary, reconfigure the streams at the top of `main()` rather than relying on environment variables:
+```python
+import sys
+sys.stdout.reconfigure(encoding="utf-8")
+sys.stderr.reconfigure(encoding="utf-8")
+```
+Use `$env:PYTHONIOENCODING="utf-8"` only for `.novc/` throwaway scripts where changing the code is not an option.
 
 **Running Black:** From the repo top directory, run:
 ```
