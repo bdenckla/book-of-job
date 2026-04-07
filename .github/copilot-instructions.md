@@ -183,7 +183,6 @@ When the payload is inherently multi-line (a commit message, a GitHub issue/PR b
 - **Before a series of experiments** that might need to be thrown away: ask the user to commit the current clean state first, so there is a safe baseline to return to.
 - **Commit messages** — write to a uniquely-named `.novc/commit_msg_<slug>.txt` file and commit with `git commit -F .novc/commit_msg_<slug>.txt`. Never pass multi-line or Hebrew-containing messages as a `-m` string. Use a unique slug per commit to avoid stale-file mistakes.
 - **Don't close issues prematurely.** Never close a GitHub issue until work is both committed **and** pushed.
-- **Don't re-assert the repo directory.** Run `git` directly without `cd` or `git -C <this-repo>`. For a sibling repo, use `git -C <path>`.
 
 ## Markdown formatting
 
