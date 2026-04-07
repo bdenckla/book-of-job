@@ -168,6 +168,13 @@ When generating a new version-controlled file (Python script, Markdown doc, etc.
 
 This does not apply to throwaway files in `.novc/`.
 
+## Multi-Line Content — Write to `.novc/` Files
+
+When the payload is inherently multi-line (a commit message, a GitHub issue/PR body, etc.), write it to a file in `.novc/` and reference the file. Do not pass multi-line content as a command argument — the Windows shell mangles it.
+
+- **Git commit messages** — write to `.novc/commit_msg_<slug>.txt`, then `git commit -F .novc/commit_msg_<slug>.txt`
+- **GitHub issue/PR bodies** — write to `.novc/issue_body.md` (or similar), then `gh issue create --body-file .novc/issue_body.md`
+
 ## Git Discipline
 
 - **Never auto-commit.** Only commit when the user explicitly asks.
@@ -176,6 +183,7 @@ This does not apply to throwaway files in `.novc/`.
 - **Before a series of experiments** that might need to be thrown away: ask the user to commit the current clean state first, so there is a safe baseline to return to.
 - **Commit messages** — write to a uniquely-named `.novc/commit_msg_<slug>.txt` file and commit with `git commit -F .novc/commit_msg_<slug>.txt`. Never pass multi-line or Hebrew-containing messages as a `-m` string. Use a unique slug per commit to avoid stale-file mistakes.
 - **Don't close issues prematurely.** Never close a GitHub issue until work is both committed **and** pushed.
+- **Don't re-assert the repo directory.** Run `git` directly without `cd` or `git -C <this-repo>`. For a sibling repo, use `git -C <path>`.
 
 ## Markdown formatting
 
@@ -197,6 +205,10 @@ Do **not** write defensive code that swallows errors or returns `None` on unexpe
 ## JSON Lists: Prepend, Don't Append
 
 When adding to a semantically unordered JSON array, **prepend** rather than append. Appending requires a two-line diff; prepending is a clean one-line diff.
+
+## GitHub Repository Owner
+
+The owner is **bdenckla**. Use this for GitHub MCP queries. Confirm via `git remote -v` if unsure.
 
 ## Local Sibling Repositories
 
