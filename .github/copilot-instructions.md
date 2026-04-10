@@ -156,8 +156,8 @@ C:\Users\BenDe\OneDrive\Pictures\Screenshots
 After making changes to Python source files, verify the HTML output is unchanged:
 
 1. Run: `python ./main_gen_misc_authored_english_documents.py`
-2. Check: `git status --porcelain docs/`
-3. If any files in `docs/` are modified, investigate and fix the differences before considering the task complete
+2. Check: `git status --porcelain gh-pages/`
+3. If any files in `gh-pages/` are modified, investigate and fix the differences before considering the task complete
 
 ## Authorship Marking
 

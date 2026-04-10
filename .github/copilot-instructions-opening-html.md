@@ -6,7 +6,7 @@ When displaying an HTML file that only uses local/relative resources (images, CS
 
 ```powershell
 # Start server (background):
-python -m http.server 8471 --directory docs
+python -m http.server 8471 --directory gh-pages
 
 # Open anchored URLs:
 $sids = @("SID1","SID2","SID3")

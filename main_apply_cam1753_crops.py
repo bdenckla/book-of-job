@@ -4,13 +4,13 @@ Apply cam1753 word crops from exported editor JSON.
 
 Reads the bbox JSON exported by the cam1753 crop editor (from clipboard
 or .novc/cam1753_crops_export.json), crops each word from the full-resolution
-page image, and saves to docs/jobn/img/cam1753/cam1753-{sid}.png.
+page image, and saves to gh-pages/jobn/img/cam1753/cam1753-{sid}.png.
 
 Each output PNG includes tEXt metadata:
   - ``cam1753-source``: JSON from the source JPEG EXIF (spread info)
   - ``cam1753-crop``: JSON with the crop editor export fields
 
-Each batch is also appended to ``docs/jobn/img/cam1753/cam1753-crops.json``,
+Each batch is also appended to ``out/cam1753-crops.json``,
 a persistent record of all crop coordinates keyed by SID. This file stores
 enough data to reproduce crops programmatically at any image resolution.
 
@@ -33,7 +33,7 @@ sys.path.insert(0, str(CAM1753_REPO))
 
 from py_cam1753_word_image.page import load_page_image
 
-OUT_DIR = ROOT / "docs" / "jobn" / "img" / "cam1753"
+OUT_DIR = ROOT / "gh-pages" / "jobn" / "img" / "cam1753"
 CROPS_JSON = ROOT / "out" / "cam1753-crops.json"
 
 

@@ -21,7 +21,7 @@ displayed height matches the Aleppo image's native height.
 1. **Get the native dimensions** of both images:
    ```powershell
    $env:PYTHONIOENCODING="utf-8"
-   .venv\Scripts\python.exe -c "from PIL import Image; a=Image.open('docs/jobn/img/Aleppo/Aleppo-{SID}.png'); l=Image.open('docs/jobn/img/Lenin/Lenin-{SID}.png'); print(f'Aleppo: {a.size[0]}x{a.size[1]}'); print(f'Lenin:  {l.size[0]}x{l.size[1]}'); print(f'Scale:  {a.size[1]/l.size[1]:.4f}')"
+   .venv\Scripts\python.exe -c "from PIL import Image; a=Image.open('gh-pages/jobn/img/Aleppo/Aleppo-{SID}.png'); l=Image.open('gh-pages/jobn/img/Lenin/Lenin-{SID}.png'); print(f'Aleppo: {a.size[0]}x{a.size[1]}'); print(f'Lenin:  {l.size[0]}x{l.size[1]}'); print(f'Scale:  {a.size[1]/l.size[1]:.4f}')"
    ```
 
 2. **Set the scale factor** in `pyauthor_util/lenin_img_too_tall.py`:
@@ -37,7 +37,7 @@ displayed height matches the Aleppo image's native height.
 
 4. **Open the detail page** to verify:
    ```powershell
-   Start-Process "C:\Users\BenDe\GitRepos\book-of-job\docs\jobn-details\{SID}.html"
+   Start-Process "C:\Users\BenDe\GitRepos\book-of-job\gh-pages\jobn-details\{SID}.html"
    ```
 
 ## Notes

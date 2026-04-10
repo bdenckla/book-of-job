@@ -72,7 +72,7 @@ D1D_DIR = "jobn-details"
 
 
 def d1d_detail_href(sid):
-    """Return the relative href from docs/jobn/ to an individual detail file."""
+    """Return the relative href from gh-pages/jobn/ to an individual detail file."""
     return f"../{D1D_DIR}/{sid}.html"
 
 

@@ -38,7 +38,7 @@ the scripts handle that automatically.
    ```powershell
    $sids = @("SID1","SID2","SID3")   # from step 2 output
    foreach ($s in $sids) {
-       Start-Process "C:\Users\BenDe\GitRepos\book-of-job\docs\jobn-details\$s.html"
+         Start-Process "C:\Users\BenDe\GitRepos\book-of-job\gh-pages\jobn-details\$s.html"
        Start-Sleep -Milliseconds 500
    }
    ```
@@ -87,7 +87,7 @@ Applies crop bounding boxes from the editor export JSON to produce final PNGs.
 
 This:
 - Crops each word from the full-resolution page image
-- Saves PNGs to `docs/jobn/img/cam1753/cam1753-{sid}.png`
+- Saves PNGs to `gh-pages/jobn/img/cam1753/cam1753-{sid}.png`
 - Embeds tEXt metadata in each PNG for reproducibility
 - Appends entries to `out/cam1753-crops.json` (persistent crop record)
 
@@ -119,11 +119,11 @@ Process quirkrecs in batches of ~10:
    ```powershell
    $sids = @("SID1","SID2","SID3")
    foreach ($s in $sids) {
-       Start-Process "C:\Users\BenDe\GitRepos\book-of-job\docs\jobn-details\$s.html"
+         Start-Process "C:\Users\BenDe\GitRepos\book-of-job\gh-pages\jobn-details\$s.html"
        Start-Sleep -Milliseconds 500
    }
    ```
-   Detail pages are named `{SID}.html` in `docs/jobn-details/`.
+      Detail pages are named `{SID}.html` in `gh-pages/jobn-details/`.
 
 6. **Clean `.novc/`** after confirming the crops look good:
    ```powershell
@@ -135,7 +135,7 @@ Process quirkrecs in batches of ~10:
 ## Image naming convention
 
 - `cam1753-{short_id}.png` where `short_id` = `CCVV` or compound SID
-- Saved to `docs/jobn/img/cam1753/`
+- Saved to `gh-pages/jobn/img/cam1753/`
 
 ## Key data files
 

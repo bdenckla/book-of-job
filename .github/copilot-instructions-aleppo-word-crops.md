@@ -40,7 +40,7 @@ python main_list_missing_aleppo_imgs.py --all    # all missing
 python main_list_missing_aleppo_imgs.py -n 20    # first 20 missing
 ```
 
-A quirkrec counts as "done" if `docs/jobn/img/Aleppo/Aleppo-{sid}.png` exists
+A quirkrec counts as "done" if `gh-pages/jobn/img/Aleppo/Aleppo-{sid}.png` exists
 or it already has a `qr-aleppo-img` key.
 
 ### `main_gen_aleppo_crop_editor.py`
@@ -80,7 +80,7 @@ After the user exports JSON from the editor, create a one-off script
 1. Defines the `CROPS` list with `sid`, `page`, and `bbox_ref` for each
 2. Downloads page images at scale=1 (2× the reference coordinates)
 3. Scales `bbox_ref` by factor 2 and crops
-4. Saves to `docs/jobn/img/Aleppo/Aleppo-{sid}.png`
+4. Saves to `gh-pages/jobn/img/Aleppo/Aleppo-{sid}.png`
 
 Template:
 ```python
@@ -91,7 +91,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from py_ac_word_image_helper.codex_page import download_page
 
-OUT_DIR = ROOT / "docs" / "jobn" / "img" / "Aleppo"
+OUT_DIR = ROOT / "gh-pages" / "jobn" / "img" / "Aleppo"
 CROPS = [
     {"sid": "XXXX", "page": "NNNx", "bbox_ref": {"x": ..., "y": ..., "w": ..., "h": ...}},
     # ...
@@ -141,16 +141,16 @@ Process quirkrecs in batches of ~5:
 5. **Rebuild HTML and verify:**
    ```
    python main_gen_misc_authored_english_documents.py
-   git status --porcelain docs/
+   git status --porcelain gh-pages/
    ```
 
 6. **Show detail pages in browser** — open each detail page directly
    as a local file (no server needed):
    ```powershell
    $sids = @("SID1","SID2","SID3","SID4","SID5")
-   foreach ($s in $sids) { Start-Process "C:\Users\BenDe\GitRepos\book-of-job\docs\jobn-details\$s.html"; Start-Sleep -Milliseconds 500 }
+   foreach ($s in $sids) { Start-Process "C:\Users\BenDe\GitRepos\book-of-job\gh-pages\jobn-details\$s.html"; Start-Sleep -Milliseconds 500 }
    ```
-   Detail pages are named `{SID}.html` in `docs/jobn-details/`.
+   Detail pages are named `{SID}.html` in `gh-pages/jobn-details/`.
    The 500 ms delay prevents tabs from being dropped.
 
 7. **Commit** when satisfied.
@@ -158,7 +158,7 @@ Process quirkrecs in batches of ~5:
 ## Image naming convention
 
 - `Aleppo-{short_id}.png` where `short_id` = `CCVV` or `CCVV_WORDID`
-- Saved to `docs/jobn/img/Aleppo/`
+- Saved to `gh-pages/jobn/img/Aleppo/`
 - Typical size: ~130–430px wide, ~190–220px tall
 
 ## Scale conventions

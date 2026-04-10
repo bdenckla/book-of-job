@@ -1,5 +1,5 @@
 """
-Spell check English text in HTML output files under docs/
+Spell check English text in HTML output files under gh-pages/
 
 Usage:
     python ./check_spelling_in_quirkrecs.py
@@ -260,7 +260,7 @@ def check_spelling(html_files: list[Path], custom_dict_path: Path):
 
 def main(*, verbose=False):
     project_root = Path(__file__).parent
-    docs_dir = project_root / "docs"
+    docs_dir = project_root / "gh-pages"
     custom_dict_path = Path(__file__).parent / "check_spelling_in_html.custom-dict.json"
 
     if not docs_dir.exists():
@@ -386,7 +386,7 @@ def _extract_text_from_html(html_path: Path) -> tuple[str, str]:
 
 
 def _collect_html_files(docs_dir: Path) -> list[Path]:
-    """Collect all .html files under docs/, recursively."""
+    """Collect all .html files under gh-pages/, recursively."""
     return sorted(docs_dir.rglob("*.html"))
 
 

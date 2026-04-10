@@ -627,7 +627,7 @@ def main():
         # Every quirkrec missing an aleppo image
         for eqr in EQRS:
             sid = short_id(eqr)
-            img_path = ROOT / "docs" / "jobn" / "img" / "Aleppo" / f"Aleppo-{sid}.png"
+          img_path = ROOT / "gh-pages" / "jobn" / "img" / "Aleppo" / f"Aleppo-{sid}.png"
             if not os.path.exists(img_path):
                 examples.append(eqr)
     elif cli_sids:
@@ -656,7 +656,7 @@ def main():
             for eqr in EQRS:
                 sid = short_id(eqr)
                 img_path = (
-                    ROOT / "docs" / "jobn" / "img" / "Aleppo" / f"Aleppo-{sid}.png"
+                ROOT / "gh-pages" / "jobn" / "img" / "Aleppo" / f"Aleppo-{sid}.png"
                 )
                 if not os.path.exists(img_path) and eqr not in examples:
                     examples.append(eqr)

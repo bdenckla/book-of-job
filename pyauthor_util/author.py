@@ -131,7 +131,7 @@ def para_for_img(img_path, widthclass=None, img_prefix="img", scale=None):
         from PIL import Image as _PILImage
         from pathlib import Path as _Path
 
-        img_file = _Path("docs") / "jobn" / img_prefix / img_path
+        img_file = _Path("gh-pages") / "jobn" / img_prefix / img_path
         with _PILImage.open(img_file) as im:
             nat_w, nat_h = im.size
         w = round(nat_w * scale)

@@ -52,7 +52,7 @@ to the `qr-generic-comment` list.
 
 6. **Verify** the output is correct:
    ```
-   git status --porcelain docs/
+  git status --porcelain gh-pages/
    ```
    Inspect the changed HTML to confirm the comment appears as expected.
 
@@ -60,7 +60,7 @@ to the `qr-generic-comment` list.
    anchors):
    ```powershell
    # Start server if not already running:
-   python -m http.server 8471 --directory docs
+  python -m http.server 8471 --directory gh-pages
 
    # Open the quirkrec detail page:
    Start-Process "http://localhost:8471/jobn/job1_full_list_details.html#row-XXYY"

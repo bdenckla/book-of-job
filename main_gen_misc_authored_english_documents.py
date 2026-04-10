@@ -25,13 +25,13 @@ __all__ = ["main"]
 
 def main():
 
-    jobn_rel_top = "docs/jobn"
+    jobn_rel_top = "gh-pages/jobn"
     # Delete all HTML and CSS files to avoid stale files when output names change
     _delete_files(jobn_rel_top, ["*.html", "*.css"])
-    _delete_files(f"docs/{D1D_DIR}", ["*.html"])
+    _delete_files(f"gh-pages/{D1D_DIR}", ["*.html"])
     #
     css_href = "style.css"
-    tcstyles.make_css_file_for_authored(f"docs/{css_href}")
+    tcstyles.make_css_file_for_authored(f"gh-pages/{css_href}")
     tcstyles.make_css_file_for_authored(f"{jobn_rel_top}/{css_href}")
     #
     tdm_ch = jobn_rel_top, css_href
@@ -46,7 +46,7 @@ def main():
     job4_quirks_in_mu_a.gen_html_file(aq)
     job5_orphan_qere_points.gen_html_file(tdm_ch)
     job6_cam1753_mentions.gen_html_file(tdm_ch, eqrs)
-    _write_index_dot_html((css_href,), "docs/index.html")
+    _write_index_dot_html((css_href,), "gh-pages/index.html")
     check_spelling_in_html.main()
 
 

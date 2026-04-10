@@ -6,13 +6,13 @@ from py import my_html
 
 
 def gen_html_files(ov_and_de):
-    """Write one HTML file per quirkrec into docs/jobn-details/.
+    """Write one HTML file per quirkrec into gh-pages/jobn-details/.
 
     Args:
         ov_and_de: dict mapping row IDs ("row-{SID}") to sub-dicts
             with keys "od-details", "od-quirkrec", etc.
     """
-    out_dir = f"docs/{D1D_DIR}"
+    out_dir = f"gh-pages/{D1D_DIR}"
     os.makedirs(out_dir, exist_ok=True)
     css_href = "../jobn/style.css"
     items = list(ov_and_de.items())
