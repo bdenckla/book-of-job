@@ -25,11 +25,6 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent
 OUT_DIR = ROOT / ".novc"
 
-
-# Add sibling repo to sys.path so we can import the shared cam1753 package
-CAM1753_REPO = ROOT.parent / "codex-index-cam1753"
-sys.path.insert(0, str(CAM1753_REPO))
-
 from py_cam1753_word_image.crop import compute_fade_overlay, estimate_word_position
 from py_cam1753_word_image.hebrew_metrics import join_maqaf
 from py_cam1753_word_image.linebreak_search import find_word_in_linebreaks

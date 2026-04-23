@@ -24,11 +24,6 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent
 OUT_DIR = ROOT / ".novc"
 
-
-# Add sibling repo to sys.path so we can import the shared Aleppo package
-ALEPPO_REPO = ROOT.parent / "codex-index-aleppo"
-sys.path.insert(0, str(ALEPPO_REPO))
-
 from py_ac_word_image_helper.codex_page import (
     CC_DIR,
     LB_DIR,
