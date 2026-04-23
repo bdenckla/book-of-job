@@ -40,7 +40,6 @@ from py_cam1753_word_image.page import (
     load_page_image,
 )
 
-sys.path.insert(0, str(ROOT))
 from pyauthor_util.short_id_etc import short_id
 
 with open(ROOT / "out" / "enriched-quirkrecs.json", encoding="utf-8") as _f:
@@ -608,7 +607,7 @@ def main():
         # Every quirkrec missing a cam1753 image
         for eqr in EQRS:
             sid = short_id(eqr)
-          img_path = ROOT / "gh-pages" / "jobn" / "img" / f"cam1753-{sid}.png"
+            img_path = ROOT / "gh-pages" / "jobn" / "img" / f"cam1753-{sid}.png"
             if not os.path.exists(img_path):
                 examples.append(eqr)
     elif cli_sids:
@@ -622,7 +621,7 @@ def main():
         count = 0
         for eqr in EQRS:
             sid = short_id(eqr)
-          img_path = ROOT / "gh-pages" / "jobn" / "img" / f"cam1753-{sid}.png"
+            img_path = ROOT / "gh-pages" / "jobn" / "img" / f"cam1753-{sid}.png"
             if not os.path.exists(img_path):
                 examples.append(eqr)
                 count += 1

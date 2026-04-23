@@ -41,7 +41,6 @@ from py_ac_word_image_helper.crop import compute_fade_overlay, estimate_word_pos
 from py_ac_word_image_helper.hebrew_metrics import join_maqaf
 from py_ac_word_image_helper.linebreak_search import find_word_in_linebreaks
 
-sys.path.insert(0, str(ROOT))
 from pyauthor_util.short_id_etc import short_id
 
 with open(ROOT / "out" / "enriched-quirkrecs.json", encoding="utf-8") as _f:
@@ -627,7 +626,7 @@ def main():
         # Every quirkrec missing an aleppo image
         for eqr in EQRS:
             sid = short_id(eqr)
-          img_path = ROOT / "gh-pages" / "jobn" / "img" / "Aleppo" / f"Aleppo-{sid}.png"
+            img_path = ROOT / "gh-pages" / "jobn" / "img" / "Aleppo" / f"Aleppo-{sid}.png"
             if not os.path.exists(img_path):
                 examples.append(eqr)
     elif cli_sids:
