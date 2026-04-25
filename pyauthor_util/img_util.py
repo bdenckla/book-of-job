@@ -2,7 +2,7 @@ import os
 from pyauthor_util.lenin_img_too_tall import LENIN_IMG_SCALE
 from pyauthor_util.short_id_etc import short_id
 
-_INFO_ABOUT_OPTIONAL_IMAGES = [
+INFO_ABOUT_OPTIONAL_IMAGES = [
     ("qr-aleppo-img", "Aleppo/Aleppo-CCVV.png"),
     ("qr-cam1753-img", "cam1753/cam1753-CCVV.png"),
     ("qr-jc-img", "Jerusalem-Crown-CCVV.png"),
@@ -27,7 +27,7 @@ def get_auto_imgs(jobn_rel_top, quirkrec):
     if sid in LENIN_IMG_SCALE:
         out["qr-lc-img-scale"] = LENIN_IMG_SCALE[sid]
     # Auto-detect Aleppo, cam1753, and other optional images
-    for field, example_filename in _INFO_ABOUT_OPTIONAL_IMAGES:
+    for field, example_filename in INFO_ABOUT_OPTIONAL_IMAGES:
         auto_img = example_filename.replace("-CCVV.png", f"-{sid}.png")
         auto_path = f"{jobn_rel_top}/img/{auto_img}"
         if os.path.exists(auto_path):

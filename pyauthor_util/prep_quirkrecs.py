@@ -2,10 +2,10 @@ import json
 import os
 from collections import Counter
 from pathlib import Path
-from pyauthor_util.add_auto_diff import _enrich_one_qr_by_adding_auto_diff
-from pyauthor_util.flatten_qrs import _enrich_one_qr_by_flattening_strs
+from pyauthor_util.add_auto_diff import enrich_one_qr_by_adding_auto_diff
+from pyauthor_util.flatten_qrs import enrich_one_qr_by_flattening_strs
 from pyauthor_util.author import consensus_to_ascii
-from pyauthor_util.img_util import _INFO_ABOUT_OPTIONAL_IMAGES, get_auto_imgs
+from pyauthor_util.img_util import INFO_ABOUT_OPTIONAL_IMAGES, get_auto_imgs
 from pyauthor_util.short_id_etc import short_id
 from pyauthor_util.noted_by import nb_dict
 from pyauthor_util.get_qr_groups import get_pgroup
@@ -75,8 +75,8 @@ def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, cam1753_crops, pe_quirkrec
     result = _enrich_one_qr_by_adding_cam1753_loc(cam1753_crops, result)
     result = _enrich_one_qr_by_adding_nbd(result)
     result = _enrich_one_qr_by_adding_pgroup(result)
-    result = _enrich_one_qr_by_adding_auto_diff(result)
-    result = _enrich_one_qr_by_flattening_strs(result)
+    result = enrich_one_qr_by_adding_auto_diff(result)
+    result = enrich_one_qr_by_flattening_strs(result)
     _assert_lc_img_fields_filled(result)
     _assert_img_implies_loc(result)
     return result
@@ -135,7 +135,7 @@ def _enrich_one_qr_by_adding_auto_imgs(jobn_rel_top, quirkrec):
     lc_img_path = f"{jobn_rel_top}/img/{lc_img_name}"
     assert os.path.exists(lc_img_path), f"Missing LC image: {lc_img_path}"
     #
-    for field, _ in _INFO_ABOUT_OPTIONAL_IMAGES:
+    for field, _ in INFO_ABOUT_OPTIONAL_IMAGES:
         if opt_img_name := out.get(field):
             opt_path = f"{jobn_rel_top}/img/{opt_img_name}"
             assert os.path.exists(opt_path), f"Missing optional image: {opt_path}"

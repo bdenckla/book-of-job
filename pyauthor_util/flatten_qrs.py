@@ -2,7 +2,7 @@ from pycmn.shrink import shrink
 from py import my_html
 
 
-def _enrich_one_qr_by_flattening_strs(quirkrec):
+def enrich_one_qr_by_flattening_strs(quirkrec):
     """Flatten nested HTML content in comment fields to shrunk flat lists.
 
     Args:

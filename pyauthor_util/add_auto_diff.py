@@ -4,7 +4,7 @@ from pydiff_mm.diff_mm_diffs_description import get1 as get_diff_description
 from pyauthor_util.proposed import proposed
 
 
-def _enrich_one_qr_by_adding_auto_diff(quirkrec):
+def enrich_one_qr_by_adding_auto_diff(quirkrec):
     """Add qr-auto-diff field describing how proposed differs from consensus.
 
     Args:
