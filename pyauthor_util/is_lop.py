@@ -1,4 +1,4 @@
-from py import my_html
+from py import boj_html
 
 
 def is_lop(obj):
@@ -7,4 +7,4 @@ def is_lop(obj):
         return False
     assert isinstance(obj, list)
     el0 = obj[0]
-    return my_html.is_htel(el0) and my_html.htel_get_tag(el0) == "p"
+    return boj_html.is_htel(el0) and boj_html.htel_get_tag(el0) == "p"

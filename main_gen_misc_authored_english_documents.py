@@ -4,8 +4,8 @@ import glob
 import os
 from pyauthor_util import author
 from pyauthor_util.prep_quirkrecs import get_enriched_quirkrecs
-from py import two_col_css_styles as tcstyles
-from py import my_html
+from py import boj_two_col_css_styles
+from py import boj_html
 from pyauthor import (
     job1_full_list_details,
     job2_main_article,
@@ -31,8 +31,8 @@ def main():
     _delete_files(f"gh-pages/{D1D_DIR}", ["*.html"])
     #
     css_href = "style.css"
-    tcstyles.make_css_file_for_authored(f"gh-pages/{css_href}")
-    tcstyles.make_css_file_for_authored(f"{jobn_rel_top}/{css_href}")
+    boj_two_col_css_styles.make_css_file_for_authored(f"gh-pages/{css_href}")
+    boj_two_col_css_styles.make_css_file_for_authored(f"{jobn_rel_top}/{css_href}")
     #
     tdm_ch = jobn_rel_top, css_href
     #
@@ -51,8 +51,8 @@ def main():
 
 
 def _write_index_dot_html(css_hrefs, out_path):
-    write_ctx = my_html.WriteCtx("Job Documents", out_path, css_hrefs=css_hrefs)
-    my_html.write_html_to_file(author.para_ul(_CBODY, _CBODY_LIST), write_ctx)
+    write_ctx = boj_html.WriteCtx("Job Documents", out_path, css_hrefs=css_hrefs)
+    boj_html.write_html_to_file(author.para_ul(_CBODY, _CBODY_LIST), write_ctx)
 
 
 def _delete_files(directory, patterns):
@@ -63,7 +63,7 @@ def _delete_files(directory, patterns):
 
 _CBODY = ["This repository hosts:"]
 
-_FIRST_DETAIL_ANCHOR = my_html.anchor_h("Job 1:19", f"./{D1D_DIR}/0119.html")
+_FIRST_DETAIL_ANCHOR = boj_html.anchor_h("Job 1:19", f"./{D1D_DIR}/0119.html")
 
 _LIST_ITEM_1 = ["A ", d2_anchor("./jobn")]
 _LIST_ITEM_2 = [

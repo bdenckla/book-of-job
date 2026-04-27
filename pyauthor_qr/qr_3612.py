@@ -1,4 +1,4 @@
-from py import my_html
+from py import boj_html
 from pyauthor_util import author
 from pyauthor_util.job_common import CAM1753_PAGE_URL_BASE
 
@@ -9,8 +9,8 @@ _BHQ_COMMENT = [
     " I.e. it is missing a final $yod before the מקף.",
     " The same typo appears in the $BHQ section “Commentary on the Critical Apparatus.”",
     " In addition to the typo, for some reason $BHQ reports this word as being the קרי",
-    [" of μY, i.e. M", my_html.sup("Y(qere)")],
-    [" rather than just M", my_html.sup("Y"), "."],
+    [" of μY, i.e. M", boj_html.sup("Y(qere)")],
+    [" rather than just M", boj_html.sup("Y"), "."],
     " I see no “Masorah dot pair”",
     " (μY’s equivalent of a masorah circle)",
     " on this word in μY.",

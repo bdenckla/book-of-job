@@ -1,6 +1,6 @@
 """Exports gen_html_file and anchor"""
 
-from py import my_html
+from py import boj_html
 from pyauthor.m_contributions_base import contributions_base
 from pyauthor.m_reiterations_base import reiterations_base
 from pyauthor.m_implications_base import implications_base
@@ -107,7 +107,7 @@ _NOT_A_SCHOLARLY = [
 _CULT_OF_BHS = [
     "Like many students of Tanakh, I started out in the cult of $BHS.",
     #
-    [" I thought $BHS was ", my_html.bold("the")],
+    [" I thought $BHS was ", boj_html.bold("the")],
     " definitive edition.",
     #
     " Unlike many students of Tanakh, I eventually soured on $BHS,",
@@ -452,7 +452,7 @@ _POSTSCRIPT_QUIRKS_IN_MU_A = [
     "Usually, μA agrees with the consensus.",
     #
     " Indeed, where extant, it more or less ",
-    my_html.bold("defines"),
+    boj_html.bold("defines"),
     " the consensus.",
     #
     " Nonetheless, there are cases where",

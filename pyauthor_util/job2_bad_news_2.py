@@ -1,4 +1,4 @@
-from py import my_html
+from py import boj_html
 from pyauthor_util import author
 
 _BHQ_HAS_TAR = "$BHQ has טרחא but should probably have דחי"
@@ -10,7 +10,7 @@ def bad_news_2(len_dexi, len_misc):
         "Finally, we present some more bad news: some $WLC notes help us identify that",
         f" the Job fascicle of $BHQ transcribes but does not note at least {str(len_total)}",
         " quirks in μL that,",
-        [" ", my_html.bold("for good reason"), ","],
+        [" ", boj_html.bold("for good reason"), ","],
         " are not noted in any of the other three editions.",
         #
         " The good reason is that all of these are unlikely to be the scribe’s intention,",

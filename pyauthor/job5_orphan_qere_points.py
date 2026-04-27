@@ -1,6 +1,6 @@
 """Exports gen_html_file"""
 
-from py import my_html
+from py import boj_html
 from py_uxlc_loc import my_tanakh_book_names as tbn
 from pyauthor_util import author
 from pyauthor_util.common_titles_etc import D5_TITLE, D5_H1_CONTENTS, D5_FNAME
@@ -19,8 +19,8 @@ def _links_to_u_and_m(bkid, ch, vr):
     cv = f"{ch}:{vr}"
     cn_v_vn = f"c{ch}v{vr}"
     osdf = tbn.ordered_short_dash_full(bkid)
-    u = my_html.anchor_h("U", f"{_UXLC}?{bkid}{cv}")
-    m = my_html.anchor_h("M", f"{_MWD}/{osdf}.html#{cn_v_vn}")
+    u = boj_html.anchor_h("U", f"{_UXLC}?{bkid}{cv}")
+    m = boj_html.anchor_h("M", f"{_MWD}/{osdf}.html#{cn_v_vn}")
     return u, ", ", m
 
 

@@ -1,4 +1,4 @@
-from py import my_html
+from py import boj_html
 
 RECORD_3619 = {
     "qr-cv": "36:19",
@@ -13,7 +13,7 @@ RECORD_3619 = {
         "All but the southeast end of the דחי seems to have flaked off,",
         " but luckily left some faint trace behind."
         " To charitably transcribe this word, we must not only transcribe this faint trace",
-        [" but also ", my_html.bold("decline"), " to transcribe"],
+        [" but also ", boj_html.bold("decline"), " to transcribe"],
         " the similarly faint blob",
         " (an erasure?) right next to it under the ש.",
     ],

@@ -1,6 +1,6 @@
 import re
 
-from py import my_html
+from py import boj_html
 from mb_cmn.my_utils import sl_map
 
 
@@ -14,7 +14,7 @@ def dollar_sub_g(dispatch, contents):
         contents: HTML content tree (strings and nested lists) to
             process.
     """
-    flat_1 = my_html.flatten(contents)
+    flat_1 = boj_html.flatten(contents)
     assert flat_1 is not None
     _check_no_undollared(dispatch, flat_1)
     _check_no_bare_cv(flat_1)
@@ -84,5 +84,5 @@ def _dollar_sub_str_part(dispatch, part):
     if part.startswith("%"):
         # Wrap in a span so the spell checker can skip Hebrew words.
         # See check_spelling_in_html.py which excludes "unpointed-tanakh" spans.
-        return my_html.span_c(part[1:], "unpointed-tanakh")
+        return boj_html.span_c(part[1:], "unpointed-tanakh")
     return part

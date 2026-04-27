@@ -1,6 +1,6 @@
 """Common utilities for job documents"""
 
-from py import my_html
+from py import boj_html
 from pyauthor_util import author
 
 
@@ -19,7 +19,7 @@ D5_FNAME = "job5_orphan_qere_points.html"
 
 
 def d5_anchor(jobn_dir="."):
-    anc = my_html.anchor_h("document", f"{jobn_dir}/{D5_FNAME}")
+    anc = boj_html.anchor_h("document", f"{jobn_dir}/{D5_FNAME}")
     return author.std_anchor(anc, D5_H1_CONTENTS)
 
 
@@ -29,12 +29,12 @@ D6_FNAME = "job6_cam1753_mentions.html"
 
 
 def d6_anchor(jobn_dir="."):
-    anc = my_html.anchor_h("document", f"{jobn_dir}/{D6_FNAME}")
+    anc = boj_html.anchor_h("document", f"{jobn_dir}/{D6_FNAME}")
     return author.std_anchor(anc, D6_H1_CONTENTS)
 
 
 def d4_anchor(jobn_dir="."):
-    anc = my_html.anchor_h("document", f"{jobn_dir}/{D4_FNAME}")
+    anc = boj_html.anchor_h("document", f"{jobn_dir}/{D4_FNAME}")
     return author.std_anchor(anc, D4_H1_CONTENTS)
 
 
@@ -48,7 +48,7 @@ D3_FNAME = "job3_uxlc.html"
 
 
 def d3_anchor(jobn_dir="."):
-    anc = my_html.anchor_h("document", f"{jobn_dir}/{D3_FNAME}")
+    anc = boj_html.anchor_h("document", f"{jobn_dir}/{D3_FNAME}")
     return author.std_anchor(anc, D3_H1_CONTENTS)
 
 
@@ -62,7 +62,7 @@ D2_FNAME = "job2_main_article.html"
 
 
 def d2_anchor(jobn_dir="."):
-    anc = my_html.anchor_h("document", f"{jobn_dir}/{D2_FNAME}")
+    anc = boj_html.anchor_h("document", f"{jobn_dir}/{D2_FNAME}")
     return author.std_anchor(anc, D2_H1_CONTENTS)
 
 
@@ -78,7 +78,7 @@ def d1d_detail_href(sid):
 
 def d1d_anchor(jobn_dir="."):
     # The anchor points to the overview page, not to the (now split) details.
-    anc = my_html.anchor_h("document", f"{jobn_dir}/{D1V_FNAME}")
+    anc = boj_html.anchor_h("document", f"{jobn_dir}/{D1V_FNAME}")
     return author.std_anchor(anc, D1D_H1_CONTENTS)
 
 
@@ -88,5 +88,5 @@ D1V_FNAME = "job1_full_list_overview.html"
 
 
 def d1v_anchor(jobn_dir="."):
-    anc = my_html.anchor_h("document", f"{jobn_dir}/{D1V_FNAME}")
+    anc = boj_html.anchor_h("document", f"{jobn_dir}/{D1V_FNAME}")
     return author.std_anchor(anc, D1V_H1_CONTENTS)

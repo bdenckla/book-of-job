@@ -1,4 +1,4 @@
-from py import my_html
+from py import boj_html
 from pyauthor_util import author
 from pyauthor_util.common_titles_etc import d5_anchor
 
@@ -27,7 +27,7 @@ _GENCOM_1 = [
         ").",
     ],
     " In contrast to the consensus, in going from כתיב to קרי,",
-    [" μL can be thought of as having ", my_html.bold("copied")],
+    [" μL can be thought of as having ", boj_html.bold("copied")],
     " the ה to the second word rather than moving it.",
 ]
 _GENCOM_2 = [

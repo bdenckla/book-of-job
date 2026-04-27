@@ -1,6 +1,6 @@
 """Overview and details generation for quirkrecs."""
 
-from py import my_html
+from py import boj_html
 from pyauthor_util.is_lop import is_lop
 from mb_cmn import my_utils
 from mb_cmn.my_utils import intersperse, sl_map
@@ -42,12 +42,12 @@ def make_ov_and_de(quirkrecs):
 def make_example_row():
     hlcp = color("proposed", "qr-lc-proposed")
     hcon = color("consensus", "qr-consensus")
-    lcp_and_con = [hlcp, my_html.line_break(), hcon]
-    return my_html.table_row(
+    lcp_and_con = [hlcp, boj_html.line_break(), hcon]
+    return boj_html.table_row(
         [
-            my_html.table_datum(lcp_and_con),
-            my_html.table_datum("# c:v"),
-            my_html.table_datum("how proposed differs from consensus"),
+            boj_html.table_datum(lcp_and_con),
+            boj_html.table_datum("# c:v"),
+            boj_html.table_datum("how proposed differs from consensus"),
         ]
     )
 
@@ -133,7 +133,7 @@ def _lcp_and_con(quirkrec):
         hl_pro_and_qm = [hl_pro, " (?)"]
     else:
         hl_pro_and_qm = [hl_pro]
-    pro_lb_con = [*hl_pro_and_qm, my_html.line_break(), hl_con]
+    pro_lb_con = [*hl_pro_and_qm, boj_html.line_break(), hl_con]
     return pro_lb_con
 
 
@@ -144,17 +144,17 @@ def _make_overview_row(quirkrec, *, include_hash_link=True):
     the_row_id = row_id(quirkrec)
     sid = short_id(quirkrec)
     if include_hash_link:
-        anc = my_html.anchor_h("#", d1d_detail_href(sid))
+        anc = boj_html.anchor_h("#", d1d_detail_href(sid))
         cv_contents = [anc, " ", quirkrec["qr-cv"]]
     else:
         cv_contents = quirkrec["qr-cv"]
     tr_contents = [
-        my_html.table_datum(_lcp_and_con(quirkrec), td1_attrs),
-        my_html.table_datum(cv_contents),
+        boj_html.table_datum(_lcp_and_con(quirkrec), td1_attrs),
+        boj_html.table_datum(cv_contents),
         author.table_datum(_what_is_weird(quirkrec)),
     ]
     tr_attrs = {"id": the_row_id}
-    return my_html.table_row(tr_contents, tr_attrs)
+    return boj_html.table_row(tr_contents, tr_attrs)
 
 
 _IN_MY_YYY = {
@@ -182,7 +182,7 @@ def _what_is_weird(quirkrec):
         _maybe_maybe(quirkrec),
     ]
     parts = [wiw_in_mu_ell, *says(quirkrec)]
-    wiw_and_says = intersperse(my_html.line_break(), parts)
+    wiw_and_says = intersperse(boj_html.line_break(), parts)
     return wiw_and_says
 
 
@@ -288,10 +288,10 @@ def _ensure_lop(yyycom):
 def _ancs(quirkrec):
     cv = quirkrec["qr-cv"]
     uxlc_href = f"https://tanach.us/Tanach.xml?Job{cv}"
-    uxlc_anc = my_html.anchor_h("U", uxlc_href)
+    uxlc_anc = boj_html.anchor_h("U", uxlc_href)
     cn_v_vn = "c" + cv.replace(":", "v")
     mwd_href = f"https://bdenckla.github.io/MAM-with-doc/D3-Job.html#{cn_v_vn}"
-    mwd_anc = my_html.anchor_h("M", mwd_href)
+    mwd_anc = boj_html.anchor_h("M", mwd_href)
     return uxlc_anc, mwd_anc
 
 

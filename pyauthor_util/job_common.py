@@ -1,11 +1,11 @@
-from py import my_html
+from py import boj_html
 from pyauthor_util import author
 
 
 def suffix(contents):
     new_cont = "\N{EN DASH}\N{HAIR SPACE}" + contents
     inner = author.span_unpointed_tanakh(new_cont, {"dir": "rtl"})
-    return my_html.span(inner, {"style": "white-space:nowrap"})
+    return boj_html.span(inner, {"style": "white-space:nowrap"})
 
 
 def correctly_ignores(what, cv, adjective=""):

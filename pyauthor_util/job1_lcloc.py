@@ -1,6 +1,6 @@
 """Format Leningrad Codex location references."""
 
-from py import my_html
+from py import boj_html
 
 __all__ = ["lcloc"]
 
@@ -22,7 +22,7 @@ def lcloc(lcloc):
 def _lc_page_anchor(page):
     # E.g. page == "397B"
     href = f"https://manuscripts.sefaria.org/leningrad-color/BIB_LENCDX_F{page}.jpg"
-    return my_html.anchor_h("page", href)
+    return boj_html.anchor_h("page", href)
 
 
 def _maybe_sp_line2(lcloc):

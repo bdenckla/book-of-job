@@ -1,7 +1,7 @@
 import os
 
 import re
-from py import my_html
+from py import boj_html
 from mb_cmn import str_defs as sd
 from mb_cmn.my_utils import sl_map
 from mb_cmn.my_utils import sum_of_map
@@ -12,8 +12,8 @@ from pyauthor_util import dollar_sub_g
 def help_gen_html_file(tdm_ch, fname, title, cbody):
     top_dir, css_href = tdm_ch
     out_path = f"{top_dir}/{fname}"
-    write_ctx = my_html.WriteCtx(title, out_path, css_hrefs=(css_href,))
-    my_html.write_html_to_file(cbody, write_ctx)
+    write_ctx = boj_html.WriteCtx(title, out_path, css_hrefs=(css_href,))
+    boj_html.write_html_to_file(cbody, write_ctx)
 
 
 def paren(inner):
@@ -25,23 +25,23 @@ def std_anchor(anchor_proper, quoted_part):
 
 
 def book_title(contents):
-    return my_html.span_c(dollar_sub(contents), "book-title")
+    return boj_html.span_c(dollar_sub(contents), "book-title")
 
 
 def span_gray(contents):
-    return my_html.span_c(dollar_sub(contents), "gray")
+    return boj_html.span_c(dollar_sub(contents), "gray")
 
 
 def span_unpointed_tanakh(contents, attr=None):
-    return my_html.span(contents, _awc(attr, "unpointed-tanakh"))
+    return boj_html.span(contents, _awc(attr, "unpointed-tanakh"))
 
 
 def emphasis(contents):
-    return my_html.emphasis(dollar_sub(contents))
+    return boj_html.emphasis(dollar_sub(contents))
 
 
 def table_datum(contents):
-    return my_html.table_datum(dollar_sub(contents))
+    return boj_html.table_datum(dollar_sub(contents))
 
 
 def stem_eq(path1, path2):
@@ -53,7 +53,7 @@ def assert_stem_eq(path1, path2):
 
 
 def para(contents, attr=None):
-    return my_html.para(dollar_sub(contents), attr)
+    return boj_html.para(dollar_sub(contents), attr)
 
 
 def para_cc(contents, attr=None):
@@ -67,45 +67,45 @@ def para_dr_cc(contents, attr=None):
 
 
 def blockquote(contents, attr=None):
-    return my_html.blockquote(dollar_sub(contents), attr)
+    return boj_html.blockquote(dollar_sub(contents), attr)
 
 
 def unordered_list(items, attr=None):
     """Create an unordered list with dollar_sub applied to each item"""
-    return my_html.unordered_list([dollar_sub(item) for item in items], attr)
+    return boj_html.unordered_list([dollar_sub(item) for item in items], attr)
 
 
 def ordered_list(items, attr=None):
     """Create an ordered list with dollar_sub applied to each item"""
-    return my_html.ordered_list([dollar_sub(item) for item in items], attr)
+    return boj_html.ordered_list([dollar_sub(item) for item in items], attr)
 
 
 def heading_level_1(contents, attr=None):
     """Create a level 1 heading with dollar_sub applied to the contents"""
-    return my_html.heading_level_1(dollar_sub(contents), attr)
+    return boj_html.heading_level_1(dollar_sub(contents), attr)
 
 
 def heading_level_2(contents, attr=None):
     """Create a level 2 heading with dollar_sub applied to the contents"""
-    return my_html.heading_level_2(dollar_sub(contents), attr)
+    return boj_html.heading_level_2(dollar_sub(contents), attr)
 
 
 def hbo(contents, attr=None):
-    return my_html.bdi(contents, _awl(attr, "hbo"))
+    return boj_html.bdi(contents, _awl(attr, "hbo"))
 
 
 def para_hbo(contents, attr=None):
-    return my_html.para(contents, _awc(_awl(attr, "hbo"), "center"))
+    return boj_html.para(contents, _awc(_awl(attr, "hbo"), "center"))
 
 
 def para_hbo_es(contents, attr=None):
     class_val = "center extra-letter-spacing"
-    return my_html.para(contents, _awc(_awl(attr, "hbo"), class_val))
+    return boj_html.para(contents, _awc(_awl(attr, "hbo"), class_val))
 
 
 def para_modhe(contents, attr=None):
     """Modern Hebrew"""
-    return my_html.para(contents, _awl(attr, "he"))
+    return boj_html.para(contents, _awl(attr, "he"))
 
 
 def hbo_big(contents, attr=None):
@@ -137,13 +137,13 @@ def para_for_img(img_path, widthclass=None, img_prefix="img", scale=None):
         w = round(nat_w * scale)
         h = round(nat_h * scale)
         img_attr["style"] = f"width:{w}px;height:{h}px"
-    img_element = my_html.img(img_attr)
-    return my_html.para(img_element, {"class": "center"})
+    img_element = boj_html.img(img_attr)
+    return boj_html.para(img_element, {"class": "center"})
 
 
 def table_c(contents, attr=None):
     """Create a centered table"""
-    return my_html.table(contents, _awc(attr, "center"))
+    return boj_html.table(contents, _awc(attr, "center"))
 
 
 def para_ul(para_contents, ul_items):
@@ -200,15 +200,15 @@ def std_table(
 
 
 def anc_h(contents, href_val):
-    return my_html.anchor_h(dollar_sub(contents), href_val)
+    return boj_html.anchor_h(dollar_sub(contents), href_val)
 
 
 def span_color(text, color):
-    return my_html.span(text, {"style": f"color: {color}"})
+    return boj_html.span(text, {"style": f"color: {color}"})
 
 
 def span_rtl(contents):
-    return my_html.span(contents, {"dir": "rtl"})
+    return boj_html.span(contents, {"dir": "rtl"})
 
 
 def yyy_dash_nothing(contents):
@@ -279,11 +279,11 @@ def _de_dict(table_data):
 
 
 def _std_row_of_data(tdattrs, cells):
-    return my_html.table_row_of_data(sl_map(_std_cell, cells), tdattrs)
+    return boj_html.table_row_of_data(sl_map(_std_cell, cells), tdattrs)
 
 
 def _std_row_of_headers(cells):
-    return my_html.table_row_of_headers(sl_map(_std_cell, cells))
+    return boj_html.table_row_of_headers(sl_map(_std_cell, cells))
 
 
 def _std_cell(htel):
@@ -295,7 +295,7 @@ def _std_cell(htel):
 
 def _romanized(string: str):
     assert isinstance(string, str)
-    return my_html.span_c(string, "romanized")
+    return boj_html.span_c(string, "romanized")
 
 
 def _cap(string: str):
@@ -317,7 +317,7 @@ def _small_caps(string: str, cap=False):
         # first letter (e.g. "B") in normal caps followed by rest (e.g. "HS")
         # in small caps.
         return string
-    return my_html.abbr(string, {"class": "small-caps"})
+    return boj_html.abbr(string, {"class": "small-caps"})
 
 
 def _awc(attr, class_val):
@@ -492,14 +492,14 @@ _ROMANIZED = dv_map(_romanized, _ROMANIZED)
 
 def _dlink(cv, sid):
     """Build a detail-page <a> element for a quirkrec short ID."""
-    return my_html.anchor_h(cv, f"../jobn-details/{sid}.html")
+    return boj_html.anchor_h(cv, f"../jobn-details/{sid}.html")
 
 
 _DOLLAR_SUB_DISPATCH = {
     #
-    # "$sub_qm": my_html.sub("?"),
-    # "$sub_pe": my_html.sub("פ"),
-    # "$sub_lamed": my_html.sub("ל"),
+    # "$sub_qm": boj_html.sub("?"),
+    # "$sub_pe": boj_html.sub("פ"),
+    # "$sub_lamed": boj_html.sub("ל"),
     #
     "$thinsp": sd.THSP,
     "$hairsp": sd.HAIRSP,

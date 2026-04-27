@@ -2,7 +2,7 @@
 
 import os
 from pyauthor_util.common_titles_etc import D1D_DIR
-from py import my_html
+from py import boj_html
 
 
 def gen_html_files(ov_and_de):
@@ -27,8 +27,8 @@ def gen_html_files(ov_and_de):
         nav = _nav_bar(prev_sid, next_sid)
         body = [*od["od-details"], nav, _nav_key_script(prev_sid, next_sid)]
         out_path = f"{out_dir}/{sid}.html"
-        write_ctx = my_html.WriteCtx(title, out_path, css_hrefs=(css_href,))
-        my_html.write_html_to_file(body, write_ctx)
+        write_ctx = boj_html.WriteCtx(title, out_path, css_hrefs=(css_href,))
+        boj_html.write_html_to_file(body, write_ctx)
 
 
 def _nav_bar(prev_sid, next_sid):
@@ -36,13 +36,13 @@ def _nav_bar(prev_sid, next_sid):
     parts = []
     if prev_sid is not None:
         parts.append("[p] ")
-        parts.append(my_html.anchor_h("← prev", f"{prev_sid}.html"))
+        parts.append(boj_html.anchor_h("← prev", f"{prev_sid}.html"))
     if prev_sid is not None and next_sid is not None:
         parts.append(" \u2003 ")
     if next_sid is not None:
-        parts.append(my_html.anchor_h("next →", f"{next_sid}.html"))
+        parts.append(boj_html.anchor_h("next →", f"{next_sid}.html"))
         parts.append(" [n]")
-    return my_html.para(parts, {"class": "center", "style": "margin-top: 2em"})
+    return boj_html.para(parts, {"class": "center", "style": "margin-top: 2em"})
 
 
 def _nav_key_script(prev_sid, next_sid):
@@ -59,4 +59,4 @@ def _nav_key_script(prev_sid, next_sid):
         '"INPUT" || e.target.tagName === "TEXTAREA") return; '
         "switch (e.key) {" + " ".join(cases) + "}})"
     )
-    return my_html.htel_mk("script", flex_contents=(js,))
+    return boj_html.htel_mk("script", flex_contents=(js,))

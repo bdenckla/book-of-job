@@ -1,5 +1,5 @@
 from mb_cmn.shrink import shrink
-from py import my_html
+from py import boj_html
 
 
 def enrich_one_qr_by_flattening_strs(quirkrec):
@@ -26,5 +26,5 @@ def _flatten_yyycom(yyycom):
     if isinstance(yyycom, str):
         return yyycom
     assert isinstance(yyycom, list)
-    flat = my_html.flatten(yyycom)
+    flat = boj_html.flatten(yyycom)
     return shrink(flat)
