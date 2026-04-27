@@ -1,4 +1,4 @@
-from pycmn import hebrew_points as hpo
+from mb_cmn import hebrew_points as hpo
 from pyauthor_util.short_id_etc import short_id
 from pydiff_mm.diff_mm_diffs_description import get1 as get_diff_description
 from pyauthor_util.proposed import proposed

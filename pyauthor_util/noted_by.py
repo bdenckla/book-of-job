@@ -1,5 +1,5 @@
 import re
-from pycmn.my_utils import sl_map
+from mb_cmn.my_utils import sl_map
 
 _STARTSWITH_N = {
     "e:BHQ": "nBHQ",

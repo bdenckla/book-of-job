@@ -1,7 +1,7 @@
 """Generate JSON file with quirkrec field usage statistics."""
 
 from collections import Counter
-from pycmn.file_io import json_dump_to_file_path
+from mb_cmn.file_io import json_dump_to_file_path
 
 
 def write_qr_field_stats_json(quirkrecs, out_path_by_count, out_path_by_name):

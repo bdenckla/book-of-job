@@ -1,5 +1,5 @@
 from pyauthor_util.noted_by import startswith_n, startswith_x
-from pycmn.my_utils import my_groupby
+from mb_cmn.my_utils import my_groupby
 
 
 def get_qr_groups(quirkrecs):

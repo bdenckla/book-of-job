@@ -2,8 +2,8 @@
 
 from py import my_html
 from pyauthor_util.is_lop import is_lop
-from pycmn import my_utils
-from pycmn.my_utils import intersperse, sl_map
+from mb_cmn import my_utils
+from mb_cmn.my_utils import intersperse, sl_map
 from pyauthor_util.common_titles_etc import d1d_detail_href
 from pyauthor_util import author
 from pyauthor_util.proposed import key_for_proposed

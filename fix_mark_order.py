@@ -4,7 +4,7 @@
 import re
 from pathlib import Path
 
-from pycmn.uni_denorm import give_std_mark_order
+from mb_cmn.uni_denorm import give_std_mark_order
 
 ROOT = Path(__file__).resolve().parent
 

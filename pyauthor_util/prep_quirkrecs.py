@@ -14,7 +14,7 @@ from pyauthor_util.qr_make_json_outputs import (
     write_qr_field_stats_json,
     write_enriched_quirkrecs_json,
 )
-from pycmn.my_utils import sl_map
+from mb_cmn.my_utils import sl_map
 
 _CAM1753_CROPS_PATH = (
     Path(__file__).resolve().parent.parent / "out" / "cam1753-crops.json"

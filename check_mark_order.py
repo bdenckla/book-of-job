@@ -6,7 +6,7 @@ project’s standard combining-mark order (SBL2):
     base letter → shin/sin dot → dagesh → rafeh → (everything else unchanged)
 
 The canonical reordering function is ``give_std_mark_order`` from
-pycmn.uni_denorm.
+mb_cmn.uni_denorm.
 
 A “Hebrew word” is any maximal run matched by the regex:
 
@@ -25,7 +25,7 @@ import re
 import sys
 from pathlib import Path
 
-from pycmn.uni_denorm import give_std_mark_order
+from mb_cmn.uni_denorm import give_std_mark_order
 
 # ── regex definitions ────────────────────────────────────────────────────────────────────
 

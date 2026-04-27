@@ -29,7 +29,7 @@ from pyauthor_util.common_titles_etc import (
     d4_anchor,
 )
 from pyauthor_util.num_range import num_range
-from pycmn.my_utils import dv_map
+from mb_cmn.my_utils import dv_map
 
 
 def gen_html_file(aq: AllQuirks):

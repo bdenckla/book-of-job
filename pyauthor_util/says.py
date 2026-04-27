@@ -1,6 +1,6 @@
 from pyauthor_util.english_list import english_list
 from pyauthor_util.get_qr_groups import says_who
-from pycmn.my_utils import sl_map
+from mb_cmn.my_utils import sl_map
 
 
 def says(quirkrec):

@@ -1,6 +1,6 @@
 """Exports maqaf_space_diff"""
 
-from pycmn.hebrew_punctuation import MAQ as _MAQAF
+from mb_cmn.hebrew_punctuation import MAQ as _MAQAF
 
 
 def maqaf_space_diff(str1, str2):

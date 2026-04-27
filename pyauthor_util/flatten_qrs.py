@@ -1,4 +1,4 @@
-from pycmn.shrink import shrink
+from mb_cmn.shrink import shrink
 from py import my_html
 
 

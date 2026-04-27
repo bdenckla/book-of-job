@@ -4,7 +4,7 @@ from pydiff_mm import diff_mm_uni_name
 from pydiff_mm import diff_mm_simplify_simple_diffs as ssd
 from pydiff_mm.diff_mm_letter_only_diff import letter_only_diff
 from pydiff_mm.diff_mm_maqaf_space_diff import maqaf_space_diff
-from pycmn import my_diffs
+from mb_cmn import my_diffs
 from py import hebrew_letter_words as hlw
 from py import uni_heb_char_classes as uhc
 

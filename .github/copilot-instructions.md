@@ -25,7 +25,7 @@ This project uses typographically correct Unicode characters. **Never convert th
 
 When working with Hebrew text, maintain the project\u2019s standard combining-mark
 order within each base-letter cluster.  The authoritative implementation is
-`pycmn/uni_denorm.py` (`give_std_mark_order`), and the CI-style checker is
+`mb_cmn/uni_denorm.py` (`give_std_mark_order`), and the CI-style checker is
 `check_mark_order.py` (also wired into `check_all.py`).
 
 The standard order places these four marks first (in this order), followed by
