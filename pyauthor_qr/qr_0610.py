@@ -1,3 +1,4 @@
+from mb_cmn.url_percent import pct_fragment
 from pyauthor_util import author
 from pyauthor_util import cos_urls
 
@@ -5,7 +6,8 @@ _COMMENT_PARA1 = [
     "Note that consensus has a rare and hard-to-understand",
     " phenomenon called “secondary מרכא” by Breuer.",
 ]
-_FOI_H2 = "foi-sec-merk.html#intro-poetic/(%C3%BCazll)/(mer)-(%C3%BCazll)"
+_FOI_FRAGMENT = "intro-poetic/(üazll)/(mer)-(üazll)"
+_FOI_H2 = f"foi-sec-merk.html#{pct_fragment(_FOI_FRAGMENT)}"
 _FOI_H1 = "https://bdenckla.github.io/MAM-with-doc/foi/"
 _FOI_ANC = author.anc_h("here", f"{_FOI_H1}{_FOI_H2}")
 _COMMENT_PARA2 = [
