@@ -1,5 +1,5 @@
 from pyauthor_util import author
-from mb_cmn.url_percent import pct_path_component
+from pyauthor_util import cos_urls
 
 _COMMENT_PARA1 = [
     "Note that consensus has a rare and hard-to-understand",
@@ -18,10 +18,8 @@ _COMMENT_PARA2 = [
     [" Interestingly, μL has some sort of disturbance where one would expect the מקף,"],
     [" suggesting that there might have been a מקף here that was erased."],
 ]
-_COS_CMN = "https://www.chorev.co.il/" + pct_path_component("טעמי-המקרא")
-_COS_ENG_REST = pct_path_component("באנגלית-THE-CANTILLATION-OF-SCRIPTURE")
-_COS_ENG_ANC = author.anc_h("translation", f"{_COS_CMN}-{_COS_ENG_REST}.htm")
-_COS_HEB_ANC = author.anc_h("original", f"{_COS_CMN}.htm")
+_COS_ENG_ANC = author.anc_h("translation", cos_urls.cos_translation_url())
+_COS_HEB_ANC = author.anc_h("original", cos_urls.cos_original_url())
 _COMMENT_PARA3 = [
     "See Breuer CoS sections 09.27, 9.37, and 11.06.rn2.",
     " (CoS = The Cantillation of Scripture.)",
