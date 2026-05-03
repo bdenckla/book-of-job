@@ -1,4 +1,5 @@
 from pyauthor_util import author
+from mb_cmn.url_percent import pct_path_component
 
 _COMMENT_PARA1 = [
     "Note that consensus has a rare and hard-to-understand",
@@ -14,12 +15,8 @@ _COMMENT_PARA2 = [
     "This is one of about a dozen analogous cases listed",
     [" ", _FOI_ANC, "."],
 ]
-_COS_CMN = (
-    "https://www.chorev.co.il/%D7%98%D7%A2%D7%9E%D7%99-%D7%94%D7%9E%D7%A7%D7%A8%D7%90"
-)
-_COS_ENG_REST = (
-    "%D7%91%D7%90%D7%A0%D7%92%D7%9C%D7%99%D7%AA-THE-CANTILLATION-OF-SCRIPTURE"
-)
+_COS_CMN = "https://www.chorev.co.il/" + pct_path_component("טעמי-המקרא")
+_COS_ENG_REST = pct_path_component("באנגלית-THE-CANTILLATION-OF-SCRIPTURE")
 _COS_ENG_ANC = author.anc_h("translation", f"{_COS_CMN}-{_COS_ENG_REST}.htm")
 _COS_HEB_ANC = author.anc_h("original", f"{_COS_CMN}.htm")
 _COMMENT_PARA3 = [
