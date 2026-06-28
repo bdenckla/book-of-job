@@ -23,13 +23,6 @@ _CAM1753_CROPS_PATH = (
 )
 
 
-def _load_cam1753_crops():
-    """Load cam1753-crops.json if it exists, return dict keyed by SID."""
-    if _CAM1753_CROPS_PATH.exists():
-        return json.loads(_CAM1753_CROPS_PATH.read_text("utf-8"))
-    return {}
-
-
 def get_enriched_quirkrecs(jobn_rel_top, json_outdir):
     """Run the full raw → enriched quirkrec pipeline and write outputs.
 
@@ -51,6 +44,13 @@ def get_enriched_quirkrecs(jobn_rel_top, json_outdir):
     write_enriched_quirkrecs_json(eqrs, f"{json_outdir}/enriched-quirkrecs.json")
     write_qr_relations_json(QR_RELATIONS, f"{json_outdir}/qr-relations.json")
     return eqrs
+
+
+def _load_cam1753_crops():
+    """Load cam1753-crops.json if it exists, return dict keyed by SID."""
+    if _CAM1753_CROPS_PATH.exists():
+        return json.loads(_CAM1753_CROPS_PATH.read_text("utf-8"))
+    return {}
 
 
 def _enrich_quirkrecs(jobn_rel_top):

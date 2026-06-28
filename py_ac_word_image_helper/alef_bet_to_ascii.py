@@ -12,13 +12,13 @@ import re
 
 # fmt: off
 _HEBREW_TO_ASCII_FROM = (
-    "\u05d0\u05d1\u05d2\u05d3\u05d4"   # אבגדה
-    "\u05d5\u05d6\u05d7\u05d8\u05d9"   # וזחטי
-    "\u05db\u05dc\u05de\u05e0\u05e1"   # כלמנס
-    "\u05e2\u05e4\u05e6\u05e7\u05e8"   # עפצקר
-    "\u05e9\u05ea"                      # שת
-    "\u05da\u05dd\u05df\u05e3\u05e5"   # ךםןףץ
-    "\u05be "                           # maqaf, space
+    "אבגדה"   # ABGDH
+    "וזחטי"   # VZXEY
+    "כלמנס"   # KLMNO
+    "עפצקר"   # 3PCQR
+    "שת"      # JF
+    "ךםןףץ"   # 56789  (final forms)
+    "־ "      # 0_  (maqaf, space)
 )
 _HEBREW_TO_ASCII_TO = (
     "ABGDH" "VZXEY" "KLMNO" "3PCQR" "JF" "56789" "0_"

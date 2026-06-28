@@ -40,6 +40,30 @@ HAS_LETTER_RE = re.compile(r"[\u05D0-\u05EA]")
 _SKIP_DIRS = {".venv", "__pycache__", ".novc", ".git", "node_modules"}
 
 
+def main():
+    root = Path(__file__).resolve().parent
+    all_violations = []
+
+    files = list(_tracked_files(root))
+    for path in files:
+        all_violations.extend(_check_file(path, root))
+
+    if all_violations:
+        print(f"FAIL: {len(all_violations)} word(s) with non-standard mark order:\n")
+        for rel, line_no, orig, fixed in all_violations:
+            # Show codepoint sequences for clarity.
+            orig_cp = " ".join(f"U+{ord(c):04X}" for c in orig)
+            fixed_cp = " ".join(f"U+{ord(c):04X}" for c in fixed)
+            print(f"  {rel}:{line_no}")
+            print(f"    original : {orig}  [{orig_cp}]")
+            print(f"    expected : {fixed}  [{fixed_cp}]")
+            print()
+        return 1
+
+    print(f"OK: all Hebrew words in {len(files)} files have standard mark order.")
+    return 0
+
+
 def _tracked_files(root):
     """Yield .py and .json paths under *root*, skipping non-tracked dirs."""
     for p in sorted(root.rglob("*")):
@@ -70,30 +94,6 @@ def _check_file(path, root):
             if fixed != word:
                 violations.append((str(path.relative_to(root)), line_no, word, fixed))
     return violations
-
-
-def main():
-    root = Path(__file__).resolve().parent
-    all_violations = []
-
-    files = list(_tracked_files(root))
-    for path in files:
-        all_violations.extend(_check_file(path, root))
-
-    if all_violations:
-        print(f"FAIL: {len(all_violations)} word(s) with non-standard mark order:\n")
-        for rel, line_no, orig, fixed in all_violations:
-            # Show codepoint sequences for clarity.
-            orig_cp = " ".join(f"U+{ord(c):04X}" for c in orig)
-            fixed_cp = " ".join(f"U+{ord(c):04X}" for c in fixed)
-            print(f"  {rel}:{line_no}")
-            print(f"    original : {orig}  [{orig_cp}]")
-            print(f"    expected : {fixed}  [{fixed_cp}]")
-            print()
-        return 1
-
-    print(f"OK: all Hebrew words in {len(files)} files have standard mark order.")
-    return 0
 
 
 if __name__ == "__main__":

@@ -33,6 +33,36 @@ OUT_DIR = ROOT / "gh-pages" / "jobn" / "img" / "cam1753"
 CROPS_JSON = ROOT / "out" / "cam1753-crops.json"
 
 
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: main_apply_cam1753_crops.py <json_file>")
+        print("  The JSON file should contain the array exported by the crop editor.")
+        sys.exit(1)
+
+    json_path = Path(sys.argv[1])
+    if not json_path.exists():
+        print(f"File not found: {json_path}")
+        sys.exit(1)
+
+    crops = json.loads(json_path.read_text("utf-8"))
+    print(f"Applying {len(crops)} crops...")
+
+    persistent = _load_crops_json()
+    page_cache = {}
+    source_meta_cache = {}
+    saved = 0
+
+    for crop in crops:
+        if crop.get("split"):
+            saved += _apply_split_crop(crop, page_cache, source_meta_cache, persistent)
+        else:
+            saved += _apply_normal_crop(crop, page_cache, source_meta_cache, persistent)
+
+    _save_crops_json(persistent)
+    print(f"Done. {saved} images saved to {OUT_DIR}")
+    print(f"Persistent crop data: {CROPS_JSON} ({len(persistent)} entries)")
+
+
 def _get_source_metadata(img):
     """Extract the JSON string from EXIF tag 270 (ImageDescription)."""
     exif_bytes = img.info.get("exif")
@@ -186,36 +216,6 @@ def _apply_split_crop(crop, page_cache, source_meta_cache, persistent):
     if source_meta:
         persistent[sid]["source"] = source_meta
     return 1
-
-
-def main():
-    if len(sys.argv) < 2:
-        print("Usage: main_apply_cam1753_crops.py <json_file>")
-        print("  The JSON file should contain the array exported by the crop editor.")
-        sys.exit(1)
-
-    json_path = Path(sys.argv[1])
-    if not json_path.exists():
-        print(f"File not found: {json_path}")
-        sys.exit(1)
-
-    crops = json.loads(json_path.read_text("utf-8"))
-    print(f"Applying {len(crops)} crops...")
-
-    persistent = _load_crops_json()
-    page_cache = {}
-    source_meta_cache = {}
-    saved = 0
-
-    for crop in crops:
-        if crop.get("split"):
-            saved += _apply_split_crop(crop, page_cache, source_meta_cache, persistent)
-        else:
-            saved += _apply_normal_crop(crop, page_cache, source_meta_cache, persistent)
-
-    _save_crops_json(persistent)
-    print(f"Done. {saved} images saved to {OUT_DIR}")
-    print(f"Persistent crop data: {CROPS_JSON} ({len(persistent)} entries)")
 
 
 if __name__ == "__main__":

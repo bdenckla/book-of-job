@@ -18,12 +18,6 @@ LINES_PER_COL = 28
 _PAGE_RE = re.compile(r"^(\d+[rv])\.json$")
 
 
-def _leaf_to_page_n(page_id):
-    num = int(page_id[:-1])
-    side = page_id[-1]
-    return (num - 1) * 2 + 2 + (0 if side == "r" else 1)
-
-
 def local_image_path(page_id):
     """Return the absolute Path to the local image for *page_id*."""
     return IMG_DIR / f"{page_id}.jpg"
@@ -32,45 +26,6 @@ def local_image_path(page_id):
 def image_relpath(page_id):
     """Return a relative path suitable for HTML generated into .novc/."""
     return f"../aleppo-pages/{page_id}.jpg"
-
-
-def _parse_verse_label(label):
-    """Parse 'Job 38:31' into (book, chapter, verse)."""
-    parts = label.split(" ", 1)
-    cv = parts[1].split(":")
-    return parts[0], int(cv[0]), int(cv[1])
-
-
-def _page_verse_range(path):
-    """Extract (first_ref, last_ref) from a line-break JSON file.
-
-    Each ref is (book, chapter, verse).  Returns None if the file
-    has no verse markers.
-    """
-    data = json.loads(path.read_text("utf-8"))
-    first = None
-    last = None
-    for item in data:
-        if isinstance(item, dict):
-            for key in ("verse-start", "verse-fragment-start"):
-                if key in item:
-                    ref = _parse_verse_label(item[key])
-                    if first is None:
-                        first = ref
-                    last = ref
-    if first is None:
-        return None
-    # last ref from verse-end / verse-fragment-end (for the end boundary)
-    for item in reversed(data):
-        if isinstance(item, dict):
-            for key in ("verse-end", "verse-fragment-end"):
-                if key in item:
-                    last = _parse_verse_label(item[key])
-                    break
-            else:
-                continue
-            break
-    return first, last
 
 
 def load_index(book="Job"):
@@ -134,44 +89,6 @@ def find_pages_for_verse(pages, ch, v):
         if (ch, v) >= (ch_s, v_s) and (ch, v) <= (ch_e, v_e):
             result.append(leaf)
     return result
-
-
-def _col_key_from_spec(col_spec):
-    """Convert a NofM col spec (e.g. '1of2') or plain int to a column key."""
-    if isinstance(col_spec, int):
-        return f"col{col_spec}"
-    if "of" in str(col_spec):
-        return f"col{str(col_spec).split('of')[0]}"
-    return f"col{col_spec}"
-
-
-def _image_size(cc):
-    """Extract (width, height) from a column-coordinates dict."""
-    sz = cc["image_size"]
-    if isinstance(sz, list):
-        return sz[0], sz[1]
-    return sz["width"], sz["height"]
-
-
-def _line_dividers(n_lines):
-    """Compute t values (0–1) for dividers between n_lines line boxes.
-
-    Uses weighted spacing: top line = 1.5x, bottom line = 1.25x,
-    middle lines = 1x.  This accounts for lamed ascenders at top and
-    descenders at bottom of the column.
-
-    Returns a list of n_lines+1 values: dividers[0]=0, dividers[n_lines]=1.
-    Line i (1-based) spans dividers[i-1] to dividers[i].
-    """
-    top_weight = 1.5
-    bot_weight = 1.25
-    mid_count = n_lines - 2
-    total = top_weight + mid_count + bot_weight
-    dividers = [0.0]
-    for i in range(n_lines):
-        w = top_weight if i == 0 else (bot_weight if i == n_lines - 1 else 1.0)
-        dividers.append(dividers[-1] + w / total)
-    return dividers
 
 
 def get_line_bbox(page_id, col, line_num, buffer_lines=2, margin_factor=0.05):
@@ -246,3 +163,86 @@ def load_page_image(page_id):
         print("  Run download_aleppo_pages.py to fetch the images.")
         sys.exit(1)
     return Image.open(path)
+
+
+def _leaf_to_page_n(page_id):
+    num = int(page_id[:-1])
+    side = page_id[-1]
+    return (num - 1) * 2 + 2 + (0 if side == "r" else 1)
+
+
+def _parse_verse_label(label):
+    """Parse 'Job 38:31' into (book, chapter, verse)."""
+    parts = label.split(" ", 1)
+    cv = parts[1].split(":")
+    return parts[0], int(cv[0]), int(cv[1])
+
+
+def _page_verse_range(path):
+    """Extract (first_ref, last_ref) from a line-break JSON file.
+
+    Each ref is (book, chapter, verse).  Returns None if the file
+    has no verse markers.
+    """
+    data = json.loads(path.read_text("utf-8"))
+    first = None
+    last = None
+    for item in data:
+        if isinstance(item, dict):
+            for key in ("verse-start", "verse-fragment-start"):
+                if key in item:
+                    ref = _parse_verse_label(item[key])
+                    if first is None:
+                        first = ref
+                    last = ref
+    if first is None:
+        return None
+    # last ref from verse-end / verse-fragment-end (for the end boundary)
+    for item in reversed(data):
+        if isinstance(item, dict):
+            for key in ("verse-end", "verse-fragment-end"):
+                if key in item:
+                    last = _parse_verse_label(item[key])
+                    break
+            else:
+                continue
+            break
+    return first, last
+
+
+def _col_key_from_spec(col_spec):
+    """Convert a NofM col spec (e.g. '1of2') or plain int to a column key."""
+    if isinstance(col_spec, int):
+        return f"col{col_spec}"
+    if "of" in str(col_spec):
+        return f"col{str(col_spec).split('of')[0]}"
+    return f"col{col_spec}"
+
+
+def _image_size(cc):
+    """Extract (width, height) from a column-coordinates dict."""
+    sz = cc["image_size"]
+    if isinstance(sz, list):
+        return sz[0], sz[1]
+    return sz["width"], sz["height"]
+
+
+def _line_dividers(n_lines):
+    """Compute t values (0–1) for dividers between n_lines line boxes.
+
+    Uses weighted spacing: top line = 1.5x, bottom line = 1.25x,
+    middle lines = 1x.  This accounts for lamed ascenders at top and
+    descenders at bottom of the column.
+
+    Returns a list of n_lines+1 values: dividers[0]=0, dividers[n_lines]=1.
+    Line i (1-based) spans dividers[i-1] to dividers[i].
+    """
+    top_weight = 1.5
+    bot_weight = 1.25
+    mid_count = n_lines - 2
+    total = top_weight + mid_count + bot_weight
+    dividers = [0.0]
+    for i in range(n_lines):
+        w = top_weight if i == 0 else (bot_weight if i == n_lines - 1 else 1.0)
+        dividers.append(dividers[-1] + w / total)
+    return dividers

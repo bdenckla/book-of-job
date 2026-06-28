@@ -82,6 +82,25 @@ _KEEP_AS_ESCAPE.add(0x202F)  # narrow no-break space
 _KEEP_AS_ESCAPE.update(range(0x0000, 0x0080))
 
 
+def main():
+    root = Path(__file__).resolve().parent
+    all_violations = []
+
+    files = list(_tracked_files(root))
+    for path in files:
+        all_violations.extend(_check_file(path, root))
+
+    if all_violations:
+        print(f"FAIL: {len(all_violations)} unnecessary \\uXXXX escape(s) found:\n")
+        for rel, line_no, esc, cp in all_violations:
+            name = unicodedata.name(chr(cp), "?")
+            print(f"  {rel}:{line_no}:  {esc}  →  {chr(cp)}  ({name})")
+        return 1
+
+    print(f"OK: no unnecessary \\uXXXX escapes in {len(files)} .py files.")
+    return 0
+
+
 def _should_be_literal(codepoint):
     """Return True if this codepoint should appear as a literal character."""
     return codepoint not in _KEEP_AS_ESCAPE
@@ -175,25 +194,6 @@ def _check_file(path, root):
             if _should_be_literal(cp):
                 violations.append((str(path.relative_to(root)), line_no, m.group(), cp))
     return violations
-
-
-def main():
-    root = Path(__file__).resolve().parent
-    all_violations = []
-
-    files = list(_tracked_files(root))
-    for path in files:
-        all_violations.extend(_check_file(path, root))
-
-    if all_violations:
-        print(f"FAIL: {len(all_violations)} unnecessary \\uXXXX escape(s) found:\n")
-        for rel, line_no, esc, cp in all_violations:
-            name = unicodedata.name(chr(cp), "?")
-            print(f"  {rel}:{line_no}:  {esc}  →  {chr(cp)}  ({name})")
-        return 1
-
-    print(f"OK: no unnecessary \\uXXXX escapes in {len(files)} .py files.")
-    return 0
 
 
 if __name__ == "__main__":
