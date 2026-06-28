@@ -58,3 +58,18 @@ def write_enriched_quirkrecs_json(quirkrecs, out_path):
         out_path: Path to write the JSON file
     """
     json_dump_to_file_path(quirkrecs, out_path)
+
+
+def write_qr_relations_json(qr_relations, out_path):
+    """
+    Write the authored cross-record relations to a JSON file.
+
+    This is the relation-centric view (the per-record edges live on each
+    quirkrec's qr-rel field in enriched-quirkrecs.json); it is provided for
+    consumers that prefer to iterate relations directly.
+
+    Args:
+        qr_relations: the QR_RELATIONS list from qr_relations.py
+        out_path: Path to write the JSON file
+    """
+    json_dump_to_file_path(qr_relations, out_path)

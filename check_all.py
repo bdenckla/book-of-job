@@ -6,9 +6,10 @@ Checks run:
   1. pyspellcheck/spellcheck_quirkrecs.py  (spell check quirk records)
   2. check_function_ordering.py            (public-before-private ordering)
   3. check_qr_consistency.py               (qr filename/record/word-id sync)
-  4. check_mark_order.py                   (Hebrew combining-mark order)
-  5. check_escape_sequences.py             (unnecessary \\uXXXX escapes)
-  6. check_html_syntax_and_sanity.py       (HTML output lint)
+  4. check_qr_relations.py                 (cross-record relation validity)
+  5. check_mark_order.py                   (Hebrew combining-mark order)
+  6. check_escape_sequences.py             (unnecessary \\uXXXX escapes)
+  7. check_html_syntax_and_sanity.py       (HTML output lint)
 
 Exit codes:
   0 - All checks passed
@@ -28,6 +29,7 @@ import check_function_ordering
 import check_html_syntax_and_sanity
 import check_mark_order
 import check_qr_consistency
+import check_qr_relations
 import check_spelling_in_html
 
 _SEPARATOR = "─" * 60
@@ -53,6 +55,7 @@ def main():
         ("Spell check (HTML output)", _run_spellcheck),
         ("Function ordering", _run_function_ordering),
         ("QR filename/record consistency", _run_qr_consistency),
+        ("Cross-record relation validity", _run_qr_relations),
         ("Hebrew combining-mark order", _run_mark_order),
         ("Unnecessary \\uXXXX escapes", _run_escape_sequences),
         ("HTML output lint", lambda: _run_html_lint(args)),
@@ -90,6 +93,10 @@ def _run_function_ordering():
 
 def _run_qr_consistency():
     return check_qr_consistency.main()
+
+
+def _run_qr_relations():
+    return check_qr_relations.main()
 
 
 def _run_mark_order():

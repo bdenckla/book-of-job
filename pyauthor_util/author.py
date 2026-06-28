@@ -232,6 +232,19 @@ def consensus_to_ascii(consensus):
     return kept.translate(_HEBREW_TO_OUR_CODE)
 
 
+def consensus_to_bare_hebrew(consensus):
+    """Return just the bare Hebrew consonants (and maqaf) of a consensus string.
+
+    Args:
+        consensus: Hebrew string from a qr-consensus / qr-*-proposed field.
+
+    Returns:
+        The same Hebrew word(s) with vowel points and accents stripped,
+        suitable for display (e.g. עִמּ֣וֹ → עמו).
+    """
+    return "".join(_KEEP_RE.findall(consensus))
+
+
 # def pasoleg_pas(string: str):
 #     return _pasoleg_xxx(string, "$sub_pe")
 

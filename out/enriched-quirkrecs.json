@@ -592,7 +592,7 @@
           {
             "_htel_tag": "a",
             "attr": {
-              "href": "https://bdenckla.github.io/MAM-with-doc/foi/foi-sec-merk.html#intro-poetic/(%C3%BCazll)/(mer)-(%C3%BCazll)"
+              "href": "https://bdenckla.github.io/MAM-with-doc/foi/foi-sec-merk.html#intro-poetic%2F%28%C3%BCazll%29%2F%28mer%29-%28%C3%BCazll%29"
             },
             "contents": [
               "here"
@@ -4213,6 +4213,16 @@
     "qr-auto-diff": [
       "on mem, replace munax with atnax",
       "replace"
+    ],
+    "qr-rel": [
+      {
+        "kind": "move",
+        "accent": "atnax",
+        "role": "from",
+        "other": "2221-VJL6",
+        "other-cv": "22:21",
+        "other-word": "ושלם"
+      }
     ]
   },
   {
@@ -4261,6 +4271,16 @@
     "qr-auto-diff": [
       "(((('qamats', 'lamed', (1, 1)), ('atnax', 'lamed', (1, 1))), None),)",
       null
+    ],
+    "qr-rel": [
+      {
+        "kind": "move",
+        "accent": "atnax",
+        "role": "to",
+        "other": "2221-3MV",
+        "other-cv": "22:21",
+        "other-word": "עמו"
+      }
     ]
   },
   {

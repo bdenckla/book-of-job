@@ -223,6 +223,10 @@
       "count": 2
     },
     {
+      "field": "qr-rel",
+      "count": 2
+    },
+    {
       "field": "qr-ignore-g3yh-diff-in-consensus",
       "count": 1
     },

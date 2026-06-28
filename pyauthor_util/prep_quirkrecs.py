@@ -10,9 +10,11 @@ from pyauthor_util.short_id_etc import short_id
 from pyauthor_util.noted_by import nb_dict
 from pyauthor_util.get_qr_groups import get_pgroup
 from pyauthor_util.job_quirkrecs import RAW_QUIRKRECS
+from pyauthor_util.qr_relations import QR_RELATIONS, add_qr_rel_edges
 from pyauthor_util.qr_make_json_outputs import (
     write_qr_field_stats_json,
     write_enriched_quirkrecs_json,
+    write_qr_relations_json,
 )
 from mb_cmn.my_utils import sl_map
 
@@ -47,6 +49,7 @@ def get_enriched_quirkrecs(jobn_rel_top, json_outdir):
         f"{json_outdir}/qr-field-stats-ordered-by-field-name.json",
     )
     write_enriched_quirkrecs_json(eqrs, f"{json_outdir}/enriched-quirkrecs.json")
+    write_qr_relations_json(QR_RELATIONS, f"{json_outdir}/qr-relations.json")
     return eqrs
 
 
@@ -58,6 +61,9 @@ def _enrich_quirkrecs(jobn_rel_top):
         (_do_pointwise_enrichments_of_one_qr, jobn_rel_top, cam1753_crops),
         RAW_QUIRKRECS,
     )
+    # Relations need sibling context, so they are attached in a post-pointwise,
+    # whole-list pass (which also validates them; see qr_relations.py).
+    result = add_qr_rel_edges(result)
     return result
 
 

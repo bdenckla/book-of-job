@@ -6,6 +6,7 @@ from mb_cmn import my_utils
 from mb_cmn.my_utils import intersperse, sl_map
 from pyauthor_util.common_titles_etc import d1d_detail_href
 from pyauthor_util import author
+from pyauthor_util.qr_relations import ACCENT_INFO
 from pyauthor_util.proposed import key_for_proposed
 from pyauthor_util.says import says
 from pyauthor_util.short_id_etc import short_id
@@ -350,6 +351,45 @@ def _make_details_html(quirkrec, img_prefix="img"):
         author.table_c(_make_overview_row(quirkrec, include_hash_link=False)),
         *_maybe_bhq(quirkrec.get("qr-bhq")),
         _dpe(quirkrec),
+        *_maybe_rel_paras(quirkrec),
         _img(quirkrec["qr-lc-img"], img_prefix, scale=lc_scale),
         *_maybe_imgs(quirkrec, img_prefix),
     ]
+
+
+def _maybe_rel_paras(quirkrec):
+    """Render each qr-rel edge as its own dedicated paragraph.
+
+    This is the cross-record accent relationship (e.g. a relocated אתנח), kept
+    visually distinct from any same-word mention in the generic comment.
+    """
+    return [author.para(_rel_line(edge)) for edge in quirkrec.get("qr-rel", [])]
+
+
+def _rel_line(edge):
+    assert edge["kind"] == "move", f"Unsupported qr-rel kind: {edge['kind']}"
+    accent_he = ACCENT_INFO[edge["accent"]]["he"]
+    other = _rel_other_link(edge)
+    if edge["role"] == "from":
+        return [
+            "In the consensus reading, this ",
+            accent_he,
+            " is relocated to ",
+            other,
+            ".",
+        ]
+    assert edge["role"] == "to", f"Unsupported qr-rel role: {edge['role']}"
+    return [
+        "This ",
+        accent_he,
+        " belongs here only in the consensus reading;",
+        " in μL it is on ",
+        other,
+        " instead.",
+    ]
+
+
+def _rel_other_link(edge):
+    """A link to the sibling record's detail page, labeled by its bare word."""
+    word = boj_html.span_c(edge["other-word"], "unpointed-tanakh")
+    return boj_html.anchor_h(word, d1d_detail_href(edge["other"]))
