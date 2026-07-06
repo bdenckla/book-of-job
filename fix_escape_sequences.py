@@ -43,7 +43,7 @@ def main():
         new_text, n = _fix_file(path)
         rel = path.relative_to(root)
         if apply:
-            path.write_text(new_text, encoding="utf-8")
+            path.write_text(new_text, encoding="utf-8", newline="")
             print(f"  FIXED {rel}: {n} replacement(s)")
         else:
             print(f"  WOULD FIX {rel}: {n} replacement(s)")

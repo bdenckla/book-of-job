@@ -584,7 +584,7 @@ updateStatus();
 
     OUT_DIR.mkdir(exist_ok=True)
     out_path = OUT_DIR / "cam1753_crop_editor.html"
-    out_path.write_text(html, encoding="utf-8")
+    out_path.write_text(html, encoding="utf-8", newline="")
     print(f"\nEditor: {out_path}")
     webbrowser.open(str(out_path))
 

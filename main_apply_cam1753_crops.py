@@ -90,6 +90,7 @@ def _save_crops_json(data):
     CROPS_JSON.write_text(
         json.dumps(sorted_data, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
+        newline="",
     )
 
 

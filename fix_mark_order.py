@@ -39,7 +39,7 @@ for p in sorted(ROOT.rglob("*")):
     new_lines = [fix_line(line) for line in lines]
     new_text = "\n".join(new_lines)
     if new_text != text:
-        p.write_text(new_text, encoding="utf-8")
+        p.write_text(new_text, encoding="utf-8", newline="")
         print(f"Fixed: {p.relative_to(ROOT)}")
     else:
         pass  # no changes

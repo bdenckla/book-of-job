@@ -63,7 +63,7 @@ def extract_english_words(text: str) -> list[str]:
     text = re.sub(r"[\u0590-\u05FF]+", " ", text)
     # Remove $-prefixed sigla ($BHQ, $yod, $BHL_A, etc.)
     text = re.sub(r"\$[A-Za-z_]+", " ", text)
-    # Extract words (letters including scholarly transliteration chars like š, ṣ, ḥ)
+    # Extract words (letters including scholarly transliteration chars like š, ṣ, x)
     # Include curly apostrophe (’) as part of contractions (e.g. doesn’t)
     # Include μ for sigla like μL, μA
     words = re.findall(r"[a-zA-ZšṣḥŠṢḤμ]+(?:\u2019[a-zA-Z]+)*", text)
@@ -326,6 +326,7 @@ def main(*, verbose=False):
     alpha_path.write_text(
         json.dumps(_make_freq_report(sorted), indent=4, ensure_ascii=False) + "\n",
         encoding="utf-8",
+        newline="",
     )
 
     # By count (descending), then alphabetical within same count
@@ -334,6 +335,7 @@ def main(*, verbose=False):
     count_path.write_text(
         json.dumps(_make_freq_report(by_count), indent=4, ensure_ascii=False) + "\n",
         encoding="utf-8",
+        newline="",
     )
 
     # Suggest removals for zero-count entries
