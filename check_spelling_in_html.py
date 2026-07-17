@@ -71,7 +71,7 @@ def extract_english_words(text: str) -> list[str]:
 
 
 def extract_hebrew_words(text: str) -> list[str]:
-    """Extract Hebrew words from text (consonants and maqaf only)."""
+    """Extract Hebrew words from text (letters and maqaf only)."""
     # Match sequences of Hebrew base letters (U+05D0-U+05EA) and maqaf (U+05BE)
     return re.findall(r"[\u05D0-\u05EA][\u05D0-\u05EA\u05BE]*", text)
 

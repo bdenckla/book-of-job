@@ -233,7 +233,7 @@ def consensus_to_ascii(consensus):
 
 
 def consensus_to_bare_hebrew(consensus):
-    """Return just the bare Hebrew consonants (and maqaf) of a consensus string.
+    """Return just the bare Hebrew letters (and maqaf) of a consensus string.
 
     Args:
         consensus: Hebrew string from a qr-consensus / qr-*-proposed field.

@@ -1,4 +1,4 @@
-"""Convert Hebrew consonantal text to an ASCII word-identifier.
+"""Convert Hebrew letter text to an ASCII word-identifier.
 
 Strips all niqqud and accents, then transliterates each Hebrew letter
 to a single ASCII character.  Same scheme as mgketer
@@ -32,7 +32,7 @@ _KEEP_RE = re.compile(f"[{re.escape(_HEBREW_TO_ASCII_FROM)}]+")
 def heb_alef_bet_to_ascii(hebrew_text):
     """Strip niqqud/accents from *hebrew_text*, transliterate to ASCII.
 
-    Only Hebrew consonants (incl. final forms), maqaf, and space are
+    Only Hebrew letters (incl. final forms), maqaf, and space are
     kept; everything else is discarded.  The result is safe for use in
     filenames and HTML identifiers.
     """
