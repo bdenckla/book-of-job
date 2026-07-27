@@ -44,10 +44,10 @@ from pyauthor_util.author import consensus_to_bare_hebrew
 # direction convention and the short_id key format.
 QR_RELATIONS = [
     {
-        "kind": "move",      # only kind in scope; field kept for extensibility
-        "accent": "atnax",   # the accent that relocates
+        "kind": "move",  # only kind in scope; field kept for extensibility
+        "accent": "atnax",  # the accent that relocates
         "from": "2221-3MV",  # μL's host (loses the accent in the consensus): עמו
-        "to": "2221-VJL6",   # consensus's host (gains it): ושלם
+        "to": "2221-VJL6",  # consensus's host (gains it): ושלם
     },
 ]
 
@@ -116,18 +116,18 @@ def _validate_one_relation(rel, by_sid):
         f"vs {to_sid} ({to_qr['qr-cv']})"
     )
     # Accent conservation (the move signature: 1 accent either way).
-    assert char in proposed(from_qr), (
-        f"{from_sid}: move accent {accent!r} absent from its μL (proposed) side"
-    )
-    assert char not in from_qr["qr-consensus"], (
-        f"{from_sid}: move accent {accent!r} unexpectedly present in its consensus"
-    )
-    assert char in to_qr["qr-consensus"], (
-        f"{to_sid}: move accent {accent!r} absent from its consensus"
-    )
-    assert char not in proposed(to_qr), (
-        f"{to_sid}: move accent {accent!r} unexpectedly present in its μL (proposed) side"
-    )
+    assert char in proposed(
+        from_qr
+    ), f"{from_sid}: move accent {accent!r} absent from its μL (proposed) side"
+    assert (
+        char not in from_qr["qr-consensus"]
+    ), f"{from_sid}: move accent {accent!r} unexpectedly present in its consensus"
+    assert (
+        char in to_qr["qr-consensus"]
+    ), f"{to_sid}: move accent {accent!r} absent from its consensus"
+    assert char not in proposed(
+        to_qr
+    ), f"{to_sid}: move accent {accent!r} unexpectedly present in its μL (proposed) side"
 
 
 def _mirror_edges(rel, by_sid):
