@@ -5,7 +5,7 @@ This describes the workflow for supplying μC (Cambridge MS Add. 1753)
 word-level image crops to quirkrecs that lack them. It uses page images
 and line-break data from the sibling `codex-index-cam1753` repo.
 
-## Copilot quick-start
+## Quick start
 
 When the user says **"let\u2019s do the next batch of Cambridge crops"**
 (or similar), follow this exact sequence. Do NOT manually query
