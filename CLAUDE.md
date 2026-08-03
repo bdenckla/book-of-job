@@ -46,7 +46,7 @@ stopped being used here:
 | Keeping a crop reproducible at any resolution | [`doc/image-crop-reproducibility.md`](doc/image-crop-reproducibility.md) |
 | Reading a PNG's embedded metadata | [`doc/viewing-image-metadata.md`](doc/viewing-image-metadata.md) |
 | Opening the generated HTML, including `#fragment` anchors | [`doc/opening-html-files.md`](doc/opening-html-files.md) |
-| The MAM-simple XML format | [`doc/reading-mam-simple.md`](doc/reading-mam-simple.md) |
+| The MAM-simple XML format | [MAM-simple's guide](https://github.com/bdenckla/MAM-simple/blob/main/doc/reading-mam-simple.md), via [`doc/reading-mam-simple.md`](doc/reading-mam-simple.md) |
 
 Those files were written for Copilot and have not all been re-verified since; where one gives a
 command that conflicts with the global conventions in `~/.claude/CLAUDE.md` — a `python -c`
