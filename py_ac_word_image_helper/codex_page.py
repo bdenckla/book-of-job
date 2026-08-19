@@ -8,7 +8,21 @@ from pathlib import Path
 
 from PIL import Image
 
-ROOT = Path(__file__).resolve().parent.parent
+
+def repo_root():
+    """Return the repo root: the nearest ancestor of this file holding .git.
+
+    This file sits at the repo root in some repos and under py/ in others,
+    so anchoring on its own directory would resolve differently in each.
+    """
+    here = Path(__file__).resolve()
+    for candidate in here.parents:
+        if (candidate / ".git").exists():
+            return candidate
+    raise SystemExit(f"{here} is not inside a git repository")
+
+
+ROOT = repo_root()
 LB_DIR = ROOT / "line-breaks"
 CC_DIR = ROOT / "column-coordinates"
 IMG_DIR = ROOT / "aleppo-pages"

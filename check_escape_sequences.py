@@ -82,8 +82,21 @@ _KEEP_AS_ESCAPE.add(0x202F)  # narrow no-break space
 _KEEP_AS_ESCAPE.update(range(0x0000, 0x0080))
 
 
+def repo_root():
+    """Return the repo root: the nearest ancestor of this file holding .git.
+
+    This file sits at the repo root in some repos and under py/ in others,
+    so anchoring on its own directory would resolve differently in each.
+    """
+    here = Path(__file__).resolve()
+    for candidate in here.parents:
+        if (candidate / ".git").exists():
+            return candidate
+    raise SystemExit(f"{here} is not inside a git repository")
+
+
 def main():
-    root = Path(__file__).resolve().parent
+    root = repo_root()
     all_violations = []
 
     files = list(_tracked_files(root))
@@ -95,6 +108,7 @@ def main():
         for rel, line_no, esc, cp in all_violations:
             name = unicodedata.name(chr(cp), "?")
             print(f"  {rel}:{line_no}:  {esc}  →  {chr(cp)}  ({name})")
+        print("\nRun fix_escape_sequences.py to replace these with literal characters.")
         return 1
 
     print(f"OK: no unnecessary \\uXXXX escapes in {len(files)} .py files.")

@@ -16,11 +16,11 @@ Exit codes:
 """
 
 import sys
-from pathlib import Path
 
 # Import the checker's definitions so the two scripts stay in sync.
 from check_escape_sequences import (
     ESCAPE_RE,
+    repo_root,
     _check_file,
     _tracked_files,
     _should_be_literal,
@@ -32,7 +32,7 @@ from check_escape_sequences import (
 
 def main():
     apply = "--apply" in sys.argv
-    root = Path(__file__).resolve().parent
+    root = repo_root()
     files = list(_tracked_files(root))
     total_fixes = 0
 

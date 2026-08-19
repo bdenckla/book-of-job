@@ -6,8 +6,6 @@ from pathlib import Path
 
 from mb_cmn.uni_denorm import give_std_mark_order
 
-ROOT = Path(__file__).resolve().parent
-
 WORD_RE = re.compile(r"[\u0590-\u05FF\u034F\uFB1E]+")
 HAS_LETTER_RE = re.compile(r"[\u05D0-\u05EA]")
 
@@ -28,6 +26,21 @@ def fix_line(line):
     parts.append(line[last_end:])
     return "".join(parts)
 
+
+def repo_root():
+    """Return the repo root: the nearest ancestor of this file holding .git.
+
+    This file sits at the repo root in some repos and under py/ in others,
+    so anchoring on its own directory would resolve differently in each.
+    """
+    here = Path(__file__).resolve()
+    for candidate in here.parents:
+        if (candidate / ".git").exists():
+            return candidate
+    raise SystemExit(f"{here} is not inside a git repository")
+
+
+ROOT = repo_root()
 
 for p in sorted(ROOT.rglob("*")):
     if any(part in _SKIP_DIRS for part in p.parts):

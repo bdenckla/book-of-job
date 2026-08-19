@@ -12,9 +12,9 @@ A “Hebrew word” is any maximal run matched by the regex:
 
     WORD_RE = r"[\\u0590-\\u05FF\\u034F\\uFB1E]+"
 
-i.e. one or more characters from the Hebrew block (U+0590–05FF),
+i.e. one or more characters from the Hebrew block (U+0590–U+05FF),
 plus Combining Grapheme Joiner (U+034F) and Varika (U+FB1E).  Words that
-contain no Hebrew *letter* (U+05D0–05EA) are skipped.
+contain no Hebrew *letter* (U+05D0–U+05EA) are skipped.
 
 Exit codes:
   0 – All files pass
@@ -40,8 +40,21 @@ HAS_LETTER_RE = re.compile(r"[\u05D0-\u05EA]")
 _SKIP_DIRS = {".venv", "__pycache__", ".novc", ".git", "node_modules"}
 
 
+def repo_root():
+    """Return the repo root: the nearest ancestor of this file holding .git.
+
+    This file sits at the repo root in some repos and under py/ in others,
+    so anchoring on its own directory would resolve differently in each.
+    """
+    here = Path(__file__).resolve()
+    for candidate in here.parents:
+        if (candidate / ".git").exists():
+            return candidate
+    raise SystemExit(f"{here} is not inside a git repository")
+
+
 def main():
-    root = Path(__file__).resolve().parent
+    root = repo_root()
     all_violations = []
 
     files = list(_tracked_files(root))
