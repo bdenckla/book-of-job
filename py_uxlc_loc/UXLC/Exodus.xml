@@ -20,30 +20,35 @@
     </titleStmt>
     <editionStmt>
       <edition>Unicode/XML Leningrad Codex (UXLC)
-        <version>UXLC 2.1</version>
-        <date>1 Apr 2024</date>
-        <build>27.2</build>
-        <buildDateTime>18 Jan 2024  07:18</buildDateTime>
+        <version>UXLC 2.5</version>
+        <date>1 Apr 2026</date>
+        <build>27.6</build>
+        <buildDateTime>31 Mar 2026  12:00</buildDateTime>
       </edition>
 <respStmt>
-<resp>WLC2XML[21 Apr 2023] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
+<resp>WLC2XML[8 Jul 2024] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
 <resp>ScanReplace/EditWLC[30 Dec 2020] - Edits/removes transcription notes; removes MDs.</resp>
 <resp>ScanReplace/InsertCGJs[29 Dec 2020] - Places CGJ in Jerusalem VUV words and leading metegs.</resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2020.02.19 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2020.10.19 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2021.04.01 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2021.10.19 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2022.04.01 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2022.07.04 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2022.10.19 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2022.12.07 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2023.04.01 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2023.07.04 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2023.10.19 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2024.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2020.02.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2020.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2021.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2021.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.07.04 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.12.07 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.07.04 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2024.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2024.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2025.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2025.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2026.04.01 . </resp>
+<resp>ScanReplace/RemoveNewlines[18 May 2024] - Removes newlines (\n) from w, q, k tags.</resp>
 </respStmt>
     </editionStmt>
-    <extent>598333</extent>
+    <extent>599629</extent>
     <publicationStmt>
       <distributor>Via web site:
         <name>Christopher V. Kimball</name>
@@ -63,6 +68,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2022.07.04</filedate>
 <date>2022.04.01</date>
 <n>1</n>
+</correction>
+<correction>
+<citation>4:2.5</citation>
+<description>Remove unsupported maqaf at end of qere word. Add note 'q'. [מַה־]</description>
+<author>CVK</author>
+<filedate>2024.10.19</filedate>
+<date>2024.04.15</date>
+<n>3</n>
 </correction>
 <correction>
 <citation>4:10.17</citation>
@@ -151,6 +164,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2022.10.19</filedate>
 <date>2022.07.02</date>
 <n>14</n>
+</correction>
+<correction>
+<citation>12:50.1</citation>
+<description>Move meteg from yod to first vav.</description>
+<author>Ben Denckla</author>
+<filedate>2024.04.01</filedate>
+<date>2024.01.29</date>
+<n>4</n>
 </correction>
 <correction>
 <citation>14:9.4</citation>
@@ -327,6 +348,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2022.07.04</filedate>
 <date>2022.04.01</date>
 <n>12</n>
+</correction>
+<correction>
+<citation>24:5.6</citation>
+<description>Move meteg from yod to first vav.</description>
+<author>Ben Denckla</author>
+<filedate>2024.04.01</filedate>
+<date>2024.01.29</date>
+<n>3</n>
 </correction>
 <correction>
 <citation>26:3.3</citation>
@@ -1666,7 +1695,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>אֵלָ֛יו</w>
         <w>יְהוָ֖ה</w>
         <k>מזה</k>
-        <q>מַה־</q>
+        <q>מַה<x>q</x></q>
         <q>זֶּ֣ה</q>
         <w>בְיָדֶ֑ךָ</w>
         <w>וַיֹּ֖אמֶר</w>
@@ -1811,8 +1840,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>מִשִּׁלְשֹׁ֔ם</w>
         <w>גַּ֛ם</w>
         <w>מֵאָ֥ז</w>
-        <w>דַּבֶּרְךָ<x>c</x>
-</w>
+        <w>דַּבֶּרְךָ<x>c</x></w>
         <w>אֶל־</w>
         <w>עַבְדֶּ֑ךָ</w>
         <w>כִּ֧י</w>
@@ -4333,8 +4361,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>וַיֹּ֨אמֶר</w>
         <w>יְהוָ֜ה</w>
         <w>אֶל־</w>
-        <w>מֹשֶׁה<x>c</x>
-</w>
+        <w>מֹשֶׁה<x>c</x></w>
         <w>נְטֵ֤ה</w>
         <w>אֶת־</w>
         <w>יָֽדְךָ֙</w>
@@ -6161,7 +6188,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>בְּתוֹכְכֶֽם׃</w>
       </v>
       <v n="50">
-        <w>וַיּֽ͏ַעֲשׂ֖וּ</w>
+        <w>וַֽיַּעֲשׂ֖וּ</w>
         <w>כָּל־</w>
         <w>בְּנֵ֣י</w>
         <w>יִשְׂרָאֵ֑ל</w>
@@ -10294,8 +10321,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>שָׂדֵ֛הוּ</w>
         <w>וּמֵיטַ֥ב</w>
         <w>כַּרְמ֖וֹ</w>
-        <w>יְשַׁלֵּֽם<x>c</x>
-</w>
+        <w>יְשַׁלֵּֽם<x>c</x></w>
         <samekh/>
       </v>
       <v n="5">
@@ -11229,7 +11255,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>נַעֲרֵי֙</w>
         <w>בְּנֵ֣י</w>
         <w>יִשְׂרָאֵ֔ל</w>
-        <w>וַיּֽ͏ַעֲל֖וּ</w>
+        <w>וַֽיַּעֲל֖וּ</w>
         <w>עֹלֹ֑ת</w>
         <w>וַֽיִּזְבְּח֞וּ</w>
         <w>זְבָחִ֧ים</w>
@@ -12593,8 +12619,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>וְנָתַתָּ֣ה</w>
         <w>אֹתָ֗הּ</w>
         <w>תַּ֛חַת</w>
-        <w>כַּרְכֹּ֥בּ<x>t</x>
-</w>
+        <w>כַּרְכֹּ֥בּ<x>t</x></w>
         <w>הַמִּזְבֵּ֖חַ</w>
         <w>מִלְּמָ֑טָּה</w>
         <w>וְהָיְתָ֣ה</w>
@@ -18555,8 +18580,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>כָּֽסֶף׃</w>
       </v>
       <v n="20">
-        <w>וְֽכָל<x>c</x>
-</w>
+        <w>וְֽכָל<x>c</x></w>
         <w>הַיְתֵדֹ֞ת</w>
         <w>לַמִּשְׁכָּ֧ן</w>
         <w>וְלֶחָצֵ֛ר</w>
@@ -20003,6 +20027,11 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
     <note>This meteg is a merkha in other texts.</note>
   </note>
   <note>
+    <code>q</code>
+    <gccode>q</gccode>
+    <note>UXLC differs from the conventional word for the qere.</note>
+  </note>
+  <note>
     <code>t</code>
     <gccode>t</gccode>
     <note>Transcription uncertain. Examine the LC image for other possible readings.</note>
@@ -20011,6 +20040,11 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
     <code>X</code>
     <gccode>X</gccode>
     <note>This verse does NOT occur in the Leningrad Codex. Included for continuity of verse numbering.</note>
+  </note>
+  <note>
+    <code>y</code>
+    <gccode>y</gccode>
+    <note>Yatir: The preceding Hebrew letter is "superfluous".</note>
   </note>
 </notes>
 </Tanach>

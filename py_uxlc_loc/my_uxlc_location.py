@@ -5,7 +5,7 @@ import py_uxlc_loc.my_uxlc_lci_augrec as lci_augrec
 import py_uxlc_loc.my_uxlc_lci_rec as lci_rec
 import py_uxlc_loc.my_uxlc_bibdist as bibdist
 import py_uxlc_loc.my_uxlc_page_break_info as page_break_info
-import py_uxlc_loc.my_tanakh_book_names as tbn
+import mb_cmn.bib_locales as tbn
 import py_uxlc_loc.my_uxlc as my_uxlc
 
 __all__ = ["prep", "estimate", "page_and_guesses"]
@@ -142,7 +142,7 @@ def _flines_fr_p0_to_p1(lciar):
 
 
 def _page_column_count(bkid):
-    if tbn.section(bkid) == tbn.SEC_SIF_EM:
+    if tbn.get_secid(bkid) == tbn.SEC_SIF_EM:
         return 2
     return 3
 

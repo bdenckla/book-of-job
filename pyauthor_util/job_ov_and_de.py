@@ -13,7 +13,7 @@ from pyauthor_util.short_id_etc import short_id
 from pyauthor_util.job1_highlight import highlight, color
 from pyauthor_util.job1_lcloc import lcloc
 from py_uxlc_loc import my_uxlc_location
-from py_uxlc_loc import my_tanakh_book_names as py_uxlc_loc_tbn
+from mb_cmn import bib_locales as bib_locales
 
 __all__ = ["make_ov_and_de", "make_example_row", "row_id"]
 
@@ -108,7 +108,7 @@ def _std_bcvp_quad(quirkrec):
     cn_colon_vn = quirkrec["qr-cv"]
     upwv = quirkrec.get("qr-uxlc-position-within-verse")
     pwv = upwv or 1  # use the position within verse if available, else 1
-    bkid = py_uxlc_loc_tbn.BK_JOB
+    bkid = bib_locales.BK_JOB
     chnu_str, vrnu_str = cn_colon_vn.split(":")
     chnu = int(chnu_str)
     vrnu = int(vrnu_str)
