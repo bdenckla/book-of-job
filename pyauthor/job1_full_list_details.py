@@ -1,7 +1,6 @@
 """Generate individual detail HTML files, one per quirkrec."""
 
-import os
-from pyauthor_util.common_titles_etc import D1D_DIR
+import boj_paths
 from py import boj_html
 
 
@@ -12,8 +11,8 @@ def gen_html_files(ov_and_de):
         ov_and_de: dict mapping row IDs ("row-{SID}") to sub-dicts
             with keys "od-details", "od-quirkrec", etc.
     """
-    out_dir = f"gh-pages/{D1D_DIR}"
-    os.makedirs(out_dir, exist_ok=True)
+    out_dir = boj_paths.jobn_details_dir()
+    out_dir.mkdir(parents=True, exist_ok=True)
     css_href = "../jobn/style.css"
     items = list(ov_and_de.items())
     for idx, (row_key, od) in enumerate(items):
@@ -26,7 +25,7 @@ def gen_html_files(ov_and_de):
         )
         nav = _nav_bar(prev_sid, next_sid)
         body = [*od["od-details"], nav, _nav_key_script(prev_sid, next_sid)]
-        out_path = f"{out_dir}/{sid}.html"
+        out_path = out_dir / f"{sid}.html"
         write_ctx = boj_html.WriteCtx(title, out_path, css_hrefs=(css_href,))
         boj_html.write_html_to_file(body, write_ctx)
 

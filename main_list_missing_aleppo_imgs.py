@@ -13,15 +13,14 @@ A quirkrec is considered "done" if:
 """
 
 import json
-import os
 import sys
 
+import boj_paths
 from pyauthor_util.short_id_etc import short_id
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
-with open(os.path.join(ROOT, "out", "enriched-quirkrecs.json"), encoding="utf-8") as _f:
+with open(boj_paths.enriched_quirkrecs_path(), encoding="utf-8") as _f:
     EQRS = json.load(_f)
-IMG_DIR = os.path.join(ROOT, "gh-pages", "jobn", "img", "Aleppo")
+IMG_DIR = boj_paths.aleppo_img_dir()
 
 
 def get_done_and_missing():
@@ -29,9 +28,9 @@ def get_done_and_missing():
     missing = []
     for eqr in EQRS:
         sid = short_id(eqr)
-        img_path = os.path.join(IMG_DIR, f"Aleppo-{sid}.png")
+        img_path = IMG_DIR / f"Aleppo-{sid}.png"
         has_aleppo_key = bool(eqr.get("qr-aleppo-img"))
-        if os.path.exists(img_path) or has_aleppo_key:
+        if img_path.exists() or has_aleppo_key:
             done.append(sid)
         else:
             cv = eqr.get("qr-cv", "?")

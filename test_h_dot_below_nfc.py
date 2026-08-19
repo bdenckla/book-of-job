@@ -27,6 +27,13 @@ Scope also excludes (generated output + external imported snapshots + binaries):
 
 Root discovery: `git rev-parse --show-toplevel` (this repo has no
 mb_cmn/paths.py). Stdlib-only so it runs under any interpreter from the repo.
+Deliberately NOT boj_paths.code_root(), which Phase 1 of the evacuation plan
+added: this is the one module here importing nothing of ours, and the git call
+is already cwd-independent. Note also that the two _EXCLUDE_DIR_PREFIXES entries
+naming "out/" and "gh-pages/" are repo-relative prefixes matched against each
+file's path, not paths built against a working directory, so Phase 1 left them
+alone; Phase 3 folds this module into MAM-basics' file of the same name, which
+carries one _Scope per tree.
 """
 
 import subprocess

@@ -1,7 +1,6 @@
 import json
-import os
 from collections import Counter
-from pathlib import Path
+import boj_paths
 from pyauthor_util.add_auto_diff import enrich_one_qr_by_adding_auto_diff
 from pyauthor_util.flatten_qrs import enrich_one_qr_by_flattening_strs
 from pyauthor_util.author import consensus_to_ascii
@@ -18,47 +17,44 @@ from pyauthor_util.qr_make_json_outputs import (
 )
 from mb_cmn.my_utils import sl_map
 
-_CAM1753_CROPS_PATH = (
-    Path(__file__).resolve().parent.parent / "out" / "cam1753-crops.json"
-)
 
-
-def get_enriched_quirkrecs(jobn_rel_top, json_outdir):
+def get_enriched_quirkrecs(jobn_top, json_outdir):
     """Run the full raw → enriched quirkrec pipeline and write outputs.
 
     Args:
-        jobn_rel_top: path to the jobn directory, relative to repo root
-            (used to locate image files on disk).
+        jobn_top: path to the jobn directory (boj_paths.jobn_dir()), used to
+            locate image files on disk.
         json_outdir: directory path for writing enriched-quirkrecs.json
             and field-stats JSON files.
 
     Returns:
         List of fully-enriched quirkrec dicts.
     """
-    eqrs = _enrich_quirkrecs(jobn_rel_top)
+    eqrs = _enrich_quirkrecs(jobn_top)
     write_qr_field_stats_json(
         eqrs,
-        f"{json_outdir}/qr-field-stats-ordered-by-count.json",
-        f"{json_outdir}/qr-field-stats-ordered-by-field-name.json",
+        json_outdir / "qr-field-stats-ordered-by-count.json",
+        json_outdir / "qr-field-stats-ordered-by-field-name.json",
     )
-    write_enriched_quirkrecs_json(eqrs, f"{json_outdir}/enriched-quirkrecs.json")
-    write_qr_relations_json(QR_RELATIONS, f"{json_outdir}/qr-relations.json")
+    write_enriched_quirkrecs_json(eqrs, json_outdir / "enriched-quirkrecs.json")
+    write_qr_relations_json(QR_RELATIONS, json_outdir / "qr-relations.json")
     return eqrs
 
 
 def _load_cam1753_crops():
     """Load cam1753-crops.json if it exists, return dict keyed by SID."""
-    if _CAM1753_CROPS_PATH.exists():
-        return json.loads(_CAM1753_CROPS_PATH.read_text("utf-8"))
+    crops_path = boj_paths.cam1753_crops_path()
+    if crops_path.exists():
+        return json.loads(crops_path.read_text("utf-8"))
     return {}
 
 
-def _enrich_quirkrecs(jobn_rel_top):
+def _enrich_quirkrecs(jobn_top):
     _assert_cv_ordering(RAW_QUIRKRECS)
     _assert_word_ids(RAW_QUIRKRECS)
     cam1753_crops = _load_cam1753_crops()
     result = sl_map(
-        (_do_pointwise_enrichments_of_one_qr, jobn_rel_top, cam1753_crops),
+        (_do_pointwise_enrichments_of_one_qr, jobn_top, cam1753_crops),
         RAW_QUIRKRECS,
     )
     # Relations need sibling context, so they are attached in a post-pointwise,
@@ -67,17 +63,17 @@ def _enrich_quirkrecs(jobn_rel_top):
     return result
 
 
-def _do_pointwise_enrichments_of_one_qr(jobn_rel_top, cam1753_crops, pe_quirkrec):
+def _do_pointwise_enrichments_of_one_qr(jobn_top, cam1753_crops, pe_quirkrec):
     """Apply all per-quirkrec enrichments that don't need cross-quirkrec context.
 
     Args:
-        jobn_rel_top: path to the jobn directory, relative to repo root
-            (used to locate image files on disk).
+        jobn_top: path to the jobn directory (boj_paths.jobn_dir()), used to
+            locate image files on disk.
         cam1753_crops: dict from cam1753-crops.json keyed by SID.
         pe_quirkrec: raw quirkrec dict (qr-word-id is already present
             for multi-record verses, hard-coded in the source file).
     """
-    result = _enrich_one_qr_by_adding_auto_imgs(jobn_rel_top, pe_quirkrec)
+    result = _enrich_one_qr_by_adding_auto_imgs(jobn_top, pe_quirkrec)
     result = _enrich_one_qr_by_adding_cam1753_loc(cam1753_crops, result)
     result = _enrich_one_qr_by_adding_nbd(result)
     result = _enrich_one_qr_by_adding_pgroup(result)
@@ -128,23 +124,23 @@ def _enrich_one_qr_by_adding_pgroup(quirkrec):
     return {**quirkrec, "pgroup": get_pgroup(quirkrec)}
 
 
-def _enrich_one_qr_by_adding_auto_imgs(jobn_rel_top, quirkrec):
+def _enrich_one_qr_by_adding_auto_imgs(jobn_top, quirkrec):
     """Add auto-detected image fields and assert all required images exist.
 
     Args:
-        jobn_rel_top: path to the jobn directory, relative to repo root.
+        jobn_top: path to the jobn directory (boj_paths.jobn_dir()).
         quirkrec: partially-enriched quirkrec dict.
     """
-    out = {**quirkrec, **get_auto_imgs(jobn_rel_top, quirkrec)}
+    out = {**quirkrec, **get_auto_imgs(jobn_top, quirkrec)}
     #
     lc_img_name = out["qr-lc-img"]
-    lc_img_path = f"{jobn_rel_top}/img/{lc_img_name}"
-    assert os.path.exists(lc_img_path), f"Missing LC image: {lc_img_path}"
+    lc_img_path = jobn_top / "img" / lc_img_name
+    assert lc_img_path.exists(), f"Missing LC image: {lc_img_path}"
     #
     for field, _ in INFO_ABOUT_OPTIONAL_IMAGES:
         if opt_img_name := out.get(field):
-            opt_path = f"{jobn_rel_top}/img/{opt_img_name}"
-            assert os.path.exists(opt_path), f"Missing optional image: {opt_path}"
+            opt_path = jobn_top / "img" / opt_img_name
+            assert opt_path.exists(), f"Missing optional image: {opt_path}"
     #
     return out
 

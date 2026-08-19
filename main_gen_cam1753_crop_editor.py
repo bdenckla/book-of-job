@@ -14,16 +14,15 @@ Usage:
 """
 
 import json
-import os
 import sys
 import traceback
 import webbrowser
-from pathlib import Path
 
 from PIL import Image
 
-ROOT = Path(__file__).resolve().parent
-OUT_DIR = ROOT / ".novc"
+import boj_paths
+
+OUT_DIR = boj_paths.novc_dir()
 
 from py_cam1753_word_image.crop import compute_fade_overlay, estimate_word_position
 from py_cam1753_word_image.hebrew_metrics import join_maqaf
@@ -37,7 +36,7 @@ from py_cam1753_word_image.page import (
 
 from pyauthor_util.short_id_etc import short_id
 
-with open(ROOT / "out" / "enriched-quirkrecs.json", encoding="utf-8") as _f:
+with open(boj_paths.enriched_quirkrecs_path(), encoding="utf-8") as _f:
     EQRS = json.load(_f)
 
 
@@ -602,8 +601,8 @@ def main():
         # Every quirkrec missing a cam1753 image
         for eqr in EQRS:
             sid = short_id(eqr)
-            img_path = ROOT / "gh-pages" / "jobn" / "img" / f"cam1753-{sid}.png"
-            if not os.path.exists(img_path):
+            img_path = boj_paths.jobn_img_dir() / f"cam1753-{sid}.png"
+            if not img_path.exists():
                 examples.append(eqr)
     elif cli_sids:
         # Use SIDs from command line
@@ -616,8 +615,8 @@ def main():
         count = 0
         for eqr in EQRS:
             sid = short_id(eqr)
-            img_path = ROOT / "gh-pages" / "jobn" / "img" / f"cam1753-{sid}.png"
-            if not os.path.exists(img_path):
+            img_path = boj_paths.jobn_img_dir() / f"cam1753-{sid}.png"
+            if not img_path.exists():
                 examples.append(eqr)
                 count += 1
                 if count >= 6:

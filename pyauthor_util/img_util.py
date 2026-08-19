@@ -1,4 +1,3 @@
-import os
 from pyauthor_util.lenin_img_too_tall import LENIN_IMG_SCALE
 from pyauthor_util.short_id_etc import short_id
 
@@ -9,11 +8,11 @@ INFO_ABOUT_OPTIONAL_IMAGES = [
 ]
 
 
-def get_auto_imgs(jobn_rel_top, quirkrec):
+def get_auto_imgs(jobn_top, quirkrec):
     """Auto-detect LC, Aleppo, and Cam1753 images if files exist on disk.
 
     Args:
-        jobn_rel_top: path to the jobn directory, relative to repo root.
+        jobn_top: path to the jobn directory (boj_paths.jobn_dir()).
         quirkrec: quirkrec dict (must have at least qr-cv; qr-word-id
             is used if present to form the short ID).
 
@@ -29,7 +28,7 @@ def get_auto_imgs(jobn_rel_top, quirkrec):
     # Auto-detect Aleppo, cam1753, and other optional images
     for field, example_filename in INFO_ABOUT_OPTIONAL_IMAGES:
         auto_img = example_filename.replace("-CCVV.png", f"-{sid}.png")
-        auto_path = f"{jobn_rel_top}/img/{auto_img}"
-        if os.path.exists(auto_path):
+        auto_path = jobn_top / "img" / auto_img
+        if auto_path.exists():
             out[field] = auto_img
     return out

@@ -19,6 +19,8 @@ import ast
 import sys
 from pathlib import Path
 
+import boj_paths
+
 
 def check_file(filepath: Path) -> list[str]:
     """Check one qr_*.py file.  Returns a list of violation messages."""
@@ -118,7 +120,8 @@ def main():
     if len(sys.argv) > 1:
         paths = [Path(p) for p in sys.argv[1:]]
     else:
-        paths = [Path("pyauthor_qr")]
+        # The CODE root, not the working directory: the quirk records are source.
+        paths = [boj_paths.code_root() / "pyauthor_qr"]
 
     files_to_check: list[Path] = []
     for path in paths:

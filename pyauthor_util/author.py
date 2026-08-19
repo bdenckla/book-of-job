@@ -1,6 +1,7 @@
 import os
 
 import re
+import boj_paths
 from py import boj_html
 from mb_cmn import str_defs as sd
 from mb_cmn.my_utils import sl_map
@@ -11,7 +12,7 @@ from pyauthor_util import dollar_sub_g
 
 def help_gen_html_file(tdm_ch, fname, title, cbody):
     top_dir, css_href = tdm_ch
-    out_path = f"{top_dir}/{fname}"
+    out_path = top_dir / fname
     write_ctx = boj_html.WriteCtx(title, out_path, css_hrefs=(css_href,))
     boj_html.write_html_to_file(cbody, write_ctx)
 
@@ -129,9 +130,8 @@ def para_for_img(img_path, widthclass=None, img_prefix="img", scale=None):
         # This avoids CSS percentage pitfalls (percentages are relative
         # to the containing block, not the image's intrinsic size).
         from PIL import Image as _PILImage
-        from pathlib import Path as _Path
 
-        img_file = _Path("gh-pages") / "jobn" / img_prefix / img_path
+        img_file = boj_paths.jobn_dir() / img_prefix / img_path
         with _PILImage.open(img_file) as im:
             nat_w, nat_h = im.size
         w = round(nat_w * scale)

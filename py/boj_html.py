@@ -3,6 +3,7 @@
 import xml.etree.ElementTree as ET
 import re
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Union
 
 from mb_cmn import file_io
@@ -18,7 +19,10 @@ class WriteCtx:
     """Holds info needed to write HTML to a file."""
 
     title: str
-    path: str
+    # An absolute Path since Phase 1 of the evacuation plan; it flows to
+    # mb_cmn.file_io.with_tmp_openw, whose os.path.dirname and pathlib arithmetic
+    # both take one, so the vendored file_io needed no change.
+    path: Path
     head_style: Union[str, None] = None
     css_hrefs: tuple = ()
     add_wbr: bool = False

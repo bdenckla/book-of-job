@@ -1,5 +1,6 @@
 """Overview and details generation for quirkrecs."""
 
+import boj_paths
 from py import boj_html
 from pyauthor_util.is_lop import is_lop
 from mb_cmn import my_utils
@@ -32,8 +33,8 @@ def make_ov_and_de(quirkrecs):
     dups = _duplicates(ids)
     assert not dups, f"Duplicate row IDs found: {dups}"
     paths_dict = {
-        "path_to_uxlc": "py_uxlc_loc/UXLC",
-        "path_to_lci_recs": "py_uxlc_loc/UXLC-misc/lci_recs.json",
+        "path_to_uxlc": boj_paths.uxlc_dir(),
+        "path_to_lci_recs": boj_paths.lci_recs_path(),
     }
     uxlc, pbi = my_uxlc_location.prep(paths_dict)
     ovdes = sl_map((_make_one_ov_and_de, uxlc, pbi), quirkrecs)

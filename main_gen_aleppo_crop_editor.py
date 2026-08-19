@@ -13,16 +13,15 @@ Usage:
 """
 
 import json
-import os
 import sys
 import traceback
 import webbrowser
-from pathlib import Path
 
 from PIL import Image
 
-ROOT = Path(__file__).resolve().parent
-OUT_DIR = ROOT / ".novc"
+import boj_paths
+
+OUT_DIR = boj_paths.novc_dir()
 
 from py_ac_word_image_helper.codex_page import (
     CC_DIR,
@@ -38,7 +37,7 @@ from py_ac_word_image_helper.linebreak_search import find_word_in_linebreaks
 
 from pyauthor_util.short_id_etc import short_id
 
-with open(ROOT / "out" / "enriched-quirkrecs.json", encoding="utf-8") as _f:
+with open(boj_paths.enriched_quirkrecs_path(), encoding="utf-8") as _f:
     EQRS = json.load(_f)
 
 
@@ -621,10 +620,8 @@ def main():
         # Every quirkrec missing an aleppo image
         for eqr in EQRS:
             sid = short_id(eqr)
-            img_path = (
-                ROOT / "gh-pages" / "jobn" / "img" / "Aleppo" / f"Aleppo-{sid}.png"
-            )
-            if not os.path.exists(img_path):
+            img_path = boj_paths.aleppo_img_dir() / f"Aleppo-{sid}.png"
+            if not img_path.exists():
                 examples.append(eqr)
     elif cli_sids:
         # Use SIDs from command line
@@ -651,10 +648,8 @@ def main():
         if len(examples) < 4:
             for eqr in EQRS:
                 sid = short_id(eqr)
-                img_path = (
-                    ROOT / "gh-pages" / "jobn" / "img" / "Aleppo" / f"Aleppo-{sid}.png"
-                )
-                if not os.path.exists(img_path) and eqr not in examples:
+                img_path = boj_paths.aleppo_img_dir() / f"Aleppo-{sid}.png"
+                if not img_path.exists() and eqr not in examples:
                     examples.append(eqr)
                     if len(examples) >= 6:
                         break

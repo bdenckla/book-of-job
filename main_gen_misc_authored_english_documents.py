@@ -1,7 +1,7 @@
 """Generate HTML documentation for this project."""
 
-import glob
-import os
+import boj_paths
+from boj_paths import D1D_DIR
 from pyauthor_util import author
 from pyauthor_util.prep_quirkrecs import get_enriched_quirkrecs
 from py import boj_two_col_css_styles
@@ -15,7 +15,7 @@ from pyauthor import (
     job6_cam1753_mentions,
 )
 from pyauthor_util.all_quirks import AllQuirks
-from pyauthor_util.common_titles_etc import d2_anchor, d6_anchor, D1D_DIR
+from pyauthor_util.common_titles_etc import d2_anchor, d6_anchor
 from pyauthor_util.job_ov_and_de import make_ov_and_de
 from pyauthor_util.get_qr_groups import get_qr_groups
 import check_spelling_in_html
@@ -25,18 +25,20 @@ __all__ = ["main"]
 
 def main():
 
-    jobn_rel_top = "gh-pages/jobn"
+    jobn_top = boj_paths.jobn_dir()
     # Delete all HTML and CSS files to avoid stale files when output names change
-    _delete_files(jobn_rel_top, ["*.html", "*.css"])
-    _delete_files(f"gh-pages/{D1D_DIR}", ["*.html"])
+    _delete_files(jobn_top, ["*.html", "*.css"])
+    _delete_files(boj_paths.jobn_details_dir(), ["*.html"])
     #
     css_href = "style.css"
-    boj_two_col_css_styles.make_css_file_for_authored(f"gh-pages/{css_href}")
-    boj_two_col_css_styles.make_css_file_for_authored(f"{jobn_rel_top}/{css_href}")
+    boj_two_col_css_styles.make_css_file_for_authored(
+        boj_paths.gh_pages_dir() / css_href
+    )
+    boj_two_col_css_styles.make_css_file_for_authored(jobn_top / css_href)
     #
-    tdm_ch = jobn_rel_top, css_href
+    tdm_ch = jobn_top, css_href
     #
-    eqrs = get_enriched_quirkrecs(jobn_rel_top, "./out")
+    eqrs = get_enriched_quirkrecs(jobn_top, boj_paths.out_dir())
     ov_and_de = make_ov_and_de(eqrs)
     qr_groups = get_qr_groups(eqrs)
     aq = AllQuirks(tdm_ch, ov_and_de, qr_groups)
@@ -46,7 +48,7 @@ def main():
     job4_quirks_in_mu_a.gen_html_file(aq)
     job5_orphan_qere_points.gen_html_file(tdm_ch)
     job6_cam1753_mentions.gen_html_file(tdm_ch, eqrs)
-    _write_index_dot_html((css_href,), "gh-pages/index.html")
+    _write_index_dot_html((css_href,), boj_paths.index_html_path())
     check_spelling_in_html.main()
 
 
@@ -57,8 +59,8 @@ def _write_index_dot_html(css_hrefs, out_path):
 
 def _delete_files(directory, patterns):
     for pattern in patterns:
-        for file_path in glob.glob(f"{directory}/{pattern}"):
-            os.remove(file_path)
+        for file_path in directory.glob(pattern):
+            file_path.unlink()
 
 
 _CBODY = ["This repository hosts:"]

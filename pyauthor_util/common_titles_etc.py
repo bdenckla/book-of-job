@@ -1,5 +1,6 @@
 """Common utilities for job documents"""
 
+from boj_paths import D1D_DIR
 from py import boj_html
 from pyauthor_util import author
 
@@ -68,7 +69,6 @@ def d2_anchor(jobn_dir="."):
 
 D1D_TITLE = "Quirks in μL in Job"
 D1D_H1_CONTENTS = D1D_TITLE
-D1D_DIR = "jobn-details"
 
 
 def d1d_detail_href(sid):

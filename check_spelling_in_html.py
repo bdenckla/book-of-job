@@ -11,6 +11,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from spellchecker import SpellChecker
 
+import boj_paths
+
 
 def load_custom_dictionary(
     dict_path: Path,
@@ -259,8 +261,10 @@ def check_spelling(html_files: list[Path], custom_dict_path: Path):
 
 
 def main(*, verbose=False):
-    project_root = Path(__file__).parent
-    docs_dir = project_root / "gh-pages"
+    # Two roots, spelled apart on purpose: the pages checked are DATA and stay in
+    # book-of-job, the custom dictionary is CODE and travels beside this module.
+    # One Path(__file__).parent stood for both until Phase 1 of the evacuation plan.
+    docs_dir = boj_paths.gh_pages_dir()
     custom_dict_path = Path(__file__).parent / "check_spelling_in_html.custom-dict.json"
 
     if not docs_dir.exists():
@@ -305,7 +309,7 @@ def main(*, verbose=False):
     ) = check_spelling(html_files, custom_dict_path)
 
     # Write custom dictionary frequency reports
-    out_dir = project_root / "out"
+    out_dir = boj_paths.out_dir()
     out_dir.mkdir(exist_ok=True)
 
     def _make_freq_report(sorter):

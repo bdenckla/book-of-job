@@ -25,12 +25,12 @@ from pathlib import Path
 from PIL import Image
 from PIL.PngImagePlugin import PngInfo
 
-ROOT = Path(__file__).resolve().parent
+import boj_paths
 
 from py_cam1753_word_image.page import load_page_image
 
-OUT_DIR = ROOT / "gh-pages" / "jobn" / "img" / "cam1753"
-CROPS_JSON = ROOT / "out" / "cam1753-crops.json"
+OUT_DIR = boj_paths.cam1753_img_dir()
+CROPS_JSON = boj_paths.cam1753_crops_path()
 
 
 def main():

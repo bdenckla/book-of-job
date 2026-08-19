@@ -22,7 +22,8 @@ Exit codes:
 Usage:
     python check_html_syntax_and_sanity.py [pages_dir] [--w3c]
 
-If no pages_dir given, defaults to "gh-pages".
+If no pages_dir given, defaults to book-of-job's own gh-pages tree
+(boj_paths.gh_pages_dir()), whatever the working directory.
 The --w3c flag sends each HTML file to the W3C Nu HTML Checker API
 for full conformance validation (requires internet access).
 """
@@ -37,6 +38,8 @@ import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
 
+import boj_paths
+
 
 def main(argv=None):
     parser = argparse.ArgumentParser(
@@ -45,8 +48,8 @@ def main(argv=None):
     parser.add_argument(
         "pages_dir",
         nargs="?",
-        default="gh-pages",
-        help="path to the Pages directory (default: gh-pages)",
+        default=None,
+        help="path to the Pages directory (default: book-of-job's own gh-pages)",
     )
     parser.add_argument(
         "--w3c",
@@ -59,7 +62,8 @@ def main(argv=None):
         help="with --w3c, show all messages (don't suppress known issues)",
     )
     args = parser.parse_args(argv)
-    docs_dir = Path(args.pages_dir)
+    # The default was the cwd-relative "gh-pages", which check_all.py always took.
+    docs_dir = Path(args.pages_dir) if args.pages_dir else boj_paths.gh_pages_dir()
 
     if not docs_dir.is_dir():
         print(f"Error: {docs_dir} is not a directory", file=sys.stderr)

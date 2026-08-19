@@ -10,12 +10,15 @@ Exit codes:
 Usage:
   python check_function_ordering.py [paths...]
 
-If no paths given, checks all .py files in current directory recursively.
+If no paths given, checks all .py files under the repo root recursively,
+whatever the working directory.
 """
 
 import ast
 import sys
 from pathlib import Path
+
+import boj_paths
 
 
 def get_function_defs(filepath: Path) -> list[tuple[str, int]]:
@@ -64,7 +67,8 @@ def main():
     if len(sys.argv) > 1:
         paths = [Path(p) for p in sys.argv[1:]]
     else:
-        paths = [Path(".")]
+        # The CODE root, not the working directory: this scans source.
+        paths = [boj_paths.code_root()]
 
     files_to_check = []
     for path in paths:
