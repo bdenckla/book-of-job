@@ -18,9 +18,12 @@ It is vendored, not generated here: see
 [`py_ac_loc/MAM-simple-provenance.md`](../py_ac_loc/MAM-simple-provenance.md) for the
 commit and date it was copied from. Update it by re-copying, never by editing in place.
 
-No code here reads it. The two files that name the directory both do so to **exclude** it,
-on the grounds that it is vendored: `test_h_dot_below_nfc.py` skips it when checking
-normalization, and `.novc/count_scope.py` leaves it out of the line counts.
+No code here reads it — and since 2026-08-21 there is no code here at all. The one tracked file
+that names the directory does so to **exclude** it, on the grounds that it is vendored:
+`../MAM-basics/py/tests/test_h_dot_below_nfc.py` skips it when checking normalization, under
+that file's `_BOJ_EXCLUDE_DIR_PREFIXES`. (This sentence counted two such files until 2026-08-21;
+the other, `.novc/count_scope.py`, which left the directory out of the line counts, was a
+gitignored throwaway rather than a tracked file.)
 
 The repos that do read this XML are codex-index-aleppo and codex-index-cam1753, each with
 a separate `mam_xml_verses.py`.
