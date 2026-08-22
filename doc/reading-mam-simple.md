@@ -25,5 +25,11 @@ that file's `_BOJ_EXCLUDE_DIR_PREFIXES`. (This sentence counted two such files u
 the other, `.novc/count_scope.py`, which left the directory out of the line counts, was a
 gitignored throwaway rather than a tracked file.)
 
-The repos that do read this XML are codex-index-aleppo and codex-index-cam1753, each with
-a separate `mam_xml_verses.py`.
+**The code that reads XML of this shape is MAM-basics', and since 2026-08-22 it is one module
+rather than two.** codex-index-aleppo and codex-index-cam1753 each hold a `MAM-XML/` snapshot of
+their own, and each had its own reader for it — `py/py_ac_loc/mam_xml_verses.py` in the first and
+`py_mam_xml/mam_xml_verses.py` in the second. Both repos' Python moved to MAM-basics that day
+under `../MAM-basics/doc/PLAN-evacuate-python-from-codex-index-trio.md`, whose Phase 3 found the
+two readers to be one tool with 43 lines of drift and merged them: they are
+`../MAM-basics/py/py_ac_loc/mam_xml_verses.py`, single. Neither codex-index repo holds any code
+now; each keeps its data and goes on hosting it, as this repo keeps the snapshot above.
