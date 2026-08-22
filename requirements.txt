@@ -1,5 +1,0 @@
-black
-matplotlib
-numpy
-Pillow
-pyspellchecker
