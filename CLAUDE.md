@@ -27,8 +27,8 @@ check: after changing any of the Python in MAM-basics, regenerate and see what m
 .venv/Scripts/python.exe py/main_gen_misc_authored_english_documents.py
 ```
 
-Then read the diff. **Use `git diff`, not `git status --porcelain`** — the latter is the wrong
-instrument in this repo, and has been wrong three separate times during the evacuation. A no-op
+Then read the diff. **Use `git diff`, not `git status --porcelain`** — `git status --porcelain`
+is the wrong instrument in this repo, and has been wrong three separate times during the evacuation. A no-op
 regeneration has left it reporting 183 modified files whose blobs were unchanged, git's cached
 stat sizes being the pre-run CRLF ones, and `git update-index --refresh` did not clear them:
 
