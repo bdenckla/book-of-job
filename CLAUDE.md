@@ -4,7 +4,7 @@
 
 This repo tracked **268 `.py`** until 2026-08-21 and tracks **none** now. The review of BHQ Job
 that this repo publishes is still authored in Python, but that Python is
-`C:\Users\BenDe\GitRepos\MAM-basics\py\` — 241 modules, moved there on 2026-08-19 and deleted
+`C:/Users/BenDe/GitRepos/MAM-basics/py/` — 241 modules, moved there on 2026-08-19 and deleted
 here on 2026-08-21, under
 [`MAM-basics/doc/PLAN-evacuate-python-from-book-of-job.md`](../MAM-basics/doc/PLAN-evacuate-python-from-book-of-job.md).
 The 160 quirk records went with it: they are Python modules, one per record, and they are
@@ -15,7 +15,7 @@ What stays here is the corpus and the published site: `gh-pages/` (694 tracked f
 (7 JSON), `py_ac_loc/` (76 files of Aleppo Codex line-break, column-coordinate and MAM-XML data,
 despite the `py_` prefix — it holds no Python and never did), `doc/` and this file.
 
-Everything below runs from **MAM-basics' repo root**, `C:\Users\BenDe\GitRepos\MAM-basics`, on
+Everything below runs from **MAM-basics' repo root**, `C:/Users/BenDe/GitRepos/MAM-basics`, on
 **MAM-basics' interpreter**. Nothing runs from here, and there is no `.venv` here to run it with.
 
 ## Regenerate, then read the diff — that is the test
@@ -96,7 +96,7 @@ git -C ../book-of-job ls-files 'gh-pages/*' | sed 's/.*\.//' | sort | uniq -c
 
 Seven checks — quirkrec spell check, public-before-private function ordering, quirkrec
 filename/record/word-id consistency, cross-record relation validity, Hebrew combining-mark order,
-unnecessary `\uXXXX` escapes, and an HTML lint (`--w3c` to send the output to the W3C validator).
+unnecessary `/uXXXX` escapes, and an HTML lint (`--w3c` to send the output to the W3C validator).
 
 Four of them read **both** repos, and that is deliberate rather than incidental: mark order
 scans this repo's `.json` as well as MAM-basics' `.py`, because the 24 hand-made line-break files

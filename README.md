@@ -17,7 +17,7 @@ a reader can look at the manuscripts rather than take the description on trust.
 **This repository contains no code.** As of 2026-08-21 all of its Python — 241 modules,
 including the 160 one-record modules the review is written in — lives in the sibling repository
 [MAM-basics](https://github.com/bdenckla/MAM-basics), under `py/`, and generates into this one.
-Every command runs from `C:\Users\BenDe\GitRepos\MAM-basics` on that repository's interpreter.
+Every command runs from `C:/Users/BenDe/GitRepos/MAM-basics` on that repository's interpreter.
 
 ## What is here
 
